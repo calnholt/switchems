@@ -23,7 +23,7 @@
           <span class="ability-name">{{monster.abilityName}}</span>
         </div>
         <div class="ability-text-container">
-          <span [innerHTML]="monster.abilityText" class="ability-text"></span>
+          <span [innerHTML]="getAbilityText()" class="ability-text"></span>
         </div>
       </div>
       <div class="bottom-container">
