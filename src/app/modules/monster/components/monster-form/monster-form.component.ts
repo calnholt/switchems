@@ -12,7 +12,7 @@ export class MonsterFormComponent implements OnInit {
   @ViewChild('autosize') autosize: CdkTextareaAutosize;
   monster: Monster;
   prevElements: string[];
-  elementList: string[] = ['Water', 'Fire', 'Leaf', 'Rock', 'Electricity', 'Death'];
+  elementList: string[] = ['Water', 'Fire', 'Leaf', 'Rock', 'Electric', 'Skull'];
   roleList: string[] = ['Warrior', 'Assassin', 'Technical', 'Tank', 'Support', 'Tricky'];
 
   constructor() {
@@ -39,12 +39,7 @@ export class MonsterFormComponent implements OnInit {
   }
 
   elementChanged(event: MatSelectChange) {
-    if (this.prevElements.length < 2) {
-      this.monster.elementLks = event.value;
-      this.prevElements = this.monster.elementLks;
-    } else {
-      this.monster.elementLks = this.prevElements;
-    }
+
   }
 
 }

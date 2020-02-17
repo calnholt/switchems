@@ -1,3 +1,40 @@
-<p>
-  {{monster.monsterName}}
-</p>
+<div id="monster-card">
+  <div class="card-container">
+    <div class="monster-container">
+      <div class="elements-container">
+        <div *ngFor="let effectiveness of getEffectivenessArray(monster)">
+          <span class="effectiveness">{{effectiveness}}</span>
+        </div>
+      </div>
+      <!-- <div class="elements-container">
+        <div ng-repeat="element in elements" class="elements">
+          <img ng-if="hasElement(element, card)" class="element-icon" src="{{getElementInfo(element, 'img')}}">
+          <img ng-if="!hasElement(element, card)" class="element-icon" src="{{getElementInfo(element, 'grayImg')}}">
+        </div>
+      </div> -->
+      <div class="name">{{monster.monsterName}}</div>
+      <div class="line-container">
+        <hr align="left" class="name-line left">
+        <span class="dot"></span>
+        <hr align="right" class="name-line right">
+      </div>
+      <div class="ability-container">
+        <div class="ability-name-container">
+          <span class="ability-name">{{monster.abilityName}}</span>
+        </div>
+        <div class="ability-text-container">
+          <div [innerHTML]="monster.abilityText" class="ability-text"></div>
+        </div>
+      </div>
+      <!-- <div class="bottom-container">
+        <span class="role-container">
+          <img class="role-img" src="{{roleMap[card.role].img}}">
+          <span class="role-name">{{roleMap[card.role].name}}</span>
+        </span>
+        <span class="heart-container">
+          <img class="hp-img" src="{{hpMap[card.hp]}}">
+        </span>
+      </div> -->
+    </div>
+  </div>
+</div>

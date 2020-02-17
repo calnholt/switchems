@@ -1,0 +1,123 @@
+@import 'src/assets/styles/constants.scss';
+
+#monster-card{
+    .card-container{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        position: absolute;
+        .monster-container{
+            position: relative;
+            border: black 2px solid;
+            height: 8.8cm;
+            width: 6.3cm;
+            .elements-container{
+                display: grid;
+                grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+                justify-items: center;
+                .effectiveness{
+                    font-family: 'Beastformer';
+                }
+                .elements{
+                    display: grid;
+                    grid-template-rows: auto;
+                    justify-items: center;
+                    .element-icon{
+                        max-height: 30px;
+                    }
+                }
+            }
+            .name{
+                font-family: 'Beastformer';
+                font-size: 28px;
+                text-align: center;
+                margin-top: 5px;
+                letter-spacing: 0.02em;
+            }
+            .line-container{
+                .name-line{
+                    border: .04cm solid black;
+                    width: 2.37cm;
+                    display: inline-block;
+                    margin: 0cm .2cm .1cm .2cm;
+                    &.left{
+
+                    }
+                    &.right{
+
+                    }
+                }
+                .dot{
+                    height: 9px;
+                    width: 9px;
+                    background-color: black;
+                    border-radius: 50%;
+                    display: inline-block;
+                }
+            }
+            .ability-container{
+                .ability-name-container{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: black;
+                    margin: auto;
+                    width: 89.7%;
+                    height: 11%;
+                    border-radius: 10px 10px 0px 0px;
+                    margin-top: 0.2cm;
+                    .ability-name{
+                        margin: auto;
+                        font-family: 'Beastformer';
+                        color: white;
+                        font-size: 22px;
+                        padding-bottom: 6px;
+                        letter-spacing: 0.02em;
+                    }
+                }
+                .ability-text-container{
+                    position: relative;
+                    top: -5px;
+                    display: flex;
+                    background-color: hsl(0, 0%, 94%);
+                    border: 2px black solid;
+                    margin: auto;
+                    width: 90%;
+                    height:auto;
+                    border-radius: 10px;
+                    .ability-text{
+                        font-family: 'Helvetica';
+                        font-size: 12px;
+                        padding: 10px;
+                        line-height: 13px;
+                    }
+                }
+            }
+            .bottom-container{
+                position: absolute;
+                bottom: 5px;
+                right: 5px;
+                .role-container{
+                    .img{
+                        width: 15%;
+                        margin-left: 6px;
+                        float: left;
+                    }
+                    .name{
+                        position: relative;
+                        font-family: 'Beastformer';
+                        font-size: 13px;
+                        letter-spacing: 0.02em;
+                        bottom: -11px;
+                    }
+                }
+                .heart-container{
+                    .hp{
+                        float: right;
+                        width: 15%;
+                        margin-left: 6px;
+                    }
+                }
+            }
+        }
+    }
+}
