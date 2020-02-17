@@ -1,5 +1,5 @@
-import { element } from 'protractor';
-import { Monster, MonsterHeader } from './monster';
+import { FormControl } from '@angular/forms';
+import { Monster } from './monster';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MonsterComponent implements OnInit {
   monster: Monster;
+  elements = new FormControl();
+  elementList: string[] = ['Water', 'Fire', 'Leaf', 'Rock', 'Electricity', 'Death'];
 
   constructor() {
     this.populateMonster();
