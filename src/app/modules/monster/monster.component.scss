@@ -1,0 +1,15 @@
+#monster-form{
+    margin: 50px;
+    .form-element{
+        margin-bottom: 15px;
+        .mat-form-field {
+            background-color: #e4e4e4;
+            padding: 2px 0px 0px 5px;
+            border-radius: 3px;
+            &.textarea {
+                width: inherit;
+            }
+        }
+
+    }
+}

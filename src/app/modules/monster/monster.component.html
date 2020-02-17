@@ -1,9 +1,56 @@
-<p>
-  {{monster.monsterName}}
-</p>
-<mat-form-field>
-  <mat-label>Elements</mat-label>
-  <mat-select [formControl]="elements" multiple>
-    <mat-option *ngFor="let element of elementList" [value]="element">{{element}}</mat-option>
-  </mat-select>
-</mat-form-field>
+<div id="monster-form">
+  <div class="container">
+    <div class="row">
+      <div class="col-3 form-element">
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput [(ngModel)]="monster.monsterName">
+        </mat-form-field>
+      </div>
+      <div class="col-3 form-element">
+        <mat-form-field>
+          <mat-label>Ability</mat-label>
+          <input matInput [(ngModel)]="monster.abilityName">
+        </mat-form-field>
+      </div>
+      <div class="col-3 form-element">
+        <mat-form-field>
+          <mat-label>Elements</mat-label>
+          <mat-select [(ngModel)]="monster.elementLks" multiple (selectionChange)="elementChanged($event)">
+            <mat-option 
+              *ngFor="let element of elementList" 
+              [value]="element">
+              {{element}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-3 form-element">
+        <mat-form-field>
+          <mat-label>Role</mat-label>
+          <mat-select [(ngModel)]="monster.roleLk">
+            <mat-option 
+              *ngFor="let role of roleList" 
+              [value]="role">
+              {{role}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-6 form-element">
+        <mat-form-field class="textarea" appearance="fill">
+          <mat-label>Ability Text</mat-label>
+          <textarea matInput 
+            cdkTextareaAutosize
+            #autosize="cdkTextareaAutosize"
+            cdkAutosizeMinRows="1"
+            cdkAutosizeMaxRows="10"
+            [(ngModel)]="monster.abilityText">
+          </textarea>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+</div>
