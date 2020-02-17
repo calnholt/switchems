@@ -1,4 +1,4 @@
-import { Monster } from 'src/app/modules/monster/model/monster';
+import { MonsterComplete } from 'src/app/modules/monster/model/monster';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -7,11 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./monster-card.component.scss']
 })
 export class MonsterCardComponent implements OnInit {
-  @Input() monster: Monster;
-  ICON_PATH: 'src/assets/icons';
-  ROLE_PATH: 'src/assets/icons/roles';
-  ELEMENT_COLOR_PATH: 'src/assets/icons/elements/color';
-  ELEMENT_GRAY_PATH: 'src/assets/icons/elements/gray';
+  @Input() monster: MonsterComplete;
+  ELEMENT_LIST: string[] = ['Fire', 'Water', 'Rock', 'Leaf', 'Electric', 'Skull'];
+  ICON_PATH: string = './assets/images';
+  ROLE_PATH: string = this.ICON_PATH + '/roles';
+  ELEMENT_COLOR_PATH: string = this.ICON_PATH + '/elements/color';
+  ELEMENT_GRAY_PATH: string = this.ICON_PATH + '/elements/gray';
   CONVERSION_MAP: any = {
     '-2': '--',
     '-1': '-',
@@ -58,9 +59,10 @@ export class MonsterCardComponent implements OnInit {
     }
   };
 
+  ngOnInit() {}
   constructor() {}
 
-  getEffectivenessArray(monster: Monster) {
+  getEffectivenessArray(monster: MonsterComplete) {
     const arrs = [].concat(monster.elementLks.map((el: string) => this.ELEMENT_MAP[el].advantages));
     const totals = [0, 0, 0, 0, 0, 0];
     arrs.forEach(arr => {arr.forEach((num: number, i: number) => {totals[i] += num; }); });
@@ -74,9 +76,26 @@ export class MonsterCardComponent implements OnInit {
     const out: string[] = [];
     values.forEach((num: number, i: number) => out.push(this.CONVERSION_MAP[num]));
     return out;
-}
+  }
 
-  ngOnInit() {
+  hasElement(element: string) {
+    return this.monster.elementLks.includes(element);
+  }
+
+  getElementColorImg(element: string) {
+    return `${this.ELEMENT_COLOR_PATH}/${element.toLocaleLowerCase()}.png`;
+  }
+
+  getElementGrayImg(element: string) {
+    return `${this.ELEMENT_GRAY_PATH}/${element.toLocaleLowerCase()}.png`;
+  }
+
+  getRoleIcon() {
+    return `${this.ROLE_PATH}/${this.monster.roleLk.toLocaleLowerCase()}.png`;
+  }
+
+  getHpIcon() {
+    return `${this.ICON_PATH}/symbols/hp/${this.monster.hp}.png`;
   }
 
 }

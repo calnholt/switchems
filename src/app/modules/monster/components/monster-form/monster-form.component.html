@@ -17,7 +17,7 @@
         <div class="col-12 form-element">
           <mat-form-field appearance="fill">
             <mat-label>Elements</mat-label>
-            <mat-select [(ngModel)]="monster.elementLks" multiple (selectionChange)="elementChanged($event)">
+            <mat-select [formControl]="elements" multiple (selectionChange)="elementChanged($event)">
               <mat-option 
                 *ngFor="let element of elementList" 
                 [value]="element">
@@ -52,6 +52,7 @@
           <mat-form-field class="textarea" appearance="fill">
             <mat-label>Ability Text</mat-label>
             <textarea matInput 
+              (change)="convertText(monster.abilityText)" 
               cdkTextareaAutosize
               #autosize="cdkTextareaAutosize"
               cdkAutosizeMinRows="1"

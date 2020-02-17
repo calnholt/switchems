@@ -34,17 +34,12 @@
                 letter-spacing: 0.02em;
             }
             .line-container{
+                padding-left: 4px;
                 .name-line{
                     border: .04cm solid black;
                     width: 2.37cm;
                     display: inline-block;
                     margin: 0cm .2cm .1cm .2cm;
-                    &.left{
-
-                    }
-                    &.right{
-
-                    }
                 }
                 .dot{
                     height: 9px;
@@ -65,6 +60,7 @@
                     height: 11%;
                     border-radius: 10px 10px 0px 0px;
                     margin-top: 0.2cm;
+                    padding: 2px 0px 2px;
                     .ability-name{
                         margin: auto;
                         font-family: 'Beastformer';
@@ -76,7 +72,7 @@
                 }
                 .ability-text-container{
                     position: relative;
-                    top: -5px;
+                    top: -8px;
                     display: flex;
                     background-color: hsl(0, 0%, 94%);
                     border: 2px black solid;
@@ -89,6 +85,21 @@
                         font-size: 12px;
                         padding: 10px;
                         line-height: 13px;
+                        .term{
+                            font-style: italic;
+                            font-size: 11px;
+                        }
+                        .term-img{
+                            max-height: 15px;
+                        }
+                        img{
+                            max-height: 15px;
+                        }
+                        span{
+                            img{
+                                max-height: 15px;
+                            }
+                        }
                     }
                 }
             }
@@ -120,4 +131,19 @@
             }
         }
     }
+    .term{
+        font-style: italic;
+        font-size: 11px;
+    }
+    .term-img{
+        max-height: 15px;
+    }
+}
+
+.term{
+    font-style: italic;
+    font-size: 11px;
+}
+.term-img{
+    max-height: 15px;
 }
