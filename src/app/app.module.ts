@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { MonsterFormComponent } from 'src/app/modules/monster/components/monster-form/monster-form.component';
+import { MonsterCardComponent } from 'src/app/modules/monster/components/monster-card/monster-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MonsterFormComponent
+    MonsterFormComponent,
+    MonsterCardComponent
   ],
   imports: [
     BrowserModule,
