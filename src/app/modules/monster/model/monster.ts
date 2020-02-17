@@ -1,5 +1,5 @@
-import { Buff } from './../buff/buff';
-import { Action } from './../action/action';
+import { Buff } from 'src/app/modules/buff/model/buff';
+import { Action } from 'src/app/modules/action/model/action';
 export class MonsterHeader {
     monsterId: number;
     monsterName: string;

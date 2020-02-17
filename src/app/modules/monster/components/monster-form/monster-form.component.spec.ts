@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { MonsterComponent } from './monster.component';
+import { MonsterFormComponent } from 'src/app/modules/monster/components/monster-form/monster-form.component';
 
-describe('MonsterComponent', () => {
-  let component: MonsterComponent;
-  let fixture: ComponentFixture<MonsterComponent>;
+describe('MonsterFormComponent', () => {
+  let component: MonsterFormComponent;
+  let fixture: ComponentFixture<MonsterFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MonsterComponent ]
+      declarations: [ MonsterFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MonsterComponent);
+    fixture = TestBed.createComponent(MonsterFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

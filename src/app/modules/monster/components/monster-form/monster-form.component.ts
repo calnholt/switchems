@@ -1,15 +1,14 @@
-import { Monster } from './monster';
+import { Monster } from 'src/app/modules/monster/model/monster';
 import { MatSelectChange } from '@angular/material/select';
-import {CdkTextareaAutosize} from '@angular/cdk/text-field';
-import {Component, ViewChild, OnInit} from '@angular/core';
-import {take} from 'rxjs/operators';
+import { CdkTextareaAutosize } from '@angular/cdk/text-field';
+import { Component, ViewChild, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'monster',
-  templateUrl: './monster.component.html',
-  styleUrls: ['./monster.component.scss']
+  selector: 'monster-form',
+  templateUrl: './monster-form.component.html',
+  styleUrls: ['./monster-form.component.scss']
 })
-export class MonsterComponent implements OnInit {
+export class MonsterFormComponent implements OnInit {
   @ViewChild('autosize') autosize: CdkTextareaAutosize;
   monster: Monster;
   prevElements: string[];

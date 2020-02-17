@@ -1,4 +1,4 @@
-import { Monster, MonsterHeader } from './../monster/monster';
+import { Monster, MonsterHeader } from 'src/app/modules/monster/model/monster';
 export class Action extends MonsterHeader {
     abilityName: string;
     abilityText?: string;
