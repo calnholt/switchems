@@ -1,3 +1,4 @@
+import { DataService } from './../../../../services/data.service';
 import { FormControl } from '@angular/forms';
 import { MonsterComplete } from 'src/app/modules/monster/model/monster';
 import { MatSelectChange } from '@angular/material/select';
@@ -17,9 +18,16 @@ export class MonsterFormComponent implements OnInit {
   elements: FormControl;
   elementList: string[] = ['Fire', 'Water', 'Rock', 'Leaf', 'Electric', 'Skull'];
   roleList: string[] = ['Warrior', 'Assassin', 'Technical', 'Tank', 'Support', 'Tricky'];
+  panelOpenState: false;
+  TERM_MAP: any;
+  IMG_MAP: any;
 
-  constructor() {
+  constructor(
+    private dataService: DataService,
+  ) {
     this.populateMonster();
+    this.IMG_MAP = dataService.getImgMap();
+    this.TERM_MAP = dataService.getTermsMap();
   }
 
   ngOnInit() {}

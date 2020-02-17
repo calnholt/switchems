@@ -1,3 +1,4 @@
+import { DataService } from './../../../../services/data.service';
 import { MonsterComplete } from 'src/app/modules/monster/model/monster';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -21,91 +22,12 @@ export class MonsterCardComponent implements OnInit {
     '1': '+',
     '2': '++',
 };
-  ELEMENT_MAP: any = {
-    Fire: {
-      name: 'fire',
-      img: `${this.ELEMENT_COLOR_PATH}/fire.png`,
-      grayImg: `${this.ELEMENT_GRAY_PATH}/fire.png`,
-      advantages: [0, -1, -1, 1, 1, 0],
-    },
-    Water: {
-        name: 'water',
-        img: `${this.ELEMENT_COLOR_PATH}/water.png`,
-        grayImg: `${this.ELEMENT_GRAY_PATH}/water.png`,
-        advantages: [1, 0, 0, -1, -1, 1],
-    },
-    Rock: {
-        name: 'rock',
-        img: `${this.ELEMENT_COLOR_PATH}/rock.png`,
-        grayImg: `${this.ELEMENT_GRAY_PATH}/rock.png`,
-        advantages: [1, 0, 0, -1, 1, -1],
-    },
-    Leaf: {
-        name: 'leaf',
-        img: `${this.ELEMENT_COLOR_PATH}/leaf.png`,
-        grayImg: `${this.ELEMENT_GRAY_PATH}/leaf.png`,
-        advantages: [-1, 1, 1, 0, 0, -1],
-    },
-    Electric: {
-        name: 'elec',
-        img: `${this.ELEMENT_COLOR_PATH}/elec.png`,
-        grayImg: `${this.ELEMENT_GRAY_PATH}/elec.png`,
-        advantages: [-1, 1, -1, 0, 0, 1],
-    },
-    Skull: {
-        name: 'skull',
-        img: `${this.ELEMENT_COLOR_PATH}/skull.png`,
-        grayImg: `${this.ELEMENT_GRAY_PATH}/skull.png`,
-        advantages: [0, -1, 1, 1, -1, 0],
-    }
-  };
 
   VARIOUS_ICON_DIRECTORY: string = './assets/images/symbols/';
   ELEMENT_ICON_DIRECTORY: string = './assets/images/elements/color/';
 
-  TERMS_MAP: any = {
-    '~BURN~': 'Burned monsters gain -1[ATK]. Burned [L] [R] [S] monsters gain -2[ATK] instead.',
-    '~SUCCESS~': 'Unsuccessful attacks do nothing.',
-    '~FLINCH~':	'Prevent the targeted monster\'s attack if this attack is faster speed.',
-    '~PARALYZE~': 'Paralyzed monsters have -2[SPD] and all of their attacks have [2]: This attack is successful.',
-    '~LEECH~': 'At the end of each turn, deal 1[ATK] to the leeched monster. If your active monster '
-      + 'is [L], heal 1[HP]. Stacks up to three. Remove on switch.',
-    '~FATIGUE~': 'Fatigued monsters gain -1[DEF]. Fatigued [W] [E] [F] monsters can\'t use buff cards.',
-    '~PREVENT ESC~': 'Cannot be prevented with Can\'t Escape!',
-    '~STATUS~': 'Paralyze, burn, leech, etc.',
-    '~SINGLE~':	'Recharges on switch.',
-    '~CONSECUTIVE~': 'Cannot be used consecutively.',
-    '~STUN~': 'Stunned monsters cannot switch.',
-    '~RECOIL~': 'Recoil damage cannot be prevented and still occurs if the targeted monster protects.',
-    '~CURSE~': 'If this card is flipped for a [X] effect, that monster is dealt 1[ATK].'
-  };
-
-  IMG_MAP = {
-    '[ATK]': this.VARIOUS_ICON_DIRECTORY + 'attack.png',
-    '[PH]': this.VARIOUS_ICON_DIRECTORY + 'physical.png',
-    '[SP]': this.VARIOUS_ICON_DIRECTORY + 'special.png',
-    '[+]': this.VARIOUS_ICON_DIRECTORY + 'draw.png',
-    '[B]': this.VARIOUS_ICON_DIRECTORY + 'buff.png',
-    '[-]': this.VARIOUS_ICON_DIRECTORY + 'pay.png',
-    '[1]': this.VARIOUS_ICON_DIRECTORY + '1.png',
-    '[2]': this.VARIOUS_ICON_DIRECTORY + '2.png',
-    '[3]': this.VARIOUS_ICON_DIRECTORY + '3.png',
-    '[DEF]': this.VARIOUS_ICON_DIRECTORY + 'defense.png',
-    '[TA]': this.VARIOUS_ICON_DIRECTORY + 'aura.png',
-    '[X]': this.VARIOUS_ICON_DIRECTORY + 'x.png',
-    '[SUCC]': this.VARIOUS_ICON_DIRECTORY + 'success.png',
-    '[FAIL]': this.VARIOUS_ICON_DIRECTORY + 'fail.png',
-    '[SPD]': this.VARIOUS_ICON_DIRECTORY + 'speed.png',
-    '[F]': this.ELEMENT_ICON_DIRECTORY + 'fire.png',
-    '[W]': this.ELEMENT_ICON_DIRECTORY + 'water.png',
-    '[L]': this.ELEMENT_ICON_DIRECTORY + 'leaf.png',
-    '[R]': this.ELEMENT_ICON_DIRECTORY + 'rock.png',
-    '[E]': this.ELEMENT_ICON_DIRECTORY + 'elec.png',
-    '[S]': this.ELEMENT_ICON_DIRECTORY + 'skull.png',
-    '[ST]': this.VARIOUS_ICON_DIRECTORY + 'status.png',
-    '[REAC]': this.VARIOUS_ICON_DIRECTORY + 'reaction.png',
-    '[HP]': this.VARIOUS_ICON_DIRECTORY + 'heart.png',
-  };
+  TERMS_MAP: any;
+  IMG_MAP: any;
 
   TERMS_ARRAY: string[] = [];
   IMG_ARRAY: string[] = [];
@@ -117,13 +39,17 @@ export class MonsterCardComponent implements OnInit {
     this.monsterAbilityHtml = this.monster.abilityText;
   }
 
-  constructor() {
+  constructor(
+    private dataService: DataService,
+  ) {
+    this.TERMS_MAP = dataService.getTermsMap();
+    this.IMG_MAP = dataService.getImgMap();
     Object.keys(this.TERMS_MAP).forEach(term => this.TERMS_ARRAY.push(term));
     Object.keys(this.IMG_MAP).forEach(img => this.IMG_ARRAY.push(img));
   }
 
   getEffectivenessArray(monster: MonsterComplete) {
-    const arrs = [].concat(monster.elementLks.map((el: string) => this.ELEMENT_MAP[el].advantages));
+    const arrs = [].concat(monster.elementLks.map((el: string) => this.dataService.getAdvantages()[el].advantages));
     const totals = [0, 0, 0, 0, 0, 0];
     arrs.forEach(arr => {arr.forEach((num: number, i: number) => {totals[i] += num; }); });
     const values = totals.map(num => {

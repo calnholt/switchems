@@ -10,7 +10,6 @@
                 width: inherit;
             }
         }
-
     }
     .term{
         font-style: italic;
@@ -18,5 +17,18 @@
     }
     .term-img{
         max-height: 15px;
+    }
+    .expansion-container{
+        font-size: 10px;
+        .icon-grid{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            justify-items: left;
+        }
+    }
+    .card-container{
+        position: fixed;
+        left: 50%;
+        top: 15%;
     }
 }

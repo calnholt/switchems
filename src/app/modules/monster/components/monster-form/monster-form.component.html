@@ -1,7 +1,7 @@
 <div id="monster-form">
   <div class="container">
     <div class="row">
-      <div class="col-3">
+      <div class="col-4">
         <div class="col-12 form-element">
           <mat-form-field appearance="fill">
             <mat-label>Name</mat-label>
@@ -59,12 +59,42 @@
               [(ngModel)]="monster.abilityText">
             </textarea>
           </mat-form-field>
+          <!-- EXPANSION PANEL -->
+          <div class="expansion-container">
+            <mat-accordion>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Icon Codes
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="icon-grid">
+                  <div *ngFor="let item of IMG_MAP | keyvalue">
+                    <img src="{{item.value}}" class="term-img"> - {{item.key}}
+                  </div>
+                </div>
+              </mat-expansion-panel>
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    Terms
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div *ngFor="let item of TERM_MAP | keyvalue">
+                  <strong>{{item.key}}</strong> - {{item.value}}
+                  <br><br>
+                </div>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
         </div>
       </div>
-      <div class="col-9">
-        <monster-card
-          [monster]="monster">
-        </monster-card>
+      <div class="col-8">
+        <div class="card-container">
+          <monster-card
+            [monster]="monster">
+          </monster-card>
+        </div>
       </div>
     </div>
   </div>
