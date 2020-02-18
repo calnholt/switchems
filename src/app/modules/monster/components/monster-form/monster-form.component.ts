@@ -16,7 +16,7 @@ export class MonsterFormComponent implements OnInit {
   @ViewChild('autosize') autosize: CdkTextareaAutosize;
   monster: MonsterComplete;
   elements: FormControl;
-  elementList: string[] = ['Fire', 'Water', 'Rock', 'Leaf', 'Electric', 'Skull'];
+  elementList: string[] = ['Fire', 'Water', 'Rock', 'Leaf', 'Electric', 'Death'];
   roleList: string[] = ['Warrior', 'Assassin', 'Technical', 'Tank', 'Support', 'Tricky'];
   panelOpenState: false;
   TERM_MAP: any;
@@ -32,17 +32,17 @@ export class MonsterFormComponent implements OnInit {
 
   ngOnInit() {}
 
+  // hardcoded placeholder monster data
+  // should probably be retrieved from a parent component and be set as an @Input
   populateMonster() {
     this.monster = new MonsterComplete();
     this.monster.monsterId = 1;
-    this.monster.monsterName = 'Cleansitoad';
-    this.monster.elementLks = ['Water'];
-    this.monster.abilityName = 'Clear Mind';
-    this.monster.abilityText = 'When this monster enters the battlefield, '
-    + 'you may shuffle your discard pile into your deck. Then, look at the top three cards of your deck. '
-    + 'You may put any number back on top or on the bottom in any order.';
-    this.monster.hp = 12;
-    this.monster.roleLk = 'Technical';
+    this.monster.monsterName = 'Stallagrowth';
+    this.monster.elementLks = ['Rock', 'Leaf'];
+    this.monster.abilityName = 'Thorned Body';
+    this.monster.abilityText = 'Whenever this monster is dealt damage by a [F] [R] attack, that monster is dealt 2[ATK].';
+    this.monster.hp = 14;
+    this.monster.roleLk = 'Tank';
     this.elements = new FormControl();
     this.elements.setValue(this.monster.elementLks);
     console.log(this.monster);

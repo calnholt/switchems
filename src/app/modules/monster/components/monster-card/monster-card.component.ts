@@ -10,7 +10,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MonsterCardComponent implements OnInit {
   @Input() monster: MonsterComplete;
   monsterAbilityHtml: string;
-  ELEMENT_LIST: string[] = ['Fire', 'Water', 'Rock', 'Leaf', 'Electric', 'Skull'];
+  ELEMENT_LIST: string[] = ['Fire', 'Water', 'Rock', 'Leaf', 'Electric', 'Death'];
   ICON_PATH: string = './assets/images';
   ROLE_PATH: string = this.ICON_PATH + '/roles';
   ELEMENT_COLOR_PATH: string = this.ICON_PATH + '/elements/color';

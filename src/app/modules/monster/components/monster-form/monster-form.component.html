@@ -42,9 +42,10 @@
           <mat-form-field class="textarea" appearance="fill">
             <mat-label>HP</mat-label>
             <input matInput
+              min="1"
+              max="20"
               type="number"
               #input
-              maxlength="2"
               [(ngModel)]="monster.hp">
           </mat-form-field>
         </div>

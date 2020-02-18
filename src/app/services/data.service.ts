@@ -44,7 +44,7 @@ export class DataService {
     '[L]': this.ELEMENT_ICON_DIRECTORY + 'leaf.png',
     '[R]': this.ELEMENT_ICON_DIRECTORY + 'rock.png',
     '[E]': this.ELEMENT_ICON_DIRECTORY + 'electric.png',
-    '[S]': this.ELEMENT_ICON_DIRECTORY + 'skull.png',
+    '[S]': this.ELEMENT_ICON_DIRECTORY + 'death.png',
     '[ST]': this.VARIOUS_ICON_DIRECTORY + 'status.png',
     '[REAC]': this.VARIOUS_ICON_DIRECTORY + 'reaction.png',
     '[HP]': this.VARIOUS_ICON_DIRECTORY + 'heart.png',
@@ -66,7 +66,7 @@ export class DataService {
     Electric: {
         advantages: [-1, 1, -1, 0, 0, 1],
     },
-    Skull: {
+    Death: {
         advantages: [0, -1, 1, 1, -1, 0],
     },
   };
