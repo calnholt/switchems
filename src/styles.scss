@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
+@font-face { 
+    font-family: 'Beastformer'; 
+    src: url('src/assets/fonts/Beastformer.ttf') format("opentype")
+} 
+@font-face { 
+    font-family: 'Helvetica'; 
+    src: url('src/assets/fonts/Helvetica.ttc') format("opentype")
+}
+
 html, body { height: 100%; }
 body { 
     margin: 0; 
