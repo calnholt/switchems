@@ -1,4 +1,4 @@
-import { ElemTypeTuple, RoleTuple, TermCodeTuple, TERM_CODES, IMAGE_CODES, ImageCodeTuple } from './../../../../types/dataTypes';
+import { ELEMENTS, ROLES, TERM_CODES, IMAGE_CODES } from './../../../../types/dataTypes';
 import { DataService } from './../../../../services/data.service';
 import { FormControl } from '@angular/forms';
 import { MonsterComplete } from 'src/app/modules/monster/model/monster';
@@ -17,11 +17,11 @@ export class MonsterFormComponent implements OnInit {
   @ViewChild('autosize') autosize: CdkTextareaAutosize;
   monster: MonsterComplete;
   elements: FormControl;
-  elementList: ElemTypeTuple;
-  roleList: RoleTuple;
+  elementList = ELEMENTS;
+  roleList = ROLES;
   panelOpenState: false;
-  termCodes: TermCodeTuple;
-  imageCodes: ImageCodeTuple;
+  termCodes = TERM_CODES;
+  imageCodes = IMAGE_CODES;
 
   constructor(
     private dataService: DataService,
@@ -29,6 +29,7 @@ export class MonsterFormComponent implements OnInit {
     this.populateMonster();
     console.log(this.termCodes);
     console.log(this.imageCodes);
+    console.log(this.roleList);
   }
 
   ngOnInit() {}

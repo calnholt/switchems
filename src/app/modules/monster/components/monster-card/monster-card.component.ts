@@ -39,15 +39,15 @@ export class MonsterCardComponent implements OnInit {
   ngOnInit() {
     this.monsterAbilityHtml = this.monster.abilityText;
     console.log(JSON.stringify(this.monster, null, 2));
-    const fs = require('fs');
-    const storeData = (data, path: Path) => {
-      try {
-        fs.writeFileSync(path, JSON.stringify(data));
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    storeData(this.monster, '');
+    // const fs = require('fs');
+    // const storeData = (data, path: Path) => {
+    //   try {
+    //     fs.writeFileSync(path, JSON.stringify(data));
+    //   } catch (err) {
+    //     console.error(err);
+    //   }
+    // };
+    // storeData(this.monster, '');
   }
 
   constructor(

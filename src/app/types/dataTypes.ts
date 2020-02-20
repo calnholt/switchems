@@ -1,10 +1,8 @@
-const ELEMENTS = ['Fire', 'Water', 'Rock', 'Leaf', 'Electric', 'Death'] as const;
-export type ElemTypeTuple = typeof ELEMENTS;
-export type ElemType = ElemTypeTuple[number];
+export const ELEMENTS = ['Fire', 'Water', 'Rock', 'Leaf', 'Electric', 'Death'] as const;
+export type ElemType = typeof ELEMENTS[number];
 
-const ROLES = ['Warrior', 'Assassin', 'Technical', 'Tank', 'Support', 'Tricky'] as const;
-export type RoleTuple = typeof ROLES;
-export type Role = RoleTuple[number];
+export const ROLES = ['Warrior', 'Assassin', 'Technical', 'Tank', 'Support', 'Tricky'] as const;
+export type Role = typeof ROLES[number];
 
 export type Url = string;
 export type Path = string;
@@ -31,8 +29,7 @@ export const TERM_CODES = [
     {'~RECOIL~': 'Recoil damage cannot be prevented and still occurs if the targeted monster protects.' as TermCodeValue},
     {'~CURSE~': 'If this card is flipped for a [X] effect, that monster is dealt 1[ATK].' as TermCodeValue},
 ] as const;
-export type TermCodeTuple = typeof TERM_CODES;
-export type TermCode = TermCodeTuple[number];
+export type TermCode = typeof TERM_CODES[number];
 
 export const IMAGE_CODES = [
     {'[ATK]': SYMBOLS_PATH + 'attack.png' as ImageFile},
@@ -58,8 +55,7 @@ export const IMAGE_CODES = [
     {'[REAC]': SYMBOLS_PATH + 'reaction.png' as ImageFile},
     {'[HP]': SYMBOLS_PATH + 'heart.png' as ImageFile},
 ] as const;
-export type ImageCodeTuple = typeof IMAGE_CODES;
-export type ImageCode = ImageCodeTuple[number];
+export type ImageCode = typeof IMAGE_CODES[number];
 
 
 // const IMAGE_CODES = ['[ATK]', ]
