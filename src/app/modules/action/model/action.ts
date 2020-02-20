@@ -1,5 +1,5 @@
-import { Monster, MonsterHeader } from 'src/app/modules/monster/model/monster';
-export class Action extends MonsterHeader {
+import { Monster, Card } from 'src/app/modules/monster/model/monster';
+export class Action extends Card {
     abilityName: string;
     abilityText?: string;
     attack?: number;

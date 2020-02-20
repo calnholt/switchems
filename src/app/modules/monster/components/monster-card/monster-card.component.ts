@@ -1,6 +1,7 @@
 import { DataService } from './../../../../services/data.service';
 import { MonsterComplete } from 'src/app/modules/monster/model/monster';
 import { Component, OnInit, Input } from '@angular/core';
+import { Path, ElemType } from './../../../../types/dataTypes';
 
 @Component({
   selector: 'monster-card',
@@ -37,6 +38,16 @@ export class MonsterCardComponent implements OnInit {
 
   ngOnInit() {
     this.monsterAbilityHtml = this.monster.abilityText;
+    console.log(JSON.stringify(this.monster, null, 2));
+    const fs = require('fs');
+    const storeData = (data, path: Path) => {
+      try {
+        fs.writeFileSync(path, JSON.stringify(data));
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    storeData(this.monster, '');
   }
 
   constructor(
@@ -49,7 +60,7 @@ export class MonsterCardComponent implements OnInit {
   }
 
   getEffectivenessArray(monster: MonsterComplete) {
-    const arrs = [].concat(monster.elementLks.map((el: string) => this.dataService.getAdvantages()[el].advantages));
+    const arrs = [].concat(monster.elements.map((el: string) => this.dataService.getAdvantages()[el].advantages));
     const totals = [0, 0, 0, 0, 0, 0];
     arrs.forEach(arr => {arr.forEach((num: number, i: number) => {totals[i] += num; }); });
     const values = totals.map(num => {
@@ -64,8 +75,8 @@ export class MonsterCardComponent implements OnInit {
     return out;
   }
 
-  hasElement(element: string) {
-    return this.monster.elementLks.includes(element);
+  hasElement(element: ElemType) {
+    return this.monster.elements.includes(element);
   }
 
   getElementColorImg(element: string) {
@@ -77,7 +88,7 @@ export class MonsterCardComponent implements OnInit {
   }
 
   getRoleIcon() {
-    return `${this.ROLE_PATH}/${this.monster.roleLk.toLocaleLowerCase()}.png`;
+    return `${this.ROLE_PATH}/${this.monster.role.toLocaleLowerCase()}.png`;
   }
 
   getHpIcon() {

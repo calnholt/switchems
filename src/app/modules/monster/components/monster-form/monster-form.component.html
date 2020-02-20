@@ -70,7 +70,7 @@
                   </mat-panel-title>
                 </mat-expansion-panel-header>
                 <div class="icon-grid">
-                  <div *ngFor="let item of IMG_MAP | keyvalue">
+                  <div *ngFor="let item of imageCodes | keyvalue">
                     <img src="{{item.value}}" class="term-img"> - {{item.key}}
                   </div>
                 </div>
@@ -81,7 +81,7 @@
                     Term Codes
                   </mat-panel-title>
                 </mat-expansion-panel-header>
-                <div *ngFor="let item of TERM_MAP | keyvalue">
+                <div *ngFor="let item of termCodes | keyvalue">
                   <strong>{{item.key}}</strong> - {{item.value}}
                   <br><br>
                 </div>
