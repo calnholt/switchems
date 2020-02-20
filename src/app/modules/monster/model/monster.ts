@@ -1,4 +1,4 @@
-import { Role, ElemType } from './../../../types/dataTypes';
+import { Role, ElemType, TermCode } from './../../../types/dataTypes';
 import { Buff } from 'src/app/modules/buff/model/buff';
 import { Action } from 'src/app/modules/action/model/action';
 export class Card {

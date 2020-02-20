@@ -1,7 +1,9 @@
+import { Image, Term } from './../../../data/data';
 import { DataService } from './../../../../services/data.service';
 import { MonsterComplete } from 'src/app/modules/monster/model/monster';
 import { Component, OnInit, Input } from '@angular/core';
-import { Path, ElemType } from './../../../../types/dataTypes';
+import { Path, ElemType, ELEMENTS, TERM_CODES, IMAGE_CODES } from './../../../../types/dataTypes';
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'monster-card',
@@ -11,21 +13,15 @@ import { Path, ElemType } from './../../../../types/dataTypes';
 export class MonsterCardComponent implements OnInit {
   @Input() monster: MonsterComplete;
   monsterAbilityHtml: string;
-  ELEMENT_LIST: string[] = ['Fire', 'Water', 'Rock', 'Leaf', 'Electric', 'Death'];
-  ICON_PATH: string = './assets/images';
-  ROLE_PATH: string = this.ICON_PATH + '/roles';
-  ELEMENT_COLOR_PATH: string = this.ICON_PATH + '/elements/color';
-  ELEMENT_GRAY_PATH: string = this.ICON_PATH + '/elements/gray';
-  CONVERSION_MAP: any = {
-    '-2': '--',
-    '-1': '-',
-    '0': '',
-    '1': '+',
-    '2': '++',
-};
+  ELEMENT_LIST = ELEMENTS;
+  ICON_PATH: Path = './assets/images';
+  ROLE_PATH: Path = this.ICON_PATH + '/roles';
+  ELEMENT_COLOR_PATH: Path = this.ICON_PATH + '/elements/color';
+  ELEMENT_GRAY_PATH: Path = this.ICON_PATH + '/elements/gray';
 
-  VARIOUS_ICON_DIRECTORY: string = './assets/images/symbols/';
-  ELEMENT_ICON_DIRECTORY: string = './assets/images/elements/color/';
+
+  VARIOUS_ICON_DIRECTORY: Path = './assets/images/symbols/';
+  ELEMENT_ICON_DIRECTORY: Path = './assets/images/elements/color/';
 
   TERMS_MAP: any;
   IMG_MAP: any;
@@ -39,25 +35,14 @@ export class MonsterCardComponent implements OnInit {
   ngOnInit() {
     this.monsterAbilityHtml = this.monster.abilityText;
     console.log(JSON.stringify(this.monster, null, 2));
-    // const fs = require('fs');
-    // const storeData = (data, path: Path) => {
-    //   try {
-    //     fs.writeFileSync(path, JSON.stringify(data));
-    //   } catch (err) {
-    //     console.error(err);
-    //   }
-    // };
-    // storeData(this.monster, '');
+    // const blob = new Blob([JSON.stringify(this.monster, null, 2)], {type : 'application/json'});
+    // saveAs(blob, 'abc.json');
+
   }
 
   constructor(
     private dataService: DataService,
-  ) {
-    this.TERMS_MAP = dataService.getTermsMap();
-    this.IMG_MAP = dataService.getImgMap();
-    Object.keys(this.TERMS_MAP).forEach(term => this.TERMS_ARRAY.push(term));
-    Object.keys(this.IMG_MAP).forEach(img => this.IMG_ARRAY.push(img));
-  }
+  ) {}
 
   getEffectivenessArray(monster: MonsterComplete) {
     const arrs = [].concat(monster.elements.map((el: string) => this.dataService.getAdvantages()[el].advantages));
@@ -71,8 +56,18 @@ export class MonsterCardComponent implements OnInit {
         }
     });
     const out: string[] = [];
-    values.forEach((num: number, i: number) => out.push(this.CONVERSION_MAP[num]));
+    values.forEach((num: number, i: number) => out.push(this.getEffectivenessSymbol(num)));
     return out;
+  }
+
+  getEffectivenessSymbol(num: number): string {
+    switch (num) {
+      case -2: return '--';
+      case -1: return '-';
+      case 0: return '';
+      case 1: return '+';
+      case 2: return '++';
+    }
   }
 
   hasElement(element: ElemType) {
@@ -97,16 +92,16 @@ export class MonsterCardComponent implements OnInit {
 
   getAbilityText() {
     let innerHtml = this.monster.abilityText;
-    this.TERMS_ARRAY.forEach((term: string) => {
-      while (innerHtml.includes(term)) {
-          const html = `<br><span class="${this.TERM_CSS}">(${this.TERMS_MAP[term]})</span>`;
-          innerHtml = innerHtml.replace(term, html);
+    TERM_CODES.forEach((term: Term) => {
+      while (innerHtml.includes(term.key)) {
+          const html = `<br><span class="${this.TERM_CSS}">(${term.value})</span>`;
+          innerHtml = innerHtml.replace(term.key, html);
       }
     });
-    this.IMG_ARRAY.forEach((img: string) => {
-      while (innerHtml.includes(img)) {
-          const html = `<img src="${this.IMG_MAP[img]}" class="${this.ABILITY_IMG_CSS}">`;
-          innerHtml = innerHtml.replace(img, html);
+    IMAGE_CODES.forEach((image: Image) => {
+      while (innerHtml.includes(image.key)) {
+          const html = `<img src="${image.path}" class="${this.ABILITY_IMG_CSS}">`;
+          innerHtml = innerHtml.replace(image.key, html);
       }
     });
     return innerHtml;
