@@ -1,0 +1,83 @@
+{
+  "monsterId": 1,
+  "monsterName": "Stallagrowth",
+  "elements": [
+    "Rock",
+    "Leaf"
+  ],
+  "abilityName": "Thorned Body",
+  "abilityText": "Whenever this monster is dealt damage by a [F] [R] attack, that monster is dealt 2[ATK].",
+  "hp": 14,
+  "role": "Tank",
+  "actions" : [
+    {
+      "abilityName": "Leech Seed",
+      "abilityText": "The targeted monster gains a <strong>leech</strong> condition. ~LEECH~",
+      "speed": 2,
+      "element": "Leaf",
+      "discard": 2,
+      "statusFlg": true,
+      "auraDuration": null,
+      "reactionFlg": false
+    },
+    {
+      "abilityName": "Rock Smash",
+      "attack": 7,
+      "speed": 6,
+      "element": "Rock",
+      "discard": 3,
+      "buff": 2,
+      "modifiers": [-1, 3, -1, 0, 0, 4],
+      "statusFlg": false,
+      "auraDuration": null,
+      "reactionFlg": false
+    },
+    {
+      "abilityName": "Vine Whip",
+      "abilityText": "If the targeted monster is leeched, this attack gains +4[ATK] and removes a leech counter.",
+      "speed": 3,
+      "attack": 2,
+      "element": "Leaf",
+      "buff": 1,
+      "modifiers": [-1, 0, 0, 2, 2, -1],
+      "statusFlg": false,
+      "auraDuration": null,
+      "reactionFlg": false
+    },
+    {
+      "abilityName": "Rock Slide",
+      "abilityText": "If the targeted monster is leeched, this attack gains +4[ATK] and removes a leech counter.",
+      "attack": 2,
+      "speed": 4,
+      "element": "Rock",
+      "discard": 1,
+      "draw": 1,
+      "modifiers": [-1, 2, -1, 0, 0, 1],
+      "statusFlg": false,
+      "auraDuration": null,
+      "reactionFlg": false
+    }
+  ],
+  "buffs": [
+    {
+      "timing": 2,
+      "buffText": "This monster gains +1[DEF] stat cubes",
+      "critFlg": false
+    },
+    {
+      "timing": 2,
+      "buffText": "This monster gains +4[DEF] this turn",
+      "critFlg": false
+    },
+    {
+      "timing": 3,
+      "buffText": "[2]: This attack gains <strong>flinch</strong>. ~FLINCH~",
+      "critFlg": true
+    },
+    {
+      "timing": 3,
+      "buffText": "[2]: This attack gains <strong>flinch</strong>. ~FLINCH~",
+      "critFlg": true
+    }
+  ]
+}

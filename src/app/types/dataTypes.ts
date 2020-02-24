@@ -8,10 +8,13 @@ export type Role = typeof ROLES[number];
 
 export type Url = string;
 export type Path = string;
+export type Css = string;
 export type ImageFile = string;
 
-const SYMBOLS_PATH: Path = './assets/images/symbols/';
-const ELEMENT_PATH: Path = './assets/images/elements/color/';
+export const ICON_PATH: Path = './assets/images';
+export const SYMBOLS_PATH: Path = ICON_PATH + '/symbols/';
+export const ELEMENT_PATH_COLOR: Path = ICON_PATH + '/elements/color/';
+export const ELEMENT_PATH_GRAY: Path = ICON_PATH + '/elements/gray/';
 
 export type TermCodeValue = string;
 
@@ -53,12 +56,12 @@ export const IMAGE_CODES = [
     new Image('[SUCC]', SYMBOLS_PATH + 'success.png'),
     new Image('[FAIL]', SYMBOLS_PATH + 'fail.png'),
     new Image('[SPD]', SYMBOLS_PATH + 'speed.png'),
-    new Image('[F]', ELEMENT_PATH + 'fire.png'),
-    new Image('[W]', ELEMENT_PATH + 'water.png'),
-    new Image('[L]', ELEMENT_PATH + 'leaf.png'),
-    new Image('[R]', ELEMENT_PATH + 'rock.png'),
-    new Image('[E]', ELEMENT_PATH + 'electric.png'),
-    new Image('[S]', ELEMENT_PATH + 'death.png'),
+    new Image('[F]', ELEMENT_PATH_COLOR + 'fire.png'),
+    new Image('[W]', ELEMENT_PATH_COLOR + 'water.png'),
+    new Image('[L]', ELEMENT_PATH_COLOR + 'leaf.png'),
+    new Image('[R]', ELEMENT_PATH_COLOR + 'rock.png'),
+    new Image('[E]', ELEMENT_PATH_COLOR + 'electric.png'),
+    new Image('[S]', ELEMENT_PATH_COLOR + 'death.png'),
     new Image('[ST]', SYMBOLS_PATH + 'status.png'),
     new Image('[REAC]', SYMBOLS_PATH + 'reaction.png'),
     new Image('[HP]', SYMBOLS_PATH + 'heart.png'),

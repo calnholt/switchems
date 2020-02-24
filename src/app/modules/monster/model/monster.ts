@@ -1,9 +1,7 @@
 import { Role, ElemType, TermCode } from './../../../types/dataTypes';
-import { Buff } from 'src/app/modules/buff/model/buff';
-import { Action } from 'src/app/modules/action/model/action';
 export class Card {
-    monsterId: number;
-    monsterName: string;
+    monsterId?: number;
+    monsterName?: string;
     description?: string;
     comments?: string;
     playtestNotes?: string;
@@ -20,4 +18,25 @@ export class Monster extends Card {
 export class MonsterComplete extends Monster {
     actions: Action[];
     buffs: Buff[];
+}
+
+export class Buff {
+    timing: number;
+    buffText: string;
+    critFlg: boolean;
+}
+
+export class Action extends Card {
+    abilityName: string;
+    abilityText?: string;
+    attack?: number;
+    speed?: number;
+    element?: ElemType;
+    buff?: number;
+    discard?: number;
+    draw?: number;
+    modifiers?: number[];
+    auraDuration?: number;
+    statusFlg?: boolean;
+    reactionFlg?: boolean;
 }

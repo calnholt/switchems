@@ -1,0 +1,69 @@
+<div id="action-card">
+  <div class="card-container">
+    <div class="card-wrapper">
+      <div *ngIf="!action.modifiers">
+        <div class="elements-container">
+          <span *ngFor="let modifier of EMPTY_MODIFIER">
+            <span *ngIf="modifier" class="modifier blank">{{getModifier(modifier)}}</span>
+          </span>
+        </div>
+      </div>
+      <div *ngIf="action.modifiers">
+        <div class="elements-container">
+          <span *ngFor="let modifier of action.modifiers; index as i">
+            <span *ngIf="modifier" class="modifier {{ELEMENTS_LIST[i].toLowerCase()}}-color">{{getModifier(modifier)}}</span>
+          </span>
+        </div>
+      </div>
+      <div class="elements-container">
+        <div *ngFor="let element of ELEMENTS_LIST" class="elements">
+          <img class="element" src="{{getElementImageGrayPath(element)}}">
+        </div>
+      </div>
+      <div class="ability-container">
+        <div class="ability-name-container">
+          <span class="ability-name" [ngClass]="{'name-offset':!action.abilityText}">{{action.abilityName}}</span>
+        </div>
+        <div *ngIf="action.abilityText" class="ability-text-container">
+          <div [innerHTML]="getAbilityText()" class="ability-text"></div>
+        </div>
+        <div class="stats-container" [ngClass]="{'text-offset':!action.abilityText}">
+          <span *ngIf="action.attack" class="stat-container">
+            <span class="stat-value">{{action.attack}}</span>
+            <img class="stat-icon" src="{{getImagePath('attack')}}">
+          </span>
+          <span *ngIf="!action.attack" class="stat-container">
+            <span class="stat-value"></span>
+          </span>
+          <span class="stat-container">
+            <img *ngIf="action.element && !action.auraDuration" class="stat-icon" src="{{getElementImageColorPath()}}">
+            <span *ngIf="action.auraDuration" class="stat-container">
+              <span class="stat-value">{{action.auraDuration}}</span>
+              <img class="stat-icon" src="{{getImagePath('aura')}}">
+            </span>
+            <span *ngIf="action.statusFlg" class="stat-container">
+              <img class="stat-icon" src="{{getImagePath('status')}}">
+            </span>
+            <span *ngIf="action.reactionFlg" class="stat-container">
+              <img class="stat-icon" src="{{getImagePath('reaction')}}">
+            </span>
+          </span>
+          <span class="stat-container">
+            <span *ngIf="action.speed" class="stat-container">
+              <span class="stat-value">{{action.speed}}</span>
+              <img class="stat-icon" src="{{getImagePath('speed')}}">
+            </span>
+          </span>
+        </div>
+        <div class="cards-container">
+          <span *ngFor="let imageIcon of cardIcons">
+            <img class="card-icon" src="{{getImagePathFromImageCode(imageIcon)}}">
+          </span>
+        </div>
+        <div class="monster-name-container">
+          <span class="monster-name">{{monster.monsterName}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

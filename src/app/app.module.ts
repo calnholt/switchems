@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 
 import { MonsterFormComponent } from 'src/app/modules/monster/components/monster-form/monster-form.component';
 import { MonsterCardComponent } from 'src/app/modules/monster/components/monster-card/monster-card.component';
+import { MonsterActionComponent } from './modules/monster/components/monster-action/monster-action.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -14,7 +15,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     MonsterFormComponent,
-    MonsterCardComponent
+    MonsterCardComponent,
+    MonsterActionComponent
   ],
   imports: [
     BrowserModule,

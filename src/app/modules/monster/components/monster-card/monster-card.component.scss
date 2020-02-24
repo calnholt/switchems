@@ -3,9 +3,6 @@
 
 #monster-card{
     .card-container{
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
-        position: absolute;
         .monster-container{
             position: relative;
             border: black 2px solid;
