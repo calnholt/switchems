@@ -1,0 +1,27 @@
+<div id="display-all">
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let monster of monsters" class="col-4">
+        <div class="row">
+          <div class="col-8">
+            <monster-card
+              *ngIf="isShowMonster(monster)"
+              [monster]="monster">
+            </monster-card>
+            <monster-action
+              *ngIf="selectedCard.action && selectedCard.monsterId === monster.monsterId"
+              [monster]="monster"
+              [action]="selectedCard.action">
+            </monster-action>
+          </div>
+          <div class="col-4">
+            <div *ngFor="let action of monster.actions; index as i" class="hover-card-icon-container col-12">
+              <div (mouseover)="mouseoverCard(monster, i, true)" (mouseout)="mouseoutCard()" class="hover-card-icon">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -16,6 +16,7 @@ export const loadMonsters = (): MonsterComplete => {
     if (!json.abilityName) {
         return null;
     }
+    monster.monsterId = json.monsterId;
     monster.abilityName = json.abilityName;
     monster.monsterName = json.monsterName;
     const elements = Array<ElemType>();

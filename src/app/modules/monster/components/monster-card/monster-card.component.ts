@@ -1,35 +1,32 @@
 import { getAdvantages, getAbilityText } from './../../../common/cards';
-import { Image, Term } from './../../../data/data';
 import { MonsterComplete } from 'src/app/modules/monster/model/monster';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { ElemType, ELEMENTS, TERM_CODES, IMAGE_CODES, Css, Path } from './../../../../types/dataTypes';
 import { ELEMENTS_COLOR, ELEMENTS_GRAY, ROLES, HP } from './../../../../constants';
 
 @Component({
   selector: 'monster-card',
   templateUrl: './monster-card.component.html',
-  styleUrls: ['./monster-card.component.scss']
+  styleUrls: ['./monster-card.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class MonsterCardComponent implements OnInit {
   @Input() monster: MonsterComplete;
-  monsterAbilityHtml: string;
   ELEMENT_LIST = ELEMENTS;
 
   TERM_CSS: Css = 'term';
   ABILITY_IMG_CSS: Css = 'term-img';
 
   ngOnInit() {
-    this.monsterAbilityHtml = this.monster.abilityText;
     // console.log(JSON.stringify(this.monster, null, 2));
     // const blob = new Blob([JSON.stringify(this.monster, null, 2)], {type : 'application/json'});
     // saveAs(blob, 'abc.json');
 
   }
 
-  constructor(
-  ) {}
+  constructor() {}
 
-  getEffectivenessArray(monster: MonsterComplete) {
+  getEffectivenessArray(monster: MonsterComplete): string[] {
     const arrs = [].concat(monster.elements.map((el: ElemType) => getAdvantages(el)));
     const totals = [0, 0, 0, 0, 0, 0];
     arrs.forEach(arr => {arr.forEach((num: number, i: number) => {totals[i] += num; }); });

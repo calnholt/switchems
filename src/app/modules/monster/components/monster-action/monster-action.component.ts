@@ -1,13 +1,15 @@
 import { ELEMENTS_GRAY, SYMBOLS, ELEMENTS_COLOR } from './../../../../constants';
 import { ELEMENTS, Css, Path, ImageCode, ElemType } from './../../../../types/dataTypes';
 import { MonsterComplete, Action } from 'src/app/modules/monster/model/monster';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { getAbilityText } from 'src/app/modules/common/cards';
 
 @Component({
   selector: 'monster-action',
   templateUrl: './monster-action.component.html',
-  styleUrls: ['./monster-action.component.scss']
+  styleUrls: ['./monster-action.component.scss'],
+  // needed to render [innerHTML] class styling
+  encapsulation: ViewEncapsulation.None,
 })
 export class MonsterActionComponent implements OnInit {
   @Input() monster: MonsterComplete;
