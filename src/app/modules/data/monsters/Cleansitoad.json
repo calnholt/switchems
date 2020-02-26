@@ -1,0 +1,81 @@
+{
+    "monsterId": 2,
+    "monsterName": "Cleansitoad",
+    "elements": [
+        "Water"
+    ],
+    "abilityName": "Clear Mind",
+    "abilityText": "When this monster enters the battlefield, you may shuffle your discard pile into your deck. Then, look at the top three cards of your deck. You may put any number back on top or on the bottom in any order.",
+    "hp": 12,
+    "role": "Technical",
+    "actions": [
+    {
+        "abilityName": "Typhoon",
+        "abilityText": "For each buff used that is [SUCC], this attack deals +1[ATK].",
+        "attack": 1,
+        "speed": 3,
+        "discard": 1,
+        "buff": 3,
+        "modifiers": [2,-3,-2,0,0,3],
+        "element": "Water",
+        "statusFlg": false
+    },
+    {
+        "abilityName": "Waterfall",
+        "abilityText": "[1]: This attack gains +3[ATK] this turn.",
+        "attack": 1,
+        "speed": 6,
+        "buff": 1,
+        "modifiers": [2,-1,-1,0,0,2],
+        "element": "Water",
+        "statusFlg": false
+    },
+    {
+        "abilityName": "Evaporate",
+        "abilityText": "If this monster would be dealt 5+[ATK] by a single attack this turn, instead the attack is unsuccessful and all buffs used with it are not resolved. Then, [+] [+] and gain +2[DEF] stat cubes. ~CONSECUTIVE~",
+        "discard": 1,
+        "modifiers": [
+            0,
+            -10,
+            0,
+            0,
+            0,
+            0
+        ],
+        "element": "Water",
+        "reactionFlg": true,
+        "statusFlg": false
+    },
+    {
+        "abilityName": "Invigorate",
+        "abilityText": "All of your [X] abilities are +1.",
+        "speed": 2,
+        "draw": 1,
+        "element": "Water",
+        "auraDuration": 8,
+        "statusFlg": false
+    }
+],
+    "buffs": [
+    {
+        "timing": 4,
+        "buffText": "Remove all targeted monster's stat increases",
+        "critFlg": true
+    },
+    {
+        "timing": 2,
+        "buffText": "Remove an opponent's team aura if your attack is faster",
+        "critFlg": true
+    },
+    {
+        "timing": 3,
+        "buffText": "[1]: This attack gains +3[ATK]",
+        "critFlg": false
+    },
+    {
+        "timing": 2,
+        "buffText": "[1]: This attack gains +3[SPD]",
+        "critFlg": false
+    }
+]
+}
