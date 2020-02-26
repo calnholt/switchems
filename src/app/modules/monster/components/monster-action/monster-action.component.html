@@ -56,7 +56,7 @@
           </span>
         </div>
         <div class="cards-container">
-          <span *ngFor="let imageIcon of cardIcons">
+          <span *ngFor="let imageIcon of getCardIcons()">
             <img class="card-icon" src="{{getImagePathFromImageCode(imageIcon)}}">
           </span>
         </div>

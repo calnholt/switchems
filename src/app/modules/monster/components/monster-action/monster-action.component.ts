@@ -18,9 +18,6 @@ export class MonsterActionComponent implements OnInit {
   // need to get reversed array to line up with monster
   ELEMENTS_LIST = [ELEMENTS[5], ELEMENTS[4], ELEMENTS[3], ELEMENTS[2], ELEMENTS[1], ELEMENTS[0]];
   EMPTY_MODIFIER = [1, 1, 1, 1, 1, 1];
-  cardIcons = new Array<ImageCode>();
-
-
 
   TERM_CSS: Css = 'term';
   ABILITY_IMG_CSS: Css = 'term-img';
@@ -29,15 +26,6 @@ export class MonsterActionComponent implements OnInit {
 
   ngOnInit() {
     this.actionTextHtml = this.action.abilityText;
-    for (let i = 0; i < this.action.buff; i++) {
-      this.cardIcons.push('[B]');
-    }
-    for (let i = 0; i < this.action.discard; i++) {
-      this.cardIcons.push('[-]');
-    }
-    for (let i = 0; i < this.action.draw; i++) {
-      this.cardIcons.push('[+]');
-    }
   }
 
   getElementLowerCase(): string {
@@ -45,6 +33,9 @@ export class MonsterActionComponent implements OnInit {
   }
 
   getModifier(modifier: number): string | number {
+    if (modifier > 2 || modifier < -2) {
+      return 'X';
+    }
     if (modifier > 0) {
       return `+${modifier}`;
     }
@@ -71,6 +62,20 @@ export class MonsterActionComponent implements OnInit {
 
   getAbilityText(): string {
     return getAbilityText(this.action.abilityText, this.TERM_CSS, this.ABILITY_IMG_CSS);
+  }
+
+  getCardIcons(): Array<ImageCode> {
+    const out = Array<ImageCode>();
+    for (let i = 0; i < this.action.buff; i++) {
+      out.push('[B]');
+    }
+    for (let i = 0; i < this.action.discard; i++) {
+      out.push('[-]');
+    }
+    for (let i = 0; i < this.action.draw; i++) {
+      out.push('[+]');
+    }
+    return out;
   }
 
 
