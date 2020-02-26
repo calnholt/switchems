@@ -1,5 +1,10 @@
 import { Role, ElemType, TermCode } from './../../../types/dataTypes';
-export class Card {
+
+export class GUI {
+    isSelected?: boolean;
+}
+
+export class Card extends GUI {
     monsterId?: number;
     monsterName?: string;
     description?: string;
@@ -20,7 +25,7 @@ export class MonsterComplete extends Monster {
     buffs: Buff[];
 }
 
-export class Buff {
+export class Buff extends Card {
     timing: number;
     buffText: string;
     critFlg: boolean;

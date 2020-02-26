@@ -8,15 +8,36 @@
               *ngIf="isShowMonster(monster)"
               [monster]="monster">
             </monster-card>
-            <monster-action
-              *ngIf="selectedCard.action && selectedCard.monsterId === monster.monsterId"
-              [monster]="monster"
-              [action]="selectedCard.action">
-            </monster-action>
+            <div *ngFor="let action of monster.actions">
+              <div *ngIf="action.isSelected">
+                <monster-action
+                  [monster]="monster"
+                  [action]="action">
+                </monster-action>
+              </div>
+            </div>
+            <div *ngFor="let buff of monster.buffs">
+              <div *ngIf="buff.isSelected">
+                <monster-buff
+                  [monster]="monster"
+                  [buff]="buff">
+                </monster-buff>
+              </div>
+            </div>
           </div>
           <div class="col-4">
-            <div *ngFor="let action of monster.actions; index as i" class="hover-card-icon-container col-12">
-              <div (mouseover)="mouseoverCard(monster, i, true)" (mouseout)="mouseoutCard()" class="hover-card-icon">
+            <div *ngFor="let action of monster.actions" class="hover-card-icon-container col-12">
+              <div 
+                (mouseover)="action.isSelected = true" 
+                (mouseout)="action.isSelected = false" 
+                class="hover-card-icon">
+              </div>
+            </div>
+            <div *ngFor="let buff of monster.buffs" class="hover-card-icon-container col-12">
+              <div 
+                (mouseover)="buff.isSelected = true" 
+                (mouseout)="buff.isSelected = false" 
+                class="hover-card-icon">
               </div>
             </div>
           </div>

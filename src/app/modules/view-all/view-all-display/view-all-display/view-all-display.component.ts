@@ -8,6 +8,7 @@ class SelectedCard {
   buff?: Buff;
   action?: Action;
   index?: number;
+  isLocked?: boolean;
 }
 
 @Component({
@@ -22,16 +23,30 @@ export class ViewAllDisplayComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.monsters = [loadMonsters(), loadMonsters(), loadMonsters()];
-    this.monsters[1].monsterId = 2;
-    this.monsters[2].monsterId = 3;
+    this.monsters = loadMonsters();
     this.selectedCard = new SelectedCard();
     this.selectedCard.monsterId = null;
     this.selectedCard.action = null;
     this.selectedCard.buff = null;
   }
 
+  lockSelectedCard(action: Action, buff: Buff) {
+    if (action) {
+      if (this.selectedCard.isLocked) {
+        this.selectedCard.action = action;
+      }
+    }
+    this.selectedCard.isLocked = !this.selectedCard.isLocked;
+  }
+
+  mouseoverAction(action: Action) {
+    action.isSelected = true;
+  }
+
   mouseoverCard(monster: MonsterComplete, index: number, isAction: boolean) {
+    if (this.selectedCard.isLocked) {
+      return;
+    }
     this.selectedCard.monsterId = monster.monsterId;
     this.selectedCard.index = index;
     if (isAction) {
@@ -42,16 +57,17 @@ export class ViewAllDisplayComponent implements OnInit {
   }
 
   mouseoutCard() {
-    this.selectedCard.action = null;
-    this.selectedCard.buff = null;
-    this.selectedCard.monsterId = null;
+    if (!this.selectedCard.isLocked) {
+      this.selectedCard.action = null;
+      this.selectedCard.buff = null;
+      this.selectedCard.monsterId = null;
+    }
   }
 
   isShowMonster(monster: MonsterComplete) {
-    if (this.selectedCard.monsterId === null) {
-      return true;
-    }
-    return (this.selectedCard.monsterId !== null && this.selectedCard.monsterId !== monster.monsterId);
+    const isActionSelected = monster.actions.some(a => a.isSelected);
+    const isBuffSelected = monster.buffs.some(b => b.isSelected);
+    return !isActionSelected && !isBuffSelected;
   }
 
 }
