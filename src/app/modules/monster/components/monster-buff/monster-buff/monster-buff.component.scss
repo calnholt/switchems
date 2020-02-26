@@ -1,0 +1,73 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#buff-card{
+    .card-container{
+        .card-wrapper{
+            position: relative;
+            border: black 2px solid;
+            height: 8.8cm;
+            width: 6.3cm;
+            .buff-background{
+                position: absolute;
+                max-height: 172px;
+                top: 82px;
+                left: 32px;
+                z-index: -1;
+            }
+            .timing-container{
+                position: relative;
+                left: 7px;
+                padding-top: 9px;
+                .numeral{
+                    font-family: 'Beastformer';
+                    font-size: 38px;
+                    letter-spacing: 0.02em;
+                }
+                .name{
+                    position: relative;
+                    font-family: 'Beastformer';
+                    font-size: 13px;
+                    letter-spacing: 0.02em;
+                    bottom: 8px;
+                }
+            }
+            .text-container{
+                padding: 70px 10px 0px 10px;
+                .buff-text{
+                    font-family: 'Helvetica';
+                    font-size: 14px;
+                    letter-spacing: 0.02em;
+                    text-align: center;
+                    display: inline-block;
+                }
+            }
+            .bottom-container{
+                position: absolute;
+                bottom: 2px;
+                .crit-icon{
+                    position: relative;
+                    left: 8px;
+                    bottom: 2px;
+                    max-height: 49px;
+                }
+                .monster-name{
+                    position: absolute;
+                    right: -183px;
+                    top: 31px;
+                    font-family: 'Beastformer';
+                    font-size: 18px;
+                    letter-spacing: 0.02em;
+                }
+            }
+        }
+    }
+    .term{
+        font-style: italic;
+        font-size: 11px;
+    }
+    
+    .term-img{
+        max-height: 15px;
+    }
+}

@@ -1,0 +1,19 @@
+<div id="buff-card">
+  <div class="card-container">
+    <div class="card-wrapper">
+      <img class="buff-background" src="{{getBuffImagePath()}}">
+      <div class="timing-container">
+        <span class="numeral">{{getTimingRomanNumeral()}}</span>
+        <span class="name">{{getTimingText()}}</span>
+      </div>
+      <div class="text-container">
+        <span [innerHTML]="getAbilityText()" class="buff-text"></span>
+      </div>
+      <div class="bottom-container">
+        <img *ngIf="buff.critFlg" class="crit-icon" src="{{getSuccessImagePath()}}">
+        <img *ngIf="!buff.critFlg" class="crit-icon" src="{{getFailImagePath()}}">
+        <span class="monster-name">{{monster.monsterName}}</span>
+      </div>
+    </div>
+  </div>
+</div>
