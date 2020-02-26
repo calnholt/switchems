@@ -1,3 +1,4 @@
+import { MonsterBuffComponent } from './modules/monster/components/monster-buff/monster-buff/monster-buff.component';
 import { MaterialModule } from './material-module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -19,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MonsterFormComponent,
     MonsterCardComponent,
     MonsterActionComponent,
+    MonsterBuffComponent,
     ViewAllDisplayComponent
   ],
   imports: [

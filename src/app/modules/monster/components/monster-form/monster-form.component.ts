@@ -33,7 +33,7 @@ export class MonsterFormComponent implements OnInit {
   // hardcoded placeholder monster data
   // should probably be retrieved from a parent component and be set as an @Input
   populateMonster() {
-    this.monster = loadMonsters();
+    this.monster = loadMonsters()[1];
     this.elements = new FormControl();
     this.elements.setValue(this.monster.elements);
   }
