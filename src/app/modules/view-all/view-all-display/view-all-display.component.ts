@@ -1,7 +1,6 @@
-import { Buff, Action } from './../../../monster/model/monster';
-import { loadMonsters } from './../../../import/json-to-obj';
+import { Buff, Action } from './../../monster/model/monster';
 import { MonsterComplete } from 'src/app/modules/monster/model/monster';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'view-all-display',
@@ -10,12 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ViewAllDisplayComponent implements OnInit {
-  monsters: Array<MonsterComplete>;
+  @Input() monsters: Array<MonsterComplete>;
   constructor() { }
 
-  ngOnInit() {
-    this.monsters = loadMonsters();
-  }
+  ngOnInit() { }
 
   mouseoverAction(action: Action) {
     action.isSelected = true;

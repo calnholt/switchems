@@ -1,0 +1,20 @@
+<div *ngIf="!multi">
+  <mat-form-field appearance="fill">
+    <mat-label>{{label}}</mat-label>
+    <mat-select [ngModel]="model" (selectionChange)="selectionChanged($event)">
+      <mat-option *ngFor="let option of options" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div *ngIf="multi">
+  <mat-form-field appearance="fill">
+    <mat-label>{{label}}</mat-label>
+    <mat-select [ngModel]="model" multiple (selectionChange)="selectionChanged($event)">
+      <mat-option *ngFor="let option of options" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

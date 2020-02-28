@@ -1,0 +1,13 @@
+<dropdown
+  [label]="'Test'"
+  [model]="multi"
+  [options]="elementList"
+  (selectionChange)="test($event)">
+</dropdown>
+<dropdown
+  [label]="'Test'"
+  [model]="multi"
+  [options]="elementList"
+  [multi]="true"
+  (selectionChange)="test($event)">
+</dropdown>
