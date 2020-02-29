@@ -13,7 +13,7 @@ export class Card extends GUI {
 }
 
 export class Monster extends Card {
-    elements: ElemType[];
+    elements: Array<ElemType> = new Array<ElemType>();
     abilityName: string;
     abilityText?: string;
     hp: number;

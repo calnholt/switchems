@@ -1,6 +1,6 @@
 <view-all-filters
-  >
+  (filtersChanged)="filterMonsters($event)">
 </view-all-filters>
 <view-all-display
-  [monsters]="getFilteredMonsters()">
+  [monsters]="filteredMonsters">
 </view-all-display>

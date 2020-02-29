@@ -1,13 +1,23 @@
-<dropdown
-  [label]="'Test'"
-  [model]="multi"
-  [options]="elementList"
-  (selectionChange)="test($event)">
-</dropdown>
-<dropdown
-  [label]="'Test'"
-  [model]="multi"
-  [options]="elementList"
-  [multi]="true"
-  (selectionChange)="test($event)">
-</dropdown>
+<div id="filter-all">
+  <div class="container">
+    <div class="row">
+      <dropdown
+        [label]="'Role'"
+        [model]="form"
+        [multi]="true"
+        [property]="'roles'"
+        [options]="roleList"
+        (selectionChange)="applyFilters()">
+      </dropdown>
+      <dropdown
+        [label]="'Elements'"
+        [model]="form"
+        [property]="'elements'"
+        [options]="elementList"
+        [multi]="true"
+        (selectionChange)="applyFilters()">
+      </dropdown>
+    </div>
+  </div>
+</div>
+

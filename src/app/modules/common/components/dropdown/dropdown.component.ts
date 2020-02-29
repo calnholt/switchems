@@ -15,14 +15,16 @@ export class DropdownComponent implements SelectionChange<any> {
   @Input() label: string;
   @Input() model: any;
   @Input() options: Array<any>;
+  @Input() property: string;
   @Input() multi?: boolean;
   @Output()
-  selectionChange: EventEmitter<any> = new EventEmitter<any>();
+  selectionChange?: EventEmitter<any> = new EventEmitter<any>();
 
   constructor() { }
 
   selectionChanged(event: MatSelectChange) {
-    this.selectionChange.emit(event.value);
+    this.model[this.property] = event.value;
+    this.selectionChange.emit();
   }
 
 }
