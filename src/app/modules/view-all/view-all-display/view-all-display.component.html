@@ -5,11 +5,11 @@
         <div class="row">
           <div class="col-8">
             <monster-card
-              *ngIf="isShowMonster(monster)"
+              [hidden]="!isShowMonster(monster)"
               [monster]="monster">
             </monster-card>
             <div *ngFor="let action of monster.actions">
-              <div *ngIf="action.isSelected">
+              <div [hidden]="!action.isSelected">
                 <monster-action
                   [monster]="monster"
                   [action]="action">
@@ -17,7 +17,7 @@
               </div>
             </div>
             <div *ngFor="let buff of monster.buffs">
-              <div *ngIf="buff.isSelected">
+              <div [hidden]="!buff.isSelected">
                 <monster-buff
                   [monster]="monster"
                   [buff]="buff">

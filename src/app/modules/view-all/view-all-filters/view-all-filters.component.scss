@@ -1,0 +1,21 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#filter-all{
+    .container{
+        border: 3px solid #e0e0e0;
+        border-radius: 3px;
+        .title{
+           font-size: 20px;
+           padding: 10px 0px;
+        }
+        .filters-wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-items: center;
+            min-max{
+                display: contents;
+            }
+        }
+    }
+}

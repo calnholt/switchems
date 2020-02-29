@@ -14,12 +14,12 @@ export class MonsterForm {
   speedMin?: number = 0;
   speedMax?: number = 9;
   attackElements?: Array<ElemType> = new Array<ElemType>();
-  minBuffs?: number = 0;
-  maxBuffs?: number = 5;
-  minDiscard?: number = 0;
-  maxDiscard?: number = 5;
-  minDraw?: number = 0;
-  maxDraw?: number = 5;
+  buffMin?: number = 0;
+  buffMax?: number = 5;
+  discardMin?: number = 0;
+  discardMax?: number = 5;
+  drawMin?: number = 0;
+  drawMax?: number = 5;
   auraMin?: number = 1;
   auraMax?: number = 10;
   statusFlg?: boolean = false;
@@ -41,6 +41,7 @@ export class ViewAllFiltersComponent implements SelectionChange<any>, OnInit {
   elementList = ELEMENTS;
   roleList = ROLES;
   form: MonsterForm = new MonsterForm();
+  checked: boolean = false;
 
   constructor() {
   }

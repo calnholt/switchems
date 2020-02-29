@@ -33,7 +33,8 @@ export class ViewAllComponent implements OnInit {
   isWithinFormSettings(m: MonsterComplete, form: MonsterForm): boolean {
     const isRole = this.filterRole(m, form);
     const isElements = this.filterElement(m, form);
-    return isRole && isElements;
+    const isHp = this.filterHp(m, form);
+    return isRole && isElements && isHp;
   }
 
   filterRole(m: MonsterComplete, form: MonsterForm): boolean {
@@ -57,6 +58,10 @@ export class ViewAllComponent implements OnInit {
       isElements = true;
     }
     return isElements;
+  }
+
+  filterHp(m: MonsterComplete, form: MonsterForm): boolean {
+    return m.hp >= form.hpMin && m.hp <= form.hpMax;
   }
 
 

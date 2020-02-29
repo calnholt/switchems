@@ -1,3 +1,4 @@
+import { MinMaxComponent } from './modules/common/components/min-max/min-max.component';
 import { DropdownComponent } from './modules/common/components/dropdown/dropdown.component';
 
 import { MonsterBuffComponent } from './modules/monster/components/monster-buff/monster-buff/monster-buff.component';
@@ -30,6 +31,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ViewAllDisplayComponent,
     ViewAllFiltersComponent,
     DropdownComponent,
+    MinMaxComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,8 @@
 <div id="filter-all">
   <div class="container">
-    <div class="row">
+    <div class="collapse"><i class="fa fa-minus-square" aria-hidden="true"></i></div>
+    <div class="title">Monster Filters</div>
+    <div class="filters-wrapper">
       <dropdown
         [label]="'Role'"
         [model]="form"
@@ -17,6 +19,75 @@
         [multi]="true"
         (selectionChange)="applyFilters()">
       </dropdown>
+      <min-max
+        [label]="'HP'"
+        [model]="form"
+        [property]="'hp'"
+        [min]="1"
+        [max]="20"
+        (selectionChange)="applyFilters()">
+      </min-max>
+    </div>
+    <div class="title">Action Filters</div>
+    <div class="filters-wrapper">
+      <min-max
+        [label]="'Attack'"
+        [model]="form"
+        [property]="'attack'"
+        [min]="0"
+        [max]="10"
+        (selectionChange)="applyFilters()">
+      </min-max>
+      <min-max
+        [label]="'Speed'"
+        [model]="form"
+        [property]="'speed'"
+        [min]="0"
+        [max]="10"
+        (selectionChange)="applyFilters()">
+      </min-max>
+      <min-max
+        [label]="'Buff'"
+        [model]="form"
+        [property]="'buff'"
+        [min]="0"
+        [max]="5"
+        (selectionChange)="applyFilters()">
+      </min-max>
+      <min-max
+        [label]="'Discard'"
+        [model]="form"
+        [property]="'discard'"
+        [min]="0"
+        [max]="5"
+        (selectionChange)="applyFilters()">
+      </min-max>
+      <min-max
+        [label]="'Draw'"
+        [model]="form"
+        [property]="'draw'"
+        [min]="0"
+        [max]="5"
+        (selectionChange)="applyFilters()">
+      </min-max>
+      <min-max
+        [label]="'Aura'"
+        [model]="form"
+        [property]="'aura'"
+        [min]="1"
+        [max]="10"
+        (selectionChange)="applyFilters()">
+      </min-max>
+      <dropdown
+        [label]="'Elements'"
+        [model]="form"
+        [property]="'attackElements'"
+        [options]="elementList"
+        [multi]="true"
+        (selectionChange)="applyFilters()">
+      </dropdown>
+      <mat-checkbox [(ngModel)]="checked">Status?</mat-checkbox>
+      <mat-checkbox [(ngModel)]="checked">Reaction?</mat-checkbox>
     </div>
   </div>
 </div>

@@ -1,0 +1,24 @@
+<span class="{{class}}">
+  <mat-form-field class="textarea" appearance="fill">
+    <mat-label>Min {{label}}</mat-label>
+    <input matInput
+      min="min"
+      max="max"
+      type="number"
+      #input
+      [(ngModel)]="minModel"
+      (change)="selectionChanged($event)">
+  </mat-form-field>
+</span>
+<span class="{{class}}">
+  <mat-form-field class="textarea" appearance="fill">
+    <mat-label>Max {{label}}</mat-label>
+    <input matInput
+      min="min"
+      max="max"
+      type="number"
+      #input
+      [(ngModel)]="maxModel"
+      (change)="selectionChanged($event)">
+  </mat-form-field>
+</span>
