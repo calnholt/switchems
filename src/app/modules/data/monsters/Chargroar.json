@@ -1,0 +1,112 @@
+{
+    "actions": [
+      {
+        "abilityName": "Lightning",
+        "abilityText": "",
+        "speed": 9,
+        "attack": 6,
+        "element": "Electric",
+        "buff": 1,
+        "discard": 3,
+        "draw": 0,
+        "modifiers": [
+          5,
+          0,
+          0,
+          "X",
+          5,
+          -4
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false
+      },
+      {
+        "abilityName": "Lights Out",
+        "abilityText": "If this kills the targeted monster, this monster gains +2[ATK] stat cubes.",
+        "speed": 6,
+        "attack": 2,
+        "element": "Electric",
+        "buff": 1,
+        "discard": 0,
+        "draw": 0,
+        "modifiers": [
+          1,
+          0,
+          0,
+          -1,
+          2,
+          -1
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false
+      },
+      {
+        "abilityName": "Hypercharge",
+        "abilityText": "This monster gains +2[ATK] stat cubes.",
+        "speed": 4,
+        "element": "Electric",
+        "buff": 0,
+        "discard": 0,
+        "draw": 1,
+        "modifiers": null,
+        "auraDuration": 0,
+        "statusFlg": true,
+        "reactionFlg": false
+      },
+      {
+        "abilityName": "Flamethrower",
+        "abilityText": "[1]: This attack ignores the targeted monster's [DEF].",
+        "speed": 5,
+        "attack": 5,
+        "element": "Fire",
+        "buff": 1,
+        "discard": 2,
+        "draw": 0,
+        "modifiers": [
+          0,
+          2,
+          3,
+          -2,
+          -4,
+          0
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false
+      }
+    ],
+    "buffs": [
+      {
+        "timing": 3,
+        "buffText": "This attack gains +2[ATK]",
+        "critFlg": false
+      },
+      {
+        "timing": 3,
+        "buffText": "This attack gains +2[ATK]",
+        "critFlg": true
+      },
+      {
+        "timing": 2,
+        "buffText": "This attack gains +2[SPD]",
+        "critFlg": false
+      },
+      {
+        "timing": 2,
+        "buffText": "This attack gains +2[SPD]",
+        "critFlg": true
+      }
+    ],
+    "monsterId": 4,
+    "monsterName": "Chargroar",
+    "abilityText": "When this monster enters the battlefield, all enemy monsters gain -2[ATK] stat cubes.",
+    "elements": [
+      "Electric",
+      "Fire"
+    ],
+    "abilityName": "Intimidate",
+    "hp": 8,
+    "role": "Assassin"
+  }

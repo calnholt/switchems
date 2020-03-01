@@ -1,0 +1,111 @@
+{
+    "actions": [
+      {
+        "abilityName": "Cobolt",
+        "abilityText": "I & [B]: Prevent the targeted monster from switching.",
+        "speed": 2,
+        "attack": 2,
+        "buff": 1,
+        "discard": 0,
+        "draw": 0,
+        "element": "Death",
+        "modifiers": [
+          0,
+          -1,
+          3,
+          2,
+          -1,
+          0
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false
+      },
+      {
+        "abilityName": "Download",
+        "abilityText": "When an enemy monster switches, that monster is dealt 3[ATK] and discard this aura. If all time counters are removed from this aura, [+] [+].",
+        "speed": 1,
+        "buff": 0,
+        "discard": 0,
+        "draw": 1,
+        "element": "Death",
+        "modifiers": null,
+        "auraDuration": 4,
+        "statusFlg": false,
+        "reactionFlg": false
+      },
+      {
+        "abilityName": "Transfusion",
+        "abilityText": "[2]: The targeted monster gains a leech condition. ~LEECH~",
+        "element": "Death",
+        "speed": 1,
+        "attack": 2,
+        "buff": 2,
+        "discard": 1,
+        "draw": 0,
+        "modifiers": [
+          0,
+          -2,
+          1,
+          4,
+          -1,
+          0
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false
+      },
+      {
+        "abilityName": "Seek and Destroy",
+        "abilityText": "This attack deals +2[ATK] when this monster has a lockdown counter on it.",
+        "element": "Death",
+        "speed": 4,
+        "attack": 5,
+        "buff": 1,
+        "discard": 3,
+        "draw": 0,
+        "modifiers": [
+          0,
+          -1,
+          1,
+          1,
+          -3,
+          0
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false
+      }
+    ],
+    "buffs": [
+      {
+        "timing": 1,
+        "buffText": "This monster gains +2[ATK] stat cubes if the targeted monster switches.",
+        "critFlg": true
+      },
+      {
+        "timing": 1,
+        "buffText": "This monster gains +2[ATK] stat cubes if the targeted monster switches.",
+        "critFlg": true
+      },
+      {
+        "timing": 2,
+        "buffText": "[-] [-]: Attack speeds are reversed this turn (slower moves happen first).",
+        "critFlg": false
+      },
+      {
+        "timing": 0,
+        "buffText": "This card has no buff effect. <br>!: This monster is dealt 1[ATK].",
+        "critFlg": false
+      }
+    ],
+    "monsterId": 10,
+    "monsterName": "Phantomaton",
+    "abilityText": "At the start of each turn put a lockdown counter on this monster. If this monster has more than one lockdown counter, remove them. While this monster has a lockdown counter on it, enemy monsters cannot use switch actions.",
+    "elements": [
+      "Death"
+    ],
+    "abilityName": "Lockdown",
+    "hp": 14,
+    "role": "Tank"
+  }

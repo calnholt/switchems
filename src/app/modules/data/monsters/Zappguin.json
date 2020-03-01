@@ -1,0 +1,111 @@
+{
+    "actions": [
+      {
+        "abilityName": "Thunderstorm",
+        "abilityText": "This monster gains +2[SPD] cubes.",
+        "speed": 5,
+        "attack": 3,
+        "element": "Electric",
+        "buff": 0,
+        "discard": 2,
+        "draw": 0,
+        "modifiers": [
+          3,
+          0,
+          0,
+          -3,
+          3,
+          -3
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false
+      },
+      {
+        "abilityName": "Ice Blast",
+        "abilityText": "[1]: This attack gains flinch. ~FLINCH~",
+        "speed": 4,
+        "attack": 2,
+        "element": "Water",
+        "buff": 2,
+        "discard": 0,
+        "draw": 0,
+        "modifiers": [
+          -1,
+          -1,
+          0,
+          3,
+          0,
+          3
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false
+      },
+      {
+        "abilityName": "Vortex",
+        "abilityText": "This attack gains +2[ATK] if the targeted monster has a status condition. ~STATUS~",
+        "speed": 3,
+        "attack": 2,
+        "element": "Electric",
+        "buff": 1,
+        "discard": 0,
+        "draw": 0,
+        "modifiers": [
+          2,
+          0,
+          0,
+          -2,
+          4,
+          -2
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false
+      },
+      {
+        "abilityName": "Paralyze",
+        "abilityText": "[2]: The targeted monster gains a paralyze condition. ~PARALYZE~",
+        "speed": 7,
+        "element": "Electric",
+        "buff": 0,
+        "discard": 0,
+        "draw": 1,
+        "modifiers": null,
+        "auraDuration": 0,
+        "statusFlg": true,
+        "reactionFlg": false
+      }
+    ],
+    "buffs": [
+      {
+        "timing": 3,
+        "buffText": "[-] & [1]: The targeted monster gains a paralyze condition. ~PARALYZE~",
+        "critFlg": true
+      },
+      {
+        "timing": 3,
+        "buffText": "[-] & [1]: The targeted monster gains a paralyze condition. ~PARALYZE~",
+        "critFlg": false
+      },
+      {
+        "timing": 3,
+        "buffText": "This attack gains +3[ATK] if the targeted monster's action is faster than yours (does nothing if targeted monster switches).",
+        "critFlg": true
+      },
+      {
+        "timing": 3,
+        "buffText": "This attack gains +3[ATK] if the targeted monster's action is faster than yours (does nothing if targeted monster switches).",
+        "critFlg": true
+      }
+    ],
+    "monsterId": 7,
+    "monsterName": "Zappguin",
+    "abilityText": "This monster's attacks deal +1[ATK] for each different status condition the targeted monster has.",
+    "elements": [
+      "Electric"
+    ],
+    "abilityName": "Static Shock",
+    "hp": 9,
+    "role": "Tricky"
+  }

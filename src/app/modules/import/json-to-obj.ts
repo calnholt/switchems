@@ -1,5 +1,13 @@
-import {default as Stallagrowth} from 'src/app/modules/data/monsters/Stallagrowth.json';
-import {default as Cleansitoad} from 'src/app/modules/data/monsters/Cleansitoad.json';
+import { default as Stallagrowth } from '../data/monsters/Stallagrowth.json';
+import { default as Cleansitoad } from '../data/monsters/Cleansitoad.json';
+import { default as Chargroar } from '../data/monsters/Chargroar.json';
+import { default as Flexferno } from '../data/monsters/Flexferno.json';
+import { default as Zappguin } from '../data/monsters/Zappguin.json';
+import { default as Phantomaton } from '../data/monsters/Phantomaton.json';
+import { default as Shaleshell } from '../data/monsters/Shaleshell.json';
+import { default as Galeaffy } from '../data/monsters/Galeaffy.json';
+import { default as Drownigator } from '../data/monsters/Drownigator.json';
+import { default as Americaw } from '../data/monsters/Americaw.json';
 import { ElemType, ELEMENTS, Role, ROLES } from './../../types/dataTypes';
 import { MonsterComplete, Buff, Action } from '../monster/model/monster';
 
@@ -13,7 +21,7 @@ const getRole = (text: string): Role => {
 
 export const loadMonsters = (): Array<MonsterComplete> => {
     const out = new Array<MonsterComplete>();
-    const ALL = [Stallagrowth, Cleansitoad];
+    const ALL = [Stallagrowth, Cleansitoad, Chargroar, Flexferno, Zappguin, Phantomaton, Shaleshell, Galeaffy, Drownigator, Americaw];
     ALL.forEach(json => {
         const monster = new MonsterComplete();
         if (!json.abilityName) {
@@ -31,7 +39,7 @@ export const loadMonsters = (): Array<MonsterComplete> => {
         monster.hp = json.hp;
         monster.actions = new Array<Action>();
         const ACTIONS = 4;
-        for (let i = 0; i < 4; i++) {
+        for (let i = 0; i < ACTIONS; i++) {
             const action = new Action();
             action.abilityName = json.actions[i].abilityName;
             action.abilityText = json.actions[i].abilityText;

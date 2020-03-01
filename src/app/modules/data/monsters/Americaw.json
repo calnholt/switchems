@@ -1,0 +1,103 @@
+{
+    "actions": [
+      {
+        "abilityName": "Tactical Nuke",
+        "abilityText": "This attack deals 2[ATK] of <B>recoil</b> to this monster. ~RECOIL~",
+        "speed": 7,
+        "attack": 6,
+        "buff": 1,
+        "discard": 2,
+        "draw": 0,
+        "element": "Death",
+        "modifiers": [
+          0,
+          -3,
+          2,
+          3,
+          -2,
+          0
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false
+      },
+      {
+        "abilityName": "Roc Rock",
+        "abilityText": "This attack deals 1[ATK] of <B>recoil</b> to this monster. ~RECOIL~",
+        "speed": 5,
+        "attack": 4,
+        "element": "Rock",
+        "buff": 2,
+        "discard": 1,
+        "draw": 0,
+        "modifiers": [
+          -3,
+          2,
+          -1,
+          0,
+          0,
+          2
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false
+      },
+      {
+        "abilityName": "Iron Defense",
+        "abilityText": "This monster gains +2[DEF] stat cubes.",
+        "speed": 1,
+        "element": "Rock",
+        "buff": 0,
+        "discard": 0,
+        "draw": 1,
+        "modifiers": null,
+        "auraDuration": 0,
+        "statusFlg": true,
+        "reactionFlg": false
+      },
+      {
+        "abilityName": "Roost",
+        "abilityText": "If this monster is targeted by a faster attack, this action does nothing. <br><br>This monster heals 6[HP]. Single use. ~SINGLE~",
+        "speed": 4,
+        "buff": 0,
+        "discard": 2,
+        "draw": 0,
+        "modifiers": null,
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": true
+      }
+    ],
+    "buffs": [
+      {
+        "timing": 3,
+        "buffText": "If the targeted monster protected, your opponent loses an additional protect action cube.",
+        "critFlg": true
+      },
+      {
+        "timing": 4,
+        "buffText": "[-]: The targeted monster must switch (if possible).",
+        "critFlg": true
+      },
+      {
+        "timing": 2,
+        "buffText": "This monster gains +1[ATK] stat cubes",
+        "critFlg": false
+      },
+      {
+        "timing": 2,
+        "buffText": "This monster gains +1[ATK] stat cubes",
+        "critFlg": false
+      }
+    ],
+    "monsterId": 9,
+    "monsterName": "Americaw",
+    "abilityText": "When this monster enters the battlefield, enemy monsters gain -1[SPD] stat cubes.",
+    "elements": [
+      "Rock",
+      "Death"
+    ],
+    "abilityName": "Wing Clip",
+    "hp": 8,
+    "role": "Assassin"
+  }
