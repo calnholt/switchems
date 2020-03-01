@@ -9,7 +9,7 @@
               [monster]="monster">
             </monster-card>
             <div *ngFor="let action of monster.actions">
-              <div [hidden]="!action.isSelected">
+              <div [hidden]="!action.isHovered">
                 <monster-action
                   [monster]="monster"
                   [action]="action">
@@ -17,7 +17,7 @@
               </div>
             </div>
             <div *ngFor="let buff of monster.buffs">
-              <div [hidden]="!buff.isSelected">
+              <div [hidden]="!buff.isHovered">
                 <monster-buff
                   [monster]="monster"
                   [buff]="buff">
@@ -25,19 +25,22 @@
               </div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-4 p-0">
             <div *ngFor="let action of monster.actions" class="hover-card-icon-container col-12">
               <div 
-                (mouseover)="action.isSelected = true" 
-                (mouseout)="action.isSelected = false" 
-                class="hover-card-icon">
+                (mouseover)="action.isHovered = true" 
+                (mouseout)="action.isHovered = false"
+                class="hover-card-icon"
+                [ngClass]="{'highlight' : action.isHighlighted}">
+                <div class="icon">A</div>
               </div>
             </div>
             <div *ngFor="let buff of monster.buffs" class="hover-card-icon-container col-12">
               <div 
-                (mouseover)="buff.isSelected = true" 
-                (mouseout)="buff.isSelected = false" 
+                (mouseover)="buff.isHovered = true" 
+                (mouseout)="buff.isHovered = false" 
                 class="hover-card-icon">
+                <span class="icon">B</span>
               </div>
             </div>
           </div>

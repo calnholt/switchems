@@ -2,6 +2,7 @@ import { ELEMENTS, ROLES, ElemType, Role } from './../../../types/dataTypes';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MonsterComplete } from '../../monster/model/monster';
 import { SelectionChange } from '@angular/cdk/collections';
+import { faMinus } from '@fortawesome/free-solid-svg-icons';
 
 export class MonsterForm {
   monsterName?: string = null;
@@ -20,7 +21,7 @@ export class MonsterForm {
   discardMax?: number = 5;
   drawMin?: number = 0;
   drawMax?: number = 5;
-  auraMin?: number = 1;
+  auraMin?: number = 0;
   auraMax?: number = 10;
   statusFlg?: boolean = false;
   reactionFlg: boolean = false;
@@ -42,12 +43,13 @@ export class ViewAllFiltersComponent implements SelectionChange<any>, OnInit {
   roleList = ROLES;
   form: MonsterForm = new MonsterForm();
   checked: boolean = false;
+  faMinus = faMinus;
 
   constructor() {
   }
 
   ngOnInit() {
-
+    this.filtersChanged.emit(this.form);
   }
 
   applyFilters() {
@@ -56,6 +58,7 @@ export class ViewAllFiltersComponent implements SelectionChange<any>, OnInit {
   }
 
   clearFilters() {
+    // TODO: why isn't this changing the model value in the selects?
     this.form = new MonsterForm();
     this.filtersChanged.emit(this.form);
   }

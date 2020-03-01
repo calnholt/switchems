@@ -1,6 +1,6 @@
 <div id="filter-all">
   <div class="container">
-    <div class="collapse"><i class="fa fa-minus-square" aria-hidden="true"></i></div>
+    <div class="collapse"><fa-icon [icon]="faMinus"></fa-icon></div>
     <div class="title">Monster Filters</div>
     <div class="filters-wrapper">
       <dropdown
@@ -71,7 +71,7 @@
         (selectionChange)="applyFilters()">
       </min-max>
       <min-max
-        [label]="'Aura'"
+        [label]="'Aura Duration'"
         [model]="form"
         [property]="'aura'"
         [min]="1"
@@ -89,6 +89,7 @@
       <mat-checkbox [(ngModel)]="checked">Status?</mat-checkbox>
       <mat-checkbox [(ngModel)]="checked">Reaction?</mat-checkbox>
     </div>
+    <button class="clear-button" mat-stroked-button (click)="clearFilters()">Reset Filters</button>
   </div>
 </div>
 

@@ -33,7 +33,7 @@ export class MonsterActionComponent implements OnInit {
   }
 
   getModifier(modifier: number): string | number {
-    if (modifier > 2 || modifier < -2) {
+    if (modifier === null) {
       return 'X';
     }
     if (modifier > 0) {

@@ -4,6 +4,7 @@
 #display-all{
     .hover-card-icon-container{
         max-height: 34px;
+        padding: 5px;
         .hover-card-icon{
             height: 25px;
             width: 25px;
@@ -13,9 +14,21 @@
             &.selected{
                 background-color: $purple;
             }
+            &.highlight{
+                background-color: #b4e7ff;
+            }
+            .icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Beastformer';
+                font-size: 21px;
+                padding-top: 2px;
+            }
         }
         .hover-card-icon:hover{
-            background-color: black;
+            background-color: rgb(238, 238, 238);
+            cursor: pointer;
         }
     }
 }

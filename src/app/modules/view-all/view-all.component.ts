@@ -1,7 +1,9 @@
+import { element } from 'protractor';
 import { Component, OnInit } from '@angular/core';
-import { MonsterComplete } from '../monster/model/monster';
+import { MonsterComplete, Action } from '../monster/model/monster';
 import { loadMonsters } from '../import/json-to-obj';
 import { MonsterForm } from './view-all-filters/view-all-filters.component';
+import { ElemType } from 'src/app/types/dataTypes';
 
 @Component({
   selector: 'view-all',
@@ -27,13 +29,14 @@ export class ViewAllComponent implements OnInit {
   filterMonsters(form: MonsterForm) {
     let filteredMonsters: Array<MonsterComplete> = this.allMonsters;
     filteredMonsters = filteredMonsters.filter(m => this.isWithinFormSettings(m, form));
+    filteredMonsters.forEach(m => m.actions.forEach(a => a.isHighlighted = this.getActionHighlight(a, form)));
     this.filteredMonsters = filteredMonsters;
   }
 
   isWithinFormSettings(m: MonsterComplete, form: MonsterForm): boolean {
     const isRole = this.filterRole(m, form);
-    const isElements = this.filterElement(m, form);
-    const isHp = this.filterHp(m, form);
+    const isElements = this.filterElement(m.elements, form.elements);
+    const isHp = this.filterValueMinMax(m.hp, form.hpMin, form.hpMax);
     return isRole && isElements && isHp;
   }
 
@@ -45,12 +48,12 @@ export class ViewAllComponent implements OnInit {
     return isRoles;
   }
 
-  filterElement(m: MonsterComplete, form: MonsterForm): boolean {
+  filterElement(elements: Array<ElemType>, formElements: Array<ElemType>): boolean {
     let isElements: boolean;
-    if (form.elements.length > 0) {
+    if (formElements.length > 0) {
       isElements = false;
-      form.elements.forEach(e => {
-        if (m.elements.includes(e)) {
+      formElements.forEach(e => {
+        if (elements.includes(e)) {
           isElements = true;
         }
       });
@@ -60,8 +63,23 @@ export class ViewAllComponent implements OnInit {
     return isElements;
   }
 
-  filterHp(m: MonsterComplete, form: MonsterForm): boolean {
-    return m.hp >= form.hpMin && m.hp <= form.hpMax;
+  getActionHighlight(a: Action, form: MonsterForm) {
+    const isElements = this.filterElement([a.element], form.attackElements);
+    const isSpeed = this.filterValueMinMax(a.speed, form.speedMin, form.speedMax);
+    const isAttack = this.filterValueMinMax(a.attack, form.attackMin, form.attackMax);
+    const isBuff = this.filterValueMinMax(a.buff, form.buffMin, form.buffMax);
+    const isDiscard = this.filterValueMinMax(a.discard, form.discardMin, form.discardMax);
+    const isDraw = this.filterValueMinMax(a.draw, form.drawMin, form.drawMax);
+    const isAura = this.filterValueMinMax(a.auraDuration, form.auraMin, form.auraMax);
+    return isElements && isSpeed && isAttack && isBuff && isDiscard && isDraw  && isAura;
+  }
+
+  filterValueMinMax(value: number, formMin: number, formMax: number): boolean {
+    let compareValue: number = value;
+    if (value === undefined || value === null) {
+      compareValue = 0;
+    }
+    return compareValue >= formMin && compareValue <= formMax;
   }
 
 

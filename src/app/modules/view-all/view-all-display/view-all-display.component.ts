@@ -19,9 +19,9 @@ export class ViewAllDisplayComponent implements OnInit {
   }
 
   isShowMonster(monster: MonsterComplete) {
-    const isActionSelected = monster.actions.some(a => a.isSelected);
-    const isBuffSelected = monster.buffs.some(b => b.isSelected);
-    return !isActionSelected && !isBuffSelected;
+    const isActionHovered = monster.actions.some(a => a.isHovered);
+    const isBuffHovered = monster.buffs.some(b => b.isHovered);
+    return !isActionHovered && !isBuffHovered;
   }
 
 }

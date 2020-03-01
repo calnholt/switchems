@@ -2,6 +2,8 @@ import { Role, ElemType, TermCode } from './../../../types/dataTypes';
 
 export class GUI {
     isSelected?: boolean;
+    isHighlighted?: boolean;
+    isHovered?: boolean;
 }
 
 export class Card extends GUI {

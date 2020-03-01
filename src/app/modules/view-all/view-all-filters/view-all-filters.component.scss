@@ -5,6 +5,8 @@
     .container{
         border: 3px solid #e0e0e0;
         border-radius: 3px;
+        display: flow-root;
+        margin-bottom: 25px;
         .title{
            font-size: 20px;
            padding: 10px 0px;
@@ -16,6 +18,10 @@
             min-max{
                 display: contents;
             }
+        }
+        .clear-button{
+            float: right;
+            margin: 0px 0px 17px;
         }
     }
 }
