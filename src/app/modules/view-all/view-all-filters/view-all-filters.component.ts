@@ -1,6 +1,5 @@
 import { ELEMENTS, ROLES, ElemType, Role } from './../../../types/dataTypes';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { MonsterComplete } from '../../monster/model/monster';
 import { SelectionChange } from '@angular/cdk/collections';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
 

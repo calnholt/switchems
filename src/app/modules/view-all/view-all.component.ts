@@ -1,9 +1,8 @@
-import { element } from 'protractor';
 import { Component, OnInit } from '@angular/core';
 import { MonsterComplete, Action } from '../monster/model/monster';
 import { loadMonsters } from '../import/json-to-obj';
 import { MonsterForm } from './view-all-filters/view-all-filters.component';
-import { ElemType } from 'src/app/types/dataTypes';
+import { ElemType } from './../../types/dataTypes';
 
 @Component({
   selector: 'view-all',

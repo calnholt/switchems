@@ -1,7 +1,7 @@
 import { getAdvantages, getAbilityText } from './../../../common/cards';
-import { MonsterComplete } from 'src/app/modules/monster/model/monster';
+import { MonsterComplete } from './../../model/monster';
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import { ElemType, ELEMENTS, TERM_CODES, IMAGE_CODES, Css, Path } from './../../../../types/dataTypes';
+import { ElemType, ELEMENTS, Css, Path } from './../../../../types/dataTypes';
 import { ELEMENTS_COLOR, ELEMENTS_GRAY, ROLES, HP } from './../../../../constants';
 
 @Component({

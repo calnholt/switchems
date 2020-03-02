@@ -1,6 +1,6 @@
+import { Css } from './../../../../types/dataTypes';
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { SelectionChange } from '@angular/cdk/collections';
-import { Css } from 'src/app/types/dataTypes';
 import { MatSelectChange } from '@angular/material/select';
 
 @Component({

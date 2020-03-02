@@ -1,5 +1,4 @@
-import { Buff, Action } from './../../monster/model/monster';
-import { MonsterComplete } from 'src/app/modules/monster/model/monster';
+import { MonsterComplete, Action } from './../../monster/model/monster';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({

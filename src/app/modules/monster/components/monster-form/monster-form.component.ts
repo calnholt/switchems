@@ -1,7 +1,7 @@
 import { loadMonsters } from './../../../import/json-to-obj';
-import { ELEMENTS, ROLES, TERM_CODES, IMAGE_CODES, ElemType } from './../../../../types/dataTypes';
+import { ELEMENTS, ROLES, TERM_CODES, IMAGE_CODES } from './../../../../types/dataTypes';
 import { FormControl } from '@angular/forms';
-import { MonsterComplete, Monster } from 'src/app/modules/monster/model/monster';
+import { MonsterComplete } from './../../model/monster';
 import { MatSelectChange } from '@angular/material/select';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { Component, ViewChild, OnInit, ViewEncapsulation } from '@angular/core';
