@@ -1,8 +1,8 @@
-import { ELEMENTS_GRAY, SYMBOLS, ELEMENTS_COLOR } from './../../../../constants';
-import { ELEMENTS, Css, Path, ImageCode, ElemType } from './../../../../types/dataTypes';
-import { MonsterComplete, Action } from './../../model/monster';
+import { ELEMENTS_GRAY, SYMBOLS, ELEMENTS_COLOR } from './../../../constants';
+import { ELEMENTS, Css, Path, ImageCode, ElemType } from './../../../types/dataTypes';
+import { MonsterComplete, Action } from './../model/monster';
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import { getAbilityText } from './../../../common/cards';
+import { getAbilityText } from './../../common/cards';
 
 @Component({
   selector: 'monster-action',
