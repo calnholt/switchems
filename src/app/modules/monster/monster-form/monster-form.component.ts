@@ -1,10 +1,11 @@
 import { loadMonsters } from './../../import/json-to-obj';
 import { ELEMENTS, ROLES, TERM_CODES, IMAGE_CODES } from './../../../types/dataTypes';
 import { FormControl } from '@angular/forms';
-import { MonsterComplete } from './../model/monster';
+import { MonsterComplete, Monster } from './../model/monster';
 import { MatSelectChange } from '@angular/material/select';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { Component, ViewChild, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'monster-form',
@@ -24,16 +25,13 @@ export class MonsterFormComponent implements OnInit {
   imageCodes = IMAGE_CODES;
 
   constructor(
-  ) {
-    this.populateMonster();
-  }
+    private route: ActivatedRoute
+  ) {}
 
-  ngOnInit() {}
-
-  // hardcoded placeholder monster data
-  // should probably be retrieved from a parent component and be set as an @Input
-  populateMonster() {
-    this.monster = loadMonsters()[1];
+  ngOnInit() {
+    const allMonsters = loadMonsters();
+    const monsterName: string = this.route.snapshot.paramMap.get('monsterName');
+    this.monster = allMonsters.find(m => m.monsterName === monsterName);
     this.elements = new FormControl();
     this.elements.setValue(this.monster.elements);
   }
