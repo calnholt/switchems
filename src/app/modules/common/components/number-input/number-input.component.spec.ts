@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { MonsterComponent } from './monster.component';
+import { NumberInputComponent } from './number-input.component';
 
-describe('MonsterComponent', () => {
-  let component: MonsterComponent;
-  let fixture: ComponentFixture<MonsterComponent>;
+describe('NumberInputComponent', () => {
+  let component: NumberInputComponent;
+  let fixture: ComponentFixture<NumberInputComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MonsterComponent ]
+      declarations: [ NumberInputComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MonsterComponent);
+    fixture = TestBed.createComponent(NumberInputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

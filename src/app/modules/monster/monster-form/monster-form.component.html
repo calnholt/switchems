@@ -2,101 +2,100 @@
   <div class="container">
     <div class="row">
       <div class="col-4">
-        <div class="col-12 form-element">
-          <mat-form-field appearance="fill">
-            <mat-label>Name</mat-label>
-            <input matInput [(ngModel)]="monster.monsterName">
-          </mat-form-field>
-        </div>
-        <div class="col-12 form-element">
-          <mat-form-field appearance="fill">
-            <mat-label>Ability</mat-label>
-            <input matInput [(ngModel)]="monster.abilityName">
-          </mat-form-field>
-        </div>
-        <div class="col-12 form-element">
-          <mat-form-field appearance="fill">
-            <mat-label>Elements</mat-label>
-            <mat-select [formControl]="elements" multiple (selectionChange)="elementChanged($event)">
-              <mat-option 
-                *ngFor="let element of elementList" 
-                [value]="element">
-                {{element}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
-        <div class="col-12 form-element">
-          <mat-form-field appearance="fill">
-            <mat-label>Role</mat-label>
-            <mat-select [(ngModel)]="monster.role">
-              <mat-option 
-                *ngFor="let role of roleList" 
-                [value]="role">
-                {{role}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
-        <div class="col-12 form-element">
-          <mat-form-field class="textarea" appearance="fill">
-            <mat-label>HP</mat-label>
-            <input matInput
-              min="1"
-              max="20"
-              type="number"
-              #input
-              [(ngModel)]="monster.hp">
-          </mat-form-field>
-        </div>
-        <div class="col-12 form-element">
-          <mat-form-field class="textarea" appearance="fill">
-            <mat-label>Ability Text</mat-label>
-            <textarea matInput 
-              cdkTextareaAutosize
-              #autosize="cdkTextareaAutosize"
-              cdkAutosizeMinRows="1"
-              cdkAutosizeMaxRows="10"
-              [(ngModel)]="monster.abilityText">
-            </textarea>
-          </mat-form-field>
-          <!-- EXPANSION PANEL -->
-          <div class="expansion-container">
-            <mat-accordion>
-              <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Icon Codes
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="icon-grid">
-                  <div *ngFor="let item of imageCodes">
-                    <img src="{{item.path}}" class="term-img"> - {{item.key}}
-                  </div>
+        <monster-card-filters 
+          *ngIf="selectedCard === 'MONSTER'" 
+          [monster]="monster">
+        </monster-card-filters>
+        <action-filters 
+          *ngIf="selectedCard === 'ACTION'" 
+          [action]="monster.actions[index]">
+        </action-filters>
+        <buff-filters
+          *ngIf="selectedCard === 'BUFF'"
+          [buff]="monster.buffs[index]">
+        </buff-filters>
+        <!-- EXPANSION PANEL -->
+        <div class="expansion-container">
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Icon Codes
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div class="icon-grid">
+                <div *ngFor="let item of imageCodes">
+                  <img src="{{item.path}}" class="term-img"> - {{item.key}}
                 </div>
-              </mat-expansion-panel>
-              <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    Term Codes
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div *ngFor="let item of termCodes">
-                  <strong>{{item.key}}</strong> - {{item.value}}
-                  <br><br>
-                </div>
-              </mat-expansion-panel>
-            </mat-accordion>
-          </div>
+              </div>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Term Codes
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div *ngFor="let item of termCodes">
+                <strong>{{item.key}}</strong> - {{item.value}}
+                <br><br>
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
         </div>
+        <button class="save-button" mat-stroked-button (click)="save()">Copy Monster to Clipboard</button>
       </div>
       <div class="col-8">
         <div class="card-container">
-          <monster-card
+          <monster-card 
+            *ngIf="selectedCard === 'MONSTER'" 
             [monster]="monster">
           </monster-card>
+          <monster-action 
+            *ngIf="selectedCard === 'ACTION'" 
+            [monster]="monster" 
+            [action]="monster.actions[index]">
+          </monster-action>
+          <monster-buff
+            *ngIf="selectedCard === 'BUFF'"
+            [monster]="monster"
+            [buff]="monster.buffs[index]">
+          </monster-buff>
+          <div class="hover-icons-container">
+            <div class="hover-card-icon-container col-12">
+              <div 
+                (click)="selectedCard = 'MONSTER'" 
+                (mouseover)="monster.isHovered = true" 
+                (mouseout)="monster.isHovered = false" 
+                class="hover-card-icon"
+                [ngClass]="{'highlight' : monster.isHighlighted}">
+                <div class="icon">M</div>
+              </div>
+            </div>
+            <div 
+              *ngFor="let action of monster.actions; index as i" 
+              class="hover-card-icon-container col-12">
+              <div 
+                (mouseover)="action.isHovered = true" 
+                (mouseout)="action.isHovered = false" 
+                class="hover-card-icon"
+                [ngClass]="{'highlight' : action.isHighlighted}" 
+                (click)="index = i; selectedCard = 'ACTION'">
+                <div class="icon">A</div>
+              </div>
+            </div>
+            <div 
+              *ngFor="let buff of monster.buffs; index as i" 
+              class="hover-card-icon-container col-12">
+              <div 
+                (click)="index = i; selectedCard = 'BUFF'" 
+                (mouseover)="buff.isHovered = true" 
+                (mouseout)="buff.isHovered = false" 
+                class="hover-card-icon">
+                <span class="icon">B</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>

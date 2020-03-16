@@ -83,22 +83,22 @@
     ],
     "buffs": [
         {
-            "timing": 2,
+            "timing": "Pre-Attack",
             "buffText": "The targeted monster gains -1[ATK] stat cubes",
             "critFlg": true
         },
         {
-            "timing": 2,
+            "timing": "Pre-Attack",
             "buffText": "The targeted monster gains -1[ATK] stat cubes",
             "critFlg": false
         },
         {
-            "timing": 2,
+            "timing": "Pre-Attack",
             "buffText": "The targeted monster gains -1[SPD] stat cubes",
             "critFlg": true
         },
         {
-            "timing": 2,
+            "timing": "Pre-Attack",
             "buffText": "The targeted monster gains -1[SPD] stat cubes",
             "critFlg": false
         }

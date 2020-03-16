@@ -87,22 +87,22 @@
     ],
     "buffs": [
       {
-        "timing": 2,
+        "timing": "Pre-Attack",
         "buffText": "Your cards flips are +1 this turn",
         "critFlg": true
       },
       {
-        "timing": 2,
+        "timing": "Pre-Attack",
         "buffText": "Your cards flips are +1 this turn",
         "critFlg": true
       },
       {
-        "timing": 2,
+        "timing": "Pre-Attack",
         "buffText": "This monster gains +2[DEF] this turn",
         "critFlg": false
       },
       {
-        "timing": 2,
+        "timing": "Pre-Attack",
         "buffText": "This monster gains +2[DEF] this turn",
         "critFlg": false
       }

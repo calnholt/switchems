@@ -1,0 +1,107 @@
+<div id="action-filters">
+  <div class="col-12 form-element">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="action.abilityName">
+    </mat-form-field>
+  </div>
+  <div class="col-12 form-element">
+    <mat-form-field class="textarea" appearance="fill">
+      <mat-label>Ability Text</mat-label>
+      <textarea matInput 
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="10"
+        [(ngModel)]="action.abilityText">
+      </textarea>
+    </mat-form-field>
+  </div>
+  <div class="col-12 form-element">
+    <mat-form-field class="textarea" appearance="fill">
+      <mat-label>Attack</mat-label>
+      <input matInput
+        min="0"
+        max="10"
+        type="number"
+        #input
+        [(ngModel)]="action.attack">
+    </mat-form-field>
+  </div>
+  <div class="col-12 form-element">
+    <mat-form-field class="textarea" appearance="fill">
+      <mat-label>Speed</mat-label>
+      <input matInput
+        min="0"
+        max="10"
+        type="number"
+        #input
+        [(ngModel)]="action.speed">
+    </mat-form-field>
+  </div>
+  <div class="col-12 form-element">
+    <dropdown
+      style="width:inherit;"
+      [label]="'Element'"
+      [model]="action"
+      [property]="'element'"
+      [options]="elementList">
+    </dropdown>
+  </div>
+  <div class="col-12 form-element">
+    <mat-form-field class="textarea" appearance="fill">
+      <mat-label>Buff</mat-label>
+      <input matInput
+        min="0"
+        max="5"
+        type="number"
+        #input
+        [(ngModel)]="action.buff">
+    </mat-form-field>
+  </div>
+  <div class="col-12 form-element">
+    <mat-form-field class="textarea" appearance="fill">
+      <mat-label>Discard</mat-label>
+      <input matInput
+        min="0"
+        max="5"
+        type="number"
+        #input
+        [(ngModel)]="action.discard">
+    </mat-form-field>
+  </div>
+  <div class="col-12 form-element">
+    <mat-form-field class="textarea" appearance="fill">
+      <mat-label>Draw</mat-label>
+      <input matInput
+        min="0"
+        max="5"
+        type="number"
+        #input
+        [(ngModel)]="action.draw">
+    </mat-form-field>
+  </div>
+  <div *ngFor="let elemType of MODIFIER_ELEMENTS; index as i">
+    <div *ngIf="isStrongAgainst(elemType) || isWeakAgainst(elemType)" class="col-12 form-element">
+      <dropdown
+        style="width:inherit;"
+        [label]="getModifierLabelElement(i)"
+        [model]="action"
+        [property]="'modifiers'"
+        [index]="i"
+        [options]="getModifierOptions(elemType)">
+      </dropdown>
+    </div>
+  </div>
+  <div class="col-12 form-element">
+    <mat-form-field class="textarea" appearance="fill">
+      <mat-label>Aura Duration</mat-label>
+      <input matInput
+        min="0"
+        max="10"
+        type="number"
+        #input
+        [(ngModel)]="action.auraDuration">
+    </mat-form-field>
+  </div>
+</div>

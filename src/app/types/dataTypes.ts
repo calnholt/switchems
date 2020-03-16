@@ -1,3 +1,4 @@
+import { TypeChart } from './../modules/data/data';
 import { Term, Image } from '../modules/data/data';
 
 export const ELEMENTS = ['Fire', 'Water', 'Rock', 'Leaf', 'Electric', 'Death'] as const;
@@ -6,15 +7,27 @@ export type ElemType = typeof ELEMENTS[number];
 export const ROLES = ['Warrior', 'Assassin', 'Technical', 'Tank', 'Support', 'Tricky'] as const;
 export type Role = typeof ROLES[number];
 
+export const BUFF_TIMINGS = ['Flip Event', 'Pre-Switch', 'Pre-Attack', 'With Attack', 'Post Attack'];
+export type BuffTiming = typeof BUFF_TIMINGS[number];
+
+const typeChart = new Array;
+ELEMENTS.forEach(e => typeChart.push(new TypeChart(e)));
+export const TYPE_CHART = typeChart;
+
 export type Url = string;
 export type Path = string;
 export type Css = string;
 export type ImageFile = string;
 
+export type CardTypes = 'MONSTER' | 'ACTION' | 'BUFF';
+
 export const ICON_PATH: Path = './assets/images';
 export const SYMBOLS_PATH: Path = ICON_PATH + '/symbols/';
 export const ELEMENT_PATH_COLOR: Path = ICON_PATH + '/elements/color/';
 export const ELEMENT_PATH_GRAY: Path = ICON_PATH + '/elements/gray/';
+
+export const MODIFIER_OPTIONS_POS = [1, 2, 3, 4, 5];
+export const MODIFIER_OPTIONS_NEG = [-1, -2, -3, -4, -5, 'X'];
 
 export type TermCodeValue = string;
 

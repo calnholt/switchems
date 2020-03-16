@@ -70,22 +70,22 @@
     ],
     "buffs": [
       {
-        "timing": 3,
+        "timing": "With Attack",
         "buffText": "If the targeted monster protected, your opponent loses an additional protect action cube.",
         "critFlg": true
       },
       {
-        "timing": 4,
+        "timing": "Post Attack",
         "buffText": "[-]: The targeted monster must switch (if possible).",
         "critFlg": true
       },
       {
-        "timing": 2,
+        "timing": "Pre-Attack",
         "buffText": "This monster gains +1[ATK] stat cubes",
         "critFlg": false
       },
       {
-        "timing": 2,
+        "timing": "Pre-Attack",
         "buffText": "This monster gains +1[ATK] stat cubes",
         "critFlg": false
       }

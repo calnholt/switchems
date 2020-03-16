@@ -79,22 +79,22 @@
     ],
     "buffs": [
       {
-        "timing": 3,
+        "timing": "With Attack",
         "buffText": "[-] & [1]: The targeted monster gains a paralyze condition. ~PARALYZE~",
         "critFlg": true
       },
       {
-        "timing": 3,
+        "timing": "With Attack",
         "buffText": "[-] & [1]: The targeted monster gains a paralyze condition. ~PARALYZE~",
         "critFlg": false
       },
       {
-        "timing": 3,
+        "timing": "With Attack",
         "buffText": "This attack gains +3[ATK] if the targeted monster's action is faster than yours (does nothing if targeted monster switches).",
         "critFlg": true
       },
       {
-        "timing": 3,
+        "timing": "With Attack",
         "buffText": "This attack gains +3[ATK] if the targeted monster's action is faster than yours (does nothing if targeted monster switches).",
         "critFlg": true
       }

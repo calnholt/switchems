@@ -79,22 +79,22 @@
     ],
     "buffs": [
       {
-        "timing": 1,
+        "timing": "Pre-Switch",
         "buffText": "This monster gains +2[ATK] stat cubes if the targeted monster switches.",
         "critFlg": true
       },
       {
-        "timing": 1,
+        "timing": "Pre-Switch",
         "buffText": "This monster gains +2[ATK] stat cubes if the targeted monster switches.",
         "critFlg": true
       },
       {
-        "timing": 2,
+        "timing": "Pre-Attack",
         "buffText": "[-] [-]: Attack speeds are reversed this turn (slower moves happen first).",
         "critFlg": false
       },
       {
-        "timing": 0,
+        "timing": "Flip Event",
         "buffText": "This card has no buff effect. <br>!: This monster is dealt 1[ATK].",
         "critFlg": false
       }

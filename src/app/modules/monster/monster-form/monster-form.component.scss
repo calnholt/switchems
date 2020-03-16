@@ -1,16 +1,9 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
 #monster-form{
-    margin: 50px;
-    .form-element{
-        margin-bottom: 15px;
-        .mat-form-field {
-            // padding: 2px 0px 0px 5px;
-            border-radius: 3px;
-            width: inherit;
-            &.textarea {
-                width: inherit;
-            }
-        }
-    }
+    margin-top: 25px;
+    margin-bottom: 50px;
     .term{
         font-style: italic;
         font-size: 11px;
@@ -30,5 +23,44 @@
         position: fixed;
         left: 50%;
         top: 15%;
+    }
+    .save-button{
+        margin-top: 25px;
+        width: inherit;
+    }
+
+    .hover-icons-container{
+        position: fixed;
+        left: 68%;
+        top: 15%;
+        .hover-card-icon-container{
+            max-height: 34px;
+            padding: 5px;
+            .hover-card-icon{
+                height: 25px;
+                width: 25px;
+                background-color: #bbb;
+                border-radius: 50%;
+                display: inline-block;
+                &.selected{
+                    background-color: $purple;
+                }
+                &.highlight{
+                    background-color: #b4e7ff;
+                }
+                .icon{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: 'Beastformer';
+                    font-size: 21px;
+                    padding-top: 2px;
+                }
+            }
+            .hover-card-icon:hover{
+                background-color: rgb(238, 238, 238);
+                cursor: pointer;
+            }
+        }
     }
 }

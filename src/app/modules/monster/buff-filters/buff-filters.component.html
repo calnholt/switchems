@@ -1,0 +1,26 @@
+<div id="buff-filters">
+  <div class="col-12 form-element">
+    <dropdown
+      style="width:inherit;"
+      [label]="'Timing'"
+      [model]="buff"
+      [property]="'timing'"
+      [options]="buffTimings">
+    </dropdown>
+  </div>
+  <div class="col-12 form-element">
+    <mat-form-field class="textarea" appearance="fill">
+      <mat-label>Buff Text</mat-label>
+      <textarea matInput 
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="10"
+        [(ngModel)]="buff.buffText">
+      </textarea>
+    </mat-form-field>
+  </div>
+  <div class="col-12 form-element">
+    <mat-checkbox [(ngModel)]="buff.critFlg">Critical?</mat-checkbox>
+  </div>
+</div>

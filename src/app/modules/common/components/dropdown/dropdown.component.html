@@ -1,17 +1,17 @@
-<div *ngIf="!multi">
-  <mat-form-field appearance="fill">
+<div *ngIf="!multi" style="width:inherit;">
+  <mat-form-field appearance="fill" style="width:inherit;">
     <mat-label>{{label}}</mat-label>
-    <mat-select [ngModel]="model" (selectionChange)="selectionChanged($event)">
+    <mat-select [formControl]="formControl" (selectionChange)="selectionChanged($event)">
       <mat-option *ngFor="let option of options" [value]="option">
         {{option}}
       </mat-option>
     </mat-select>
   </mat-form-field>
 </div>
-<div *ngIf="multi">
-  <mat-form-field appearance="fill">
+<div *ngIf="multi" style="width:inherit;">
+  <mat-form-field appearance="fill" style="width:inherit;">
     <mat-label>{{label}}</mat-label>
-    <mat-select [ngModel]="model" multiple (selectionChange)="selectionChanged($event)">
+    <mat-select [formControl]="formControl" multiple (selectionChange)="selectionChanged($event)">
       <mat-option *ngFor="let option of options" [value]="option">
         {{option}}
       </mat-option>

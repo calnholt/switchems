@@ -79,22 +79,22 @@
     ],
     "buffs": [
       {
-        "timing": 3,
+        "timing": "With Attack",
         "buffText": "This attack gains +2[ATK]",
         "critFlg": false
       },
       {
-        "timing": 3,
+        "timing": "With Attack",
         "buffText": "This attack gains +2[ATK]",
         "critFlg": true
       },
       {
-        "timing": 2,
+        "timing": "Pre-Attack",
         "buffText": "This attack gains +2[SPD]",
         "critFlg": false
       },
       {
-        "timing": 2,
+        "timing": "Pre-Attack",
         "buffText": "This attack gains +2[SPD]",
         "critFlg": true
       }

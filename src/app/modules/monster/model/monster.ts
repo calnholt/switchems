@@ -1,4 +1,4 @@
-import { Role, ElemType, TermCode } from './../../../types/dataTypes';
+import { Role, ElemType, TermCode, BuffTiming } from './../../../types/dataTypes';
 
 export class GUI {
     isSelected?: boolean;
@@ -28,22 +28,22 @@ export class MonsterComplete extends Monster {
 }
 
 export class Buff extends Card {
-    timing: number;
-    buffText: string;
-    critFlg: boolean;
+    timing: BuffTiming = null;
+    buffText: string = null;
+    critFlg: boolean = null;
 }
 
 export class Action extends Card {
-    abilityName: string;
-    abilityText?: string;
-    attack?: number;
-    speed?: number;
-    element?: ElemType;
-    buff?: number;
-    discard?: number;
-    draw?: number;
-    modifiers?: number[];
-    auraDuration?: number;
-    statusFlg?: boolean;
-    reactionFlg?: boolean;
+    abilityName: string = null;
+    abilityText?: string = null;
+    attack?: number = null;
+    speed?: number = null;
+    element?: ElemType = null;
+    buff?: number = null;
+    discard?: number = null;
+    draw?: number = null;
+    modifiers?: number[] = [0, 0, 0, 0, 0, 0];
+    auraDuration?: number = null;
+    statusFlg?: boolean = null;
+    reactionFlg?: boolean = null;
 }

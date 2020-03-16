@@ -1,4 +1,4 @@
-import { MonsterComponent } from './monster.component';
+import { BuffFiltersComponent } from './buff-filters/buff-filters.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonComponentsModule } from './../common/common-components.module';
@@ -8,6 +8,8 @@ import { MonsterActionComponent } from './monster-action/monster-action.componen
 import { MonsterBuffComponent } from './monster-buff/monster-buff/monster-buff.component';
 import { MonsterFormComponent } from 'src/app/modules/monster/monster-form/monster-form.component';
 import { MonsterCardComponent } from 'src/app/modules/monster/monster-card/monster-card.component';
+import { MonsterCardFiltersComponent } from './monster-card-filters/monster-card-filters.component';
+import { ActionFiltersComponent } from './action-filters/action-filters.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -21,17 +23,18 @@ import { CommonModule } from '@angular/common';
     ReactiveFormsModule,
   ],
   declarations: [
-    MonsterComponent,
     MonsterActionComponent,
     MonsterBuffComponent,
     MonsterFormComponent,
     MonsterCardComponent,
+    MonsterCardFiltersComponent,
+    ActionFiltersComponent,
+    BuffFiltersComponent,
   ],
   exports: [
     MonsterActionComponent,
     MonsterBuffComponent,
-    MonsterFormComponent,
-    MonsterCardComponent
+    MonsterCardComponent,
   ]
 })
 export class MonsterModule { }

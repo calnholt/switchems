@@ -1,0 +1,23 @@
+#monster-card-filters{
+    .form-element{
+        margin-bottom: 15px;
+        .mat-form-field{
+            border-radius: 3px;
+            width: inherit;
+            &.textarea {
+                width: inherit;
+            }
+        }
+        text-input,number-input{
+            border-radius: 3px;
+            width: inherit;
+            .mat-form-field{
+                border-radius: 3px;
+                width: inherit;
+                &.textarea {
+                    width: inherit;
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,6 @@
 import { loadMonsters } from './../../import/json-to-obj';
-import { ELEMENTS, ROLES, TERM_CODES, IMAGE_CODES } from './../../../types/dataTypes';
-import { FormControl } from '@angular/forms';
-import { MonsterComplete, Monster } from './../model/monster';
-import { MatSelectChange } from '@angular/material/select';
+import { TERM_CODES, IMAGE_CODES, CardTypes } from './../../../types/dataTypes';
+import { MonsterComplete } from './../model/monster';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { Component, ViewChild, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -17,12 +15,12 @@ import { ActivatedRoute } from '@angular/router';
 export class MonsterFormComponent implements OnInit {
   @ViewChild('autosize') autosize: CdkTextareaAutosize;
   monster: MonsterComplete;
-  elements: FormControl;
-  elementList = ELEMENTS;
-  roleList = ROLES;
+  originalMonster: MonsterComplete;
   panelOpenState: false;
   termCodes = TERM_CODES;
   imageCodes = IMAGE_CODES;
+  selectedCard: CardTypes = 'MONSTER';
+  index: number = 0;
 
   constructor(
     private route: ActivatedRoute
@@ -32,17 +30,26 @@ export class MonsterFormComponent implements OnInit {
     const allMonsters = loadMonsters();
     const monsterName: string = this.route.snapshot.paramMap.get('monsterName');
     this.monster = allMonsters.find(m => m.monsterName === monsterName);
-    this.elements = new FormControl();
-    this.elements.setValue(this.monster.elements);
+    this.originalMonster = Object.assign({}, this.monster);
   }
 
-  // restrict number of elements a monster can have to 2
-  // this could change
-  elementChanged(event: MatSelectChange) {
-    if (event.value.length < 3) {
-      this.monster.elements = event.value;
-    } else if (event.value.length > 2) {
-      this.elements.setValue(this.monster.elements);
-    }
+  save() {
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    const json = JSON.stringify(this.monster, null, 2);
+    selBox.value = json;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+  }
+
+  selectCard(selection: CardTypes, index: number) {
+    this.selectedCard = selection;
+    this.index = index;
   }
 }

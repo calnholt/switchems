@@ -77,22 +77,22 @@
     ],
     "buffs": [
       {
-        "timing": 4,
+        "timing": "Post Attack",
         "buffText": "Remove all targeted monster's stat increases",
         "critFlg": true
       },
       {
-        "timing": 2,
+        "timing": "Pre-Attack",
         "buffText": "Remove an opponent's team aura if your attack is faster",
         "critFlg": true
       },
       {
-        "timing": 3,
+        "timing": "With Attack",
         "buffText": "[1]: This attack gains +3[ATK]",
         "critFlg": false
       },
       {
-        "timing": 2,
+        "timing": "Pre-Attack",
         "buffText": "[1]: This attack gains +3[SPD]",
         "critFlg": false
       }

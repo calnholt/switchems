@@ -86,22 +86,22 @@
     ],
     "buffs": [
       {
-        "timing": 3,
+        "timing": "With Attack",
         "buffText": "[-] & [2]: The targeted monster gains a burn condition. ~BURN~",
         "critFlg": true
       },
       {
-        "timing": 4,
+        "timing": "Post Attack",
         "buffText": "[-] [-]: Remove all debuffs and status conditions from all of your monsters (including ones not in play)",
         "critFlg": false
       },
       {
-        "timing": 3,
+        "timing": "With Attack",
         "buffText": "This attack gains +2[ATK] if the targeted monster has a status condition",
         "critFlg": true
       },
       {
-        "timing": 3,
+        "timing": "With Attack",
         "buffText": "This attack gains +2[ATK] if the targeted monster has a status condition",
         "critFlg": false
       }

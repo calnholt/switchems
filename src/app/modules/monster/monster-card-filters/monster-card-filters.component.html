@@ -1,0 +1,56 @@
+<div id="monster-card-filters">
+  <div class="col-12 form-element">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="monster.monsterName">
+    </mat-form-field>
+  </div>
+  <div class="col-12 form-element">
+    <mat-form-field appearance="fill">
+      <mat-label>Ability</mat-label>
+      <input matInput [(ngModel)]="monster.abilityName">
+    </mat-form-field>
+  </div>
+  <div class="col-12 form-element">
+    <dropdown
+      style="width:inherit;"
+      [label]="'Elements'"
+      [model]="monster"
+      [property]="'elements'"
+      [options]="elementList"
+      [multi]="true">
+    </dropdown>
+  </div>
+  <div class="col-12 form-element">
+    <dropdown 
+      style="width:inherit;"
+      [label]="'Role'"
+      [model]="monster"
+      [property]="'role'"
+      [options]="roleList">
+    </dropdown>
+  </div>
+  <div class="col-12 form-element">
+    <mat-form-field class="textarea" appearance="fill">
+      <mat-label>HP</mat-label>
+      <input matInput
+        min="1"
+        max="20"
+        type="number"
+        #input
+        [(ngModel)]="monster.hp">
+    </mat-form-field>
+  </div>
+  <div class="col-12 form-element">
+    <mat-form-field class="textarea" appearance="fill">
+      <mat-label>Ability Text</mat-label>
+      <textarea matInput 
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="10"
+        [(ngModel)]="monster.abilityText">
+      </textarea>
+    </mat-form-field>
+  </div>
+</div>

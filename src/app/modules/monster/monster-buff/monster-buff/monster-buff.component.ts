@@ -24,20 +24,11 @@ export class MonsterBuffComponent implements OnInit {
   }
 
   getTimingRomanNumeral(): string {
-    if (this.buff.timing === 1) {return 'I'; }
-    if (this.buff.timing === 2) {return 'II'; }
-    if (this.buff.timing === 3) {return 'III'; }
-    if (this.buff.timing === 4) {return 'IV'; }
-    if (this.buff.timing === 5) {return 'V'; }
-    if (this.buff.timing === 0) {return '!'; }
-  }
-
-  getTimingText(): string {
-    if (this.buff.timing === 1) {return 'Pre-Switch'; }
-    if (this.buff.timing === 2) {return 'Pre-Attack'; }
-    if (this.buff.timing === 3) {return 'With Attack'; }
-    if (this.buff.timing === 4) {return 'Post Attack'; }
-    if (this.buff.timing === 0) {return 'Flip Event'; }
+    if (this.buff.timing === 'Pre-Switch') {return 'I'; }
+    if (this.buff.timing === 'Pre-Attack') {return 'II'; }
+    if (this.buff.timing === 'With Attack') {return 'III'; }
+    if (this.buff.timing === 'Post Attack') {return 'IV'; }
+    if (this.buff.timing === 'Flip Event') {return '!'; }
   }
 
   getBuffImagePath(): Path {
