@@ -7,9 +7,23 @@ mat-toolbar {
     position: fixed;
     height: var(--default-height);
     z-index: 1;
-    .logo{
-        cursor: pointer;
-        font-family: 'Beastformer';
-        font-size: 40px;
+    .button-container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: flex-start;
+        span{
+            padding-right: 50px;
+        }
+        .logo{
+            cursor: pointer;
+            font-family: 'Beastformer';
+            font-size: 40px;
+        }
+        .button{
+            cursor: pointer;
+            font-family: 'Helvetica';
+            font-size: 15px;
+        }
     }
 }

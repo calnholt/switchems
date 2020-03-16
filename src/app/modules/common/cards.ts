@@ -11,18 +11,21 @@ export const getAdvantages = (elem: ElemType): number[] => {
 };
 
 export const getAbilityText = (text: string, termCss: Css, imageCss: Css): string => {
-    let innerHtml = text;
-    TERM_CODES.forEach((term: Term) => {
-      while (innerHtml.includes(term.key)) {
-          const html = `<br><span class="${termCss}">(${term.value})</span>`;
-          innerHtml = innerHtml.replace(term.key, html);
-      }
-    });
-    IMAGE_CODES.forEach((image: Image) => {
-      while (innerHtml.includes(image.key)) {
-          const html = `<img src="${image.path}" class="${imageCss}">`;
-          innerHtml = innerHtml.replace(image.key, html);
-      }
-    });
-    return innerHtml;
-  };
+  if (!text) {
+    return null;
+  }
+  let innerHtml = text;
+  TERM_CODES.forEach((term: Term) => {
+    while (innerHtml.includes(term.key)) {
+        const html = `<br><span class="${termCss}">(${term.value})</span>`;
+        innerHtml = innerHtml.replace(term.key, html);
+    }
+  });
+  IMAGE_CODES.forEach((image: Image) => {
+    while (innerHtml.includes(image.key)) {
+        const html = `<img src="${image.path}" class="${imageCss}">`;
+        innerHtml = innerHtml.replace(image.key, html);
+    }
+  });
+  return innerHtml;
+};

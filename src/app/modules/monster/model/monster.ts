@@ -1,4 +1,4 @@
-import { Role, ElemType, TermCode, BuffTiming } from './../../../types/dataTypes';
+import { Role, ElemType, BuffTiming } from './../../../types/dataTypes';
 
 export class GUI {
     isSelected?: boolean;
@@ -23,8 +23,8 @@ export class Monster extends Card {
 }
 
 export class MonsterComplete extends Monster {
-    actions: Action[];
-    buffs: Buff[];
+    actions: Action[] = [];
+    buffs: Buff[] = [];
 }
 
 export class Buff extends Card {

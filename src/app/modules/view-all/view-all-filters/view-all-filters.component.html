@@ -90,7 +90,7 @@
       <mat-checkbox [(ngModel)]="checked">Status?</mat-checkbox>
       <mat-checkbox [(ngModel)]="checked">Reaction?</mat-checkbox>
     </div>
-    <button class="clear-button" mat-stroked-button (click)="clearFilters()">Reset Filters</button>
+    <button class="clear-button" mat-stroked-button [routerLink]="['']">Reset Filters</button>
   </div>
 </div>
 

@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { MonsterComplete, Action } from '../monster/model/monster';
 import { loadMonsters } from '../import/json-to-obj';
@@ -14,11 +15,15 @@ export class ViewAllComponent implements OnInit {
   allMonsters = Array<MonsterComplete>();
   filteredMonsters = Array<MonsterComplete>();
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
-    this.allMonsters = loadMonsters();
-    this.filteredMonsters = this.allMonsters;
+    this.route.params.subscribe(params => {
+      this.allMonsters = loadMonsters();
+      this.filteredMonsters = this.allMonsters;
+    });
   }
 
   getFilteredMonsters(): Array<MonsterComplete> {

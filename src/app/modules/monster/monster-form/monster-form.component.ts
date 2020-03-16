@@ -1,6 +1,6 @@
 import { loadMonsters } from './../../import/json-to-obj';
-import { TERM_CODES, IMAGE_CODES, CardTypes } from './../../../types/dataTypes';
-import { MonsterComplete } from './../model/monster';
+import { TERM_CODES, IMAGE_CODES, CardTypes, ROLES, ELEMENTS } from './../../../types/dataTypes';
+import { MonsterComplete, Action, Buff } from './../model/monster';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { Component, ViewChild, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
@@ -27,10 +27,22 @@ export class MonsterFormComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    const allMonsters = loadMonsters();
-    const monsterName: string = this.route.snapshot.paramMap.get('monsterName');
-    this.monster = allMonsters.find(m => m.monsterName === monsterName);
-    this.originalMonster = Object.assign({}, this.monster);
+    this.route.params.subscribe(params => {
+      const allMonsters = loadMonsters();
+      const monsterName: string = this.route.snapshot.paramMap.get('monsterName');
+      if (monsterName === 'Builder') {
+        this.monster = new MonsterComplete();
+        this.monster.hp = Number((Math.random() * 18 + 1).toFixed(0));
+        this.monster.role = ROLES[Number((Math.random() * ROLES.length).toFixed(0))];
+        this.monster.elements = [ELEMENTS[Number((Math.random() * ELEMENTS.length).toFixed(0))]];
+        this.monster.actions.push(new Action(), new Action(), new Action(), new Action());
+        this.monster.actions.forEach(a => a.element = ELEMENTS[Number((Math.random() * ELEMENTS.length).toFixed(0))]);
+        this.monster.buffs.push(new Buff(), new Buff(), new Buff(), new Buff());
+      } else {
+        this.monster = allMonsters.find(m => m.monsterName === monsterName);
+      }
+      this.originalMonster = Object.assign({}, this.monster);
+    });
   }
 
   save() {
