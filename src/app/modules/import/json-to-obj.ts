@@ -49,7 +49,7 @@ export const loadMonsters = (): Array<MonsterComplete> => {
             action.draw = json.actions[i].draw;
             action.discard = json.actions[i].discard;
             action.buff = json.actions[i].buff;
-            action.modifiers = json.actions[i].modifiers;
+            action.modifiers = json.actions[i].modifiers ? json.actions[i].modifiers : action.modifiers;
             action.auraDuration = json.actions[i].auraDuration;
             action.statusFlg = json.actions[i].statusFlg;
             action.reactionFlg = json.actions[i].reactionFlg;
