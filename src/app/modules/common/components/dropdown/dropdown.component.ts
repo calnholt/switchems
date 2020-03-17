@@ -1,14 +1,15 @@
 import { FormControl } from '@angular/forms';
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { SelectionChange } from '@angular/cdk/collections';
 import { MatSelectChange } from '@angular/material/select';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'dropdown',
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss']
 })
-export class DropdownComponent implements OnInit, SelectionChange<any> {
+export class DropdownComponent implements OnInit, OnChanges, SelectionChange<any> {
   source: import('@angular/cdk/collections').SelectionModel<any>;
   added: any[];
   removed: any[];
@@ -31,6 +32,12 @@ export class DropdownComponent implements OnInit, SelectionChange<any> {
       this.formControl.setValue(this.model[this.property][this.index]);
     } else {
       this.formControl.setValue(this.model[this.property]);
+    }
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.model.currentValue !== changes.model.previousValue) {
+      this.ngOnInit();
     }
   }
 
