@@ -1,119 +1,119 @@
 {
+    "elements": [
+      "Water",
+      "Death"
+    ],
     "actions": [
-        {
-            "abilityName": "Fatigue",
-            "abilityText": "[2]: The targeted monster gains a fatigue condition. ~FATIGUE~",
-            "element": "Death",
-            "speed": 5,
-            "buff": 0,
-            "discard": 2,
-            "draw": 0,
-            "modifiers": [
-                0,
-                "X",
-                0,
-                0,
-                0,
-                0
-            ],
-            "auraDuration": 0,
-            "statusFlg": true,
-            "reactionFlg": false
-        },
-        {
-            "abilityName": "Foul Play",
-            "abilityText": "[2]: The targeted monster gains -1[ATK] stat cubes.",
-            "element": "Death",
-            "speed": 5,
-            "attack": 2,
-            "buff": 1,
-            "discard": 1,
-            "draw": 0,
-            "modifiers": [
-                0,
-                -2,
-                2,
-                2,
-                -1,
-                0
-            ],
-            "auraDuration": 0,
-            "statusFlg": false,
-            "reactionFlg": false
-        },
-        {
-            "abilityName": "Surge",
-            "abilityText": "",
-            "speed": 7,
-            "attack": 1,
-            "element": "Water",
-            "buff": 3,
-            "discard": 0,
-            "draw": 0,
-            "modifiers": [
-                1,
-                -1,
-                -1,
-                0,
-                0,
-                2
-            ],
-            "auraDuration": 0,
-            "statusFlg": false,
-            "reactionFlg": false
-        },
-        {
-            "abilityName": "Expunge",
-            "abilityText": "Single use. ~SINGLE~",
-            "element": "Death",
-            "speed": 8,
-            "attack": 5,
-            "buff": 1,
-            "discard": 1,
-            "draw": 0,
-            "modifiers": [
-                0,
-                -2,
-                3,
-                2,
-                -2,
-                0
-            ],
-            "auraDuration": 0,
-            "statusFlg": false,
-            "reactionFlg": false
-        }
+      {
+        "abilityName": "Fatigue",
+        "abilityText": "[2]: The targeted monster gains a fatigue condition. ~FATIGUE~",
+        "speed": 6,
+        "element": "Death",
+        "buff": 0,
+        "discard": 2,
+        "draw": 0,
+        "modifiers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "auraDuration": 0,
+        "statusFlg": true,
+        "reactionFlg": false
+      },
+      {
+        "abilityName": "Foul Play",
+        "abilityText": "[2]: The targeted monster gains -1[ATK] stat cubes.",
+        "attack": 2,
+        "speed": 5,
+        "element": "Death",
+        "buff": 1,
+        "discard": 1,
+        "draw": 0,
+        "modifiers": [
+          0,
+          -2,
+          2,
+          2,
+          -1,
+          0
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false
+      },
+      {
+        "abilityName": "Surge",
+        "abilityText": "",
+        "attack": 1,
+        "speed": 7,
+        "element": "Water",
+        "buff": 3,
+        "discard": 0,
+        "draw": 0,
+        "modifiers": [
+          1,
+          -1,
+          -1,
+          0,
+          0,
+          2
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false
+      },
+      {
+        "abilityName": "Expunge",
+        "abilityText": "Single use. ~SINGLE~",
+        "attack": 5,
+        "speed": 8,
+        "element": "Death",
+        "buff": 1,
+        "discard": 1,
+        "draw": 0,
+        "modifiers": [
+          0,
+          -2,
+          3,
+          2,
+          -2,
+          0
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false
+      }
     ],
     "buffs": [
-        {
-            "timing": "Pre-Attack",
-            "buffText": "The targeted monster gains -1[ATK] stat cubes",
-            "critFlg": true
-        },
-        {
-            "timing": "Pre-Attack",
-            "buffText": "The targeted monster gains -1[ATK] stat cubes",
-            "critFlg": false
-        },
-        {
-            "timing": "Pre-Attack",
-            "buffText": "The targeted monster gains -1[SPD] stat cubes",
-            "critFlg": true
-        },
-        {
-            "timing": "Pre-Attack",
-            "buffText": "The targeted monster gains -1[SPD] stat cubes",
-            "critFlg": false
-        }
+      {
+        "timing": "Pre-Attack",
+        "buffText": "The targeted monster gains -1[ATK] stat cubes",
+        "critFlg": true
+      },
+      {
+        "timing": "Pre-Attack",
+        "buffText": "The targeted monster gains -1[ATK] stat cubes",
+        "critFlg": false
+      },
+      {
+        "timing": "Pre-Attack",
+        "buffText": "The targeted monster gains -1[SPD] stat cubes",
+        "critFlg": true
+      },
+      {
+        "timing": "Pre-Attack",
+        "buffText": "The targeted monster gains -1[SPD] stat cubes",
+        "critFlg": false
+      }
     ],
     "monsterId": 5,
-    "monsterName": "Drownigator",
-    "abilityText": "When this monster enters the battlefield, the opponent discards a card at random.",
-    "elements": [
-        "Water",
-        "Death"
-    ],
     "abilityName": "Panic Attack",
-    "hp": 11,
-    "role": "Tricky"
-}
+    "monsterName": "Drownigator",
+    "role": "Tricky",
+    "abilityText": "When this monster enters the battlefield, the opponent discards a card at random.",
+    "hp": 9
+  }
