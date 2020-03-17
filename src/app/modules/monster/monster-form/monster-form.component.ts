@@ -51,13 +51,25 @@ export class MonsterFormComponent implements OnInit {
     selBox.style.left = '0';
     selBox.style.top = '0';
     selBox.style.opacity = '0';
-    const json = JSON.stringify(this.monster, null, 2);
+    const json = JSON.stringify(this.getCleanMonster(), null, 2);
     selBox.value = json;
     document.body.appendChild(selBox);
     selBox.focus();
     selBox.select();
     document.execCommand('copy');
     document.body.removeChild(selBox);
+  }
+
+  // a little janky but for now it's fine
+  getCleanMonster(): MonsterComplete {
+    const copy = Object.assign({}, this.monster);
+    const guiProps = ['isSelected', 'isHighlighted', 'isHovered'];
+    guiProps.forEach(prop => {
+      delete copy[prop];
+      copy.actions.forEach(a => delete a[prop]);
+      copy.buffs.forEach(b => delete b[prop]);
+    });
+    return copy;
   }
 
   selectCard(selection: CardTypes, index: number) {
