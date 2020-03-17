@@ -3,6 +3,7 @@
         {
             "abilityName": "Fatigue",
             "abilityText": "[2]: The targeted monster gains a fatigue condition. ~FATIGUE~",
+            "element": "Death",
             "speed": 5,
             "buff": 0,
             "discard": 2,
@@ -22,6 +23,7 @@
         {
             "abilityName": "Foul Play",
             "abilityText": "[2]: The targeted monster gains -1[ATK] stat cubes.",
+            "element": "Death",
             "speed": 5,
             "attack": 2,
             "buff": 1,
@@ -63,6 +65,7 @@
         {
             "abilityName": "Expunge",
             "abilityText": "Single use. ~SINGLE~",
+            "element": "Death",
             "speed": 8,
             "attack": 5,
             "buff": 1,
