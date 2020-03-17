@@ -1,7 +1,7 @@
 <div id="action-card">
   <div class="card-container">
     <div class="card-wrapper">
-      <div *ngIf="!action.modifiers">
+      <div *ngIf="!action.modifiers || isModifierAllZero()">
         <div class="elements-container">
           <span *ngFor="let modifier of EMPTY_MODIFIER">
             <span *ngIf="modifier" class="modifier blank">{{getModifier(modifier)}}</span>

@@ -26,8 +26,8 @@ export const SYMBOLS_PATH: Path = ICON_PATH + '/symbols/';
 export const ELEMENT_PATH_COLOR: Path = ICON_PATH + '/elements/color/';
 export const ELEMENT_PATH_GRAY: Path = ICON_PATH + '/elements/gray/';
 
-export const MODIFIER_OPTIONS_POS = [1, 2, 3, 4, 5];
-export const MODIFIER_OPTIONS_NEG = [-1, -2, -3, -4, -5, 'X'];
+export const MODIFIER_OPTIONS_POS = [0, 1, 2, 3, 4, 5];
+export const MODIFIER_OPTIONS_NEG = [0, -1, -2, -3, -4, -5, 'X'];
 
 export type TermCodeValue = string;
 
