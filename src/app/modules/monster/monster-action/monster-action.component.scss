@@ -14,7 +14,7 @@
                 justify-items: center;
                 padding-top: 3px;
                 .modifier{
-                    font-family: 'Beastformer';
+                    font-family: $beastformer;
                     font-size: 27px;
                     // MAKE CONSTANTS
                     &.blank{
@@ -62,7 +62,7 @@
                     padding-top: 3px;
                     .ability-name{
                         margin: auto;
-                        font-family: 'Beastformer';
+                        font-family: $beastformer;
                         color: white;
                         font-size: 22px;
                         padding-bottom: 6px;
@@ -84,7 +84,7 @@
                     height:auto;
                     border-radius: 10px;
                     .ability-text{
-                        font-family: 'Helvetica';
+                        font-family: $helvetica;
                         font-size: 12px;
                         padding: 7px;
                         line-height: 13px;
@@ -115,7 +115,7 @@
                     align-items: center;
                     justify-content: center;
                     .stat-value{
-                        font-family: 'Beastformer';
+                        font-family: $beastformer;
                         font-size: 40px;
                     }
                     .stat-icon{
@@ -136,7 +136,7 @@
                 bottom: 2px;
                 right: 5px;
                 .monster-name{
-                    font-family: 'Beastformer';
+                    font-family: $beastformer;
                     font-size: 18px;
                     letter-spacing: 0.02em;
                 }

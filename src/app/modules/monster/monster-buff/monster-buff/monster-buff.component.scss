@@ -20,13 +20,13 @@
                 left: 7px;
                 padding-top: 9px;
                 .numeral{
-                    font-family: 'Beastformer';
+                    font-family: $beastformer;
                     font-size: 38px;
                     letter-spacing: 0.02em;
                 }
                 .name{
                     position: relative;
-                    font-family: 'Beastformer';
+                    font-family: $beastformer;
                     font-size: 13px;
                     letter-spacing: 0.02em;
                     bottom: 8px;
@@ -35,7 +35,7 @@
             .text-container{
                 padding: 70px 10px 0px 10px;
                 .buff-text{
-                    font-family: 'Helvetica';
+                    font-family: $helvetica;
                     font-size: 14px;
                     letter-spacing: 0.02em;
                     text-align: center;
@@ -55,7 +55,7 @@
                     position: absolute;
                     right: -183px;
                     top: 31px;
-                    font-family: 'Beastformer';
+                    font-family: $beastformer;
                     font-size: 18px;
                     letter-spacing: 0.02em;
                 }

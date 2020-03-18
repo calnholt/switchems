@@ -1,3 +1,6 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
 .padding{
     padding-top: 60px;
 }
@@ -17,12 +20,12 @@ mat-toolbar {
         }
         .logo{
             cursor: pointer;
-            font-family: 'Beastformer';
+            font-family: $beastformer;
             font-size: 40px;
         }
         .button{
             cursor: pointer;
-            font-family: 'Helvetica';
+            font-family: $helvetica;
             font-size: 15px;
         }
     }

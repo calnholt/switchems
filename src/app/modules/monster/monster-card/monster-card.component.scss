@@ -13,7 +13,7 @@
                 grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
                 justify-items: center;
                 .effectiveness{
-                    font-family: 'Beastformer';
+                    font-family: $beastformer;
                 }
                 .elements{
                     display: grid;
@@ -25,7 +25,7 @@
                 }
             }
             .name{
-                font-family: 'Beastformer';
+                font-family: $beastformer;
                 font-size: 28px;
                 text-align: center;
                 margin-top: 5px;
@@ -61,7 +61,7 @@
                     padding: 2px 0px 2px;
                     .ability-name{
                         margin: auto;
-                        font-family: 'Beastformer';
+                        font-family: $beastformer;
                         color: white;
                         font-size: 22px;
                         padding-bottom: 6px;
@@ -79,7 +79,7 @@
                     height:auto;
                     border-radius: 10px;
                     .ability-text{
-                        font-family: 'Helvetica';
+                        font-family: $helvetica;
                         font-size: 12px;
                         padding: 10px;
                         line-height: 13px;
@@ -98,7 +98,7 @@
                     }
                     .name{
                         position: relative;
-                        font-family: 'Beastformer';
+                        font-family: $beastformer;
                         font-size: 13px;
                         letter-spacing: 0.02em;
                         bottom: -11px;

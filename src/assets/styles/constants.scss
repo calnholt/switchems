@@ -1,11 +1,5 @@
-@font-face { 
-    font-family: 'Beastformer'; 
-    src: url('~/assets/fonts/Beastformer.ttf') format("ttf")
-} 
-@font-face { 
-    font-family: 'Helvetica'; 
-    src: url('~/assets/fonts/Helvetica.ttc') format("ttc")
-}
+@import 'src/assets/styles/fonts.scss';
+@import 'src/styles.scss';
 
 $red: #d0021b;
 $blue: #4a90e2;
@@ -13,6 +7,9 @@ $purple: #bd10e0;;
 $yellow: #e6d616;
 $brown: #8b572a;
 $green: #549d1a;
+
+$beastformer: 'Beastformer';
+$helvetica: 'Helvetica';
 
 .term{
     font-style: italic;
