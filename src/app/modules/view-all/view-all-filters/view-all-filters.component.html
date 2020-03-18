@@ -5,7 +5,7 @@
     </div>
     <div class="filters-wrapper">
       <dropdown
-        [label]="'Role'"
+        [label]="'Roles'"
         [model]="form"
         [multi]="true"
         [property]="'roles'"
@@ -87,10 +87,33 @@
         [multi]="true"
         (selectionChange)="applyFilters()">
       </dropdown>
-      <mat-checkbox [(ngModel)]="checked">Status?</mat-checkbox>
-      <mat-checkbox [(ngModel)]="checked">Reaction?</mat-checkbox>
+      <mat-checkbox 
+        [(ngModel)]="form.statusFlg"
+        (change)="applyFilters()">Status?
+      </mat-checkbox>
+      <mat-checkbox 
+        [(ngModel)]="form.reactionFlg"
+        (change)="applyFilters()">
+        Reaction?
+      </mat-checkbox>
     </div>
-    <button class="clear-button" mat-stroked-button [routerLink]="['']">Reset Filters</button>
+    <div class="title">Buff Filters</div>
+    <div class="filters-wrapper">
+      <dropdown
+        [label]="'Timing'"
+        [model]="form"
+        [property]="'timings'"
+        [options]="timingList"
+        [multi]="true"
+        (selectionChange)="applyFilters()">
+      </dropdown>
+      <mat-checkbox 
+        [(ngModel)]="form.critFlg"
+        (change)="applyFilters()">
+        Critical?
+      </mat-checkbox>
+    </div>
+    <button class="clear-button" mat-stroked-button (click)="clearFilters()">Reset Filters</button>
   </div>
 </div>
 

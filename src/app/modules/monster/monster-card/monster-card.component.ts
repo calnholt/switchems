@@ -17,12 +17,7 @@ export class MonsterCardComponent implements OnInit {
   TERM_CSS: Css = 'term';
   ABILITY_IMG_CSS: Css = 'term-img';
 
-  ngOnInit() {
-    // console.log(JSON.stringify(this.monster, null, 2));
-    // const blob = new Blob([JSON.stringify(this.monster, null, 2)], {type : 'application/json'});
-    // saveAs(blob, 'abc.json');
-
-  }
+  ngOnInit() {}
 
   constructor() {}
 

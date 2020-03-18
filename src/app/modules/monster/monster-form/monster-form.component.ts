@@ -33,8 +33,8 @@ export class MonsterFormComponent implements OnInit {
       if (monsterName === 'Builder') {
         this.monster = new MonsterComplete();
         this.monster.hp = Number((Math.random() * 18 + 1).toFixed(0));
-        this.monster.role = ROLES[Number((Math.random() * ROLES.length).toFixed(0))];
-        this.monster.elements = [ELEMENTS[Number((Math.random() * ELEMENTS.length).toFixed(0))]];
+        this.monster.role = ROLES[Number((Math.random() * ROLES.length - 1).toFixed(0))];
+        this.monster.elements = [ELEMENTS[Number((Math.random() * ELEMENTS.length - 1).toFixed(0))]];
         this.monster.actions.push(new Action(), new Action(), new Action(), new Action());
         this.monster.actions.forEach(a => a.element = ELEMENTS[Number((Math.random() * ELEMENTS.length).toFixed(0))]);
         this.monster.buffs.push(new Buff(), new Buff(), new Buff(), new Buff());

@@ -1,6 +1,6 @@
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { MonsterComplete, Action } from '../monster/model/monster';
+import { MonsterComplete, Action, Buff } from '../monster/model/monster';
 import { loadMonsters } from '../import/json-to-obj';
 import { MonsterForm } from './view-all-filters/view-all-filters.component';
 import { ElemType } from './../../types/dataTypes';
@@ -34,6 +34,7 @@ export class ViewAllComponent implements OnInit {
     let filteredMonsters: Array<MonsterComplete> = this.allMonsters;
     filteredMonsters = filteredMonsters.filter(m => this.isWithinFormSettings(m, form));
     filteredMonsters.forEach(m => m.actions.forEach(a => a.isHighlighted = this.getActionHighlight(a, form)));
+    filteredMonsters.forEach(m => m.buffs.forEach(b => b.isHighlighted = this.getBuffHighlight(b, form)));
     this.filteredMonsters = filteredMonsters;
   }
 
@@ -75,7 +76,23 @@ export class ViewAllComponent implements OnInit {
     const isDiscard = this.filterValueMinMax(a.discard, form.discardMin, form.discardMax);
     const isDraw = this.filterValueMinMax(a.draw, form.drawMin, form.drawMax);
     const isAura = this.filterValueMinMax(a.auraDuration, form.auraMin, form.auraMax);
-    return isElements && isSpeed && isAttack && isBuff && isDiscard && isDraw  && isAura;
+    const isReaction = a.reactionFlg === form.reactionFlg;
+    const isStatus = a.statusFlg === form.statusFlg;
+    return isElements && isSpeed && isAttack && isBuff && isDiscard && isDraw  && isAura && isReaction && isStatus;
+  }
+
+  getBuffHighlight(b: Buff, form: MonsterForm) {
+    const isTiming = this.filterTiming(b, form);
+    const isCritical = b.critFlg === form.critFlg;
+    return isTiming && isCritical;
+  }
+
+  filterTiming(b: Buff, form: MonsterForm) {
+    let isTimings: boolean = true;
+    if (form.timings.length > 0) {
+      isTimings = form.timings.includes(b.timing);
+    }
+    return isTimings;
   }
 
   filterValueMinMax(value: number, formMin: number, formMax: number): boolean {

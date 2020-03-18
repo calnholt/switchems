@@ -1,4 +1,4 @@
-import { ELEMENTS, ROLES, ElemType, Role } from './../../../types/dataTypes';
+import { ELEMENTS, ROLES, ElemType, Role, BuffTiming, BUFF_TIMINGS } from './../../../types/dataTypes';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { SelectionChange } from '@angular/cdk/collections';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
@@ -24,6 +24,8 @@ export class MonsterForm {
   auraMax?: number = 10;
   statusFlg?: boolean = false;
   reactionFlg: boolean = false;
+  timings?: Array<BuffTiming> = new Array();
+  critFlg?: boolean = false;
 }
 
 @Component({
@@ -40,6 +42,7 @@ export class ViewAllFiltersComponent implements SelectionChange<any>, OnInit {
 
   elementList = ELEMENTS;
   roleList = ROLES;
+  timingList = BUFF_TIMINGS;
   form: MonsterForm = new MonsterForm();
   checked: boolean = false;
   faMinus = faMinus;
@@ -52,12 +55,10 @@ export class ViewAllFiltersComponent implements SelectionChange<any>, OnInit {
   }
 
   applyFilters() {
-    console.log(this.form);
     this.filtersChanged.emit(this.form);
   }
 
   clearFilters() {
-    // TODO: why isn't this changing the model value in the selects?
     this.form = new MonsterForm();
     this.filtersChanged.emit(this.form);
   }

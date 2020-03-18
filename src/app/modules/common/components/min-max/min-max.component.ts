@@ -1,5 +1,5 @@
 import { Css } from './../../../../types/dataTypes';
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { SelectionChange } from '@angular/cdk/collections';
 import { MatSelectChange } from '@angular/material/select';
 
@@ -8,7 +8,7 @@ import { MatSelectChange } from '@angular/material/select';
   templateUrl: './min-max.component.html',
   styleUrls: ['./min-max.component.scss']
 })
-export class MinMaxComponent implements SelectionChange<any>, OnInit {
+export class MinMaxComponent implements SelectionChange<any>, OnChanges, OnInit {
   source: import('@angular/cdk/collections').SelectionModel<any>;
   added: any[];
   removed: any[];
@@ -17,6 +17,7 @@ export class MinMaxComponent implements SelectionChange<any>, OnInit {
   maxModel: any;
 
   @Input() label: string;
+  // TODO: min and max not limiting value
   @Input() min: number;
   @Input() max: number;
   @Input() property: string;
@@ -30,6 +31,12 @@ export class MinMaxComponent implements SelectionChange<any>, OnInit {
   ngOnInit(): void {
     this.minModel = this.model[`${this.property}Min`];
     this.maxModel = this.model[`${this.property}Max`];
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.model.currentValue !== changes.model.previousValue) {
+      this.ngOnInit();
+    }
   }
 
   selectionChanged(event: MatSelectChange) {

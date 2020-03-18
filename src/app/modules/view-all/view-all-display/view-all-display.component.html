@@ -40,7 +40,8 @@
               <div 
                 (mouseover)="buff.isHovered = true" 
                 (mouseout)="buff.isHovered = false" 
-                class="hover-card-icon">
+                class="hover-card-icon"
+                [ngClass]="{'highlight' : buff.isHighlighted}">
                 <span class="icon">B</span>
               </div>
             </div>
