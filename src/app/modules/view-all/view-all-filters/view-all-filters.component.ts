@@ -44,7 +44,7 @@ export class ViewAllFiltersComponent implements SelectionChange<any>, OnInit {
   roleList = ROLES;
   timingList = BUFF_TIMINGS;
   form: MonsterForm = new MonsterForm();
-  checked: boolean = false;
+  isCollapsed: boolean = false;
   faMinus = faMinus;
 
   constructor() {
@@ -61,6 +61,10 @@ export class ViewAllFiltersComponent implements SelectionChange<any>, OnInit {
   clearFilters() {
     this.form = new MonsterForm();
     this.filtersChanged.emit(this.form);
+  }
+
+  toggleCollapse() {
+    this.isCollapsed = !this.isCollapsed;
   }
 
 

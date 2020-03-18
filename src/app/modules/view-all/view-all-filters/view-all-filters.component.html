@@ -1,7 +1,18 @@
 <div id="filter-all">
-  <div class="container">
-    <div class="title">
-      Monster Filters
+  <div *ngIf="isCollapsed" class="container">
+    <div class="header-container">
+      <span class="title">Filters</span>
+      <span>
+        <mat-icon (click)="toggleCollapse()">add_box</mat-icon>
+      </span>
+    </div>
+  </div>
+  <div *ngIf="!isCollapsed" class="container">
+    <div class="header-container">
+      <span class="title">Monster Filters</span>
+      <span>
+        <mat-icon *ngIf="!isCollapsed" (click)="toggleCollapse()">indeterminate_check_box</mat-icon>
+      </span>
     </div>
     <div class="filters-wrapper">
       <dropdown
