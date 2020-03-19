@@ -20,7 +20,7 @@ const getRole = (text: string): Role => {
 };
 
 export const loadMonsters = (): Array<MonsterComplete> => {
-    const out = new Array<MonsterComplete>();
+    let out = new Array<MonsterComplete>();
     const ALL = [Stallagrowth, Cleansitoad, Chargroar, Flexferno, Zappguin, Phantomaton, Shaleshell, Galeaffy, Drownigator, Americaw];
     ALL.forEach(json => {
         const monster = new MonsterComplete();
@@ -65,6 +65,11 @@ export const loadMonsters = (): Array<MonsterComplete> => {
             monster.buffs.push(buff);
         }
         console.log(monster);
+        out = out.sort((a, b) => {
+            if (a.monsterName > b.monsterName) {return 1; }
+            if (a.monsterName < b.monsterName) {return -1; }
+            return 0;
+        });
         out.push(monster);
     });
     return out;

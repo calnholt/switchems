@@ -1,0 +1,18 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#print-monster{
+    .container{
+        .all-cards{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            align-content: flex-start;
+            transform: scale(0.6);
+            transform-origin: top left;
+        }
+    }
+    .unselected{
+        opacity: 20%;
+    }
+}

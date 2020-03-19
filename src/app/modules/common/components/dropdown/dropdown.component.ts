@@ -9,10 +9,7 @@ import { Observable } from 'rxjs';
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss']
 })
-export class DropdownComponent implements OnInit, OnChanges, SelectionChange<any> {
-  source: import('@angular/cdk/collections').SelectionModel<any>;
-  added: any[];
-  removed: any[];
+export class DropdownComponent implements OnInit, OnChanges {
 
   @Input() label: string;
   @Input() model: any;
