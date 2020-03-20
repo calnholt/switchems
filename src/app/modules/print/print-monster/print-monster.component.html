@@ -1,27 +1,38 @@
 <div id="print-monster">
   <div class="container">
-    <span class="all-cards">
-      <span [ngClass]="{unselected: !monster.isSelected}" (click)="monster.isSelected = !monster.isSelected">
-        <monster-card
-          [monster]="monster">
-        </monster-card>
+    <div class="header">
+      <h2>{{monster.monsterName}}</h2>
+      <span>
+        <mat-checkbox
+          [(ngModel)]="isToggleAll"
+          (change)="toggleAll()">
+        </mat-checkbox> Select All?
       </span>
-      <span *ngFor="let action of monster.actions">
-        <div [ngClass]="{unselected: !action.isSelected}" (click)="action.isSelected = !action.isSelected">
+    </div>
+    <span class="all-cards">
+      <div class="overlay">
+        <div class="card" [ngClass]="{unselected: !monster.isSelected}" (click)="monster.isSelected = !monster.isSelected">
+          <monster-card
+            [monster]="monster">
+          </monster-card>
+        </div>
+      </div>
+      <div class="overlay" *ngFor="let action of monster.actions">
+        <div class="card" [ngClass]="{unselected: !action.isSelected}" (click)="action.isSelected = !action.isSelected">
           <monster-action
             [monster]="monster"
             [action]="action">
           </monster-action>
         </div>
-      </span>
-      <span *ngFor="let buff of monster.buffs">
-        <div [ngClass]="{unselected: !buff.isSelected}" (click)="buff.isSelected = !buff.isSelected">
+      </div>
+      <div class="overlay" *ngFor="let buff of monster.buffs">
+        <div class="card" [ngClass]="{unselected: !buff.isSelected}" (click)="buff.isSelected = !buff.isSelected">
           <monster-buff
             [monster]="monster"
             [buff]="buff">
           </monster-buff>
         </div>
-      </span>
+      </div>
     </span>
   </div>
 </div>

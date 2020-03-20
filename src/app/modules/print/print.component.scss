@@ -1,0 +1,15 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#print-all{
+    .container{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+    }
+}

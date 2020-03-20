@@ -3,16 +3,35 @@
 
 #print-monster{
     .container{
+        max-height: 7cm;
+        .header{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
         .all-cards{
             display: flex;
             justify-content: flex-start;
             align-items: center;
             align-content: flex-start;
-            transform: scale(0.6);
+            transform: scale(0.5);
             transform-origin: top left;
+            .overlay{
+                .card{
+                    transition: all .1s ease-in-out;
+                    &.unselected{
+                        monster-card,monster-action,monster-buff{
+                            opacity: 20%;
+                        }
+                    }
+                }
+                .card:hover{
+                    transform: scale(2.0);
+                    z-index: 100;
+                }
+            }
         }
     }
-    .unselected{
-        opacity: 20%;
-    }
+
+
 }

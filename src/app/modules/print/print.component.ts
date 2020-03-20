@@ -9,10 +9,25 @@ import { loadMonsters } from '../import/json-to-obj';
 })
 export class PrintComponent implements OnInit {
   allMonsters = Array<MonsterComplete>();
+  isAllToggle: boolean = true;
   constructor() { }
 
   ngOnInit() {
-    this.allMonsters = loadMonsters();
+    const allMonsters: MonsterComplete[] = loadMonsters();
+    this.toggleAll(allMonsters);
+    this.allMonsters = allMonsters;
+  }
+
+  toggleAll(allMonsters: MonsterComplete[]) {
+    allMonsters.forEach(m => {
+      m.isSelected = this.isAllToggle;
+      m.actions.forEach(a => a.isSelected = this.isAllToggle);
+      m.buffs.forEach(b => b.isSelected = this.isAllToggle);
+    });
+  }
+
+  print() {
+    return;
   }
 
 }

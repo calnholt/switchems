@@ -30,7 +30,7 @@ export class MonsterFormComponent implements OnInit {
     this.route.params.subscribe(params => {
       const allMonsters = loadMonsters();
       const monsterName: string = this.route.snapshot.paramMap.get('monsterName');
-      if (monsterName === 'Builder') {
+      if (monsterName === 'builder') {
         this.monster = new MonsterComplete();
         this.monster.hp = Number((Math.random() * 18 + 1).toFixed(0));
         this.monster.role = ROLES[Number((Math.random() * ROLES.length - 1).toFixed(0))];
