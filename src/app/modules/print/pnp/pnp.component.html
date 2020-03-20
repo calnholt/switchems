@@ -1,0 +1,25 @@
+<div id="pnp">
+  <div *ngFor="let monster of allMonsters">
+    <span *ngIf="monster.isSelected">
+      <monster-card
+        [monster]="monster">
+      </monster-card>
+    </span>
+    <span *ngFor="let action of monster.actions">
+      <span *ngIf="action.isSelected">
+        <monster-action
+          [monster]="monster"
+          [action]="action">
+        </monster-action>
+      </span>
+    </span>
+    <span *ngFor="let buff of monster.buffs">
+      <span *ngIf="buff.isSelected">
+        <monster-buff
+          [monster]="monster"
+          [buff]="buff">
+        </monster-buff>
+      </span>
+    </span>
+  </div>
+</div>

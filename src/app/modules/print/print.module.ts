@@ -1,3 +1,4 @@
+import { PnpComponent } from './pnp/pnp.component';
 import { PrintRoutes } from './print.routing';
 import { PrintMonsterComponent } from './print-monster/print-monster.component';
 import { RouterModule } from '@angular/router';
@@ -20,6 +21,6 @@ import { PrintComponent } from './print.component';
     MonsterModule,
     CommonComponentsModule,
   ],
-  declarations: [PrintComponent, PrintMonsterComponent]
+  declarations: [PrintComponent, PrintMonsterComponent, PnpComponent]
 })
 export class PrintModule { }

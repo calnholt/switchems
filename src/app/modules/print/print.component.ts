@@ -1,6 +1,7 @@
 import { MonsterComplete } from './../monster/model/monster';
 import { Component, OnInit } from '@angular/core';
 import { loadMonsters } from '../import/json-to-obj';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'print',
@@ -10,7 +11,7 @@ import { loadMonsters } from '../import/json-to-obj';
 export class PrintComponent implements OnInit {
   allMonsters = Array<MonsterComplete>();
   isAllToggle: boolean = true;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     const allMonsters: MonsterComplete[] = loadMonsters();
@@ -28,6 +29,7 @@ export class PrintComponent implements OnInit {
 
   print() {
     localStorage.setItem('allMonsters', JSON.stringify({ token: this.allMonsters, name: 'PRINT' }));
+    this.router.navigate(['/pnp']);
   }
 
 }

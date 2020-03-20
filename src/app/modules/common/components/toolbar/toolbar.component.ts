@@ -13,8 +13,6 @@ export class ToolbarComponent implements OnInit {
 
   constructor(public toolbarService: ToolbarService) { }
 
-  ngOnInit() {
-    this.visible = this.toolbarService.visible;
-  }
+  ngOnInit() {}
 
 }

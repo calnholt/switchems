@@ -1,0 +1,11 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#pnp{
+    display: flex;
+    justify-items: flex-start;
+    flex-wrap: wrap;
+    monster-card,monster-action,monster-buff{
+        width: 25%;
+    }
+}
