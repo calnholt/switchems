@@ -27,7 +27,7 @@ export class PrintComponent implements OnInit {
   }
 
   print() {
-    return;
+    localStorage.setItem('allMonsters', JSON.stringify({ token: this.allMonsters, name: 'PRINT' }));
   }
 
 }

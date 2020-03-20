@@ -1,3 +1,4 @@
+import { ToolbarService } from './toolbar.service';
 import { Path } from './../../../../types/dataTypes';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
-
+  visible: boolean;
   logo: Path = '../../../../assets/images/website/logo.png';
 
-  constructor() { }
+  constructor(public toolbarService: ToolbarService) { }
 
   ngOnInit() {
+    this.visible = this.toolbarService.visible;
   }
 
 }
