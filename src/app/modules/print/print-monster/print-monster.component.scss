@@ -24,8 +24,8 @@
                 .card{
                     z-index: 99;
                     transition: all .1s ease-in-out;
-                    &.unselected{
-                        monster-card,monster-action,monster-buff{
+                    .wrapper{
+                        &.unselected{
                             opacity: 20%;
                         }
                     }
