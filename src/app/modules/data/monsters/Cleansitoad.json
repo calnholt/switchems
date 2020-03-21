@@ -119,6 +119,6 @@
   "abilityName": "Clear Mind",
   "monsterName": "Cleansitoad",
   "role": "Technical",
-  "abilityText": "When this monster enters the battlefield, you may shuffle your discard pile into your deck. Then, look at the top three cards of your deck. You may put any number back on top or on the bottom in any order.",
+  "abilityText": "When this monster enters play, you may shuffle your discard pile into your deck. Then, look at the top three cards of your deck. You may put any number back on top or on the bottom in any order.",
   "hp": 12
 }

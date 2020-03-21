@@ -122,6 +122,6 @@
   "abilityName": "Intimidate",
   "monsterName": "Chargroar",
   "role": "Assassin",
-  "abilityText": "When this monster enters the battlefield, all enemy monsters gain -2[ATK] stat cubes.",
+  "abilityText": "When this monster enters play, all enemy monsters gain -2[ATK] stat cubes.",
   "hp": 8
 }

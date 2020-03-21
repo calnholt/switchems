@@ -120,6 +120,6 @@
   "abilityName": "Wing Clip",
   "monsterName": "Americaw",
   "role": "Assassin",
-  "abilityText": "When this monster enters the battlefield, enemy monsters gain -1[SPD] stat cubes.",
+  "abilityText": "When this monster enters play, enemy monsters gain -1[SPD] stat cubes.",
   "hp": 8
 }
