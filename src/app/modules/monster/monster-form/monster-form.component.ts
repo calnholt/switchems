@@ -28,6 +28,7 @@ export class MonsterFormComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(params => {
+      this.selectedCard = 'MONSTER';
       const allMonsters = loadMonsters();
       const monsterName: string = this.route.snapshot.paramMap.get('monsterName');
       if (monsterName === 'builder') {
