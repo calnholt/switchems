@@ -50,14 +50,14 @@
     {
       "monsterName": null,
       "abilityName": "Evaporate",
-      "abilityText": "If this monster would be dealt 5+[ATK] by a single attack this turn, instead the attack is unsuccessful and all buffs used with it are not resolved. Then, [+] [+] and gain +2[DEF] stat cubes. ~CONSECUTIVE~",
+      "abilityText": "If this monster would be dealt 4+[ATK] by a single attack this turn, instead the attack is unsuccessful and all buffs used with it are not resolved. Then, [+] [+] and gain +2[DEF] stat cubes. ~SINGLE~",
       "element": "Water",
       "buff": 0,
-      "discard": 1,
+      "discard": 0,
       "draw": 0,
       "modifiers": [
         0,
-        "X",
+        0,
         0,
         0,
         0,
