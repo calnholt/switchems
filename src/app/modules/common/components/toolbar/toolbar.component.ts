@@ -1,7 +1,10 @@
+import { MatSelectChange } from '@angular/material/select';
+import { MonsterComplete } from './../../../monster/model/monster';
 import { ToolbarService } from './toolbar.service';
 import { Path } from './../../../../types/dataTypes';
 import { Component, OnInit } from '@angular/core';
 import { Router, Event } from '@angular/router';
+import { loadMonsters } from 'src/app/modules/import/json-to-obj';
 
 @Component({
   selector: 'toolbar',
@@ -11,6 +14,8 @@ import { Router, Event } from '@angular/router';
 export class ToolbarComponent implements OnInit {
   visible: boolean;
   logo: Path = '../../../../assets/images/website/logo.png';
+  monsters: string[] = [];
+  monster: MonsterComplete = new MonsterComplete();
 
   constructor(public toolbarService: ToolbarService, private router: Router) { }
 
@@ -18,6 +23,12 @@ export class ToolbarComponent implements OnInit {
     this.router.events.subscribe((event: Event) => {
       this.toolbarService.show();
     });
+    loadMonsters().forEach(m => this.monsters.push(m.monsterName));
+  }
+
+  goToMonster() {
+    this.router.navigate([`monster/${this.monster.monsterName}`], {});
+    this.monster = new MonsterComplete();
   }
 
 }

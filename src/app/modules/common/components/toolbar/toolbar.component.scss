@@ -5,10 +5,9 @@
     padding-top: 60px;
 }
 mat-toolbar {
-    --default-height: 50px;
+    height: 63px;
     top: 0;
     position: fixed;
-    height: var(--default-height);
     z-index: 1;
     .button-container{
         display: flex;
@@ -27,6 +26,11 @@ mat-toolbar {
             cursor: pointer;
             font-family: $helvetica;
             font-size: 15px;
+        }
+        .dropdown{
+            position: fixed;
+            right: 0;
+            top: -11px;
         }
     }
 }

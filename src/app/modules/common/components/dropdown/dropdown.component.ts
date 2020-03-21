@@ -11,12 +11,12 @@ import { Observable } from 'rxjs';
 })
 export class DropdownComponent implements OnInit, OnChanges {
 
-  @Input() label: string;
+  @Input() label?: string;
   @Input() model: any;
   @Input() options: Array<any>;
   @Input() property: string;
   @Input() multi?: boolean;
-  @Input() index?: number;
+  @Input() index?: number; // used when model is an item from array
   @Output()
   selectionChange?: EventEmitter<any> = new EventEmitter<any>();
   formControl: FormControl;

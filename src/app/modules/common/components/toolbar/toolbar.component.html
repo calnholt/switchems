@@ -4,6 +4,14 @@
       <span [routerLink]="['']" class="logo">OverRealm</span>
       <span [routerLink]="['/monster', 'builder']" class="button">Create New Monster</span>
       <span [routerLink]="['/print']" class="button">Print and Play</span>
+      <dropdown
+        class="dropdown"
+        [label]="'Search Monsters'"
+        [model]="monster"
+        [options]="monsters"
+        [property]="'monsterName'"
+        (selectionChange)="goToMonster()">
+      </dropdown>
     </div>
   </mat-toolbar>
 </div>
