@@ -3,14 +3,14 @@ import { TypeChart } from './../../data/data';
 import { ElemType } from 'src/app/types/dataTypes';
 import { Action } from 'src/app/modules/monster/model/monster';
 import { ELEMENTS, ROLES, MODIFIER_OPTIONS_POS, MODIFIER_OPTIONS_NEG, TYPE_CHART } from './../../../types/dataTypes';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'action-filters',
   templateUrl: './action-filters.component.html',
   styleUrls: ['./action-filters.component.scss']
 })
-export class ActionFiltersComponent implements OnInit {
+export class ActionFiltersComponent implements OnInit, OnChanges {
   @Input() action: Action;
   MODIFIER_ELEMENTS = [ELEMENTS[5], ELEMENTS[4], ELEMENTS[3], ELEMENTS[2], ELEMENTS[1], ELEMENTS[0]];
   elementList = ELEMENTS;
@@ -22,6 +22,12 @@ export class ActionFiltersComponent implements OnInit {
 
   ngOnInit() {
     this.typeChart = TYPE_CHART.find(tc => tc.element === this.action.element);
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes.action.currentValue !== changes.action.previousValue) {
+      this.ngOnInit();
+    }
   }
 
   isStrongAgainst(elemType: ElemType) {
