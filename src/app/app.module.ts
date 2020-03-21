@@ -10,13 +10,11 @@ import { AppComponent } from './app.component';
 
 import { ViewAllModule } from './modules/view-all/view-all.module';
 import { RouterModule } from '@angular/router';
-import { ComComponent } from './com/com.component';
 import { PrintModule } from './modules/print/print.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComComponent,
   ],
   imports: [
     RouterModule.forRoot(AppRoutingModule, {
@@ -31,6 +29,5 @@ import { PrintModule } from './modules/print/print.module';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [ComComponent]
 })
 export class AppModule { }
