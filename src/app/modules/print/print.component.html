@@ -3,7 +3,7 @@
     <div class="header">
       <h2>Select which cards you'd like to print:</h2>
       <mat-checkbox [(ngModel)]="isAllToggle" (change)="toggleAll(allMonsters)">Select All?</mat-checkbox>
-      <button mat-stroked-button (click)="print()">Print Cards</button>
+      <button matTooltip="Only works in Chrome. Use landscape and remove headers and footers." mat-stroked-button (click)="print()">Print Cards <mat-icon>info</mat-icon></button>
     </div>
     <div *ngFor="let monster of allMonsters">
       <print-monster

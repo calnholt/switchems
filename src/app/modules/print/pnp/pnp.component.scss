@@ -1,11 +1,17 @@
 @import 'src/assets/styles/constants.scss';
 @import 'src/styles.scss';
 
+@page {
+    size: auto;
+}
+
 #pnp{
-    display: flex;
-    justify-items: flex-start;
-    flex-wrap: wrap;
-    monster-card,monster-action,monster-buff{
-        width: 25%;
+    .all-cards{
+        display: grid;
+        grid-template-columns: repeat(4, $card-width);
+    }
+    .break{
+        padding-bottom: 85px; // only works for chrome
+        padding-bottom: 2.25cm;
     }
 }

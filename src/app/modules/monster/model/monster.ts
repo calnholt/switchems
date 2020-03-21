@@ -28,12 +28,14 @@ export class MonsterComplete extends Monster {
 }
 
 export class Buff extends Card {
+    monsterName: string = null;
     timing: BuffTiming = null;
     buffText: string = null;
     critFlg: boolean = null;
 }
 
 export class Action extends Card {
+    monsterName: string = null;
     abilityName: string = null;
     abilityText?: string = null;
     attack?: number = null;

@@ -1,8 +1,9 @@
-<div *ngIf="toolbarService.visible" class="padding"></div>
-<mat-toolbar color="primary">
-  <div class="button-container">
-    <span [routerLink]="['']" class="logo">OverRealm</span>
-    <span [routerLink]="['/monster', 'builder']" class="button">Create New Monster</span>
-    <span [routerLink]="['/print']" class="button">Print and Play</span>
-  </div>
-</mat-toolbar>
+<div *ngIf="toolbarService.visible" class="padding">
+  <mat-toolbar color="primary">
+    <div class="button-container">
+      <span [routerLink]="['']" class="logo">OverRealm</span>
+      <span [routerLink]="['/monster', 'builder']" class="button">Create New Monster</span>
+      <span [routerLink]="['/print']" class="button">Print and Play</span>
+    </div>
+  </mat-toolbar>
+</div>

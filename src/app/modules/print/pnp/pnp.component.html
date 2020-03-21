@@ -1,25 +1,24 @@
 <div id="pnp">
-  <div *ngFor="let monster of allMonsters">
-    <span *ngIf="monster.isSelected">
-      <monster-card
-        [monster]="monster">
-      </monster-card>
-    </span>
-    <span *ngFor="let action of monster.actions">
-      <span *ngIf="action.isSelected">
+  <div class="all-cards">
+    <span *ngFor="let card of allCards; index as i">
+      <span class="o-card" *ngIf="card.isMonster">
+        <monster-card
+          [monster]="card">
+        </monster-card>
+      </span>
+      <span class="o-card" *ngIf="card.isAction">
         <monster-action
-          [monster]="monster"
-          [action]="action">
+          [monster]="card"
+          [action]="card">
         </monster-action>
       </span>
-    </span>
-    <span *ngFor="let buff of monster.buffs">
-      <span *ngIf="buff.isSelected">
+      <span class="o-card" *ngIf="card.isBuff">
         <monster-buff
-          [monster]="monster"
-          [buff]="buff">
+          [monster]="card"
+          [buff]="card">
         </monster-buff>
       </span>
+      <div [ngClass]="{'break' : isPageBreak(i)}"></div>
     </span>
   </div>
 </div>

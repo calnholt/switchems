@@ -9,6 +9,10 @@
     src: url('/assets/fonts/Helvetica.ttc') format("ttc")
 }
 
+@page {
+    size: auto;
+  }
+
 html, body { height: 100%; }
 body { 
     margin: 0; 
