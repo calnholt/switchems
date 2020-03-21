@@ -84,7 +84,8 @@ export class ViewAllComponent implements OnInit {
   getBuffHighlight(b: Buff, form: MonsterForm) {
     const isTiming = this.filterTiming(b, form);
     const isCritical = b.critFlg === form.critFlg;
-    return isTiming && isCritical;
+    const isFlipEvent = b.flipEventFlg === form.flipEventFlg;
+    return isTiming && isCritical && isFlipEvent;
   }
 
   filterTiming(b: Buff, form: MonsterForm) {

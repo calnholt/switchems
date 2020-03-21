@@ -26,6 +26,7 @@ export class MonsterForm {
   reactionFlg: boolean = false;
   timings?: Array<BuffTiming> = new Array();
   critFlg?: boolean = false;
+  flipEventFlg: boolean = false;
 }
 
 @Component({
