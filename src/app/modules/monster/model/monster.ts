@@ -28,24 +28,24 @@ export class MonsterComplete extends Monster {
 }
 
 export class Buff extends Card {
-    monsterName: string = null;
+    monsterName?: string;
     timing: BuffTiming = null;
     buffText: string = null;
-    critFlg: boolean = null;
+    critFlg: boolean = false;
 }
 
 export class Action extends Card {
-    monsterName: string = null;
+    monsterName?: string;
     abilityName: string = null;
     abilityText?: string = null;
-    attack?: number = null;
-    speed?: number = null;
+    attack?: number;
+    speed?: number;
     element?: ElemType = null;
-    buff?: number = null;
-    discard?: number = null;
-    draw?: number = null;
-    modifiers?: number[] = [0, 0, 0, 0, 0, 0];
-    auraDuration?: number = null;
-    statusFlg?: boolean = null;
-    reactionFlg?: boolean = null;
+    buff?: number;
+    discard?: number;
+    draw?: number;
+    modifiers?: (number | string)[] = [0, 0, 0, 0, 0, 0];
+    auraDuration?: number = 0;
+    statusFlg?: boolean = false;
+    reactionFlg?: boolean = false;
 }
