@@ -15,7 +15,7 @@
       "draw": 0,
       "modifiers": [
         3,
-        -2,
+        -1,
         -1,
         0,
         0,
@@ -28,17 +28,17 @@
     {
       "monsterName": null,
       "abilityName": "Shellshock",
-      "abilityText": "If this monster has a whirlpool counter on it, remove it and this attack deals +5[ATK].",
+      "abilityText": "If this monster has a quake counter on it, remove it and this attack deals +5[ATK].",
       "attack": 2,
       "speed": 5,
       "element": "Rock",
       "buff": 0,
-      "discard": 2,
+      "discard": 1,
       "draw": 0,
       "modifiers": [
-        -2,
-        5,
-        -3,
+        -1,
+        3,
+        -1,
         0,
         0,
         3
@@ -58,9 +58,9 @@
       "discard": 0,
       "draw": 0,
       "modifiers": [
-        -2,
-        1,
-        -2,
+        -1,
+        2,
+        -1,
         0,
         0,
         3
@@ -80,9 +80,9 @@
       "discard": 1,
       "draw": 0,
       "modifiers": [
-        -2,
+        -1,
         2,
-        -2,
+        -1,
         0,
         0,
         2
@@ -122,6 +122,6 @@
   "abilityName": "Absorb",
   "monsterName": "Shaleshell",
   "role": "Warrior",
-  "abilityText": "When this monster switches in and is dealt damage by a [E] [F] attack, put a whirlpool counter on this monster. This monster gains +2[SPD] while it has a whirlpool counter. Removes on switch.",
+  "abilityText": "When this monster switches in and is dealt damage by a [E] [F] attack, put a quake counter on this monster. This monster gains +2[SPD] while it has a quake counter. Removes on switch.",
   "hp": 11
 }
