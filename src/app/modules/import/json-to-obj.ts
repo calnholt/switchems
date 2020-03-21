@@ -8,6 +8,7 @@ import { default as Shaleshell } from '../data/monsters/Shaleshell.json';
 import { default as Galeaffy } from '../data/monsters/Galeaffy.json';
 import { default as Drownigator } from '../data/monsters/Drownigator.json';
 import { default as Americaw } from '../data/monsters/Americaw.json';
+import { default as Steamie } from '../data/monsters/Steamie.json';
 import { ElemType, ELEMENTS, Role, ROLES } from './../../types/dataTypes';
 import { MonsterComplete, Buff, Action } from '../monster/model/monster';
 
@@ -21,7 +22,19 @@ const getRole = (text: string): Role => {
 
 export const loadMonsters = (): Array<MonsterComplete> => {
     let out = new Array<MonsterComplete>();
-    const ALL = [Stallagrowth, Cleansitoad, Chargroar, Flexferno, Zappguin, Phantomaton, Shaleshell, Galeaffy, Drownigator, Americaw];
+    const ALL = [
+        Americaw,
+        Chargroar,
+        Cleansitoad,
+        Drownigator,
+        Flexferno,
+        Galeaffy,
+        Shaleshell,
+        Stallagrowth,
+        Steamie,
+        Phantomaton,
+        Zappguin,
+    ];
     ALL.forEach(json => {
         const monster = new MonsterComplete();
         if (!json.abilityName) {
