@@ -52,29 +52,21 @@ export const loadMonsters = (): Array<MonsterComplete> => {
         monster.hp = json.hp;
         monster.actions = new Array<Action>();
         const ACTIONS = 4;
+        const ACTION_PROPERTIES = ['abilityName', 'abilityText', 'attack', 'speed', 'draw', 'discard',
+        'buff', 'auraDuration', 'statusFlg', 'reactionFlg'];
         for (let i = 0; i < ACTIONS; i++) {
             const action = new Action();
-            action.abilityName = json.actions[i].abilityName;
-            action.abilityText = json.actions[i].abilityText;
-            action.attack = json.actions[i].attack;
-            action.speed = json.actions[i].speed;
+            ACTION_PROPERTIES.forEach(p => action[p] = json.actions[i][p]);
             action.element = getElemType(json.actions[i].element);
-            action.draw = json.actions[i].draw;
-            action.discard = json.actions[i].discard;
-            action.buff = json.actions[i].buff;
             action.modifiers = json.actions[i].modifiers ? json.actions[i].modifiers : action.modifiers;
-            action.auraDuration = json.actions[i].auraDuration;
-            action.statusFlg = json.actions[i].statusFlg;
-            action.reactionFlg = json.actions[i].reactionFlg;
             monster.actions.push(action);
         }
         monster.buffs = new Array<Buff>();
         const BUFFS = 4;
+        const BUFF_PROPERTIES = ['timing', 'buffText', 'critFlg', 'flipEventText', 'flipEventFlg'];
         for (let i = 0; i < BUFFS; i++) {
             const buff = new Buff();
-            buff.timing = json.buffs[i].timing;
-            buff.buffText = json.buffs[i].buffText;
-            buff.critFlg = json.buffs[i].critFlg;
+            BUFF_PROPERTIES.forEach(p => buff[p] = json.buffs[i][p]);
             monster.buffs.push(buff);
         }
         console.log(monster);

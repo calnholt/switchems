@@ -7,7 +7,7 @@ export type ElemType = typeof ELEMENTS[number];
 export const ROLES = ['Warrior', 'Assassin', 'Technical', 'Tank', 'Support', 'Tricky'] as const;
 export type Role = typeof ROLES[number];
 
-export const BUFF_TIMINGS = ['Flip Event', 'Pre-Switch', 'Pre-Attack', 'With Attack', 'Post Attack'];
+export const BUFF_TIMINGS = ['Pre-Switch', 'Pre-Attack', 'With Attack', 'Post Attack', 'None'];
 export type BuffTiming = typeof BUFF_TIMINGS[number];
 
 const typeChart = new Array;

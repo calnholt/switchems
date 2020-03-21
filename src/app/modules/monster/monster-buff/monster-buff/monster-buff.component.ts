@@ -28,7 +28,7 @@ export class MonsterBuffComponent implements OnInit {
     if (this.buff.timing === 'Pre-Attack') {return 'II'; }
     if (this.buff.timing === 'With Attack') {return 'III'; }
     if (this.buff.timing === 'Post Attack') {return 'IV'; }
-    if (this.buff.timing === 'Flip Event') {return '!'; }
+    if (this.buff.timing === 'None') {return 'X'; }
   }
 
   getBuffImagePath(): Path {
@@ -43,8 +43,11 @@ export class MonsterBuffComponent implements OnInit {
     return `${SYMBOLS}fail.png`;
   }
 
-  getAbilityText(): string {
-    return getAbilityText(this.buff.buffText, this.TERM_CSS, this.ABILITY_IMG_CSS);
+  getAbilityText(text: string, isFlipText: boolean): string {
+    if (isFlipText) {
+      text = `!: ${text}`;
+    }
+    return getAbilityText(text, this.TERM_CSS, this.ABILITY_IMG_CSS);
   }
 
 }

@@ -112,8 +112,10 @@
     },
     {
       "monsterName": null,
-      "timing": "Flip Event",
-      "buffText": "This card has no buff effect. <br>!: This monster is dealt 1[ATK].",
+      "timing": "None",
+      "buffText": "This card has no buff effect.",
+      "flipEventFlg": true,
+      "flipEventText": "This monster is dealt 1[ATK]",
       "critFlg": false
     }
   ],

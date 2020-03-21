@@ -5,10 +5,11 @@
       [label]="'Timing'"
       [model]="buff"
       [property]="'timing'"
-      [options]="buffTimings">
+      [options]="buffTimings"
+      (selectionChange)="setNoneText($event)">
     </dropdown>
   </div>
-  <div class="col-12 form-element">
+  <div *ngIf="buff.timing !== 'None'" class="col-12 form-element">
     <mat-form-field class="textarea" appearance="fill">
       <mat-label>Buff Text</mat-label>
       <textarea matInput 
@@ -22,5 +23,20 @@
   </div>
   <div class="col-12 form-element">
     <mat-checkbox [(ngModel)]="buff.critFlg">Critical?</mat-checkbox>
+  </div>
+  <div class="col-12 form-element">
+    <mat-checkbox [(ngModel)]="buff.flipEventFlg">Flip Event?</mat-checkbox>
+  </div>
+  <div *ngIf="buff.flipEventFlg" class="col-12 form-element">
+    <mat-form-field class="textarea" appearance="fill">
+      <mat-label>Flip Event Text</mat-label>
+      <textarea matInput 
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="1"
+        cdkAutosizeMaxRows="10"
+        [(ngModel)]="buff.flipEventText">
+      </textarea>
+    </mat-form-field>
   </div>
 </div>

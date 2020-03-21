@@ -7,11 +7,15 @@
         <span class="name">{{buff.timing}}</span>
       </div>
       <div class="text-container">
-        <span [innerHTML]="getAbilityText()" class="buff-text"></span>
+        <span [innerHTML]="getAbilityText(buff.buffText)" class="buff-text"></span>
+      </div>
+      <div *ngIf="buff.flipEventFlg" class="text-container">
+        <span [innerHTML]="getAbilityText(buff.flipEventText, true)" class="buff-text"></span>
       </div>
       <div class="bottom-container">
         <img *ngIf="buff.critFlg" class="crit-icon" src="{{getSuccessImagePath()}}">
         <img *ngIf="!buff.critFlg" class="crit-icon" src="{{getFailImagePath()}}">
+        <span *ngIf="buff.flipEventFlg" class="flip-icon">!</span>
         <span class="monster-name">{{monster.monsterName || buff.monsterName}}</span>
       </div>
     </div>
