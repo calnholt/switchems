@@ -74,6 +74,7 @@
       "abilityName": "Roost",
       "abilityText": "If this monster is targeted by a faster attack, this action does nothing. <br><br>This monster heals 6[HP]. Single use. ~SINGLE~",
       "speed": 4,
+      "element": "Death",
       "buff": 0,
       "discard": 2,
       "draw": 0,
