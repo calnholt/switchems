@@ -33,23 +33,21 @@ export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
 const TERM_KEYS = ['~BURN~', '~SUCCESS~', '~FLINCH~', '~PARALYZE~', '~LEECH~', '~FATIGUE~',
-    '~PREVENT ESC~', '~STATUS~', '~SINGLE~', '~CONSECUTIVE~', '~STUN~', '~RECOIL~', '~CURSE~'] as const;
+    '~PREVENT ESC~', '~STATUS~', '~SINGLE~', '~STUN~', '~RECOIL~'] as const;
 export type TermCode = typeof TERM_KEYS[number];
 export const TERM_CODES = [
     new Term('~BURN~', 'Burned monsters gain -1[ATK]. Burned [L] [R] [S] monsters gain -2[ATK] instead.'),
-    new Term('~SUCCESS~', 'Unsuccessful attacks do nothing.'),
-    new Term('~FLINCH~', 'Prevent the targeted monster\'s attack if this attack is faster speed.'),
-    new Term('~PARALYZE~', 'Paralyzed monsters have -2[SPD] and all of their attacks have [2], This attack is successful.'),
-    new Term('~LEECH~', 'At the end of each turn, deal 1[ATK] to the leeched monster. If your active monster '
-        + 'is [L], heal 1[HP]. Stacks up to three. Remove on switch.'),
+    new Term('~SUCCESS~', 'Unsuccessful actions do nothing.'),
+    new Term('~FLINCH~', 'Prevent the targeted monster\'s action if this action is faster speed.'),
+    new Term('~PARALYZE~', 'Paralyzed monsters have -2[SPD] and all of their actions have [2]: This action is successful.'),
+    new Term('~LEECH~', 'At the end of each turn, deal 1[ATK] to the leeched monster and your active monster heals '
+     + '1[HP]. Stacks up to three. Remove on switch.'),
     new Term('~FATIGUE~', 'Fatigued monsters gain -1[DEF]. Fatigued [W] [E] [F] monsters can\'t use buff cards.'),
     new Term('~PREVENT ESC~', 'Cannot be prevented with Can\'t Escape!'),
     new Term('~STATUS~', 'Paralyze, burn, leech, etc.'),
     new Term('~SINGLE~', 'Recharges on switch.'),
-    new Term('~CONSECUTIVE~', 'Cannot be used consecutively.'),
     new Term('~STUN~', 'Stunned monsters cannot switch.'),
     new Term('~RECOIL~', 'Recoil damage cannot be prevented and still occurs if the targeted monster protects.'),
-    new Term('~CURSE~', 'If this card is flipped for a [X] effect, that monster is dealt 1[ATK].'),
 ] as const;
 
 const IMAGE_KEYS = ['[ATK]', '[+]', '[B]', '[-]', '[1]', '[2]', '[3]', '[DEF]', '[TA]', '[X]', '[SUCC]', '[FAIL]',
