@@ -1,7 +1,7 @@
 <div id="print-monster">
   <div class="container">
     <div class="header">
-      <h2>{{monster.monsterName}}</h2>
+      <h2 class="name" [routerLink]="['/monster', monster.monsterName]">{{monster.monsterName}}</h2>
       <span>
         <mat-checkbox
           [(ngModel)]="isToggleAll"

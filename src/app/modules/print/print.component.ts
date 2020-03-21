@@ -27,6 +27,14 @@ export class PrintComponent implements OnInit {
     });
   }
 
+  loadPrevious() {
+    const cache = localStorage.getItem('allMonsters');
+    if (cache) {
+      const json = JSON.parse(localStorage.getItem('allMonsters'));
+      this.allMonsters = json.token;
+    }
+  }
+
   print() {
     localStorage.setItem('allMonsters', JSON.stringify({ token: this.allMonsters, name: 'PRINT' }));
     this.router.navigate(['/pnp']);
