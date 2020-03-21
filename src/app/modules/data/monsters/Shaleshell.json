@@ -1,119 +1,127 @@
 {
-    "actions": [
-      {
-        "abilityName": "Geyser",
-        "abilityText": "[1]: This attack gains +2[ATK].",
-        "speed": 6,
-        "attack": 1,
-        "element": "Water",
-        "buff": 2,
-        "discard": 0,
-        "draw": 0,
-        "modifiers": [
-          3,
-          -2,
-          -1,
-          0,
-          0,
-          2
-        ],
-        "auraDuration": 0,
-        "statusFlg": false,
-        "reactionFlg": false
-      },
-      {
-        "abilityName": "Shellshock",
-        "abilityText": "If this monster has a whirlpool counter on it, remove it and this attack deals +5[ATK].",
-        "speed": 5,
-        "attack": 2,
-        "element": "Rock",
-        "buff": 0,
-        "discard": 2,
-        "draw": 0,
-        "modifiers": [
-          -2,
-          5,
-          -3,
-          0,
-          0,
-          3
-        ],
-        "auraDuration": 0,
-        "statusFlg": false,
-        "reactionFlg": false
-      },
-      {
-        "abilityName": "Boulder Bash",
-        "abilityText": "[2]: This attack is successful. ~SUCCESS~",
-        "speed": 4,
-        "attack": 3,
-        "element": "Rock",
-        "buff": 2,
-        "discard": 0,
-        "draw": 0,
-        "modifiers": [
-          -2,
-          1,
-          -2,
-          0,
-          0,
-          3
-        ],
-        "auraDuration": 0,
-        "statusFlg": false,
-        "reactionFlg": false
-      },
-      {
-        "abilityName": "Shellack",
-        "abilityText": "[1]: This attack gains flinch. ~FLINCH~",
-        "speed": 7,
-        "attack": 1,
-        "element": "Rock",
-        "buff": 0,
-        "discard": 1,
-        "draw": 0,
-        "modifiers": [
-          -2,
-          2,
-          -2,
-          0,
-          0,
-          2
-        ],
-        "auraDuration": 0,
-        "statusFlg": false,
-        "reactionFlg": false
-      }
-    ],
-    "buffs": [
-      {
-        "timing": "Pre-Attack",
-        "buffText": "Your cards flips are +1 this turn",
-        "critFlg": true
-      },
-      {
-        "timing": "Pre-Attack",
-        "buffText": "Your cards flips are +1 this turn",
-        "critFlg": true
-      },
-      {
-        "timing": "Pre-Attack",
-        "buffText": "This monster gains +2[DEF] this turn",
-        "critFlg": false
-      },
-      {
-        "timing": "Pre-Attack",
-        "buffText": "This monster gains +2[DEF] this turn",
-        "critFlg": false
-      }
-    ],
-    "monsterId": 6,
-    "monsterName": "Shaleshell",
-    "abilityText": "When this monster switches in and is dealt damage by a [E] [F] attack, put a whirlpool counter on this monster. This monster gains +2[SPD] while it has a whirlpool counter. Removes on switch.",
-    "elements": [
-      "Rock"
-    ],
-    "abilityName": "Absorb",
-    "hp": 11,
-    "role": "Warrior"
-  }
+  "elements": [
+    "Rock"
+  ],
+  "actions": [
+    {
+      "monsterName": null,
+      "abilityName": "Geyser",
+      "abilityText": "[1]: This attack gains +2[ATK].",
+      "attack": 1,
+      "speed": 6,
+      "element": "Water",
+      "buff": 2,
+      "discard": 0,
+      "draw": 0,
+      "modifiers": [
+        3,
+        -2,
+        -1,
+        0,
+        0,
+        2
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false
+    },
+    {
+      "monsterName": null,
+      "abilityName": "Shellshock",
+      "abilityText": "If this monster has a whirlpool counter on it, remove it and this attack deals +5[ATK].",
+      "attack": 2,
+      "speed": 5,
+      "element": "Rock",
+      "buff": 0,
+      "discard": 2,
+      "draw": 0,
+      "modifiers": [
+        -2,
+        5,
+        -3,
+        0,
+        0,
+        3
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false
+    },
+    {
+      "monsterName": null,
+      "abilityName": "Boulder Bash",
+      "abilityText": "[2]: This attack is successful. ~SUCCESS~",
+      "attack": 3,
+      "speed": 4,
+      "element": "Rock",
+      "buff": 2,
+      "discard": 0,
+      "draw": 0,
+      "modifiers": [
+        -2,
+        1,
+        -2,
+        0,
+        0,
+        3
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false
+    },
+    {
+      "monsterName": null,
+      "abilityName": "Shellack",
+      "abilityText": "[1]: This attack gains flinch. ~FLINCH~",
+      "attack": 1,
+      "speed": 7,
+      "element": "Rock",
+      "buff": 0,
+      "discard": 1,
+      "draw": 0,
+      "modifiers": [
+        -2,
+        2,
+        -2,
+        0,
+        0,
+        2
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false
+    }
+  ],
+  "buffs": [
+    {
+      "monsterName": null,
+      "timing": "Pre-Attack",
+      "buffText": "Your cards flips are +1 this turn",
+      "critFlg": true
+    },
+    {
+      "monsterName": null,
+      "timing": "Pre-Attack",
+      "buffText": "Your cards flips are +1 this turn",
+      "critFlg": true
+    },
+    {
+      "monsterName": null,
+      "timing": "Pre-Attack",
+      "buffText": "This monster gains +2[DEF] this turn",
+      "critFlg": false
+    },
+    {
+      "monsterName": null,
+      "timing": "Pre-Attack",
+      "buffText": "This monster gains +2[DEF] this turn",
+      "critFlg": false
+    }
+  ],
+  "monsterId": 6,
+  "abilityName": "Absorb",
+  "monsterName": "Shaleshell",
+  "role": "Warrior",
+  "abilityText": "When this monster switches in and is dealt damage by a [E] [F] attack, put a whirlpool counter on this monster. This monster gains +2[SPD] while it has a whirlpool counter. Removes on switch.",
+  "hp": 11
+}
