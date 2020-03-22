@@ -2,7 +2,7 @@ import { getAbilityText } from './../../../common/cards';
 import { SYMBOLS } from './../../../../constants';
 import { Css, Path } from './../../../../types/dataTypes';
 import { Component, OnInit, Input } from '@angular/core';
-import { MonsterComplete, Buff } from '../../model/monster';
+import { Buff } from '../../model/monster';
 
 @Component({
   selector: 'monster-buff',
