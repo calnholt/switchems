@@ -30,10 +30,22 @@ export class PrintComponent implements OnInit {
 
   loadPrevious() {
     const cache = localStorage.getItem('allMonsters');
-    if (cache) {
-      const json = JSON.parse(localStorage.getItem('allMonsters'));
-      this.allMonsters = json.token;
+    if (!cache) {
+      return;
     }
+    const json = JSON.parse(localStorage.getItem('allMonsters'));
+    const token = json.token;
+    const allMonsters: MonsterComplete[] = loadMonsters();
+    const tokenMap: any = {};
+    if (token.length < allMonsters.length) {
+      token.forEach(t => tokenMap[t.monsterName] = t);
+      allMonsters.forEach(m => {
+        if (!tokenMap[m.monsterName]) {
+          token.push(m);
+        }
+      });
+    }
+    this.allMonsters = token;
   }
 
   print() {
