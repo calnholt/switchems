@@ -9,6 +9,7 @@ import { CommonComponentsModule } from './../common/common-components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PrintComponent } from './print.component';
+import { ActionBoardComponent } from './action-board/action-board.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,14 @@ import { PrintComponent } from './print.component';
     MonsterModule,
     CommonComponentsModule,
   ],
-  declarations: [PrintComponent, PrintMonsterComponent, PnpComponent]
+  declarations: [
+    PrintComponent,
+    PrintMonsterComponent,
+    PnpComponent,
+    ActionBoardComponent
+  ],
+  exports: [
+    ActionBoardComponent,
+  ]
 })
 export class PrintModule { }

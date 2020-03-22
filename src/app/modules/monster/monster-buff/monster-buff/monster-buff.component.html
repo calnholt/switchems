@@ -7,7 +7,7 @@
         <span class="name">{{buff.timing}}</span>
       </div>
       <div class="text-container">
-        <span [innerHTML]="getAbilityText(buff.buffText)" class="buff-text"></span>
+        <span [innerHTML]="getAbilityText(buff.buffText, false)" class="buff-text"></span>
       </div>
       <div *ngIf="buff.flipEventFlg" class="text-container">
         <span [innerHTML]="getAbilityText(buff.flipEventText, true)" class="buff-text"></span>
