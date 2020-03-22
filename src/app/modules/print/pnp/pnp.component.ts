@@ -1,4 +1,4 @@
-import { CANT_ESCAPE_CARDS } from './../../../types/dataTypes';
+import { STANDARD_BUFFS } from './../../../types/dataTypes';
 import { MonsterComplete, Buff } from './../../monster/model/monster';
 import { ToolbarService } from './../../common/components/toolbar/toolbar.service';
 import { Component, OnInit } from '@angular/core';
@@ -13,7 +13,6 @@ export class PnpComponent implements OnInit {
   allCards: Array<any>;
   allMonsters: MonsterComplete[];
   extraFlg: boolean = false;
-  cantEscape: Buff[] = CANT_ESCAPE_CARDS;
   count: number;
 
   constructor(private toolbarService: ToolbarService) {
@@ -48,7 +47,7 @@ export class PnpComponent implements OnInit {
       });
     });
     if (this.extraFlg) {
-      this.cantEscape.forEach(b => {
+      STANDARD_BUFFS.forEach(b => {
         b['isBuff'] = true;
         allCards.push(b);
         allCards.push(b);

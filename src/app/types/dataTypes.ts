@@ -15,17 +15,17 @@ const typeChart = new Array;
 ELEMENTS.forEach(e => typeChart.push(new TypeChart(e)));
 export const TYPE_CHART = typeChart;
 
-const cantEscape = new Buff();
-cantEscape.monsterName = 'Standard';
-cantEscape.timing = 'Pre-Switch';
-cantEscape.buffText = 'Prevent the targeted monster from switching this turn';
-cantEscape.critFlg = true;
-const cantEscape2 = new Buff();
-cantEscape2.monsterName = 'Standard';
-cantEscape2.timing = 'Pre-Switch';
-cantEscape2.buffText = 'Prevent the targeted monster from switching this turn';
-cantEscape2.critFlg = false;
-export const CANT_ESCAPE_CARDS: Buff[] = [cantEscape, cantEscape2];
+const standardBuffArray: Buff[] = [];
+for (let i = 0; i < 2; i++) {
+    const b = new Buff();
+    b.monsterName = 'Standard';
+    b.timing = 'Pre-Switch';
+    b.buffText = 'Prevent the targeted monster from switching this turn';
+    b.critFlg = true;
+    standardBuffArray.push(b);
+}
+standardBuffArray[0].critFlg = false;
+export const STANDARD_BUFFS: Buff[] = standardBuffArray;
 
 export type Url = string;
 export type Path = string;
@@ -46,7 +46,7 @@ export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
 const TERM_KEYS = ['~BURN~', '~SUCCESS~', '~FLINCH~', '~PARALYZE~', '~LEECH~', '~FATIGUE~',
-    '~PREVENT ESC~', '~STATUS~', '~SINGLE~', '~STUN~', '~RECOIL~'] as const;
+    '~STATUS~', '~SINGLE~', '~STUN~', '~RECOIL~'] as const;
 export type TermCode = typeof TERM_KEYS[number];
 export const TERM_CODES = [
     new Term('~BURN~', 'Burned monsters gain -1[ATK]. Burned [L] [R] [S] monsters gain -2[ATK] instead.'),
@@ -56,7 +56,6 @@ export const TERM_CODES = [
     new Term('~LEECH~', 'At the end of each turn, deal 1[ATK] to the leeched monster and your active monster heals '
      + '1[HP]. Stacks up to three. Remove on switch.'),
     new Term('~FATIGUE~', 'Fatigued monsters gain -1[DEF]. Fatigued [W] [E] [F] monsters can\'t use buff cards.'),
-    new Term('~PREVENT ESC~', 'Cannot be prevented with Can\'t Escape!'),
     new Term('~STATUS~', 'Paralyze, burn, leech, etc.'),
     new Term('~SINGLE~', 'Recharges on switch.'),
     new Term('~STUN~', 'Stunned monsters cannot switch.'),
