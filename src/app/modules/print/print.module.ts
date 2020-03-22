@@ -1,3 +1,4 @@
+import { StatCubeBoardComponent } from './stat-cube-board/stat-cube-board.component';
 import { PnpComponent } from './pnp/pnp.component';
 import { PrintRoutes } from './print.routing';
 import { PrintMonsterComponent } from './print-monster/print-monster.component';
@@ -26,10 +27,12 @@ import { ActionBoardComponent } from './action-board/action-board.component';
     PrintComponent,
     PrintMonsterComponent,
     PnpComponent,
-    ActionBoardComponent
+    ActionBoardComponent,
+    StatCubeBoardComponent
   ],
   exports: [
     ActionBoardComponent,
+    StatCubeBoardComponent
   ]
 })
 export class PrintModule { }

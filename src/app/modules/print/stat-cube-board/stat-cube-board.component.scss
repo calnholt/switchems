@@ -1,0 +1,62 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#stat-cube-board{
+    .card-container{
+        position: relative;
+        border: black 2px solid;
+        height: $card-height;
+        width: $card-width;
+        .table-container{
+            margin-top: 10px;
+            padding: 0px 10px 0px 10px;
+            .title{
+                font-size: 23px;
+                text-align: center;
+                font-family: $beastformer;
+                margin: 0px;
+            }
+            .line-container{
+                padding-left: 5px;
+                .name-line{
+                    border: .04cm solid black;
+                    width: 2.1cm;
+                    display: inline-block;
+                    margin: 0cm .2cm .1cm .2cm;
+                }
+                .dot{
+                    height: 10px;
+                    width: 10px;
+                    background-color: black;
+                    border-radius: 50%;
+                    display: inline-block;
+                }
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            table{
+                width: 100%;
+                tr{
+                    height: 89px;
+                    td:nth-child(1){
+                        background-color: #ffcdcd;
+                    }
+                    td:nth-child(2){
+                        background-color: #d6ffd6;
+                    }
+                    td{
+                        text-align: center;
+                        font-size: 50px;
+                        font-family: $helvetica;
+                        width: 50%;
+                        padding: 6px;
+                        img{
+                            max-height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
