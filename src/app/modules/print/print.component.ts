@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class PrintComponent implements OnInit {
   allMonsters = Array<MonsterComplete>();
+  extraCardFlg: boolean = false;
   isAllToggle: boolean = true;
   constructor(private router: Router) { }
 
@@ -36,7 +37,11 @@ export class PrintComponent implements OnInit {
   }
 
   print() {
-    localStorage.setItem('allMonsters', JSON.stringify({ token: this.allMonsters, name: 'PRINT' }));
+    let name = 'PRINT';
+    if (this.extraCardFlg) {
+      name = 'PRINT_EXTRA';
+    }
+    localStorage.setItem('allMonsters', JSON.stringify({ token: this.allMonsters, name: name }));
     this.router.navigate(['/pnp']);
   }
 

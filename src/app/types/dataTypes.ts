@@ -1,5 +1,6 @@
 import { TypeChart } from './../modules/data/data';
 import { Term, Image } from '../modules/data/data';
+import { Buff } from '../modules/monster/model/monster';
 
 export const ELEMENTS = ['Fire', 'Water', 'Rock', 'Leaf', 'Electric', 'Death'] as const;
 export type ElemType = typeof ELEMENTS[number];
@@ -13,6 +14,18 @@ export type BuffTiming = typeof BUFF_TIMINGS[number];
 const typeChart = new Array;
 ELEMENTS.forEach(e => typeChart.push(new TypeChart(e)));
 export const TYPE_CHART = typeChart;
+
+const cantEscape = new Buff();
+cantEscape.monsterName = 'Standard';
+cantEscape.timing = 'Pre-Switch';
+cantEscape.buffText = 'Prevent the targeted monster from switching this turn';
+cantEscape.critFlg = true;
+const cantEscape2 = new Buff();
+cantEscape2.monsterName = 'Standard';
+cantEscape2.timing = 'Pre-Switch';
+cantEscape2.buffText = 'Prevent the targeted monster from switching this turn';
+cantEscape2.critFlg = false;
+export const CANT_ESCAPE_CARDS: Buff[] = [cantEscape, cantEscape2];
 
 export type Url = string;
 export type Path = string;

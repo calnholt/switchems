@@ -3,6 +3,11 @@
     <div class="header">
       <h2>Select which cards you'd like to print:</h2>
       <mat-checkbox [(ngModel)]="isAllToggle" (change)="toggleAll(allMonsters)">Select All?</mat-checkbox>
+      <mat-checkbox 
+        [(ngModel)]="extraCardFlg"
+        matTooltip="Include standard buffs, action boards, and stat cube boards">
+        Non-Monster Cards? <mat-icon>info</mat-icon>
+      </mat-checkbox>
       <button 
         mat-stroked-button (click)="loadPrevious()">Load Last Print
       </button>
@@ -17,6 +22,5 @@
         [monster]="monster">
       </print-monster>
     </div>
-    <action-board></action-board>
   </div>
 </div>

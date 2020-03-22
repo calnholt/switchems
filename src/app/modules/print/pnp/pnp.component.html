@@ -16,7 +16,23 @@
           [buff]="card">
         </monster-buff>
       </span>
-      <div [ngClass]="{'break' : isPageBreak(i)}"></div>
+      <div [ngClass]="{'break' : isPageBreak()}"></div>
+    </span>
+    <span class="o-card" *ngIf="allCards.length && extraFlg">
+      <action-board></action-board>
+      <div [ngClass]="{'break' : isPageBreak()}"></div>
+    </span>
+    <span class="o-card" *ngIf="allCards.length && extraFlg">
+      <action-board></action-board>
+      <div [ngClass]="{'break' : isPageBreak()}"></div>
+    </span>
+    <span class="o-card" *ngIf="allCards.length && extraFlg">
+      <stat-cube-board></stat-cube-board>
+      <div [ngClass]="{'break' : isPageBreak()}"></div>
+    </span>
+    <span class="o-card" *ngIf="allCards.length && extraFlg">
+      <stat-cube-board></stat-cube-board>
+      <div [ngClass]="{'break' : isPageBreak()}"></div>
     </span>
   </div>
 </div>

@@ -1,4 +1,5 @@
-import { MonsterComplete } from './../../monster/model/monster';
+import { CANT_ESCAPE_CARDS } from './../../../types/dataTypes';
+import { MonsterComplete, Buff } from './../../monster/model/monster';
 import { ToolbarService } from './../../common/components/toolbar/toolbar.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,40 +10,55 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PnpComponent implements OnInit {
   CARDS_PER_PAGE: number = 8;
-  allCards: Array<any> = new Array();
+  allCards: Array<any>;
   allMonsters: MonsterComplete[];
+  extraFlg: boolean = false;
+  cantEscape: Buff[] = CANT_ESCAPE_CARDS;
   count: number;
 
-  constructor(private toolbarService: ToolbarService) { }
+  constructor(private toolbarService: ToolbarService) {
+
+  }
 
   ngOnInit() {
     this.toolbarService.hide();
     this.count = 0;
     const cache = JSON.parse(localStorage.getItem('allMonsters'));
+    this.extraFlg = (cache.name === 'PRINT_EXTRA');
     this.allMonsters = cache.token;
+    const allCards = [];
     this.allMonsters.forEach(m => {
       if (m.isSelected) {
         m['isMonster'] = true;
-        this.allCards.push(m);
+        allCards.push(m);
       }
       m.actions.forEach(a => {
         if (a.isSelected) {
           a['isAction'] = true;
           a.monsterName = m.monsterName;
-          this.allCards.push(a);
+          allCards.push(a);
         }
       });
       m.buffs.forEach(b => {
         if (b.isSelected) {
           b['isBuff'] = true;
           b.monsterName = m.monsterName;
-          this.allCards.push(b);
+          allCards.push(b);
         }
       });
     });
+    if (this.extraFlg) {
+      this.cantEscape.forEach(b => {
+        b['isBuff'] = true;
+        allCards.push(b);
+        allCards.push(b);
+      });
+    }
+    this.allCards = allCards;
+    this.count = 0;
   }
 
-  isPageBreak(index) {
+  isPageBreak() {
     this.count++;
     if ([5, 6, 7, 8].includes(this.count)) {
       if (this.count === 8) {
