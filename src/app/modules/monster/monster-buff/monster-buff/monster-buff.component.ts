@@ -10,7 +10,6 @@ import { MonsterComplete, Buff } from '../../model/monster';
   styleUrls: ['./monster-buff.component.scss']
 })
 export class MonsterBuffComponent implements OnInit {
-  @Input() monster: MonsterComplete;
   @Input() buff: Buff;
   buffTextHtml: string;
 
@@ -44,6 +43,9 @@ export class MonsterBuffComponent implements OnInit {
   }
 
   getAbilityText(text: string, isFlipText: boolean): string {
+    if (!text) {
+      return '';
+    }
     if (isFlipText) {
       text = `!: ${text}`;
     }

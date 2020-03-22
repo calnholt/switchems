@@ -8,13 +8,11 @@
       </span>
       <span class="o-card" *ngIf="card.isAction">
         <monster-action
-          [monster]="card"
           [action]="card">
         </monster-action>
       </span>
       <span class="o-card" *ngIf="card.isBuff">
         <monster-buff
-          [monster]="card"
           [buff]="card">
         </monster-buff>
       </span>

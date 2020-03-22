@@ -6,8 +6,8 @@
         .card-wrapper{
             position: relative;
             border: black 2px solid;
-            height: 8.8cm;
-            width: 6.3cm;
+            height: $card-height;
+            width: $card-width;
             .buff-background{
                 position: absolute;
                 max-height: 172px;

@@ -57,6 +57,7 @@ export const loadMonsters = (): Array<MonsterComplete> => {
         for (let i = 0; i < ACTIONS; i++) {
             const action = new Action();
             ACTION_PROPERTIES.forEach(p => action[p] = json.actions[i][p]);
+            action.monsterName = monster.monsterName;
             action.element = getElemType(json.actions[i].element);
             action.modifiers = json.actions[i].modifiers ? json.actions[i].modifiers : action.modifiers;
             monster.actions.push(action);
@@ -67,6 +68,7 @@ export const loadMonsters = (): Array<MonsterComplete> => {
         for (let i = 0; i < BUFFS; i++) {
             const buff = new Buff();
             BUFF_PROPERTIES.forEach(p => buff[p] = json.buffs[i][p]);
+            buff.monsterName = monster.monsterName;
             monster.buffs.push(buff);
         }
         console.log(monster);

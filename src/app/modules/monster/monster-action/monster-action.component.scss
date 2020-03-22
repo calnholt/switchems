@@ -6,8 +6,8 @@
         .card-wrapper{
             position: relative;
             border: black 2px solid;
-            height: 8.8cm;
-            width: 6.3cm;
+            height: $card-height;
+            width: $card-width;
             .elements-container{
                 display: grid;
                 grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
@@ -16,7 +16,6 @@
                 .modifier{
                     font-family: $beastformer;
                     font-size: 27px;
-                    // MAKE CONSTANTS
                     &.blank{
                         color: white;
                     }

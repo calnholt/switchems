@@ -1,17 +1,19 @@
-<div *ngIf="toolbarService.visible" class="padding">
-  <mat-toolbar color="primary">
-    <div class="button-container">
-      <span [routerLink]="['']" class="logo">OverRealm</span>
-      <span [routerLink]="['/monster', 'builder']" class="button">Create New Monster</span>
-      <span [routerLink]="['/print']" class="button">Print & Play</span>
-      <dropdown
-        class="dropdown"
-        [label]="'Search Monsters'"
-        [model]="monster"
-        [options]="monsters"
-        [property]="'monsterName'"
-        (selectionChange)="goToMonster()">
-      </dropdown>
-    </div>
-  </mat-toolbar>
+<div id="toolbar">
+  <div *ngIf="toolbarService.visible" class="padding">
+    <mat-toolbar color="primary">
+      <div class="button-container">
+        <span [routerLink]="['']" class="logo">OverRealm</span>
+        <span [routerLink]="['/monster', 'builder']" class="button">Create New Monster</span>
+        <span [routerLink]="['/print']" class="button">Print & Play</span>
+        <dropdown
+          class="dropdown"
+          [label]="'Search Monsters'"
+          [model]="monster"
+          [options]="monsters"
+          [property]="'monsterName'"
+          (selectionChange)="goToMonster()">
+        </dropdown>
+      </div>
+    </mat-toolbar>
+  </div>
 </div>

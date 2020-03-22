@@ -12,7 +12,6 @@
             <div *ngFor="let action of monster.actions">
               <div [hidden]="!action.isHovered">
                 <monster-action
-                  [monster]="monster"
                   [action]="action">
                 </monster-action>
               </div>
@@ -20,7 +19,6 @@
             <div *ngFor="let buff of monster.buffs">
               <div [hidden]="!buff.isHovered">
                 <monster-buff
-                  [monster]="monster"
                   [buff]="buff">
                 </monster-buff>
               </div>

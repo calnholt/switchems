@@ -31,7 +31,7 @@ export class Buff extends Card {
     monsterName?: string;
     timing: BuffTiming = null;
     buffText: string = null;
-    flipEventText?: string;
+    flipEventText?: string = null;
     critFlg: boolean = false;
     flipEventFlg: boolean = false;
 }

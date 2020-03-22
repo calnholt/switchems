@@ -23,7 +23,6 @@
         <div class="card" (click)="action.isSelected = !action.isSelected">
           <div class="wrapper" [ngClass]="{unselected: !action.isSelected}">
             <monster-action
-              [monster]="monster"
               [action]="action">
             </monster-action>
           </div>
@@ -33,7 +32,6 @@
         <div class="card" (click)="buff.isSelected = !buff.isSelected">
           <div class="wrapper" [ngClass]="{unselected: !buff.isSelected}">
             <monster-buff
-              [monster]="monster"
               [buff]="buff">
             </monster-buff>
           </div>

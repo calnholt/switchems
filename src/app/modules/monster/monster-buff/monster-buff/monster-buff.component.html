@@ -16,7 +16,7 @@
         <img *ngIf="buff.critFlg" class="crit-icon" src="{{getSuccessImagePath()}}">
         <img *ngIf="!buff.critFlg" class="crit-icon" src="{{getFailImagePath()}}">
         <span *ngIf="buff.flipEventFlg" class="flip-icon">!</span>
-        <span class="monster-name">{{monster.monsterName || buff.monsterName}}</span>
+        <span class="monster-name">{{buff.monsterName}}</span>
       </div>
     </div>
   </div>

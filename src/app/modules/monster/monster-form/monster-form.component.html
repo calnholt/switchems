@@ -52,12 +52,10 @@
           </monster-card>
           <monster-action 
             *ngIf="selectedCard === 'ACTION'" 
-            [monster]="monster" 
             [action]="monster.actions[index]">
           </monster-action>
           <monster-buff
             *ngIf="selectedCard === 'BUFF'"
-            [monster]="monster"
             [buff]="monster.buffs[index]">
           </monster-buff>
           <div class="hover-icons-container">

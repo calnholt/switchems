@@ -12,7 +12,6 @@ import { getAbilityText } from './../../common/cards';
   encapsulation: ViewEncapsulation.None,
 })
 export class MonsterActionComponent implements OnInit {
-  @Input() monster: MonsterComplete;
   @Input() action: Action;
   actionTextHtml: string;
   // need to get reversed array to line up with monster
