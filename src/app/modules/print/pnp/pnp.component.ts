@@ -62,7 +62,7 @@ export class PnpComponent implements OnInit {
     this.count = 0;
   }
 
-  isPageBreak(card: Monster) {
+  isPageBreak() {
     this.count++;
     if ([5, 6, 7, 8].includes(this.count)) {
       if (this.count === 8) {
