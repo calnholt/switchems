@@ -71,7 +71,7 @@ export const IMAGE_CODES = [
     new Image('[ATK]', SYMBOLS_PATH + 'attack.png'),
     new Image('[+]', SYMBOLS_PATH + 'draw.png'),
     new Image('[B]', SYMBOLS_PATH + 'buff.png'),
-    new Image('[-]', SYMBOLS_PATH + 'pay.png'),
+    new Image('[-]', SYMBOLS_PATH + 'discard.png'),
     new Image('[1]', SYMBOLS_PATH + '1.png'),
     new Image('[2]', SYMBOLS_PATH + '2.png'),
     new Image('[3]', SYMBOLS_PATH + '3.png'),

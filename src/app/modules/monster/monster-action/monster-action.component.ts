@@ -60,7 +60,7 @@ export class MonsterActionComponent implements OnInit {
 
   getImagePathFromImageCode(code: ImageCode): Path {
     if (code === '[B]') {return this.getImagePath('buff'); }
-    if (code === '[-]') {return this.getImagePath('pay'); }
+    if (code === '[-]') {return this.getImagePath('discard'); }
     if (code === '[+]') {return this.getImagePath('draw'); }
   }
 
