@@ -1,0 +1,87 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#monster-reference{
+    --container-padding: 4px 5px 0px 5px;
+    --font-size: 9px;
+    --icon-max-height: 10px;
+    .card-container{
+        position: relative;
+        border: black 2px solid;
+        height: $card-height;
+        width: $card-width;
+        .top-container{
+            display: flex;
+            padding: var(--container-padding);
+            justify-content: space-between;
+            .name{
+                font-family: 'Beastformer';
+                font-size: 13px;
+                letter-spacing: 0.02em;
+            }
+            .elements{
+                display: flex;
+                .element{
+                    .element-icon{
+                        max-height: 11px;
+                        padding-right: 3px;
+                    }
+                }
+            }
+            img{
+                max-height: 11px;
+                padding-right: 3px;
+            }
+        }
+        .ability-text-container{
+            padding: var(--container-padding);
+            .ability-text{
+                font-size: var(--font-size);
+                line-height: 1;
+            }
+        }
+        .action-container{
+            padding: var(--container-padding);
+            .action{
+                border: 1px black solid;
+                border-radius: 6px;
+                padding: 2px;
+                .action-text{
+                    font-size: var(--font-size);
+                    line-height: 1;
+                }
+                .ref-icon{
+                    max-height: var(--icon-max-height);
+                }
+                span{
+                    .ref-icon{
+                        max-height: var(--icon-max-height);
+                    }
+                }
+                .cards{
+                    .crd{
+                        padding-right: 3px;
+                        max-height: var(--icon-max-height);
+                    }
+                }
+
+            }
+        }
+        .buff-container{
+            padding: var(--container-padding);
+            .buff{
+                border: 1px black solid;
+                border-radius: 6px;
+                padding: 2px;
+                font-size: var(--font-size);
+                line-height: 1;
+            }
+        }
+    }
+    .ref-img{
+        max-height: var(--icon-max-height);
+    }
+    .term-img{
+        max-height: 8px;
+    }
+}

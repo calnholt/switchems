@@ -1,5 +1,5 @@
 import { STANDARD_BUFFS } from './../../../types/dataTypes';
-import { MonsterComplete, Buff } from './../../monster/model/monster';
+import { MonsterComplete, Buff, Monster } from './../../monster/model/monster';
 import { ToolbarService } from './../../common/components/toolbar/toolbar.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -30,6 +30,11 @@ export class PnpComponent implements OnInit {
       if (m.isSelected) {
         m['isMonster'] = true;
         allCards.push(m);
+          if (m.referenceFlg) {
+            const ref: Monster = Object.assign({}, m);
+            ref.referenceFlg = false;
+            allCards.push(ref);
+          }
       }
       m.actions.forEach(a => {
         if (a.isSelected) {
@@ -57,7 +62,7 @@ export class PnpComponent implements OnInit {
     this.count = 0;
   }
 
-  isPageBreak() {
+  isPageBreak(card: Monster) {
     this.count++;
     if ([5, 6, 7, 8].includes(this.count)) {
       if (this.count === 8) {

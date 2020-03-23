@@ -1,3 +1,4 @@
+import { MonsterReferenceComponent } from './monster-reference/monster-reference.component';
 import { BuffFiltersComponent } from './buff-filters/buff-filters.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -30,11 +31,13 @@ import { CommonModule } from '@angular/common';
     MonsterCardFiltersComponent,
     ActionFiltersComponent,
     BuffFiltersComponent,
+    MonsterReferenceComponent,
   ],
   exports: [
     MonsterActionComponent,
     MonsterBuffComponent,
     MonsterCardComponent,
+    MonsterReferenceComponent,
   ]
 })
 export class MonsterModule { }

@@ -38,6 +38,8 @@ export const ICON_PATH: Path = './assets/images';
 export const SYMBOLS_PATH: Path = ICON_PATH + '/symbols/';
 export const ELEMENT_PATH_COLOR: Path = ICON_PATH + '/elements/color/';
 export const ELEMENT_PATH_GRAY: Path = ICON_PATH + '/elements/gray/';
+export const HP_PATH: Path = SYMBOLS_PATH + '/hp/';
+export const ROLE_PATH: Path = ICON_PATH + '/roles/';
 
 export const MODIFIER_OPTIONS_POS = [0, 1, 2, 3, 4, 5];
 export const MODIFIER_OPTIONS_NEG = [0, -1, -2, -3, -4, -5, 'X'];
@@ -89,3 +91,4 @@ export const IMAGE_CODES = [
     new Image('[REAC]', SYMBOLS_PATH + 'reaction.png'),
     new Image('[HP]', SYMBOLS_PATH + 'heart.png'),
 ] as const;
+

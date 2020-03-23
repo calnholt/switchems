@@ -20,6 +20,7 @@ export class Monster extends Card {
     abilityText?: string;
     hp: number;
     role: Role;
+    referenceFlg?: boolean = true;
 }
 
 export class MonsterComplete extends Monster {

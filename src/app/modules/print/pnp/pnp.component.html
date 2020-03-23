@@ -1,36 +1,41 @@
 <div id="pnp">
   <div class="all-cards">
     <span *ngFor="let card of allCards; index as i">
-      <span class="o-card" *ngIf="card.isMonster">
+      <span *ngIf="card.isMonster && !card.referenceFlg">
         <monster-card
           [monster]="card">
         </monster-card>
       </span>
-      <span class="o-card" *ngIf="card.isAction">
+      <span *ngIf="card.isMonster && card.referenceFlg">
+        <monster-reference
+          [monster]="card">
+        </monster-reference>
+      </span>
+      <span *ngIf="card.isAction">
         <monster-action
           [action]="card">
         </monster-action>
       </span>
-      <span class="o-card" *ngIf="card.isBuff">
+      <span *ngIf="card.isBuff">
         <monster-buff
           [buff]="card">
         </monster-buff>
       </span>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
     </span>
-    <span class="o-card" *ngIf="allCards.length && extraFlg">
+    <span *ngIf="allCards.length && extraFlg">
       <action-board></action-board>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
     </span>
-    <span class="o-card" *ngIf="allCards.length && extraFlg">
+    <span *ngIf="allCards.length && extraFlg">
       <action-board></action-board>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
     </span>
-    <span class="o-card" *ngIf="allCards.length && extraFlg">
+    <span *ngIf="allCards.length && extraFlg">
       <stat-cube-board></stat-cube-board>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
     </span>
-    <span class="o-card" *ngIf="allCards.length && extraFlg">
+    <span *ngIf="allCards.length && extraFlg">
       <stat-cube-board></stat-cube-board>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
     </span>

@@ -1,0 +1,57 @@
+<div id="monster-reference">
+  <div class="card-container">
+    <div class="top-container">
+      <div class="name">{{monster.monsterName}}</div>
+      <div class="elements">
+        <div *ngFor="let element of ELEMENT_LIST" class="element">
+          <img *ngIf="monsterService.hasElement(monster, element)" class="element-icon"
+            src="{{imageService.getElementImg(element)}}">
+          <img *ngIf="!monsterService.hasElement(monster, element)" class="element-icon"
+            src="{{imageService.getGrayImg(element)}}">
+        </div>
+      </div>
+      <div>
+        <img src="{{imageService.getRoleImg(monster.role)}}">
+        <img src="{{imageService.getHpImg(monster.hp)}}">
+      </div>
+    </div>
+    <div class="ability-text-container">
+      <div [innerHTML]="getAbilityText(monster.abilityText)" class="ability-text"></div>
+    </div>
+    <div class="action-container">
+      <div class="action" *ngFor="let action of monster.actions">
+        <div [innerHTML]="getAbilityText(action.abilityText)" class="action-text"></div>
+        <span *ngIf="action.attack">{{action.attack}}
+          <img class="ref-icon" src="{{imageService.getImg('attack')}}"> |
+        </span>
+        <img *ngIf="action.element && !action.auraDuration" class="ref-icon"
+          src="{{imageService.getElementImg(action.element)}}">
+        <span *ngIf="action.auraDuration">
+          <span>{{action.auraDuration}}</span>
+          <img class="ref-icon" src="{{imageService.getImg('aura')}}">
+        </span>
+        <span *ngIf="action.statusFlg">
+          <img class="ref-icon" src="{{imageService.getImg('status')}}">
+        </span>
+        <span *ngIf="action.reactionFlg">
+          <img class="ref-icon" src="{{imageService.getImg('reaction')}}">
+        </span>
+        <span *ngIf="action.speed">
+          <span> | {{action.speed}}</span>
+          <img class="ref-icon" src="{{imageService.getImg('speed')}}"> |
+        </span>
+        <span class="cards" *ngFor="let image of monsterService.getCardIcons(action)">
+          <img class="crd" src="{{imageService.getImg(image)}}">
+        </span>
+      </div>
+    </div>
+    <div class="buff-container">
+      <div class= "buff" *ngFor="let buff of monster.buffs">  
+        <span>
+          <span class="timing">{{monsterService.getTimingRomanNumeral(buff)}}: </span>
+          <span class="text" [innerHTML]="getAbilityText(buff.buffText)"></span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
