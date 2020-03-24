@@ -32,11 +32,11 @@ export class DownloadComponent implements OnInit {
         allCards.push(b);
       });
     });
-    // STANDARD_BUFFS.forEach(b => {
-    //   b['isBuff'] = true;
-    //     allCards.push(b);
-    //     allCards.push(b);
-    // });
+    STANDARD_BUFFS.forEach(b => {
+      b['isBuff'] = true;
+        allCards.push(b);
+        allCards.push(b);
+    });
     this.allCards = allCards;
     this.currentCard = this.allCards[0];
     this.count = 0;
@@ -44,7 +44,7 @@ export class DownloadComponent implements OnInit {
   }
 
   // function called by timeout
-  // renders each card individually and saves each as a .png file
+  // recursively renders each card individually and saves each as a .png file
   // workes best on Safari due to styling issues
   // when rendering more than one on the screen, the downloads looked weird
   // this was my best hacky-ish solution :)
