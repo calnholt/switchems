@@ -1,0 +1,21 @@
+<div id="download">
+  <div>
+    <span>
+      <span *ngIf="currentCard.isMonster">
+        <monster-card
+          [monster]="currentCard">
+        </monster-card>
+      </span>
+      <span *ngIf="currentCard.isAction">
+        <monster-action
+          [action]="currentCard">
+        </monster-action>
+      </span>
+      <span *ngIf="currentCard.isBuff">
+        <monster-buff
+          [buff]="currentCard">
+        </monster-buff>
+      </span>
+    </span>
+  </div>
+</div>

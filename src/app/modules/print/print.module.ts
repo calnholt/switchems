@@ -1,3 +1,4 @@
+import { DownloadComponent } from './download/download.component';
 import { StatCubeBoardComponent } from './stat-cube-board/stat-cube-board.component';
 import { PnpComponent } from './pnp/pnp.component';
 import { PrintRoutes } from './print.routing';
@@ -28,7 +29,8 @@ import { ActionBoardComponent } from './action-board/action-board.component';
     PrintMonsterComponent,
     PnpComponent,
     ActionBoardComponent,
-    StatCubeBoardComponent
+    StatCubeBoardComponent,
+    DownloadComponent
   ],
   exports: [
     ActionBoardComponent,
