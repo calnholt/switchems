@@ -1,3 +1,4 @@
+import { Action } from 'src/app/modules/monster/model/monster';
 import { STANDARD_BUFFS } from './../../../types/dataTypes';
 import { MonsterComplete, Buff, Monster } from './../../monster/model/monster';
 import { ToolbarService } from './../../common/components/toolbar/toolbar.service';
@@ -10,8 +11,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PnpComponent implements OnInit {
   CARDS_PER_PAGE: number = 8;
-  allCards: Array<any>;
-  allMonsters: MonsterComplete[];
+  allCards: (MonsterComplete | Action | Buff)[];
   extraFlg: boolean = false;
   count: number;
 
@@ -24,9 +24,9 @@ export class PnpComponent implements OnInit {
     this.count = 0;
     const cache = JSON.parse(localStorage.getItem('allMonsters'));
     this.extraFlg = (cache.name === 'PRINT_EXTRA');
-    this.allMonsters = cache.token;
+    const allMonsters = cache.token;
     const allCards = [];
-    this.allMonsters.forEach(m => {
+    allMonsters.forEach(m => {
       if (m.isSelected) {
         m['isMonster'] = true;
         allCards.push(m);
@@ -39,14 +39,12 @@ export class PnpComponent implements OnInit {
       m.actions.forEach(a => {
         if (a.isSelected) {
           a['isAction'] = true;
-          a.monsterName = m.monsterName;
           allCards.push(a);
         }
       });
       m.buffs.forEach(b => {
         if (b.isSelected) {
           b['isBuff'] = true;
-          b.monsterName = m.monsterName;
           allCards.push(b);
         }
       });
