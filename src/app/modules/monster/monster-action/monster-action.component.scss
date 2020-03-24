@@ -3,142 +3,140 @@
 
 #action-card{
     .card-container{
-        .card-wrapper{
-            position: relative;
-            border: black 2px solid;
-            height: $card-height;
-            width: $card-width;
-            .elements-container{
+        position: relative;
+        border: black 2px solid;
+        height: $card-height;
+        width: $card-width;
+        .elements-container{
+            display: grid;
+            grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+            justify-items: center;
+            padding-top: 3px;
+            .modifier{
+                font-family: $beastformer;
+                font-size: 27px;
+                &.blank{
+                    color: white;
+                }
+                &.fire-color{
+                    color: $red;
+                }
+                &.water-color{
+                    color: $blue;
+                }
+                &.leaf-color{
+                    color: $green;
+                }
+                &.rock-color{
+                    color: $brown;
+                }
+                &.death-color{
+                    color: $purple;
+                }
+                &.electric-color{
+                    color: $yellow;
+                }
+            }
+            .elements{
                 display: grid;
-                grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+                grid-template-rows: auto;
                 justify-items: center;
-                padding-top: 3px;
-                .modifier{
-                    font-family: $beastformer;
-                    font-size: 27px;
-                    &.blank{
-                        color: white;
-                    }
-                    &.fire-color{
-                        color: $red;
-                    }
-                    &.water-color{
-                        color: $blue;
-                    }
-                    &.leaf-color{
-                        color: $green;
-                    }
-                    &.rock-color{
-                        color: $brown;
-                    }
-                    &.death-color{
-                        color: $purple;
-                    }
-                    &.electric-color{
-                        color: $yellow;
-                    }
-                }
-                .elements{
-                    display: grid;
-                    grid-template-rows: auto;
-                    justify-items: center;
-                    .element{
-                        max-height: 20px;
-                    }
+                .element{
+                    max-height: 20px;
                 }
             }
-            .ability-container{
-                .ability-name-container{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: black;
-                    margin: auto;
-                    width: 88%;
-                    height: 11%;
-                    border-radius: 10px 10px 0px 0px;
-                    margin-top: 0.2cm;
-                    padding-top: 3px;
-                    .ability-name{
-                        margin: auto;
-                        font-family: $beastformer;
-                        color: white;
-                        font-size: 22px;
-                        padding-bottom: 6px;
-                        letter-spacing: 0.05em;
-                        &.name-offset{
-                            position: relative;
-                            top: 1px;
-                        }
-                    }
-                }
-                .ability-text-container{
-                    position: relative;
-                    top: -5px;
-                    display: flex;
-                    background-color: hsl(0, 0%, 94%);
-                    border: 2px black solid;
-                    margin: auto;
-                    width: 90%;
-                    height:auto;
-                    border-radius: 10px;
-                    .ability-text{
-                        font-family: $helvetica;
-                        font-size: 12px;
-                        padding: 7px;
-                        line-height: 13px;
-                    }
-                }
-            }
-            .stats-container{
-                position: relative;
-                margin: auto;
-                display: grid;
-                justify-content: space-evenly;
-                align-content: center;
-                grid-template-columns: 33.333% 33.333% 33.333%;
-                height: 60px;
-                border-radius: 10px;
-                background-color: white;
-                border: 2px black solid;
-                z-index: -1;
-                top: -18px;
-                width: 88%;
-                padding-top: 4px;
-                margin-top: 5px;
-                &.text-offset{
-                    padding-top:11px;
-                }
-                .stat-container{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    .stat-value{
-                        font-family: $beastformer;
-                        font-size: 40px;
-                    }
-                    .stat-icon{
-                        max-height: 28px;
-                    }
-                }
-            }
-            .cards-container{
+        }
+        .ability-container{
+            .ability-name-container{
                 display: flex;
                 justify-content: center;
-                .card-icon{
-                    max-height: 30px;
-                    padding: 0px 3px 0px 3px;
+                align-items: center;
+                background-color: black;
+                margin: auto;
+                width: 88%;
+                height: 11%;
+                border-radius: 10px 10px 0px 0px;
+                margin-top: 0.2cm;
+                padding-top: 3px;
+                .ability-name{
+                    margin: auto;
+                    font-family: $beastformer;
+                    color: white;
+                    font-size: 22px;
+                    padding-bottom: 6px;
+                    letter-spacing: 0.05em;
+                    &.name-offset{
+                        position: relative;
+                        top: 1px;
+                    }
                 }
             }
-            .monster-name-container{
-                position: absolute;
-                bottom: 2px;
-                right: 5px;
-                .monster-name{
-                    font-family: $beastformer;
-                    font-size: 18px;
-                    letter-spacing: 0.02em;
+            .ability-text-container{
+                position: relative;
+                top: -5px;
+                display: flex;
+                background-color: hsl(0, 0%, 94%);
+                border: 2px black solid;
+                margin: auto;
+                width: 90%;
+                height:auto;
+                border-radius: 10px;
+                .ability-text{
+                    font-family: $helvetica;
+                    font-size: 12px;
+                    padding: 7px;
+                    line-height: 13px;
                 }
+            }
+        }
+        .stats-container{
+            position: relative;
+            margin: auto;
+            display: grid;
+            justify-content: space-evenly;
+            align-content: center;
+            grid-template-columns: 33.333% 33.333% 33.333%;
+            height: 60px;
+            border-radius: 10px;
+            background-color: white;
+            border: 2px black solid;
+            z-index: -1;
+            top: -18px;
+            width: 88%;
+            padding-top: 4px;
+            margin-top: 5px;
+            &.text-offset{
+                padding-top:11px;
+            }
+            .stat-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .stat-value{
+                    font-family: $beastformer;
+                    font-size: 40px;
+                }
+                .stat-icon{
+                    max-height: 28px;
+                }
+            }
+        }
+        .cards-container{
+            display: flex;
+            justify-content: center;
+            .card-icon{
+                max-height: 30px;
+                padding: 0px 3px 0px 3px;
+            }
+        }
+        .monster-name-container{
+            position: absolute;
+            bottom: 2px;
+            right: 5px;
+            .monster-name{
+                font-family: $beastformer;
+                font-size: 18px;
+                letter-spacing: 0.02em;
             }
         }
     }

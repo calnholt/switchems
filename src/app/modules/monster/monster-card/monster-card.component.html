@@ -1,40 +1,38 @@
 <div id="monster-card">
   <div class="card-container">
-    <div class="monster-container">
-      <div class="elements-container">
-        <div *ngFor="let effectiveness of getEffectivenessArray(monster)">
-          <span class="effectiveness">{{effectiveness}}</span>
-        </div>
+    <div class="elements-container">
+      <div *ngFor="let effectiveness of getEffectivenessArray(monster)">
+        <span class="effectiveness">{{effectiveness}}</span>
       </div>
-      <div class="elements-container">
-        <div *ngFor="let element of ELEMENT_LIST" class="elements">
-          <img *ngIf="hasElement(element)" class="element-icon" src="{{getElementColorImg(element)}}">
-          <img *ngIf="!hasElement(element)" class="element-icon" src="{{getElementGrayImg(element)}}">
-        </div>
+    </div>
+    <div class="elements-container">
+      <div *ngFor="let element of ELEMENT_LIST" class="elements">
+        <img *ngIf="hasElement(element)" class="element-icon" src="{{getElementColorImg(element)}}">
+        <img *ngIf="!hasElement(element)" class="element-icon" src="{{getElementGrayImg(element)}}">
       </div>
-      <div class="name">{{monster.monsterName}}</div>
-      <div class="line-container">
-        <hr align="left" class="name-line left">
-        <span class="dot"></span>
-        <hr align="right" class="name-line right">
+    </div>
+    <div class="name">{{monster.monsterName}}</div>
+    <div class="line-container">
+      <hr align="left" class="name-line left">
+      <span class="dot"></span>
+      <hr align="right" class="name-line right">
+    </div>
+    <div class="ability-container">
+      <div class="ability-name-container">
+        <span class="ability-name">{{monster.abilityName}}</span>
       </div>
-      <div class="ability-container">
-        <div class="ability-name-container">
-          <span class="ability-name">{{monster.abilityName}}</span>
-        </div>
-        <div class="ability-text-container">
-          <span [innerHTML]="getAbilityText()" class="ability-text"></span>
-        </div>
+      <div class="ability-text-container">
+        <span [innerHTML]="getAbilityText()" class="ability-text"></span>
       </div>
-      <div class="bottom-container">
-        <span class="role-container">
-          <img class="img" src="{{getRoleIcon()}}">
-          <span class="name">{{this.monster.role}}</span>
-        </span>
-        <span class="heart-container">
-          <img class="hp" src="{{getHpIcon()}}">
-        </span>
-      </div>
+    </div>
+    <div class="bottom-container">
+      <span class="role-container">
+        <img class="img" src="{{getRoleIcon()}}">
+        <span class="name">{{this.monster.role}}</span>
+      </span>
+      <span class="heart-container">
+        <img class="hp" src="{{getHpIcon()}}">
+      </span>
     </div>
   </div>
 </div>
