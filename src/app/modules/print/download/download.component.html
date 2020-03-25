@@ -16,6 +16,12 @@
           [buff]="currentCard">
         </monster-buff>
       </span>
+      <span *ngIf="boardCount === 1">
+        <action-board></action-board>
+      </span>
+      <span *ngIf="boardCount === 2">
+        <stat-cube-board></stat-cube-board>
+      </span>
     </span>
   </div>
 </div>

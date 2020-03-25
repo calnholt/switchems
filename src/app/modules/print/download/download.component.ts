@@ -13,12 +13,14 @@ export class DownloadComponent implements OnInit {
   allCards: (MonsterComplete | Action | Buff)[];
   currentCard: MonsterComplete | Action | Buff;
   count: number;
+  actionBoard: number = 1;
+  statCubeBoard: number = 1;
+  boardCount: number = 0;
   timeout: number = 1500;
   constructor() { }
 
   ngOnInit() {
     let allMonsters = loadMonsters();
-    allMonsters = [allMonsters[0]];
     const allCards = [];
     allMonsters.forEach(m => {
       m['isMonster'] = true;
@@ -55,16 +57,27 @@ export class DownloadComponent implements OnInit {
     html2canvas(document.querySelector('.card-container')).then(canvas => {
       const a = document.createElement('a');
       let fileName: string = this.currentCard.monsterName;
-      if (this.currentCard['isAction']) {
-        fileName += ' - ' + (this.currentCard as Action).abilityName;
-      } else if (this.currentCard['isBuff']) {
-        fileName += ' - Buff';
+      if (this.boardCount === 0) {
+        fileName = this.currentCard.monsterName;
+        if (this.currentCard['isAction']) {
+          fileName += ' - ' + (this.currentCard as Action).abilityName;
+        } else if (this.currentCard['isBuff']) {
+          fileName += ' - Buff';
+        }
+      } else if ([1].includes(this.boardCount)) {
+        fileName = 'Action Board';
+      } else if ([2].includes(this.boardCount)) {
+        fileName = 'Stat Cube Board';
       }
       a.setAttribute('download', `${fileName}.png`);
       a.setAttribute('href', canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream'));
       a.click();
-      if (this.count <= this.allCards.length) {
+      if (this.count < this.allCards.length) {
         this.currentCard = this.allCards[this.count++];
+        setTimeout((this.downloadCards).bind(this), this.timeout);
+      } else if (this.count <= this.allCards.length + this.statCubeBoard + this.actionBoard) {
+        this.currentCard = new MonsterComplete();
+        this.boardCount++;
         setTimeout((this.downloadCards).bind(this), this.timeout);
       }
     });
