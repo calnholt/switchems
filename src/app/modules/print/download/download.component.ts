@@ -1,3 +1,4 @@
+import { Monster } from './../../monster/model/monster';
 import { MonsterComplete, Buff, Action } from 'src/app/modules/monster/model/monster';
 import { loadMonsters } from 'src/app/modules/import/json-to-obj';
 import { Component, OnInit } from '@angular/core';
@@ -21,10 +22,14 @@ export class DownloadComponent implements OnInit {
 
   ngOnInit() {
     let allMonsters = loadMonsters();
+    // allMonsters = [allMonsters[5]]; // testing
     const allCards = [];
     allMonsters.forEach(m => {
       m['isMonster'] = true;
       allCards.push(m);
+      const ref = Object.assign({}, m);
+      ref.referenceFlg = false;
+      allCards.push(ref);
       m.actions.forEach(a => {
         a['isAction'] = true;
         allCards.push(a);
@@ -36,7 +41,6 @@ export class DownloadComponent implements OnInit {
     });
     STANDARD_BUFFS.forEach(b => {
       b['isBuff'] = true;
-        allCards.push(b);
         allCards.push(b);
     });
     this.allCards = allCards;
@@ -56,9 +60,27 @@ export class DownloadComponent implements OnInit {
     }
     html2canvas(document.querySelector('.card-container')).then(canvas => {
       const a = document.createElement('a');
-      let fileName: string = this.currentCard.monsterName;
+      a.setAttribute('download', `${this.getFileName()}.png`);
+      a.setAttribute('href', canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream'));
+      a.click();
+      if (this.count < this.allCards.length) {
+        this.currentCard = this.allCards[this.count++];
+        setTimeout((this.downloadCards).bind(this), this.timeout);
+      } else if (this.count < this.allCards.length + this.statCubeBoard + this.actionBoard) {
+        this.currentCard = new MonsterComplete();
+        this.boardCount++;
+        setTimeout((this.downloadCards).bind(this), this.timeout);
+      }
+    });
+  }
+
+  getFileName(): string {
+    let fileName: string = this.currentCard.monsterName;
       if (this.boardCount === 0) {
         fileName = this.currentCard.monsterName;
+        if (this.currentCard['isMonster'] && (this.currentCard as Monster).referenceFlg) {
+          fileName += ' - Reference';
+        }
         if (this.currentCard['isAction']) {
           fileName += ' - ' + (this.currentCard as Action).abilityName;
         } else if (this.currentCard['isBuff']) {
@@ -69,18 +91,7 @@ export class DownloadComponent implements OnInit {
       } else if ([2].includes(this.boardCount)) {
         fileName = 'Stat Cube Board';
       }
-      a.setAttribute('download', `${fileName}.png`);
-      a.setAttribute('href', canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream'));
-      a.click();
-      if (this.count < this.allCards.length) {
-        this.currentCard = this.allCards[this.count++];
-        setTimeout((this.downloadCards).bind(this), this.timeout);
-      } else if (this.count <= this.allCards.length + this.statCubeBoard + this.actionBoard) {
-        this.currentCard = new MonsterComplete();
-        this.boardCount++;
-        setTimeout((this.downloadCards).bind(this), this.timeout);
-      }
-    });
+    return fileName;
   }
 
 

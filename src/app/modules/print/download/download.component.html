@@ -1,10 +1,15 @@
 <div id="download">
   <div>
     <span>
-      <span *ngIf="currentCard.isMonster">
+      <span *ngIf="currentCard.isMonster && !currentCard.referenceFlg">
         <monster-card
           [monster]="currentCard">
         </monster-card>
+      </span>
+      <span *ngIf="currentCard.isMonster && currentCard.referenceFlg">
+        <monster-reference
+          [monster]="currentCard">
+        </monster-reference>
       </span>
       <span *ngIf="currentCard.isAction">
         <monster-action
