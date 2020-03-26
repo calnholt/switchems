@@ -4,15 +4,9 @@
   ],
   "actions": [
     {
-      "monsterName": null,
       "abilityName": "Thunderstorm",
       "abilityText": "This monster gains +2[SPD] cubes.",
-      "attack": 3,
-      "speed": 5,
       "element": "Electric",
-      "buff": 0,
-      "discard": 2,
-      "draw": 0,
       "modifiers": [
         3,
         0,
@@ -23,18 +17,17 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 3,
+      "speed": 5,
+      "draw": 0,
+      "discard": 2,
+      "buff": 0
     },
     {
-      "monsterName": null,
       "abilityName": "Ice Blast",
       "abilityText": "[1]: This attack gains flinch. ~FLINCH~",
-      "attack": 2,
-      "speed": 4,
       "element": "Water",
-      "buff": 2,
-      "discard": 0,
-      "draw": 0,
       "modifiers": [
         -1,
         -1,
@@ -45,18 +38,17 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 2,
+      "speed": 4,
+      "draw": 0,
+      "discard": 0,
+      "buff": 2
     },
     {
-      "monsterName": null,
       "abilityName": "Vortex",
       "abilityText": "This attack gains +2[ATK] if the targeted monster has a status condition. ~STATUS~",
-      "attack": 2,
-      "speed": 3,
       "element": "Electric",
-      "buff": 1,
-      "discard": 0,
-      "draw": 0,
       "modifiers": [
         2,
         0,
@@ -67,17 +59,17 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 2,
+      "speed": 3,
+      "draw": 0,
+      "discard": 0,
+      "buff": 1
     },
     {
-      "monsterName": null,
       "abilityName": "Paralyze",
       "abilityText": "[2]: The targeted monster gains a paralyze condition. ~PARALYZE~",
-      "speed": 7,
       "element": "Electric",
-      "buff": 0,
-      "discard": 0,
-      "draw": 1,
       "modifiers": [
         0,
         0,
@@ -88,30 +80,30 @@
       ],
       "auraDuration": 0,
       "statusFlg": true,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "speed": 7,
+      "draw": 1,
+      "discard": 0,
+      "buff": 0
     }
   ],
   "buffs": [
     {
-      "monsterName": null,
       "timing": "With Attack",
       "buffText": "[-] & [1]: The targeted monster gains a paralyze condition. ~PARALYZE~",
       "critFlg": true
     },
     {
-      "monsterName": null,
       "timing": "With Attack",
       "buffText": "[-] & [1]: The targeted monster gains a paralyze condition. ~PARALYZE~",
       "critFlg": false
     },
     {
-      "monsterName": null,
       "timing": "With Attack",
       "buffText": "This attack gains +3[ATK] if the targeted monster's action is faster than yours (does nothing if targeted monster switches).",
-      "critFlg": true
+      "critFlg": false
     },
     {
-      "monsterName": null,
       "timing": "With Attack",
       "buffText": "This attack gains +3[ATK] if the targeted monster's action is faster than yours (does nothing if targeted monster switches).",
       "critFlg": true

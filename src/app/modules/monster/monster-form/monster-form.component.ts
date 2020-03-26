@@ -64,12 +64,16 @@ export class MonsterFormComponent implements OnInit {
   // a little janky but for now it's fine
   getCleanMonster(): MonsterComplete {
     const copy = Object.assign({}, this.monster);
-    const guiProps = ['isSelected', 'isHighlighted', 'isHovered'];
+    const guiProps = ['isSelected', 'isHighlighted', 'isHovered', 'referenceFlg'];
+    const actionProps = ['monsterName'];
+    const buffProps = ['monsterName'];
     guiProps.forEach(prop => {
       delete copy[prop];
       copy.actions.forEach(a => delete a[prop]);
       copy.buffs.forEach(b => delete b[prop]);
     });
+    actionProps.forEach(prop => copy.actions.forEach(a => delete a[prop]));
+    buffProps.forEach(prop => copy.buffs.forEach(b => delete b[prop]));
     return copy;
   }
 
