@@ -4,15 +4,9 @@
   ],
   "actions": [
     {
-      "monsterName": null,
       "abilityName": "Switcheroo",
-      "abilityText": "[1]: This monster gains +1[SPD].<br><br>Perform a switch action (you still draw a card at the end of the turn).",
-      "attack": 1,
-      "speed": 8,
+      "abilityText": "[1]: This monster gains +1[SPD].<br><br>Perform a switch action <em>(you still draw a card at the end of the turn).</em>",
       "element": "Leaf",
-      "buff": 0,
-      "discard": 1,
-      "draw": 0,
       "modifiers": [
         -1,
         0,
@@ -23,18 +17,17 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 1,
+      "speed": 8,
+      "draw": 0,
+      "discard": 1,
+      "buff": 0
     },
     {
-      "monsterName": null,
       "abilityName": "Whirlwind",
       "abilityText": "This attack doesn't deal any damage if the targeted monster's attack is faster.",
-      "attack": 3,
-      "speed": 7,
       "element": "Leaf",
-      "buff": 1,
-      "discard": 1,
-      "draw": 0,
       "modifiers": [
         -3,
         0,
@@ -45,18 +38,17 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 3,
+      "speed": 7,
+      "draw": 0,
+      "discard": 1,
+      "buff": 1
     },
     {
-      "monsterName": null,
       "abilityName": "Cyclone",
       "abilityText": "[2]: This monster gains +1[SPD] stat cubes.",
-      "attack": 2,
-      "speed": 4,
       "element": "Leaf",
-      "buff": 2,
-      "discard": 0,
-      "draw": 0,
       "modifiers": [
         -2,
         0,
@@ -67,18 +59,17 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 2,
+      "speed": 4,
+      "draw": 0,
+      "discard": 0,
+      "buff": 2
     },
     {
-      "monsterName": null,
       "abilityName": "Rot",
       "abilityText": "If the targeted monster selected an attack action, this attack hits first.",
-      "attack": 2,
-      "speed": 2,
       "element": "Death",
-      "buff": 0,
-      "discard": 2,
-      "draw": 0,
       "modifiers": [
         0,
         -2,
@@ -89,30 +80,31 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 2,
+      "speed": 2,
+      "draw": 0,
+      "discard": 2,
+      "buff": 0
     }
   ],
   "buffs": [
     {
-      "monsterName": null,
       "timing": "Pre-Attack",
       "buffText": "This monster gains +1[ATK] stat cubes",
       "critFlg": true
     },
     {
-      "monsterName": null,
       "timing": "Pre-Attack",
       "buffText": "This monster gains +1[ATK] stat cubes",
       "critFlg": false
     },
     {
-      "monsterName": null,
       "timing": "Pre-Attack",
       "buffText": "This monster gains +1[DEF] stat cubes",
       "critFlg": true
     },
     {
-      "monsterName": null,
       "timing": "Pre-Attack",
       "buffText": "This monster gains +1[DEF] stat cubes",
       "critFlg": false
@@ -122,6 +114,6 @@
   "abilityName": "Gusting Winds",
   "monsterName": "Galeaffy",
   "role": "Support",
-  "abilityText": "When this monster switches, keep up to three stat buffs.",
+  "abilityText": "When this monster switches, you may keep up to three stat cubes on your stat cube board.",
   "hp": 10
 }
