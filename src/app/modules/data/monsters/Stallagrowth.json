@@ -5,14 +5,9 @@
   ],
   "actions": [
     {
-      "monsterName": null,
       "abilityName": "Leech Seed",
       "abilityText": "The targeted monster gains a <strong>leech</strong> condition. ~LEECH~",
-      "speed": 2,
       "element": "Leaf",
-      "buff": 0,
-      "discard": 2,
-      "draw": 0,
       "modifiers": [
         0,
         0,
@@ -23,17 +18,15 @@
       ],
       "auraDuration": null,
       "statusFlg": true,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "speed": 2,
+      "draw": 0,
+      "discard": 2,
+      "buff": 0
     },
     {
-      "monsterName": null,
       "abilityName": "Rock Smash",
-      "attack": 7,
-      "speed": 6,
       "element": "Rock",
-      "buff": 2,
-      "discard": 3,
-      "draw": 0,
       "modifiers": [
         -1,
         3,
@@ -44,18 +37,17 @@
       ],
       "auraDuration": null,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 7,
+      "speed": 6,
+      "draw": 0,
+      "discard": 3,
+      "buff": 2
     },
     {
-      "monsterName": null,
       "abilityName": "Vine Whip",
       "abilityText": "If the targeted monster is leeched, this attack gains +4[ATK] and removes a leech counter.",
-      "attack": 2,
-      "speed": 3,
       "element": "Leaf",
-      "buff": 1,
-      "discard": 0,
-      "draw": 0,
       "modifiers": [
         -1,
         0,
@@ -66,18 +58,17 @@
       ],
       "auraDuration": null,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 2,
+      "speed": 3,
+      "draw": 0,
+      "discard": 0,
+      "buff": 1
     },
     {
-      "monsterName": null,
       "abilityName": "Rock Slide",
       "abilityText": "If the targeted monster is leeched, this attack gains +4[ATK] and removes a leech counter.",
-      "attack": 2,
-      "speed": 4,
       "element": "Rock",
-      "buff": 0,
-      "discard": 1,
-      "draw": 1,
       "modifiers": [
         -1,
         2,
@@ -88,30 +79,31 @@
       ],
       "auraDuration": null,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 2,
+      "speed": 4,
+      "draw": 1,
+      "discard": 1,
+      "buff": 0
     }
   ],
   "buffs": [
     {
-      "monsterName": null,
       "timing": "Pre-Attack",
       "buffText": "This monster gains +1[DEF] stat cubes",
       "critFlg": false
     },
     {
-      "monsterName": null,
       "timing": "Pre-Attack",
       "buffText": "This monster gains +4[DEF] this turn",
       "critFlg": false
     },
     {
-      "monsterName": null,
       "timing": "With Attack",
       "buffText": "[2]: This attack gains <strong>flinch</strong>. ~FLINCH~",
       "critFlg": true
     },
     {
-      "monsterName": null,
       "timing": "With Attack",
       "buffText": "[2]: This attack gains <strong>flinch</strong>. ~FLINCH~",
       "critFlg": true
@@ -121,6 +113,6 @@
   "abilityName": "Thorned Body",
   "monsterName": "Stallagrowth",
   "role": "Tank",
-  "abilityText": "Whenever this monster is dealt damage by a [F] [R] attack, that monster is dealt 2[ATK].",
+  "abilityText": "Whenever this monster is dealt damage by a [F] [R] attack, that monster is dealt 2[ATK]. This damage cannot be prevented.",
   "hp": 14
 }
