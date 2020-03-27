@@ -1,111 +1,119 @@
 {
-    "elements": [
-      "Fire",
-      "Water"
-    ],
-    "actions": [
-      {
-        "abilityName": "Chilly Mists",
-        "abilityText": "Your opponent's [W] [E] [F] attacks deal -1[ATK].",
-        "element": "Water",
-        "modifiers": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "auraDuration": 8,
-        "statusFlg": false,
-        "reactionFlg": false,
-        "speed": 5,
-        "draw": 1
-      },
-      {
-        "abilityName": "Sizzling Mists",
-        "abilityText": "Your opponent's [L] [R] [S] attacks deal -1[ATK].",
-        "element": "Fire",
-        "modifiers": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "auraDuration": 8,
-        "statusFlg": false,
-        "reactionFlg": false,
-        "speed": 5,
-        "draw": 1
-      },
-      {
-        "abilityName": "Torrential Blessing",
-        "abilityText": "Put a wish counter on one of your other monsters.",
-        "element": "Water",
-        "modifiers": [
-          0,
-          -1,
-          2,
-          2,
-          -1,
-          0
-        ],
-        "auraDuration": 0,
-        "statusFlg": false,
-        "reactionFlg": false,
-        "attack": 3,
-        "speed": 3,
-        "discard": 1,
-        "buff": 1
-      },
-      {
-        "abilityName": "Fierce Blessing",
-        "abilityText": "Put a wish counter on one of your other monsters.",
-        "element": "Fire",
-        "modifiers": [
-          0,
-          2,
-          2,
-          -1,
-          -1,
-          0
-        ],
-        "auraDuration": 0,
-        "statusFlg": false,
-        "reactionFlg": false,
-        "attack": 3,
-        "speed": 3,
-        "discard": 1,
-        "buff": 1
-      }
-    ],
-    "buffs": [
-      {
-        "timing": "With Attack",
-        "buffText": "This attack gains +1[ATK]",
-        "critFlg": true
-      },
-      {
-        "timing": "With Attack",
-        "buffText": "This attack gains +1[ATK]",
-        "critFlg": true
-      },
-      {
-        "timing": "Pre-Attack",
-        "buffText": "This monster gains +1[DEF] this turn",
-        "critFlg": true
-      },
-      {
-        "timing": "Pre-Attack",
-        "buffText": "This monster gains +1[DEF] this turn",
-        "critFlg": true
-      }
-    ],
-    "abilityName": "Three Wishes",
-    "monsterName": "Steamie",
-    "role": "Support",
-    "abilityText": "Monsters with wish counters can spend one wish counter to play one additional buff card with any attack action <em>(limit one wish per attack).</em>",
-    "hp": 9
-  }
+  "elements": [
+    "Fire",
+    "Water"
+  ],
+  "actions": [
+    {
+      "abilityName": "Chilly Mists",
+      "abilityText": "Your opponent's [W] [E] [F] attacks deal -1[ATK].",
+      "element": "Water",
+      "modifiers": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auraDuration": 8,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "speed": 5,
+      "draw": 1
+    },
+    {
+      "abilityName": "Sizzling Mists",
+      "abilityText": "Your opponent's [L] [R] [S] attacks deal -1[ATK].",
+      "element": "Fire",
+      "modifiers": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auraDuration": 8,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "speed": 5,
+      "draw": 1
+    },
+    {
+      "abilityName": "Torrential Blessing",
+      "abilityText": "Put a wish counter on one of your other monsters.",
+      "element": "Water",
+      "modifiers": [
+        0,
+        -1,
+        2,
+        2,
+        -1,
+        0
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 3,
+      "speed": 3,
+      "discard": 1,
+      "buff": 1
+    },
+    {
+      "abilityName": "Fierce Blessing",
+      "abilityText": "Put a wish counter on one of your other monsters.",
+      "element": "Fire",
+      "modifiers": [
+        0,
+        2,
+        2,
+        -1,
+        -1,
+        0
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 3,
+      "speed": 3,
+      "discard": 1,
+      "buff": 1
+    }
+  ],
+  "buffs": [
+    {
+      "timing": "With Attack",
+      "buffText": "This attack gains +1[ATK]",
+      "flipEventText": "Put a wish counter on one of your monsters",
+      "critFlg": true,
+      "flipEventFlg": true
+    },
+    {
+      "timing": "With Attack",
+      "buffText": "This attack gains +1[ATK]",
+      "flipEventText": "Put a wish counter on one of your monsters",
+      "critFlg": true,
+      "flipEventFlg": true
+    },
+    {
+      "timing": "Pre-Attack",
+      "buffText": "This monster gains +1[DEF] this turn",
+      "flipEventText": "Put a wish counter on one of your monsters",
+      "critFlg": true,
+      "flipEventFlg": true
+    },
+    {
+      "timing": "Pre-Attack",
+      "buffText": "This monster gains +1[DEF] this turn",
+      "flipEventText": "Put a wish counter on one of your monsters",
+      "critFlg": true,
+      "flipEventFlg": true
+    }
+  ],
+  "abilityName": "Three Wishes",
+  "monsterName": "Steamie",
+  "role": "Support",
+  "abilityText": "Monsters with wish counters can spend one wish counter to play one additional buff card with any attack action <em>(limit one wish per attack).</em>",
+  "hp": 9
+}
