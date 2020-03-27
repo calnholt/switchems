@@ -45,12 +45,12 @@
       "abilityText": "Put a wish counter on one of your other monsters.",
       "element": "Water",
       "modifiers": [
+        2,
+        -1,
+        -1,
         0,
-        -1,
-        2,
-        2,
-        -1,
-        0
+        0,
+        2
       ],
       "auraDuration": 0,
       "statusFlg": false,
