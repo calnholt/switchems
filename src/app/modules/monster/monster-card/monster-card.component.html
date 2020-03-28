@@ -26,10 +26,16 @@
       </div>
     </div>
     <div class="bottom-container">
-      <span class="role-container">
+      <div class="role-container">
         <img class="img" src="{{getRoleIcon()}}">
         <span class="name">{{this.monster.role}}</span>
-      </span>
+      </div>
+      <div class="star-container">
+        <span *ngFor="let x of ' '.repeat(3).split(''), let i = index">
+          <mat-icon *ngIf="monster.complexity >= i+1">star</mat-icon>
+          <mat-icon *ngIf="monster.complexity < i+1">star_border</mat-icon>
+        </span>
+      </div>
       <span class="heart-container">
         <img class="hp" src="{{getHpIcon()}}">
       </span>

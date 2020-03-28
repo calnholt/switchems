@@ -21,6 +21,7 @@ export class Monster extends Card {
     hp: number;
     role: Role;
     referenceFlg?: boolean = true;
+    complexity: number;
 }
 
 export class MonsterComplete extends Monster {

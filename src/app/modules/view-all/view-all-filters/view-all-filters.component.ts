@@ -8,6 +8,8 @@ export class MonsterForm {
   elements?: Array<ElemType> = new Array<ElemType>();
   hpMin?: number = 0;
   hpMax?: number = 20;
+  complexityMin?: number = 1;
+  complexityMax?: number = 3;
   roles?: Array<Role> = new Array<Role>();
   attackMin?: number = 0;
   attackMax?: number = 10;

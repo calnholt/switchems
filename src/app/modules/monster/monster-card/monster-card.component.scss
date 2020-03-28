@@ -90,6 +90,8 @@
             bottom: 5px;
             right: 5px;
             .role-container{
+                position: relative;
+                top: 38px;
                 .img{
                     width: 15%;
                     margin-left: 6px;
@@ -101,6 +103,17 @@
                     font-size: 13px;
                     letter-spacing: 0.02em;
                     bottom: -11px;
+                }
+            }
+            .star-container{
+                position: relative;
+                top: 49px;
+                right: 34px;
+                span{
+                    .mat-icon{
+                        font-size: 12px;
+                        width: 11px;
+                    }
                 }
             }
             .heart-container{

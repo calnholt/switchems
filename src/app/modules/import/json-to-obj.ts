@@ -40,16 +40,12 @@ export const loadMonsters = (): Array<MonsterComplete> => {
         if (!json.abilityName) {
             return null;
         }
-        monster.monsterId = json.monsterId;
-        monster.abilityName = json.abilityName;
-        monster.monsterName = json.monsterName;
+        const MONSTER_PROPERTIES = ['monsterId', 'abilityName', 'monsterName', 'abilityText', 'hp', 'complexity'];
+        MONSTER_PROPERTIES.forEach(p => monster[p] = json[p]);
         const elements = Array<ElemType>();
         json.elements.forEach(element => elements.push(getElemType(element)));
         monster.elements = elements;
         monster.role = getRole(json.role);
-        monster.abilityName = json.abilityName;
-        monster.abilityText = json.abilityText;
-        monster.hp = json.hp;
         monster.actions = new Array<Action>();
         const ACTIONS = 4;
         const ACTION_PROPERTIES = ['abilityName', 'abilityText', 'attack', 'speed', 'draw', 'discard',

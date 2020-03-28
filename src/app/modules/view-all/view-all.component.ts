@@ -42,7 +42,8 @@ export class ViewAllComponent implements OnInit {
     const isRole = this.filterRole(m, form);
     const isElements = this.filterElement(m.elements, form.elements);
     const isHp = this.filterValueMinMax(m.hp, form.hpMin, form.hpMax);
-    return isRole && isElements && isHp;
+    const isComplexity = this.filterValueMinMax(m.complexity, form.complexityMin, form.complexityMax);
+    return isRole && isElements && isHp && isComplexity;
   }
 
   filterRole(m: MonsterComplete, form: MonsterForm): boolean {
