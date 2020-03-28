@@ -19,7 +19,8 @@
     </div>
     <div *ngFor="let monster of allMonsters">
       <print-monster
-        [monster]="monster">
+        [monster]="monster"
+        [isParentToggle]="isAllToggle">
       </print-monster>
     </div>
   </div>

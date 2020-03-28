@@ -23,6 +23,7 @@ export class PrintComponent implements OnInit {
   toggleAll(allMonsters: MonsterComplete[]) {
     allMonsters.forEach(m => {
       m.isSelected = this.isAllToggle;
+      m.referenceFlg = this.isAllToggle;
       m.actions.forEach(a => a.isSelected = this.isAllToggle);
       m.buffs.forEach(b => b.isSelected = this.isAllToggle);
     });
