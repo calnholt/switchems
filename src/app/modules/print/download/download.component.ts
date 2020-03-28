@@ -12,7 +12,7 @@ import html2canvas from 'html2canvas';
 })
 export class DownloadComponent implements OnInit {
   allCards: (MonsterComplete | Action | Buff)[];
-  currentCard: MonsterComplete | Action | Buff;
+  currentCard: any;
   count: number;
   actionBoard: number = 1;
   statCubeBoard: number = 1;
