@@ -33,17 +33,22 @@ export class MonsterFormComponent implements OnInit {
       const monsterName: string = this.route.snapshot.paramMap.get('monsterName');
       if (monsterName === 'builder') {
         this.monster = new MonsterComplete();
-        this.monster.hp = Number((Math.random() * 18 + 1).toFixed(0));
-        this.monster.role = ROLES[Number((Math.random() * ROLES.length - 1).toFixed(0))];
-        this.monster.elements = [ELEMENTS[Number((Math.random() * ELEMENTS.length - 1).toFixed(0))]];
+        this.monster.hp = this.getRandomNumber(20) + 1;
+        this.monster.complexity = this.getRandomNumber(3) + 1;
+        this.monster.role = ROLES[this.getRandomNumber(ROLES.length)];
+        this.monster.elements = [ELEMENTS[this.getRandomNumber(ELEMENTS.length)]];
         this.monster.actions.push(new Action(), new Action(), new Action(), new Action());
-        this.monster.actions.forEach(a => a.element = ELEMENTS[Number((Math.random() * ELEMENTS.length).toFixed(0))]);
+        this.monster.actions.forEach(a => a.element = ELEMENTS[this.getRandomNumber(ELEMENTS.length)]);
         this.monster.buffs.push(new Buff(), new Buff(), new Buff(), new Buff());
       } else {
         this.monster = allMonsters.find(m => m.monsterName === monsterName);
       }
       this.originalMonster = Object.assign({}, this.monster);
     });
+  }
+
+  getRandomNumber(max: number) {
+    return Math.floor(Math.random() * max);
   }
 
   save() {
