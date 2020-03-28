@@ -123,5 +123,6 @@
   "monsterName": "Drownigator",
   "role": "Tricky",
   "abilityText": "When this monster enters play, the opponent discards a card at random.",
-  "hp": 9
+  "hp": 9,
+  "complexity": 1
 }

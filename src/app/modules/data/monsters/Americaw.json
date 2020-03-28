@@ -122,5 +122,6 @@
   "monsterName": "Americaw",
   "role": "Assassin",
   "abilityText": "When this monster enters play, enemy monsters gain -1[SPD] stat cubes.",
-  "hp": 8
+  "hp": 8,
+  "complexity": 2
 }

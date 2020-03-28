@@ -115,5 +115,6 @@
   "monsterName": "Chargroar",
   "role": "Assassin",
   "abilityText": "When this monster enters play, all enemy monsters gain -2[ATK] stat cubes.",
-  "hp": 8
+  "hp": 8,
+  "complexity": 1
 }

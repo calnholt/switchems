@@ -114,5 +114,6 @@
   "monsterName": "Zappguin",
   "role": "Tricky",
   "abilityText": "This monster's attacks deal +1[ATK] for each different status condition the targeted monster has.",
-  "hp": 9
+  "hp": 9,
+  "complexity": 2
 }

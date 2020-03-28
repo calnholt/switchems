@@ -115,5 +115,6 @@
   "monsterName": "Galeaffy",
   "role": "Support",
   "abilityText": "When this monster switches, you may keep up to three stat cubes on your stat cube board.",
-  "hp": 10
+  "hp": 10,
+  "complexity": 2
 }

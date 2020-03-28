@@ -124,5 +124,6 @@
   "monsterName": "Phantomaton",
   "role": "Tank",
   "abilityText": "At the start of each turn put the lockdown counter on this monster if it doesn't already have one. If it does, remove the lockdown counter instead. <br><br>While this monster has a lockdown counter on it, enemy monsters cannot use switch actions.",
-  "hp": 14
+  "hp": 14,
+  "complexity": 3
 }

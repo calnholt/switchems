@@ -114,5 +114,6 @@
   "monsterName": "Stallagrowth",
   "role": "Tank",
   "abilityText": "Whenever this monster is dealt damage by a [F] [R] attack, that monster is dealt 2[ATK]. This damage cannot be prevented.",
-  "hp": 14
+  "hp": 14,
+  "complexity": 1
 }

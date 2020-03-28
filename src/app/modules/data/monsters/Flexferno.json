@@ -122,5 +122,6 @@
   "monsterName": "Flexferno",
   "role": "Warrior",
   "abilityText": "At the end of each turn, enemy monsters are dealt 1[ATK]. This damage cannot be prevented.",
-  "hp": 8
+  "hp": 8,
+  "complexity": 2
 }
