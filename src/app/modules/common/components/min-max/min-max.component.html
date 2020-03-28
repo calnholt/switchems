@@ -2,8 +2,8 @@
   <mat-form-field class="textarea" appearance="fill">
     <mat-label>Min {{label}}</mat-label>
     <input matInput
-      min="min"
-      max="max"
+      min="{{min}}"
+      max="{{max}}"
       type="number"
       #input
       [(ngModel)]="minModel"
@@ -14,8 +14,8 @@
   <mat-form-field class="textarea" appearance="fill">
     <mat-label>Max {{label}}</mat-label>
     <input matInput
-      min="min"
-      max="max"
+      min="{{min}}"
+      max="{{max}}"
       type="number"
       #input
       [(ngModel)]="maxModel"
