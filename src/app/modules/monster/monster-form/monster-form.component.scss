@@ -4,6 +4,7 @@
 #monster-form{
     margin-top: 25px;
     margin-bottom: 50px;
+    min-height: 900px;
     .term{
         font-style: italic;
         font-size: 11px;
@@ -21,8 +22,8 @@
     }
     .card-container{
         position: fixed;
-        left: 50%;
-        top: 15%;
+        left: 43%;
+        top: 14%;
     }
     .save-button{
         margin-top: 25px;
@@ -30,9 +31,9 @@
     }
 
     .hover-icons-container{
-        position: fixed;
-        left: 68%;
-        top: 15%;
+        position: absolute;
+        right: -63%;
+        top: -1%;
         .hover-card-icon-container{
             max-height: 34px;
             padding: 5px;
