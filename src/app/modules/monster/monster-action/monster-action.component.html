@@ -16,7 +16,8 @@
     </div>
     <div class="elements-container">
       <div *ngFor="let element of ELEMENTS_LIST" class="elements">
-        <img class="element" src="{{getElementImageGrayPath(element)}}">
+        <img *ngIf="hasElement(element)" class="element" src="{{getElementImageColorPath(element)}}">
+        <img *ngIf="!hasElement(element)" class="element" src="{{getElementImageGrayPath(element)}}">
       </div>
     </div>
     <div class="ability-container">

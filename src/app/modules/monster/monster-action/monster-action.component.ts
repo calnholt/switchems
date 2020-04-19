@@ -82,5 +82,9 @@ export class MonsterActionComponent implements OnInit {
     return out;
   }
 
+  hasElement(element: ElemType): boolean {
+    return this.action.element === element;
+  }
+
 
 }
