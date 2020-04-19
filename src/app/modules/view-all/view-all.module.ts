@@ -1,3 +1,4 @@
+import { PrintModule } from './../print/print.module';
 import { RouterModule } from '@angular/router';
 import { CommonComponentsModule } from './../common/common-components.module';
 import { MaterialModule } from './../../material-module';
@@ -18,7 +19,8 @@ import { MonsterModule } from '../monster/monster.module';
     CommonComponentsModule,
     FormsModule,
     ReactiveFormsModule,
-    MonsterModule
+    MonsterModule,
+    PrintModule
   ],
   declarations: [
     ViewAllComponent,

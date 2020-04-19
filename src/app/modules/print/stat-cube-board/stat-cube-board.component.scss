@@ -8,10 +8,10 @@
         height: $card-height;
         width: $card-width;
         .table-container{
-            margin-top: 10px;
             padding: 0px 10px 0px 10px;
             .title{
-                font-size: 23px;
+                padding-top: 4px;
+                font-size: 20px;
                 text-align: center;
                 font-family: $beastformer;
                 margin: 0px;
@@ -35,10 +35,10 @@
             table, th, td {
                 border: 1px solid black;
             }
-            table{
+            .stat-cube-table{
                 width: 100%;
                 tr{
-                    height: 89px;
+                    height: 64px;
                     td:nth-child(1){
                         background-color: #ffcdcd;
                     }
@@ -47,12 +47,29 @@
                     }
                     td{
                         text-align: center;
-                        font-size: 50px;
+                        font-size: 33px;
                         font-family: $helvetica;
                         width: 50%;
-                        padding: 6px;
                         img{
-                            max-height: 40px;
+                            max-height: 30px;
+                        }
+                        div{
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+            .maneuver-container{
+                table{
+                    margin: auto;
+                    width: 66%;
+                    font-size: 20px;
+                    tr{
+                        height: 40px;
+                        td{
+                            text-align: center;
+                            width: 33%;
+                            padding: 6px;
                         }
                     }
                 }
