@@ -67,7 +67,7 @@
     },
     {
       "abilityName": "Rock Slide",
-      "abilityText": "If the targeted monster is leeched, this attack gains +4[ATK] and removes a leech counter.",
+      "abilityText": "[1]: The targeted monster gain -1[ATK] stat cubes.",
       "element": "Rock",
       "modifiers": [
         -1,
