@@ -124,6 +124,12 @@
         .cards-container{
             display: flex;
             justify-content: center;
+            position: absolute;
+            background: #e3e3e3;
+            padding: 6px;
+            width: 100%;
+            bottom: 21px;
+            min-height: 42px;
             .card-icon{
                 max-height: 30px;
                 padding: 0px 3px 0px 3px;
