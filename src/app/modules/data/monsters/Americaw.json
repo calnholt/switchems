@@ -95,7 +95,7 @@
     {
       "monsterName": null,
       "timing": "With Attack",
-      "buffText": "If the targeted monster protected, your opponent loses an additional protect action cube.",
+      "buffText": "If the targeted monster countered, your opponent loses an additional maneuver action cube.",
       "critFlg": true
     },
     {

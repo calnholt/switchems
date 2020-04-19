@@ -61,7 +61,7 @@ export const TERM_CODES = [
     new Term('~STATUS~', 'Paralyze, burn, leech, etc.'),
     new Term('~SINGLE~', 'Recharges on switch.'),
     new Term('~STUN~', 'Stunned monsters cannot switch.'),
-    new Term('~RECOIL~', 'Recoil damage cannot be prevented and still occurs if the targeted monster protects.'),
+    new Term('~RECOIL~', 'Recoil damage cannot be prevented and still occurs if the targeted monster counters.'),
 ] as const;
 
 const IMAGE_KEYS = ['[ATK]', '[+]', '[B]', '[-]', '[1]', '[2]', '[3]', '[DEF]', '[TA]', '[X]', '[SUCC]', '[FAIL]',
