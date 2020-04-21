@@ -31,4 +31,8 @@ export class ToolbarComponent implements OnInit {
     this.monster = new MonsterComplete();
   }
 
+  openRulebook() {
+    window.open('https://drive.google.com/file/d/1y8jhDXyy0xhroIRFh_hxbAy2g5MUdQ1R/view', '_blank');
+  }
+
 }
