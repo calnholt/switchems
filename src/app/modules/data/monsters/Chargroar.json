@@ -27,7 +27,7 @@
     },
     {
       "abilityName": "Lights Out",
-      "abilityText": "If this attack kills the targeted monster, this monster gains +2[ATK] stat cubes.",
+      "abilityText": "If this attack KO's the enemy monster, this monster gains +2[ATK] stat cubes.",
       "element": "Electric",
       "modifiers": [
         1,
@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Flamethrower",
-      "abilityText": "[1]: This attack ignores the targeted monster's [DEF].",
+      "abilityText": "[1]: This attack ignores the enemy monster's [DEF].",
       "element": "Fire",
       "modifiers": [
         0,
@@ -113,8 +113,8 @@
   "monsterId": 4,
   "abilityName": "Intimidate",
   "monsterName": "Chargroar",
-  "role": "Assassin",
-  "abilityText": "When this monster enters play, all enemy monsters gain -2[ATK] stat cubes.",
+  "abilityText": "When this monster enters play, the enemy monster gains -2[ATK] stat cubes.",
   "hp": 8,
-  "complexity": 1
+  "complexity": 1,
+  "role": "Assassin"
 }

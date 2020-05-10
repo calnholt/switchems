@@ -4,59 +4,51 @@
   ],
   "actions": [
     {
-      "monsterName": null,
       "abilityName": "Geyser",
       "abilityText": "[1]: This attack gains +2[ATK].",
+      "element": "Water",
+      "modifiers": [
+        3,
+        -1,
+        -1,
+        0,
+        0,
+        2
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
       "attack": 1,
       "speed": 6,
-      "element": "Water",
-      "buff": 2,
-      "discard": 0,
       "draw": 0,
+      "discard": 0,
+      "buff": 2
+    },
+    {
+      "abilityName": "Shellshock",
+      "abilityText": "If this monster has a <b>quake</b> counter on it, remove it and this attack deals +5[ATK].",
+      "element": "Rock",
       "modifiers": [
+        -1,
         3,
         -1,
-        -1,
         0,
         0,
-        2
+        3
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
-    },
-    {
-      "monsterName": null,
-      "abilityName": "Shellshock",
-      "abilityText": "If this monster has a quake counter on it, remove it and this attack deals +5[ATK].",
+      "reactionFlg": false,
       "attack": 2,
       "speed": 5,
-      "element": "Rock",
-      "buff": 0,
-      "discard": 1,
       "draw": 0,
-      "modifiers": [
-        -1,
-        3,
-        -1,
-        0,
-        0,
-        3
-      ],
-      "auraDuration": 0,
-      "statusFlg": false,
-      "reactionFlg": false
+      "discard": 1,
+      "buff": 0
     },
     {
-      "monsterName": null,
       "abilityName": "Boulder Bash",
-      "abilityText": "[2]: This attack is successful. ~SUCCESS~",
-      "attack": 3,
-      "speed": 4,
+      "abilityText": "[2]: This attack is successful. ~SUCCESS~<br><br>Put a quake counter on this monster if it doesn't already have one.",
       "element": "Rock",
-      "buff": 2,
-      "discard": 0,
-      "draw": 0,
       "modifiers": [
         -1,
         2,
@@ -67,18 +59,17 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 3,
+      "speed": 4,
+      "draw": 0,
+      "discard": 0,
+      "buff": 2
     },
     {
-      "monsterName": null,
       "abilityName": "Shellack",
-      "abilityText": "[1]: This attack gains flinch. ~FLINCH~",
-      "attack": 1,
-      "speed": 7,
+      "abilityText": "[1]: This attack gains <strong>flinch</strong>. ~FLINCH~",
       "element": "Rock",
-      "buff": 0,
-      "discard": 1,
-      "draw": 0,
       "modifiers": [
         -1,
         2,
@@ -89,30 +80,31 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 1,
+      "speed": 7,
+      "draw": 0,
+      "discard": 1,
+      "buff": 0
     }
   ],
   "buffs": [
     {
-      "monsterName": null,
       "timing": "Pre-Attack",
       "buffText": "Your cards flips are +1 this turn",
       "critFlg": true
     },
     {
-      "monsterName": null,
       "timing": "Pre-Attack",
       "buffText": "Your cards flips are +1 this turn",
       "critFlg": true
     },
     {
-      "monsterName": null,
       "timing": "Pre-Attack",
       "buffText": "This monster gains +2[DEF] this turn",
       "critFlg": false
     },
     {
-      "monsterName": null,
       "timing": "Pre-Attack",
       "buffText": "This monster gains +2[DEF] this turn",
       "critFlg": false
@@ -121,8 +113,8 @@
   "monsterId": 6,
   "abilityName": "Absorb",
   "monsterName": "Shaleshell",
-  "role": "Warrior",
-  "abilityText": "When this monster switches in and is dealt damage by a [E] [F] attack, put a quake counter on this monster. This monster gains +2[SPD] while it has a quake counter. Removes on switch.",
+  "abilityText": "When this monster switches in and is dealt damage by a [E] [F] attack, put a <b>quake</b> counter on this monster. <br><br>This monster gains +2[SPD] while it has a <b>quake</b> counter. Removes on switch.",
   "hp": 11,
-  "complexity": 3
+  "complexity": 3,
+  "role": "Warrior"
 }

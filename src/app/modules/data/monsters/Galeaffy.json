@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Whirlwind",
-      "abilityText": "This attack doesn't deal any damage if the targeted monster's attack is faster.",
+      "abilityText": "<b>II:</b> This attack is <b>unsuccessful</b> if the enemy monster attacked with a faster attack.~SUCCESS~",
       "element": "Leaf",
       "modifiers": [
         -3,
@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Rot",
-      "abilityText": "If the targeted monster selected an attack action, this attack hits first.",
+      "abilityText": "<b>II:</b> If the enemy monster selected an attack action with 6+[SPD], this attack hits first.",
       "element": "Death",
       "modifiers": [
         0,
@@ -113,8 +113,8 @@
   "monsterId": 8,
   "abilityName": "Gusting Winds",
   "monsterName": "Galeaffy",
-  "role": "Support",
   "abilityText": "When this monster switches, you may keep up to three stat cubes on your stat cube board.",
   "hp": 10,
-  "complexity": 2
+  "complexity": 2,
+  "role": "Support"
 }

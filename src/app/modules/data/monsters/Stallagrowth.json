@@ -46,7 +46,7 @@
     },
     {
       "abilityName": "Vine Whip",
-      "abilityText": "If the targeted monster is leeched, this attack gains +4[ATK] and removes a leech counter.",
+      "abilityText": "If the targeted monster is <strong>leeched</strong>, this attack gains +4[ATK] and removes a <strong>leech</strong> counter.",
       "element": "Leaf",
       "modifiers": [
         -1,
@@ -112,8 +112,8 @@
   "monsterId": 1,
   "abilityName": "Thorned Body",
   "monsterName": "Stallagrowth",
-  "role": "Tank",
   "abilityText": "Whenever this monster is dealt damage by a [F] [R] attack, that monster is dealt 2[ATK]. This damage cannot be prevented.",
   "hp": 14,
-  "complexity": 1
+  "complexity": 1,
+  "role": "Tank"
 }

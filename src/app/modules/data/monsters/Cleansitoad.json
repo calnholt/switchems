@@ -4,15 +4,9 @@
   ],
   "actions": [
     {
-      "monsterName": null,
       "abilityName": "Typhoon",
       "abilityText": "For each buff used that is [SUCC], this attack deals +1[ATK].",
-      "attack": 1,
-      "speed": 3,
       "element": "Water",
-      "buff": 3,
-      "discard": 1,
-      "draw": 0,
       "modifiers": [
         2,
         -3,
@@ -23,18 +17,17 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 1,
+      "speed": 3,
+      "draw": 0,
+      "discard": 1,
+      "buff": 3
     },
     {
-      "monsterName": null,
       "abilityName": "Waterfall",
       "abilityText": "[1]: This attack gains +3[ATK] this turn.",
-      "attack": 1,
-      "speed": 6,
       "element": "Water",
-      "buff": 1,
-      "discard": 0,
-      "draw": 0,
       "modifiers": [
         2,
         -1,
@@ -45,16 +38,17 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 1,
+      "speed": 6,
+      "draw": 0,
+      "discard": 0,
+      "buff": 1
     },
     {
-      "monsterName": null,
       "abilityName": "Evaporate",
       "abilityText": "If this monster would be dealt 4+[ATK] by a single attack this turn, instead the attack is unsuccessful and all buffs used with it are not resolved. Then, [+] [+] and gain +2[DEF] stat cubes. ~SINGLE~",
       "element": "Water",
-      "buff": 0,
-      "discard": 0,
-      "draw": 0,
       "modifiers": [
         0,
         0,
@@ -65,17 +59,15 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": true
+      "reactionFlg": true,
+      "draw": 0,
+      "discard": 0,
+      "buff": 0
     },
     {
-      "monsterName": null,
       "abilityName": "Invigorate",
       "abilityText": "All of your [X] abilities are +1.",
-      "speed": 2,
       "element": "Water",
-      "buff": 0,
-      "discard": 0,
-      "draw": 1,
       "modifiers": [
         0,
         0,
@@ -86,30 +78,30 @@
       ],
       "auraDuration": 8,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "speed": 2,
+      "draw": 1,
+      "discard": 0,
+      "buff": 0
     }
   ],
   "buffs": [
     {
-      "monsterName": null,
       "timing": "Post Attack",
-      "buffText": "Remove all targeted monster's stat increases",
+      "buffText": "Remove all positive stat cubes from your opponent's stat cube board.",
       "critFlg": true
     },
     {
-      "monsterName": null,
       "timing": "Pre-Attack",
       "buffText": "Remove an opponent's team aura if your attack is faster",
       "critFlg": true
     },
     {
-      "monsterName": null,
       "timing": "With Attack",
       "buffText": "[1]: This attack gains +3[ATK]",
       "critFlg": false
     },
     {
-      "monsterName": null,
       "timing": "Pre-Attack",
       "buffText": "[1]: This attack gains +3[SPD]",
       "critFlg": false
@@ -118,8 +110,8 @@
   "monsterId": 1,
   "abilityName": "Clear Mind",
   "monsterName": "Cleansitoad",
-  "role": "Technical",
   "abilityText": "When this monster enters play, you may shuffle your discard pile into your deck. Then, look at the top three cards of your deck. You may put any number back on top or on the bottom in any order.",
   "hp": 12,
-  "complexity": 3
+  "complexity": 3,
+  "role": "Technical"
 }

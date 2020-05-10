@@ -4,15 +4,9 @@
   ],
   "actions": [
     {
-      "monsterName": null,
       "abilityName": "Sauna",
       "abilityText": "[1]: This attack gains +2[ATK] and this monster gains +1[DEF] stat cubes.",
-      "attack": 2,
-      "speed": 6,
       "element": "Fire",
-      "buff": 0,
-      "discard": 1,
-      "draw": 1,
       "modifiers": [
         0,
         2,
@@ -23,18 +17,17 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 2,
+      "speed": 6,
+      "draw": 1,
+      "discard": 1,
+      "buff": 0
     },
     {
-      "monsterName": null,
       "abilityName": "Fire Blast",
       "abilityText": "",
-      "attack": 9,
-      "speed": 5,
       "element": "Fire",
-      "buff": 1,
-      "discard": 3,
-      "draw": 0,
       "modifiers": [
         0,
         5,
@@ -45,18 +38,17 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 9,
+      "speed": 5,
+      "draw": 0,
+      "discard": 3,
+      "buff": 1
     },
     {
-      "monsterName": null,
       "abilityName": "Scorch",
       "abilityText": "[1]: This attack gains +5[ATK].",
-      "attack": 1,
-      "speed": 7,
       "element": "Fire",
-      "buff": 1,
-      "discard": 1,
-      "draw": 0,
       "modifiers": [
         0,
         2,
@@ -67,17 +59,17 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 1,
+      "speed": 7,
+      "draw": 0,
+      "discard": 1,
+      "buff": 1
     },
     {
-      "monsterName": null,
       "abilityName": "Burn",
-      "abilityText": "[2]: The targeted monster gains a burn condition. ~BURN~",
-      "speed": 8,
+      "abilityText": "[2]: The enemy monster gains a burn condition. ~BURN~",
       "element": "Fire",
-      "buff": 0,
-      "discard": 1,
-      "draw": 0,
       "modifiers": [
         0,
         0,
@@ -88,40 +80,40 @@
       ],
       "auraDuration": 0,
       "statusFlg": true,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "speed": 8,
+      "draw": 0,
+      "discard": 1,
+      "buff": 0
     }
   ],
   "buffs": [
     {
-      "monsterName": null,
       "timing": "With Attack",
-      "buffText": "[-] & [2]: The targeted monster gains a burn condition. ~BURN~",
+      "buffText": "[-] & [2]: The enemy monster gains a burn condition. ~BURN~",
       "critFlg": true
     },
     {
-      "monsterName": null,
       "timing": "Post Attack",
-      "buffText": "[-] [-]: Remove all debuffs and status conditions from all of your monsters (including ones not in play)",
+      "buffText": "[-] [-]: Remove all negative stat cubes from your stat cube board and all status conditions  from all of your monsters <em>(including ones not in play)</em>.",
       "critFlg": false
     },
     {
-      "monsterName": null,
       "timing": "With Attack",
-      "buffText": "This attack gains +2[ATK] if the targeted monster has a status condition",
+      "buffText": "This attack gains +2[ATK] if the enemy monster has a status condition",
       "critFlg": true
     },
     {
-      "monsterName": null,
       "timing": "With Attack",
-      "buffText": "This attack gains +2[ATK] if the targeted monster has a status condition",
+      "buffText": "This attack gains +2[ATK] if the enemy monster has a status condition",
       "critFlg": false
     }
   ],
   "monsterId": 2,
   "abilityName": "Heatwave",
   "monsterName": "Flexferno",
-  "role": "Warrior",
-  "abilityText": "At the end of each turn, enemy monsters are dealt 1[ATK]. This damage cannot be prevented.",
+  "abilityText": "At the end of each turn, the enemy monster is dealt 1[ATK]. This damage cannot be prevented.",
   "hp": 8,
-  "complexity": 2
+  "complexity": 2,
+  "role": "Warrior"
 }

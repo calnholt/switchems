@@ -42,7 +42,7 @@
     },
     {
       "abilityName": "Torrential Blessing",
-      "abilityText": "Put a wish counter on one of your other monsters.",
+      "abilityText": "Put a <b>wish</b> counter on one of your other monsters.",
       "element": "Water",
       "modifiers": [
         2,
@@ -62,7 +62,7 @@
     },
     {
       "abilityName": "Fierce Blessing",
-      "abilityText": "Put a wish counter on one of your other monsters.",
+      "abilityText": "Put a <b>wish</b> counter on one of your other monsters.",
       "element": "Fire",
       "modifiers": [
         0,
@@ -113,8 +113,8 @@
   ],
   "abilityName": "Three Wishes",
   "monsterName": "Steamie",
-  "role": "Support",
-  "abilityText": "Monsters with wish counters can spend one wish counter to play one additional buff card with any attack action <em>(limit one wish per attack).</em>",
+  "abilityText": "Monsters with <b>wish</b> counters can spend one <b>wish</b> counter to play one additional buff card with any attack action <em>(limit one wish per attack).</em>",
   "hp": 9,
-  "complexity": 3
+  "complexity": 3,
+  "role": "Support"
 }

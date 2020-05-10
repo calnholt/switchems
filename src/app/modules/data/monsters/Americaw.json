@@ -5,15 +5,9 @@
   ],
   "actions": [
     {
-      "monsterName": null,
       "abilityName": "Tactical Nuke",
       "abilityText": "This attack deals 2[ATK] of <B>recoil</b> to itself. ~RECOIL~",
-      "attack": 6,
-      "speed": 7,
       "element": "Death",
-      "buff": 1,
-      "discard": 2,
-      "draw": 0,
       "modifiers": [
         0,
         -3,
@@ -24,18 +18,17 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 6,
+      "speed": 7,
+      "draw": 0,
+      "discard": 2,
+      "buff": 1
     },
     {
-      "monsterName": null,
       "abilityName": "Roc Rock",
       "abilityText": "This attack deals 1[ATK] of <B>recoil</b> to itself. ~RECOIL~",
-      "attack": 4,
-      "speed": 5,
       "element": "Rock",
-      "buff": 2,
-      "discard": 1,
-      "draw": 0,
       "modifiers": [
         -3,
         2,
@@ -46,17 +39,17 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "attack": 4,
+      "speed": 5,
+      "draw": 0,
+      "discard": 1,
+      "buff": 2
     },
     {
-      "monsterName": null,
       "abilityName": "Iron Defense",
       "abilityText": "This monster gains +2[DEF] stat cubes.",
-      "speed": 1,
       "element": "Rock",
-      "buff": 0,
-      "discard": 0,
-      "draw": 1,
       "modifiers": [
         0,
         0,
@@ -67,17 +60,16 @@
       ],
       "auraDuration": 0,
       "statusFlg": true,
-      "reactionFlg": false
+      "reactionFlg": false,
+      "speed": 1,
+      "draw": 1,
+      "discard": 0,
+      "buff": 0
     },
     {
-      "monsterName": null,
       "abilityName": "Roost",
-      "abilityText": "If this monster is targeted by a faster attack, this action does nothing. <br><br>This monster heals 6[HP]. Single use. ~SINGLE~",
-      "speed": 4,
+      "abilityText": "If this monster is targeted by a faster attack, this action does nothing. <br><br>This monster heals 8[HP]. Single use. ~SINGLE~",
       "element": "Death",
-      "buff": 0,
-      "discard": 2,
-      "draw": 0,
       "modifiers": [
         0,
         0,
@@ -88,30 +80,30 @@
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": true
+      "reactionFlg": true,
+      "speed": 4,
+      "draw": 0,
+      "discard": 1,
+      "buff": 0
     }
   ],
   "buffs": [
     {
-      "monsterName": null,
       "timing": "With Attack",
-      "buffText": "If the targeted monster countered, your opponent loses an additional maneuver action cube.",
+      "buffText": "If the enemy monster countered, your opponent loses an additional maneuver cube.",
       "critFlg": true
     },
     {
-      "monsterName": null,
       "timing": "Post Attack",
-      "buffText": "[-]: The targeted monster must switch (if possible).",
+      "buffText": "[-]: The enemy monster must switch (if possible).",
       "critFlg": true
     },
     {
-      "monsterName": null,
       "timing": "Pre-Attack",
       "buffText": "This monster gains +1[ATK] stat cubes",
       "critFlg": false
     },
     {
-      "monsterName": null,
       "timing": "Pre-Attack",
       "buffText": "This monster gains +1[ATK] stat cubes",
       "critFlg": false
@@ -120,8 +112,8 @@
   "monsterId": 9,
   "abilityName": "Wing Clip",
   "monsterName": "Americaw",
-  "role": "Assassin",
-  "abilityText": "When this monster enters play, enemy monsters gain -1[SPD] stat cubes.",
+  "abilityText": "When this monster enters play, the enemy monster gains -1[SPD] stat cubes.",
   "hp": 8,
-  "complexity": 2
+  "complexity": 2,
+  "role": "Assassin"
 }
