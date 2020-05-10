@@ -75,6 +75,15 @@
                 padding: 2px;
                 font-size: var(--font-size);
                 line-height: 1;
+                span{
+                    .timing{
+                        font-weight: 900;
+                        color: #7ed323;
+                        &.red{
+                            color: red;
+                        }
+                    }
+                }
             }
         }
     }
