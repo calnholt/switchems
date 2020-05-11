@@ -37,13 +37,26 @@ export class MonsterCardComponent implements OnInit {
     return out;
   }
 
+  // getEffectivenessSymbol(num: number): string {
+  //   switch (num) {
+  //     case -2: return '--';
+  //     case -1: return '-';
+  //     case 0: return '';
+  //     case 1: return '+';
+  //     case 2: return '++';
+  //   }
+  // }
+
   getEffectivenessSymbol(num: number): string {
+    const shield = `<img src="./assets/images/symbols/switch-defense.png" class="shield">`;
+    const effective = `<img src="./assets/images/symbols/effective.png" class="effective">`;
+    const superEff = `<img src="./assets/images/symbols/super-effective.png" class="effective">`;
     switch (num) {
-      case -2: return '--';
-      case -1: return '-';
+      case -2: return `<span class="value">2</span>` + shield;
+      case -1: return '<span class="value">1</span>' + shield;
       case 0: return '';
-      case 1: return '+';
-      case 2: return '++';
+      case 1: return effective;
+      case 2: return superEff;
     }
   }
 

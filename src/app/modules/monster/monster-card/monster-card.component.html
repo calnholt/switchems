@@ -2,7 +2,7 @@
   <div class="card-container">
     <div class="elements-container">
       <div *ngFor="let effectiveness of getEffectivenessArray(monster)">
-        <span class="effectiveness">{{effectiveness}}</span>
+        <span *ngIf="effectiveness" [innerHTML]="effectiveness" class="effectiveness"></span>
       </div>
     </div>
     <div class="elements-container">

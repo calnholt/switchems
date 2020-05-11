@@ -11,8 +11,30 @@
             display: grid;
             grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
             justify-items: center;
+            div{
+                padding-bottom: 5px;
+            }
             .effectiveness{
                 font-family: $beastformer;
+                .effective{
+                    max-height: 19px;
+                    top: 2px;
+                    position: relative;
+                }
+                .value{
+                    font-size: 22px;
+                    top: 5px;
+                    position: relative;
+                    left: -1px;
+                }
+                .shield{
+                    max-height: 21px;
+                }
+                .switch{
+                    max-height: 15px;
+                    position: relative;
+                    top: -29px;
+                }
             }
             .elements{
                 display: grid;
