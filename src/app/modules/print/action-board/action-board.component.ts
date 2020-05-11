@@ -11,6 +11,8 @@ export class ActionBoardComponent implements OnInit {
   switchRight: Path = SYMBOLS_PATH + 'switch-right.png';
   draw: Path = SYMBOLS_PATH + 'draw.png';
   protect: Path = SYMBOLS_PATH + 'protect.png';
+  switchHeal: Path = SYMBOLS_PATH + 'switch-heal.png';
+  noDraw: Path = SYMBOLS_PATH + 'no-draw.png';
   constructor() { }
 
   ngOnInit() {

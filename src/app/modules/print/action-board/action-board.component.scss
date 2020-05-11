@@ -7,6 +7,17 @@
         border: black 2px solid;
         height: $card-height;
         width: $card-width;
+        .no-draw{
+            position: absolute;
+            max-height: 28px;
+            right: 6px;
+        }
+        .switch-heal{
+            position: absolute;
+            max-height: 15px;
+            left: 6px;
+            top: 112px;
+        }
         .actions-container{
             padding: 0px 10px 0px 10px;
             margin-top: 10px;
@@ -52,7 +63,7 @@
                             max-height: 30px;
                         }
                         .draw{
-                            padding-right: 8px;
+                            padding-right: 4px;
                         }
                     }
                 }
