@@ -29,10 +29,10 @@
       "abilityText": "[1]: This attack gains <b>flinch</b>. ~FLINCH~",
       "element": "Water",
       "modifiers": [
+        3,
         -1,
         -1,
         0,
-        3,
         0,
         3
       ],
