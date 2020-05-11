@@ -10,7 +10,7 @@
     <div *ngIf="action.modifiers">
       <div class="elements-container">
         <span *ngFor="let modifier of action.modifiers; index as i">
-          <span *ngIf="modifier" class="modifier {{ELEMENTS_LIST[i].toLowerCase()}}-color">{{getModifier(modifier)}}</span>
+          <span *ngIf="modifier && modifier > 0" class="modifier {{ELEMENTS_LIST[i].toLowerCase()}}-color">{{getModifier(modifier)}}</span>
         </span>
       </div>
     </div>
