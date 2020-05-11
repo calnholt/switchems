@@ -54,7 +54,7 @@ export const TERM_CODES = [
     new Term('~BURN~', 'Burned monsters gain -1[ATK]. Burned [L] [R] [S] monsters gain -2[ATK] instead.'),
     new Term('~SUCCESS~', 'Unsuccessful actions do nothing.'),
     new Term('~FLINCH~', 'Prevent the targeted monster\'s action if this action is faster speed.'),
-    new Term('~PARALYZE~', 'Paralyzed monsters have -2[SPD] and all of their actions have [2]: This action is successful.'),
+    new Term('~PARALYZE~', 'Paralyzed monsters gain -2[SPD] cubes and all of their actions have [2]: This action is successful.'),
     new Term('~LEECH~', 'At the end of each turn, deal 1[ATK] to the leeched monster and your active monster heals '
      + '1[HP]. Stacks up to three. Remove on switch.'),
     new Term('~FATIGUE~', 'Fatigued monsters gain -1[DEF]. Fatigued [W] [E] [F] monsters can\'t use buff cards.'),
