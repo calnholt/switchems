@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Roost",
-      "abilityText": "If this monster is targeted by a faster attack, this action does nothing. <br><br>This monster heals 8[HP]. Single use. ~SINGLE~",
+      "abilityText": "If your opponent selected a non-monster action this turn, this action does nothing.<br><br>This monster heals [HP] equal to your enemy's speed minus your speed. <b>Single use.</b> ~SINGLE~",
       "element": "Death",
       "modifiers": [
         0,
@@ -81,7 +81,7 @@
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": true,
-      "speed": 4,
+      "speed": 2,
       "draw": 0,
       "discard": 1,
       "buff": 0
@@ -89,23 +89,27 @@
   ],
   "buffs": [
     {
-      "timing": "With Attack",
-      "buffText": "If the enemy monster countered, your opponent loses an additional maneuver cube.",
+      "buffName": "Beak Drill",
+      "timing": "Pre-Actions",
+      "buffText": "If the enemy monster used a maneuver cube this turn, your opponent loses an additional maneuver cube.",
       "critFlg": true
     },
     {
-      "timing": "Post Attack",
-      "buffText": "[-]: The enemy monster must switch (if possible).",
+      "buffName": "Beak Drill",
+      "timing": "Pre-Actions",
+      "buffText": "If the enemy monster used a maneuver cube this turn, your opponent loses an additional maneuver cube.",
       "critFlg": true
     },
     {
-      "timing": "Pre-Attack",
-      "buffText": "This monster gains +1[ATK] stat cubes",
+      "buffName": "Bigger Rocs",
+      "timing": "Pre-Actions",
+      "buffText": "This monster gains +1[ATK] stat cubes.",
       "critFlg": false
     },
     {
-      "timing": "Pre-Attack",
-      "buffText": "This monster gains +1[ATK] stat cubes",
+      "buffName": "Bigger Rocs",
+      "timing": "Pre-Actions",
+      "buffText": "This monster gains +1[ATK] stat cubes.",
       "critFlg": false
     }
   ],

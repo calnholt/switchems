@@ -9,7 +9,7 @@
       "element": "Fire",
       "modifiers": [
         0,
-        2,
+        3,
         1,
         -1,
         -1,
@@ -51,8 +51,8 @@
       "element": "Fire",
       "modifiers": [
         0,
+        1,
         2,
-        3,
         -3,
         -2,
         0
@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Burn",
-      "abilityText": "[2]: The enemy monster gains a burn condition. ~BURN~",
+      "abilityText": "[2]: The enemy monster gains a <b>burn</b> condition. ~BURN~",
       "element": "Fire",
       "modifiers": [
         0,
@@ -89,21 +89,25 @@
   ],
   "buffs": [
     {
+      "buffName": "Burn",
       "timing": "With Attack",
-      "buffText": "[-] & [2]: The enemy monster gains a burn condition. ~BURN~",
+      "buffText": "[-] & [2]: The enemy monster gains a <b>burn</b> condition. ~BURN~",
       "critFlg": true
     },
     {
-      "timing": "Post Attack",
+      "buffName": "Melt Away",
+      "timing": "Post Actions",
       "buffText": "[-] [-]: Remove all negative stat cubes from your stat cube board and all status conditions  from all of your monsters <em>(including ones not in play)</em>.",
       "critFlg": false
     },
     {
+      "buffName": "Sear",
       "timing": "With Attack",
       "buffText": "This attack gains +2[ATK] if the enemy monster has a status condition",
       "critFlg": true
     },
     {
+      "buffName": "Sear",
       "timing": "With Attack",
       "buffText": "This attack gains +2[ATK] if the enemy monster has a status condition",
       "critFlg": false

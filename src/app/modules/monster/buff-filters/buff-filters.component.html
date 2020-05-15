@@ -1,5 +1,11 @@
 <div id="buff-filters">
   <div class="col-12 form-element">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="buff.buffName">
+    </mat-form-field>
+  </div>
+  <div class="col-12 form-element">
     <dropdown
       style="width:inherit;"
       [label]="'Timing'"

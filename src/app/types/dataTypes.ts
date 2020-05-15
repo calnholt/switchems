@@ -8,7 +8,7 @@ export type ElemType = typeof ELEMENTS[number];
 export const ROLES = ['Warrior', 'Assassin', 'Technical', 'Tank', 'Support', 'Tricky'] as const;
 export type Role = typeof ROLES[number];
 
-export const BUFF_TIMINGS = ['Pre-Switch', 'Pre-Attack', 'With Attack', 'Post Attack', 'None'];
+export const BUFF_TIMINGS = ['Pre-Actions', 'With Attack', 'Post Actions', 'None'];
 export type BuffTiming = typeof BUFF_TIMINGS[number];
 
 const typeChart = new Array;
@@ -19,8 +19,9 @@ const standardBuffArray: Buff[] = [];
 for (let i = 0; i < 2; i++) {
     const b = new Buff();
     b.monsterName = 'Standard';
-    b.timing = 'Pre-Switch';
-    b.buffText = 'Prevent the targeted monster from switching this turn';
+    b.buffName = 'Can\'t Escape!';
+    b.timing = 'Pre-Action';
+    b.buffText = 'Prevent the enemy monster from switching this turn if your opponent selected a switch action.';
     b.critFlg = true;
     standardBuffArray.push(b);
 }

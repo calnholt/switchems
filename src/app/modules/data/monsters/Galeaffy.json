@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Whirlwind",
-      "abilityText": "<b>II:</b> This attack is <b>unsuccessful</b> if the enemy monster attacked with a faster attack.~SUCCESS~",
+      "abilityText": "This attack is <b>unsuccessful</b> if the enemy monster selected a faster action.~SUCCESS~",
       "element": "Leaf",
       "modifiers": [
         -3,
@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Rot",
-      "abilityText": "<b>II:</b> If the enemy monster selected an attack action with 6+[SPD], this attack hits first.",
+      "abilityText": "<b>I - Pre-Action:</b> If the enemy monster selected an attack action with 6+[SPD], this attack hits first.",
       "element": "Death",
       "modifiers": [
         0,
@@ -90,22 +90,26 @@
   ],
   "buffs": [
     {
-      "timing": "Pre-Attack",
+      "buffName": "Sharp Leaves",
+      "timing": "Pre-Actions",
       "buffText": "This monster gains +1[ATK] stat cubes",
       "critFlg": true
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Sharp Leaves",
+      "timing": "Pre-Actions",
       "buffText": "This monster gains +1[ATK] stat cubes",
       "critFlg": false
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Leaf Shield",
+      "timing": "Pre-Actions",
       "buffText": "This monster gains +1[DEF] stat cubes",
       "critFlg": true
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Leaf Shield",
+      "timing": "Pre-Actions",
       "buffText": "This monster gains +1[DEF] stat cubes",
       "critFlg": false
     }

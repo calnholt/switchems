@@ -83,6 +83,7 @@
   ],
   "buffs": [
     {
+      "buffName": "Wishful Strike",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]",
       "flipEventText": "Put a wish counter on one of your monsters",
@@ -90,6 +91,7 @@
       "flipEventFlg": true
     },
     {
+      "buffName": "Wishful Strike",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]",
       "flipEventText": "Put a wish counter on one of your monsters",
@@ -97,14 +99,16 @@
       "flipEventFlg": true
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Wishful Embrace",
+      "timing": "Pre-Actions",
       "buffText": "This monster gains +1[DEF] this turn",
       "flipEventText": "Put a wish counter on one of your monsters",
       "critFlg": true,
       "flipEventFlg": true
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Wishful Embrace",
+      "timing": "Pre-Actions",
       "buffText": "This monster gains +1[DEF] this turn",
       "flipEventText": "Put a wish counter on one of your monsters",
       "critFlg": true,

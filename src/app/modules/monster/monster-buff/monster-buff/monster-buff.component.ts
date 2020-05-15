@@ -23,10 +23,9 @@ export class MonsterBuffComponent implements OnInit {
   }
 
   getTimingRomanNumeral(): string {
-    if (this.buff.timing === 'Pre-Switch') {return 'I'; }
-    if (this.buff.timing === 'Pre-Attack') {return 'II'; }
-    if (this.buff.timing === 'With Attack') {return 'III'; }
-    if (this.buff.timing === 'Post Attack') {return 'IV'; }
+    if (this.buff.timing === 'Pre-Actions') {return 'I'; }
+    if (this.buff.timing === 'With Attack') {return 'II'; }
+    if (this.buff.timing === 'Post Actions') {return 'III'; }
     if (this.buff.timing === 'None') {return 'X'; }
   }
 

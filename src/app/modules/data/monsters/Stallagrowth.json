@@ -89,21 +89,25 @@
   ],
   "buffs": [
     {
-      "timing": "Pre-Attack",
+      "buffName": "Rock Armor",
+      "timing": "Pre-Actions",
       "buffText": "This monster gains +1[DEF] stat cubes",
       "critFlg": false
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Mossy Overgrowth",
+      "timing": "Pre-Actions",
       "buffText": "This monster gains +4[DEF] this turn",
       "critFlg": false
     },
     {
+      "buffName": "Concussion",
       "timing": "With Attack",
-      "buffText": "[2]: This attack gains <strong>flinch</strong>. ~FLINCH~",
+      "buffText": "[2]: This attack gains <b>flinch</b>. ~FLINCH~",
       "critFlg": true
     },
     {
+      "buffName": "Concussion",
       "timing": "With Attack",
       "buffText": "[2]: This attack gains <strong>flinch</strong>. ~FLINCH~",
       "critFlg": true

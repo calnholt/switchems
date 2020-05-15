@@ -52,8 +52,8 @@ export class MonsterCardComponent implements OnInit {
     const effective = `<img src="./assets/images/symbols/effective.png" class="effective">`;
     const superEff = `<img src="./assets/images/symbols/super-effective.png" class="effective">`;
     switch (num) {
-      case -2: return `<span class="value">4</span>` + shield;
-      case -1: return '<span class="value">2</span>' + shield;
+      case -2: return `<span class="value">6</span>` + shield;
+      case -1: return '<span class="value">3</span>' + shield;
       case 0: return '';
       case 1: return effective;
       case 2: return superEff;

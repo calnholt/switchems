@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Evaporate",
-      "abilityText": "If this monster would be dealt 4+[ATK] by a single attack this turn, instead the attack is unsuccessful and all buffs used with it are not resolved. Then, [+] [+] and gain +2[DEF] stat cubes. ~SINGLE~",
+      "abilityText": "If this monster would be dealt 4+[ATK] by a single attack this turn, instead the attack is unsuccessful and all buffs used with it are not resolved. Then, [+] [+] and gain +2[DEF] stat cubes. <b>Single use</b>. ~SINGLE~",
       "element": "Water",
       "modifiers": [
         0,
@@ -87,22 +87,26 @@
   ],
   "buffs": [
     {
-      "timing": "Post Attack",
+      "buffName": "Cleanse",
+      "timing": "Post Actions",
       "buffText": "Remove all positive stat cubes from your opponent's stat cube board.",
       "critFlg": true
     },
     {
-      "timing": "Pre-Attack",
-      "buffText": "Remove an opponent's team aura if your attack is faster",
+      "buffName": "Negate",
+      "timing": "Pre-Actions",
+      "buffText": "Remove an opponent's team aura if your opponent selected a monster action and your action is faster.",
       "critFlg": true
     },
     {
+      "buffName": "Attack Burst",
       "timing": "With Attack",
       "buffText": "[1]: This attack gains +3[ATK]",
       "critFlg": false
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Speed Burst",
+      "timing": "Pre-Actions",
       "buffText": "[1]: This attack gains +3[SPD]",
       "critFlg": false
     }

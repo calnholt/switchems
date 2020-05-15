@@ -11,6 +11,7 @@
             display: grid;
             grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
             justify-items: center;
+            min-height: 29px;
             div{
                 padding-bottom: 5px;
             }

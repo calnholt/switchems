@@ -90,22 +90,26 @@
   ],
   "buffs": [
     {
+      "buffName": "Energize",
       "timing": "With Attack",
       "buffText": "This attack gains +2[ATK]",
       "critFlg": false
     },
     {
+      "buffName": "Energize",
       "timing": "With Attack",
       "buffText": "This attack gains +2[ATK]",
       "critFlg": true
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Charge",
+      "timing": "Pre-Actions",
       "buffText": "This attack gains +2[SPD]",
       "critFlg": false
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Charge",
+      "timing": "Pre-Actions",
       "buffText": "This attack gains +2[SPD]",
       "critFlg": true
     }

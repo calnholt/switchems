@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Boulder Bash",
-      "abilityText": "[2]: This attack is successful. ~SUCCESS~<br><br>Put a quake counter on this monster if it doesn't already have one.",
+      "abilityText": "[2]: This attack is successful. ~SUCCESS~<br><br>Put a <b>quake</b> counter on this monster if it doesn't already have one.",
       "element": "Rock",
       "modifiers": [
         -1,
@@ -90,22 +90,26 @@
   ],
   "buffs": [
     {
-      "timing": "Pre-Attack",
+      "buffName": "Focus",
+      "timing": "Pre-Actions",
       "buffText": "Your cards flips are +1 this turn",
       "critFlg": true
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Focus",
+      "timing": "Pre-Actions",
       "buffText": "Your cards flips are +1 this turn",
       "critFlg": true
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Calcify",
+      "timing": "Pre-Actions",
       "buffText": "This monster gains +2[DEF] this turn",
       "critFlg": false
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Calcify",
+      "timing": "Pre-Actions",
       "buffText": "This monster gains +2[DEF] this turn",
       "critFlg": false
     }
@@ -113,7 +117,7 @@
   "monsterId": 6,
   "abilityName": "Absorb",
   "monsterName": "Shaleshell",
-  "abilityText": "When this monster switches in and is dealt damage by a [E] [F] attack, put a <b>quake</b> counter on this monster. <br><br>This monster gains +2[SPD] while it has a <b>quake</b> counter. Removes on switch.",
+  "abilityText": "When this monster switches in and is hit by a [E] [F] attack, put a <b>quake</b> counter on this monster. <br><br>This monster gains +2[SPD] while it has a <b>quake</b> counter. Removes on switch.",
   "hp": 11,
   "complexity": 3,
   "role": "Warrior"

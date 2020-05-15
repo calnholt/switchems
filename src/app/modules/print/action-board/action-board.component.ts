@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./action-board.component.scss']
 })
 export class ActionBoardComponent implements OnInit {
-  switchLeft: Path = SYMBOLS_PATH + 'switch-left.png';
-  switchRight: Path = SYMBOLS_PATH + 'switch-right.png';
+  switchLeft: Path = SYMBOLS_PATH + 'switch-defense.png';
+  switchRight: Path = SYMBOLS_PATH + 'switch-defense-right.png';
   draw: Path = SYMBOLS_PATH + 'draw.png';
   protect: Path = SYMBOLS_PATH + 'protect.png';
   switchHeal: Path = SYMBOLS_PATH + 'switch-heal.png';

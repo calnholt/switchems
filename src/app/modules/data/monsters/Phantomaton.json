@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Cobolt",
-      "abilityText": "<b>I & </b>[B]: Prevent the enemy monster from switching.",
+      "abilityText": "<b>I - Pre-Actions:</b> Prevent the enemy monster from switching if you buffed this attack.",
       "element": "Death",
       "modifiers": [
         0,
@@ -89,21 +89,25 @@
   ],
   "buffs": [
     {
-      "timing": "Pre-Switch",
+      "buffName": "Target Acquired",
+      "timing": "Pre-Actions",
       "buffText": "This monster gains +2[ATK] stat cubes if the enemy monster performed a switch action this turn.",
       "critFlg": true
     },
     {
-      "timing": "Pre-Switch",
+      "buffName": "Target Acquired",
+      "timing": "Pre-Actions",
       "buffText": "This monster gains +2[ATK] stat cubes if the enemy monster performed a switch action this turn.",
       "critFlg": true
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Refactor",
+      "timing": "Pre-Actions",
       "buffText": "[-] [-]: Attack speeds are reversed this turn and you win all ties (slower moves happen first).",
       "critFlg": false
     },
     {
+      "buffName": "Curse",
       "timing": "None",
       "buffText": "This card has no buff effect.",
       "flipEventText": "Deal 1[ATK] to the enemy monster",

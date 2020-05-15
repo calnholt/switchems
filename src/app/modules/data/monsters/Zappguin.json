@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Vortex",
-      "abilityText": "If the enemy monster has a status condition, you may play an additional buff with this action. ~STATUS~",
+      "abilityText": "If the enemy monster has a status condition, you may play an additional [B] with this action. ~STATUS~",
       "element": "Electric",
       "modifiers": [
         2,
@@ -89,21 +89,25 @@
   ],
   "buffs": [
     {
+      "buffName": "Zap",
       "timing": "With Attack",
       "buffText": "[-] & [1]: The enemy monster gains a paralyze condition. ~PARALYZE~",
       "critFlg": true
     },
     {
+      "buffName": "Zap",
       "timing": "With Attack",
       "buffText": "[-] & [1]: The enemy monster gains a paralyze condition. ~PARALYZE~",
       "critFlg": false
     },
     {
+      "buffName": "Retaliate",
       "timing": "With Attack",
       "buffText": "This attack gains +3[ATK] if the enemy monster's action is faster than yours <em>(does nothing if enemy monster does not perform a monster action)</em>.",
       "critFlg": false
     },
     {
+      "buffName": "Retaliate",
       "timing": "With Attack",
       "buffText": "This attack gains +3[ATK] if the enemy monster's action is faster than yours <em>(does nothing if enemy monster does not perform a monster action)</em>.",
       "critFlg": true
@@ -112,7 +116,7 @@
   "monsterId": 7,
   "abilityName": "Static Shock",
   "monsterName": "Zappguin",
-  "abilityText": "This monster's attacks deal +1[ATK] for each different status condition the targeted monster has.",
+  "abilityText": "This monster's attacks deal +1[ATK] for each different status condition the enemy monster has.",
   "hp": 9,
   "complexity": 2,
   "role": "Tricky"

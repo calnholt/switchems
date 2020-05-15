@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Expunge",
-      "abilityText": "Single use. ~SINGLE~",
+      "abilityText": "<b>Single use</b>. ~SINGLE~",
       "element": "Death",
       "modifiers": [
         0,
@@ -90,22 +90,26 @@
   ],
   "buffs": [
     {
-      "timing": "Pre-Attack",
+      "buffName": "Disarm",
+      "timing": "Pre-Actions",
       "buffText": "The enemy monster gains -1[ATK] stat cubes",
       "critFlg": true
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Disarm",
+      "timing": "Pre-Actions",
       "buffText": "The enemy monster gains -1[ATK] stat cubes",
       "critFlg": false
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Tremble",
+      "timing": "Pre-Actions",
       "buffText": "The enemy monster gains -1[SPD] stat cubes",
       "critFlg": true
     },
     {
-      "timing": "Pre-Attack",
+      "buffName": "Tremble",
+      "timing": "Pre-Actions",
       "buffText": "The enemy monster gains -1[SPD] stat cubes",
       "critFlg": false
     }

@@ -60,7 +60,7 @@ export const loadMonsters = (): Array<MonsterComplete> => {
         }
         monster.buffs = new Array<Buff>();
         const BUFFS = 4;
-        const BUFF_PROPERTIES = ['timing', 'buffText', 'critFlg', 'flipEventText', 'flipEventFlg'];
+        const BUFF_PROPERTIES = ['timing', 'buffText', 'critFlg', 'flipEventText', 'flipEventFlg', 'buffName'];
         for (let i = 0; i < BUFFS; i++) {
             const buff = new Buff();
             BUFF_PROPERTIES.forEach(p => buff[p] = json.buffs[i][p]);

@@ -31,8 +31,31 @@
                 bottom: 8px;
             }
         }
+        .name{
+            font-family: $beastformer;
+            font-size: 28px;
+            text-align: center;
+            margin-top: 5px;
+            letter-spacing: 0.02em;
+        }
+        .line-container{
+            padding-left: 4px;
+            .name-line{
+                border: .04cm solid black;
+                width: 2.37cm;
+                display: inline-block;
+                margin: 0cm .2cm .1cm .2cm;
+            }
+            .dot{
+                height: 10px;
+                width: 10px;
+                background-color: black;
+                border-radius: 50%;
+                display: inline-block;
+            }
+        }
         .text-container{
-            padding: 70px 10px 0px 10px;
+            padding: 30px 10px 0px 10px;
             .buff-text{
                 font-family: $helvetica;
                 font-size: 14px;
