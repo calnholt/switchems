@@ -29,10 +29,9 @@ export class MonsterService {
   }
 
   getTimingRomanNumeral(buff: Buff): string {
-    if (buff.timing === 'Pre-Switch') {return 'I'; }
-    if (buff.timing === 'Pre-Attack') {return 'II'; }
-    if (buff.timing === 'With Attack') {return 'III'; }
-    if (buff.timing === 'Post Attack') {return 'IV'; }
+    if (buff.timing === 'Pre-Actions') {return 'I'; }
+    if (buff.timing === 'With Attack') {return 'II'; }
+    if (buff.timing === 'Post Actions') {return 'III'; }
     if (buff.timing === 'None') {return 'X'; }
   }
 }
