@@ -1,3 +1,4 @@
+import { TtsMonsterComponent } from './tts-monster/tts-monster.component';
 import { MonsterReferenceComponent } from './monster-reference/monster-reference.component';
 import { BuffFiltersComponent } from './buff-filters/buff-filters.component';
 import { RouterModule } from '@angular/router';
@@ -32,12 +33,14 @@ import { CommonModule } from '@angular/common';
     ActionFiltersComponent,
     BuffFiltersComponent,
     MonsterReferenceComponent,
+    TtsMonsterComponent,
   ],
   exports: [
     MonsterActionComponent,
     MonsterBuffComponent,
     MonsterCardComponent,
     MonsterReferenceComponent,
+    TtsMonsterComponent,
   ]
 })
 export class MonsterModule { }

@@ -34,7 +34,7 @@ import { ActionBoardComponent } from './action-board/action-board.component';
   ],
   exports: [
     ActionBoardComponent,
-    StatCubeBoardComponent
+    StatCubeBoardComponent,
   ]
 })
 export class PrintModule { }

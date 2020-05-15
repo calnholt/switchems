@@ -43,6 +43,13 @@
           </mat-accordion>
         </div>
         <button class="save-button" mat-stroked-button (click)="save()">Copy Monster to Clipboard</button>
+        <div class="tts">
+          <img 
+            [routerLink]="['/tts', monster.monsterName]" 
+            src="./assets/images/website/tts.png"
+            matTooltip="Download card spritesheet for Tabletop Simulator"
+            matTooltipPosition="right">
+        </div>
       </div>
       <div class="col-8">
         <div class="card-container">

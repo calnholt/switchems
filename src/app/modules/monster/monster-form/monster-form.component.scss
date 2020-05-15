@@ -64,4 +64,14 @@
             }
         }
     }
+    .tts{
+        padding-top: 10px;
+        display: block;
+        margin: auto;
+        text-align: center;
+        img{
+            max-height: 130px;
+            cursor: pointer;
+        }
+    }
 }

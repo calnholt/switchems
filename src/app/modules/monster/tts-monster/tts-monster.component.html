@@ -1,0 +1,24 @@
+<div id="tts">
+  <div class="tts-container">
+    <span>
+      <monster-reference
+        [monster]="monster">
+      </monster-reference>
+    </span>
+    <span *ngFor="let buff of monster.buffs; index as i">
+      <monster-buff
+        [buff]="buff">
+      </monster-buff>
+    </span>
+    <span *ngFor="let action of monster.actions; index as i">
+      <monster-action
+        [action]="action">
+      </monster-action>
+    </span>
+    <span>
+      <monster-card
+          [monster]="monster">
+      </monster-card>
+    </span>
+  </div>
+</div>

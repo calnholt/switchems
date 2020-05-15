@@ -1,0 +1,14 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#tts{
+    .tts-container{
+        width: 2390px;
+        height: 2331px;
+        background-color: black;
+        display: flex;
+        span{
+            padding-right: 1px;
+        }
+    }
+}
