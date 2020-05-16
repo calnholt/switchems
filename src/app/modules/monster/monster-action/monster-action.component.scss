@@ -60,6 +60,8 @@
                 border-radius: 10px 10px 0px 0px;
                 margin-top: 0.2cm;
                 padding-top: 3px;
+                z-index: 1;
+                position: relative;
                 .ability-name{
                     margin: auto;
                     font-family: $beastformer;
@@ -83,6 +85,7 @@
                 width: 90%;
                 height:auto;
                 border-radius: 10px;
+                z-index:1;
                 .ability-text{
                     font-family: $helvetica;
                     font-size: 12px;
@@ -102,7 +105,7 @@
             border-radius: 10px;
             background-color: white;
             border: 2px black solid;
-            z-index: -1;
+            z-index: 0;
             top: -18px;
             width: 88%;
             padding-top: 4px;
