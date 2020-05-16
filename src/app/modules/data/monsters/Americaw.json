@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Roost",
-      "abilityText": "If your opponent selected a non-monster action this turn, this action does nothing.<br><br>This monster heals [HP] equal to your enemy's speed minus your speed. <b>Single use.</b> ~SINGLE~",
+      "abilityText": "This monster heals [HP] equal to your speed minus the enemy's speed. If the opponent selected a non-monster action this turn, heal 3[HP] instead. <b>Single use.</b> ~SINGLE~",
       "element": "Death",
       "modifiers": [
         0,
@@ -79,9 +79,9 @@
         0
       ],
       "auraDuration": 0,
-      "statusFlg": false,
-      "reactionFlg": true,
-      "speed": 2,
+      "statusFlg": true,
+      "reactionFlg": false,
+      "speed": 9,
       "draw": 0,
       "discard": 1,
       "buff": 0
