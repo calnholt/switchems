@@ -100,7 +100,7 @@ export class ViewAllComponent implements OnInit {
   filterValueMinMax(value: number, formMin: number, formMax: number): boolean {
     let compareValue: number = value;
     if (value === undefined || value === null) {
-      compareValue = 0;
+      compareValue = -1;
     }
     return compareValue >= formMin && compareValue <= formMax;
   }

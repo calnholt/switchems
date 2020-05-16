@@ -82,7 +82,7 @@
     </mat-form-field>
   </div>
   <div *ngFor="let elemType of MODIFIER_ELEMENTS; index as i">
-    <div *ngIf="isStrongAgainst(elemType)" class="col-12 form-element">
+    <div *ngIf="isStrongAgainst(elemType) && action.attack" class="col-12 form-element">
       <dropdown
         style="width:inherit;"
         [label]="getModifierLabelElement(i)"
