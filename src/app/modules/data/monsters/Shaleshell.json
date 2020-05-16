@@ -92,13 +92,13 @@
     {
       "buffName": "Focus",
       "timing": "Pre-Actions",
-      "buffText": "Your cards flips are +1 this turn",
+      "buffText": "All of your [X] abilities are +1 this turn.",
       "critFlg": true
     },
     {
       "buffName": "Focus",
       "timing": "Pre-Actions",
-      "buffText": "Your cards flips are +1 this turn",
+      "buffText": "All of your [X] abilities are +1 this turn.",
       "critFlg": true
     },
     {
