@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Fatigue",
-      "abilityText": "[2]: The enemy monster gains a fatigue condition. ~FATIGUE~",
+      "abilityText": "[2]: The enemy monster gains a <b>fatigue</b> condition. ~FATIGUE~",
       "element": "Death",
       "modifiers": [
         0,
