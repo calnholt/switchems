@@ -52,17 +52,19 @@ const TERM_KEYS = ['~BURN~', '~SUCCESS~', '~FLINCH~', '~PARALYZE~', '~LEECH~', '
     '~STATUS~', '~SINGLE~', '~STUN~', '~RECOIL~'] as const;
 export type TermCode = typeof TERM_KEYS[number];
 export const TERM_CODES = [
-    new Term('~BURN~', 'Burned monsters gain -1[ATK]. Burned [L] [R] [S] monsters gain -2[ATK] instead.'),
+    new Term('~BURN~', 'Burned monsters ignore their attack\'s elemental bonuses. If the monster is [L] [R] [S], '
+     + 'that monster also gains -1[ATK] stat cube.'),
     new Term('~SUCCESS~', 'Unsuccessful actions do nothing.'),
-    new Term('~FLINCH~', 'Prevent the targeted monster\'s action if this action is faster speed.'),
-    new Term('~PARALYZE~', 'Paralyzed monsters gain -2[SPD] cubes and all of their actions have [2]: This action is successful.'),
+    new Term('~FLINCH~', 'Prevent the enemy monster\'s action if this action is faster speed.'),
+    new Term('~PARALYZE~', 'Paralyzed monsters gain -2[SPD] stat cubes and all of their actions have [2]: This action is successful.'),
     new Term('~LEECH~', 'At the end of each turn, deal 1[ATK] to the leeched monster and your active monster heals '
      + '1[HP]. Stacks up to three. Remove on switch.'),
-    new Term('~FATIGUE~', 'Fatigued monsters gain -1[DEF]. Fatigued [W] [E] [F] monsters can\'t use buff cards.'),
+    new Term('~FATIGUE~', 'Fatigued monsters cannot buff their attacks. If the monster is [W] [E] [F], that monster also '
+    + 'gains -1[DEF] stat cube.'),
     new Term('~STATUS~', 'Paralyze, burn, leech, etc.'),
     new Term('~SINGLE~', 'Recharges on switch.'),
     new Term('~STUN~', 'Stunned monsters cannot switch.'),
-    new Term('~RECOIL~', 'Recoil damage cannot be prevented and still occurs if the targeted monster counters.'),
+    new Term('~RECOIL~', 'Recoil damage cannot be prevented and still occurs if the enemy monster counters.'),
 ] as const;
 
 const IMAGE_KEYS = ['[ATK]', '[+]', '[B]', '[-]', '[1]', '[2]', '[3]', '[DEF]', '[TA]', '[X]', '[SUCC]', '[FAIL]',
