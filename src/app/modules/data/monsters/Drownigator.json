@@ -117,7 +117,7 @@
   "monsterId": 5,
   "abilityName": "Panic Attack",
   "monsterName": "Drownigator",
-  "abilityText": "When this monster enters play, the opponent discards a card at random.",
+  "abilityText": "When this monster enters play, the opponent discards a card at random.~ENTER~",
   "hp": 9,
   "complexity": 1,
   "role": "Tricky"

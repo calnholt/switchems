@@ -67,7 +67,7 @@
       "buff": 0
     },
     {
-      "abilityName": "Roost",
+      "abilityName": "Scavenge",
       "abilityText": "This monster heals [HP] equal to your speed minus the enemy's speed. If the opponent selected a non-monster action this turn, heal 3[HP] instead. <b>Single use.</b> ~SINGLE~",
       "element": "Death",
       "modifiers": [
@@ -95,10 +95,12 @@
       "critFlg": true
     },
     {
-      "buffName": "Beak Drill",
-      "timing": "Pre-Actions",
-      "buffText": "If the enemy monster used a maneuver cube this turn, your opponent loses an additional maneuver cube.",
-      "critFlg": true
+      "buffName": "Recoil",
+      "timing": "Post Actions",
+      "buffText": "[-]: Deal 1[ATK] to the enemy monster for each  card your opponent discarded and used as buffs this turn.",
+      "flipEventText": "Deal 1[ATK] to your active monster.",
+      "critFlg": false,
+      "flipEventFlg": true
     },
     {
       "buffName": "Bigger Rocs",
@@ -116,7 +118,7 @@
   "monsterId": 9,
   "abilityName": "Wing Clip",
   "monsterName": "Americaw",
-  "abilityText": "When this monster enters play, the enemy monster gains -1[SPD] stat cubes.",
+  "abilityText": "When this monster enters play, the enemy monster gains -1[SPD] stat cubes.~ENTER~",
   "hp": 8,
   "complexity": 2,
   "role": "Assassin"
