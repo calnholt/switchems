@@ -14,8 +14,11 @@
     <div class="text-container">
       <span [innerHTML]="getAbilityText(buff.buffText, false)" class="buff-text"></span>
     </div>
-    <div *ngIf="buff.flipEventFlg" class="text-container">
-      <span [innerHTML]="getAbilityText(buff.flipEventText, true)" class="buff-text"></span>
+    <div *ngIf="buff.flipEventFlg" class="text-container flip">
+      <div class="exclamation-mark">
+        <div>!</div>
+      </div>
+      <div [innerHTML]="getAbilityText(buff.flipEventText, true)" class="flip-text"></div>
     </div>
     <div class="bottom-container">
       <img *ngIf="buff.critFlg" class="crit-icon" src="{{getSuccessImagePath()}}">

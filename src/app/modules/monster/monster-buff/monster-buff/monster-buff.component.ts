@@ -45,9 +45,6 @@ export class MonsterBuffComponent implements OnInit {
     if (!text) {
       return '';
     }
-    if (isFlipText) {
-      text = `!: ${text}`;
-    }
     return getAbilityText(text, this.TERM_CSS, this.ABILITY_IMG_CSS);
   }
 
