@@ -20,6 +20,7 @@
             position: relative;
             left: 7px;
             padding-top: 9px;
+            min-height: 38px;
             .numeral{
                 font-family: $beastformer;
                 font-size: 38px;
@@ -39,6 +40,7 @@
             text-align: center;
             margin-top: 5px;
             letter-spacing: 0.02em;
+            min-height: 20px;
         }
         .line-container{
             padding-left: 4px;
@@ -63,6 +65,8 @@
                 display: flex;
                 position: absolute;
                 bottom: 60px;
+                width: 100%;
+                min-height: 73px;
             }
             .exclamation-mark{
                 border: 2px black solid;
@@ -70,7 +74,8 @@
                 text-align: center;
                 font-family: $beastformer;
                 font-size: 40px;
-                width: 15%;
+                max-width: 32px;
+                min-width: 32px;
                 background-color: black;
                 color: white;
                 div{
