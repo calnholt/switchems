@@ -86,7 +86,7 @@
       "buffName": "Wishful Strike",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]",
-      "flipEventText": "Put a wish counter on one of your monsters",
+      "flipEventText": "Put a <b>wish</b> counter on one of your monsters",
       "critFlg": true,
       "flipEventFlg": true
     },
@@ -94,23 +94,23 @@
       "buffName": "Wishful Strike",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]",
-      "flipEventText": "Put a wish counter on one of your monsters",
+      "flipEventText": "Put a <b>wish</b> counter on one of your monsters",
       "critFlg": true,
       "flipEventFlg": true
     },
     {
       "buffName": "Wishful Embrace",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +1[DEF] this turn",
-      "flipEventText": "Put a wish counter on one of your monsters",
+      "buffText": "This monster gains +1[DEF].",
+      "flipEventText": "Put a <b>wish</b> counter on one of your monsters",
       "critFlg": true,
       "flipEventFlg": true
     },
     {
       "buffName": "Wishful Embrace",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +1[DEF] this turn",
-      "flipEventText": "Put a wish counter on one of your monsters",
+      "buffText": "This monster gains +1[DEF].",
+      "flipEventText": "Put a <b>wish</b> counter on one of your monsters",
       "critFlg": true,
       "flipEventFlg": true
     }
@@ -119,6 +119,6 @@
   "monsterName": "Steamie",
   "abilityText": "Monsters with <b>wish</b> counters can spend one <b>wish</b> counter to play one additional buff card with any attack action <em>(limit one wish per attack).</em>",
   "hp": 9,
-  "complexity": 3,
+  "complexity": 1,
   "role": "Support"
 }
