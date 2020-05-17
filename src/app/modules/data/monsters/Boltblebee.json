@@ -1,0 +1,127 @@
+{
+    "elements": [
+      "Leaf",
+      "Electric"
+    ],
+    "actions": [
+      {
+        "abilityName": "Swarm",
+        "abilityText": "[1]: This attack gains +1[ATK].<br><br> Do this three times. If one or fewer were successes, the enemy monster gains a <b>paralyze</b> condition. ~PARALYZE~",
+        "element": "Electric",
+        "modifiers": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false,
+        "attack": 2,
+        "speed": 4,
+        "discard": 1,
+        "buff": 0
+      },
+      {
+        "abilityName": "Nectear",
+        "abilityText": "If you have a <b>honey</b> counter behind your player shield, discard it and this monster heals 3[HP].",
+        "element": "Leaf",
+        "modifiers": [
+          0,
+          0,
+          0,
+          4,
+          1,
+          0
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false,
+        "attack": 4,
+        "speed": 6,
+        "discard": 2,
+        "buff": 1
+      },
+      {
+        "abilityName": "Pollinate",
+        "abilityText": "[2]: Gain a <b>honey</b> counter behind your player shield.",
+        "element": "Leaf",
+        "modifiers": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false,
+        "attack": 1,
+        "speed": 3,
+        "draw": 1,
+        "buff": 0
+      },
+      {
+        "abilityName": "Sticky Sting",
+        "abilityText": "This attack gains +1[ATK] for each <b>honey</b> counter you have behind your player shield.",
+        "element": "Electric",
+        "modifiers": [
+          1,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        "auraDuration": 0,
+        "statusFlg": false,
+        "reactionFlg": false,
+        "attack": 1,
+        "speed": 6,
+        "buff": 2
+      }
+    ],
+    "buffs": [
+      {
+        "buffName": "Hunger",
+        "timing": "With Attack",
+        "buffText": "This attack gains +1[ATK]",
+        "flipEventText": "If you have a <b>honey</b> counter behind your player shield, discard it and heal 1[HP].",
+        "critFlg": true,
+        "flipEventFlg": true
+      },
+      {
+        "buffName": "Hunger",
+        "timing": "With Attack",
+        "buffText": "This attack gains +1[ATK]",
+        "flipEventText": "If you have a <b>honey</b> counter behind your player shield, discard it and heal 1[HP].",
+        "critFlg": true,
+        "flipEventFlg": true
+      },
+      {
+        "buffName": "Spring",
+        "timing": "Pre-Actions",
+        "buffText": "This attack gains +2[SPD]",
+        "flipEventText": "Gain a  <b>honey</b> counter behind your player shield if you don't already have one.",
+        "critFlg": false,
+        "flipEventFlg": true
+      },
+      {
+        "buffName": "Spring",
+        "timing": "With Attack",
+        "buffText": "This attack gains +2[SPD]",
+        "flipEventText": "Gain a  <b>honey</b> counter behind your player shield if you don't already have one.",
+        "critFlg": false,
+        "flipEventFlg": true
+      }
+    ],
+    "abilityName": "Pollinator",
+    "monsterName": "Boltblebee",
+    "abilityText": "At the start of the game, place a <b>honey</b> counter behind your player shield. When you select a monster action for any monster, you may select the action using the <b>honey</b> counter. If you do, that monster action gains +3[SPD] with <b>Pre-Action</b> timing, then discard the <b>honey</b> counter.",
+    "hp": 8,
+    "complexity": 3,
+    "role": "Technical"
+  }

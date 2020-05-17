@@ -9,6 +9,7 @@ import { default as Galeaffy } from '../data/monsters/Galeaffy.json';
 import { default as Drownigator } from '../data/monsters/Drownigator.json';
 import { default as Americaw } from '../data/monsters/Americaw.json';
 import { default as Steamie } from '../data/monsters/Steamie.json';
+import { default as Boltblebee } from '../data/monsters/BoltbleBee.json';
 import { ElemType, ELEMENTS, Role, ROLES } from './../../types/dataTypes';
 import { MonsterComplete, Buff, Action } from '../monster/model/monster';
 
@@ -24,6 +25,7 @@ export const loadMonsters = (): Array<MonsterComplete> => {
     let out = new Array<MonsterComplete>();
     const ALL = [
         Americaw,
+        Boltblebee,
         Chargroar,
         Cleansitoad,
         Drownigator,
