@@ -20,7 +20,7 @@ for (let i = 0; i < 2; i++) {
     const b = new Buff();
     b.monsterName = `Standard`;
     b.buffName = `Cant Escape!`;
-    b.timing = `Pre-Action`;
+    b.timing = `Pre-Actions`;
     b.buffText = `Prevent the enemy monster from switching this turn if your opponent selected a switch action.`;
     b.critFlg = true;
     standardBuffArray.push(b);
