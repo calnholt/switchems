@@ -32,7 +32,7 @@ export class ToolbarComponent implements OnInit {
   }
 
   openRulebook() {
-    window.open('https://drive.google.com/file/d/1y8jhDXyy0xhroIRFh_hxbAy2g5MUdQ1R/view', '_blank');
+    window.open('https://drive.google.com/open?id=1Y0YeI9Vpbk1hV7j8d_r5A5i1hkmWXcgg', '_blank');
   }
 
 }
