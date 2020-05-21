@@ -83,7 +83,7 @@
       "reactionFlg": false,
       "speed": 8,
       "draw": 0,
-      "discard": 1,
+      "discard": 0,
       "buff": 0
     }
   ],
