@@ -30,11 +30,11 @@
       "element": "Rock",
       "modifiers": [
         -1,
-        3,
+        1,
         -1,
         0,
         0,
-        3
+        1
       ],
       "auraDuration": 0,
       "statusFlg": false,
@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Shellack",
-      "abilityText": "[1]: This attack gains <strong>flinch</strong>. ~FLINCH~",
+      "abilityText": "This attack deals 2 of <b>recoil</b> to itself.<br>[1]: This attack gains <strong>flinch</strong>. ~FLINCH~~RECOIL~",
       "element": "Rock",
       "modifiers": [
         -1,
@@ -81,11 +81,11 @@
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 1,
+      "attack": 2,
       "speed": 7,
       "draw": 0,
       "discard": 1,
-      "buff": 0
+      "buff": 2
     }
   ],
   "buffs": [
