@@ -26,10 +26,11 @@
     },
     {
       "abilityName": "Rock Smash",
+      "abilityText": "<b>Flinch</b>. ~FLINCH~",
       "element": "Rock",
       "modifiers": [
         -1,
-        3,
+        4,
         -1,
         0,
         0,
@@ -38,15 +39,15 @@
       "auraDuration": null,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 7,
-      "speed": 6,
+      "attack": 4,
+      "speed": 7,
       "draw": 0,
       "discard": 3,
       "buff": 2
     },
     {
       "abilityName": "Vine Whip",
-      "abilityText": "If the targeted monster is <strong>leeched</strong>, this attack gains +4[ATK] and removes a <strong>leech</strong> counter.",
+      "abilityText": "If the enemy monster is <strong>leeched</strong>, this attack gains +4[ATK] and removes the enemy's <strong>leech</strong> counter.",
       "element": "Leaf",
       "modifiers": [
         -1,
