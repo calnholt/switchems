@@ -81,7 +81,7 @@
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 2,
+      "attack": 3,
       "speed": 7,
       "draw": 0,
       "discard": 1,
