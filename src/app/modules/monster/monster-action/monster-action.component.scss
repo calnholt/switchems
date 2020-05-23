@@ -121,6 +121,9 @@
                 .stat-value{
                     font-family: $beastformer;
                     font-size: 40px;
+                    &.unity{
+                        color: white;
+                    }
                 }
                 .stat-icon{
                     max-height: 28px;
