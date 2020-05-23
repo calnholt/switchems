@@ -22,7 +22,7 @@
       </div>
       <div class="stats-container" [ngClass]="{'text-offset':!action.abilityText}">
         <span *ngIf="action.attack" class="stat-container">
-          <span class="stat-value">{{action.attack}}</span>
+          <span class="stat-value" [ngClass]="{'unity':action.unityFlg}">{{action.attack}}</span>
           <img class="stat-icon" src="{{getImagePath('attack')}}">
         </span>
         <span *ngIf="!action.attack" class="stat-container">
@@ -43,7 +43,7 @@
         </span>
         <span class="stat-container">
           <span *ngIf="action.speed" class="stat-container">
-            <span class="stat-value">{{action.speed}}</span>
+            <span class="stat-value" [ngClass]="{'unity':action.unityFlg}">{{action.speed}}</span>
             <img class="stat-icon" src="{{getImagePath('speed')}}">
           </span>
         </span>

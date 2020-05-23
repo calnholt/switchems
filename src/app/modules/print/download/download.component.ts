@@ -4,6 +4,7 @@ import { loadMonsters } from 'src/app/modules/import/json-to-obj';
 import { Component, OnInit } from '@angular/core';
 import { STANDARD_BUFFS } from 'src/app/types/dataTypes';
 import html2canvas from 'html2canvas';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-download',
@@ -18,7 +19,10 @@ export class DownloadComponent implements OnInit {
   statCubeBoard: number = 1;
   boardCount: number = 0;
   timeout: number = 1500;
-  constructor() { }
+  unityFlg = true;
+  constructor(
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     let allMonsters = loadMonsters();
@@ -26,22 +30,27 @@ export class DownloadComponent implements OnInit {
     const allCards = [];
     allMonsters.forEach(m => {
       m['isMonster'] = true;
+      m.unityFlg = this.unityFlg;
       allCards.push(m);
       const ref = Object.assign({}, m);
       ref.referenceFlg = false;
+      ref.unityFlg = this.unityFlg;
       allCards.push(ref);
       m.actions.forEach(a => {
         a['isAction'] = true;
+        a.unityFlg = this.unityFlg;
         allCards.push(a);
       });
       m.buffs.forEach(b => {
         b['isBuff'] = true;
+        b.unityFlg = this.unityFlg;
         allCards.push(b);
       });
     });
     STANDARD_BUFFS.forEach(b => {
       b['isBuff'] = true;
-        allCards.push(b);
+      b.unityFlg = this.unityFlg;
+      allCards.push(b);
     });
     this.allCards = allCards;
     this.currentCard = this.allCards[0];
@@ -84,7 +93,7 @@ export class DownloadComponent implements OnInit {
         if (this.currentCard['isAction']) {
           fileName += ' - ' + (this.currentCard as Action).abilityName;
         } else if (this.currentCard['isBuff']) {
-          fileName += ' - Buff';
+          fileName += ' - ' + (this.currentCard as Buff).buffName;
         }
       } else if ([1].includes(this.boardCount)) {
         fileName = 'Action Board';

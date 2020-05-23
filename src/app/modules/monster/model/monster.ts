@@ -12,6 +12,7 @@ export class Card extends GUI {
     description?: string;
     comments?: string;
     playtestNotes?: string;
+    unityFlg?: boolean;
 }
 
 export class Monster extends Card {

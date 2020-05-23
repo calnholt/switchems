@@ -37,7 +37,8 @@
         </span>
       </div>
       <span class="heart-container">
-        <img class="hp" src="{{getHpIcon()}}">
+        <img *ngIf="!monster.unityFlg" class="hp" src="{{getHpIcon()}}">
+        <img *ngIf="monster.unityFlg" class="hp" src="./assets/images/symbols/heart.png">
       </span>
     </div>
   </div>
