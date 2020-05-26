@@ -55,7 +55,7 @@
                 align-items: center;
                 background-color: black;
                 margin: auto;
-                width: 88%;
+                width: 90%;
                 height: 11%;
                 border-radius: 10px 10px 0px 0px;
                 margin-top: 0.2cm;
@@ -78,14 +78,14 @@
             }
             .ability-text-container{
                 position: relative;
-                top: -5px;
+                top: -13px;
                 display: flex;
                 background-color: hsl(0, 0%, 94%);
                 border: 2px black solid;
                 margin: auto;
                 width: 90%;
                 height:auto;
-                border-radius: 10px;
+                border-radius: 0px 0px 10px 10px;
                 z-index:1;
                 .ability-text{
                     font-family: $helvetica;
@@ -102,18 +102,16 @@
             justify-content: space-evenly;
             align-content: center;
             grid-template-columns: 33.333% 33.333% 33.333%;
-            height: 60px;
+            height: 45px;
             border-radius: 10px;
             background-color: white;
             border: 2px black solid;
-            z-index: 0;
-            top: -18px;
-            width: 88%;
+            z-index: 3 ;
+            top: -9px;
+            width: 94%;
             padding-top: 4px;
             margin-top: 5px;
-            &.text-offset{
-                padding-top:11px;
-            }
+            padding-bottom: 4px;
             .stat-container{
                 display: flex;
                 align-items: center;
@@ -121,6 +119,8 @@
                 .stat-value{
                     font-family: $beastformer;
                     font-size: 40px;
+                    min-width: 25px;
+                    text-align: center;
                     &.unity{
                         color: white;
                     }

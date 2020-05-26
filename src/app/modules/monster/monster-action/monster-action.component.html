@@ -17,10 +17,7 @@
       <div class="ability-name-container">
         <span class="ability-name" [ngClass]="{'name-offset':!action.abilityText}">{{action.abilityName}}</span>
       </div>
-      <div *ngIf="action.abilityText" class="ability-text-container">
-        <div [innerHTML]="getAbilityText()" class="ability-text"></div>
-      </div>
-      <div class="stats-container" [ngClass]="{'text-offset':!action.abilityText}">
+      <div class="stats-container">
         <span *ngIf="action.attack" class="stat-container">
           <span class="stat-value" [ngClass]="{'unity':action.unityFlg}">{{action.attack}}</span>
           <img class="stat-icon" src="{{getImagePath('attack')}}">
@@ -47,6 +44,9 @@
             <img class="stat-icon" src="{{getImagePath('speed')}}">
           </span>
         </span>
+      </div>
+      <div *ngIf="action.abilityText" class="ability-text-container">
+        <div [innerHTML]="getAbilityText()" class="ability-text"></div>
       </div>
       <div class="cards-container">
         <span *ngFor="let imageIcon of getCardIcons()">
