@@ -23,10 +23,6 @@
           <img class="stat-icon" src="{{getImagePath('attack')}}">
         </span>
         <span *ngIf="!action.attack" class="stat-container">
-          <span class="stat-value"></span>
-        </span>
-        <span class="stat-container">
-          <img *ngIf="action.element && !action.auraDuration" class="stat-icon" src="{{getElementImageColorPath()}}">
           <span *ngIf="action.auraDuration" class="stat-container">
             <span class="stat-value">{{action.auraDuration}}</span>
             <img class="stat-icon" src="{{getImagePath('aura')}}">
@@ -37,6 +33,9 @@
           <span *ngIf="action.reactionFlg" class="stat-container">
             <img class="stat-icon" src="{{getImagePath('reaction')}}">
           </span>
+        </span>
+        <span class="stat-container">
+          <img *ngIf="action.element" class="stat-icon" src="{{getElementImageColorPath()}}">
         </span>
         <span class="stat-container">
           <span *ngIf="action.speed" class="stat-container">
