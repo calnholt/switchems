@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Leech Seed",
-      "abilityText": "The targeted monster gains a <strong>leech</strong> condition. ~LEECH~",
+      "abilityText": "The enemy monster gains a <strong>leech</strong> condition. ~LEECH~",
       "element": "Leaf",
       "modifiers": [
         0,
@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Vine Whip",
-      "abilityText": "If the enemy monster is <strong>leeched</strong>, this attack gains +4[ATK] and removes the enemy's <strong>leech</strong> counter.",
+      "abilityText": "If the enemy monster is <strong>leeched</strong>, this attack gains +4[ATK] and removes one <strong>leech</strong> counter from that monster.",
       "element": "Leaf",
       "modifiers": [
         -1,
@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Rock Slide",
-      "abilityText": "[1]: The targeted monster gain -1[ATK] stat cubes.",
+      "abilityText": "[1]: The enemy monster gains -1[ATK] stat cubes.",
       "element": "Rock",
       "modifiers": [
         -1,

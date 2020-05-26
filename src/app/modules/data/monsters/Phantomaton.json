@@ -46,7 +46,7 @@
     },
     {
       "abilityName": "Transfusion",
-      "abilityText": "[1]: The targeted monster gains a <b>leech</b> condition. ~LEECH~",
+      "abilityText": "[1]: The enemy monster gains a <b>leech</b> condition. ~LEECH~",
       "element": "Death",
       "modifiers": [
         0,
