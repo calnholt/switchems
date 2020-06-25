@@ -2,6 +2,9 @@ import { Term, Image } from './../data/data';
 import { ElemType, TERM_CODES, IMAGE_CODES, Css } from './../../types/dataTypes';
 
 export const getAdvantages = (elem: ElemType): number[] => {
+  // fire, water, rock, leaf, elec, death
+  // -1 means the monster takes MORE damage
+  // 1 means resistance
     if (elem === 'Death') {return [0, -1, 1, 1, -1, 0]; }
     if (elem === 'Electric') { return [-1, 1, -1, 0, 0, 1]; }
     if (elem === 'Fire') { return [0, -1, -1, 1, 1, 0]; }
