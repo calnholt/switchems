@@ -5,11 +5,11 @@
   "actions": [
     {
       "abilityName": "Sauna",
-      "abilityText": "[1]: This attack gains +2[ATK] and this monster gains +1[DEF] stat cubes.",
+      "abilityText": "This monster heals 1[HP]. If the enemy monster is <b>burned</b>, this monster heals 2[HP] instead.",
       "element": "Fire",
       "modifiers": [
         0,
-        3,
+        2,
         1,
         -1,
         -1,
@@ -19,9 +19,9 @@
       "statusFlg": false,
       "reactionFlg": false,
       "attack": 2,
-      "speed": 6,
+      "speed": 3,
       "draw": 1,
-      "discard": 1,
+      "discard": 0,
       "buff": 0
     },
     {
@@ -116,7 +116,7 @@
   "monsterId": 2,
   "abilityName": "Heatwave",
   "monsterName": "Flexferno",
-  "abilityText": "At the end of each turn, the enemy monster is dealt 1[ATK]. This damage cannot be prevented.",
+  "abilityText": "At the end of the turn, the enemy monster is dealt 1[ATK]. This damage cannot be prevented.",
   "hp": 8,
   "complexity": 2,
   "role": "Warrior"

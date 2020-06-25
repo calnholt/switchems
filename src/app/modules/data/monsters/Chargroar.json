@@ -117,7 +117,7 @@
   "monsterId": 4,
   "abilityName": "Intimidate",
   "monsterName": "Chargroar",
-  "abilityText": "When this monster enters play, the enemy monster gains -2[ATK] stat cubes.~ENTER~",
+  "abilityText": "When this monster switches in, the enemy monster gains -2[ATK] stat cubes.~SWITCH~",
   "hp": 8,
   "complexity": 1,
   "role": "Assassin"

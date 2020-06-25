@@ -99,13 +99,13 @@
       "critFlg": true
     },
     {
-      "buffName": "Attack Burst",
+      "buffName": "Bubble Burst",
       "timing": "With Attack",
       "buffText": "[1]: This attack gains +3[ATK]",
       "critFlg": false
     },
     {
-      "buffName": "Speed Burst",
+      "buffName": "Surf",
       "timing": "Pre-Actions",
       "buffText": "[1]: This attack gains +3[SPD]",
       "critFlg": false
@@ -114,7 +114,7 @@
   "monsterId": 1,
   "abilityName": "Clear Mind",
   "monsterName": "Cleansitoad",
-  "abilityText": "When this monster enters play, you may shuffle your discard pile into your deck. Then, look at the top three cards of your deck. You may put any number back on top or on the bottom in any order. ~ENTER~",
+  "abilityText": "When this monster switches in, [+]. ~SWITCH~",
   "hp": 12,
   "complexity": 3,
   "role": "Technical"

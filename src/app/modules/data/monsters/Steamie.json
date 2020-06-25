@@ -19,7 +19,7 @@
       "auraDuration": 8,
       "statusFlg": false,
       "reactionFlg": false,
-      "speed": 5,
+      "speed": 8,
       "draw": 1
     },
     {
@@ -37,7 +37,7 @@
       "auraDuration": 8,
       "statusFlg": false,
       "reactionFlg": false,
-      "speed": 5,
+      "speed": 8,
       "draw": 1
     },
     {
@@ -94,7 +94,7 @@
       "buffName": "Wishful Strike",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]",
-      "flipEventText": "Put a <b>wish</b> counter on one of your monsters",
+      "flipEventText": "If your active monster has two or more <b>wish</b> counters, remove them and [+].",
       "critFlg": true,
       "flipEventFlg": true
     },
@@ -110,7 +110,7 @@
       "buffName": "Wishful Embrace",
       "timing": "Pre-Actions",
       "buffText": "This monster gains +1[DEF].",
-      "flipEventText": "Put a <b>wish</b> counter on one of your monsters",
+      "flipEventText": "If your active monster has two or more <b>wish</b> counters, remove them and [+].",
       "critFlg": true,
       "flipEventFlg": true
     }

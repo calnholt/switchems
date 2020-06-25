@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Switcheroo",
-      "abilityText": "[1]: This monster gains +1[SPD].<br><br>Perform a switch action <em>(you still draw a card at the end of the turn).</em>",
+      "abilityText": "[1]: This monster gains +1[SPD].<br><br>Perform a switch action and you may choose to keep up to two stat cubes on your stat cube board <em>(you still perform [1]: Heal 2 [HP]).</em>",
       "element": "Leaf",
       "modifiers": [
         -1,
@@ -117,7 +117,7 @@
   "monsterId": 8,
   "abilityName": "Gusting Winds",
   "monsterName": "Galeaffy",
-  "abilityText": "When this monster switches, you may keep up to three stat cubes on your stat cube board.",
+  "abilityText": "When this monster switches out, the monster switching in gains <br>+1[SPD] cubes.",
   "hp": 10,
   "complexity": 2,
   "role": "Support"

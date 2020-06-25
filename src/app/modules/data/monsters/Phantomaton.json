@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Download",
-      "abilityText": "When the enemy monster switches, that monster is dealt 3[ATK] and discard this aura. If all time counters are removed from this aura, [+] [+].",
+      "abilityText": "When the enemy monster switches, that monster is dealt 3[ATK] and discard this aura. If all time counters are removed from this aura, your active monster gains +2[DEF] stat cubes.",
       "element": "Death",
       "modifiers": [
         0,
@@ -103,7 +103,7 @@
     {
       "buffName": "Refactor",
       "timing": "Pre-Actions",
-      "buffText": "[-] [-]: Attack speeds are reversed this turn and you win all ties (slower moves happen first).",
+      "buffText": "[-] [-]: Attack speeds are reversed this turn and you win all ties <em>(slower moves happen first)</em>.",
       "critFlg": false
     },
     {
