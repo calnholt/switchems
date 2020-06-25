@@ -49,7 +49,7 @@ export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
 const TERM_KEYS = [`~BURN~`, `~SUCCESS~`, `~FLINCH~`, `~PARALYZE~`, `~LEECH~`, `~FATIGUE~`,
-    `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~ENTER~`] as const;
+    `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`] as const;
 export type TermCode = typeof TERM_KEYS[number];
 export const TERM_CODES = [
     new Term(`~BURN~`, `Burned monsters ignore their attack's elemental bonuses and gain -1[ATK] stat cube. `
@@ -65,7 +65,7 @@ export const TERM_CODES = [
     new Term(`~SINGLE~`, `Recharges on switch.`),
     new Term(`~STUN~`, `Stunned monsters cannot perform any actions next turn. Remove at the end of next turn.`),
     new Term(`~RECOIL~`, `Recoil damage cannot be prevented and still occurs if the enemy monster counters.`),
-    new Term(`~ENTER~`, `This ability triggers if this monster is your lead at the start of the game.`),
+    new Term(`~SWITCH~`, `This ability triggers if this monster is your lead at the start of the game.`),
 ] as const;
 
 const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[1]`, `[2]`, `[3]`, `[DEF]`, `[TA]`, `[X]`, `[SUCC]`, `[FAIL]`,
