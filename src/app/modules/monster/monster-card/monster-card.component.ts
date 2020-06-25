@@ -23,40 +23,43 @@ export class MonsterCardComponent implements OnInit {
 
   getEffectivenessArray(monster: MonsterComplete): string[] {
     const arrs = [].concat(monster.elements.map((el: ElemType) => getAdvantages(el)));
-    const totals = [0, 0, 0, 0, 0, 0];
-    arrs.forEach(arr => {arr.forEach((num: number, i: number) => {totals[i] += num; }); });
-    const values = totals.map(num => {
-        if (num !== 0) {
-            return num * -1;
-        } else {
-            return num;
+    let totals = [0, 0, 0, 0, 0, 0];
+    // arrs.forEach(arr => {arr.forEach((num: number, i: number) => {totals[i] += num; }); });
+    if (monster.elements.length === 1) {
+      totals = arrs[0];
+    } else {
+      for (let i = 0; i < 6; i++) {
+        const elemArr = [];
+        for (let j = 0; j < arrs.length; j++) {
+          elemArr.push(arrs[j][i]);
         }
-    });
+        const containsNegative = elemArr.some(e => e < 0);
+        const positives = elemArr.filter(e => e > 0);
+        if (containsNegative) {
+          totals[i] = -1;
+        } else if (positives) {
+          totals[i] = positives.length;
+        } else {
+          totals[i] = 0;
+        }
+      }
+    }
+    
     const out: string[] = [];
-    values.forEach((num: number, i: number) => out.push(this.getEffectivenessSymbol(num)));
+    totals.forEach((num: number, i: number) => out.push(this.getEffectivenessSymbol(num)));
     return out;
   }
-
-  // getEffectivenessSymbol(num: number): string {
-  //   switch (num) {
-  //     case -2: return '--';
-  //     case -1: return '-';
-  //     case 0: return '';
-  //     case 1: return '+';
-  //     case 2: return '++';
-  //   }
-  // }
 
   getEffectivenessSymbol(num: number): string {
     const shield = `<img src="./assets/images/symbols/switch-defense.png" class="shield">`;
     const effective = `<img src="./assets/images/symbols/effective.png" class="effective">`;
     const superEff = `<img src="./assets/images/symbols/super-effective.png" class="effective">`;
     switch (num) {
-      case -2: return `<span class="value">6</span>` + shield;
-      case -1: return '<span class="value">3</span>' + shield;
+      case 2: return `<span class="value">6</span>` + shield;
+      case 1: return '<span class="value">3</span>' + shield;
       case 0: return '';
-      case 1: return effective;
-      case 2: return superEff;
+      case -1: return superEff;
+      case -2: return superEff;
     }
   }
 
