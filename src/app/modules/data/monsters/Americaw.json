@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Scavenge",
-      "abilityText": "This monster heals [HP] equal to your speed minus the enemy's speed. If the opponent selected a non-monster action this turn, heal 3[HP] instead. <b>Single use.</b> ~SINGLE~",
+      "abilityText": "This monster heals [HP] equal to your speed minus the enemy's speed. If the opponent selected a non-monster action this turn, heal 5[HP] instead. <b>Single use.</b> ~SINGLE~",
       "element": "Death",
       "modifiers": [
         0,
@@ -118,7 +118,7 @@
   "monsterId": 9,
   "abilityName": "Wing Clip",
   "monsterName": "Americaw",
-  "abilityText": "When this monster enters play, the enemy monster gains -1[SPD] stat cubes.~ENTER~",
+  "abilityText": "When this monster switches in, the enemy monster gains -2[SPD] stat cubes.~SWITCH~",
   "hp": 8,
   "complexity": 2,
   "role": "Assassin"
