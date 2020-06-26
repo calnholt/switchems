@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Sauna",
-      "abilityText": "This monster heals 1[HP]. If the enemy monster is <b>burned</b>, this monster heals 2[HP] instead.",
+      "abilityText": "[1]: This monster heals 1[HP]. If the enemy monster is <b>burned</b>, this monster heals 2[HP] instead.",
       "element": "Fire",
       "modifiers": [
         0,
@@ -81,7 +81,7 @@
       "auraDuration": 0,
       "statusFlg": true,
       "reactionFlg": false,
-      "speed": 8,
+      "speed": 3,
       "draw": 0,
       "discard": 0,
       "buff": 0
