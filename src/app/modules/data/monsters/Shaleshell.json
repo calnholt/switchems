@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Shellshock",
-      "abilityText": "If this monster has a <b>quake</b> counter on it, remove it and this attack deals +5[ATK].",
+      "abilityText": "If this monster has a <b>quake</b> counter on it, remove it and this attack gains +5[ATK].",
       "element": "Rock",
       "modifiers": [
         -1,

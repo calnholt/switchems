@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Typhoon",
-      "abilityText": "For each buff used that is [SUCC], this attack deals +1[ATK].",
+      "abilityText": "For each buff used that is [SUCC], this attack gains +1[ATK].",
       "element": "Water",
       "modifiers": [
         2,

@@ -116,7 +116,7 @@
   "monsterId": 7,
   "abilityName": "Static Shock",
   "monsterName": "Zappguin",
-  "abilityText": "This monster's attacks deal +1[ATK] for each different status condition the enemy monster has.",
+  "abilityText": "This monster's attacks gain +1[ATK] for each different status condition the enemy monster has.",
   "hp": 9,
   "complexity": 2,
   "role": "Tricky"

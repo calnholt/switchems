@@ -67,7 +67,7 @@
     },
     {
       "abilityName": "Seek and Destroy",
-      "abilityText": "This attack deals +2[ATK] when this monster has a <b>lockdown</b> counter on it.",
+      "abilityText": "This attack gains +2[ATK] when this monster has a <b>lockdown</b> counter on it.",
       "element": "Death",
       "modifiers": [
         0,
