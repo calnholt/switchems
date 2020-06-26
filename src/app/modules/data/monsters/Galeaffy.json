@@ -19,7 +19,7 @@
       "statusFlg": false,
       "reactionFlg": false,
       "attack": 1,
-      "speed": 8,
+      "speed": 7,
       "draw": 0,
       "discard": 1,
       "buff": 0
@@ -39,8 +39,8 @@
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 3,
-      "speed": 7,
+      "attack": 4,
+      "speed": 6,
       "draw": 0,
       "discard": 1,
       "buff": 1
@@ -68,21 +68,21 @@
     },
     {
       "abilityName": "Rot",
-      "abilityText": "<b>I - Pre-Action:</b> If the enemy monster selected an attack action with 6+[SPD], this attack hits first.",
+      "abilityText": "You may choose to discard a <br>+1[SPD] stat cube. If you do, this attack gains +2[ATK]. <b>Single use.</b> ~SINGLE~",
       "element": "Death",
       "modifiers": [
         0,
         -2,
-        4,
-        4,
+        3,
+        3,
         -2,
         0
       ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 2,
-      "speed": 2,
+      "attack": 4,
+      "speed": 7,
       "draw": 0,
       "discard": 2,
       "buff": 0
