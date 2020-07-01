@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Leech Seed",
-      "abilityText": "The enemy monster gains a <strong>leech</strong> condition. ~LEECH~",
+      "abilityText": "<b>Leech</b> ~LEECH~",
       "element": "Leaf",
       "modifiers": [
         0,
@@ -46,8 +46,8 @@
       "buff": 2
     },
     {
-      "abilityName": "Vine Whip",
-      "abilityText": "If the enemy monster is <strong>leeched</strong>, this attack gains +4[ATK] and removes one <strong>leech</strong> counter from that monster.",
+      "abilityName": "Vine Whips",
+      "abilityText": "This attack gains +2[ATK] for each <b>leech</b> counter on the enemy monster and remove all <strong>leech</strong> counters from that monster.",
       "element": "Leaf",
       "modifiers": [
         -1,
@@ -99,7 +99,9 @@
       "buffName": "Mossy Overgrowth",
       "timing": "Pre-Actions",
       "buffText": "This monster gains +4[DEF] this turn",
-      "critFlg": false
+      "flipEventText": "If the enemy monster is <b>leeched</b>, this attack gains <br> +2[ATK].",
+      "critFlg": false,
+      "flipEventFlg": true
     },
     {
       "buffName": "Concussion",
@@ -115,10 +117,10 @@
     }
   ],
   "monsterId": 1,
-  "abilityName": "Thorned Body",
+  "abilityName": "Vineshield",
   "monsterName": "Stallagrowth",
-  "abilityText": "Whenever this monster is dealt damage by a [F] [R] attack, that monster is dealt 2[ATK]. This damage cannot be prevented.",
-  "hp": 14,
+  "abilityText": "When this monster switches in, this monster gains +1[DEF] stat cubes. ~SWITCH~",
+  "hp": 11,
   "complexity": 1,
   "role": "Tank"
 }

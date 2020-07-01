@@ -23,7 +23,7 @@
       "speed": 9,
       "draw": 0,
       "discard": 3,
-      "buff": 1
+      "buff": 0
     },
     {
       "abilityName": "Lights Out",

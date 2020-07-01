@@ -101,7 +101,7 @@
     {
       "buffName": "Wishful Embrace",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +1[DEF].",
+      "buffText": "This monster gains +1[DEF] this turn.",
       "flipEventText": "Put a <b>wish</b> counter on one of your monsters",
       "critFlg": true,
       "flipEventFlg": true
@@ -109,7 +109,7 @@
     {
       "buffName": "Wishful Embrace",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +1[DEF].",
+      "buffText": "This monster gains +1[DEF] this turn.",
       "flipEventText": "If your active monster has two or more <b>wish</b> counters, remove them and [+].",
       "critFlg": true,
       "flipEventFlg": true
@@ -117,7 +117,7 @@
   ],
   "abilityName": "Three Wishes",
   "monsterName": "Steamie",
-  "abilityText": "Monsters with <b>wish</b> counters can spend one <b>wish</b> counter to play one additional buff card with any attack action <em>(limit one wish per attack).</em>",
+  "abilityText": "Monsters with <b>wish</b> counters can spend one <b>wish</b> counter to play one additional buff card with any attack action.<em>(Limit one wish per attack. The <b>wish</b> counter is discarded after reveal, and only if the number of buffs you played exceeds the number of buff icons on the attack.)</em>",
   "hp": 9,
   "complexity": 1,
   "role": "Support"

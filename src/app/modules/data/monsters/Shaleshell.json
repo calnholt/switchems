@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Boulder Bash",
-      "abilityText": "[2]: This attack is successful. ~SUCCESS~<br><br>Put a <b>quake</b> counter on this monster if it doesn't already have one.",
+      "abilityText": "[2]: This attack is successful. <br><br>Put a <b>quake</b> counter on this monster if it doesn't already have one. ~SUCCESS~",
       "element": "Rock",
       "modifiers": [
         -1,
@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Shellack",
-      "abilityText": "This attack deals 2 of <b>recoil</b> to itself.<br>[1]: This attack gains <strong>flinch</strong>. ~FLINCH~~RECOIL~",
+      "abilityText": "<b>Recoil 2</b>[ATK]<br>[1]: This attack gains <strong>flinch</strong>. ~RECOIL~~FLINCH~",
       "element": "Rock",
       "modifiers": [
         -1,
@@ -105,7 +105,9 @@
       "buffName": "Calcify",
       "timing": "Pre-Actions",
       "buffText": "This monster gains +2[DEF] this turn",
-      "critFlg": false
+      "flipEventText": "This monster gains +1[DEF] stat cubes.",
+      "critFlg": false,
+      "flipEventFlg": true
     },
     {
       "buffName": "Calcify",
@@ -119,6 +121,6 @@
   "monsterName": "Shaleshell",
   "abilityText": "When this monster switches in and is hit by a [E] [F] attack, put a <b>quake</b> counter on this monster. <br><br>This monster gains +2[SPD] while it has a <b>quake</b> counter. Removes on switch.",
   "hp": 11,
-  "complexity": 3,
+  "complexity": 2,
   "role": "Warrior"
 }

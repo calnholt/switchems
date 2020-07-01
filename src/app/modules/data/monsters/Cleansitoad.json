@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Typhoon",
-      "abilityText": "For each buff used that is [SUCC], this attack gains +1[ATK].",
+      "abilityText": "[1]: [+] [+], then [-].<br><br>For each buff used that is [SUCC], this attack gains +1[ATK]. If this attack KO's the enemy monster, this monster gains +1[DEF].",
       "element": "Water",
       "modifiers": [
         2,
@@ -18,8 +18,8 @@
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 1,
-      "speed": 3,
+      "attack": 3,
+      "speed": 5,
       "draw": 0,
       "discard": 1,
       "buff": 3
@@ -34,34 +34,36 @@
         -1,
         0,
         0,
-        2
+        1
       ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
       "attack": 1,
-      "speed": 6,
+      "speed": 4,
       "draw": 0,
       "discard": 0,
       "buff": 1
     },
     {
-      "abilityName": "Evaporate",
-      "abilityText": "If this monster would be dealt 4+[ATK] by a single attack this turn, instead the attack is unsuccessful and all buffs used with it are not resolved. Then, [+] [+] and gain +2[DEF] stat cubes. <b>Single use</b>. ~SINGLE~",
-      "element": "Water",
+      "abilityName": "Premonition",
+      "abilityText": "[+], then [-]. For each [FAIL] discarded with this ability, this attack <br>gains +1[ATK].<br><br>[1]: [+] [+], then [-] [-] instead.",
+      "element": "Electric",
       "modifiers": [
+        1,
         0,
         0,
         0,
-        0,
-        0,
+        3,
         0
       ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": true,
+      "reactionFlg": false,
+      "attack": 4,
+      "speed": 6,
       "draw": 0,
-      "discard": 0,
+      "discard": 2,
       "buff": 0
     },
     {
@@ -80,7 +82,7 @@
       "statusFlg": false,
       "reactionFlg": false,
       "speed": 2,
-      "draw": 1,
+      "draw": 0,
       "discard": 0,
       "buff": 0
     }
@@ -96,7 +98,9 @@
       "buffName": "Negate",
       "timing": "Pre-Actions",
       "buffText": "Remove an opponent's team aura if your opponent selected a monster action and your action is faster.",
-      "critFlg": true
+      "flipEventText": "You may choose to add or remove two time counters from any active team aura.",
+      "critFlg": true,
+      "flipEventFlg": true
     },
     {
       "buffName": "Bubble Burst",
@@ -106,7 +110,7 @@
     },
     {
       "buffName": "Surf",
-      "timing": "Pre-Actions",
+      "timing": "With Attack",
       "buffText": "[1]: This attack gains +3[SPD]",
       "critFlg": false
     }
@@ -115,7 +119,7 @@
   "abilityName": "Clear Mind",
   "monsterName": "Cleansitoad",
   "abilityText": "When this monster switches in, [+]. ~SWITCH~",
-  "hp": 12,
+  "hp": 11,
   "complexity": 3,
   "role": "Technical"
 }

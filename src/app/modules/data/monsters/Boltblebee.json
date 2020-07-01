@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Swarm",
-      "abilityText": "[1]: This attack gains +1[ATK].<br><br> Do this three times. If one or fewer were successes, the enemy monster gains a <b>paralyze</b> condition. ~PARALYZE~",
+      "abilityText": "[1]: This attack gains +1[ATK].<br><br> Do this three times. If one or fewer were successes,  <b>paralyze</b>. ~PARALYZE~",
       "element": "Electric",
       "modifiers": [
         1,
@@ -89,15 +89,15 @@
       "buffName": "Hunger",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]",
-      "flipEventText": "If you have a <b>honey</b> counter behind your player shield, discard it and heal 1[HP].",
+      "flipEventText": "",
       "critFlg": true,
-      "flipEventFlg": true
+      "flipEventFlg": false
     },
     {
       "buffName": "Hunger",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]",
-      "flipEventText": "If you have a <b>honey</b> counter behind your player shield, discard it and heal 1[HP].",
+      "flipEventText": "If you have a <b>honey</b> counter behind your player shield, discard it and heal 2[HP].",
       "critFlg": true,
       "flipEventFlg": true
     },
@@ -105,17 +105,17 @@
       "buffName": "Spring",
       "timing": "Pre-Actions",
       "buffText": "This attack gains +2[SPD]",
-      "flipEventText": "Gain a  <b>honey</b> counter behind your player shield if you don't already have one.",
+      "flipEventText": "Gain a  <b>honey</b> counter behind your player shield.",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Spring",
-      "timing": "With Attack",
+      "timing": "Pre-Actions",
       "buffText": "This attack gains +2[SPD]",
-      "flipEventText": "Gain a  <b>honey</b> counter behind your player shield if you don't already have one.",
+      "flipEventText": "",
       "critFlg": false,
-      "flipEventFlg": true
+      "flipEventFlg": false
     }
   ],
   "abilityName": "Pollinator",

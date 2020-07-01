@@ -25,8 +25,8 @@
       "buff": 0
     },
     {
-      "abilityName": "Fire Blast",
-      "abilityText": "",
+      "abilityName": "Inferno",
+      "abilityText": "<b>Recoil 2</b>[ATK] ~RECOIL~",
       "element": "Fire",
       "modifiers": [
         0,
@@ -42,12 +42,12 @@
       "attack": 9,
       "speed": 5,
       "draw": 0,
-      "discard": 3,
+      "discard": 4,
       "buff": 1
     },
     {
       "abilityName": "Scorch",
-      "abilityText": "[1]: This attack gains +5[ATK].",
+      "abilityText": "[1]: This attack gains +4[ATK].",
       "element": "Fire",
       "modifiers": [
         0,
@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Burn",
-      "abilityText": "[2]: The enemy monster gains a <b>burn</b> condition. ~BURN~",
+      "abilityText": "[2]: <b>Burn</b> ~BURN~",
       "element": "Fire",
       "modifiers": [
         0,
@@ -91,14 +91,16 @@
     {
       "buffName": "Burn",
       "timing": "With Attack",
-      "buffText": "[-] & [2]: The enemy monster gains a <b>burn</b> condition. ~BURN~",
+      "buffText": "[1]: The enemy monster gains a <b>burn</b> condition. ~BURN~",
       "critFlg": true
     },
     {
       "buffName": "Melt Away",
       "timing": "Post Actions",
-      "buffText": "[-] [-]: Remove all negative stat cubes from your stat cube board and all status conditions  from all of your monsters <em>(including ones not in play)</em>.",
-      "critFlg": false
+      "buffText": "[-]: Remove all negative stat cubes from your stat cube board and all status conditions  from all of your monsters <em>(Including ones not in play)</em>.",
+      "flipEventText": "You may choose to remove a negative stat cube from your stat cube board.",
+      "critFlg": false,
+      "flipEventFlg": true
     },
     {
       "buffName": "Sear",
@@ -118,6 +120,6 @@
   "monsterName": "Flexferno",
   "abilityText": "At the end of the turn, the enemy monster is dealt 1[ATK]. This damage cannot be prevented.",
   "hp": 8,
-  "complexity": 2,
+  "complexity": 1,
   "role": "Warrior"
 }

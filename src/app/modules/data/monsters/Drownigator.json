@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Fatigue",
-      "abilityText": "The enemy monster gains a <b>fatigue</b> condition. ~FATIGUE~",
+      "abilityText": "<b>Fatigue</b> ~FATIGUE~",
       "element": "Death",
       "modifiers": [
         0,
@@ -99,7 +99,9 @@
       "buffName": "Disarm",
       "timing": "Pre-Actions",
       "buffText": "The enemy monster gains -1[ATK] stat cubes",
-      "critFlg": false
+      "flipEventText": "If your opponent has more cards in their hand than you, that player discards one card at random.",
+      "critFlg": false,
+      "flipEventFlg": true
     },
     {
       "buffName": "Tremble",

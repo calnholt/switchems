@@ -18,7 +18,7 @@
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 3,
+      "attack": 4,
       "speed": 5,
       "draw": 0,
       "discard": 2,
@@ -29,12 +29,12 @@
       "abilityText": "[1]: This attack gains <b>flinch</b>. ~FLINCH~",
       "element": "Water",
       "modifiers": [
-        3,
+        1,
         -1,
         -1,
         0,
         0,
-        3
+        2
       ],
       "auraDuration": 0,
       "statusFlg": false,
@@ -47,28 +47,28 @@
     },
     {
       "abilityName": "Vortex",
-      "abilityText": "If the enemy monster has a status condition, you may play an additional [B] with this action. ~STATUS~",
+      "abilityText": "If the enemy monster has a status condition, you may choose to play two additional [B] with this action. ~STATUS~",
       "element": "Electric",
       "modifiers": [
         2,
         0,
         0,
         -2,
-        4,
+        2,
         -2
       ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
       "attack": 2,
-      "speed": 3,
+      "speed": 7,
       "draw": 0,
       "discard": 0,
       "buff": 1
     },
     {
       "abilityName": "Paralyze",
-      "abilityText": "[2]: The enemy monster gains a <b>paralyze</b> condition. ~PARALYZE~",
+      "abilityText": "<b>Paralyze</b> ~PARALYZE~",
       "element": "Electric",
       "modifiers": [
         0,
@@ -81,7 +81,7 @@
       "auraDuration": 0,
       "statusFlg": true,
       "reactionFlg": false,
-      "speed": 7,
+      "speed": 2,
       "draw": 1,
       "discard": 0,
       "buff": 0
@@ -89,27 +89,29 @@
   ],
   "buffs": [
     {
-      "buffName": "Zap",
+      "buffName": "Prepared Zap",
       "timing": "With Attack",
-      "buffText": "[-] & [1]: The enemy monster gains a paralyze condition. ~PARALYZE~",
+      "buffText": "[-]: The enemy monster gains a paralyze condition. ~PARALYZE~",
       "critFlg": true
     },
     {
-      "buffName": "Zap",
+      "buffName": "Impulsive Zap",
       "timing": "With Attack",
-      "buffText": "[-] & [1]: The enemy monster gains a paralyze condition. ~PARALYZE~",
+      "buffText": "[1]: The enemy monster gains a paralyze condition. ~PARALYZE~",
+      "flipEventText": "The enemy monster gains -1[SPD] stat cubes.",
+      "critFlg": false,
+      "flipEventFlg": true
+    },
+    {
+      "buffName": "Retaliate",
+      "timing": "With Attack",
+      "buffText": "This attack gains +3[ATK] if the enemy monster's action is faster than yours. <em>(This does nothing if the enemy monster does not perform a monster action)</em>.",
       "critFlg": false
     },
     {
       "buffName": "Retaliate",
       "timing": "With Attack",
-      "buffText": "This attack gains +3[ATK] if the enemy monster's action is faster than yours <em>(does nothing if enemy monster does not perform a monster action)</em>.",
-      "critFlg": false
-    },
-    {
-      "buffName": "Retaliate",
-      "timing": "With Attack",
-      "buffText": "This attack gains +3[ATK] if the enemy monster's action is faster than yours <em>(does nothing if enemy monster does not perform a monster action)</em>.",
+      "buffText": "This attack gains +3[ATK] if the enemy monster's action is faster than yours. <em>(This does nothing if the enemy monster does not perform a monster action)</em>.",
       "critFlg": true
     }
   ],
@@ -118,6 +120,6 @@
   "monsterName": "Zappguin",
   "abilityText": "This monster's attacks gain +1[ATK] for each different status condition the enemy monster has.",
   "hp": 9,
-  "complexity": 2,
+  "complexity": 1,
   "role": "Tricky"
 }
