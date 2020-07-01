@@ -1,5 +1,5 @@
 <div id="action-card">
-  <div class="card-container">
+  <div class="card-container {{action.element.toLowerCase()}}">
     <div *ngIf="action.modifiers">
       <div class="elements-container">
         <span *ngFor="let modifier of action.modifiers; index as i">

@@ -4,10 +4,11 @@
 #monster-card{
     .card-container{
         position: relative;
-        border: black 2px solid;
+        border: rgb(216, 216, 216) 2px solid;
+        border-radius: 11px;
         height: $card-height;
         width: $card-width;
-        background-color: white;
+        background-color: #ffffff;
         .elements-container{
             display: grid;
             grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
@@ -158,12 +159,4 @@
     .term-img{
         max-height: 15px;
     }
-}
-
-.term{
-    font-style: italic;
-    font-size: 11px;
-}
-.term-img{
-    max-height: 15px;
 }

@@ -4,7 +4,8 @@
 #buff-card{
     .card-container{
         position: relative;
-        border: black 2px solid;
+        border: rgb(216, 216, 216) 2px solid;
+        border-radius: 11px;
         height: $card-height;
         width: $card-width;
         background-color: white;
@@ -59,14 +60,14 @@
             }
         }
         .text-container{
-            padding: 30px 10px 0px 10px;
+            padding: 10px 10px 0px 10px;
 
             &.flip{
                 display: flex;
                 position: absolute;
                 bottom: 60px;
                 width: 100%;
-                min-height: 73px;
+                min-height: 55px;
             }
             .exclamation-mark{
                 border: 2px black solid;
@@ -131,14 +132,7 @@
             }
         }
     }
-    .term{
-        font-style: italic;
-        font-size: 11px;
-    }
-    
-    .term-img{
-        max-height: 15px;
-    }
+
     tbody tr td:first-child{
         border-radius: 0.6em 0 0 0.6em;
     }

@@ -17,7 +17,11 @@ $green: #549d1a;
 .term{
     font-style: italic;
     font-size: 11px;
+    display: inline-block;
+    line-height: 14px;
+    padding-top: 5px;
 }
+
 .term-img{
     max-height: 15px;
 }
