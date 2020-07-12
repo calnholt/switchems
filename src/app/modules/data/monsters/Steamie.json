@@ -5,8 +5,8 @@
   ],
   "actions": [
     {
-      "abilityName": "Chilly Mists",
-      "abilityText": "Your opponent's [W] [E] [F] attacks deal -1[ATK].",
+      "abilityName": "Adaptive Mists",
+      "abilityText": "If the discarded card is [SUCC], put a <b>water</b> counter on this. Otherwise put a <b>fire</b> counter on this. <br><br>If <b>water</b> counter: enemy monster [W] [E] [F] attacks deal -2[ATK]<br><br>If <b>fire</b> counter: enemy monster<br> [L] [R] [S] attacks deal -2[ATK]",
       "element": "Water",
       "modifiers": [
         0,
@@ -16,48 +16,53 @@
         0,
         0
       ],
-      "auraDuration": 8,
+      "auraDuration": 7,
       "statusFlg": false,
       "reactionFlg": false,
-      "speed": 8,
-      "draw": 1
+      "speed": 7,
+      "draw": 2,
+      "discard": 1,
+      "buff": 0
     },
     {
-      "abilityName": "Sizzling Mists",
-      "abilityText": "Your opponent's [L] [R] [S] attacks deal -1[ATK].",
-      "element": "Fire",
+      "abilityName": "Steampowered",
+      "abilityText": "If <b>Adaptive Mists</b> is active, this attack gains:<br><br>[1]: Remove two time counters from <b>Adaptive Mists</b> and this atack gains +2[ATK].",
+      "element": "Water",
       "modifiers": [
+        2,
         0,
         0,
         0,
         0,
-        0,
-        0
+        2
       ],
-      "auraDuration": 8,
+      "auraDuration": null,
       "statusFlg": false,
       "reactionFlg": false,
-      "speed": 8,
-      "draw": 1
+      "attack": 5,
+      "speed": 4,
+      "draw": 0,
+      "discard": 2,
+      "buff": 1
     },
     {
       "abilityName": "Torrential Blessing",
       "abilityText": "Put a <b>wish</b> counter on one of your other monsters.",
       "element": "Water",
       "modifiers": [
-        2,
+        1,
         -1,
         -1,
         0,
         0,
-        2
+        1
       ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 3,
+      "attack": 2,
       "speed": 3,
-      "discard": 1,
+      "discard": 0,
       "buff": 1
     },
     {
@@ -66,8 +71,8 @@
       "element": "Fire",
       "modifiers": [
         0,
-        2,
-        2,
+        1,
+        1,
         -1,
         -1,
         0
@@ -75,10 +80,10 @@
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 3,
-      "speed": 3,
+      "attack": 2,
+      "speed": 8,
       "discard": 1,
-      "buff": 1
+      "buff": 3
     }
   ],
   "buffs": [
