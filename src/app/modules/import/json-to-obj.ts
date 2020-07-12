@@ -44,7 +44,7 @@ export const loadMonsters = (): Array<MonsterComplete> => {
         if (!json.abilityName) {
             return null;
         }
-        const MONSTER_PROPERTIES = ['monsterId', 'abilityName', 'monsterName', 'abilityText', 'hp', 'complexity'];
+        const MONSTER_PROPERTIES = ['monsterId', 'abilityName', 'monsterName', 'abilityText', 'hp', 'complexity', 'promiseDescription'];
         MONSTER_PROPERTIES.forEach(p => monster[p] = json[p]);
         const elements = Array<ElemType>();
         json.elements.forEach(element => elements.push(getElemType(element)));

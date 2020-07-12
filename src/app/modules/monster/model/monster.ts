@@ -23,6 +23,7 @@ export class Monster extends Card {
     role: Role;
     referenceFlg?: boolean = true;
     complexity: number;
+    promiseDescription?: string;
 }
 
 export class MonsterComplete extends Monster {
