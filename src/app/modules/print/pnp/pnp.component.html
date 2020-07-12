@@ -6,11 +6,11 @@
           [monster]="card">
         </monster-card>
       </span>
-      <span *ngIf="card.isMonster && card.referenceFlg">
+      <!-- <span *ngIf="card.isMonster && card.referenceFlg">
         <monster-reference
           [monster]="card">
         </monster-reference>
-      </span>
+      </span> -->
       <span *ngIf="card.isAction">
         <monster-action
           [action]="card">

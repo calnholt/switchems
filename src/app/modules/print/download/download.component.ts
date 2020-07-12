@@ -19,7 +19,7 @@ export class DownloadComponent implements OnInit {
   statCubeBoard: number = 1;
   boardCount: number = 0;
   timeout: number = 1500;
-  unityFlg = true;
+  unityFlg = false;
   constructor(
     private route: ActivatedRoute
   ) {}

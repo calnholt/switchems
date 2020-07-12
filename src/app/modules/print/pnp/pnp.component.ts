@@ -29,12 +29,13 @@ export class PnpComponent implements OnInit {
     allMonsters.forEach(m => {
       if (m.isSelected) {
         m['isMonster'] = true;
+        m.referenceFlg = false;
         allCards.push(m);
-          if (m.referenceFlg) {
-            const ref: Monster = Object.assign({}, m);
-            ref.referenceFlg = false;
-            allCards.push(ref);
-          }
+          // if (m.referenceFlg) {
+          //   const ref: Monster = Object.assign({}, m);
+          //   ref.referenceFlg = false;
+          //   allCards.push(ref);
+          // }
       }
       m.actions.forEach(a => {
         if (a.isSelected) {
