@@ -78,7 +78,7 @@
                 width: 90%;
                 height: 11%;
                 border-radius: 10px 10px 0px 0px;
-                margin-top: 0.2cm;
+                margin-top: 3px;
                 padding-top: 3px;
                 z-index: 1;
                 position: relative;
@@ -107,6 +107,7 @@
                 height:auto;
                 border-radius: 0px 0px 10px 10px;
                 z-index:1;
+                box-shadow: 0px 3px 18px -1px black;
                 .ability-text{
                     font-family: $helvetica;
                     font-size: 12px;
@@ -154,11 +155,28 @@
             display: flex;
             justify-content: center;
             position: absolute;
-            background: #e3e3e3;
             padding: 6px;
             width: 100%;
             bottom: 21px;
             min-height: 42px;
+            &.fire{
+                background: $red;
+            }
+            &.water{
+                background: $blue;
+            }
+            &.leaf{
+                background: $green;
+            }
+            &.electric{
+                background: $yellow;
+            }
+            &.rock{
+                background: $brown;
+            }
+            &.death{
+                background: $purple;
+            }
             .card-icon{
                 max-height: 30px;
                 padding: 0px 3px 0px 3px;
@@ -180,7 +198,4 @@
 .term{
     font-style: italic;
     font-size: 11px;
-}
-.term-img{
-    max-height: 15px;
 }

@@ -47,7 +47,7 @@
       <div *ngIf="action.abilityText" class="ability-text-container">
         <div [innerHTML]="getAbilityText()" class="ability-text"></div>
       </div>
-      <div class="cards-container">
+      <div class="cards-container {{action.element.toLowerCase()}}">
         <span *ngFor="let imageIcon of getCardIcons()">
           <img class="card-icon" src="{{getImagePathFromImageCode(imageIcon)}}">
         </span>
