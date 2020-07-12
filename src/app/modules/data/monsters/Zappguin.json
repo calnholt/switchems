@@ -103,9 +103,9 @@
       "flipEventFlg": true
     },
     {
-      "buffName": "Retaliate",
+      "buffName": "High Voltage",
       "timing": "With Attack",
-      "buffText": "This attack gains +3[ATK] if the enemy monster's action is faster than yours. <em>(This does nothing if the enemy monster does not perform a monster action)</em>.",
+      "buffText": "[+]<br> This attack gains <b>recoil 1</b>. If the enemy monster is <b>paralzyed</b>, that monster flips only [1] for its <b>paralzyed</b> condition this turn, ignoring of any other modifiers. ~RECOIL~.",
       "critFlg": false
     },
     {
@@ -121,5 +121,6 @@
   "abilityText": "This monster's attacks gain +1[ATK] for each different status condition the enemy monster has.",
   "hp": 9,
   "complexity": 1,
-  "role": "Tricky"
+  "role": "Tricky",
+  "promiseDescription": "Zappguin wants nothing more than to cancel its enemy's turns. This requires a little bit of work because Zappguin is on the slower side. But a carefully timed Zap from a teammate can setup Zappguin wonderfully."
 }

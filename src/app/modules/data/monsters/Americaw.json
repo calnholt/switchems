@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Tactical Nuke",
-      "abilityText": "<B>Recoil 2</b>[ATK]~RECOIL~",
+      "abilityText": "<B>Recoil 2</b>~RECOIL~",
       "element": "Death",
       "modifiers": [
         0,
@@ -27,7 +27,7 @@
     },
     {
       "abilityName": "Roc Rock",
-      "abilityText": "<B>Recoil 1</b>[ATK] ~RECOIL~",
+      "abilityText": "<B>Recoil 1</b> ~RECOIL~",
       "element": "Rock",
       "modifiers": [
         -3,
@@ -121,5 +121,6 @@
   "abilityText": "When this monster switches in, the enemy monster gains -2[SPD] stat cubes.~SWITCH~",
   "hp": 9,
   "complexity": 2,
-  "role": "Assassin"
+  "role": "Assassin",
+  "promiseDescription": "Americaw is reckless assassin that requires finesse. Knowing how to position Americaw to maximize Scavenge and Iron Defense is key to its survival."
 }

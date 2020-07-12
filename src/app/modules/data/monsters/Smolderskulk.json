@@ -64,7 +64,7 @@
       },
       {
         "abilityName": "Reciprocity",
-        "abilityText": "At the end of the turn, this monster heals X[HP], where X is equal to triple the amount of [ATK] dealt to the enemy monster from <b>torment</b> counters this turn.  <b>Single use</b>.~SINGLE~",
+        "abilityText": "This monster heals X[HP], where X is equal to triple the number of <b>torment</b> counters on the enemy monster's selected monster action this turn, if any.  <b>Single use</b>.~SINGLE~",
         "element": "Fire",
         "modifiers": [
           0,
@@ -85,20 +85,18 @@
     ],
     "buffs": [
       {
-        "buffName": "Haunting Visions",
+        "buffName": "Haunting Shroud",
         "timing": "Post Actions",
         "buffText": "This monster gains +1[DEF] stat cubes",
-        "flipEventText": "Put a <b>torment</b> counter on the enemy monster's selected monster action, if any.",
+        "flipEventText": "Put a <b>torment</b> counter on each of the enemy's monster actions.",
         "critFlg": false,
         "flipEventFlg": true
       },
       {
-        "buffName": "Haunting Visions",
+        "buffName": "Dense Smoke",
         "timing": "Post Actions",
         "buffText": "This monster gains +1[DEF] stat cubes",
-        "flipEventText": "Put a <b>torment</b> counter on the enemy monster's selected monster action, if any.",
-        "critFlg": false,
-        "flipEventFlg": true
+        "critFlg": false
       },
       {
         "buffName": "Midnight Skulk",
@@ -119,7 +117,7 @@
     ],
     "abilityName": "Torment",
     "monsterName": "Smolderskulk",
-    "abilityText": "At the end of the turn, put two <b>torment</b> counters on the enemy monster's selected action, if any. <br>Monster actions with <b>torment</b> counters have <b>recoil X[ATK]</b>, where X is the number of <b>torment</b> counters on the action. <em>(Remove one <b>torment</b> counter from each action on enemy switch.)</em>",
+    "abilityText": "At the end of the turn, put two <b>torment</b> counters on the enemy monster's selected action, if any. <br>Monster actions with <b>torment</b> counters have <b>recoil X</b>, where X is the number of <b>torment</b> counters on the action. <em>(Remove one <b>torment</b> counter from each action on enemy switch.)</em>",
     "hp": 10,
     "complexity": 3,
     "role": "Tricky"

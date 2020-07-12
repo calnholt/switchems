@@ -44,7 +44,7 @@
       "speed": 6,
       "draw": 0,
       "discard": 0,
-      "buff": 1
+      "buff": 2
     },
     {
       "abilityName": "Hypercharge",
@@ -91,8 +91,8 @@
   "buffs": [
     {
       "buffName": "Energize",
-      "timing": "With Attack",
-      "buffText": "This attack gains +2[ATK]",
+      "timing": "Pre-Actions",
+      "buffText": "This attack gains +1[ATK] stat cubes",
       "critFlg": false
     },
     {
@@ -118,7 +118,8 @@
   "abilityName": "Intimidate",
   "monsterName": "Chargroar",
   "abilityText": "When this monster switches in, the enemy monster gains -2[ATK] stat cubes.~SWITCH~",
-  "hp": 8,
+  "hp": 7,
   "complexity": 1,
-  "role": "Assassin"
+  "role": "Assassin",
+  "promiseDescription": "Chargroar is the ultimate assassin. Fast, strong attacks, with ways to increase its attack strength with stat cubes. Chargroar's buffs are unconditional and incredibly efficient. Since Chargroar is easy to KO, there is little room error."
 }

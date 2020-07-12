@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Shellack",
-      "abilityText": "<b>Recoil 2</b>[ATK]<br>[1]: This attack gains <strong>flinch</strong>. ~RECOIL~~FLINCH~",
+      "abilityText": "<b>Recoil 2</b><br>[1]: This attack gains <strong>flinch</strong>. ~RECOIL~~FLINCH~",
       "element": "Rock",
       "modifiers": [
         -1,
