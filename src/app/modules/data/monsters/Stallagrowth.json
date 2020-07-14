@@ -98,8 +98,8 @@
     {
       "buffName": "Mossy Overgrowth",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +4[DEF] this turn",
-      "flipEventText": "If the enemy monster is <b>leeched</b>, this attack gains <br> +2[ATK].",
+      "buffText": "This monster gains +3[DEF] this turn",
+      "flipEventText": "If the enemy monster is <b>leeched</b>, the enemy monster suffers +2[ATK].",
       "critFlg": false,
       "flipEventFlg": true
     },
@@ -112,7 +112,7 @@
     {
       "buffName": "Concussion",
       "timing": "With Attack",
-      "buffText": "[2]: This attack gains <strong>flinch</strong>. ~FLINCH~",
+      "buffText": "[2]: This attack gains <b>flinch</b>. ~FLINCH~",
       "critFlg": true
     }
   ],
