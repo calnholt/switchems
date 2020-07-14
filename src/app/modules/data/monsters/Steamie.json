@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Steampowered",
-      "abilityText": "If <b>Adaptive Mists</b> is active, this attack gains:<br><br>[1]: Remove two time counters from <b>Adaptive Mists</b> and this atack gains +2[ATK].",
+      "abilityText": "If <b>Adaptive Mists</b> is active, remove two time counters from it, and this attack gains:<br><br>[1]: +3[ATK]",
       "element": "Water",
       "modifiers": [
         2,
@@ -39,7 +39,7 @@
       "auraDuration": null,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 5,
+      "attack": 4,
       "speed": 4,
       "draw": 0,
       "discard": 2,
@@ -80,8 +80,8 @@
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 2,
-      "speed": 8,
+      "attack": 3,
+      "speed": 5,
       "discard": 1,
       "buff": 3
     }
