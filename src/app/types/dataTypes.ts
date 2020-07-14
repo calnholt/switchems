@@ -55,7 +55,8 @@ export const TERM_CODES = [
     new Term(`~BURN~`, `Burned monsters ignore their attack's elemental bonuses and gain -1[ATK] stat cubes. `
      + `If the monster is [L] [R] [S], that monster gains an additional -1[ATK] stat cubes.`),
     new Term(`~SUCCESS~`, `Unsuccessful actions do nothing.`),
-    new Term(`~FLINCH~`, `Prevent the enemy monster's action if this action is faster speed.`),
+    new Term(`~FLINCH~`, `Prevent the enemy monster's action if this action is faster speed. `
+        + `If this would be gained from [X] but this action is slower, do not flip.`),
     new Term(`~PARALYZE~`, `Paralyzed monsters gain -2[SPD] stat cubes and all of their monster actions have  `
         + `[2]: This action is successful. Ignore all flip events for these flips.`),
     new Term(`~LEECH~`, `Leeched monsters are dealt 1[ATK] at the end of each turn, and your active monster heals `
@@ -65,7 +66,7 @@ export const TERM_CODES = [
     new Term(`~STATUS~`, `Paralyze, burn, leech, etc.`),
     new Term(`~SINGLE~`, `Recharges on switch.`),
     new Term(`~STUN~`, `Stunned monsters cannot perform any actions next turn. Remove at the end of next turn.`),
-    new Term(`~RECOIL~`, `This monster deals this amount of damage to itself. `
+    new Term(`~RECOIL~`, `This monster suffers this amount of recoil damage to itself. `
      + `This damage cannot be prevented and still occurs if the enemy monster counters.`),
     new Term(`~SWITCH~`, `This ability triggers if this monster is your lead at the start of the game.`),
 ] as const;
