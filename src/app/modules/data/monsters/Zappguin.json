@@ -90,7 +90,7 @@
   "buffs": [
     {
       "buffName": "Prepared Zap",
-      "timing": "With Attack",
+      "timing": "Pre-Actions",
       "buffText": "[-]: The enemy monster gains a paralyze condition. ~PARALYZE~",
       "critFlg": true
     },
@@ -104,7 +104,7 @@
     },
     {
       "buffName": "High Voltage",
-      "timing": "With Attack",
+      "timing": "Pre-Actions",
       "buffText": "[+]<br> This attack gains <b>recoil 1</b>. If the enemy monster is <b>paralzyed</b>, that monster flips only [1] for its <b>paralzyed</b> condition this turn, ignoring of any other modifiers. ~RECOIL~.",
       "critFlg": false
     },
@@ -118,7 +118,7 @@
   "monsterId": 7,
   "abilityName": "Static Shock",
   "monsterName": "Zappguin",
-  "abilityText": "This monster's attacks gain +1[ATK] for each different status condition the enemy monster has.",
+  "abilityText": "This monster's attacks gain +1[ATK] for each different status condition the enemy monster has.~STATUS~",
   "hp": 9,
   "complexity": 1,
   "role": "Tricky",
