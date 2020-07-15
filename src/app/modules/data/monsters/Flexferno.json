@@ -4,8 +4,8 @@
   ],
   "actions": [
     {
-      "abilityName": "Sauna",
-      "abilityText": "[1]: This monster heals 1[HP]. If the enemy monster is <b>burned</b>, this monster heals 2[HP] instead.",
+      "abilityName": "No Pain, No Gain",
+      "abilityText": "<b>Recoil 1[ATK]</b><br><br>[1]: [+]",
       "element": "Fire",
       "modifiers": [
         0,
@@ -18,15 +18,15 @@
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 2,
+      "attack": 1,
       "speed": 3,
-      "draw": 1,
+      "draw": 0,
       "discard": 0,
-      "buff": 0
+      "buff": 3
     },
     {
       "abilityName": "Inferno",
-      "abilityText": "<b>Recoil 2</b> ~RECOIL~",
+      "abilityText": "[1]: <b>Recoil 2[ATK]</b> ~RECOIL~",
       "element": "Fire",
       "modifiers": [
         0,
@@ -81,7 +81,7 @@
       "auraDuration": 0,
       "statusFlg": true,
       "reactionFlg": false,
-      "speed": 3,
+      "speed": 5,
       "draw": 0,
       "discard": 0,
       "buff": 0
@@ -89,9 +89,9 @@
   ],
   "buffs": [
     {
-      "buffName": "Burn",
+      "buffName": "Impulsive Burn",
       "timing": "With Attack",
-      "buffText": "[1]: The enemy monster gains a <b>burn</b> condition. ~BURN~",
+      "buffText": "[1]: <b>Burn</b>~BURN~",
       "critFlg": true
     },
     {
@@ -103,23 +103,23 @@
       "flipEventFlg": true
     },
     {
-      "buffName": "Sear",
-      "timing": "With Attack",
-      "buffText": "This attack gains +2[ATK] if the enemy monster has a status condition",
+      "buffName": "Sauna",
+      "timing": "Pre-Actions",
+      "buffText": "This monster heals 2[HP] if the enemy monster has a status condition ~STATUS~",
       "critFlg": true
     },
     {
       "buffName": "Sear",
       "timing": "With Attack",
-      "buffText": "This attack gains +2[ATK] if the enemy monster has a status condition",
+      "buffText": "This attack gains +2[ATK] if the enemy monster has a status condition ~STATUS~",
       "critFlg": false
     }
   ],
   "monsterId": 2,
   "abilityName": "Heatwave",
   "monsterName": "Flexferno",
-  "abilityText": "At the end of the turn, the enemy monster is dealt 1[ATK]. This damage cannot be prevented.",
-  "hp": 8,
+  "abilityText": "At the end of the turn, the enemy monster suffers 1[ATK].",
+  "hp": 9,
   "complexity": 1,
   "role": "Warrior"
 }
