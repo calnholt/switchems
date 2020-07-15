@@ -147,7 +147,7 @@
                     }
                 }
                 .stat-icon{
-                    max-height: 28px;
+                    max-height: 32px;
                 }
             }
         }
@@ -157,8 +157,8 @@
             position: absolute;
             padding: 6px;
             width: 100%;
-            bottom: 21px;
-            min-height: 42px;
+            bottom: 0;
+            min-height: 57px;
             &.fire{
                 background: $red;
             }
@@ -185,11 +185,12 @@
         .monster-name-container{
             position: absolute;
             bottom: -1px;
-            right: 2px;
+            right: 4px;
             .monster-name{
                 font-family: $beastformer;
-                font-size: 18px;
+                font-size: 15px;
                 letter-spacing: 0.02em;
+                color: white;
             }
         }
     }
