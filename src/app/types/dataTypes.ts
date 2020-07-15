@@ -58,8 +58,8 @@ export const TERM_CODES = [
     new Term(`~FLINCH~`, `Prevent the enemy monster's action if this action is faster speed. `
         + `If this would be gained from [X] but this action is slower, do not flip.`),
     new Term(`~PARALYZE~`, `Paralyzed monsters gain -2[SPD] stat cubes and all of their monster actions have  `
-        + `[2]: This action is successful. Ignore all flip events for these flips.`),
-    new Term(`~LEECH~`, `Leeched monsters are dealt 1[ATK] at the end of each turn, and your active monster heals `
+        + `[2]: This action is successful. Perform these flips first and ignore all flip events for these flips.`),
+    new Term(`~LEECH~`, `Leeched monsters suffer 1[ATK] at the end of each turn, and your active monster heals `
      + `1[HP]. Stacks up to three. Remove on switch.`),
     new Term(`~FATIGUE~`, `Fatigued monsters cannot buff their attacks and gains -1[DEF] stat cubes. If the monster is [W] [E] [F], `
         + `that monster gains an additional -1[DEF] stat cubes.`),
