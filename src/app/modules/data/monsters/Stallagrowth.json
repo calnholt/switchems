@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Rock Smash",
-      "abilityText": "<b>Flinch</b>. ~FLINCH~",
+      "abilityText": "<b>Flinch</b>~FLINCH~",
       "element": "Rock",
       "modifiers": [
         -1,
@@ -60,7 +60,7 @@
       "auraDuration": null,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 2,
+      "attack": 1,
       "speed": 3,
       "draw": 0,
       "discard": 0,
@@ -99,20 +99,20 @@
       "buffName": "Mossy Overgrowth",
       "timing": "Pre-Actions",
       "buffText": "This monster gains +3[DEF] this turn",
-      "flipEventText": "If the enemy monster is <b>leeched</b>, the enemy monster suffers +2[ATK].",
+      "flipEventText": "If the enemy monster is <b>leeched</b>, that monster suffers 2[ATK].",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Concussion",
       "timing": "With Attack",
-      "buffText": "[2]: This attack gains <b>flinch</b>. ~FLINCH~",
+      "buffText": "[2]: <b>Flinch</b> ~FLINCH~",
       "critFlg": true
     },
     {
-      "buffName": "Concussion",
+      "buffName": "Cragged Tendrils",
       "timing": "With Attack",
-      "buffText": "[2]: This attack gains <b>flinch</b>. ~FLINCH~",
+      "buffText": "[1]: <b>Leech</b> ~LEECH~",
       "critFlg": true
     }
   ],
@@ -122,5 +122,6 @@
   "abilityText": "When this monster switches in, this monster gains +1[DEF] stat cubes. ~SWITCH~",
   "hp": 11,
   "complexity": 1,
-  "role": "Tank"
+  "role": "Tank",
+  "promiseDescription": "Slowly drain the enemy's health and stand your ground with Vineshield's defensive boon. Stallagrowth plays for the long game, but struggles to accumulate cards. Knowing when to draw three is essential to sustaining pressure."
 }
