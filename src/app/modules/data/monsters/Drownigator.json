@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Expunge",
-      "abilityText": "<b>Single use</b>. ~SINGLE~",
+      "abilityText": "<b>Single use</b><br><br>If the enemy monster has a status condition, this attack gains:<br>[1]: +2[ATK]~SINGLE~~STATUS~",
       "element": "Death",
       "modifiers": [
         0,
@@ -81,7 +81,7 @@
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 5,
+      "attack": 4,
       "speed": 8,
       "draw": 0,
       "discard": 1,
@@ -96,7 +96,7 @@
       "critFlg": true
     },
     {
-      "buffName": "Disarm",
+      "buffName": "Cripple",
       "timing": "Pre-Actions",
       "buffText": "The enemy monster gains -1[ATK] stat cubes",
       "flipEventText": "If your opponent has more cards in their hand than you, that player discards one card at random.",
@@ -106,13 +106,13 @@
     {
       "buffName": "Tremble",
       "timing": "Pre-Actions",
-      "buffText": "The enemy monster gains -1[SPD] stat cubes",
+      "buffText": "[1]: The enemy monster gains <br>-2[SPD] stat cubes",
       "critFlg": true
     },
     {
-      "buffName": "Tremble",
+      "buffName": "Abrupt Weakness",
       "timing": "Pre-Actions",
-      "buffText": "The enemy monster gains -1[SPD] stat cubes",
+      "buffText": "[1]: <b>Fatigue</b> ~FATIGUE~",
       "critFlg": false
     }
   ],
@@ -122,6 +122,6 @@
   "abilityText": "When this monster switches in, the opponent discards a card at random.~SWITCH~",
   "hp": 9,
   "complexity": 1,
-  "role": "Tricky",
-  "promiseDescription": "Drownigator is an immediate threat. Panic Attack puts your opponent on the defensive and a properly buffed Expunge can KO many full health monsters."
+  "promiseDescription": "Drownigator is an immediate threat. Panic Attack puts your opponent on the defensive and a properly buffed Expunge can devastate leaf and rock types.",
+  "role": "Tricky"
 }
