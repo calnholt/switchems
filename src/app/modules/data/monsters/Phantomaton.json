@@ -18,7 +18,7 @@
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 2,
+      "attack": 1,
       "speed": 2,
       "draw": 0,
       "discard": 0,
@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Download",
-      "abilityText": "When the enemy monster switches, that monster is dealt 3[ATK] and discard this aura. If all time counters are removed from this aura, your active monster gains +2[DEF] stat cubes.",
+      "abilityText": "When the enemy monster performs a switch action, that monster heals 1[HP] and discard this aura. <br><br>When all time counters are removed from this, next turn your opponent must reveal their selected action before you select yours.",
       "element": "Death",
       "modifiers": [
         0,
@@ -66,7 +66,7 @@
       "buff": 2
     },
     {
-      "abilityName": "Seek and Destroy",
+      "abilityName": "Cornered",
       "abilityText": "This attack gains +2[ATK] when this monster has a <b>lockdown</b> counter on it.",
       "element": "Death",
       "modifiers": [
@@ -107,7 +107,7 @@
       "critFlg": false
     },
     {
-      "buffName": "Curse",
+      "buffName": "Malware",
       "timing": "None",
       "buffText": "This card has no buff effect.",
       "flipEventText": "Deal 1[ATK] to the enemy monster",
