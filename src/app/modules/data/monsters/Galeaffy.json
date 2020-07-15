@@ -18,10 +18,10 @@
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 1,
+      "attack": 2,
       "speed": 6,
       "draw": 0,
-      "discard": 1,
+      "discard": 2,
       "buff": 0
     },
     {
@@ -54,7 +54,7 @@
         0,
         0,
         1,
-        4,
+        3,
         -3
       ],
       "auraDuration": 0,
@@ -73,7 +73,7 @@
       "modifiers": [
         0,
         -2,
-        3,
+        2,
         4,
         -2,
         0
@@ -112,7 +112,7 @@
     {
       "buffName": "Leaf Shield",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +1[DEF] stat cubes",
+      "buffText": "This monster gains +1[SPD] stat cubes",
       "critFlg": false
     }
   ],
