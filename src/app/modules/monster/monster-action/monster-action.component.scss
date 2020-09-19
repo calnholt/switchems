@@ -179,7 +179,9 @@
             }
             .card-icon{
                 max-height: 30px;
-                padding: 0px 3px 0px 3px;
+                margin: 0px 3px 0px 3px;
+                box-shadow: 0px 0px 11px -1px white;
+                z-index: 10;
             }
         }
         .monster-name-container{
@@ -188,7 +190,7 @@
             right: 4px;
             .monster-name{
                 font-family: $beastformer;
-                font-size: 15px;
+                font-size: 18px;
                 letter-spacing: 0.02em;
                 color: white;
             }
