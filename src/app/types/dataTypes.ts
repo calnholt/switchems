@@ -49,29 +49,32 @@ export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
 const TERM_KEYS = [`~BURN~`, `~SUCCESS~`, `~FLINCH~`, `~PARALYZE~`, `~LEECH~`, `~FATIGUE~`,
-    `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`] as const;
+    `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~SUPER~`, `~FASTER~`, `~SLOWER~`, `~GOOP~`] as const;
 export type TermCode = typeof TERM_KEYS[number];
 export const TERM_CODES = [
     new Term(`~BURN~`, `Burned monsters ignore their attack's elemental bonuses and gain -1[ATK] stat cubes. `
      + `If the monster is [L] [R] [S], that monster gains an additional -1[ATK] stat cubes.`),
-    new Term(`~SUCCESS~`, `Unsuccessful actions do nothing.`),
-    new Term(`~FLINCH~`, `Attacks with flinch prevent the enemy monster's action if this action is faster speed. `
-        + `If this would be gained from [X] but this action is slower, do not flip.`),
-    new Term(`~PARALYZE~`, `Paralyzed monsters gain -2[SPD] stat cubes and all of their monster actions have  `
-        + `[2]: This action is successful. Perform these flips first and ignore all flip events for these flips.`),
-    new Term(`~LEECH~`, `Leeched monsters suffer 1[ATK] at the end of each turn, and your active monster heals `
+     new Term(`~FASTER~`, `This action is faster if both players select a monster action and yours has a higher speed.`),
+     new Term(`~FATIGUE~`, `Fatigued monsters cannot buff their attacks and gains -1[DEF] stat cubes. If the monster is [W] [E] [F], `
+     + `that monster gains an additional -1[DEF] stat cubes.`),
+     new Term(`~FLINCH~`, `Actions with flinch prevent the enemy monster's monster action if this action is faster.`),
+     new Term(`~GOOP~`, `Goop buffs have no buff effect if you do not have <b>Oozygoopz</b> on your team.`),
+     new Term(`~LEECH~`, `Leeched monsters suffer 1[ATK] at the end of each turn, and your active monster heals `
      + `1[HP]. Stacks up to three. Remove on switch.`),
-    new Term(`~FATIGUE~`, `Fatigued monsters cannot buff their attacks and gains -1[DEF] stat cubes. If the monster is [W] [E] [F], `
-        + `that monster gains an additional -1[DEF] stat cubes.`),
-    new Term(`~STATUS~`, `Status conditions: burn, fatigue, leech, paralyze.`),
-    new Term(`~SINGLE~`, `Single use actions recharge on switch.`),
-    new Term(`~STUN~`, `Stunned monsters cannot perform any actions next turn. Remove at the end of next turn.`),
-    new Term(`~RECOIL~`, `This monster suffers this amount of recoil damage to itself. `
-     + `This damage cannot be prevented and still occurs if the enemy monster counters.`),
-    new Term(`~SWITCH~`, `This ability triggers if this monster is your lead at the start of the game.`),
+     new Term(`~PARALYZE~`, `Paralyzed monsters gain -2[SPD] stat cubes and all of their monster actions have  `
+     + `[2]: This action is successful. Perform these flips first and ignore all flip events for these flips.`),
+     new Term(`~RECOIL~`, `This monster suffers this amount of recoil damage to itself. `
+     + `This damage cannot be prevented and still occurs if this action is prevented.`),
+     new Term(`~SINGLE~`, `Single use actions recharge on switch.`),
+     new Term(`~SLOWER~`, `This action is slower if both players select a monster action and yours has a lower speed.`),
+     new Term(`~STATUS~`, `Status conditions: burn, fatigue, leech, paralyze.`),
+     new Term(`~STUN~`, `Stunned monsters cannot perform any actions next turn. Remove at the end of next turn.`),
+     new Term(`~SUCCESS~`, `Unsuccessful actions do nothing.`),
+     new Term(`~SUPER~`, `Supers require and use two [B] slots.`),
+     new Term(`~SWITCH~`, `This ability triggers if this monster is your lead at the start of the game.`),
 ] as const;
 
-const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[1]`, `[2]`, `[3]`, `[DEF]`, `[TA]`, `[X]`, `[SUCC]`, `[FAIL]`,
+const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[1]`, `[2]`, `[3]`, `[4]`, `[DEF]`, `[TA]`, `[X]`, `[SUCC]`, `[FAIL]`,
 `[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`] as const;
 export type ImageCode = typeof IMAGE_KEYS[number];
 export const IMAGE_CODES = [
@@ -82,6 +85,7 @@ export const IMAGE_CODES = [
     new Image(`[1]`, SYMBOLS_PATH + `1.png`),
     new Image(`[2]`, SYMBOLS_PATH + `2.png`),
     new Image(`[3]`, SYMBOLS_PATH + `3.png`),
+    new Image(`[4]`, SYMBOLS_PATH + `4.png`),
     new Image(`[DEF]`, SYMBOLS_PATH + `defense.png`),
     new Image(`[TA]`, SYMBOLS_PATH + `aura.png`),
     new Image(`[X]`, SYMBOLS_PATH + `x.png`),
