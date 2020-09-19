@@ -1,0 +1,126 @@
+{
+  "elements": [
+    "Rock"
+  ],
+  "actions": [
+    {
+      "abilityName": "Implosion",
+      "abilityText": "For each positive [DEF] stat cube on this monster, remove one then perform:<br><br>[1]: +{\"positive\": 2, \"neutral\": 2, \"negative\": 1}[ATK]",
+      "element": "Rock",
+      "modifiers": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 1,
+      "speed": 9,
+      "draw": 0,
+      "discard": 1,
+      "buff": 0
+    },
+    {
+      "abilityName": "Beckon Earth",
+      "abilityText": "[1]: This monster gains +1[DEF] stat cubes<br><br>If <b>exposed</b>, this attack gains -1[ATK], +3[SPD], and <b>Recoil 1</b>[ATK] ~RECOIL~",
+      "element": "Rock",
+      "modifiers": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        2
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 5,
+      "speed": 5,
+      "discard": 2,
+      "buff": 2
+    },
+    {
+      "abilityName": "Unearth",
+      "abilityText": "[4]: This monster gains +1[DEF] stat cubes.<br><br>If <b>exposed</b>, +[2].",
+      "element": "Rock",
+      "modifiers": [
+        0,
+        3,
+        0,
+        0,
+        0,
+        1
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 1,
+      "speed": 3,
+      "buff": 1
+    },
+    {
+      "abilityName": "Geyser",
+      "abilityText": "If two [B] slots are used, this monster heals 2[HP], and if <b>exposed</b>, additionally [+].",
+      "element": "Water",
+      "modifiers": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 2,
+      "speed": 2,
+      "buff": 2
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Rock Armor",
+      "timing": "Pre-Actions",
+      "buffText": "This monster gains +1[DEF] stat cubes",
+      "flipEventText": "This monster gains +1[DEF] stat cubes",
+      "critFlg": false,
+      "flipEventFlg": true
+    },
+    {
+      "buffName": "Gaia's Intuition",
+      "timing": "Pre-Actions",
+      "buffText": "This monster gains +2[DEF] this turn",
+      "flipEventText": "This monster heals 1[HP]",
+      "critFlg": false,
+      "flipEventFlg": true
+    },
+    {
+      "buffName": "Forced Aggresion",
+      "timing": "Pre-Actions",
+      "buffText": "<b>Super</b><br>If this attack is <b>faster</b>, this attack becomes <b>slower</b>, gains +2[ATK], and this card is returned to your hand at the end of your turn.~SUPER~~FASTER~",
+      "flipEventText": null,
+      "critFlg": true,
+      "flipEventFlg": false
+    },
+    {
+      "buffName": "Fight or Flight",
+      "timing": "Pre-Actions",
+      "buffText": "If this monster has no positive [DEF] stat cubes, this attack gains <br>+2[SPD]. Otherwise this attack gains +2[ATK].",
+      "flipEventText": null,
+      "critFlg": true,
+      "flipEventFlg": false
+    }
+  ],
+  "abilityName": "Fortified",
+  "monsterName": "Calcicragg",
+  "abilityText": "When this monster switches in, this monster gain +X[DEF] stat cubes, where X is equal to this monster's current [HP] minus two. This monster is <b>exposed</b> when it has no positive [DEF] stat cubes.~SWITCH~",
+  "hp": 5,
+  "complexity": 2,
+  "role": "Warrior"
+}
