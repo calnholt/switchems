@@ -30,5 +30,28 @@ export const getAbilityText = (text: string, termCss: Css, imageCss: Css): strin
         innerHtml = innerHtml.replace(image.key, html);
     }
   });
+  // looks for stat spread tokens and replaces with appropriate html
+  while (innerHtml.includes('{') && innerHtml.includes('}')) {
+    const startIndex = innerHtml.indexOf('{');
+    const endIndex = innerHtml.indexOf('}');
+    const jsonInText = innerHtml.substring(startIndex, endIndex + 1);
+    try {
+      const obj = JSON.parse(jsonInText);
+      let html = '<span class="stat-spread">';
+      if (obj.hasOwnProperty('positive')) {
+        html += `<span class="positive">${obj.positive}</span>`;
+      }
+      if (obj.hasOwnProperty('neutral')) {
+        html += `<span class="neutral">${obj.neutral}</span>`;
+      }
+      if (obj.hasOwnProperty('negative')) {
+        html += `<span class="negative">${obj.negative}</span>`;
+      }
+      html += '</span>';
+      innerHtml = innerHtml.replace(jsonInText, html);
+    } catch (error) {
+      innerHtml = innerHtml.replace(jsonInText, '');
+    }
+  }
   return innerHtml;
 };
