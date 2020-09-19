@@ -23,6 +23,7 @@
         #autosize="cdkTextareaAutosize"
         cdkAutosizeMinRows="1"
         cdkAutosizeMaxRows="10"
+        (change)="setBuffText()"
         [(ngModel)]="buff.buffText">
       </textarea>
     </mat-form-field>

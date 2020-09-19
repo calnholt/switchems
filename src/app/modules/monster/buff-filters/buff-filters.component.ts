@@ -16,6 +16,10 @@ export class BuffFiltersComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.setBuffText();
+  }
+
+  setBuffText() {
     if (this.buff.timing !== 'None') {
       this.buffText = this.buff.buffText;
     }
