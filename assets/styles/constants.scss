@@ -16,8 +16,6 @@ $helvetica: 'Helvetica';
 $card-width: 6.3cm;
 $card-height: 8.8cm;
 
-
-
 .term{
     font-style: italic;
     font-size: 11px;
@@ -27,4 +25,33 @@ $card-height: 8.8cm;
 }
 .term-img{
     max-height: 15px;
+}
+
+.stat-spread {
+    font-weight: bold;
+    color: white;
+    span:first-child {
+        border-radius: 5px 0px 0px 5px;
+    }
+    span:last-child {
+        border-radius: 0px 5px 5px 0px;
+    }
+    span:only-child {
+        border-radius: 5px;
+    }
+    span {
+        padding: 0px 2px;
+    }
+    .positive {
+        background-color: green;
+        border: 2px solid green;
+    }
+    .neutral {
+        background-color: gray;
+        border: 2px solid gray;
+    }
+    .negative {
+        background-color: red;
+        border: 2px solid red;
+    }
 }
