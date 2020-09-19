@@ -21,13 +21,18 @@ export class ActionFiltersComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit() {
-    this.typeChart = TYPE_CHART.find(tc => tc.element === this.action.element);
+    this.setTypeChart();
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes.action.currentValue !== changes.action.previousValue) {
-      this.ngOnInit();
+    const isChangeAction = changes.action.currentValue !== changes.action.previousValue;
+    if (isChangeAction) {
+      this.setTypeChart();
     }
+  }
+
+  setTypeChart() {
+    this.typeChart = TYPE_CHART.find(tc => tc.element === this.action.element);
   }
 
   isStrongAgainst(elemType: ElemType) {

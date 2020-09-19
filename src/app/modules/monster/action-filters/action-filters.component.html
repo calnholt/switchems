@@ -45,7 +45,8 @@
       [label]="'Element'"
       [model]="action"
       [property]="'element'"
-      [options]="elementList">
+      [options]="elementList"
+      (selectionChange)="setTypeChart()">
     </dropdown>
   </div>
   <div class="col-12 form-element">
