@@ -85,12 +85,12 @@
       "speed": 4,
       "draw": 1,
       "discard": 1,
-      "buff": 0
+      "buff": 2
     }
   ],
   "buffs": [
     {
-      "buffName": "Rock Armor",
+      "buffName": "Toughen Vines",
       "timing": "Pre-Actions",
       "buffText": "This monster gains +1[DEF] stat cubes",
       "critFlg": false
@@ -98,7 +98,7 @@
     {
       "buffName": "Mossy Overgrowth",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +3[DEF] this turn",
+      "buffText": "<b>Super</b><br>This monster gains +4[DEF] this turn. ~SUPER~",
       "flipEventText": "If the enemy monster is <b>leeched</b>, that monster suffers 2[ATK].",
       "critFlg": false,
       "flipEventFlg": true
@@ -106,11 +106,11 @@
     {
       "buffName": "Concussion",
       "timing": "With Attack",
-      "buffText": "[2]: <b>Flinch</b> ~FLINCH~",
+      "buffText": "If this action is <b>faster</b>, [2]: <b>Flinch</b> ~FASTER~~FLINCH~",
       "critFlg": true
     },
     {
-      "buffName": "Cragged Tendrils",
+      "buffName": "Gravelcrust Grip",
       "timing": "With Attack",
       "buffText": "[1]: <b>Leech</b> ~LEECH~",
       "critFlg": true
@@ -122,6 +122,6 @@
   "abilityText": "When this monster switches in, this monster gains +1[DEF] stat cubes. ~SWITCH~",
   "hp": 11,
   "complexity": 1,
-  "role": "Tank",
-  "promiseDescription": "Slowly drain the enemy's health and stand your ground with Vineshield's defensive boon. Stallagrowth plays for the long game, but struggles to accumulate cards. Knowing when to draw three is essential to sustaining pressure."
+  "promiseDescription": "Slowly drain the enemy's health and stand your ground with Vineshield's defensive boon. Stallagrowth plays for the long game, but struggles to accumulate cards. Knowing when to draw three is essential to sustaining pressure.",
+  "role": "Tank"
 }

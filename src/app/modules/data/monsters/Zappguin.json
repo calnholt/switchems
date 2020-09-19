@@ -43,7 +43,7 @@
       "speed": 4,
       "draw": 0,
       "discard": 0,
-      "buff": 2
+      "buff": 1
     },
     {
       "abilityName": "Vortex",
@@ -91,7 +91,7 @@
     {
       "buffName": "Prepared Zap",
       "timing": "Pre-Actions",
-      "buffText": "[-]: The enemy monster gains a paralyze condition. ~PARALYZE~",
+      "buffText": "<b>Super</b><br>The enemy monster gains a paralyze condition. ~SUPER~~PARALYZE~",
       "critFlg": true
     },
     {
@@ -111,7 +111,7 @@
     {
       "buffName": "Retaliate",
       "timing": "With Attack",
-      "buffText": "This attack gains +3[ATK] if the enemy monster's action is faster than yours. <em>(This does nothing if the enemy monster does not perform a monster action)</em>.",
+      "buffText": "If this attack is <b>slower</b>, this attack gains +{\"positive\": 3, \"neutral\": 3, \"negative\": 1}[ATK].~SLOWER~",
       "critFlg": true
     }
   ],
@@ -121,6 +121,6 @@
   "abilityText": "This monster's attacks gain +1[ATK] for each different status condition the enemy monster has.~STATUS~",
   "hp": 9,
   "complexity": 1,
-  "role": "Tricky",
-  "promiseDescription": "Zappguin wants nothing more than to paralyze every monster it meets. This requires a little bit of work because Zappguin is on the slower side. But a carefully timed Zap from a teammate can setup Zappguin wonderfully."
+  "promiseDescription": "Zappguin wants nothing more than to paralyze every monster it meets. This requires a little bit of work because Zappguin is on the slower side. But a carefully timed Zap from a teammate can setup Zappguin wonderfully.",
+  "role": "Tricky"
 }

@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Steampowered",
-      "abilityText": "If <b>Adaptive Mists</b> is active, remove two time counters from it, and this attack gains:<br><br>[1]: +3[ATK]",
+      "abilityText": "If you have one or more active team auras, you may remove two time counters from one. If you do, this attack gains:<br><br>[1]: +{\"positive\": 3, \"neutral\": 2, \"negative\": 1}[ATK]",
       "element": "Water",
       "modifiers": [
         2,
@@ -122,8 +122,8 @@
   ],
   "abilityName": "Three Wishes",
   "monsterName": "Steamie",
-  "abilityText": "Monsters with <b>wish</b> counters can spend one <b>wish</b> counter to play one additional buff card with any attack action.<em>(Limit one wish per attack. The <b>wish</b> counter is discarded after reveal, and only if the number of buffs you played exceeds the number of buff icons on the attack.)</em>",
-  "hp": 9,
+  "abilityText": "Monsters with <b>wish</b> counters can spend one <b>wish</b> counter to play one additional buff card with any <b>attack</b>[ATK] action.<em>(If the number of buffs you played requires one additional [B], discard one wish counter from your active monster after reveal. Limit one wish per attack.)</em>",
+  "hp": 8,
   "complexity": 1,
   "role": "Support"
 }

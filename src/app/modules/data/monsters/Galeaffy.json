@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Whirlwind",
-      "abilityText": "This attack is <b>unsuccessful</b> if the enemy monster selected a faster action.~SUCCESS~",
+      "abilityText": "If this action is <b>slower</b>, this action is <b>unsuccessful</b>.~SLOWER~~SUCCESS~",
       "element": "Leaf",
       "modifiers": [
         -3,
@@ -98,7 +98,7 @@
     {
       "buffName": "Propulsive Winds",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +4[SPD] this turn.",
+      "buffText": "<b>Super</b><br>This attack gains +4[SPD] this turn.~SUPER~",
       "flipEventText": "This monster gains +2[SPD] stat cubes.",
       "critFlg": false,
       "flipEventFlg": true

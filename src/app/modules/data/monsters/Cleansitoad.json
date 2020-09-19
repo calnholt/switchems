@@ -97,7 +97,7 @@
     {
       "buffName": "Negate",
       "timing": "Pre-Actions",
-      "buffText": "Remove an opponent's team aura if your opponent selected a monster action and your action is faster.",
+      "buffText": "If you're <b>faster</b>, remove an opponent's team aura.~FASTER~",
       "flipEventText": "You may choose to add or remove two time counters from any active team aura.",
       "critFlg": true,
       "flipEventFlg": true

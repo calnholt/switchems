@@ -1,124 +1,124 @@
 {
-    "elements": [
-      "Fire",
-      "Death"
-    ],
-    "actions": [
-      {
-        "abilityName": "Mental Breakdown",
-        "abilityText": "[1]: <b>Paralyze</b><br>[1]: <b>Burn</b><br>[1]: <b>Fatigue</b><br>[1]: <b>Leech</b><br><br>Put a <b>torment</b> counter on each of the enemy monster's actions.",
-        "element": "Death",
-        "modifiers": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-        ],
-        "auraDuration": 0,
-        "statusFlg": true,
-        "reactionFlg": false,
-        "attack": null,
-        "speed": 4,
-        "discard": 3
-      },
-      {
-        "abilityName": "Wildfire",
-        "abilityText": "You may choose to play one additional [B] with this action for each enemy action that has a <b>torment</b> counter.<br><br>\n\nIf the enemy monster is KO'd this turn, put a <b>torment</b> counter on each action of the incoming monster.",
-        "element": "Fire",
-        "modifiers": [
-          0,
-          1,
-          2,
-          0,
-          0,
-          0
-        ],
-        "auraDuration": 0,
-        "statusFlg": false,
-        "reactionFlg": false,
-        "attack": 1,
-        "speed": 4,
-        "buff": 0
-      },
-      {
-        "abilityName": "Backstab",
-        "abilityText": "[2]: <b>Flinch</b>~FLINCH~",
-        "element": "Death",
-        "modifiers": [
-          0,
-          2,
-          0,
-          0,
-          0,
-          1
-        ],
-        "auraDuration": 0,
-        "statusFlg": false,
-        "reactionFlg": false,
-        "attack": 2,
-        "speed": 7,
-        "discard": 2,
-        "buff": 1
-      },
-      {
-        "abilityName": "Reciprocity",
-        "abilityText": "This monster heals X[HP], where X is equal to triple the number of <b>torment</b> counters on the enemy monster's selected monster action this turn, if any.  <b>Single use</b>.~SINGLE~",
-        "element": "Fire",
-        "modifiers": [
-          0,
-          3,
-          2,
-          0,
-          0,
-          0
-        ],
-        "auraDuration": 0,
-        "statusFlg": false,
-        "reactionFlg": false,
-        "attack": 2,
-        "speed": 6,
-        "discard": 1,
-        "buff": 1
-      }
-    ],
-    "buffs": [
-      {
-        "buffName": "Haunting Shroud",
-        "timing": "Post Actions",
-        "buffText": "This monster gains +1[DEF] stat cubes",
-        "flipEventText": "Put a <b>torment</b> counter on each of the enemy's monster actions.",
-        "critFlg": false,
-        "flipEventFlg": true
-      },
-      {
-        "buffName": "Dense Smoke",
-        "timing": "Post Actions",
-        "buffText": "This monster gains +1[DEF] stat cubes",
-        "critFlg": false
-      },
-      {
-        "buffName": "Midnight Skulk",
-        "timing": "With Attack",
-        "buffText": "You may choose to remove a positive stat cube from the enemy monster's stat cube board. If you do, gain +1 stat cubes of the removed type.",
-        "flipEventText": null,
-        "critFlg": true,
-        "flipEventFlg": false
-      },
-      {
-        "buffName": "Apathy",
-        "timing": "Pre-Actions",
-        "buffText": "If the enemy monster selected a status action this turn, that action is unsuccessful.~SUCCESS~",
-        "flipEventText": null,
-        "critFlg": false,
-        "flipEventFlg": false
-      }
-    ],
-    "abilityName": "Torment",
-    "monsterName": "Smolderskulk",
-    "abilityText": "At the end of the turn, put two <b>torment</b> counters on the enemy monster's selected action, if any. <br>Monster actions with <b>torment</b> counters have <b>recoil X</b>, where X is the number of <b>torment</b> counters on the action. <em>(Remove one <b>torment</b> counter from each action on enemy switch.)</em>",
-    "hp": 10,
-    "complexity": 3,
-    "role": "Tricky"
-  }
+  "elements": [
+    "Fire",
+    "Death"
+  ],
+  "actions": [
+    {
+      "abilityName": "Mental Breakdown",
+      "abilityText": "[1]: <b>Paralyze</b><br>[1]: <b>Burn</b><br>[1]: <b>Fatigue</b><br>[1]: <b>Leech</b><br><br>Put a <b>torment</b> counter on each of the enemy monster's actions.",
+      "element": "Death",
+      "modifiers": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auraDuration": 0,
+      "statusFlg": true,
+      "reactionFlg": false,
+      "attack": null,
+      "speed": 4,
+      "discard": 3
+    },
+    {
+      "abilityName": "Wildfire",
+      "abilityText": "You may choose to play one additional [B] with this action for each enemy action that has a <b>torment</b> counter.<br><br>\n\nIf the enemy monster is KO'd this turn, put a <b>torment</b> counter on each action of the incoming monster.",
+      "element": "Fire",
+      "modifiers": [
+        0,
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 1,
+      "speed": 4,
+      "buff": 0
+    },
+    {
+      "abilityName": "Backstab",
+      "abilityText": "[2]: <b>Flinch</b>~FLINCH~",
+      "element": "Death",
+      "modifiers": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        1
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 2,
+      "speed": 7,
+      "discard": 2,
+      "buff": 1
+    },
+    {
+      "abilityName": "Reciprocity",
+      "abilityText": "This monster heals X[HP], where X is equal to triple the number of <b>torment</b> counters on the enemy monster's selected monster action this turn, if any.  <b>Single use</b>.~SINGLE~",
+      "element": "Fire",
+      "modifiers": [
+        0,
+        3,
+        2,
+        0,
+        0,
+        0
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 2,
+      "speed": 6,
+      "discard": 1,
+      "buff": 1
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Haunting Shroud",
+      "timing": "Post Actions",
+      "buffText": "This monster gains +1[DEF] stat cubes",
+      "flipEventText": "Put a <b>torment</b> counter on each of the enemy's monster actions.",
+      "critFlg": false,
+      "flipEventFlg": true
+    },
+    {
+      "buffName": "Dense Smoke",
+      "timing": "Post Actions",
+      "buffText": "This monster gains +1[DEF] stat cubes",
+      "critFlg": false
+    },
+    {
+      "buffName": "Midnight Skulk",
+      "timing": "With Attack",
+      "buffText": "You may choose to remove a positive stat cube from the enemy monster's stat cube board. If you do, gain +1 stat cubes of the removed type.",
+      "flipEventText": null,
+      "critFlg": true,
+      "flipEventFlg": false
+    },
+    {
+      "buffName": "Apathy",
+      "timing": "Pre-Actions",
+      "buffText": "If the enemy monster selected a status action this turn, that action is <b>unsuccessful</b>.~SUCCESS~",
+      "flipEventText": null,
+      "critFlg": false,
+      "flipEventFlg": false
+    }
+  ],
+  "abilityName": "Torment",
+  "monsterName": "Smolderskulk",
+  "abilityText": "At the end of the turn, put two <b>torment</b> counters on the enemy monster's selected action, if any. <br>Monster actions with <b>torment</b> counters have <b>recoil X</b>, where X is the number of <b>torment</b> counters on the action. <em>(Remove one <b>torment</b> counter from each action on enemy switch.)</em>",
+  "hp": 10,
+  "complexity": 3,
+  "role": "Tricky"
+}

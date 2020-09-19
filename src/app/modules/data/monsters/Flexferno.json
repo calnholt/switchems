@@ -97,7 +97,7 @@
     {
       "buffName": "Melt Away",
       "timing": "Post Actions",
-      "buffText": "[-]: Remove all negative stat cubes from your stat cube board and all status conditions  from all of your monsters <em>(Including ones not in play)</em>.",
+      "buffText": "<b>Super</b><br>Remove all negative stat cubes from your stat cube board and all status conditions  from all of your monsters.~SUPER~",
       "flipEventText": "You may choose to remove a negative stat cube from your stat cube board.",
       "critFlg": false,
       "flipEventFlg": true

@@ -97,7 +97,7 @@
     {
       "buffName": "Recoil",
       "timing": "Post Actions",
-      "buffText": "[-]: The enemy monster suffers <br>1[ATK] for each  card your opponent discarded and used as buffs this turn.",
+      "buffText": "<b>Super</b><br>The enemy monster suffers <br>1[ATK] for each  card your opponent discarded and used as buffs this turn.~SUPER~",
       "flipEventText": "Your active monster <br>suffers 1[ATK]",
       "critFlg": false,
       "flipEventFlg": true

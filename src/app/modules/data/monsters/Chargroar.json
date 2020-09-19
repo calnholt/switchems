@@ -90,10 +90,12 @@
   ],
   "buffs": [
     {
-      "buffName": "Energize",
-      "timing": "Pre-Actions",
-      "buffText": "This attack gains +1[ATK] stat cubes",
-      "critFlg": false
+      "buffName": "Piercing Blaze",
+      "timing": "With Attack",
+      "buffText": "<b>Super</b><br>This attack gains +{\"positive\": 1, \"neutral\": 1, \"negative\": 4}[ATK].~SUPER~",
+      "flipEventText": "This monster gains +1[SPD] stat cubes.",
+      "critFlg": false,
+      "flipEventFlg": true
     },
     {
       "buffName": "Energize",
@@ -120,6 +122,6 @@
   "abilityText": "When this monster switches in, the enemy monster gains -2[ATK] stat cubes.~SWITCH~",
   "hp": 7,
   "complexity": 1,
-  "role": "Assassin",
-  "promiseDescription": "Chargroar is the ultimate assassin. Fast, strong attacks, with ways to increase its attack strength with stat cubes. Chargroar's buffs are unconditional and incredibly efficient. Since Chargroar is easy to KO, there is little room error."
+  "promiseDescription": "Chargroar is the ultimate assassin. Fast, strong attacks, with ways to increase its attack strength with stat cubes. Chargroar's buffs are unconditional and incredibly efficient. Since Chargroar is easy to KO, there is little room error.",
+  "role": "Assassin"
 }
