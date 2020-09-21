@@ -9,7 +9,7 @@
   </div>
   <div *ngIf="!isCollapsed" class="container">
     <div class="header-container">
-      <span class="title">Monster Filters</span>
+      <span class="title">Monster Filters ({{numOfMonsters}})</span>
       <span>
         <mat-icon *ngIf="!isCollapsed" (click)="toggleCollapse()">indeterminate_check_box</mat-icon>
       </span>
@@ -48,7 +48,7 @@
         (selectionChange)="applyFilters()">
       </min-max>
     </div>
-    <div class="title">Action Filters</div>
+    <div class="title">Action Filters ({{numOfActions}})</div>
     <div class="filters-wrapper">
       <min-max
         [label]="'Attack'"
@@ -116,7 +116,7 @@
         Reaction?
       </mat-checkbox>
     </div>
-    <div class="title">Buff Filters</div>
+    <div class="title">Buff Filters ({{numOfBuffs}})</div>
     <div class="filters-wrapper">
       <dropdown
         [label]="'Timing'"

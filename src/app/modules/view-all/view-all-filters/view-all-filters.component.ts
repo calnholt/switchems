@@ -1,5 +1,5 @@
 import { ELEMENTS, ROLES, ElemType, Role, BuffTiming, BUFF_TIMINGS } from './../../../types/dataTypes';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { SelectionChange } from '@angular/cdk/collections';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
 
@@ -40,6 +40,10 @@ export class ViewAllFiltersComponent implements SelectionChange<any>, OnInit {
   source: import('@angular/cdk/collections').SelectionModel<any>;
   added: any[];
   removed: any[];
+
+  @Input() numOfMonsters?: number;
+  @Input() numOfActions?: number;
+  @Input() numOfBuffs?: number;
 
   @Output() filtersChanged: EventEmitter<any> = new EventEmitter<any>();
 
