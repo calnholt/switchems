@@ -2,7 +2,7 @@ import { getAdvantages, getAbilityText } from './../../common/cards';
 import { MonsterComplete } from './../model/monster';
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { ElemType, ELEMENTS, Css, Path } from './../../../types/dataTypes';
-import { ELEMENTS_COLOR, ELEMENTS_GRAY, ROLES, HP } from './../../../constants';
+import { ELEMENTS_COLOR, ELEMENTS_GRAY, ROLES_PATH, HP } from './../../../constants';
 
 @Component({
   selector: 'monster-card',
@@ -76,7 +76,7 @@ export class MonsterCardComponent implements OnInit {
   }
 
   getRoleIcon(): Path {
-    return `${ROLES}${this.monster.role.toLocaleLowerCase()}.png`;
+    return `${ROLES_PATH}${this.monster.role.toLocaleLowerCase()}.png`;
   }
 
   getHpIcon(): Path {
