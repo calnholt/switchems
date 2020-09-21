@@ -119,7 +119,7 @@
   ],
   "abilityName": "Goopophyll",
   "monsterName": "Oozygoopz",
-  "abilityText": "At the start of each turn after drawing cards, perform:<br><br>[1]: Heal 1[HP]",
+  "abilityText": "At the start of each turn after drawing cards, if this monster is not at full HP, perform:<br><br>[1]: Heal 1[HP]",
   "hp": 12,
   "complexity": 3,
   "role": "Support"
