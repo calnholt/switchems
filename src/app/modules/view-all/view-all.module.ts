@@ -1,3 +1,4 @@
+import { SummaryComponent } from './summary/summary.component';
 import { PrintModule } from './../print/print.module';
 import { RouterModule } from '@angular/router';
 import { CommonComponentsModule } from './../common/common-components.module';
@@ -26,6 +27,7 @@ import { MonsterModule } from '../monster/monster.module';
     ViewAllComponent,
     ViewAllFiltersComponent,
     ViewAllDisplayComponent,
+    SummaryComponent
   ]
 })
 export class ViewAllModule { }
