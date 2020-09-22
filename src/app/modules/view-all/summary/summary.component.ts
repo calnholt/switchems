@@ -1,3 +1,4 @@
+import { element } from 'protractor';
 import { Role, ELEMENTS, ROLES, Path } from './../../../types/dataTypes';
 import { ElemType } from 'src/app/types/dataTypes';
 import { MonsterComplete } from 'src/app/modules/monster/model/monster';
@@ -43,6 +44,16 @@ export class SummaryComponent implements OnInit {
     return this.monsters.filter(m => m.complexity === num).length;
   }
 
-  // getNumberOfAttacksPerElement()
+  getNumberOfAttacksPerElement(element: ElemType): number {
+    let num = 0;
+    this.monsters.forEach(m => {
+      m.actions.forEach(a => {
+        if ((a.attack !== undefined || a.attack !== null) && a.element === element) {
+          num++;
+        }
+      });
+    });
+    return num;
+  }
 
 }
