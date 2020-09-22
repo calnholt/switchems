@@ -80,7 +80,7 @@
                 (mouseover)="monster.isHovered = true" 
                 (mouseout)="monster.isHovered = false" 
                 class="hover-card-icon"
-                [ngClass]="{'highlight' : monster.isHighlighted}">
+                [ngClass]="{'highlight' : selectedCard === 'MONSTER'}">
                 <div class="icon">M</div>
               </div>
             </div>
@@ -91,7 +91,7 @@
                 (mouseover)="action.isHovered = true" 
                 (mouseout)="action.isHovered = false" 
                 class="hover-card-icon"
-                [ngClass]="{'highlight' : action.isHighlighted}" 
+                [ngClass]="{'highlight' : index === i && selectedCard === 'ACTION'}" 
                 (click)="index = i; selectedCard = 'ACTION'">
                 <div class="icon">A</div>
               </div>
@@ -103,6 +103,7 @@
                 (click)="index = i; selectedCard = 'BUFF'" 
                 (mouseover)="buff.isHovered = true" 
                 (mouseout)="buff.isHovered = false" 
+                [ngClass]="{'highlight' : index === i && selectedCard === 'BUFF'}" 
                 class="hover-card-icon">
                 <span class="icon">B</span>
               </div>
