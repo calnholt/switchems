@@ -59,6 +59,12 @@
                     color: $yellow;
                 }
             }
+            .disadvantage{
+                font-family: $beastformer;
+                font-size: 30px;
+                line-height: 0px;
+                padding-top: 9px;
+            }
             .elements{
                 display: grid;
                 grid-template-rows: auto;

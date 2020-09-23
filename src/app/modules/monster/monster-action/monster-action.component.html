@@ -4,6 +4,7 @@
       <div class="elements-container">
         <span *ngFor="let modifier of action.modifiers; index as i">
           <span *ngIf="modifier && modifier > 0" class="modifier {{ELEMENTS_LIST[i].toLowerCase()}}-color">{{getModifier(modifier)}}</span>
+          <div *ngIf="action.attack && isDisadvantage(i)" class="disadvantage">-</div>
         </span>
       </div>
     </div>

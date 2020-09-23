@@ -2,7 +2,7 @@ import { ELEMENTS_GRAY, SYMBOLS, ELEMENTS_COLOR } from './../../../constants';
 import { ELEMENTS, Css, Path, ImageCode, ElemType } from './../../../types/dataTypes';
 import { Action } from './../model/monster';
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import { getAbilityText } from './../../common/cards';
+import { getAbilityText, getAdvantages } from './../../common/cards';
 
 @Component({
   selector: 'monster-action',
@@ -29,6 +29,10 @@ export class MonsterActionComponent implements OnInit {
 
   getElementLowerCase(): string {
     return this.action.element.toLowerCase();
+  }
+
+  isDisadvantage(i: number): boolean {
+    return getAdvantages(this.action.element).reverse()[i] === -1;
   }
 
   isModifierAllZero(): boolean {
