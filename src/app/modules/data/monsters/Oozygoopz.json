@@ -25,7 +25,7 @@
     },
     {
       "abilityName": "Reclaim",
-      "abilityText": "Choose one:<br><br>• Return a card from your discard to your hand, excluding any buffs played with this attack.<br><br>• Look at the top 2 cards of your deck. You may change their order or put either/both in your discard.",
+      "abilityText": "Choose one:<br><br>• Return a card from your discard to your hand, excluding any cards played with this attack.<br><br>• Look at the top 2 cards of your deck. You may change their order or put either/both in your discard.",
       "element": "Leaf",
       "modifiers": [
         0,
@@ -122,5 +122,6 @@
   "abilityText": "At the start of each turn after drawing cards, if this monster is not at full HP, perform:<br><br>[1]: Heal 1[HP]",
   "hp": 12,
   "complexity": 3,
-  "role": "Support"
+  "role": "Support",
+  "promiseDescription": "Drive your opponent crazy by loading their deck up with a bunch of painfully useless goop!"
 }
