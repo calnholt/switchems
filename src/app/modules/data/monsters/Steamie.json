@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Torrential Blessing",
-      "abilityText": "Put a <b>wish</b> counter on one of your other monsters.",
+      "abilityText": "[1]: This attack gains +{\"positive\": 2, \"neutral\": 1, \"negative\": 0}[ATK]<br><br>Put a <b>wish</b> counter on one of your other monsters.",
       "element": "Water",
       "modifiers": [
         1,
@@ -55,12 +55,12 @@
         -1,
         0,
         0,
-        1
+        2
       ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 2,
+      "attack": 1,
       "speed": 3,
       "discard": 0,
       "buff": 1
