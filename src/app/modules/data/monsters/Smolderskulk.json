@@ -48,11 +48,11 @@
       "element": "Death",
       "modifiers": [
         0,
+        0,
         2,
+        1,
         0,
-        0,
-        0,
-        1
+        0
       ],
       "auraDuration": 0,
       "statusFlg": false,
