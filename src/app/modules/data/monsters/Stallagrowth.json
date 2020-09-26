@@ -29,9 +29,9 @@
       "abilityText": "<b>Flinch</b>~FLINCH~",
       "element": "Rock",
       "modifiers": [
-        -1,
+        0,
         4,
-        -1,
+        0,
         0,
         0,
         4
@@ -50,12 +50,12 @@
       "abilityText": "This attack gains +2[ATK] for each <b>leech</b> counter on the enemy monster and remove all <strong>leech</strong> counters from that monster.",
       "element": "Leaf",
       "modifiers": [
-        -1,
+        0,
         0,
         0,
         2,
         2,
-        -1
+        0
       ],
       "auraDuration": null,
       "statusFlg": false,
@@ -71,9 +71,9 @@
       "abilityText": "[1]: The enemy monster gains -1[ATK] stat cubes.",
       "element": "Rock",
       "modifiers": [
-        -1,
+        0,
         2,
-        -1,
+        0,
         0,
         0,
         1

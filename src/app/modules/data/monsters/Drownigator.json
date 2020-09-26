@@ -30,10 +30,10 @@
       "element": "Death",
       "modifiers": [
         0,
-        -2,
+        0,
         2,
         2,
-        -1,
+        0,
         0
       ],
       "auraDuration": 0,
@@ -51,8 +51,8 @@
       "element": "Water",
       "modifiers": [
         1,
-        -1,
-        -1,
+        0,
+        0,
         0,
         0,
         2
@@ -72,10 +72,10 @@
       "element": "Death",
       "modifiers": [
         0,
-        -2,
+        0,
         3,
         2,
-        -2,
+        0,
         0
       ],
       "auraDuration": 0,

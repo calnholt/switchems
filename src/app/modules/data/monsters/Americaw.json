@@ -10,10 +10,10 @@
       "element": "Death",
       "modifiers": [
         0,
-        -3,
+        0,
         2,
         3,
-        -2,
+        0,
         0
       ],
       "auraDuration": 0,
@@ -30,9 +30,9 @@
       "abilityText": "<B>Recoil 1[ATK]</b> ~RECOIL~",
       "element": "Rock",
       "modifiers": [
-        -3,
+        0,
         2,
-        -1,
+        0,
         0,
         0,
         2

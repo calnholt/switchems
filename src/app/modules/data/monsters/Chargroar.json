@@ -12,9 +12,9 @@
         5,
         0,
         0,
-        "X",
+        0,
         5,
-        -4
+        0
       ],
       "auraDuration": 0,
       "statusFlg": false,
@@ -33,9 +33,9 @@
         1,
         0,
         0,
-        -1,
+        0,
         2,
-        -1
+        0
       ],
       "auraDuration": 0,
       "statusFlg": false,
@@ -74,8 +74,8 @@
         0,
         2,
         3,
-        -2,
-        -4,
+        0,
+        0,
         0
       ],
       "auraDuration": 0,

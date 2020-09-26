@@ -8,12 +8,12 @@
       "abilityText": "[1]: This monster gains +1[SPD] stat cubes.<br><br>Perform a switch action and you may choose to keep up to four stat cubes on your stat cube board <em>(You still perform [1]: Heal 2 [HP]).</em>",
       "element": "Leaf",
       "modifiers": [
-        -1,
+        0,
         0,
         0,
         1,
         1,
-        -1
+        0
       ],
       "auraDuration": 0,
       "statusFlg": false,
@@ -29,12 +29,12 @@
       "abilityText": "If this action is <b>slower</b>, this action is <b>unsuccessful</b>.~SLOWER~~SUCCESS~",
       "element": "Leaf",
       "modifiers": [
-        -3,
+        0,
         0,
         0,
         2,
         3,
-        -2
+        0
       ],
       "auraDuration": 0,
       "statusFlg": false,
@@ -50,12 +50,12 @@
       "abilityText": "[2]: This monster gains +1[SPD] stat cubes.",
       "element": "Leaf",
       "modifiers": [
-        -2,
+        0,
         0,
         0,
         1,
         3,
-        -3
+        0
       ],
       "auraDuration": 0,
       "statusFlg": false,
@@ -72,10 +72,10 @@
       "element": "Death",
       "modifiers": [
         0,
-        -2,
+        0,
         2,
         4,
-        -2,
+        0,
         0
       ],
       "auraDuration": 0,
