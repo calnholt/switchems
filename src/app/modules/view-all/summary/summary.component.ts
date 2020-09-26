@@ -1,9 +1,9 @@
-import { element } from 'protractor';
-import { Role, ELEMENTS, ROLES, Path } from './../../../types/dataTypes';
+import { Role, ROLES, Path, ELEMENTS, ELEMENT_PATH_COLOR } from './../../../types/dataTypes';
 import { ElemType } from 'src/app/types/dataTypes';
 import { MonsterComplete } from 'src/app/modules/monster/model/monster';
 import { Component, OnInit, Input } from '@angular/core';
-import { ELEMENTS_COLOR, ROLES_PATH } from 'src/app/constants';
+import { ROLES_PATH } from 'src/app/constants';
+import { getElementIndex } from '../../common/cards';
 
 @Component({
   selector: 'summary',
@@ -24,16 +24,16 @@ export class SummaryComponent implements OnInit {
 
   }
 
-  getElementColorImg(element: string): Path {
-    return `${ELEMENTS_COLOR}${element.toLocaleLowerCase()}.png`;
+  getElementColorImg(elem: string): Path {
+    return `${ELEMENT_PATH_COLOR}${elem.toLocaleLowerCase()}.png`;
   }
 
   getRoleIcon(role: string): Path {
     return `${ROLES_PATH}${role.toLocaleLowerCase()}.png`;
   }
 
-  getNumberOfMonstersPerElement(element: ElemType): number {
-    return this.monsters.filter(m => m.elements.includes(element)).length;
+  getNumberOfMonstersPerElement(elem: ElemType): number {
+    return this.monsters.filter(m => m.elements.includes(elem)).length;
   }
 
   getNumberOfMonstersPerRole(role: Role): number {
@@ -44,16 +44,27 @@ export class SummaryComponent implements OnInit {
     return this.monsters.filter(m => m.complexity === num).length;
   }
 
-  getNumberOfAttacksPerElement(element: ElemType): number {
+  getNumberOfAttacksPerElement(elem: ElemType): number {
     let num = 0;
     this.monsters.forEach(m => {
       m.actions.forEach(a => {
-        if ((a.attack !== undefined || a.attack !== null) && a.element === element) {
+        if ((a.attack !== undefined || a.attack !== null) && a.element === elem) {
           num++;
         }
       });
     });
     return num;
+  }
+
+  getTotalModifiersPerElement(elem: ElemType): number {
+    let total = 0;
+    const index = getElementIndex(elem);
+    this.monsters.forEach(m => {
+      m.actions.forEach(a => {
+        total += a.modifiers[index];
+      });
+    });
+    return total;
   }
 
 }

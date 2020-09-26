@@ -51,7 +51,7 @@ export class Action extends Card {
     buff?: number;
     discard?: number;
     draw?: number;
-    modifiers?: (number | string)[] = [0, 0, 0, 0, 0, 0];
+    modifiers?: (number)[] = [0, 0, 0, 0, 0, 0];
     auraDuration?: number = 0;
     statusFlg?: boolean = false;
     reactionFlg?: boolean = false;

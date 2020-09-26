@@ -13,6 +13,15 @@ export const getAdvantages = (elem: ElemType): number[] => {
     if (elem === 'Rock') { return [1, 0, 0, -1, 1, -1]; }
 };
 
+export const getElementIndex = (elem: ElemType): number => {
+  if (elem === 'Death') {return 0; }
+  if (elem === 'Electric') { return 1; }
+  if (elem === 'Fire') { return 2; }
+  if (elem === 'Water') { return 3; }
+  if (elem === 'Leaf') { return 4; }
+  if (elem === 'Rock') { return 5; }
+}
+
 export const getAbilityText = (text: string, termCss: Css, imageCss: Css): string => {
   if (!text) {
     return null;

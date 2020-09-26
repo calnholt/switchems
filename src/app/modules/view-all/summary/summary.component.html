@@ -71,4 +71,21 @@
       </tbody>
     </table>
   </div>
+  <div class="table-container">
+    <h2>Total modifiers per elements</h2>
+    <table>
+      <thead>
+        <tr>
+          <th *ngFor="let element of ELEMENTS">
+            <img src="{{getElementColorImg(element)}}">
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngFor="let element of ELEMENTS">{{getTotalModifiersPerElement(element)}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
