@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Vine Whips",
-      "abilityText": "This attack gains +2[ATK] for each <b>leech</b> counter on the enemy monster and remove all <strong>leech</strong> counters from that monster.",
+      "abilityText": "This attack gains <div>+2[ATK]</div> for each <b>leech</b> counter on the enemy monster and remove all <strong>leech</strong> counters from that monster.",
       "element": "Leaf",
       "modifiers": [
         0,
@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Rock Slide",
-      "abilityText": "[1]: The enemy monster gains -1[ATK] stat cubes.",
+      "abilityText": "[1]: The enemy monster gains <div>-1[ATK] [CUBE].</div>",
       "element": "Rock",
       "modifiers": [
         0,
@@ -92,21 +92,21 @@
     {
       "buffName": "Toughen Vines",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +1[DEF] stat cubes",
+      "buffText": "This monster gains <div>+1[DEF] [CUBE].</div>",
       "critFlg": false
     },
     {
       "buffName": "Mossy Overgrowth",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super</b><br>This monster gains +4[DEF] this turn. ~SUPER~",
-      "flipEventText": "If the enemy monster is <b>leeched</b>, that monster suffers 2[ATK].",
+      "buffText": "<b>Super</b><br>This monster gains <div>+4[DEF]</div> this turn. ~SUPER~",
+      "flipEventText": "If the enemy monster is <b>leeched</b>, that monster suffers <div>2[ATK].</div>",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Concussion",
       "timing": "With Attack",
-      "buffText": "If this action is <b>faster</b>, [2]: <b>Flinch</b> ~FASTER~~FLINCH~",
+      "buffText": "If this action is <b>faster</b>, <div>[2]: <b>Flinch</b></div> ~FASTER~~FLINCH~",
       "critFlg": true
     },
     {
@@ -119,7 +119,7 @@
   "monsterId": 1,
   "abilityName": "Vineshield",
   "monsterName": "Stallagrowth",
-  "abilityText": "When this monster switches in, this monster gains +1[DEF] stat cubes. ~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>+1[DEF] [CUBE].</div> ~SWITCH~",
   "hp": 11,
   "complexity": 1,
   "promiseDescription": "Slowly drain the enemy's health and stand your ground with Vineshield's defensive boon. Stallagrowth plays for the long game, but struggles to accumulate cards. Knowing when to draw three is essential to sustaining pressure.",

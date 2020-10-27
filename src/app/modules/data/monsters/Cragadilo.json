@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Implosion",
-      "abilityText": "For each positive [DEF] stat cube on this monster, remove one then perform:<br><br>[1]: +{\"positive\": 2, \"neutral\": 2, \"negative\": 1}[ATK]",
+      "abilityText": "Remove all positive <div>[DEF] [CUBE]</div> from this monster, even if the enemy monster counters.<br><br>For each positive <div>[DEF] [CUBE]</div> removed, perform:<br><br>[1]: +{\"positive\": 2, \"neutral\": 2, \"negative\": 1}[ATK]",
       "element": "Rock",
       "modifiers": [
         0,
@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Beckon Earth",
-      "abilityText": "[1]: This monster gains +1[DEF] stat cubes<br><br>If <b>exposed</b>, this attack gains -1[ATK], +3[SPD], and <b>Recoil 1</b>[ATK] ~RECOIL~",
+      "abilityText": "If <b>exposed</b>, this attack gains <div>-1[ATK],</div> <div>+3[SPD],</div> and <div><b>Recoil 1</b>[ATK].</div><br><br>[1]: This monster gains <div>+1[DEF] [CUBE].</div>~RECOIL~",
       "element": "Rock",
       "modifiers": [
         0,
@@ -46,7 +46,7 @@
     },
     {
       "abilityName": "Unearth",
-      "abilityText": "[4]: This monster gains +1[DEF] stat cubes.<br><br>If <b>exposed</b>, +[2].",
+      "abilityText": "[4]: This monster gains <div>+1[DEF] [CUBE].</div><br><br>If <b>exposed</b>, +[2].",
       "element": "Rock",
       "modifiers": [
         0,
@@ -65,7 +65,7 @@
     },
     {
       "abilityName": "Geyser",
-      "abilityText": "If two [B] slots are used, this monster heals 2[HP], and if <b>exposed</b>, additionally [+].",
+      "abilityText": "If two [B] slots are used, this monster heals <div>2[HP],</div> and if <b>exposed</b>, additionally [+].",
       "element": "Water",
       "modifiers": [
         2,
@@ -87,23 +87,23 @@
     {
       "buffName": "Rock Armor",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +1[DEF] stat cubes",
-      "flipEventText": "This monster gains +1[DEF] stat cubes",
+      "buffText": "This monster gains <div>+1[DEF] [CUBE]</div>",
+      "flipEventText": "This monster gains <div>+1[DEF] [CUBE]</div>",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Gaia's Intuition",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +2[DEF] this turn",
-      "flipEventText": "This monster heals 1[HP]",
+      "buffText": "This monster gains <div>+2[DEF]</div> this turn",
+      "flipEventText": "This monster heals <div>1[HP]</div>",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Forced Aggresion",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super</b><br>If this attack is <b>faster</b>, this attack becomes <b>slower</b>, gains +2[ATK], and this card is returned to your hand at the end of your turn.~SUPER~~FASTER~",
+      "buffText": "<b>Super</b><br>If this attack is <b>faster</b>, this attack becomes <b>slower</b>, gains <div>+2[ATK]</div>, and this card is returned to your hand at the end of your turn.~SUPER~~FASTER~",
       "flipEventText": null,
       "critFlg": true,
       "flipEventFlg": false
@@ -111,15 +111,15 @@
     {
       "buffName": "Fight or Flight",
       "timing": "Pre-Actions",
-      "buffText": "If this monster has no positive [DEF] stat cubes, this attack gains <br>+2[SPD]. Otherwise this attack gains +2[ATK].",
+      "buffText": "If this monster has no positive <div>[DEF] [CUBE],</div> this attack gains <div>+2[SPD].</div> Otherwise this attack gains <div>+2[ATK].</div>",
       "flipEventText": null,
       "critFlg": true,
       "flipEventFlg": false
     }
   ],
   "abilityName": "Fortified",
-  "monsterName": "Calcicragg",
-  "abilityText": "When this monster switches in, this monster gain +X[DEF] stat cubes, where X is equal to this monster's current [HP] minus two. This monster is <b>exposed</b> when it has no positive [DEF] stat cubes.~SWITCH~",
+  "monsterName": "Cragadilo",
+  "abilityText": "When this monster <b>switches in</b>, this monster gain <div>+X[DEF] [CUBE],</div> where X is equal to this monster's current [HP] minus two. This monster is <b>exposed</b> when it has no positive <div>[DEF] [CUBE].</div>~SWITCH~",
   "hp": 5,
   "complexity": 2,
   "role": "Warrior"

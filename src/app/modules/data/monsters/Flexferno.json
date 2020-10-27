@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "No Pain, No Gain",
-      "abilityText": "<b>Recoil 1[ATK]</b><br><br>[1]: [+]",
+      "abilityText": "<b>Recoil 1[ATK]</b><br><br>[1]: [+]~RECOIL~",
       "element": "Fire",
       "modifiers": [
         0,
@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Scorch",
-      "abilityText": "[1]: This attack gains +4[ATK].",
+      "abilityText": "[1]: This attack gains <div>+4[ATK].</div>",
       "element": "Fire",
       "modifiers": [
         0,
@@ -97,21 +97,21 @@
     {
       "buffName": "Melt Away",
       "timing": "Post Actions",
-      "buffText": "<b>Super</b><br>Remove all negative stat cubes from your stat cube board and all status conditions  from all of your monsters.~SUPER~",
-      "flipEventText": "You may choose to remove a negative stat cube from your stat cube board.",
-      "critFlg": false,
+      "buffText": "<b>Super, Ethereal</b><br>Remove all negative [CUBE] from this monster and all status conditions from all of your monsters.~SUPER~~ETHEREAL~",
+      "flipEventText": "You may choose to remove a negative [CUBE] from your active monster.",
+      "critFlg": true,
       "flipEventFlg": true
     },
     {
       "buffName": "Sauna",
       "timing": "Pre-Actions",
-      "buffText": "This monster heals 2[HP] if the enemy monster has a status condition ~STATUS~",
-      "critFlg": true
+      "buffText": "This monster heals <div>2[HP]</div> if the enemy monster has a status condition ~STATUS~",
+      "critFlg": false
     },
     {
       "buffName": "Sear",
       "timing": "With Attack",
-      "buffText": "This attack gains +2[ATK] if the enemy monster has a status condition ~STATUS~",
+      "buffText": "This attack gains <div>+2[ATK]</div> if the enemy monster has a status condition ~STATUS~",
       "critFlg": false
     }
   ],

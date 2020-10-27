@@ -27,7 +27,7 @@
     },
     {
       "abilityName": "Lights Out",
-      "abilityText": "If this attack KO's the enemy monster, this monster gains +2[ATK] stat cubes.",
+      "abilityText": "If this attack KO's the enemy monster, this monster gains <div>+2[ATK] [CUBE].</div>",
       "element": "Electric",
       "modifiers": [
         1,
@@ -48,7 +48,7 @@
     },
     {
       "abilityName": "Hypercharge",
-      "abilityText": "This monster gains +2[ATK] stat cubes.",
+      "abilityText": "This monster gains <div>+2[ATK] [CUBE].</div>",
       "element": "Electric",
       "modifiers": [
         0,
@@ -92,8 +92,8 @@
     {
       "buffName": "Piercing Blaze",
       "timing": "With Attack",
-      "buffText": "<b>Super</b><br>This attack gains +{\"positive\": 1, \"neutral\": 1, \"negative\": 4}[ATK].~SUPER~",
-      "flipEventText": "This monster gains +1[SPD] stat cubes.",
+      "buffText": "<b>Super</b><br>This attack gains +{\"positive\": 1, \"neutral\": 1, \"negative\": 5}[ATK].~SUPER~",
+      "flipEventText": "This monster gains <div>+1[SPD] [CUBE].</div>",
       "critFlg": false,
       "flipEventFlg": true
     },
@@ -119,9 +119,9 @@
   "monsterId": 4,
   "abilityName": "Intimidate",
   "monsterName": "Chargroar",
-  "abilityText": "When this monster switches in, the enemy monster gains -2[ATK] stat cubes.~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>-2[ATK] [CUBE].</div>~SWITCH~",
   "hp": 7,
   "complexity": 1,
-  "promiseDescription": "Chargroar is the ultimate assassin. Fast, strong attacks, with ways to increase its attack strength with stat cubes. Chargroar's buffs are unconditional and incredibly efficient. Since Chargroar is easy to KO, there is little room error.",
+  "promiseDescription": "Chargroar is a straightforward assassin. Fast, strong attacks, with ways to increase its attack strength with [CUBE]. Chargroar's buffs are unconditional and incredibly efficient. Since Chargroar is easy to KO, there is little room error.",
   "role": "Assassin"
 }

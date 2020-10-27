@@ -25,7 +25,7 @@
     },
     {
       "abilityName": "Wildfire",
-      "abilityText": "You may choose to play one additional [B] with this action for each enemy action that has a <b>torment</b> counter.<br><br>\n\nIf the enemy monster is KO'd this turn, put a <b>torment</b> counter on each action of the incoming monster.",
+      "abilityText": "You may choose to play one additional [B] with this action for each enemy action that has a <b>torment</b> counter.<br><br>If the enemy monster is KO'd this turn, put a <b>torment</b> counter on each action of the incoming monster.",
       "element": "Fire",
       "modifiers": [
         0,
@@ -64,7 +64,7 @@
     },
     {
       "abilityName": "Reciprocity",
-      "abilityText": "This monster heals X[HP], where X is equal to triple the number of <b>torment</b> counters on the enemy monster's selected monster action this turn, if any.  <b>Single use</b>.~SINGLE~",
+      "abilityText": "This monster heals <div>X[HP],</div> where X is equal to triple the number of <b>torment</b> counters on the enemy monster's selected monster action this turn, if any.  <b>Single use</b>.~SINGLE~",
       "element": "Fire",
       "modifiers": [
         0,
@@ -87,7 +87,7 @@
     {
       "buffName": "Haunting Shroud",
       "timing": "Post Actions",
-      "buffText": "This monster gains +1[DEF] stat cubes",
+      "buffText": "This monster gains <div>+1[DEF] [CUBE]</div>",
       "flipEventText": "Put a <b>torment</b> counter on each of the enemy's monster actions.",
       "critFlg": false,
       "flipEventFlg": true
@@ -95,13 +95,13 @@
     {
       "buffName": "Dense Smoke",
       "timing": "Post Actions",
-      "buffText": "This monster gains +1[DEF] stat cubes",
+      "buffText": "This monster gains <div>+1[DEF] [CUBE]</div>",
       "critFlg": false
     },
     {
       "buffName": "Midnight Skulk",
       "timing": "With Attack",
-      "buffText": "You may choose to remove a positive stat cube from the enemy monster's stat cube board. If you do, gain +1 stat cubes of the removed type.",
+      "buffText": "You may choose to remove a positive [CUBE] from the enemy monster. If you do, gain <div>+1[CUBE]</div> of the removed type.",
       "flipEventText": null,
       "critFlg": true,
       "flipEventFlg": false

@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Switcheroo",
-      "abilityText": "[1]: This monster gains +1[SPD] stat cubes.<br><br>Perform a switch action and you may choose to keep up to four stat cubes on your stat cube board <em>(You still perform [1]: Heal 2 [HP]).</em>",
+      "abilityText": "[1]: This monster gains <div>+1[SPD] [CUBE].</div><br><br>Perform a switch action and you may choose to keep up to four [CUBE]. <em>(You still perform <div>[1]: Heal 2 [HP])</div>.</em>",
       "element": "Leaf",
       "modifiers": [
         0,
@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Cyclone",
-      "abilityText": "[2]: This monster gains +1[SPD] stat cubes.",
+      "abilityText": "[2]: This monster gains <div>+1[SPD] [CUBE].</div>",
       "element": "Leaf",
       "modifiers": [
         0,
@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Vicious Hurricane",
-      "abilityText": "You may choose to remove any number \n of positive [SPD] stat cubes from your stat cube board. For each removed, this attack gains +2[ATK]. <b>Single use.</b> ~SINGLE~",
+      "abilityText": "You may choose to remove any number of positive <div>[SPD] [CUBE].</div> For each removed, this attack gains <div>+2[ATK].</div> <b>Single use.</b> ~SINGLE~",
       "element": "Death",
       "modifiers": [
         0,
@@ -92,34 +92,34 @@
     {
       "buffName": "Sharp Leaves",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +1[ATK] stat cubes",
+      "buffText": "This monster gains <div>+1[ATK] [CUBE].</div>",
       "critFlg": true
     },
     {
       "buffName": "Propulsive Winds",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super</b><br>This attack gains +4[SPD] this turn.~SUPER~",
-      "flipEventText": "This monster gains +2[SPD] stat cubes.",
+      "buffText": "<b>Super</b><br>This attack gains <div>+4[SPD]</div> this turn.~SUPER~",
+      "flipEventText": "This monster gains <div>+2[SPD] [CUBE].</div>",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Leaf Shield",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +1[DEF] stat cubes",
+      "buffText": "This monster gains <div>+1[DEF] [CUBE].</div>",
       "critFlg": true
     },
     {
       "buffName": "Leaf Shield",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +1[SPD] stat cubes",
+      "buffText": "This monster gains <div>+1[SPD] [CUBE].</div>",
       "critFlg": false
     }
   ],
   "monsterId": 8,
   "abilityName": "Gusting Winds",
   "monsterName": "Galeaffy",
-  "abilityText": "When this monster switches in, this monster gains +1[SPD] cubes. ~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>+1[SPD] [CUBE].</div> ~SWITCH~",
   "hp": 10,
   "complexity": 2,
   "role": "Support"

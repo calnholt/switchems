@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Adaptive Mists",
-      "abilityText": "If the discarded card is [SUCC], put a <b>water</b> counter on this. Otherwise put a <b>fire</b> counter on this. <br><br>If <b>water</b> counter: enemy monster [W] [E] [F] attacks deal -2[ATK]<br><br>If <b>fire</b> counter: enemy monster<br> [L] [R] [S] attacks deal -2[ATK]",
+      "abilityText": "If the discarded card is <div>[SUCC],</div> put a <b>water</b> counter on this. Otherwise put a <b>fire</b> counter on this. <br><br>If <b>water</b> counter: enemy monster <div>[W] [E] [F]</div> attacks deal <div>-2[ATK]</div><br><br>If <b>fire</b> counter: enemy monster<br> <div>[L] [R] [S]</div> attacks deal <div>-2[ATK]</div>",
       "element": "Water",
       "modifiers": [
         0,
@@ -90,7 +90,7 @@
     {
       "buffName": "Wishful Strike",
       "timing": "With Attack",
-      "buffText": "This attack gains +1[ATK]",
+      "buffText": "This attack gains <div>+1[ATK].</div>",
       "flipEventText": "Put a <b>wish</b> counter on one of your monsters",
       "critFlg": true,
       "flipEventFlg": true
@@ -98,7 +98,7 @@
     {
       "buffName": "Wishful Strike",
       "timing": "With Attack",
-      "buffText": "This attack gains +1[ATK]",
+      "buffText": "This attack gains <div>+1[ATK].</div>",
       "flipEventText": "If your active monster has two or more <b>wish</b> counters, remove them and [+].",
       "critFlg": true,
       "flipEventFlg": true
@@ -106,7 +106,7 @@
     {
       "buffName": "Wishful Embrace",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +1[DEF] this turn.",
+      "buffText": "This monster gains <div>+1[DEF]</div> this turn.",
       "flipEventText": "Put a <b>wish</b> counter on one of your monsters",
       "critFlg": true,
       "flipEventFlg": true
@@ -114,7 +114,7 @@
     {
       "buffName": "Wishful Embrace",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +1[DEF] this turn.",
+      "buffText": "This monster gains <div>+1[DEF]</div> this turn.",
       "flipEventText": "If your active monster has two or more <b>wish</b> counters, remove them and [+].",
       "critFlg": true,
       "flipEventFlg": true

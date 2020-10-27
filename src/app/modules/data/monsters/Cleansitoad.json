@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Typhoon",
-      "abilityText": "[1]: [+] [+], then [-].<br><br>For each buff used that is [SUCC], this attack gains +1[ATK]. If this attack KO's the enemy monster, this monster gains +1[DEF].",
+      "abilityText": "[1]: [+] [+], then [-].<br><br>For each buff used that is [SUCC], this attack gains <div>+1[ATK].</div> If this attack KO's the enemy monster, this monster gains <div>+1[DEF].</div>",
       "element": "Water",
       "modifiers": [
         2,
@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Waterfall",
-      "abilityText": "[1]: This attack gains +3[ATK]",
+      "abilityText": "[1]: This attack gains <div>+3[ATK].</div>",
       "element": "Water",
       "modifiers": [
         2,
@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Premonition",
-      "abilityText": "[+], then [-]. For each [FAIL] discarded with this ability, this attack <br>gains +1[ATK].<br><br>[1]: [+] [+], then [-] [-] instead.",
+      "abilityText": "[+], then [-]. For each [FAIL] discarded with this ability, this attack gains <div>+1[ATK].</div><br><br>[1]: [+] [+], then [-] [-] instead.",
       "element": "Electric",
       "modifiers": [
         1,
@@ -91,7 +91,7 @@
     {
       "buffName": "Cleanse",
       "timing": "Post Actions",
-      "buffText": "Remove all positive stat cubes from your opponent's stat cube board.",
+      "buffText": "Remove all positive [CUBE] from the enemy monster.",
       "critFlg": true
     },
     {
@@ -105,20 +105,20 @@
     {
       "buffName": "Bubble Burst",
       "timing": "With Attack",
-      "buffText": "[1]: This attack gains +3[ATK]",
+      "buffText": "[1]: This attack gains <div>+3[ATK].</div>",
       "critFlg": false
     },
     {
       "buffName": "Surf",
       "timing": "With Attack",
-      "buffText": "[1]: This attack gains +3[SPD]",
+      "buffText": "[1]: This attack gains <div>+3[SPD].</div>",
       "critFlg": false
     }
   ],
   "monsterId": 1,
   "abilityName": "Clear Mind",
   "monsterName": "Cleansitoad",
-  "abilityText": "When this monster switches in, [+]. ~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, <div>[+].</div> ~SWITCH~",
   "hp": 11,
   "complexity": 3,
   "role": "Technical"

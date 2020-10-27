@@ -48,7 +48,7 @@
     },
     {
       "abilityName": "Iron Defense",
-      "abilityText": "This monster gains +2[DEF] stat cubes.",
+      "abilityText": "This monster gains <div>+2[DEF] [CUBE]</div>.",
       "element": "Rock",
       "modifiers": [
         0,
@@ -97,28 +97,28 @@
     {
       "buffName": "Recoil",
       "timing": "Post Actions",
-      "buffText": "<b>Super</b><br>The enemy monster suffers <br>1[ATK] for each  card your opponent discarded and used as buffs this turn.~SUPER~",
-      "flipEventText": "Your active monster <br>suffers 1[ATK]",
+      "buffText": "<b>Super</b><br>The enemy monster suffers <div>1[ATK]</div> for each card your opponent discarded and used as buffs this turn.~SUPER~",
+      "flipEventText": "Your active monster suffers <div>1[ATK]</div>",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Bigger Rocs",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +1[ATK] stat cubes.",
+      "buffText": "This monster gains <div>+1[ATK] [CUBE].</div>",
       "critFlg": false
     },
     {
       "buffName": "Bigger Rocs",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +1[ATK] stat cubes.",
+      "buffText": "This monster gains <div>+1[ATK] [CUBE].</div>",
       "critFlg": false
     }
   ],
   "monsterId": 9,
   "abilityName": "Wing Clip",
   "monsterName": "Americaw",
-  "abilityText": "When this monster switches in, the enemy monster gains -2[SPD] stat cubes.~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>-2[SPD] [CUBE].</div>~SWITCH~",
   "hp": 9,
   "complexity": 2,
   "promiseDescription": "Americaw is reckless assassin that requires finesse. Knowing how to position Americaw to maximize Scavenge and Iron Defense is key to its survival.",

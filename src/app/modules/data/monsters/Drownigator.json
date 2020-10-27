@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Foul Play",
-      "abilityText": "[2]: The enemy monster gains -1[ATK] stat cubes.",
+      "abilityText": "[2]: The enemy monster gains <div>-1[ATK] [CUBE].</div>",
       "element": "Death",
       "modifiers": [
         0,
@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Expunge",
-      "abilityText": "<b>Single use</b><br><br>If the enemy monster has a status condition, this attack gains:<br>[1]: +2[ATK]~SINGLE~~STATUS~",
+      "abilityText": "<b>Single use</b><br><br>If the enemy monster has a status condition, this attack gains:<br>[1]: <div>+2[ATK]</div>~SINGLE~~STATUS~",
       "element": "Death",
       "modifiers": [
         0,
@@ -92,13 +92,13 @@
     {
       "buffName": "Disarm",
       "timing": "Pre-Actions",
-      "buffText": "The enemy monster gains -1[ATK] stat cubes",
+      "buffText": "The enemy monster gains <div>-1[ATK] [CUBE].</div>",
       "critFlg": true
     },
     {
       "buffName": "Cripple",
       "timing": "Pre-Actions",
-      "buffText": "The enemy monster gains -1[ATK] stat cubes",
+      "buffText": "The enemy monster gains <div>-1[ATK] [CUBE].</div>",
       "flipEventText": "If your opponent has more cards in their hand than you, that player discards one card at random.",
       "critFlg": false,
       "flipEventFlg": true
@@ -106,7 +106,7 @@
     {
       "buffName": "Tremble",
       "timing": "Pre-Actions",
-      "buffText": "[1]: The enemy monster gains <br>-2[SPD] stat cubes",
+      "buffText": "[1]: The enemy monster gains <div>-2[SPD] [CUBE].</div>",
       "critFlg": true
     },
     {
@@ -119,7 +119,7 @@
   "monsterId": 5,
   "abilityName": "Panic Attack",
   "monsterName": "Drownigator",
-  "abilityText": "When this monster switches in, the opponent discards a card at random.~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, the opponent discards a card at random.~SWITCH~",
   "hp": 9,
   "complexity": 1,
   "promiseDescription": "Drownigator is an immediate threat. Panic Attack puts your opponent on the defensive and a properly buffed Expunge can devastate leaf and rock types.",
