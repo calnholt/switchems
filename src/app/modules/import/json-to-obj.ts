@@ -4,7 +4,7 @@ import { default as Chargroar } from '../data/monsters/Chargroar.json';
 import { default as Flexferno } from '../data/monsters/Flexferno.json';
 import { default as Zappguin } from '../data/monsters/Zappguin.json';
 import { default as Phantomaton } from '../data/monsters/Phantomaton.json';
-import { default as Calcicragg } from '../data/monsters/Calcicragg.json';
+import { default as Cragadilo } from '../data/monsters/Cragadilo.json';
 import { default as Galeaffy } from '../data/monsters/Galeaffy.json';
 import { default as Drownigator } from '../data/monsters/Drownigator.json';
 import { default as Americaw } from '../data/monsters/Americaw.json';
@@ -12,6 +12,8 @@ import { default as Steamie } from '../data/monsters/Steamie.json';
 import { default as Boltblebee } from '../data/monsters/BoltbleBee.json';
 import { default as Smolderskulk } from '../data/monsters/Smolderskulk.json';
 import { default as Oozygoopz } from '../data/monsters/Oozygoopz.json';
+import { default as Orebsorbo } from '../data/monsters/Orebsorbo.json';
+import { default as Squirrberus } from '../data/monsters/Squirrberus.json';
 import { ElemType, ELEMENTS, Role, ROLES } from './../../types/dataTypes';
 import { MonsterComplete, Buff, Action } from '../monster/model/monster';
 
@@ -28,16 +30,18 @@ export const loadMonsters = (): Array<MonsterComplete> => {
     const ALL = [
         Americaw,
         Boltblebee,
-        Calcicragg,
         Chargroar,
         Cleansitoad,
+        Cragadilo,
         Drownigator,
         Flexferno,
         Galeaffy,
         Oozygoopz,
+        Orebsorbo,
         Smolderskulk,
         Stallagrowth,
         Steamie,
+        Squirrberus,
         Phantomaton,
         Zappguin,
     ];

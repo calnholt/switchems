@@ -1,0 +1,122 @@
+{
+  "elements": [],
+  "actions": [
+    {
+      "abilityName": "Forage",
+      "abilityText": "Gain one of each <b>acorn</b> counter.<br><br>[1]: This monster gains <div>+1[DEF] [CUBE].</div><br><br><b>Single use.</b>~SINGLE~",
+      "element": "Leaf",
+      "modifiers": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auraDuration": 0,
+      "statusFlg": true,
+      "reactionFlg": false,
+      "speed": 6,
+      "draw": 1
+    },
+    {
+      "abilityName": "Strike of Power",
+      "abilityText": "Gain a <b>power acorn</b> counter.<br>",
+      "element": "Fire",
+      "modifiers": [
+        0,
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 4,
+      "speed": 8,
+      "discard": 2,
+      "buff": 1
+    },
+    {
+      "abilityName": "Strike of Courage",
+      "abilityText": "Gain a <b>courage acorn</b> counter.<br>",
+      "element": "Leaf",
+      "modifiers": [
+        0,
+        0,
+        0,
+        3,
+        1,
+        0
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 2,
+      "speed": 2,
+      "buff": 3
+    },
+    {
+      "abilityName": "Strike of Wisdom",
+      "abilityText": "Gain a <b>wisdom acorn</b> counter.<br><br>[1]: Gain another <b>wisdom acorn</b> counter.",
+      "element": "Water",
+      "modifiers": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 3,
+      "speed": 5,
+      "discard": 1,
+      "buff": 2
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Spicy Acorn",
+      "timing": "Pre-Actions",
+      "buffText": "This attack gains +1[ATK]. If the attack is either [F] [E], perform:<br><br>[1]: This attack gains +2[SPD]",
+      "flipEventText": "Gain a <b>power acorn</b> counter.",
+      "critFlg": false,
+      "flipEventFlg": true
+    },
+    {
+      "buffName": "Ripe Acorn",
+      "timing": "Pre-Actions",
+      "buffText": "This monster gains +2[DEF]. If the attack is either [L] [R], perform:<br><br>[1]: This attack gains +1[ATK]",
+      "flipEventText": "Gain a <b>courage acorn</b> counter.",
+      "critFlg": false,
+      "flipEventFlg": true
+    },
+    {
+      "buffName": "Rotten Acorn",
+      "timing": "Pre-Actions",
+      "buffText": "This attack gains +2[SPD]. If the attack is either [W] [S], perform:<br><br>[1]: This monster gains +2[DEF] this turn",
+      "flipEventText": "Gain a <b>wisdom acorn</b> counter.",
+      "critFlg": false,
+      "flipEventFlg": true
+    },
+    {
+      "buffName": "Winter is Coming",
+      "timing": "Post Actions",
+      "buffText": "<b>Super, Ethereal</b><br><br>Gain any three <b>acorn</b> counters.~SUPER~~ETHEREAL~",
+      "flipEventText": "If you have 4 or more <b>acorn</b> counters, [+].",
+      "critFlg": true,
+      "flipEventFlg": true
+    }
+  ],
+  "abilityName": "Hoarder",
+  "monsterName": "Squirrberus",
+  "abilityText": "Whenever any monster on your team buffs an action, discard all of your <b>acorn</b> counters. That monster gains <div>+1[DEF]</div> this turn for each <b>wisdom acorn</b> discarded, and the attack gains <div>+1[ATK]</div> for each <b>power acorn</b> discarded and <div>+1[SPD]</div> for each <b>wisdom acorn</b> discarded.",
+  "hp": 10,
+  "complexity": 2,
+  "role": "Support"
+}
