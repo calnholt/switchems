@@ -52,7 +52,7 @@
                 tr{
                     td{
                         text-align: center;
-                        font-size: 30px;
+                        font-size: 16px;
                         font-family: $helvetica;
                         width: 50%;
                         padding: 6px;
@@ -65,6 +65,16 @@
                         }
                         .draw{
                             padding-right: 4px;
+                        }
+                        .cube {
+                            max-height: 16px;
+                        }
+                    }
+                }
+                &.monster-actions {
+                    tr {
+                        td {
+                            font-size: 30px;
                         }
                     }
                 }

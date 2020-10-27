@@ -1,13 +1,14 @@
 import { getAbilityText } from './../../../common/cards';
 import { SYMBOLS } from './../../../../constants';
 import { Css, Path } from './../../../../types/dataTypes';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { Buff } from '../../model/monster';
 
 @Component({
   selector: 'monster-buff',
   templateUrl: './monster-buff.component.html',
-  styleUrls: ['./monster-buff.component.scss']
+  styleUrls: ['./monster-buff.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class MonsterBuffComponent implements OnInit {
   @Input() buff: Buff;

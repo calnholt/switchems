@@ -1,6 +1,6 @@
 <div id="filter-all">
   <div *ngIf="isCollapsed" class="container">
-    <div class="header-container">
+    <div (click)="toggleCollapse()" class="header-container">
       <span class="title">Filters</span>
       <span>
         <mat-icon (click)="toggleCollapse()">add_box</mat-icon>

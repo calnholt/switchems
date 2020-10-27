@@ -98,6 +98,9 @@
                 line-height: 15px;
                 width: 85%;
                 letter-spacing: -0.02em;
+                div {
+                    display: inline-block;
+                }
             }
             .buff-text{
                 font-family: $helvetica;
@@ -106,6 +109,9 @@
                 text-align: center;
                 display: inline-block;
                 line-height: 16px;
+                div {
+                    display: inline-block;
+                }
             }
         }
         .bottom-container{
