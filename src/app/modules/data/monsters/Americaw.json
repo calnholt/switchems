@@ -48,7 +48,7 @@
     },
     {
       "abilityName": "Iron Defense",
-      "abilityText": "This monster gains <div>+2[DEF] [CUBE]</div>.",
+      "abilityText": "This monster gains {\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.",
       "element": "Rock",
       "modifiers": [
         0,
@@ -105,20 +105,20 @@
     {
       "buffName": "Bigger Rocs",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains <div>+1[ATK] [CUBE].</div>",
+      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
       "critFlg": false
     },
     {
       "buffName": "Bigger Rocs",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains <div>+1[ATK] [CUBE].</div>",
+      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
       "critFlg": false
     }
   ],
   "monsterId": 9,
   "abilityName": "Wing Clip",
   "monsterName": "Americaw",
-  "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>-2[SPD] [CUBE].</div>~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, the enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}~SWITCH~",
   "hp": 9,
   "complexity": 2,
   "promiseDescription": "Americaw is reckless assassin that requires finesse. Knowing how to position Americaw to maximize Scavenge and Iron Defense is key to its survival.",

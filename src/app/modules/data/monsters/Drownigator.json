@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Foul Play",
-      "abilityText": "[2]: The enemy monster gains <div>-1[ATK] [CUBE].</div>",
+      "abilityText": "[2]: The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
       "element": "Death",
       "modifiers": [
         0,
@@ -92,13 +92,13 @@
     {
       "buffName": "Disarm",
       "timing": "Pre-Actions",
-      "buffText": "The enemy monster gains <div>-1[ATK] [CUBE].</div>",
+      "buffText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "critFlg": true
     },
     {
       "buffName": "Cripple",
       "timing": "Pre-Actions",
-      "buffText": "The enemy monster gains <div>-1[ATK] [CUBE].</div>",
+      "buffText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "flipEventText": "If your opponent has more cards in their hand than you, that player discards one card at random.",
       "critFlg": false,
       "flipEventFlg": true
@@ -106,7 +106,7 @@
     {
       "buffName": "Tremble",
       "timing": "Pre-Actions",
-      "buffText": "[1]: The enemy monster gains <div>-2[SPD] [CUBE].</div>",
+      "buffText": "[1]: The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
       "critFlg": true
     },
     {

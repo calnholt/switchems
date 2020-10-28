@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Implosion",
-      "abilityText": "Remove all positive <div>[DEF] [CUBE]</div> from this monster, even if the enemy monster counters.<br><br>For each positive <div>[DEF] [CUBE]</div> removed, perform:<br><br>[1]: +{\"positive\": 2, \"neutral\": 2, \"negative\": 1}[ATK]",
+      "abilityText": "Remove all <div>[DEF] [PQ]</div> from this monster, even if the enemy monster counters.<br><br>For each <div>[DEF] [PQ]</div> removed, perform:<br><br>[1]: +{\"positive\": 2, \"neutral\": 2, \"negative\": 1}[ATK]",
       "element": "Rock",
       "modifiers": [
         0,
@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Beckon Earth",
-      "abilityText": "If <b>exposed</b>, this attack gains <div>-1[ATK],</div> <div>+3[SPD],</div> and <div><b>Recoil 1</b>[ATK].</div><br><br>[1]: This monster gains <div>+1[DEF] [CUBE].</div>~RECOIL~",
+      "abilityText": "If <b>exposed</b>, this attack gains <div>-1[ATK],</div> <div>+3[SPD],</div> and <div><b>Recoil 1</b>[ATK].</div><br><br>[1]: This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.~RECOIL~",
       "element": "Rock",
       "modifiers": [
         0,
@@ -46,7 +46,7 @@
     },
     {
       "abilityName": "Unearth",
-      "abilityText": "[4]: This monster gains <div>+1[DEF] [CUBE].</div><br><br>If <b>exposed</b>, +[2].",
+      "abilityText": "[4]: This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.<br><br>If <b>exposed</b>, +[2].",
       "element": "Rock",
       "modifiers": [
         0,
@@ -87,8 +87,8 @@
     {
       "buffName": "Rock Armor",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains <div>+1[DEF] [CUBE]</div>",
-      "flipEventText": "This monster gains <div>+1[DEF] [CUBE]</div>",
+      "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
+      "flipEventText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
       "critFlg": false,
       "flipEventFlg": true
     },
@@ -111,7 +111,7 @@
     {
       "buffName": "Fight or Flight",
       "timing": "Pre-Actions",
-      "buffText": "If this monster has no positive <div>[DEF] [CUBE],</div> this attack gains <div>+2[SPD].</div> Otherwise this attack gains <div>+2[ATK].</div>",
+      "buffText": "If this monster has no <div>[DEF] [PQ],</div> this attack gains <div>+2[SPD].</div> Otherwise this attack gains <div>+2[ATK].</div>",
       "flipEventText": null,
       "critFlg": true,
       "flipEventFlg": false
@@ -119,7 +119,7 @@
   ],
   "abilityName": "Fortified",
   "monsterName": "Cragadilo",
-  "abilityText": "When this monster <b>switches in</b>, this monster gain <div>+X[DEF] [CUBE],</div> where X is equal to this monster's current [HP] minus two. This monster is <b>exposed</b> when it has no positive <div>[DEF] [CUBE].</div>~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>+X[DEF] [PQ],</div> where X is equal to this monster's current [HP] minus two. This monster is <b>exposed</b> when it has no <div>[DEF] [PQ].</div>~SWITCH~",
   "hp": 5,
   "complexity": 2,
   "role": "Warrior"

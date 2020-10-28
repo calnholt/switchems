@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Thunderstorm",
-      "abilityText": "This monster gains <div>+2[SPD] [CUBE].</div>",
+      "abilityText": "This monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.",
       "element": "Electric",
       "modifiers": [
         3,
@@ -91,21 +91,21 @@
     {
       "buffName": "Prepared Zap",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super</b><br>The enemy monster gains a paralyze condition. ~SUPER~~PARALYZE~",
+      "buffText": "<b>Super, Paralyze, Ethereal</b>~SUPER~~PARALYZE~~ETHEREAL~",
       "critFlg": true
     },
     {
       "buffName": "Impulsive Zap",
       "timing": "With Attack",
       "buffText": "[1]: The enemy monster gains a paralyze condition. ~PARALYZE~",
-      "flipEventText": "The enemy monster gains <div>-1[SPD] [CUBE].</div>",
+      "flipEventText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "High Voltage",
       "timing": "Pre-Actions",
-      "buffText": "[+]<br> This attack gains <b>recoil 1</b>. If the enemy monster is <b>paralzyed</b>, that monster flips only [1] for its <b>paralzyed</b> condition this turn, ignoring of any other modifiers. ~RECOIL~.",
+      "buffText": "[+] and this attack gains <b>recoil 1[ATK]</b>. If the enemy monster is <b>paralzyed</b>, that monster flips only [1] for its <b>paralzyed</b> condition this turn, ignoring any other modifiers. ~RECOIL~.",
       "critFlg": false
     },
     {

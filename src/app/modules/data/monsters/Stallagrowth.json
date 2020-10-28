@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Rock Slide",
-      "abilityText": "[1]: The enemy monster gains <div>-1[ATK] [CUBE].</div>",
+      "abilityText": "[1]: The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "element": "Rock",
       "modifiers": [
         0,
@@ -92,7 +92,7 @@
     {
       "buffName": "Toughen Vines",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains <div>+1[DEF] [CUBE].</div>",
+      "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.",
       "critFlg": false
     },
     {
@@ -106,7 +106,7 @@
     {
       "buffName": "Concussion",
       "timing": "With Attack",
-      "buffText": "If this action is <b>faster</b>, <div>[2]: <b>Flinch</b></div> ~FASTER~~FLINCH~",
+      "buffText": "If this action is <b>faster</b> perform:, <div>[2]: <b>Flinch</b></div> ~FASTER~~FLINCH~",
       "critFlg": true
     },
     {
@@ -119,7 +119,7 @@
   "monsterId": 1,
   "abilityName": "Vineshield",
   "monsterName": "Stallagrowth",
-  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>+1[DEF] [CUBE].</div> ~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, this monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}. ~SWITCH~",
   "hp": 11,
   "complexity": 1,
   "promiseDescription": "Slowly drain the enemy's health and stand your ground with Vineshield's defensive boon. Stallagrowth plays for the long game, but struggles to accumulate cards. Knowing when to draw three is essential to sustaining pressure.",

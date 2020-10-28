@@ -52,17 +52,17 @@ const TERM_KEYS = [`~BURN~`, `~SUCCESS~`, `~FLINCH~`, `~PARALYZE~`, `~LEECH~`, `
     `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~SUPER~`, `~FASTER~`, `~SLOWER~`, `~GOOP~`, `~ETHEREAL~`] as const;
 export type TermCode = typeof TERM_KEYS[number];
 export const TERM_CODES = [
-    new Term(`~BURN~`, `Burned monsters ignore their attack's elemental bonuses and gain <div>-1[ATK] [CUBE].</div> `
-     + `If the monster is <div>[L] [R] [S],</div> that monster gains an additional <div>-1[ATK] [CUBE].</div>`),
-     new Term(`~ETHEREAL~`, `After this card is used as a buff, remove it from the game.`),
+    new Term(`~BURN~`, `Burned monsters ignore their attack's elemental modifiers. `
+     + `If the monster is <div>[L] [R] [S],</div> that monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.`),
+     new Term(`~ETHEREAL~`, `Ethereals are removed from the game after played as buffs.`),
      new Term(`~FASTER~`, `This action is faster if both players select a monster action and yours has a higher speed.`),
-     new Term(`~FATIGUE~`, `Fatigued monsters cannot buff their attacks and gains <div>-1[DEF] [CUBE].</div> ` +
-     `If the monster is <div>[W] [E] [F],</div> that monster gains an additional <div>-1[DEF] [CUBE]</div>.`),
+     new Term(`~FATIGUE~`, `Fatigued monsters cannot buff their attacks. ` +
+     `If the monster is <div>[W] [E] [F],</div> that monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": false}.`),
      new Term(`~FLINCH~`, `Actions with flinch prevent the enemy monster's monster action if this action is faster.`),
      new Term(`~GOOP~`, `Goop buffs have no buff effect if you do not have <b>Oozygoopz</b> on your team.`),
      new Term(`~LEECH~`, `Leeched monsters suffer <div>1[ATK]</div> at the end of each turn, and your active monster heals `
      + `<div>1[HP].</div> Stacks up to three. Remove on switch.`),
-     new Term(`~PARALYZE~`, `Paralyzed monsters gain <div>-2[SPD] [CUBE]</div> and all of their monster actions have  `
+     new Term(`~PARALYZE~`, `Paralyzed monsters gain {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false} and all of their monster actions have  `
      + `<div>[2]: </div>This action is successful. Perform these flips first and ignore all flip events for these flips.`),
      new Term(`~RECOIL~`, `This monster suffers this amount of recoil damage to itself. `
      + `This damage cannot be prevented and still occurs if this action is prevented.`),
@@ -76,7 +76,7 @@ export const TERM_CODES = [
 ] as const;
 
 const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[1]`, `[2]`, `[3]`, `[4]`, `[DEF]`, `[TA]`, `[X]`, `[SUCC]`, `[FAIL]`,
-`[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]'] as const;
+`[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]', '[NQ]', '[PQ]'] as const;
 export type ImageCode = typeof IMAGE_KEYS[number];
 export const IMAGE_CODES = [
     new Image(`[ATK]`, SYMBOLS_PATH + `attack.png`),
@@ -103,5 +103,7 @@ export const IMAGE_CODES = [
     new Image(`[REAC]`, SYMBOLS_PATH + `reaction.png`),
     new Image(`[HP]`, SYMBOLS_PATH + `heart.png`),
     new Image(`[CUBE]`, SYMBOLS_PATH + `cube.png`),
+    new Image(`[NQ]`, SYMBOLS_PATH + `red-cube.png`),
+    new Image(`[PQ]`, SYMBOLS_PATH + `green-cube.png`),
 ] as const;
 

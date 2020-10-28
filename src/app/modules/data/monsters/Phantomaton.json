@@ -91,13 +91,13 @@
     {
       "buffName": "Target Acquired",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains <div>+2[ATK] [CUBE]</div> if the enemy monster performed a switch action this turn.",
+      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} if the enemy monster performed a switch action this turn.",
       "critFlg": true
     },
     {
       "buffName": "Target Acquired",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains <div>+2[ATK] [CUBE]</div> if the enemy monster performed a switch action this turn.",
+      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} if the enemy monster performed a switch action this turn.",
       "critFlg": true
     },
     {

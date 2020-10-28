@@ -27,7 +27,7 @@
     },
     {
       "abilityName": "Lights Out",
-      "abilityText": "If this attack KO's the enemy monster, this monster gains <div>+2[ATK] [CUBE].</div>",
+      "abilityText": "If this attack KO's the enemy monster, this monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}",
       "element": "Electric",
       "modifiers": [
         1,
@@ -48,7 +48,7 @@
     },
     {
       "abilityName": "Hypercharge",
-      "abilityText": "This monster gains <div>+2[ATK] [CUBE].</div>",
+      "abilityText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.",
       "element": "Electric",
       "modifiers": [
         0,
@@ -119,7 +119,7 @@
   "monsterId": 4,
   "abilityName": "Intimidate",
   "monsterName": "Chargroar",
-  "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>-2[ATK] [CUBE].</div>~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, the enemy monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.~SWITCH~",
   "hp": 7,
   "complexity": 1,
   "promiseDescription": "Chargroar is a straightforward assassin. Fast, strong attacks, with ways to increase its attack strength with [CUBE]. Chargroar's buffs are unconditional and incredibly efficient. Since Chargroar is easy to KO, there is little room error.",

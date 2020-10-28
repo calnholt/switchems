@@ -1,5 +1,5 @@
 import { Term, Image } from './../data/data';
-import { ElemType, TERM_CODES, IMAGE_CODES, Css } from './../../types/dataTypes';
+import { ElemType, TERM_CODES, IMAGE_CODES, Css, ImageCode } from './../../types/dataTypes';
 
 export const getAdvantages = (elem: ElemType): number[] => {
   // fire, water, rock, leaf, elec, death
@@ -26,10 +26,10 @@ export const getAbilityText = (text: string, termCss: Css, imageCss: Css): strin
   if (!text) {
     return null;
   }
-  let innerHtml = text;
+  let innerHtml = convertInnerTextJson(text);
   TERM_CODES.forEach((term: Term) => {
     while (innerHtml.includes(term.key)) {
-        const html = `<br><span class="${termCss}">(${term.value})</span>`;
+        const html = `<br><span class="${termCss}">(${convertInnerTextJson(term.value)})</span>`;
         innerHtml = innerHtml.replace(term.key, html);
     }
   });
@@ -39,28 +39,46 @@ export const getAbilityText = (text: string, termCss: Css, imageCss: Css): strin
         innerHtml = innerHtml.replace(image.key, html);
     }
   });
-  // looks for stat spread tokens and replaces with appropriate html
+  
+  return innerHtml;
+};
+
+function convertInnerTextJson(innerHtml) {
   while (innerHtml.includes('{') && innerHtml.includes('}')) {
     const startIndex = innerHtml.indexOf('{');
     const endIndex = innerHtml.indexOf('}');
     const jsonInText = innerHtml.substring(startIndex, endIndex + 1);
     try {
       const obj = JSON.parse(jsonInText);
-      let html = '<span class="stat-spread">';
-      if (obj.hasOwnProperty('positive')) {
-        html += `<span class="positive">${obj.positive}</span>`;
+      let html;
+      const isStatSpread = obj.hasOwnProperty('positive') || obj.hasOwnProperty('neutral') || obj.hasOwnProperty('negative');
+      if (isStatSpread) {
+        html = '<span class="stat-spread">';
+        if (obj.hasOwnProperty('positive')) {
+          html += `<span class="positive">${obj.positive}</span>`;
+        }
+        if (obj.hasOwnProperty('neutral')) {
+          html += `<span class="neutral">${obj.neutral}</span>`;
+        }
+        if (obj.hasOwnProperty('negative')) {
+          html += `<span class="negative">${obj.negative}</span>`;
+        }
+        html += '</span>';
       }
-      if (obj.hasOwnProperty('neutral')) {
-        html += `<span class="neutral">${obj.neutral}</span>`;
+      const isCubes = obj.hasOwnProperty('stat') || obj.hasOwnProperty('num') || obj.hasOwnProperty('isPositive');
+      if (isCubes) {
+        html = '<div class="cubes">';
+          const cubeType: ImageCode = obj.isPositive ? '[PQ]' : '[NQ]';
+          let cubeStr = '';
+          for (let i = 0; i < obj.num; i++) {
+            cubeStr += cubeType + ' ';
+          }
+          html += `${cubeStr}– [${obj.stat}]</div>`;
       }
-      if (obj.hasOwnProperty('negative')) {
-        html += `<span class="negative">${obj.negative}</span>`;
-      }
-      html += '</span>';
       innerHtml = innerHtml.replace(jsonInText, html);
     } catch (error) {
       innerHtml = innerHtml.replace(jsonInText, '');
     }
   }
   return innerHtml;
-};
+}

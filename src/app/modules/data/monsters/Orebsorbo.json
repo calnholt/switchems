@@ -6,7 +6,7 @@
     "actions": [
       {
         "abilityName": "Discharge",
-        "abilityText": "Remove all negative [CUBE] from this monster, even if the enemy monster counters. <br><br>For each [CUBE] removed this way, this attack gains <div>+1[ATK].</div>",
+        "abilityText": "Remove all [NQ] from this monster, even if the enemy monster counters. <br><br>For each [NQ] removed this way, this attack gains <div>+1[ATK].</div>",
         "element": "Electric",
         "modifiers": [
           2,
@@ -26,7 +26,7 @@
       },
       {
         "abilityName": "Entrenched Barrage",
-        "abilityText": "This monster gains <div>-2[SPD][CUBE],</div> even if the enemy monster counters.",
+        "abilityText": "This monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}, even if the enemy monster counters.",
         "element": "Rock",
         "modifiers": [
           0,
@@ -46,7 +46,7 @@
       },
       {
         "abilityName": "Frazzle",
-        "abilityText": "This monster gains <div>-1[DEF] [CUBE],</div> even if the enemy monster counters.",
+        "abilityText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": false}, even if the enemy monster counters.",
         "element": "Electric",
         "modifiers": [
           3,
@@ -66,7 +66,7 @@
       },
       {
         "abilityName": "Recharge",
-        "abilityText": "If this monster has two or more negative [CUBE], remove two and heal <div>3[HP].</div> Otherwise the enemy monster gains <div>-3[SPD][CUBE].</div>",
+        "abilityText": "If this monster has two or more [NQ], remove two and heal <div>3[HP].</div> Otherwise the enemy monster gains {\"stat\": \"SPD\", \"num\": 3, \"isPositive\": false}.",
         "element": "Electric",
         "modifiers": [
           0,
@@ -88,7 +88,7 @@
         "buffName": null,
         "timing": null,
         "buffText": null,
-        "flipEventText": "You may gain <div>-2[SPD] [CUBE]</div> to heal <div>3[HP].</div>",
+        "flipEventText": "You may gain {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false} to heal <div>3[HP].</div>",
         "critFlg": false,
         "flipEventFlg": true
       },
@@ -96,7 +96,7 @@
         "buffName": null,
         "timing": null,
         "buffText": null,
-        "flipEventText": "You may gain <div>-1[ATK] [CUBE]</div> to heal <div>3[HP].</div>",
+        "flipEventText": "You may gain {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false} to heal <div>3[HP].</div>",
         "critFlg": false,
         "flipEventFlg": true
       },
@@ -119,7 +119,7 @@
     ],
     "abilityName": "Absorb",
     "monsterName": "Orebsorbo",
-    "abilityText": "If this monster switched in this turn and the enemy monster attacked, prevent the attack and gain <div>-2[CUBE]</div> of your choice.",
+    "abilityText": "If this monster switched in this turn and the enemy monster attacked, prevent the attack and gain <div>[NQ] [NQ]</div> of your choice.",
     "hp": 11,
     "complexity": 1,
     "role": "Warrior"

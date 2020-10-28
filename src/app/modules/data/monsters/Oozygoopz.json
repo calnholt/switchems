@@ -45,7 +45,7 @@
     },
     {
       "abilityName": "Viscous Split",
-      "abilityText": "<b>Recoil X</b>[ATK], where X is the number of buffs played with this attack.<br><br>For each buff used, the enemy monster gains <div>-1[DEF] [CUBE].</div>~RECOIL~",
+      "abilityText": "<b>Recoil X</b>[ATK], where X is the number of buffs played with this attack.<br><br>For each buff used, the enemy monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": false}.~RECOIL~",
       "element": "Water",
       "modifiers": [
         2,
@@ -86,32 +86,32 @@
   "buffs": [
     {
       "buffName": "Thick Goop",
-      "timing": "With Attack",
-      "buffText": "<b>Goop</b><br>This monster gains <div>+1[DEF] [CUBE].</div> Shuffle this card into your opponent's deck.~GOOP~",
+      "timing": "Post Actions",
+      "buffText": "<b>Goop</b><br>This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}. Shuffle this card into your opponent's deck.~GOOP~",
       "flipEventText": "Your active monster suffers <div>X[ATK],</div> where X is the number of <b>Goop</b> cards in your discard.",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Wispy Goop",
-      "timing": "With Attack",
-      "buffText": "<b>Goop</b><br>This monster gains <div>+2[SPD] [CUBE].</div> Shuffle this card into your opponent's deck.~GOOP~",
+      "timing": "Post Actions",
+      "buffText": "<b>Goop</b><br>This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}. Shuffle this card into your opponent's deck.~GOOP~",
       "flipEventText": "Your active monster suffers <div>X[ATK],</div> where X is the number of <b>Goop</b> cards in your discard.",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Prickly Goop",
-      "timing": "With Attack",
-      "buffText": "<b>Goop</b><br>This monster gains +1[ATK] [CUBE].</div> Shuffle this card into your opponent's deck.~GOOP~",
+      "timing": "Post Actions",
+      "buffText": "<b>Goop</b><br>This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}. Shuffle this card into your opponent's deck.~GOOP~",
       "flipEventText": "Your active monster suffers <div>X[ATK],</div> where X is the number of <b>Goop</b> cards in your discard.",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Super Goop",
-      "timing": "With Attack",
-      "buffText": "<b>Super, Goop</b><br>Shuffle this card into your opponent's deck.~GOOP~",
+      "timing": "Post Actions",
+      "buffText": "<b>Goop</b><br>This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}. Shuffle this card into your opponent's deck.",
       "flipEventText": "If you do not have <b>Oozygoopz</b> on your team, your active monster suffers <div>X+3[ATK],</div> where X is the number of <b>Goop</b> cards in your discard.",
       "critFlg": false,
       "flipEventFlg": true
@@ -122,6 +122,6 @@
   "abilityText": "At the start of each turn, if this monster is not at full HP, perform:<br><br>[1]: Heal <div>1[HP]</div>",
   "hp": 12,
   "complexity": 3,
-  "role": "Support",
-  "promiseDescription": "Drive your opponent crazy by loading their deck up with a bunch of painfully useless goop!"
+  "promiseDescription": "Drive your opponent crazy by loading their deck up with a bunch of painfully useless goop!",
+  "role": "Support"
 }

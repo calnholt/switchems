@@ -91,7 +91,7 @@
     {
       "buffName": "Cleanse",
       "timing": "Post Actions",
-      "buffText": "Remove all positive [CUBE] from the enemy monster.",
+      "buffText": "Remove all [PQ] from the enemy monster.",
       "critFlg": true
     },
     {

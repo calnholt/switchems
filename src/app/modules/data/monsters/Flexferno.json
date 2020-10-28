@@ -97,8 +97,8 @@
     {
       "buffName": "Melt Away",
       "timing": "Post Actions",
-      "buffText": "<b>Super, Ethereal</b><br>Remove all negative [CUBE] from this monster and all status conditions from all of your monsters.~SUPER~~ETHEREAL~",
-      "flipEventText": "You may choose to remove a negative [CUBE] from your active monster.",
+      "buffText": "<b>Super, Ethereal</b><br>Remove all [NQ] from this monster and all status conditions from all of your monsters.~SUPER~~ETHEREAL~",
+      "flipEventText": "You may choose to remove a [NQ] from your active monster.",
       "critFlg": true,
       "flipEventFlg": true
     },
