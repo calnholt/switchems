@@ -46,9 +46,7 @@
           <div class="promise-title">
             Promise Descripition
           </div>
-          <div class="pt-1">
-            {{monster.promiseDescription}}
-          </div>
+          <div [innerHTML]="getPromiseText()" class="pt-1"></div>
         </div>
         <button class="save-button" mat-stroked-button (click)="save()">Copy Monster to Clipboard</button>
         <div class="tts">

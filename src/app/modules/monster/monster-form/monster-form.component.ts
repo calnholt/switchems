@@ -1,9 +1,10 @@
 import { loadMonsters } from './../../import/json-to-obj';
-import { TERM_CODES, IMAGE_CODES, CardTypes, ROLES, ELEMENTS } from './../../../types/dataTypes';
+import { TERM_CODES, IMAGE_CODES, CardTypes, ROLES, ELEMENTS, Css } from './../../../types/dataTypes';
 import { MonsterComplete, Action, Buff } from './../model/monster';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { Component, ViewChild, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { getAbilityText } from './../../common/cards';
 
 @Component({
   selector: 'monster-form',
@@ -21,6 +22,8 @@ export class MonsterFormComponent implements OnInit {
   imageCodes = IMAGE_CODES;
   selectedCard: CardTypes = 'MONSTER';
   index: number = 0;
+  TERM_CSS: Css = 'term';
+  ABILITY_IMG_CSS: Css = 'term-img';
 
   constructor(
     private route: ActivatedRoute
@@ -85,5 +88,9 @@ export class MonsterFormComponent implements OnInit {
   selectCard(selection: CardTypes, index: number) {
     this.selectedCard = selection;
     this.index = index;
+  }
+
+  getPromiseText() {
+    return getAbilityText(this.monster.promiseDescription, this.TERM_CSS, this.ABILITY_IMG_CSS);
   }
 }
