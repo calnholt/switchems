@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Vine Whips",
-      "abilityText": "Remove all <b>leech</b> counter from the enemy monster, even if the enemy monster selected [COUNTER].<br><br>This attack gains <div>+2[ATK]</div> for each <b>leech</b> counter removed.",
+      "abilityText": "Remove all <b>leech</b> counters from the enemy monster, even if the enemy monster selected [COUNTER].<br><br>This attack gains <div>+2[ATK]</div> for each <b>leech</b> counter removed.",
       "element": "Leaf",
       "modifiers": [
         0,
@@ -83,7 +83,7 @@
       "reactionFlg": false,
       "attack": 2,
       "speed": 4,
-      "draw": 1,
+      "draw": 0,
       "discard": 1,
       "buff": 2
     }

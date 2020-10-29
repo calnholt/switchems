@@ -77,7 +77,7 @@ export const TERM_CODES = [
 
 const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[1]`, `[2]`, `[3]`, `[4]`, `[DEF]`, `[TA]`, `[X]`, `[SUCC]`, `[FAIL]`,
 `[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]', '[NQ]', '[PQ]', '[ARROW]', '[!]',
-'[SPECIAL]', '[STATUS]', '[COUNTER]'] as const;
+'[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]'] as const;
 export type ImageCode = typeof IMAGE_KEYS[number];
 export const IMAGE_CODES = [
     new Image(`[ATK]`, SYMBOLS_PATH + `attack.png`),
@@ -106,6 +106,7 @@ export const IMAGE_CODES = [
     new Image(`[CUBE]`, SYMBOLS_PATH + `cube.png`),
     new Image(`[NQ]`, SYMBOLS_PATH + `red-cube.png`),
     new Image(`[PQ]`, SYMBOLS_PATH + `green-cube.png`),
+    new Image(`[MQ]`, SYMBOLS_PATH + `blue-cube.png`),
     new Image(`[ARROW]`, SYMBOLS_PATH + `sideswipe.png`),
     new Image(`[!]`, SYMBOLS_PATH + `flip-event.png`),
     new Image(`[SPECIAL]`, SYMBOLS_PATH + `status.png`),

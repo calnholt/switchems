@@ -91,7 +91,7 @@
     {
       "buffName": "Beak Drill",
       "timing": "Pre-Actions",
-      "buffText": "If the enemy monster used a maneuver cube this turn, your opponent loses an additional maneuver cube.",
+      "buffText": "If the enemy monster used a [MQ] this turn, your opponent loses an additional [MQ].",
       "critFlg": true
     },
     {
