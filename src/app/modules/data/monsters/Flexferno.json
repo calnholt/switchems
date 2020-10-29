@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Burn",
-      "abilityText": "[2]: <b>Burn</b> ~BURN~",
+      "abilityText": "[2]: <b>Burn [STATUS]</b> ~BURN~",
       "element": "Fire",
       "modifiers": [
         0,
@@ -91,27 +91,27 @@
     {
       "buffName": "Impulsive Burn",
       "timing": "With Attack",
-      "buffText": "[1]: <b>Burn</b>~BURN~",
+      "buffText": "[1]: <b>Burn [STATUS]</b>~BURN~",
       "critFlg": true
     },
     {
       "buffName": "Melt Away",
       "timing": "Post Actions",
-      "buffText": "<b>Super, Ethereal</b><br>Remove all [NQ] from this monster and all status conditions from all of your monsters.~SUPER~~ETHEREAL~",
-      "flipEventText": "You may choose to remove a [NQ] from your active monster.",
+      "buffText": "<b>Super, Ethereal</b><br>Remove all [NQ] from this monster and all [STATUS] from all of your monsters.~SUPER~~ETHEREAL~",
+      "flipEventText": "You may remove a [NQ] from your active monster.",
       "critFlg": true,
       "flipEventFlg": true
     },
     {
       "buffName": "Sauna",
       "timing": "Pre-Actions",
-      "buffText": "This monster heals <div>2[HP]</div> if the enemy monster has a status condition ~STATUS~",
+      "buffText": "This monster heals <div>2[HP]</div> if the enemy monster has [STATUS]. ~STATUS~",
       "critFlg": false
     },
     {
       "buffName": "Sear",
       "timing": "With Attack",
-      "buffText": "This attack gains <div>+2[ATK]</div> if the enemy monster has a status condition ~STATUS~",
+      "buffText": "This attack gains <div>+2[ATK]</div> if the enemy monster has a [STATUS].~STATUS~",
       "critFlg": false
     }
   ],

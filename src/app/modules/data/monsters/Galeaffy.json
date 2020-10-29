@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Switcheroo",
-      "abilityText": "[1]: This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.<br><br>Perform a switch action and you may choose to keep up to four [CUBE]. <em>(You still perform <div>[1]: Heal 2 [HP])</div>.</em>",
+      "abilityText": "[1]: This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.<br><br>Perform a switch action and you may choose to keep up to four [PQ] instead of one. <em>(You still perform <div>[1]: Heal 2 [HP])</div>.</em>",
       "element": "Leaf",
       "modifiers": [
         0,
@@ -98,8 +98,8 @@
     {
       "buffName": "Propulsive Winds",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super</b><br>This attack gains <div>+4[SPD]</div> this turn.~SUPER~",
-      "flipEventText": "This monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.",
+      "buffText": "<b>Super</b><br>This attack gains <div>+4[SPD]</div>.~SUPER~",
+      "flipEventText": "Your active monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.",
       "critFlg": false,
       "flipEventFlg": true
     },

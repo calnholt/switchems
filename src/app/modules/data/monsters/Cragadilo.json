@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Implosion",
-      "abilityText": "Remove all <div>[DEF] [PQ]</div> from this monster, even if the enemy monster counters.<br><br>For each <div>[DEF] [PQ]</div> removed, perform:<br><br>[1]: +{\"positive\": 2, \"neutral\": 2, \"negative\": 1}[ATK]",
+      "abilityText": "Remove all <div>[DEF] [PQ]</div> from this monster, even if the enemy monster selected [COUNTER].<br><br>For each <div>[DEF] [PQ]</div> removed, perform:<br><br>[1]: +{\"positive\": 2, \"neutral\": 2, \"negative\": 1}[ATK]",
       "element": "Rock",
       "modifiers": [
         0,

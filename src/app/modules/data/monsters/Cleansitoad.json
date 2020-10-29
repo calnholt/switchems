@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Typhoon",
-      "abilityText": "[1]: [+] [+], then [-].<br><br>For each buff used that is [SUCC], this attack gains <div>+1[ATK].</div> If this attack KO's the enemy monster, this monster gains <div>+1[DEF].</div>",
+      "abilityText": "[1]: [+] [+], then [-].<br><br>For each buff used that is [SUCC], this attack gains <div>+1[ATK].</div><br><br>If this attack KO's the enemy monster, this monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.",
       "element": "Water",
       "modifiers": [
         2,
@@ -97,7 +97,7 @@
     {
       "buffName": "Negate",
       "timing": "Pre-Actions",
-      "buffText": "If you're <b>faster</b>, remove an opponent's team aura.~FASTER~",
+      "buffText": "If you're <b>faster</b>, remove an opponent's [TA].~FASTER~",
       "flipEventText": "You may choose to add or remove two time counters from any active team aura.",
       "critFlg": true,
       "flipEventFlg": true

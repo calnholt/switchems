@@ -5,7 +5,7 @@
   ],
   "actions": [
     {
-      "abilityName": "Tactical Nuke",
+      "abilityName": "Drone Strike",
       "abilityText": "<B>Recoil 2[ATK]</b>~RECOIL~",
       "element": "Death",
       "modifiers": [
@@ -120,7 +120,7 @@
   "monsterName": "Americaw",
   "abilityText": "When this monster <b>switches in</b>, the enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}~SWITCH~",
   "hp": 9,
-  "complexity": 2,
+  "complexity": 1,
   "promiseDescription": "Americaw is reckless assassin that requires finesse. Knowing how to position Americaw to maximize Scavenge and Iron Defense is key to its survival.",
   "role": "Assassin"
 }

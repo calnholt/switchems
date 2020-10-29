@@ -25,7 +25,7 @@
     },
     {
       "abilityName": "Wildfire",
-      "abilityText": "You may choose to play one additional [B] with this action for each enemy action that has a <b>torment</b> counter.<br><br>If the enemy monster is KO'd this turn, put a <b>torment</b> counter on each action of the incoming monster.",
+      "abilityText": "This attack gains a [B] slot for each enemy action that has a <b>torment</b> counter.<br><br>If the enemy monster is KO'd this turn, put a <b>torment</b> counter on each action of the incoming monster.",
       "element": "Fire",
       "modifiers": [
         0,
@@ -88,7 +88,7 @@
       "buffName": "Haunting Shroud",
       "timing": "Post Actions",
       "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.",
-      "flipEventText": "Put a <b>torment</b> counter on each of the enemy's monster actions.",
+      "flipEventText": "Put two <b>torment</b> counters on one of the enemy monster's actions.",
       "critFlg": false,
       "flipEventFlg": true
     },
@@ -101,7 +101,7 @@
     {
       "buffName": "Midnight Skulk",
       "timing": "With Attack",
-      "buffText": "You may choose to remove a [PQ] from the enemy monster. If you do, gain a [PQ] of the removed type.",
+      "buffText": "Remove a [PQ] from the enemy monster and gain a [PQ] of the removed type.",
       "flipEventText": null,
       "critFlg": true,
       "flipEventFlg": false
@@ -109,7 +109,7 @@
     {
       "buffName": "Apathy",
       "timing": "Pre-Actions",
-      "buffText": "If the enemy monster selected a status action this turn, that action is <b>unsuccessful</b>.~SUCCESS~",
+      "buffText": "If the enemy monster selected a [SPECIAL] action this turn, that action is <b>unsuccessful</b>.~SUCCESS~",
       "flipEventText": null,
       "critFlg": false,
       "flipEventFlg": false

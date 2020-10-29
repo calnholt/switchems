@@ -46,7 +46,7 @@
     },
     {
       "abilityName": "Transfusion",
-      "abilityText": "[1]: <b>Leech</b> ~LEECH~",
+      "abilityText": "[1]: <b>Leech [STATUS]</b> ~LEECH~",
       "element": "Death",
       "modifiers": [
         0,

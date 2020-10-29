@@ -12,7 +12,7 @@ import { default as Steamie } from '../data/monsters/Steamie.json';
 import { default as Boltblebee } from '../data/monsters/BoltbleBee.json';
 import { default as Smolderskulk } from '../data/monsters/Smolderskulk.json';
 import { default as Oozygoopz } from '../data/monsters/Oozygoopz.json';
-import { default as Orebsorbo } from '../data/monsters/Orebsorbo.json';
+import { default as Galvanite } from '../data/monsters/Galvanite.json';
 import { default as Squirrberus } from '../data/monsters/Squirrberus.json';
 import { ElemType, ELEMENTS, Role, ROLES } from './../../types/dataTypes';
 import { MonsterComplete, Buff, Action } from '../monster/model/monster';
@@ -35,9 +35,9 @@ export const loadMonsters = (): Array<MonsterComplete> => {
         Cragadilo,
         Drownigator,
         Flexferno,
+        Galvanite,
         Galeaffy,
         Oozygoopz,
-        Orebsorbo,
         Smolderskulk,
         Stallagrowth,
         Steamie,

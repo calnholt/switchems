@@ -73,7 +73,7 @@ function convertInnerTextJson(innerHtml) {
           for (let i = 0; i < obj.num; i++) {
             cubeStr += cubeType + ' ';
           }
-          html += `${cubeStr}– [${obj.stat}]</div>`;
+          html += `${cubeStr}[ARROW] [${obj.stat}]</div>`;
       }
       innerHtml = innerHtml.replace(jsonInText, html);
     } catch (error) {

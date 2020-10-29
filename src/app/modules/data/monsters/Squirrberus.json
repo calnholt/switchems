@@ -3,7 +3,7 @@
   "actions": [
     {
       "abilityName": "Forage",
-      "abilityText": "Whenever a time counter is removed from this, gain one of any <b>acorn</b> counter. If you gain a <b>wisdom acorn</b> counter this way, also perform:<br><br>[1]: Gain another <b>wisdom acorn</b> counter.",
+      "abilityText": "Whenever a time counter is removed from this and not by an opponent's ability, gain one of any <b>acorn</b> counter. If you gain a <b>wisdom acorn</b> counter this way, also perform:<br><br>[1]: Gain another <b>wisdom acorn</b> counter.",
       "element": "Leaf",
       "modifiers": [
         0,
@@ -83,7 +83,7 @@
     {
       "buffName": "Spicy Acorn",
       "timing": "Pre-Actions",
-      "buffText": "Gain a <b>power acorn</b> counter. If the attack is either [F] [E], this attack gains +2[ATK].",
+      "buffText": "Gain a <b>power acorn</b> counter. If this attack is either [F] [E], this attack gains +2[ATK].",
       "flipEventText": "Gain a <b>power acorn</b> counter.",
       "critFlg": false,
       "flipEventFlg": true
@@ -91,7 +91,7 @@
     {
       "buffName": "Ripe Acorn",
       "timing": "Pre-Actions",
-      "buffText": "Gain a <b>courage acorn</b> counter. If the attack is either [L] [R], this monster gains +2[DEF] this turn.",
+      "buffText": "Gain a <b>courage acorn</b> counter. If this attack is either [L] [R], this monster gains +2[DEF] this turn.",
       "flipEventText": "Gain a <b>courage acorn</b> counter.",
       "critFlg": false,
       "flipEventFlg": true
@@ -99,7 +99,7 @@
     {
       "buffName": "Rotten Acorn",
       "timing": "Pre-Actions",
-      "buffText": "Gain a <b>wisdom acorn</b> counter. If the attack is either [W] [S], this attack gains +2[SPD].",
+      "buffText": "Gain a <b>wisdom acorn</b> counter. If this attack is either [W] [S], this attack gains +2[SPD].",
       "flipEventText": "Gain a <b>wisdom acorn</b> counter.",
       "critFlg": false,
       "flipEventFlg": true
@@ -115,8 +115,8 @@
   ],
   "abilityName": "Hoarder",
   "monsterName": "Squirrberus",
-  "abilityText": "Whenever any monster on your team buffs an action, discard all of your <b>acorn</b> counters. That monster gains <div>+1[DEF]</div> this turn for each <b>wisdom acorn</b> discarded, and the attack gains <div>+1[ATK]</div> for each <b>power acorn</b> discarded and <div>+1[SPD]</div> for each <b>wisdom acorn</b> discarded.",
-  "hp": 10,
+  "abilityText": "Whenever any monster on your team buffs an action, discard all of your <b>acorn</b> counters. That monster gains <div>+1[DEF]</div> this turn for each discarded <b>wisdom acorn</b>, and the attack gains <div>+1[ATK]</div> for each discarded <b>power acorn</b> and <div>+1[SPD]</div> for each discarded <b>wisdom acorn</b>.",
+  "hp": 8,
   "complexity": 2,
   "role": "Support"
 }

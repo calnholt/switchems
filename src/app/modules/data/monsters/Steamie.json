@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Steampowered",
-      "abilityText": "If you have one or more active team auras, you may remove two time counters from one. If you do, this attack gains:<br><br>[1]: +{\"positive\": 3, \"neutral\": 2, \"negative\": 1}[ATK]",
+      "abilityText": "If you have one or more active [TA], you may remove two time counters from one. If you do, this attack gains:<br><br>[1]: +{\"positive\": 3, \"neutral\": 2, \"negative\": 1}[ATK]",
       "element": "Water",
       "modifiers": [
         2,
@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Torrential Blessing",
-      "abilityText": "[1]: This attack gains +{\"positive\": 2, \"neutral\": 1, \"negative\": 0}[ATK]<br><br>Put a <b>wish</b> counter on one of your other monsters.",
+      "abilityText": "[1]: This attack gains +{\"positive\": 2, \"neutral\": 1, \"negative\": 0}[ATK]<br><br>Put a <b>wish</b> counter on one of your monsters.",
       "element": "Water",
       "modifiers": [
         1,
@@ -67,7 +67,7 @@
     },
     {
       "abilityName": "Fierce Blessing",
-      "abilityText": "Put a <b>wish</b> counter on one of your other monsters.",
+      "abilityText": "Put a <b>wish</b> counter on one of your monsters.",
       "element": "Fire",
       "modifiers": [
         0,
@@ -124,6 +124,6 @@
   "monsterName": "Steamie",
   "abilityText": "Monsters with <b>wish</b> counters can spend one <b>wish</b> counter to play one additional buff card with any <b>attack</b>[ATK] action.<em>(If the number of buffs you played requires one additional [B], discard one wish counter from your active monster after reveal. Limit one wish per attack.)</em>",
   "hp": 8,
-  "complexity": 1,
+  "complexity": 2,
   "role": "Support"
 }

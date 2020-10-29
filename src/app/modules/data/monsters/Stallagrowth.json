@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Leech Seed",
-      "abilityText": "<b>Leech</b> ~LEECH~",
+      "abilityText": "<b>Leech [STATUS]</b> ~LEECH~",
       "element": "Leaf",
       "modifiers": [
         0,
@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Vine Whips",
-      "abilityText": "This attack gains <div>+2[ATK]</div> for each <b>leech</b> counter on the enemy monster and remove all <strong>leech</strong> counters from that monster.",
+      "abilityText": "Remove all <b>leech</b> counter from the enemy monster, even if the enemy monster selected [COUNTER].<br><br>This attack gains <div>+2[ATK]</div> for each <b>leech</b> counter removed.",
       "element": "Leaf",
       "modifiers": [
         0,
@@ -112,7 +112,7 @@
     {
       "buffName": "Gravelcrust Grip",
       "timing": "With Attack",
-      "buffText": "[1]: <b>Leech</b> ~LEECH~",
+      "buffText": "[1]: <b>Leech [STATUS]</b> ~LEECH~",
       "critFlg": true
     }
   ],

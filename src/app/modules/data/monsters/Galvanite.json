@@ -1,0 +1,126 @@
+{
+  "elements": [
+    "Rock",
+    "Electric"
+  ],
+  "actions": [
+    {
+      "abilityName": "Discharge",
+      "abilityText": "Remove all [NQ] from this monster, even if the enemy monster selected [COUNTER]. <br><br>This attack gains <div>+1[ATK]</div> for each [NQ] removed this way.",
+      "element": "Electric",
+      "modifiers": [
+        2,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 2,
+      "speed": 5,
+      "discard": 2,
+      "buff": 1
+    },
+    {
+      "abilityName": "Entrenched Barrage",
+      "abilityText": "This monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}, even if the enemy monster selected [COUNTER].",
+      "element": "Rock",
+      "modifiers": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        4
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 4,
+      "speed": 3,
+      "discard": 2,
+      "buff": 2
+    },
+    {
+      "abilityName": "Frazzle",
+      "abilityText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": false}, even if the enemy monster selected [COUNTER].",
+      "element": "Electric",
+      "modifiers": [
+        3,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 3,
+      "speed": 7,
+      "discard": 1,
+      "buff": 1
+    },
+    {
+      "abilityName": "Reverse Polarity",
+      "abilityText": "Remove up to three [NQ] from this monster. For each [NQ] removed, the enemy gains a [NQ] of any type of your choice.<br><br>[1]: The enemy monster gains {\"stat\":\"SPD\", \"num\":2, \"isPositive\": false}.",
+      "element": "Electric",
+      "modifiers": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "auraDuration": 0,
+      "statusFlg": true,
+      "reactionFlg": false,
+      "speed": 3,
+      "draw": 1
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": null,
+      "timing": null,
+      "buffText": null,
+      "flipEventText": "You may gain {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false} to heal <div>3[HP].</div>",
+      "critFlg": false,
+      "flipEventFlg": true
+    },
+    {
+      "buffName": null,
+      "timing": null,
+      "buffText": null,
+      "flipEventText": "You may gain {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false} to heal <div>3[HP].</div>",
+      "critFlg": false,
+      "flipEventFlg": true
+    },
+    {
+      "buffName": null,
+      "timing": null,
+      "buffText": null,
+      "flipEventText": null,
+      "critFlg": true,
+      "flipEventFlg": false
+    },
+    {
+      "buffName": null,
+      "timing": null,
+      "buffText": null,
+      "flipEventText": null,
+      "critFlg": true,
+      "flipEventFlg": false
+    }
+  ],
+  "abilityName": "Absorb",
+  "monsterName": "Galvanite",
+  "abilityText": "If this monster switched in this turn and the enemy monster attacked, that attack is <b>unsuccessful</b> and this monster gains <div>[NQ] [NQ]</div> of your choice.~SUCCESS~",
+  "hp": 11,
+  "complexity": 2,
+  "role": "Warrior"
+}

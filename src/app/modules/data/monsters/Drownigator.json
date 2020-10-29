@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Fatigue",
-      "abilityText": "<b>Fatigue</b> ~FATIGUE~",
+      "abilityText": "<b>Fatigue [STATUS]</b> ~FATIGUE~",
       "element": "Death",
       "modifiers": [
         0,
@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Expunge",
-      "abilityText": "<b>Single use</b><br><br>If the enemy monster has a status condition, this attack gains:<br>[1]: <div>+2[ATK]</div>~SINGLE~~STATUS~",
+      "abilityText": "<b>Single use</b><br><br>If the enemy monster has a [STATUS], this attack gains:<br>[1]: <div>+2[ATK]</div>~SINGLE~~STATUS~",
       "element": "Death",
       "modifiers": [
         0,
@@ -112,7 +112,7 @@
     {
       "buffName": "Abrupt Weakness",
       "timing": "Pre-Actions",
-      "buffText": "[1]: <b>Fatigue</b> ~FATIGUE~",
+      "buffText": "[1]: <b>Fatigue [STATUS]</b> ~FATIGUE~",
       "critFlg": false
     }
   ],

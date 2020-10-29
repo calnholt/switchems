@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Ice Blast",
-      "abilityText": "[1]: This attack gains <b>flinch</b>. ~FLINCH~",
+      "abilityText": "If this action is <b>faster</b>, perform:<br><br>[1]: This attack gains <b>flinch</b>. ~FASTER~~FLINCH~",
       "element": "Water",
       "modifiers": [
         1,
@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Vortex",
-      "abilityText": "If the enemy monster has a status condition, you may choose to play two additional [B] with this attack. ~STATUS~",
+      "abilityText": "This attack gains two [B] slots if the enemy monster has a [STATUS]. ~STATUS~",
       "element": "Electric",
       "modifiers": [
         2,
@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Paralyze",
-      "abilityText": "<b>Paralyze</b> ~PARALYZE~",
+      "abilityText": "<b>Paralyze [STATUS]</b> and the enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}. ~PARALYZE~",
       "element": "Electric",
       "modifiers": [
         0,
@@ -91,13 +91,13 @@
     {
       "buffName": "Prepared Zap",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super, Paralyze, Ethereal</b>~SUPER~~PARALYZE~~ETHEREAL~",
+      "buffText": "<b>Super, Paralyze [STATUS], Ethereal</b>~SUPER~~PARALYZE~~ETHEREAL~",
       "critFlg": true
     },
     {
       "buffName": "Impulsive Zap",
       "timing": "With Attack",
-      "buffText": "[1]: The enemy monster gains a paralyze condition. ~PARALYZE~",
+      "buffText": "[1]: <b>Paralyze [STATUS]</b>. ~PARALYZE~",
       "flipEventText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
       "critFlg": false,
       "flipEventFlg": true
@@ -105,7 +105,7 @@
     {
       "buffName": "High Voltage",
       "timing": "Pre-Actions",
-      "buffText": "[+] and this attack gains <b>recoil 1[ATK]</b>. If the enemy monster is <b>paralzyed</b>, that monster flips only [1] for its <b>paralzyed</b> condition this turn, ignoring any other modifiers. ~RECOIL~.",
+      "buffText": "[+] and this attack gains <b><div>recoil 1[ATK]</div></b>. If the enemy monster is <b>paralzyed</b>, that monster flips only [1] for its <b>paralzyed</b> condition this turn, ignoring any other modifiers. ~RECOIL~.",
       "critFlg": false
     },
     {
@@ -118,7 +118,7 @@
   "monsterId": 7,
   "abilityName": "Static Shock",
   "monsterName": "Zappguin",
-  "abilityText": "This monster's attacks gain <div>+1[ATK]</div> for each different status condition the enemy monster has.~STATUS~",
+  "abilityText": "This monster's attacks gain <div>+1[ATK]</div> for each different [STATUS] the enemy monster has.~STATUS~",
   "hp": 9,
   "complexity": 1,
   "promiseDescription": "Zappguin wants nothing more than to paralyze every monster it meets. This requires a little bit of work because Zappguin is on the slower side. But a carefully timed Zap from a teammate can setup Zappguin wonderfully.",

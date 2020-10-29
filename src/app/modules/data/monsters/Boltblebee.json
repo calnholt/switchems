@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Swarm",
-      "abilityText": "[1]: This attack gains <div>+1[ATK]</div>.<br><br> Do this three times. If one or fewer were successes, <b>paralyze</b>. ~PARALYZE~",
+      "abilityText": "[1]: This attack gains <div>+1[ATK]</div>.<br><br> Do this three times. If one or fewer were successes, <b>paralyze [STATUS]</b>. ~PARALYZE~",
       "element": "Electric",
       "modifiers": [
         1,
