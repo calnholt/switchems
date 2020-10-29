@@ -85,33 +85,33 @@
   ],
   "buffs": [
     {
-      "buffName": null,
-      "timing": null,
-      "buffText": null,
+      "buffName": "Shock Quake",
+      "timing": "With Attack",
+      "buffText": "[1]: <b>Paralyze [STATUS]</b>~PARALYZE~",
       "flipEventText": "You may gain {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false} to heal <div>3[HP].</div>",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
-      "buffName": null,
-      "timing": null,
-      "buffText": null,
-      "flipEventText": "You may gain {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false} to heal <div>3[HP].</div>",
+      "buffName": "Deactivate",
+      "timing": "With Attack",
+      "buffText": "If this action is <b>faster</b>, this attack gains:<br>[1]: <b>Flinch</b>~FLINCH~",
+      "flipEventText": "You may gain {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": false} to heal <div>3[HP].</div>",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
-      "buffName": null,
-      "timing": null,
-      "buffText": null,
+      "buffName": "Amped Up",
+      "timing": "With Attack",
+      "buffText": "<b>Super</b><br>If your active monster switched in last turn, this attack gains <div>+2[ATK]</div> and <div>+2[SPD].</div>~SUPER~",
       "flipEventText": null,
       "critFlg": true,
       "flipEventFlg": false
     },
     {
-      "buffName": null,
-      "timing": null,
-      "buffText": null,
+      "buffName": "Pulse",
+      "timing": "Pre-Actions",
+      "buffText": "This monster gains +2[DEF] this turn.",
       "flipEventText": null,
       "critFlg": true,
       "flipEventFlg": false
