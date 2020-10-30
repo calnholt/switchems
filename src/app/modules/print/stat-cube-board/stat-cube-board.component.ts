@@ -10,6 +10,9 @@ export class StatCubeBoardComponent implements OnInit {
   attack: Path = SYMBOLS_PATH + 'attack.png';
   defense: Path = SYMBOLS_PATH + 'defense.png';
   speed: Path = SYMBOLS_PATH + 'speed.png';
+  positiveCube: Path = SYMBOLS_PATH + 'green-cube.png';
+  negativeCube: Path = SYMBOLS_PATH + 'red-cube.png';
+  maneuverCube: Path = SYMBOLS_PATH + 'blue-cube.png';
 
   constructor() { }
 

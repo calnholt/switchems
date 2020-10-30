@@ -1,7 +1,9 @@
 <div id="stat-cube-board">
   <div class="card-container">
     <div class="table-container">
-      <div class="title">Stat Cube Board</div>
+      <div class="title">
+        [ <img src="{{positiveCube}}"> / <img src="{{negativeCube}}"> ] Board
+      </div>
       <div class="line-container">
         <hr align="left" class="name-line left">
         <span class="dot"></span>
@@ -10,36 +12,36 @@
       <table class="stat-cube-table">
         <tr>
           <td>
-            -<img src="{{attack}}">
+            +<img src="{{attack}}">
             <div>(4 max)</div>
           </td>
           <td>
-            +<img src="{{attack}}">
+            -<img src="{{attack}}">
             <div>(4 max)</div>
           </td>
         </tr>
         <tr>
-          <td>
-            -<img src="{{speed}}">
-            <div>(4 max)</div>
-          </td>
           <td>
             +<img src="{{speed}}">
             <div>(4 max)</div>
           </td>
-        </tr>
-        <tr>
           <td>
-            -<img src="{{defense}}">
+            -<img src="{{speed}}">
             <div>(4 max)</div>
           </td>
+        </tr>
+        <tr>
           <td>
             +<img src="{{defense}}">
             <div>(4 max)</div>
           </td>
+          <td>
+            -<img src="{{defense}}">
+            <div>(4 max)</div>
+          </td>
         </tr>
       </table>
-      <div class="title">Used Maneuver Cubes</div>
+      <div class="title">Used <img src="{{maneuverCube}}"> Board</div>
       <div class="line-container">
         <hr align="left" class="name-line left">
         <span class="dot"></span>

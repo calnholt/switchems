@@ -4,7 +4,8 @@
 #stat-cube-board{
     .card-container{
         position: relative;
-        border: black 2px solid;
+        border: rgb(216, 216, 216) 2px solid;
+        border-radius: 11px;
         height: $card-height;
         width: $card-width;
         .table-container{
@@ -15,6 +16,9 @@
                 text-align: center;
                 font-family: $beastformer;
                 margin: 0px;
+                img{
+                    max-height: 20px;
+                }
             }
             .line-container{
                 padding-left: 5px;
@@ -40,10 +44,10 @@
                 tr{
                     height: 64px;
                     td:nth-child(1){
-                        background-color: #ffcdcd;
+                        background-color: #d6ffd6;
                     }
                     td:nth-child(2){
-                        background-color: #d6ffd6;
+                        background-color: #ffcdcd;
                     }
                     td{
                         text-align: center;
