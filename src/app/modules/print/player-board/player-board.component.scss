@@ -8,8 +8,8 @@
         height: $card-height;
         width: $card-width;
         background-color: white;
-        border-width: 4px;
-        border-style: solid;
+        border: rgb(216, 216, 216) 2px solid;
+        border-radius: 11px;
         .text {
             font-family: $beastformer;
             font-size: 48px;

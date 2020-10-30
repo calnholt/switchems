@@ -4,7 +4,8 @@
 #action-board{
     .card-container{
         position: relative;
-        border: black 2px solid;
+        border: rgb(216, 216, 216) 2px solid;
+        border-radius: 11px;
         height: $card-height;
         width: $card-width;
         background-color: white;
