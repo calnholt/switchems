@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Expunge",
-      "abilityText": "<b>Single use</b><br><br>If the enemy monster has a [STATUS], this attack gains:<br>[1]: <div>+2[ATK]</div>~SINGLE~~STATUS~",
+      "abilityText": "<b>Single use</b>. If the enemy monster has a [STATUS], this attack gains:<br>[1]: <div>+2[ATK]</div>~SINGLE~~STATUS~",
       "element": "Death",
       "modifiers": [
         0,
@@ -105,8 +105,8 @@
     },
     {
       "buffName": "Tremble",
-      "timing": "Pre-Actions",
-      "buffText": "[1]: The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
+      "timing": "Post Actions",
+      "buffText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.",
       "critFlg": true
     },
     {

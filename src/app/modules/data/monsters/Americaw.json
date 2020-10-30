@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Scavenge",
-      "abilityText": "This monster heals [HP] equal to your speed minus the enemy's speed. If the opponent selected a non-monster action this turn, heal 5[HP] instead. <b>Single use.</b> ~SINGLE~",
+      "abilityText": "This monster heals [HP] equal to your speed minus the enemy's speed. If the opponent selected a non-monster action this turn, heal <div>5[HP]</div> instead. <b>Single use.</b> ~SINGLE~",
       "element": "Death",
       "modifiers": [
         0,
