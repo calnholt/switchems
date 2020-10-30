@@ -72,9 +72,9 @@ export const TERM_CODES = [
      + `<div>[2]: </div>This action is successful. Perform these flips first and ignore all  [!] `),
      new Term(`~RECOIL~`, `This monster suffers this amount of recoil damage to itself. `
      + `This damage cannot be prevented and still occurs if this action is prevented.`),
-     new Term(`~SINGLE~`, `Single use actions recharge on switch.`),
+     new Term(`~SINGLE~`, `Single use actions recharge on switch and are considered used if this action is prevented.`),
      new Term(`~SLOWER~`, `This action is slower if both players select a monster action and yours has a lower speed.`),
-     new Term(`~STATUS~`, `Status conditions [STATUS]: burn, fatigue, leech, paralyze.`),
+     new Term(`~STATUS~`, `Status conditions [STATUS] – burn, fatigue, leech, paralyze.`),
      new Term(`~STUN~`, `Stunned monsters cannot perform any actions next turn. Remove at the end of next turn.`),
      new Term(`~SUCCESS~`, `Unsuccessful actions do nothing.`),
      new Term(`~SUPER~`, `Supers require and use two [B] slots.`),
