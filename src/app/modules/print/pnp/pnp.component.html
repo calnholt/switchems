@@ -21,6 +21,11 @@
           [buff]="card">
         </monster-buff>
       </span>
+      <span *ngIf="card.isPlayerBoard">
+        <player-board
+          [text]="card.text">
+        </player-board>
+      </span>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
     </span>
     <span *ngIf="allCards.length && extraFlg">

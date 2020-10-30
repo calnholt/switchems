@@ -1,0 +1,37 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#player-board {
+    .card-container {
+        position: relative;
+        border-radius: 11px;
+        height: $card-height;
+        width: $card-width;
+        background-color: white;
+        border-width: 4px;
+        border-style: solid;
+        .text {
+            font-family: $beastformer;
+            font-size: 48px;
+            text-align: center;
+            padding-top: 20px;
+            .sub-text {
+                font-family: $helvetica;
+                font-size: 15px;
+                padding-top: 11px;
+            }
+        }
+        .icon {
+            position: relative;
+            top: 20%;
+            left: 36%;
+            &.hand {
+                top: 11%;
+                left: 23%;
+            }
+            img {
+                max-height: 100px;
+            }
+        }
+    }
+}

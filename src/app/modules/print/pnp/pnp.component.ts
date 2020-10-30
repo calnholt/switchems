@@ -1,5 +1,5 @@
 import { Action } from 'src/app/modules/monster/model/monster';
-import { STANDARD_BUFFS } from './../../../types/dataTypes';
+import { STANDARD_BUFFS, PLAYER_BOARD_TEXT } from './../../../types/dataTypes';
 import { MonsterComplete, Buff, Monster } from './../../monster/model/monster';
 import { ToolbarService } from './../../common/components/toolbar/toolbar.service';
 import { Component, OnInit } from '@angular/core';
@@ -56,6 +56,8 @@ export class PnpComponent implements OnInit {
         allCards.push(b);
         allCards.push(b);
       });
+      // adds player boards
+      PLAYER_BOARD_TEXT.forEach(txt => allCards.push({isPlayerBoard: true, text: txt}));
     }
     this.allCards = allCards;
     this.count = 0;

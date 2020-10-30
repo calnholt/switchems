@@ -1,3 +1,4 @@
+import { PlayerBoardComponent } from './player-board/player-board.component';
 import { DownloadComponent } from './download/download.component';
 import { StatCubeBoardComponent } from './stat-cube-board/stat-cube-board.component';
 import { PnpComponent } from './pnp/pnp.component';
@@ -30,11 +31,13 @@ import { ActionBoardComponent } from './action-board/action-board.component';
     PnpComponent,
     ActionBoardComponent,
     StatCubeBoardComponent,
-    DownloadComponent
+    DownloadComponent,
+    PlayerBoardComponent
   ],
   exports: [
     ActionBoardComponent,
     StatCubeBoardComponent,
+    PlayerBoardComponent,
   ]
 })
 export class PrintModule { }

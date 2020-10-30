@@ -28,6 +28,12 @@ for (let i = 0; i < 2; i++) {
 standardBuffArray[0].critFlg = false;
 export const STANDARD_BUFFS: Buff[] = standardBuffArray;
 
+export const PLAYER_BOARD_TEXT: string[] = [
+    'Buffs', 
+    'Discards', 
+    'Hand<br><div class="sub-text">(facedown)</div>'
+];
+
 export type Url = string;
 export type Path = string;
 export type Css = string;
