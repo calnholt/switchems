@@ -1,4 +1,4 @@
-import { loadMonsters } from './../../import/json-to-obj';
+import { loadMonster } from './../../import/json-to-obj';
 import { TERM_CODES, IMAGE_CODES, CardTypes, ROLES, ELEMENTS, Css } from './../../../types/dataTypes';
 import { MonsterComplete, Action, Buff } from './../model/monster';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
@@ -32,7 +32,6 @@ export class MonsterFormComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.selectedCard = 'MONSTER';
-      const allMonsters = loadMonsters();
       const monsterName: string = this.route.snapshot.paramMap.get('monsterName');
       if (monsterName === 'builder') {
         this.monster = new MonsterComplete();
@@ -44,7 +43,7 @@ export class MonsterFormComponent implements OnInit {
         this.monster.actions.forEach(a => a.element = ELEMENTS[this.getRandomNumber(ELEMENTS.length)]);
         this.monster.buffs.push(new Buff(), new Buff(), new Buff(), new Buff());
       } else {
-        this.monster = allMonsters.find(m => m.monsterName === monsterName);
+        this.monster = loadMonster(monsterName);
       }
       this.originalMonster = Object.assign({}, this.monster);
     });

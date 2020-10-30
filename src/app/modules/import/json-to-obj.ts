@@ -25,26 +25,52 @@ const getRole = (text: string): Role => {
     return ROLES.find(r => r.toString() === text);
 };
 
-export const loadMonsters = (): Array<MonsterComplete> => {
+const getMonsterFileByName = (monsterName: string) => {
+    switch (monsterName) {
+        case('Americaw'): return Americaw;
+        case('Boltblebee'): return Boltblebee;
+        case('Chargroar'): return Chargroar;
+        case('Cleansitoad'): return Cleansitoad;
+        case('Cragadilo'): return Cragadilo;
+        case('Drownigator'): return Drownigator;
+        case('Flexferno'): return Flexferno;
+        case('Galvanite'): return Galvanite;
+        case('Oozygoopz'): return Oozygoopz;
+        case('Smolderskulk'): return Smolderskulk;
+        case('Stallagrowth'): return Stallagrowth;
+        case('Steamie'): return Steamie;
+        case('Squirrberus'): return Squirrberus;
+        case('Phantomaton'): return Phantomaton;
+        case('Zappguin'): return Zappguin;
+    }
+    return {};
+};
+
+export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
     let out = new Array<MonsterComplete>();
-    const ALL = [
-        Americaw,
-        Boltblebee,
-        Chargroar,
-        Cleansitoad,
-        Cragadilo,
-        Drownigator,
-        Flexferno,
-        Galvanite,
-        Galeaffy,
-        Oozygoopz,
-        Smolderskulk,
-        Stallagrowth,
-        Steamie,
-        Squirrberus,
-        Phantomaton,
-        Zappguin,
-    ];
+    let ALL = [];
+    if (selectedMonster) {
+        ALL = [selectedMonster];
+    } else {
+        ALL = [
+            Americaw,
+            Boltblebee,
+            Chargroar,
+            Cleansitoad,
+            Cragadilo,
+            Drownigator,
+            Flexferno,
+            Galvanite,
+            Galeaffy,
+            Oozygoopz,
+            Smolderskulk,
+            Stallagrowth,
+            Steamie,
+            Squirrberus,
+            Phantomaton,
+            Zappguin,
+        ];
+    }
     ALL.forEach(json => {
         const monster = new MonsterComplete();
         if (!json.abilityName) {
@@ -86,6 +112,10 @@ export const loadMonsters = (): Array<MonsterComplete> => {
         out.push(monster);
     });
     return out;
+};
+
+export const loadMonster = (monsterName: string): MonsterComplete => {
+    return loadMonsters(getMonsterFileByName(monsterName))[0];
 };
 
 
