@@ -57,7 +57,9 @@ export class PnpComponent implements OnInit {
         allCards.push(b);
       });
       // adds player boards
-      PLAYER_BOARD_TEXT.forEach(txt => allCards.push({isPlayerBoard: true, text: txt}));
+      for (let i = 0; i < 4; i++) {
+        PLAYER_BOARD_TEXT.forEach(txt => allCards.push({isPlayerBoard: true, text: txt}));
+      }
     }
     this.allCards = allCards;
     this.count = 0;
