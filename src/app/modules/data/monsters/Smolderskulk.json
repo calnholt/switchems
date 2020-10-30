@@ -95,7 +95,7 @@
     {
       "buffName": "Dense Smoke",
       "timing": "Post Actions",
-      "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.",
+      "buffText": "[1]: <b>Fatigue [STATUS]</b>~FATIGUE~",
       "critFlg": false
     },
     {

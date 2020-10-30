@@ -88,9 +88,9 @@
   ],
   "buffs": [
     {
-      "buffName": "Wishful Strike",
-      "timing": "With Attack",
-      "buffText": "This attack gains <div>+1[ATK].</div>",
+      "buffName": "Scald",
+      "timing": "Pre-Actions",
+      "buffText": "[1]: <b>Burn [STATUS]</b>~BURN~",
       "flipEventText": "Put a [WISH] counter on one of your monsters",
       "critFlg": true,
       "flipEventFlg": true
