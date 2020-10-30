@@ -64,7 +64,7 @@
     },
     {
       "abilityName": "Oozy Liberation",
-      "abilityText": "<b>Single use.</b><br><br>Your opponent reveals their hand. This attack gains +X[ATK], where X is the number of <b>Goop</b> cards in their hand. Then your opponent discards all <b>Goop</b> cards. ~SINGLE~",
+      "abilityText": "Your opponent reveals their hand. This attack gains +X[ATK], where X is the number of <b>Goop</b> cards in their hand. Then your opponent discards all <b>Goop</b> cards. <b>Single use.</b>~SINGLE~",
       "element": "Water",
       "modifiers": [
         2,

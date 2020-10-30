@@ -119,7 +119,7 @@
   ],
   "abilityName": "Absorb",
   "monsterName": "Galvanite",
-  "abilityText": "If this monster switched in this turn and the enemy monster attacked, that attack is <b>unsuccessful</b> and this monster gains <div>[NQ] [NQ]</div> of your choice.<br><br>If the enemy monster attack was [F] [L], this monster suffers 2[ATK].~SUCCESS~",
+  "abilityText": "If this monster switched in this turn and the enemy monster attacked, that attack is <b>unsuccessful</b> and this monster gains <div>[NQ] [NQ]</div> of your choice. If the enemy monster attack was [F] [L], this monster suffers 2[ATK].~SUCCESS~",
   "hp": 11,
   "complexity": 2,
   "promiseDescription": "Galvanite's <b>absorb</b> ability turns your switch action into the ultimate defensive maneuver. Leverage this opportunistically. Knowing when to switch out with Galvanite is equally important – sometimes your accumulated [NQ] can't be transformed into a benefit, so it's more advantageous to wipe them off.",

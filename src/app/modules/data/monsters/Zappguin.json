@@ -91,7 +91,7 @@
     {
       "buffName": "Prepared Zap",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super, Paralyze [STATUS], Ethereal</b>~SUPER~~PARALYZE~~ETHEREAL~",
+      "buffText": "<b>Super, Ethereal, Paralyze [STATUS]</b>~SUPER~~ETHEREAL~~PARALYZE~",
       "critFlg": true
     },
     {
