@@ -36,6 +36,14 @@
           <mat-icon *ngIf="monster.complexity < i+1">star_border</mat-icon>
         </span>
       </div>
+      <div class="crit-container">
+        <span *ngFor="let buff of monster.buffs">
+          <img *ngIf="buff.critFlg" src="{{success}}">
+        </span>
+        <span *ngFor="let buff of monster.buffs">
+          <img *ngIf="!buff.critFlg" src="{{fail}}">
+        </span>
+      </div>
       <span class="heart-container">
         <img *ngIf="!monster.unityFlg" class="hp" src="{{getHpIcon()}}">
         <img *ngIf="monster.unityFlg" class="hp" src="./assets/images/symbols/heart.png">

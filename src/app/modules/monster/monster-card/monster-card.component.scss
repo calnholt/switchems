@@ -151,6 +151,16 @@
                     }
                 }
             }
+            .crit-container {
+                position: relative;
+                top: 21px;
+                right: -52px;
+                height: 0px;
+                img {
+                    height: 10px;
+                    padding-right: 2px;
+                }
+            }
             .heart-container{
                 .hp{
                     float: right;
