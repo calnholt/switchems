@@ -7,7 +7,7 @@ import { default as Phantomaton } from '../data/monsters/Phantomaton.json';
 import { default as Cragadilo } from '../data/monsters/Cragadilo.json';
 import { default as Galeaffy } from '../data/monsters/Galeaffy.json';
 import { default as Drownigator } from '../data/monsters/Drownigator.json';
-import { default as Americaw } from '../data/monsters/Americaw.json';
+import { default as Vulturock } from '../data/monsters/Vulturock.json';
 import { default as Steamie } from '../data/monsters/Steamie.json';
 import { default as Boltblebee } from '../data/monsters/BoltbleBee.json';
 import { default as Smolderskulk } from '../data/monsters/Smolderskulk.json';
@@ -27,7 +27,6 @@ const getRole = (text: string): Role => {
 
 const getMonsterFileByName = (monsterName: string) => {
     switch (monsterName) {
-        case('Americaw'): return Americaw;
         case('Boltblebee'): return Boltblebee;
         case('Chargroar'): return Chargroar;
         case('Cleansitoad'): return Cleansitoad;
@@ -42,6 +41,7 @@ const getMonsterFileByName = (monsterName: string) => {
         case('Steamie'): return Steamie;
         case('Squirrberus'): return Squirrberus;
         case('Phantomaton'): return Phantomaton;
+        case('Vulturock'): return Vulturock;
         case('Zappguin'): return Zappguin;
     }
     return {};
@@ -54,7 +54,6 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
         ALL = [selectedMonster];
     } else {
         ALL = [
-            Americaw,
             Boltblebee,
             Chargroar,
             Cleansitoad,
@@ -69,6 +68,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             Steamie,
             Squirrberus,
             Phantomaton,
+            Vulturock,
             Zappguin,
         ];
     }
