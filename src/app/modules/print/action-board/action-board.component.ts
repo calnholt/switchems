@@ -12,7 +12,7 @@ export class ActionBoardComponent implements OnInit {
   switchRight: Path = SYMBOLS_PATH + 'switch-defense-right.png';
   draw: Path = SYMBOLS_PATH + 'draw.png';
   discard: Path = SYMBOLS_PATH + 'discard.png';
-  protect: Path = SYMBOLS_PATH + 'protect.png';
+  counter: Path = SYMBOLS_PATH + 'counter.png';
   switchHeal: Path = SYMBOLS_PATH + 'switch-heal.png';
   noDraw: Path = SYMBOLS_PATH + 'no-draw.png';
   constructor() { }

@@ -119,7 +119,7 @@ export const IMAGE_CODES = [
     new Image(`[!]`, SYMBOLS_PATH + `flip-event.png`),
     new Image(`[SPECIAL]`, SYMBOLS_PATH + `status.png`),
     new Image(`[STATUS]`, SYMBOLS_PATH + `wound.png`),
-    new Image(`[COUNTER]`, SYMBOLS_PATH + `protect.png`),
+    new Image(`[COUNTER]`, SYMBOLS_PATH + `counter.png`),
     new Image(`[ACORN]`, SYMBOLS_PATH + `acorn.png`),
     new Image(`[HONEY]`, SYMBOLS_PATH + `dripping-honey.png`),
     new Image(`[WISH]`, SYMBOLS_PATH + `round-star.png`),
