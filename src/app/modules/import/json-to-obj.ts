@@ -34,6 +34,7 @@ const getMonsterFileByName = (monsterName: string) => {
         case('Cragadilo'): return Cragadilo;
         case('Drownigator'): return Drownigator;
         case('Flexferno'): return Flexferno;
+        case('Galeaffy'): return Galeaffy;
         case('Galvanite'): return Galvanite;
         case('Oozygoopz'): return Oozygoopz;
         case('Smolderskulk'): return Smolderskulk;
