@@ -55,7 +55,8 @@ export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
 const TERM_KEYS = [`~BURN~`, `~SUCCESS~`, `~FLINCH~`, `~PARALYZE~`, `~LEECH~`, `~FATIGUE~`,
-    `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~SUPER~`, `~FASTER~`, `~SLOWER~`, `~GOOP~`, `~ETHEREAL~`] as const;
+    `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~SUPER~`, `~FASTER~`, `~SLOWER~`, 
+    `~GOOP~`, `~ETHEREAL~`, '~PIERCE~'] as const;
 export type TermCode = typeof TERM_KEYS[number];
 export const TERM_CODES = [
     new Term(`~BURN~`, `Burned monsters ignore their attack's elemental modifiers. `
@@ -70,6 +71,7 @@ export const TERM_CODES = [
      + `<div>1[HP].</div> Stacks up to three. Remove on switch.`),
      new Term(`~PARALYZE~`, `If a monster is paralyzed, all of that monster's actions have:<br>`
      + `<div>[2]: </div>This action is successful. Perform these flips first and ignore all  [!] `),
+     new Term('~PIERCE~', `Attacks with pierce ignore the enemy monster's postitve [DEF] increases.`),
      new Term(`~RECOIL~`, `This monster suffers this amount of recoil damage to itself. `
      + `This damage cannot be prevented and still occurs if this action is prevented.`),
      new Term(`~SINGLE~`, `Single use actions recharge on switch and are considered used if this action is prevented.`),
