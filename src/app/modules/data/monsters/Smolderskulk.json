@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Mental Breakdown",
-      "abilityText": "[1]: <b>Paralyze [STATUS]</b><br>[1]: <b>Burn [STATUS]</b><br>[1]: <b>Fatigue [STATUS]</b><br>[1]: <b>Leech [STATUS]</b><br><br>Put a <b>torment</b> counter on each of the enemy monster's actions.",
+      "abilityText": "[1]: <b>Paralyze [STATUS]</b><br>[1]: <b>Burn [STATUS]</b><br>[1]: <b>Fatigue [STATUS]</b><br>[1]: <b>Leech [STATUS]</b><br><br>Put a [TORMENT] counter on each of the enemy monster's actions.",
       "element": "Death",
       "modifiers": [
         0,
@@ -25,7 +25,7 @@
     },
     {
       "abilityName": "Wildfire",
-      "abilityText": "This attack gains a [B] slot for each enemy action that has a <b>torment</b> counter.<br><br>If the enemy monster is KO'd this turn, put a <b>torment</b> counter on each action of the incoming monster.",
+      "abilityText": "This attack gains a [B] slot for each enemy action that has a [TORMENT] counter.<br><br>If the enemy monster is KO'd this turn, put a [TORMENT] counter on each action of the incoming monster.",
       "element": "Fire",
       "modifiers": [
         0,
@@ -64,7 +64,7 @@
     },
     {
       "abilityName": "Reciprocity",
-      "abilityText": "This monster heals <div>X[HP],</div> where X is equal to triple the number of <b>torment</b> counters on the enemy monster's selected monster action this turn, if any.  <b>Single use</b>.~SINGLE~",
+      "abilityText": "This monster heals <div>X[HP],</div> where X is equal to triple the number of [TORMENT] counters on the enemy monster's selected monster action this turn, if any.  <b>Single use</b>.~SINGLE~",
       "element": "Fire",
       "modifiers": [
         0,
@@ -88,7 +88,7 @@
       "buffName": "Weak Spot",
       "timing": "With Attack",
       "buffText": "This attack gains <b>pierce</b> and <div>+1[ATK]</div> this turn.~PIERCE~",
-      "flipEventText": "Put two <b>torment</b> counters on one of the enemy monster's actions.",
+      "flipEventText": "Put two [TORMENT] counters on one of the enemy monster's actions.",
       "critFlg": false,
       "flipEventFlg": true
     },
@@ -117,7 +117,7 @@
   ],
   "abilityName": "Torment",
   "monsterName": "Smolderskulk",
-  "abilityText": "At the end of the turn, put two <b>torment</b> counters on the enemy monster's selected monster action, if any. Monster actions with <b>torment</b> counters have <div><b>recoil X[ATK]</b>, </div> where X is the number of <b>torment</b> counters on the action. <em>(Remove one <b>torment</b> counter from each action on enemy switch.)</em>",
+  "abilityText": "At the end of the turn, put two [TORMENT] counters on the enemy monster's selected monster action, if any. Monster actions with [TORMENT] counters have <div><b>recoil X[ATK]</b>, </div> where X is the number of [TORMENT] counters on the action. <em>(Remove one [TORMENT] counter from each action on enemy switch.)</em>",
   "hp": 10,
   "complexity": 3,
   "role": "Tricky"

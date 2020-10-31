@@ -13,6 +13,10 @@ export const getAdvantages = (elem: ElemType): number[] => {
     if (elem === 'Rock') { return [1, 0, 0, -1, 1, -1]; }
 };
 
+const getImageClass  = (str: string): string => {
+  return str.substring(1, str.length - 1).toLowerCase();
+};
+
 export const getElementIndex = (elem: ElemType): number => {
   if (elem === 'Death') {return 0; }
   if (elem === 'Electric') { return 1; }
@@ -20,7 +24,7 @@ export const getElementIndex = (elem: ElemType): number => {
   if (elem === 'Water') { return 3; }
   if (elem === 'Leaf') { return 4; }
   if (elem === 'Rock') { return 5; }
-}
+};
 
 export const getAbilityText = (text: string, termCss: Css, imageCss: Css): string => {
   if (!text) {
@@ -35,11 +39,10 @@ export const getAbilityText = (text: string, termCss: Css, imageCss: Css): strin
   });
   IMAGE_CODES.forEach((image: Image) => {
     while (innerHtml.includes(image.key)) {
-        const html = `<img src="${image.path}" class="${imageCss}">`;
+        const html = `<img src="${image.path}" class="${imageCss} ${getImageClass(image.key)}">`;
         innerHtml = innerHtml.replace(image.key, html);
     }
   });
-  
   return innerHtml;
 };
 
@@ -81,4 +84,5 @@ function convertInnerTextJson(innerHtml) {
     }
   }
   return innerHtml;
-}
+};
+
