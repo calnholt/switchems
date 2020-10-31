@@ -13,9 +13,16 @@
             justify-items: left;
         }
     }
-    .promise-title{
-        font-weight: bold;
-        padding-top: 10px;
+    .promise-container {
+        .promise-title{
+            font-weight: bold;
+            padding-top: 10px;
+        }
+        .promise-text {
+            div {
+                display: contents;
+            }
+        }
     }
     .card-container{
         position: fixed;

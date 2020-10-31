@@ -42,11 +42,11 @@
             </mat-expansion-panel>
           </mat-accordion>
         </div>
-        <div *ngIf="monster.promiseDescription">
+        <div *ngIf="monster.promiseDescription" class="promise-container">
           <div class="promise-title">
             Promise Descripition
           </div>
-          <div [innerHTML]="getPromiseText()" class="pt-1"></div>
+          <span [innerHTML]="getPromiseText()" class="pt-1 promise-text"></span>
         </div>
         <button class="save-button" mat-stroked-button (click)="save()">Copy Monster to Clipboard</button>
         <div class="tts">
