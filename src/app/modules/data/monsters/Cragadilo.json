@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Beckon Earth",
-      "abilityText": "If <b>exposed</b>, this attack gains <div>-1[ATK],</div> <div>+3[SPD],</div> and <div><b>Recoil 1</b>[ATK].</div><br><br>[1]: This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.~RECOIL~",
+      "abilityText": "If <b>exposed</b>, this attack gains <div>-1[ATK],</div> <div>+3[SPD],</div> and <div><b>recoil 1</b>[ATK].</div><br><br>[1]: This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.~RECOIL~",
       "element": "Rock",
       "modifiers": [
         0,
