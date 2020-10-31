@@ -88,7 +88,7 @@
       "buffName": "Rock Armor",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
-      "flipEventText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
+      "flipEventText": "Your active monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
       "critFlg": false,
       "flipEventFlg": true
     },
@@ -96,14 +96,14 @@
       "buffName": "Gaia's Intuition",
       "timing": "Pre-Actions",
       "buffText": "This monster gains <div>+2[DEF]</div> this turn",
-      "flipEventText": "This monster heals <div>1[HP]</div>",
+      "flipEventText": "Your active monster heals <div>1[HP]</div>",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Forced Aggresion",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super</b><br>If this attack is <b>faster</b>, this attack becomes <b>slower</b>, gains <div>+2[ATK]</div>, and this card is returned to your hand at the end of your turn.~SUPER~~FASTER~",
+      "buffText": "<b>Super</b><br>If this attack is <b>faster</b>, this attack becomes <b>slower</b>, gains <b>pierce</b> and <div>+2[ATK]</div>, and this card is returned to your hand at the end of your turn.~SUPER~~FASTER~~PIERCE~",
       "flipEventText": null,
       "critFlg": true,
       "flipEventFlg": false
@@ -121,6 +121,6 @@
   "monsterName": "Cragadilo",
   "abilityText": "When this monster <b>switches in</b>, this monster gains <div>+X[DEF] [PQ],</div> where X is equal to this monster's current [HP] minus two. This monster is <b>exposed</b> when it has no <div>[DEF] [PQ].</div>~SWITCH~",
   "hp": 5,
-  "complexity": 2,
+  "complexity": 3,
   "role": "Warrior"
 }

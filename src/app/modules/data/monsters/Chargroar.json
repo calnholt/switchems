@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Flamethrower",
-      "abilityText": "[1]: This attack ignores the enemy monster's [DEF].",
+      "abilityText": "[1]: <b>Pierce</b>~PIERCE~",
       "element": "Fire",
       "modifiers": [
         0,
@@ -90,10 +90,10 @@
   ],
   "buffs": [
     {
-      "buffName": "Piercing Blaze",
+      "buffName": "Revenge",
       "timing": "With Attack",
       "buffText": "<b>Super</b><br>This attack gains +{\"positive\": 1, \"neutral\": 1, \"negative\": 5}[ATK].~SUPER~",
-      "flipEventText": "This monster gains <div>+1[SPD] [CUBE].</div>",
+      "flipEventText": "Your active monster gains <div>+1[SPD] [CUBE].</div>",
       "critFlg": false,
       "flipEventFlg": true
     },
@@ -122,6 +122,6 @@
   "abilityText": "When this monster <b>switches in</b>, the enemy monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.~SWITCH~",
   "hp": 7,
   "complexity": 1,
-  "promiseDescription": "Chargroar is a straightforward assassin. Fast, strong attacks, with ways to increase its attack strength with [CUBE]. Chargroar's buffs are unconditional and incredibly efficient. Since Chargroar is easy to KO, there is little room error.",
+  "promiseDescription": "Chargroar is a straightforward assassin. Fast, strong attacks, with ways to increase its attack strength with <div>[PQ].</div> Chargroar's buffs are unconditional and incredibly efficient. Since Chargroar is easy to KO, there is little room error.",
   "role": "Assassin"
 }

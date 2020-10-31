@@ -85,9 +85,9 @@
   ],
   "buffs": [
     {
-      "buffName": "Haunting Shroud",
-      "timing": "Post Actions",
-      "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.",
+      "buffName": "Weak Spot",
+      "timing": "With Attack",
+      "buffText": "This attack gains <b>pierce</b> and <div>+1[ATK]</div> this turn.~PIERCE~",
       "flipEventText": "Put two <b>torment</b> counters on one of the enemy monster's actions.",
       "critFlg": false,
       "flipEventFlg": true
