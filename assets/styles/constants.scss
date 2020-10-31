@@ -25,6 +25,9 @@ $card-height: 8.8cm;
 }
 .term-img{
     max-height: 15px;
+    &.torment {
+        max-height: 13px;
+    }
 }
 
 .stat-spread {
