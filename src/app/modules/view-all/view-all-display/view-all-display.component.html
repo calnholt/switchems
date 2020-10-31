@@ -23,6 +23,13 @@
                 </monster-buff>
               </div>
             </div>
+            <div *ngIf="monster.extraBoard">
+              <div [hidden]="!monster.isExtraBoardHovered">
+                <extra-board
+                  [monster]="monster">
+                </extra-board>
+              </div>
+            </div>
           </div>
           <div class="lg-col-4 sm-col-2 p-0">
             <div *ngFor="let action of monster.actions" class="hover-card-icon-container col-12">
@@ -41,6 +48,14 @@
                 class="hover-card-icon"
                 [ngClass]="{'highlight' : buff.isHighlighted}">
                 <span class="icon">B</span>
+              </div>
+            </div>
+            <div *ngIf="monster.extraBoard" class="hover-card-icon-container col-12">
+              <div 
+                class="hover-card-icon"
+                (mouseover)="monster.isExtraBoardHovered = true" 
+                (mouseout)="monster.isExtraBoardHovered = false">
+                <span class="icon">X</span>
               </div>
             </div>
           </div>

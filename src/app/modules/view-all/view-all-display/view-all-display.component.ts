@@ -20,7 +20,8 @@ export class ViewAllDisplayComponent implements OnInit {
   isShowMonster(monster: MonsterComplete) {
     const isActionHovered = monster.actions.some(a => a.isHovered);
     const isBuffHovered = monster.buffs.some(b => b.isHovered);
-    return !isActionHovered && !isBuffHovered;
+    const isExtraBoardHovered = monster.extraBoard && monster.isExtraBoardHovered;
+    return !isActionHovered && !isBuffHovered && !isExtraBoardHovered;
   }
 
 }

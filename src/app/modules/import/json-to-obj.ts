@@ -77,7 +77,16 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
         if (!json.abilityName) {
             return null;
         }
-        const MONSTER_PROPERTIES = ['monsterId', 'abilityName', 'monsterName', 'abilityText', 'hp', 'complexity', 'promiseDescription'];
+        const MONSTER_PROPERTIES = [
+            'monsterId',
+            'abilityName',
+            'monsterName',
+            'abilityText',
+            'hp',
+            'complexity',
+            'promiseDescription',
+            'extraBoard'
+        ];
         MONSTER_PROPERTIES.forEach(p => monster[p] = json[p]);
         const elements = Array<ElemType>();
         json.elements.forEach(element => elements.push(getElemType(element)));
@@ -85,8 +94,18 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
         monster.role = getRole(json.role);
         monster.actions = new Array<Action>();
         const ACTIONS = 4;
-        const ACTION_PROPERTIES = ['abilityName', 'abilityText', 'attack', 'speed', 'draw', 'discard',
-        'buff', 'auraDuration', 'statusFlg', 'reactionFlg'];
+        const ACTION_PROPERTIES = [
+            'abilityName',
+            'abilityText',
+            'attack',
+            'speed',
+            'draw',
+            'discard',
+            'buff',
+            'auraDuration',
+            'statusFlg',
+            'reactionFlg',
+        ];
         for (let i = 0; i < ACTIONS; i++) {
             const action = new Action();
             ACTION_PROPERTIES.forEach(p => action[p] = json.actions[i][p]);
@@ -97,7 +116,14 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
         }
         monster.buffs = new Array<Buff>();
         const BUFFS = 4;
-        const BUFF_PROPERTIES = ['timing', 'buffText', 'critFlg', 'flipEventText', 'flipEventFlg', 'buffName'];
+        const BUFF_PROPERTIES = [
+            'timing',
+            'buffText',
+            'critFlg',
+            'flipEventText',
+            'flipEventFlg',
+            'buffName',
+        ];
         for (let i = 0; i < BUFFS; i++) {
             const buff = new Buff();
             BUFF_PROPERTIES.forEach(p => buff[p] = json.buffs[i][p]);

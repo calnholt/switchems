@@ -4,6 +4,7 @@ export class GUI {
     isSelected?: boolean;
     isHighlighted?: boolean;
     isHovered?: boolean;
+    isExtraBoardHovered?: boolean;
 }
 
 export class Card extends GUI {
@@ -24,6 +25,7 @@ export class Monster extends Card {
     referenceFlg?: boolean = true;
     complexity: number;
     promiseDescription?: string;
+    extraBoard?: string;
 }
 
 export class MonsterComplete extends Monster {

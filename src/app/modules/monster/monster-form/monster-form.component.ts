@@ -71,7 +71,13 @@ export class MonsterFormComponent implements OnInit {
   // a little janky but for now it's fine
   getCleanMonster(): MonsterComplete {
     const copy = JSON.parse(JSON.stringify(this.monster));
-    const guiProps = ['isSelected', 'isHighlighted', 'isHovered', 'referenceFlg'];
+    const guiProps = [
+        'isSelected',
+        'isHighlighted',
+        'isHovered',
+        'isExtraBoardHovered',
+        'referenceFlg'
+      ];
     const actionProps = ['monsterName'];
     const buffProps = ['monsterName'];
     guiProps.forEach(prop => {

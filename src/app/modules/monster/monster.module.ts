@@ -1,3 +1,5 @@
+import { AcornBoardComponent } from './acorn-board/acorn-board.component';
+import { ExtraBoardComponent } from './extra-board/extra-board.component';
 import { TtsMonsterComponent } from './tts-monster/tts-monster.component';
 import { MonsterReferenceComponent } from './monster-reference/monster-reference.component';
 import { BuffFiltersComponent } from './buff-filters/buff-filters.component';
@@ -14,6 +16,7 @@ import { MonsterCardFiltersComponent } from './monster-card-filters/monster-card
 import { ActionFiltersComponent } from './action-filters/action-filters.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PrintModule } from '../print/print.module';
 
 @NgModule({
   imports: [
@@ -34,6 +37,8 @@ import { CommonModule } from '@angular/common';
     BuffFiltersComponent,
     MonsterReferenceComponent,
     TtsMonsterComponent,
+    ExtraBoardComponent,
+    AcornBoardComponent,
   ],
   exports: [
     MonsterActionComponent,
@@ -41,6 +46,8 @@ import { CommonModule } from '@angular/common';
     MonsterCardComponent,
     MonsterReferenceComponent,
     TtsMonsterComponent,
+    ExtraBoardComponent,
+    AcornBoardComponent,
   ]
 })
 export class MonsterModule { }

@@ -71,6 +71,10 @@
             *ngIf="selectedCard === 'BUFF'"
             [buff]="monster.buffs[index]">
           </monster-buff>
+          <extra-board
+            *ngIf="selectedCard === 'EXTRA'"
+            [monster]="monster">
+          </extra-board>
           <div class="hover-icons-container">
             <div class="hover-card-icon-container col-12">
               <div 
@@ -104,6 +108,14 @@
                 [ngClass]="{'highlight' : index === i && selectedCard === 'BUFF'}" 
                 class="hover-card-icon">
                 <span class="icon">B</span>
+              </div>
+            </div>
+            <div *ngIf="monster.extraBoard" class="hover-card-icon-container col-12">
+              <div 
+                (click)="selectedCard = 'EXTRA'" 
+                [ngClass]="{'highlight' : selectedCard === 'EXTRA'}" 
+                class="hover-card-icon">
+                <span class="icon">X</span>
               </div>
             </div>
           </div>
