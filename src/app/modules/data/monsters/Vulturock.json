@@ -5,7 +5,7 @@
   ],
   "actions": [
     {
-      "abilityName": "Drone Strike",
+      "abilityName": "Kamakazee",
       "abilityText": "<B>Recoil 2[ATK]</b>~RECOIL~",
       "element": "Death",
       "modifiers": [
@@ -68,7 +68,7 @@
     },
     {
       "abilityName": "Scavenge",
-      "abilityText": "This monster heals [HP] equal to your speed minus the enemy's speed. If the opponent selected a non-monster action this turn, heal <div>5[HP]</div> instead. <b>Single use.</b> ~SINGLE~",
+      "abilityText": "This monster heals <div>X[HP],</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, heal <div>5[HP]</div> instead. <b>Single use.</b> ~SINGLE~",
       "element": "Death",
       "modifiers": [
         0,
@@ -117,10 +117,10 @@
   ],
   "monsterId": 9,
   "abilityName": "Wing Clip",
-  "monsterName": "Americaw",
+  "monsterName": "Vulturock",
   "abilityText": "When this monster <b>switches in</b>, the enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}~SWITCH~",
   "hp": 9,
   "complexity": 1,
-  "promiseDescription": "Americaw is reckless assassin that requires finesse. Knowing how to position Americaw to maximize Scavenge and Iron Defense is key to its survival.",
+  "promiseDescription": "Vulturock is reckless assassin that requires finesse. Knowing how to position Vulturock to maximize Scavenge and Iron Defense is key to its survival.",
   "role": "Assassin"
 }
