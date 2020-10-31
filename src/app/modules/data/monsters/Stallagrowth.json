@@ -106,7 +106,7 @@
     {
       "buffName": "Concussion",
       "timing": "With Attack",
-      "buffText": "If this action is <b>faster</b> perform:, <div>[2]: <b>Flinch</b></div> ~FASTER~~FLINCH~",
+      "buffText": "If this action is <b>faster</b>, this attack gains:<br>[2]: <b>Flinch</b>~FASTER~~FLINCH~",
       "critFlg": true
     },
     {

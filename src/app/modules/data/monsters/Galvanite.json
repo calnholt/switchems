@@ -95,7 +95,7 @@
     {
       "buffName": "Deactivate",
       "timing": "With Attack",
-      "buffText": "If this action is <b>faster</b>, this attack gains:<br>[1]: <b>Flinch</b>~FLINCH~",
+      "buffText": "If this action is <b>faster</b>, this attack gains:<br>[1]: <b>Flinch</b>~FASTER~~FLINCH~",
       "flipEventText": "You may gain {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": false} to heal <div>3[HP].</div>",
       "critFlg": false,
       "flipEventFlg": true
@@ -121,7 +121,7 @@
   "monsterName": "Galvanite",
   "abilityText": "If this monster switched in this turn and the enemy monster attacked, that attack is <b>unsuccessful</b> and this monster gains <div>[NQ] [NQ]</div> of your choice. If the enemy monster attack was [F] [L], this monster suffers 2[ATK].~SUCCESS~",
   "hp": 11,
-  "complexity": 2,
+  "complexity": 3,
   "promiseDescription": "Galvanite's <b>absorb</b> ability turns your switch action into the ultimate defensive maneuver. Leverage this opportunistically. Knowing when to switch out with Galvanite is equally important – sometimes your accumulated [NQ] can't be transformed into a benefit, so it's more advantageous to wipe them off.",
   "role": "Warrior"
 }

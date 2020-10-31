@@ -120,6 +120,6 @@
   "monsterName": "Phantomaton",
   "abilityText": "During the turns where you have the first player token, the enemy monster cannot perform switch actions.",
   "hp": 12,
-  "complexity": 3,
+  "complexity": 2,
   "role": "Tank"
 }

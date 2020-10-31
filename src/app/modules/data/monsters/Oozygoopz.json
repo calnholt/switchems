@@ -95,7 +95,7 @@
     {
       "buffName": "Wispy Goop",
       "timing": "Post Actions",
-      "buffText": "<b>Goop</b><br>This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}. Shuffle this card into your opponent's deck.~GOOP~",
+      "buffText": "<b>Goop</b><br>This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}. Shuffle this card into your opponent's deck.~GOOP~",
       "flipEventText": "Your active monster suffers <div>X[ATK],</div> where X is the number of <b>Goop</b> cards in your discard.",
       "critFlg": false,
       "flipEventFlg": true
@@ -103,7 +103,7 @@
     {
       "buffName": "Prickly Goop",
       "timing": "Post Actions",
-      "buffText": "<b>Goop</b><br>This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}. Shuffle this card into your opponent's deck.~GOOP~",
+      "buffText": "<b>Goop</b><br>This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}. Shuffle this card into your opponent's deck.~GOOP~",
       "flipEventText": "Your active monster suffers <div>X[ATK],</div> where X is the number of <b>Goop</b> cards in your discard.",
       "critFlg": false,
       "flipEventFlg": true
@@ -111,7 +111,7 @@
     {
       "buffName": "Super Goop",
       "timing": "Post Actions",
-      "buffText": "<b>Goop</b><br>This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}. Shuffle this card into your opponent's deck.",
+      "buffText": "<b>Super, Goop</b>~SUPER~~GOOP~",
       "flipEventText": "If you do not have <b>Oozygoopz</b> on your team, your active monster suffers <div>X+3[ATK],</div> where X is the number of <b>Goop</b> cards in your discard.",
       "critFlg": false,
       "flipEventFlg": true
