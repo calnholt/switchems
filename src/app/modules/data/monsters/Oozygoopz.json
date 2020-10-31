@@ -119,7 +119,7 @@
   ],
   "abilityName": "Goopophyll",
   "monsterName": "Oozygoopz",
-  "abilityText": "At the start of each turn, if this monster is not at full HP, perform:<br><br>[1]: Heal <div>1[HP]</div>",
+  "abilityText": "At the start of the turn, if this monster is not at full HP, perform:<br><br>[1]: Heal <div>1[HP]</div>",
   "hp": 12,
   "complexity": 3,
   "promiseDescription": "Drive your opponent crazy by loading their deck up with a bunch of painfully useless goop!",
