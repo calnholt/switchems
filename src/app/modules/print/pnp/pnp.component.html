@@ -60,5 +60,9 @@
       <reference-card></reference-card>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
     </span>
+    <span *ngIf="allCards.length && extraFlg">
+      <acorn-board></acorn-board>
+      <div [ngClass]="{'break' : isPageBreak()}"></div>
+    </span>
   </div>
 </div>

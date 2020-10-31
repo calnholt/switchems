@@ -1,3 +1,4 @@
+import { AcornBoardComponent } from './acorn-board/acorn-board.component';
 import { ReferenceCardComponent } from './reference-card/reference-card.component';
 import { PlayerBoardComponent } from './player-board/player-board.component';
 import { DownloadComponent } from './download/download.component';
@@ -35,12 +36,14 @@ import { ActionBoardComponent } from './action-board/action-board.component';
     DownloadComponent,
     PlayerBoardComponent,
     ReferenceCardComponent,
+    AcornBoardComponent,
   ],
   exports: [
     ActionBoardComponent,
     StatCubeBoardComponent,
     PlayerBoardComponent,
     ReferenceCardComponent,
+    AcornBoardComponent,
   ]
 })
 export class PrintModule { }
