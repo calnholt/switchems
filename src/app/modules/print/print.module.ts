@@ -1,3 +1,4 @@
+import { ReferenceCardComponent } from './reference-card/reference-card.component';
 import { PlayerBoardComponent } from './player-board/player-board.component';
 import { DownloadComponent } from './download/download.component';
 import { StatCubeBoardComponent } from './stat-cube-board/stat-cube-board.component';
@@ -32,12 +33,14 @@ import { ActionBoardComponent } from './action-board/action-board.component';
     ActionBoardComponent,
     StatCubeBoardComponent,
     DownloadComponent,
-    PlayerBoardComponent
+    PlayerBoardComponent,
+    ReferenceCardComponent,
   ],
   exports: [
     ActionBoardComponent,
     StatCubeBoardComponent,
     PlayerBoardComponent,
+    ReferenceCardComponent,
   ]
 })
 export class PrintModule { }

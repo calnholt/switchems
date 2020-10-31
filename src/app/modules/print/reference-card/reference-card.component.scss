@@ -1,0 +1,37 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#reference-card {
+    .card-container {
+        position: relative;
+        border-radius: 11px;
+        height: $card-height;
+        width: $card-width;
+        background-color: white;
+        border: rgb(216, 216, 216) 2px solid;
+        border-radius: 11px;
+        padding: 5px;
+        .title {
+            font-family: $beastformer;
+            text-align: center;
+            font-size: 23px;
+            padding-bottom: 2px;
+            text-decoration: underline;
+        }
+        .section-body{
+            line-height: 12px;
+            padding-left: 13px;
+            font-size: 12px;
+            .ref-title {
+                font-weight: bold;
+                text-decoration: underline;
+                font-size: 14px;
+                padding: 3px 0px;
+            }
+            ul, ol {
+                padding-left: 17px;
+                font-weight: normal;
+            }
+        }
+    }
+}

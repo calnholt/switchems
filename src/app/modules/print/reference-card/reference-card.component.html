@@ -1,0 +1,19 @@
+<div id="reference-card">
+  <div class="card-container">
+    <div class="title">Turn Reference</div>
+    <ol class="section-body">
+      <li *ngFor="let ref of referenceCardText">
+        <div class="ref-title">{{ref.title}}</div>
+        <ul>
+          <li *ngFor="let item of ref.items">
+            <span>{{item}}</span>
+            <ol *ngIf="ref.subOrderedItems">
+              <li *ngFor="let subOrderedItem of ref.subOrderedItems">
+                <span>{{subOrderedItem}}</span>
+            </ol>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
