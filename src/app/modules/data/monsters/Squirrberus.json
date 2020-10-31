@@ -3,7 +3,7 @@
   "actions": [
     {
       "abilityName": "Forage",
-      "abilityText": "Whenever a time counter is removed from this and not by an opponent's ability, gain one of any [ACORN] counter. If you gain a <div>[SPD] [ACORN]</div>counter this way, also perform:<br><br>[1]: Gain another <div>[SPD] [ACORN]</div> counter.",
+      "abilityText": "Whenever a time counter is removed from this and not by an opponent's ability, gain one of any [ACORN] on your [ACORN] board. If you gain <div>[ACORN] [ARROW] [SPD]</div> this way, perform:<br><br>[1]: Gain another <div>[ACORN] [ARROW] [SPD]</div> on your [ACORN] board.",
       "element": "Leaf",
       "modifiers": [
         0,
@@ -21,7 +21,7 @@
     },
     {
       "abilityName": "Tail of Power",
-      "abilityText": "Gain three <div>[ATK] [ACORN]</div> counters.<br>",
+      "abilityText": "Gain <div>[ACORN] [ACORN] [ACORN] [ARROW] [ATK]</div> on your [ACORN] board.",
       "element": "Fire",
       "modifiers": [
         0,
@@ -41,7 +41,7 @@
     },
     {
       "abilityName": "Tail of Courage",
-      "abilityText": "Gain a <div>[DEF] [ACORN]</div> counter.<br>",
+      "abilityText": "Gain <div>[ACORN] [ARROW] [DEF]</div> on your [ACORN] board.",
       "element": "Leaf",
       "modifiers": [
         0,
@@ -60,7 +60,7 @@
     },
     {
       "abilityName": "Tail of Wisdom",
-      "abilityText": "Gain a <div>[SPD] [ACORN]</div>counter.<br><br>[1]: Gain another <div>[SPD] [ACORN]</div> counter.",
+      "abilityText": "Gain <div>[ACORN] [ARROW] [SPD]</div> on your [ACORN] board.<br><br>[1]: Gain another <div>[ACORN] [ARROW] [SPD]</div> on your [ACORN] board.",
       "element": "Water",
       "modifiers": [
         3,
@@ -83,39 +83,39 @@
     {
       "buffName": "Spicy Acorn",
       "timing": "Pre-Actions",
-      "buffText": "Gain a <div>[ATK] [ACORN]</div> counter. If this attack is either [F] [E], this attack gains +2[ATK].",
-      "flipEventText": "Gain a <div>[ATK] [ACORN]</div> counter.",
+      "buffText": "Gain <div>[ACORN] [ARROW] [ATK]</div> on your [ACORN] board. If this attack is either [F] [E], this attack gains +2[ATK].",
+      "flipEventText": "Gain a <div>[ACORN] [ARROW] [DEF]</div> on your [ACORN] board.",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Ripe Acorn",
       "timing": "Pre-Actions",
-      "buffText": "Gain a <div>[DEF] [ACORN]</div> counter. If this attack is either [L] [R], this monster gains +2[DEF] this turn.",
-      "flipEventText": "Gain a <div>[DEF] [ACORN]</div> counter.",
+      "buffText": "Gain <div>[ACORN] [ARROW] [DEF]</div> on your [ACORN] board. If this attack is either [L] [R], this monster gains +2[DEF] this turn.",
+      "flipEventText": "Gain <div>[ACORN] [ARROW] [DEF]</div> on your [ACORN] board.",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Rotten Acorn",
       "timing": "Pre-Actions",
-      "buffText": "Gain a <div>[SPD] [ACORN]</div> counter. If this attack is either [W] [S], this attack gains +2[SPD].",
-      "flipEventText": "Gain a <div>[SPD] [ACORN]</div> counter.",
+      "buffText": "Gain <div>[ACORN] [ARROW] [SPD]</div> on your [ACORN] board. If this attack is either [W] [S], this attack gains +3[SPD].",
+      "flipEventText": "Gain <div>[ACORN] [ARROW] [SPD]</div> on your [ACORN] board.",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Winter is Coming",
       "timing": "Post Actions",
-      "buffText": "<b>Super, Ethereal</b><br><br>Gain any three [ACORN] counters and <div>[+].</div>~SUPER~~ETHEREAL~",
-      "flipEventText": "If you have 4 or more [ACORN] counters, [+].",
+      "buffText": "<b>Super, Ethereal</b><br><br>Gain any three [ACORN] on your <div>[ACORN] board</div> and <div>[+].</div>~SUPER~~ETHEREAL~",
+      "flipEventText": "If you have 4 or more [ACORN] on your [ACORN] board, <div>[+].</div>",
       "critFlg": true,
       "flipEventFlg": true
     }
   ],
   "abilityName": "Hoarder",
   "monsterName": "Squirrberus",
-  "abilityText": "Whenever any monster on your team buffs an attack, discard all of your [ACORN] counters. That monster gains <div>+1[DEF]</div> this turn for each discarded <div>[DEF] [ACORN],</div> and the attack gains <div>+1[ATK]</div> for each discarded <div>[ATK] [ACORN]</div> and <div>+1[SPD]</div> for each discarded <div>[SPD] [ACORN].</div>",
+  "abilityText": "Whenever any monster on your team buffs an attack, discard all [ACORN] from your [ACORN] board. That monster gains <div>+1[DEF]</div> this turn for each discarded <div>[DEF] [ACORN],</div> and the attack gains <div>+1[ATK]</div> for each discarded <div>[ATK] [ACORN]</div> and <div>+1[SPD]</div> for each discarded <div>[SPD] [ACORN].</div>",
   "hp": 8,
   "complexity": 2,
   "role": "Support"
