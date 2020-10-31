@@ -39,7 +39,7 @@ export type Path = string;
 export type Css = string;
 export type ImageFile = string;
 
-export type CardTypes = `MONSTER` | `ACTION` | `BUFF`;
+export type CardTypes = `MONSTER` | `ACTION` | `BUFF` | 'EXTRA';
 
 export const ICON_PATH: Path = `./assets/images`;
 export const SYMBOLS_PATH: Path = ICON_PATH + `/symbols/`;
