@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Ice Blast",
-      "abilityText": "If this action is <b>faster</b>, perform:<br><br>[1]: This attack gains <b>flinch</b>. ~FASTER~~FLINCH~",
+      "abilityText": "If this action is <b>faster</b>, perform:<br><br>[1]: <b>Flinch</b>. ~FASTER~~FLINCH~",
       "element": "Water",
       "modifiers": [
         1,
@@ -122,5 +122,6 @@
   "hp": 9,
   "complexity": 1,
   "promiseDescription": "Zappguin wants nothing more than to paralyze every monster it meets. This requires a little bit of work because Zappguin is on the slower side. But a carefully timed Zap from a teammate can setup Zappguin wonderfully.",
+  "initiative": 40,
   "role": "Tricky"
 }

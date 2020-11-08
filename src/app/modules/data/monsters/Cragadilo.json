@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Implosion",
-      "abilityText": "Remove all <div>[DEF] [PQ]</div> from this monster, even if the enemy monster selected [COUNTER].<br><br>For each <div>[DEF] [PQ]</div> removed, perform:<br><br>[1]: +{\"positive\": 2, \"neutral\": 2, \"negative\": 1}[ATK]",
+      "abilityText": "Remove all <div>[DEF] [PQ]</div> from this monster, even this action is prevented.<br><br>For each <div>[DEF] [PQ]</div> removed, perform:<br><br>[1]: +{\"positive\": 2, \"neutral\": 2, \"negative\": 1}[ATK]",
       "element": "Rock",
       "modifiers": [
         0,
@@ -88,7 +88,7 @@
       "buffName": "Rock Armor",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
-      "flipEventText": "Your active monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
+      "flipEventText": "Your active monster may gain {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
       "critFlg": false,
       "flipEventFlg": true
     },
@@ -122,5 +122,6 @@
   "abilityText": "When this monster <b>switches in</b>, this monster gains <div>+X[DEF] [PQ],</div> where X is equal to this monster's current [HP] minus two. This monster is <b>exposed</b> when it has no <div>[DEF] [PQ].</div>~SWITCH~",
   "hp": 5,
   "complexity": 3,
+  "initiative": 60,
   "role": "Warrior"
 }

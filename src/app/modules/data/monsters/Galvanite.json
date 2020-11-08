@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Discharge",
-      "abilityText": "Remove all [NQ] from this monster, even if the enemy monster selected [COUNTER]. <br><br>This attack gains <div>+1[ATK]</div> for each [NQ] removed this way.",
+      "abilityText": "Remove all [NQ] from this monster, even if this action is prevented. <br><br>This attack gains <div>+1[ATK]</div> for each [NQ] removed this way.",
       "element": "Electric",
       "modifiers": [
         2,
@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Entrenched Barrage",
-      "abilityText": "This monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}, even if the enemy monster selected [COUNTER].",
+      "abilityText": "This monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}, even if this action is prevented.",
       "element": "Rock",
       "modifiers": [
         0,
@@ -46,7 +46,7 @@
     },
     {
       "abilityName": "Frazzle",
-      "abilityText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": false}, even if the enemy monster selected [COUNTER].",
+      "abilityText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": false}, even if this action is prevented.",
       "element": "Electric",
       "modifiers": [
         3,
@@ -103,7 +103,7 @@
     {
       "buffName": "Amped Up",
       "timing": "With Attack",
-      "buffText": "<b>Super</b><br>If your active monster switched in last turn, this attack gains <div>+2[ATK]</div> and <div>+2[SPD].</div>~SUPER~",
+      "buffText": "<b>Super</b><br>If your active monster switched in last turn, this attack gains <div>+3[ATK]</div> and <div>+3[SPD].</div>~SUPER~",
       "flipEventText": null,
       "critFlg": true,
       "flipEventFlg": false
@@ -123,5 +123,6 @@
   "hp": 11,
   "complexity": 3,
   "promiseDescription": "Galvanite's <b>absorb</b> ability turns your switch action into the ultimate defensive maneuver. Leverage this opportunistically. Knowing when to switch out with Galvanite is equally important – sometimes your accumulated [NQ] can't be transformed into a benefit, so it's more advantageous to wipe them off.",
+  "initiative": 25,
   "role": "Warrior"
 }

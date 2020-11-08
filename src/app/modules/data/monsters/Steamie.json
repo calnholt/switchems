@@ -125,5 +125,6 @@
   "abilityText": "Monsters with [WISH] counters can spend one [WISH] counter to play one additional buff card with any <b>attack</b>[ATK] action.<em>(If the number of buffs you played requires one additional [B], discard one [WISH] counter from your active monster after reveal. Limit one [WISH] per attack.)</em>",
   "hp": 8,
   "complexity": 2,
+  "initiative": 30,
   "role": "Support"
 }

@@ -105,13 +105,13 @@
     {
       "buffName": "Sauna",
       "timing": "Pre-Actions",
-      "buffText": "This monster heals <div>2[HP]</div> if the enemy monster has [STATUS]. ~STATUS~",
+      "buffText": "This monster heals <div>3[HP]</div> if the enemy monster has a [STATUS]. ~STATUS~",
       "critFlg": false
     },
     {
       "buffName": "Sear",
       "timing": "With Attack",
-      "buffText": "This attack gains <div>+2[ATK]</div> if the enemy monster has a [STATUS].~STATUS~",
+      "buffText": "This attack gains <div>+3[ATK]</div> if the enemy monster has a [STATUS].~STATUS~",
       "critFlg": false
     }
   ],
@@ -121,5 +121,6 @@
   "abilityText": "At the end of the turn, the enemy monster suffers 1[ATK].",
   "hp": 9,
   "complexity": 1,
+  "initiative": 20,
   "role": "Warrior"
 }

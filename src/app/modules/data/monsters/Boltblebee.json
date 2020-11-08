@@ -120,9 +120,10 @@
   ],
   "abilityName": "Pollinator",
   "monsterName": "Boltblebee",
-  "abilityText": "At the start of the game, place a [HONEY] counter behind your player shield. When you select a monster action for any monster, you may select the action using the [HONEY] counter. If you do, that monster action gains <div>+2[SPD],</div> then discard the [HONEY] counter.",
+  "abilityText": "At the start of the game, place a [HONEY] counter behind your player shield.<br><br> When you select a monster action for any monster, you may select the action using the [HONEY] counter. If you do, that monster action gains <div>+2[SPD],</div> then discard the [HONEY] counter. <em>([HONEY] counters are open information.)</em>",
   "hp": 9,
   "complexity": 2,
   "promiseDescription": "Boltblebee's role heavily depends on your team's composition. As an opener, Boltbebee can either amass honey with Pollinate or paralzye enemy monsters with Swarm. As a closer, Boltblebee can outpace monsters by gobbling up your honey stores with Nectear. However, Boltbebee is least effective in the midgame.",
+  "initiative": 65,
   "role": "Technical"
 }

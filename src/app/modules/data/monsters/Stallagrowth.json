@@ -26,7 +26,7 @@
     },
     {
       "abilityName": "Rock Smash",
-      "abilityText": "<b>Flinch</b>~FLINCH~",
+      "abilityText": "If this attack is <b>faster</b>, this attack gains <b>flinch</b>.~FLINCH~",
       "element": "Rock",
       "modifiers": [
         0,
@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Vine Whips",
-      "abilityText": "Remove all <b>leech</b> counters from the enemy monster, even if the enemy monster selected [COUNTER].<br><br>This attack gains <div>+2[ATK]</div> for each <b>leech</b> counter removed.",
+      "abilityText": "Remove all <b>leech</b> counters from the enemy monster, even if this action is prevented.<br><br>This attack gains <div>+2[ATK]</div> for each <b>leech</b> counter removed.",
       "element": "Leaf",
       "modifiers": [
         0,
@@ -123,5 +123,6 @@
   "hp": 11,
   "complexity": 1,
   "promiseDescription": "Slowly drain the enemy's health and stand your ground with Vineshield's defensive boon. Stallagrowth plays for the long game, but struggles to accumulate cards. Knowing when to draw three is essential to sustaining pressure.",
+  "initiative": 10,
   "role": "Tank"
 }

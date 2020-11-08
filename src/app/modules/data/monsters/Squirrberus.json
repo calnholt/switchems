@@ -84,7 +84,7 @@
       "buffName": "Spicy Acorn",
       "timing": "Pre-Actions",
       "buffText": "Gain <div>[ACORN] [ARROW] [ATK]</div> on your [ACORN] board. If this attack is either [F] [E], this attack gains +2[ATK].",
-      "flipEventText": "Gain a <div>[ACORN] [ARROW] [DEF]</div> on your [ACORN] board.",
+      "flipEventText": "Gain <div>[ACORN] [ARROW] [DEF]</div> on your [ACORN] board.",
       "critFlg": false,
       "flipEventFlg": true
     },
@@ -118,6 +118,7 @@
   "abilityText": "Whenever any monster on your team buffs an attack, discard all [ACORN] from your [ACORN] board. That monster gains <div>+1[DEF]</div> this turn for each discarded <div>[DEF] [ACORN],</div> and the attack gains <div>+1[ATK]</div> for each discarded <div>[ATK] [ACORN]</div> and <div>+1[SPD]</div> for each discarded <div>[SPD] [ACORN].</div>",
   "hp": 8,
   "complexity": 2,
-  "role": "Support",
-  "extraBoard": "ACORN"
+  "extraBoard": "ACORN",
+  "initiative": 35,
+  "role": "Support"
 }

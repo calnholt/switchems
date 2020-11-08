@@ -97,7 +97,7 @@
     {
       "buffName": "Recoil",
       "timing": "Post Actions",
-      "buffText": "<b>Super</b><br>The enemy monster suffers <div>1[ATK]</div> for each card your opponent discarded and used as buffs this turn.~SUPER~",
+      "buffText": "<b>Super</b><br>The enemy monster suffers <div>1[ATK]</div> for each card your opponent discarded and for each buff slot used this turn.~SUPER~",
       "flipEventText": "Your active monster suffers <div>1[ATK]</div>",
       "critFlg": false,
       "flipEventFlg": true
@@ -122,5 +122,6 @@
   "hp": 9,
   "complexity": 1,
   "promiseDescription": "Vulturock is reckless assassin that requires finesse. Knowing how to position Vulturock to maximize Scavenge and Iron Defense is key to its survival.",
+  "initiative": 75,
   "role": "Assassin"
 }

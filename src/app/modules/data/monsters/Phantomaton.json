@@ -67,7 +67,7 @@
     },
     {
       "abilityName": "Cornered",
-      "abilityText": "This attack gains <div>+2[ATK]</div> when you have the first player token.",
+      "abilityText": "This attack gains <div>+2[ATK]</div> when this monster has a <b>lockdown</b> counter on it.",
       "element": "Death",
       "modifiers": [
         0,
@@ -91,13 +91,13 @@
     {
       "buffName": "Target Acquired",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} if the enemy monster performed a switch action this turn.",
+      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} if the opponent selected a switch action this turn.",
       "critFlg": true
     },
     {
       "buffName": "Target Acquired",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} if the enemy monster performed a switch action this turn.",
+      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} if the opponent selected a switch action this turn.",
       "critFlg": true
     },
     {
@@ -118,8 +118,9 @@
   "monsterId": 10,
   "abilityName": "Lockdown",
   "monsterName": "Phantomaton",
-  "abilityText": "During the turns where you have the first player token, the enemy monster cannot perform switch actions.",
+  "abilityText": "At the start of the turn, put a <b>lockdown</b> counter on this monster if it doesn't already have one. If it does, remove the <b>lockdown</b> counter instead. While this monster has a <b>lockdown</b> counter on it, the enemy monster cannot perform switch actions.",
   "hp": 12,
   "complexity": 2,
+  "initiative": 55,
   "role": "Tank"
 }

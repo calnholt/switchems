@@ -93,7 +93,7 @@
       "buffName": "Revenge",
       "timing": "With Attack",
       "buffText": "<b>Super</b><br>This attack gains +{\"positive\": 1, \"neutral\": 1, \"negative\": 5}[ATK].~SUPER~",
-      "flipEventText": "Your active monster gains <div>+1[SPD] [CUBE].</div>",
+      "flipEventText": "Your active monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div>",
       "critFlg": false,
       "flipEventFlg": true
     },
@@ -123,5 +123,6 @@
   "hp": 7,
   "complexity": 1,
   "promiseDescription": "Chargroar is a straightforward assassin. Fast, strong attacks, with ways to increase its attack strength with <div>[PQ].</div> Chargroar's buffs are unconditional and incredibly efficient. Since Chargroar is easy to KO, there is little room error.",
+  "initiative": 85,
   "role": "Assassin"
 }

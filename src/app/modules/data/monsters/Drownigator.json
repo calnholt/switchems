@@ -123,5 +123,6 @@
   "hp": 9,
   "complexity": 1,
   "promiseDescription": "Drownigator is an immediate threat. Panic Attack puts your opponent on the defensive and a properly buffed Expunge can devastate leaf and rock types.",
+  "initiative": 70,
   "role": "Tricky"
 }
