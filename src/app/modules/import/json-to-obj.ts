@@ -85,7 +85,8 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             'hp',
             'complexity',
             'promiseDescription',
-            'extraBoard'
+            'extraBoard',
+            'initiative'
         ];
         MONSTER_PROPERTIES.forEach(p => monster[p] = json[p]);
         const elements = Array<ElemType>();
@@ -112,6 +113,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             action.monsterName = monster.monsterName;
             action.element = getElemType(json.actions[i].element);
             action.modifiers = json.actions[i].modifiers ? json.actions[i].modifiers : action.modifiers;
+            action.number = (i + 1);
             monster.actions.push(action);
         }
         monster.buffs = new Array<Buff>();

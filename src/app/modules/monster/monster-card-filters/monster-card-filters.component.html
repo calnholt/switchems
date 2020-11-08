@@ -43,6 +43,17 @@
   </div>
   <div class="col-12 form-element">
     <mat-form-field class="textarea" appearance="fill">
+      <mat-label>Initiative</mat-label>
+      <input matInput
+        min="1"
+        max="99"
+        type="number"
+        #input
+        [(ngModel)]="monster.initiative">
+    </mat-form-field>
+  </div>
+  <div class="col-12 form-element">
+    <mat-form-field class="textarea" appearance="fill">
       <mat-label>Complexity</mat-label>
       <input matInput
         min="1"

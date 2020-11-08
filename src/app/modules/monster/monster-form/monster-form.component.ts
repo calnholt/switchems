@@ -76,9 +76,9 @@ export class MonsterFormComponent implements OnInit {
         'isHighlighted',
         'isHovered',
         'isExtraBoardHovered',
-        'referenceFlg'
+        'referenceFlg',
       ];
-    const actionProps = ['monsterName'];
+    const actionProps = ['monsterName', 'number'];
     const buffProps = ['monsterName'];
     guiProps.forEach(prop => {
       delete copy[prop];

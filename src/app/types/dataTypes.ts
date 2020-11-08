@@ -68,7 +68,7 @@ export const TERM_CODES = [
      new Term(`~FLINCH~`, `Actions with flinch prevent the enemy monster's monster action if this action is faster.`),
      new Term(`~GOOP~`, `Goop buffs have no buff effect if you do not have <b>Oozygoopz</b> on your team.`),
      new Term(`~LEECH~`, `Leeched monsters suffer <div>1[ATK]</div> at the end of each turn, and your active monster heals `
-     + `<div>1[HP].</div> Stacks up to three. Remove on switch.`),
+     + `<div>1[HP].</div> Stacks up to three.`),
      new Term(`~PARALYZE~`, `If a monster is paralyzed, all of that monster's actions have:<br>`
      + `<div>[2]: </div>This action is successful. Perform these flips first and ignore all  [!] `),
      new Term('~PIERCE~', `Attacks with pierce ignore the enemy monster's postitve [DEF] increases.`),

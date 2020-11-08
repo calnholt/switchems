@@ -19,6 +19,7 @@ export class MonsterCardComponent implements OnInit {
 
   success: Path = SYMBOLS + 'success.png';
   fail: Path = SYMBOLS + 'fail.png';
+  flipEvent: Path = SYMBOLS + 'flip-event.png';
 
   ngOnInit() {}
 

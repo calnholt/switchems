@@ -26,6 +26,7 @@ export class Monster extends Card {
     complexity: number;
     promiseDescription?: string;
     extraBoard?: string;
+    initiative: number;
 }
 
 export class MonsterComplete extends Monster {
@@ -53,6 +54,7 @@ export class Action extends Card {
     buff?: number;
     discard?: number;
     draw?: number;
+    number: number;
     modifiers?: (number)[] = [0, 0, 0, 0, 0, 0];
     auraDuration?: number = 0;
     statusFlg?: boolean = false;

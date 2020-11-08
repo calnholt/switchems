@@ -38,12 +38,21 @@
       </div>
       <div class="crit-container">
         <span *ngFor="let buff of monster.buffs">
-          <img *ngIf="buff.critFlg" src="{{success}}">
+          <span *ngIf="buff.critFlg">
+            <img src="{{success}}">
+            <img *ngIf="buff.flipEventFlg" src="{{flipEvent}}">
+          </span>
         </span>
         <span *ngFor="let buff of monster.buffs">
-          <img *ngIf="!buff.critFlg" src="{{fail}}">
+          <span *ngIf="!buff.critFlg">
+            <img src="{{fail}}">
+            <img *ngIf="buff.flipEventFlg" src="{{flipEvent}}">
+          </span>
         </span>
       </div>
+      <span class="initiative-container">
+        <span>{{monster.initiative}}</span>
+      </span>
       <span class="heart-container">
         <img *ngIf="!monster.unityFlg" class="hp" src="{{getHpIcon()}}">
         <img *ngIf="monster.unityFlg" class="hp" src="./assets/images/symbols/heart.png">

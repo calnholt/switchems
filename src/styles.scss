@@ -26,3 +26,21 @@ em{
     display: block;
     line-height: 11px;
 }
+
+.line-container{
+    padding-left: 4px;
+    .name-line{
+        border: 0.04cm solid black;
+        width: 2.37cm;
+        display: inline-block;
+        margin: 0cm .2cm .1cm .2cm;
+        background-color: black;
+    }
+    .dot{
+        height: 10px;
+        width: 10px;
+        background-color: black;
+        border-radius: 50%;
+        display: inline-block;
+    }
+}
