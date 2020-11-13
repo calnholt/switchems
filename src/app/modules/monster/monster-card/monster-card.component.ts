@@ -20,12 +20,14 @@ export class MonsterCardComponent implements OnInit {
   success: Path = SYMBOLS + 'success.png';
   fail: Path = SYMBOLS + 'fail.png';
   flipEvent: Path = SYMBOLS + 'flip-event.png';
+  superEffective: Path = SYMBOLS + 'super-effective-white.png';
+  switchDefense: Path = SYMBOLS + 'switch-defense-white.png';
 
   ngOnInit() {}
 
   constructor() {}
 
-  getEffectivenessArray(monster: MonsterComplete): string[] {
+  getEffectivenessArray(monster: MonsterComplete): number[] {
     const arrs = [].concat(monster.elements.map((el: ElemType) => getAdvantages(el)));
     let totals = [0, 0, 0, 0, 0, 0];
     // arrs.forEach(arr => {arr.forEach((num: number, i: number) => {totals[i] += num; }); });
@@ -48,12 +50,16 @@ export class MonsterCardComponent implements OnInit {
         }
       }
     }
-    
+    return totals;
+  }
+
+  getEffectivenessArrayStringArray(monster: MonsterComplete): string[] {
+    const totals = this.getEffectivenessArray(monster);
     const out: string[] = [];
     totals.forEach((num: number, i: number) => out.push(this.getEffectivenessSymbol(num)));
     return out;
   }
-
+  // old way of displaying these images
   getEffectivenessSymbol(num: number): string {
     const shield = `<img src="./assets/images/symbols/switch-defense.png" class="shield">`;
     const effective = `<img src="./assets/images/symbols/effective.png" class="effective">`;
@@ -65,6 +71,11 @@ export class MonsterCardComponent implements OnInit {
       case -1: return superEff;
       case -2: return superEff;
     }
+  }
+
+  getSwitchDefenseValue(): number {
+    const effectivenessArray = this.getEffectivenessArray(this.monster);
+    return effectivenessArray.includes(2) ? 6 : 3;
   }
 
   hasElement(element: ElemType): boolean {
