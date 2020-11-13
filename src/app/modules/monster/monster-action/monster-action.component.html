@@ -9,9 +9,9 @@
       </div>
     </div>
     <div class="elements-container">
-      <div *ngFor="let element of ELEMENTS_LIST" class="elements">
-        <img *ngIf="hasElement(element)" class="element" src="{{getElementImageColorPath()}}">
-        <img *ngIf="!hasElement(element)" class="element" src="{{getElementImageGrayPath(element)}}">
+      <div *ngFor="let element of ELEMENTS_LIST; index as i" class="elements">
+        <img *ngIf="isAdvantage(i)" class="element" src="{{getElementImageColorPath(element)}}">
+        <img *ngIf="!isAdvantage(i)" class="element" src="{{getElementImageGrayPath(element)}}">
       </div>
     </div>
     <div class="ability-container">

@@ -35,6 +35,10 @@ export class MonsterActionComponent implements OnInit {
     return getAdvantages(this.action.element).reverse()[i] === -1;
   }
 
+  isAdvantage(i: number): boolean {
+    return getAdvantages(this.action.element).reverse()[i] === 1;
+  }
+
   isModifierAllZero(): boolean {
     return this.action.modifiers[0] === 0 && this.action.modifiers[1] === 0 && this.action.modifiers[2] === 0 &&
       this.action.modifiers[3] === 0 && this.action.modifiers[4] === 0 && this.action.modifiers[5] === 0;
@@ -54,8 +58,11 @@ export class MonsterActionComponent implements OnInit {
     return `${ELEMENTS_GRAY}/${elemType.toLowerCase()}.png`;
   }
 
-  getElementImageColorPath(): Path {
-    return `${ELEMENTS_COLOR}/${this.getElementLowerCase()}.png`;
+  getElementImageColorPath(elemType?: ElemType): Path {
+    if (!elemType) {
+      return `${ELEMENTS_COLOR}/${this.getElementLowerCase()}.png`;
+    }
+    return `${ELEMENTS_COLOR}/${elemType.toLowerCase()}.png`;
   }
 
   getImagePath(name: string): Path {
