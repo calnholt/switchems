@@ -17,6 +17,20 @@
       "buff": 0
     },
     {
+      "abilityName": "Vine Whips",
+      "abilityText": "Remove all [STATUS] from the enemy monster, even if this action is prevented.<br><br>This attack gains <div>+4[ATK]</div> for each [STATUS] removed.",
+      "element": "Leaf",
+      "auraDuration": null,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 1,
+      "speed": 3,
+      "draw": 0,
+      "discard": 0,
+      "buff": 1,
+      "modifier": 2
+    },
+    {
       "abilityName": "Rock Smash",
       "abilityText": "If this attack is <b>faster</b>, this attack gains <b>flinch</b>.~FLINCH~",
       "element": "Rock",
@@ -31,31 +45,18 @@
       "modifier": 4
     },
     {
-      "abilityName": "Vine Whips",
-      "abilityText": "Remove all [STATUS] from the enemy monster, even if this action is prevented.<br><br>This attack gains <div>+3[ATK]</div> for each [STATUS] removed.",
-      "element": "Leaf",
-      "auraDuration": null,
-      "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 1,
-      "speed": 3,
-      "draw": 0,
-      "discard": 0,
-      "buff": 1,
-      "modifier": 2
-    },
-    {
       "abilityName": "Rock Slide",
-      "abilityText": "[1]",
+      "abilityText": "[2]",
       "element": "Rock",
       "auraDuration": null,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 2,
-      "speed": 4,
+      "attack": 1,
+      "speed": 5,
       "draw": 0,
       "discard": 1,
-      "buff": 2
+      "buff": 2,
+      "modifier": 2
     }
   ],
   "buffs": [

@@ -10,39 +10,10 @@
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": true,
-      "reactionFlg": false,
       "speed": 3,
       "draw": 0,
       "discard": 2,
       "buff": 0
-    },
-    {
-      "abilityName": "Foul Play",
-      "abilityText": "[2]",
-      "element": "Death",
-      "auraDuration": 0,
-      "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 2,
-      "speed": 3,
-      "draw": 0,
-      "discard": 1,
-      "buff": 1,
-      "modifier": 2
-    },
-    {
-      "abilityName": "Surge",
-      "abilityText": "",
-      "element": "Water",
-      "auraDuration": 0,
-      "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 1,
-      "speed": 7,
-      "draw": 0,
-      "discard": 0,
-      "buff": 3,
-      "modifier": 1
     },
     {
       "abilityName": "Expunge",
@@ -50,22 +21,53 @@
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 4,
       "speed": 8,
       "draw": 0,
       "discard": 1,
       "buff": 1,
       "modifier": 3
+    },
+    {
+      "abilityName": "Foul Play",
+      "abilityText": "[1]",
+      "element": "Death",
+      "auraDuration": 0,
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 3,
+      "draw": 0,
+      "discard": 1,
+      "buff": 1,
+      "modifier": 1
+    },
+    {
+      "abilityName": "Surge",
+      "abilityText": "",
+      "element": "Water",
+      "auraDuration": 0,
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 7,
+      "draw": 0,
+      "discard": 0,
+      "buff": 3,
+      "modifier": 1
     }
   ],
   "buffs": [
     {
-      "buffName": "Disarm",
+      "buffName": "Abrupt Weakness",
       "timing": "Pre-Actions",
-      "buffText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
+      "buffText": "<b>Super, Ethereal, Fatigue [STATUS]</b> ~SUPER~~ETHEREAL~~FATIGUE~",
+      "flipEventText": "The enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
+      "flipEventFlg": true
+    },
+    {
+      "buffName": "One Step Ahead",
+      "timing": "Pre-Actions",
+      "buffText": "This attack gains +1[ATK] and <b>pierce</b>. ~PIERCE~",
       "flipEventText": "Look at your opponent's hand.",
-      "critFlg": true,
       "flipEventFlg": true
     },
     {
@@ -73,23 +75,13 @@
       "timing": "Pre-Actions",
       "buffText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "flipEventText": "If your opponent has more cards in their hand than you, your opponent [-].",
-      "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Tremble",
       "timing": "Post Actions",
       "buffText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.",
-      "flipEventText": "This attack gains +1[ATK].",
-      "critFlg": true,
-      "flipEventFlg": true
-    },
-    {
-      "buffName": "Abrupt Weakness",
-      "timing": "Pre-Actions",
-      "buffText": "<b>Super, Ethereal, Fatigue [STATUS]</b> ~SUPER~~ETHEREAL~~FATIGUE~",
-      "flipEventText": "The enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
-      "critFlg": false,
+      "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "flipEventFlg": true
     }
   ],

@@ -6,12 +6,12 @@
   "actions": [
     {
       "abilityName": "Kraterkazee",
-      "abilityText": "<B>Recoil 2[ATK]</b>~RECOIL~",
+      "abilityText": "<B>Recoil 2[ATK], [1]</b>~RECOIL~",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 6,
+      "attack": 5,
       "speed": 7,
       "draw": 0,
       "discard": 2,
@@ -20,12 +20,12 @@
     },
     {
       "abilityName": "Roc Rock",
-      "abilityText": "<B>Recoil 1[ATK]</b> ~RECOIL~",
+      "abilityText": "<B>Recoil 1[ATK], [1]</b>~RECOIL~",
       "element": "Rock",
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
-      "attack": 4,
+      "attack": 3,
       "speed": 5,
       "draw": 0,
       "discard": 1,
@@ -46,7 +46,7 @@
     },
     {
       "abilityName": "Scavenge",
-      "abilityText": "This monster heals <div>X[HP],</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, heal <div>5[HP]</div> instead. <b>Single use.</b> ~SINGLE~",
+      "abilityText": "This monster heals <div>X[HP],</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, heal <div>5[HP]</div> instead. <br><br><b>Single use.</b> ~SINGLE~",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": true,

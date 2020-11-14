@@ -4,20 +4,6 @@
   ],
   "actions": [
     {
-      "abilityName": "No Pain, No Gain",
-      "abilityText": "<b>Recoil 1[ATK]</b>, [1]~RECOIL~",
-      "element": "Fire",
-      "auraDuration": 0,
-      "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 1,
-      "speed": 3,
-      "draw": 0,
-      "discard": 0,
-      "buff": 3,
-      "modifier": 2
-    },
-    {
       "abilityName": "Inferno",
       "abilityText": "",
       "element": "Fire",
@@ -32,19 +18,6 @@
       "modifier": 5
     },
     {
-      "abilityName": "Scorch",
-      "abilityText": "[3]",
-      "element": "Fire",
-      "auraDuration": 0,
-      "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 1,
-      "speed": 7,
-      "draw": 0,
-      "discard": 1,
-      "buff": 1
-    },
-    {
       "abilityName": "Burn",
       "abilityText": "<b>Burn [STATUS]</b> ~BURN~",
       "element": "Fire",
@@ -55,6 +28,34 @@
       "draw": 0,
       "discard": 0,
       "buff": 0
+    },
+    {
+      "abilityName": "No Pain, No Gain",
+      "abilityText": "<b>Recoil 1[ATK]</b>, [1]~RECOIL~",
+      "element": "Fire",
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 1,
+      "speed": 3,
+      "draw": 0,
+      "discard": 0,
+      "buff": 3,
+      "modifier": 2
+    },
+    {
+      "abilityName": "Scorch",
+      "abilityText": "[3]",
+      "element": "Fire",
+      "auraDuration": 0,
+      "statusFlg": false,
+      "reactionFlg": false,
+      "attack": 1,
+      "speed": 7,
+      "draw": 0,
+      "discard": 1,
+      "buff": 1,
+      "modifier": 1
     }
   ],
   "buffs": [

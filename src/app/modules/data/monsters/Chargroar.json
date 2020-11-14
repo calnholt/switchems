@@ -20,7 +20,7 @@
     },
     {
       "abilityName": "Lights Out",
-      "abilityText": "If this attack KO's the enemy monster, this monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}",
+      "abilityText": "[1]<br><br>If this attack KO's the enemy monster, this monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}",
       "element": "Electric",
       "auraDuration": 0,
       "statusFlg": false,
