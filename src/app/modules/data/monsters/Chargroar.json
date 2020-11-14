@@ -81,7 +81,7 @@
       "buffName": "Charge",
       "timing": "Pre-Actions",
       "buffText": "This attack gains +2[SPD]",
-      "flipEventText": "This attack gains <div>+1[ATK].</div>",
+      "flipEventText": "<b>Crush 2 [PQ]</b> ~CRUSH~",
       "critFlg": false,
       "flipEventFlg": true
     },

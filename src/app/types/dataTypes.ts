@@ -56,10 +56,12 @@ export type TermCodeValue = string;
 // best method I could think of with the least redundancy while maintaining strong typing
 const TERM_KEYS = [`~BURN~`, `~SUCCESS~`, `~FLINCH~`, `~PARALYZE~`, `~LEECH~`, `~FATIGUE~`,
     `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~SUPER~`, `~FASTER~`, `~SLOWER~`, 
-    `~GOOP~`, `~ETHEREAL~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`] as const;
+    `~GOOP~`, `~ETHEREAL~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`, `~CRUSH~`] as const;
 export type TermCode = typeof TERM_KEYS[number];
 export const TERM_CODES = [
-    new Term(`~BURN~`, `Burned monsters ignore their attack's elemental modifiers and are dealt <div>+1[ATK]</div> from attacks they are weak to.`),
+    new Term(`~BURN~`, `Burned monsters ignore their attack's elemental modifiers and are dealt <div>+1[ATK]</div>`
+     + ` from attacks they are weak to.`),
+     new Term(`~CRUSH~`, `Remove this many number of [PQ] from the enemy monster.`),
      new Term(`~EFFECTIVE~`, `Monsters are weak to elements found on the bottom left of their monster card.`),
      new Term(`~ETHEREAL~`, `Ethereals are removed from the game after played as buffs.`),
      new Term(`~FASTER~`, `This action is faster if both players select a monster action and yours has a higher speed.`),
