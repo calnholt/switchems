@@ -89,16 +89,13 @@ export class ViewAllComponent implements OnInit {
     const isDiscard = this.filterValueMinMax(a.discard, form.discardMin, form.discardMax);
     const isDraw = this.filterValueMinMax(a.draw, form.drawMin, form.drawMax);
     const isAura = this.filterValueMinMax(a.auraDuration, form.auraMin, form.auraMax);
-    const isReaction = a.reactionFlg === form.reactionFlg;
     const isStatus = a.statusFlg === form.statusFlg;
-    return isElements && isSpeed && isAttack && isBuff && isDiscard && isDraw  && isAura && isReaction && isStatus;
+    return isElements && isSpeed && isAttack && isBuff && isDiscard && isDraw  && isAura && isStatus;
   }
 
   getBuffHighlight(b: Buff, form: MonsterForm) {
     const isTiming = this.filterTiming(b, form);
-    const isCritical = Boolean(b.critFlg) === Boolean(form.critFlg);
-    const isFlipEvent = Boolean(b.flipEventFlg) === Boolean(form.flipEventFlg);
-    return isTiming && isCritical && isFlipEvent;
+    return isTiming;
   }
 
   filterTiming(b: Buff, form: MonsterForm) {

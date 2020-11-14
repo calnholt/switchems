@@ -45,13 +45,5 @@
         </span>
       </div>
     </div>
-    <div class="buff-container">
-      <div class= "buff" *ngFor="let buff of monster.buffs">  
-        <span>
-          <span class="timing" [ngClass]="{'red' : !buff.critFlg}">{{monsterService.getTimingRomanNumeral(buff)}}: </span>
-          <span class="text" [innerHTML]="getAbilityText(buff.buffText)"></span>
-        </span>
-      </div>
-    </div>
   </div>
 </div>

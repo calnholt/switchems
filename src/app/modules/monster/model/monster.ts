@@ -40,7 +40,6 @@ export class Buff extends Card {
     timing: BuffTiming = null;
     buffText: string = null;
     flipEventText?: string = null;
-    critFlg: boolean = false;
     flipEventFlg: boolean = false;
 }
 
@@ -58,5 +57,4 @@ export class Action extends Card {
     modifier?: number;
     auraDuration?: number = 0;
     statusFlg?: boolean = false;
-    reactionFlg?: boolean = false;
 }

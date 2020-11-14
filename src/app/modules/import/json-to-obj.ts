@@ -105,7 +105,6 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             'buff',
             'auraDuration',
             'statusFlg',
-            'reactionFlg',
             'modifier',
         ];
         for (let i = 0; i < ACTIONS; i++) {
@@ -121,7 +120,6 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
         const BUFF_PROPERTIES = [
             'timing',
             'buffText',
-            'critFlg',
             'flipEventText',
             'flipEventFlg',
             'buffName',

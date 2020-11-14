@@ -22,10 +22,10 @@ for (let i = 0; i < 2; i++) {
     b.buffName = `Cant Escape!`;
     b.timing = `Pre-Actions`;
     b.buffText = `Prevent the enemy monster from switching this turn if your opponent selected a switch action.`;
-    b.critFlg = true;
+    b.flipEventFlg = true;
+    b.flipEventText = `This attack gains <div>+1[ATK].</div>`;
     standardBuffArray.push(b);
 }
-standardBuffArray[0].critFlg = false;
 export const STANDARD_BUFFS: Buff[] = standardBuffArray;
 
 export const PLAYER_BOARD_TEXT: string[] = [
@@ -61,7 +61,7 @@ export type TermCode = typeof TERM_KEYS[number];
 export const TERM_CODES = [
     new Term(`~BURN~`, `Burned monsters ignore their attack's elemental modifiers and are dealt <div>+1[ATK]</div>`
      + ` from attacks they are weak to.`),
-     new Term(`~CRUSH~`, `Remove this many number of [PQ] from the enemy monster.`),
+     new Term(`~CRUSH~`, `Remove this many number of  [PQ] from the enemy monster.`),
      new Term(`~EFFECTIVE~`, `Monsters are weak to elements found on the bottom left of their monster card.`),
      new Term(`~ETHEREAL~`, `Ethereals are removed from the game after played as buffs.`),
      new Term(`~FASTER~`, `This action is faster if both players select a monster action and yours has a higher speed.`),
@@ -72,7 +72,7 @@ export const TERM_CODES = [
      + `<div>1[HP].`),
      new Term(`~PARALYZE~`, `If a monster is paralyzed, all of that monster's actions have:<br>`
      + `<div>[2]: </div>This action is successful. Perform these flips first and ignore all  [!] `),
-     new Term('~PIERCE~', `Attacks with pierce ignore the enemy monster's postitve [DEF] increases.`),
+     new Term('~PIERCE~', `Attacks with pierce ignore the enemy monster's [DEF].`),
      new Term(`~RECOIL~`, `This monster suffers this amount of recoil damage to itself. `
      + `This damage cannot be prevented and still occurs if this action is prevented.`),
      new Term(`~RESIST~`, `Monsters are resistant to elements found on the bottom right of their monster card.`),
@@ -82,7 +82,7 @@ export const TERM_CODES = [
      new Term(`~STUN~`, `Stunned monsters cannot perform any actions next turn. Remove at the end of next turn.`),
      new Term(`~SUCCESS~`, `Unsuccessful actions do nothing.`),
      new Term(`~SUPER~`, `Supers require and use two [B] slots.`),
-     new Term(`~SWITCH~`, `Switch in abilities also trigger at the start of the game.`),
+     new Term(`~SWITCH~`, `Switch in abilities also trigger at the start of the game and following a monster KO.`),
 ] as const;
 
 const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[1]`, `[2]`, `[3]`, `[4]`, `[DEF]`, `[TA]`, `[X]`, `[SUCC]`, `[FAIL]`,

@@ -126,16 +126,6 @@
         [multi]="true"
         (selectionChange)="applyFilters()">
       </dropdown>
-      <mat-checkbox 
-        [(ngModel)]="form.critFlg"
-        (change)="applyFilters()">
-        Critical?
-      </mat-checkbox>
-      <mat-checkbox 
-        [(ngModel)]="form.flipEventFlg"
-        (change)="applyFilters()">
-        Flip Event?
-      </mat-checkbox>
     </div>
     <button class="clear-button" mat-stroked-button (click)="clearFilters()">Reset Filters</button>
   </div>

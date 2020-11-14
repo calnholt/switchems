@@ -25,10 +25,7 @@ export class MonsterForm {
   auraMin?: number = 0;
   auraMax?: number = 10;
   statusFlg?: boolean = false;
-  reactionFlg: boolean = false;
   timings?: Array<BuffTiming> = new Array();
-  critFlg?: boolean = false;
-  flipEventFlg: boolean = false;
 }
 
 @Component({
