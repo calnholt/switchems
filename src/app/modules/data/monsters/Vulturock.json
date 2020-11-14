@@ -8,14 +8,6 @@
       "abilityName": "Kraterkazee",
       "abilityText": "<B>Recoil 2[ATK]</b>~RECOIL~",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        2,
-        3,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
@@ -23,20 +15,13 @@
       "speed": 7,
       "draw": 0,
       "discard": 2,
-      "buff": 1
+      "buff": 1,
+      "modifier": 2
     },
     {
       "abilityName": "Roc Rock",
       "abilityText": "<B>Recoil 1[ATK]</b> ~RECOIL~",
       "element": "Rock",
-      "modifiers": [
-        0,
-        2,
-        0,
-        0,
-        0,
-        2
-      ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
@@ -44,20 +29,13 @@
       "speed": 5,
       "draw": 0,
       "discard": 1,
-      "buff": 2
+      "buff": 2,
+      "modifier": 2
     },
     {
       "abilityName": "Iron Defense",
       "abilityText": "This monster gains {\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.",
       "element": "Rock",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": true,
       "reactionFlg": false,
@@ -70,14 +48,6 @@
       "abilityName": "Scavenge",
       "abilityText": "This monster heals <div>X[HP],</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, heal <div>5[HP]</div> instead. <b>Single use.</b> ~SINGLE~",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": true,
       "reactionFlg": false,
@@ -91,14 +61,16 @@
     {
       "buffName": "Beak Drill",
       "timing": "Pre-Actions",
-      "buffText": "If the enemy monster used a [MQ] this turn, your opponent loses an additional [MQ].",
-      "critFlg": true
+      "buffText": "[2]",
+      "flipEventText": "[2]",
+      "critFlg": true,
+      "flipEventFlg": true
     },
     {
       "buffName": "Recoil",
       "timing": "Post Actions",
-      "buffText": "<b>Super</b><br>The enemy monster suffers <div>1[ATK]</div> for each card your opponent discarded and for each buff slot used this turn.~SUPER~",
-      "flipEventText": "Your active monster suffers <div>1[ATK]</div>",
+      "buffText": "<b>Super, Ethereal</b><br>The enemy monster suffers <div>1[ATK]</div> for each card your opponent discarded and for each buff slot used this turn.~SUPER~~ETHEREAL~",
+      "flipEventText": "This attack gains +2[ATK] and <b>recoil 2[ATK]</b>.",
       "critFlg": false,
       "flipEventFlg": true
     },
@@ -106,13 +78,17 @@
       "buffName": "Bigger Rocs",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
-      "critFlg": false
+      "flipEventText": "This attack gains +1[ATK].",
+      "critFlg": false,
+      "flipEventFlg": true
     },
     {
       "buffName": "Bigger Rocs",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
-      "critFlg": false
+      "flipEventText": "This attack gains +1[ATK].",
+      "critFlg": false,
+      "flipEventFlg": true
     }
   ],
   "monsterId": 9,

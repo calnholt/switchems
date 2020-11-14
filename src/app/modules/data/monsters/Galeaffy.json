@@ -5,16 +5,8 @@
   "actions": [
     {
       "abilityName": "Switcheroo",
-      "abilityText": "[1]: This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.<br><br>Perform a switch action and you may keep up to four [PQ] instead of one. <em>(You still perform <div>[1]: Heal 2 [HP])</div>.</em>",
+      "abilityText": "[1]<br><br>Perform a switch action and you may keep up to four [PQ] instead of one.<em>(You do not heal or remove a [STATUS] with this switch action.)</em>",
       "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        1,
-        1,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
@@ -22,20 +14,13 @@
       "speed": 6,
       "draw": 0,
       "discard": 2,
-      "buff": 0
+      "buff": 0,
+      "modifier": 1
     },
     {
       "abilityName": "Whirlwind",
       "abilityText": "If this action is <b>slower</b>, this action is <b>unsuccessful</b>.~SLOWER~~SUCCESS~",
       "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        2,
-        3,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
@@ -43,20 +28,13 @@
       "speed": 3,
       "draw": 0,
       "discard": 1,
-      "buff": 1
+      "buff": 1,
+      "modifier": 2
     },
     {
       "abilityName": "Cyclone",
-      "abilityText": "[2]: This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.",
+      "abilityText": "[2]",
       "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        1,
-        2,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
@@ -64,20 +42,13 @@
       "speed": 3,
       "draw": 0,
       "discard": 0,
-      "buff": 2
+      "buff": 2,
+      "modifier": 1
     },
     {
       "abilityName": "Vicious Hurricane",
-      "abilityText": "You may choose to remove any number of <div>[SPD] [PQ].</div> For each removed, this attack gains <div>+{\"positive\": 2, \"neutral\": 1, \"negative\": 1}[ATK].</div> <b>Single use.</b> ~SINGLE~",
+      "abilityText": "You may choose to remove any number of <div>[SPD] [PQ].</div> For each removed, this attack gains <div>+1[ATK].</div> <b><br><br>Single use.</b> ~SINGLE~",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        1,
-        2,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
@@ -85,7 +56,8 @@
       "speed": 5,
       "draw": 0,
       "discard": 2,
-      "buff": 0
+      "buff": 0,
+      "modifier": 2
     }
   ],
   "buffs": [
@@ -93,13 +65,15 @@
       "buffName": "Sharp Leaves",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
-      "critFlg": true
+      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div> after the attack.",
+      "critFlg": true,
+      "flipEventFlg": true
     },
     {
       "buffName": "Propulsive Winds",
       "timing": "Pre-Actions",
       "buffText": "<b>Super</b><br>This attack gains <div>+4[SPD]</div>.~SUPER~",
-      "flipEventText": "Your active monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.",
+      "flipEventText": "This attack gains +1[ATK].",
       "critFlg": false,
       "flipEventFlg": true
     },
@@ -107,13 +81,17 @@
       "buffName": "Leaf Shield",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.",
-      "critFlg": true
+      "flipEventText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.</div>",
+      "critFlg": true,
+      "flipEventFlg": true
     },
     {
       "buffName": "Leaf Shield",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.",
-      "critFlg": false
+      "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
+      "critFlg": false,
+      "flipEventFlg": true
     }
   ],
   "monsterId": 8,

@@ -8,14 +8,6 @@
       "abilityName": "Leech Seed",
       "abilityText": "<b>Leech [STATUS]</b> ~LEECH~",
       "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "auraDuration": null,
       "statusFlg": true,
       "reactionFlg": false,
@@ -28,14 +20,6 @@
       "abilityName": "Rock Smash",
       "abilityText": "If this attack is <b>faster</b>, this attack gains <b>flinch</b>.~FLINCH~",
       "element": "Rock",
-      "modifiers": [
-        0,
-        4,
-        0,
-        0,
-        0,
-        4
-      ],
       "auraDuration": null,
       "statusFlg": false,
       "reactionFlg": false,
@@ -43,20 +27,13 @@
       "speed": 7,
       "draw": 0,
       "discard": 3,
-      "buff": 2
+      "buff": 2,
+      "modifier": 4
     },
     {
       "abilityName": "Vine Whips",
-      "abilityText": "Remove all <b>leech</b> counters from the enemy monster, even if this action is prevented.<br><br>This attack gains <div>+2[ATK]</div> for each <b>leech</b> counter removed.",
+      "abilityText": "Remove all [STATUS] from the enemy monster, even if this action is prevented.<br><br>This attack gains <div>+3[ATK]</div> for each [STATUS] removed.",
       "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        2,
-        2,
-        0
-      ],
       "auraDuration": null,
       "statusFlg": false,
       "reactionFlg": false,
@@ -64,20 +41,13 @@
       "speed": 3,
       "draw": 0,
       "discard": 0,
-      "buff": 1
+      "buff": 1,
+      "modifier": 2
     },
     {
       "abilityName": "Rock Slide",
-      "abilityText": "[1]: The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
+      "abilityText": "[1]",
       "element": "Rock",
-      "modifiers": [
-        0,
-        2,
-        0,
-        0,
-        0,
-        1
-      ],
       "auraDuration": null,
       "statusFlg": false,
       "reactionFlg": false,
@@ -92,28 +62,34 @@
     {
       "buffName": "Toughen Vines",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.",
-      "critFlg": false
+      "buffText": "This monster gains +2[DEF] this turn.",
+      "flipEventText": "This monster gains +2[DEF] this turn.",
+      "critFlg": false,
+      "flipEventFlg": true
     },
     {
       "buffName": "Mossy Overgrowth",
       "timing": "Pre-Actions",
       "buffText": "<b>Super</b><br>This monster gains <div>+4[DEF]</div> this turn. ~SUPER~",
-      "flipEventText": "If the enemy monster is <b>leeched</b>, that monster suffers <div>2[ATK].</div>",
+      "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "critFlg": false,
       "flipEventFlg": true
     },
     {
       "buffName": "Concussion",
       "timing": "With Attack",
-      "buffText": "If this action is <b>faster</b>, this attack gains:<br>[2]: <b>Flinch</b>~FASTER~~FLINCH~",
-      "critFlg": true
+      "buffText": "If this action is <b>faster</b>, this attack gains <b>flinch</b>.~FASTER~~FLINCH~",
+      "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
+      "critFlg": true,
+      "flipEventFlg": true
     },
     {
       "buffName": "Gravelcrust Grip",
       "timing": "With Attack",
-      "buffText": "[1]: <b>Leech [STATUS]</b> ~LEECH~",
-      "critFlg": true
+      "buffText": "<b>Super, Ethereal, Leech [STATUS]</b> ~SUPER~~ETHEREAL~~LEECH~",
+      "flipEventText": "This attack gains <b>flinch</b>.~FLINCH~",
+      "critFlg": true,
+      "flipEventFlg": true
     }
   ],
   "monsterId": 1,

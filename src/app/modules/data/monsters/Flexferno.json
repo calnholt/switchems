@@ -5,16 +5,8 @@
   "actions": [
     {
       "abilityName": "No Pain, No Gain",
-      "abilityText": "<b>Recoil 1[ATK]</b><br><br>[1]: [+]~RECOIL~",
+      "abilityText": "<b>Recoil 1[ATK]</b>, [1]~RECOIL~",
       "element": "Fire",
-      "modifiers": [
-        0,
-        2,
-        1,
-        0,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
@@ -22,20 +14,13 @@
       "speed": 3,
       "draw": 0,
       "discard": 0,
-      "buff": 3
+      "buff": 3,
+      "modifier": 2
     },
     {
       "abilityName": "Inferno",
-      "abilityText": "[1]: <b>Recoil 2[ATK]</b> ~RECOIL~",
+      "abilityText": "",
       "element": "Fire",
-      "modifiers": [
-        0,
-        5,
-        5,
-        0,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
@@ -43,20 +28,13 @@
       "speed": 5,
       "draw": 0,
       "discard": 4,
-      "buff": 1
+      "buff": 1,
+      "modifier": 5
     },
     {
       "abilityName": "Scorch",
-      "abilityText": "[1]: This attack gains <div>+4[ATK].</div>",
+      "abilityText": "[3]",
       "element": "Fire",
-      "modifiers": [
-        0,
-        1,
-        2,
-        0,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
@@ -68,16 +46,8 @@
     },
     {
       "abilityName": "Burn",
-      "abilityText": "[2]: <b>Burn [STATUS]</b> ~BURN~",
+      "abilityText": "<b>Burn [STATUS]</b> ~BURN~",
       "element": "Fire",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": true,
       "reactionFlg": false,
@@ -91,13 +61,15 @@
     {
       "buffName": "Impulsive Burn",
       "timing": "With Attack",
-      "buffText": "[1]: <b>Burn [STATUS]</b>~BURN~",
-      "critFlg": true
+      "buffText": "<b>Super, Ethereal, Burn [STATUS]</b>~SUPER~~ETHEREAL~~BURN~",
+      "flipEventText": "[+]",
+      "critFlg": true,
+      "flipEventFlg": true
     },
     {
       "buffName": "Melt Away",
       "timing": "Post Actions",
-      "buffText": "<b>Super, Ethereal</b><br>Remove all [NQ] from this monster and all [STATUS] from all of your monsters.~SUPER~~ETHEREAL~",
+      "buffText": "<b>Super, Ethereal</b><br>Remove all [NQ] from this monster and all [STATUS] from all of your monsters.~SUPER~~ETHEREAL~~STATUS~",
       "flipEventText": "You may remove a [NQ] from your active monster.",
       "critFlg": true,
       "flipEventFlg": true
@@ -106,13 +78,17 @@
       "buffName": "Sauna",
       "timing": "Pre-Actions",
       "buffText": "This monster heals <div>3[HP]</div> if the enemy monster has a [STATUS]. ~STATUS~",
-      "critFlg": false
+      "flipEventText": "This monster heals 2[HP].",
+      "critFlg": false,
+      "flipEventFlg": true
     },
     {
       "buffName": "Sear",
       "timing": "With Attack",
       "buffText": "This attack gains <div>+3[ATK]</div> if the enemy monster has a [STATUS].~STATUS~",
-      "critFlg": false
+      "flipEventText": "This attack gains +1[ATK].",
+      "critFlg": false,
+      "flipEventFlg": true
     }
   ],
   "monsterId": 2,

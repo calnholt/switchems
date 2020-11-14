@@ -8,34 +8,18 @@
       "abilityName": "Fatigue",
       "abilityText": "<b>Fatigue [STATUS]</b> ~FATIGUE~",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": true,
       "reactionFlg": false,
-      "speed": 6,
+      "speed": 3,
       "draw": 0,
       "discard": 2,
       "buff": 0
     },
     {
       "abilityName": "Foul Play",
-      "abilityText": "[2]: The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
+      "abilityText": "[2]",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        2,
-        2,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
@@ -43,20 +27,13 @@
       "speed": 3,
       "draw": 0,
       "discard": 1,
-      "buff": 1
+      "buff": 1,
+      "modifier": 2
     },
     {
       "abilityName": "Surge",
       "abilityText": "",
       "element": "Water",
-      "modifiers": [
-        1,
-        0,
-        0,
-        0,
-        0,
-        2
-      ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
@@ -64,20 +41,13 @@
       "speed": 7,
       "draw": 0,
       "discard": 0,
-      "buff": 3
+      "buff": 3,
+      "modifier": 1
     },
     {
       "abilityName": "Expunge",
-      "abilityText": "<b>Single use</b>. If the enemy monster has a [STATUS], this attack gains:<br>[1]: <div>+2[ATK]</div>~SINGLE~~STATUS~",
+      "abilityText": "If the enemy monster has a [STATUS], this attack gains [2].<br><br><b>Single use</b>.~STATUS~~SINGLE~",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        3,
-        2,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
       "reactionFlg": false,
@@ -85,7 +55,8 @@
       "speed": 8,
       "draw": 0,
       "discard": 1,
-      "buff": 1
+      "buff": 1,
+      "modifier": 3
     }
   ],
   "buffs": [
@@ -93,13 +64,15 @@
       "buffName": "Disarm",
       "timing": "Pre-Actions",
       "buffText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "critFlg": true
+      "flipEventText": "Look at your opponent's hand.",
+      "critFlg": true,
+      "flipEventFlg": true
     },
     {
       "buffName": "Cripple",
       "timing": "Pre-Actions",
       "buffText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "flipEventText": "If your opponent has more cards in their hand than you, that player discards one card at random.",
+      "flipEventText": "If your opponent has more cards in their hand than you, your opponent [-].",
       "critFlg": false,
       "flipEventFlg": true
     },
@@ -107,19 +80,23 @@
       "buffName": "Tremble",
       "timing": "Post Actions",
       "buffText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.",
-      "critFlg": true
+      "flipEventText": "This attack gains +1[ATK].",
+      "critFlg": true,
+      "flipEventFlg": true
     },
     {
       "buffName": "Abrupt Weakness",
       "timing": "Pre-Actions",
-      "buffText": "[1]: <b>Fatigue [STATUS]</b> ~FATIGUE~",
-      "critFlg": false
+      "buffText": "<b>Super, Ethereal, Fatigue [STATUS]</b> ~SUPER~~ETHEREAL~~FATIGUE~",
+      "flipEventText": "The enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
+      "critFlg": false,
+      "flipEventFlg": true
     }
   ],
   "monsterId": 5,
   "abilityName": "Panic Attack",
   "monsterName": "Drownigator",
-  "abilityText": "When this monster <b>switches in</b>, the opponent discards a card at random.~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, the opponent [-].~SWITCH~",
   "hp": 9,
   "complexity": 1,
   "promiseDescription": "Drownigator is an immediate threat. Panic Attack puts your opponent on the defensive and a properly buffed Expunge can devastate leaf and rock types.",
