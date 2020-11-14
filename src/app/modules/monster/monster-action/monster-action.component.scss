@@ -28,53 +28,8 @@
         &.death{
             border-color: $purple;
         }
-        .elements-container{
-            display: grid;
-            grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
-            justify-items: center;
-            padding-top: 3px;
-            min-height: 27px;
-            .modifier{
-                font-family: $beastformer;
-                font-size: 27px;
-                &.blank{
-                    color: white;
-                }
-                &.fire-color{
-                    color: $red;
-                }
-                &.water-color{
-                    color: $blue;
-                }
-                &.leaf-color{
-                    color: $green;
-                }
-                &.rock-color{
-                    color: $brown;
-                }
-                &.death-color{
-                    color: $purple;
-                }
-                &.electric-color{
-                    color: $yellow;
-                }
-            }
-            .disadvantage{
-                font-family: $beastformer;
-                font-size: 30px;
-                line-height: 0px;
-                padding-top: 9px;
-            }
-            .elements{
-                display: grid;
-                grid-template-rows: auto;
-                justify-items: center;
-                .element{
-                    max-height: 20px;
-                }
-            }
-        }
         .ability-container{
+            padding-top: 7px;
             .ability-name-container{
                 display: flex;
                 justify-content: center;
@@ -157,6 +112,51 @@
                 }
                 .stat-icon{
                     max-height: 32px;
+                }
+            }
+        }
+        .modifier-container {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ebebeb;
+            padding: 2px;
+            border-radius: 6px;
+            border: 2px solid black;
+            font-family: $beastformer;
+            font-size: 25px;
+            width: 145px;
+            margin: auto;
+            left: 43px;
+            bottom: 61px;
+            img {
+                max-height: 20px;
+            }
+            .modifier-value {
+                margin-left: 2px;
+                color: black;
+            }
+            .vs-container {
+                color: white;
+                background: black;
+                padding: 2px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                div {
+                    color: white;
+                    padding: 0px 2px;
+                }
+            }
+            .modifier-elements {
+                position: relative;
+                display: flex;
+                img:first-child {
+                    padding-right: 2px;
+                }
+                img {
+                    padding: 0px 2px;
                 }
             }
         }

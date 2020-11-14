@@ -82,17 +82,14 @@
         [(ngModel)]="action.draw">
     </mat-form-field>
   </div>
-  <div *ngFor="let elemType of MODIFIER_ELEMENTS; index as i">
-    <div *ngIf="isStrongAgainst(elemType) && action.attack" class="col-12 form-element">
-      <dropdown
-        style="width:inherit;"
-        [label]="getModifierLabelElement(i)"
-        [model]="action"
-        [property]="'modifiers'"
-        [index]="i"
-        [options]="getModifierOptions(elemType)">
-      </dropdown>
-    </div>
+  <div class="col-12 form-element">
+    <dropdown
+      style="width:inherit;"
+      [label]="'Modifier'"
+      [model]="action"
+      [property]="'modifier'"
+      [options]="positiveModifierOptions">
+    </dropdown>
   </div>
   <div class="col-12 form-element">
     <mat-checkbox [(ngModel)]="action.statusFlg">Status?</mat-checkbox>

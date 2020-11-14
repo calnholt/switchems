@@ -36,7 +36,7 @@
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <div *ngFor="let item of termCodes">
-                <strong>{{item.key}}</strong> - {{item.value}}
+                <strong>{{item.key}}</strong> - <span [innerHTML]="getTermText(item.value)"></span>
                 <br><br>
               </div>
             </mat-expansion-panel>

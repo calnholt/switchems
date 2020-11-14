@@ -21,9 +21,6 @@
       <div [innerHTML]="getAbilityText(buff.flipEventText, true)" class="flip-text"></div>
     </div>
     <div class="bottom-container">
-      <img *ngIf="buff.critFlg" class="crit-icon" src="{{getSuccessImagePath()}}">
-      <img *ngIf="!buff.critFlg" class="crit-icon" src="{{getFailImagePath()}}">
-      <span *ngIf="buff.flipEventFlg" class="flip-icon">!</span>
       <span class="monster-name">{{buff.monsterName}}</span>
     </div>
   </div>

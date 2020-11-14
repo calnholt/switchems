@@ -27,7 +27,6 @@ export class MonsterBuffComponent implements OnInit {
     if (this.buff.timing === 'Pre-Actions') {return 'I'; }
     if (this.buff.timing === 'With Attack') {return 'II'; }
     if (this.buff.timing === 'Post Actions') {return 'III'; }
-    if (this.buff.timing === 'None') {return 'X'; }
   }
 
   getBuffImagePath(): Path {

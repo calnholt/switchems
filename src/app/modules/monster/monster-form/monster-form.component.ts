@@ -98,4 +98,8 @@ export class MonsterFormComponent implements OnInit {
   getPromiseText() {
     return getAbilityText(this.monster.promiseDescription, this.TERM_CSS, this.ABILITY_IMG_CSS);
   }
+
+  getTermText(term: string): string {
+    return getAbilityText(term, this.TERM_CSS, this.ABILITY_IMG_CSS);
+  }
 }

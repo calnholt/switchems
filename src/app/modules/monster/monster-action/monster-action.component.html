@@ -1,19 +1,5 @@
 <div id="action-card">
   <div class="card-container {{action.element.toLowerCase()}}">
-    <div *ngIf="action.modifiers">
-      <div class="elements-container">
-        <span *ngFor="let modifier of action.modifiers; index as i">
-          <span *ngIf="modifier && modifier > 0" class="modifier {{ELEMENTS_LIST[i].toLowerCase()}}-color">{{getModifier(modifier)}}</span>
-          <div *ngIf="action.attack && isDisadvantage(i)" class="disadvantage">-</div>
-        </span>
-      </div>
-    </div>
-    <div class="elements-container">
-      <div *ngFor="let element of ELEMENTS_LIST; index as i" class="elements">
-        <img *ngIf="isAdvantage(i)" class="element" src="{{getElementImageColorPath(element)}}">
-        <img *ngIf="!isAdvantage(i)" class="element" src="{{getElementImageGrayPath(element)}}">
-      </div>
-    </div>
     <div class="ability-container">
       <div class="ability-name-container">
         <span class="ability-name" [ngClass]="{'name-offset':!action.abilityText}">{{action.abilityName}}</span>
@@ -44,6 +30,19 @@
             <img class="stat-icon" src="{{getImagePath('reaction')}}">
           </span>
         </span>
+      </div>
+      <div *ngIf="action.modifier" class="modifier-container">
+        <div class="modifier-value">
+          +{{action.modifier}}<img src="{{getImagePath('attack')}}">
+        </div>
+        <div class="vs-container">
+          <div>VS</div>
+        </div>
+        <div class="modifier-elements">
+          <ng-container *ngFor="let element of ELEMENTS_LIST; index as i">
+            <img *ngIf="isAdvantage(i)" src="{{getElementImageColorPath(element)}}">
+          </ng-container>
+        </div>
       </div>
       <div *ngIf="action.abilityText" class="ability-text-container">
         <div [innerHTML]="getAbilityText()" class="ability-text"></div>

@@ -54,22 +54,22 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
         ALL = [selectedMonster];
     } else {
         ALL = [
-            Boltblebee,
+            //Boltblebee,
             Chargroar,
-            Cleansitoad,
-            Cragadilo,
+            //Cleansitoad,
+            //Cragadilo,
             Drownigator,
             Flexferno,
-            Galvanite,
+            //Galvanite,
             Galeaffy,
-            Oozygoopz,
-            Smolderskulk,
+            //Oozygoopz,
+            //Smolderskulk,
             Stallagrowth,
-            Steamie,
-            Squirrberus,
-            Phantomaton,
+            //Steamie,
+            //Squirrberus,
+            //Phantomaton,
             Vulturock,
-            Zappguin,
+            //Zappguin,
         ];
     }
     ALL.forEach(json => {
@@ -106,13 +106,13 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             'auraDuration',
             'statusFlg',
             'reactionFlg',
+            'modifier',
         ];
         for (let i = 0; i < ACTIONS; i++) {
             const action = new Action();
             ACTION_PROPERTIES.forEach(p => action[p] = json.actions[i][p]);
             action.monsterName = monster.monsterName;
             action.element = getElemType(json.actions[i].element);
-            action.modifiers = json.actions[i].modifiers ? json.actions[i].modifiers : action.modifiers;
             action.number = (i + 1);
             monster.actions.push(action);
         }

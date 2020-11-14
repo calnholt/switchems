@@ -55,7 +55,7 @@ export class Action extends Card {
     discard?: number;
     draw?: number;
     number: number;
-    modifiers?: (number)[] = [0, 0, 0, 0, 0, 0];
+    modifier?: number;
     auraDuration?: number = 0;
     statusFlg?: boolean = false;
     reactionFlg?: boolean = false;
