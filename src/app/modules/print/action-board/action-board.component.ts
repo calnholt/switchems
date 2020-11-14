@@ -13,8 +13,8 @@ export class ActionBoardComponent implements OnInit {
   draw: Path = SYMBOLS_PATH + 'draw.png';
   discard: Path = SYMBOLS_PATH + 'discard.png';
   counter: Path = SYMBOLS_PATH + 'counter.png';
-  switchHeal: Path = SYMBOLS_PATH + 'switch-heal.png';
-  noDraw: Path = SYMBOLS_PATH + 'no-draw.png';
+  heal: Path = SYMBOLS_PATH + 'heart.png';
+  status: Path = SYMBOLS_PATH + 'wound.png';
   constructor() { }
 
   ngOnInit() {

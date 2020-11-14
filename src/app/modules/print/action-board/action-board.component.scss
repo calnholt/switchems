@@ -16,9 +16,12 @@
         }
         .switch-heal{
             position: absolute;
-            max-height: 15px;
             left: 6px;
-            top: 112px;
+            top: 109px;
+            font-size: 15px;
+            img {
+                max-height: 15px;
+            }
         }
         .actions-container{
             padding: 0px 10px 0px 10px;
