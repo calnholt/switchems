@@ -9,7 +9,6 @@
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 9,
       "speed": 5,
       "draw": 0,
@@ -23,7 +22,6 @@
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": true,
-      "reactionFlg": false,
       "speed": 5,
       "draw": 0,
       "discard": 0,
@@ -35,7 +33,6 @@
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 1,
       "speed": 3,
       "draw": 0,
@@ -49,7 +46,6 @@
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 1,
       "speed": 7,
       "draw": 0,
@@ -64,7 +60,6 @@
       "timing": "With Attack",
       "buffText": "<b>Super, Ethereal, Burn [STATUS]</b>~SUPER~~ETHEREAL~~BURN~",
       "flipEventText": "[+]",
-      "critFlg": true,
       "flipEventFlg": true
     },
     {
@@ -72,7 +67,6 @@
       "timing": "Post Actions",
       "buffText": "<b>Super, Ethereal</b><br>Remove all [NQ] from this monster and all [STATUS] from all of your monsters.~SUPER~~ETHEREAL~~STATUS~",
       "flipEventText": "You may remove a [NQ] from your active monster.",
-      "critFlg": true,
       "flipEventFlg": true
     },
     {
@@ -80,7 +74,6 @@
       "timing": "Pre-Actions",
       "buffText": "This monster heals <div>3[HP]</div> if the enemy monster has a [STATUS]. ~STATUS~",
       "flipEventText": "This monster heals 2[HP].",
-      "critFlg": false,
       "flipEventFlg": true
     },
     {
@@ -88,14 +81,13 @@
       "timing": "With Attack",
       "buffText": "This attack gains <div>+3[ATK]</div> if the enemy monster has a [STATUS].~STATUS~",
       "flipEventText": "This attack gains +1[ATK].",
-      "critFlg": false,
       "flipEventFlg": true
     }
   ],
   "monsterId": 2,
   "abilityName": "Heatwave",
   "monsterName": "Flexferno",
-  "abilityText": "At the end of the turn, the enemy monster suffers 1[ATK].",
+  "abilityText": "At the end of the turn, the enemy monster suffers <div>1[ATK].</div>",
   "hp": 9,
   "complexity": 1,
   "initiative": 20,

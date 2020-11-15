@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Oozy Liberation",
-      "abilityText": "If your opponent has a <b>goop</b> buff card in their discard pile, this attack gains <div>+5[ATK].</div><br><br><b>Single use</b>.~SINGLE~",
+      "abilityText": "If your opponent has a <b>goop</b> buff card in their discard pile, this attack gains <div>+5[ATK]. </div><br><br><b>Single use</b>.~SINGLE~",
       "element": "Water",
       "auraDuration": 0,
       "statusFlg": false,
@@ -18,7 +18,7 @@
     },
     {
       "abilityName": "Viscous Split",
-      "abilityText": "<b>Recoil X</b>[ATK], where X is the number of buff slots used with this attack.<br><br>For each used buff slot, the enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div> If the enemy monster's [SPD][NQ] is at max, then enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}</div> instead.",
+      "abilityText": "<b>Recoil X</b>[ATK], where X is the number of buff slots used with this attack.<br><br>For each used buff slot, the enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div> If the enemy monster's <div>[SPD][NQ]</div> is at max, then enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}</div> instead.",
       "element": "Leaf",
       "auraDuration": 0,
       "statusFlg": false,
@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Reclaim",
-      "abilityText": "[1]<br><br>You may exchange a card from your discard pile with a card from your hand, excluding any cards played with this attack.",
+      "abilityText": "[1]. <br><br>You may exchange a card from your discard pile with a card from your hand, excluding any cards played with this attack.",
       "element": "Leaf",
       "auraDuration": 0,
       "statusFlg": false,
@@ -85,7 +85,7 @@
   ],
   "abilityName": "Gobble Up",
   "monsterName": "Oozygoopz",
-  "abilityText": "When this monsters <b>switches in</b>, <b>crush 1[PQ]</b>.~SWITCH~~CRUSH~",
+  "abilityText": "When this monsters <b>switches in</b>, <b>crush <div>1[PQ]</div></b>.~SWITCH~~CRUSH~",
   "hp": 12,
   "complexity": 3,
   "promiseDescription": "Drive your opponent crazy by loading their deck up with a bunch of painfully useless goop!",

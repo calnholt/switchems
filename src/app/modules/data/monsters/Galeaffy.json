@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Switcheroo",
-      "abilityText": "[1]<br><br>Perform a switch action and you may keep up to four [PQ] instead of one.<em>(You do not heal or remove a [STATUS] with this switch action.)</em>",
+      "abilityText": "[1]. <br><br>Perform a switch action and you may keep up to four [PQ] instead of one.<em>(You do not heal or remove a [STATUS] with this switch action.)</em>",
       "element": "Leaf",
       "auraDuration": 0,
       "statusFlg": false,
@@ -89,7 +89,7 @@
   "monsterId": 8,
   "abilityName": "Gusting Winds",
   "monsterName": "Galeaffy",
-  "abilityText": "When this monster <b>switches in</b>, this monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.<br><br>Whenever any monster on your team performs a switch action, you may keep two [PQ] instead of one. ~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div><br><br>Whenever any monster on your team performs a switch action, you may keep two [PQ] instead of one. ~SWITCH~",
   "hp": 9,
   "complexity": 2,
   "initiative": 80,

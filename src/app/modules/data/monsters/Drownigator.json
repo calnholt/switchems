@@ -17,7 +17,7 @@
     },
     {
       "abilityName": "Expunge",
-      "abilityText": "If the enemy monster has a [STATUS], this attack gains [2].<br><br><b>Single use</b>.~STATUS~~SINGLE~",
+      "abilityText": "If the enemy monster has a [STATUS], this attack gains <div>[2].</div><br><br><b>Single use</b>.~STATUS~~SINGLE~",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
@@ -88,7 +88,7 @@
   "monsterId": 5,
   "abilityName": "Panic Attack",
   "monsterName": "Drownigator",
-  "abilityText": "When this monster <b>switches in</b>, the opponent [-].~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, the opponent <div>[-].</div>~SWITCH~",
   "hp": 9,
   "complexity": 1,
   "promiseDescription": "Drownigator is an immediate threat. Panic Attack puts your opponent on the defensive and a properly buffed Expunge can devastate leaf and rock types.",

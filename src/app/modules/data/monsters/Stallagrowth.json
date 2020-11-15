@@ -10,7 +10,6 @@
       "element": "Leaf",
       "auraDuration": null,
       "statusFlg": true,
-      "reactionFlg": false,
       "speed": 2,
       "draw": 0,
       "discard": 2,
@@ -22,7 +21,6 @@
       "element": "Leaf",
       "auraDuration": null,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 1,
       "speed": 3,
       "draw": 0,
@@ -36,7 +34,6 @@
       "element": "Rock",
       "auraDuration": null,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 4,
       "speed": 7,
       "draw": 0,
@@ -50,7 +47,6 @@
       "element": "Rock",
       "auraDuration": null,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 1,
       "speed": 5,
       "draw": 0,
@@ -65,7 +61,6 @@
       "timing": "Pre-Actions",
       "buffText": "This monster gains +2[DEF] this turn.",
       "flipEventText": "This monster gains +2[DEF] this turn.",
-      "critFlg": false,
       "flipEventFlg": true
     },
     {
@@ -73,7 +68,6 @@
       "timing": "Pre-Actions",
       "buffText": "<b>Super</b><br>This monster gains <div>+4[DEF]</div> this turn. ~SUPER~",
       "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "critFlg": false,
       "flipEventFlg": true
     },
     {
@@ -81,7 +75,6 @@
       "timing": "With Attack",
       "buffText": "If this action is <b>faster</b>, this attack gains <b>flinch</b>.~FASTER~~FLINCH~",
       "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "critFlg": true,
       "flipEventFlg": true
     },
     {
@@ -89,14 +82,13 @@
       "timing": "With Attack",
       "buffText": "<b>Super, Ethereal, Leech [STATUS]</b> ~SUPER~~ETHEREAL~~LEECH~",
       "flipEventText": "This attack gains <b>flinch</b>.~FLINCH~",
-      "critFlg": true,
       "flipEventFlg": true
     }
   ],
   "monsterId": 1,
   "abilityName": "Vineshield",
   "monsterName": "Stallagrowth",
-  "abilityText": "When this monster <b>switches in</b>, this monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}. ~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.</div> ~SWITCH~",
   "hp": 11,
   "complexity": 1,
   "promiseDescription": "Slowly drain the enemy's health and stand your ground with Vineshield's defensive boon. Stallagrowth plays for the long game, but struggles to accumulate cards. Knowing when to draw three is essential to sustaining pressure.",
