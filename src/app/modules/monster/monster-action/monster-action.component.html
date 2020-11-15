@@ -22,7 +22,7 @@
           <img *ngIf="action.element" class="stat-icon" src="{{getElementImageColorPath()}}">
         </span>
         <span class="stat-container">
-          <span *ngIf="action.speed && !action.reactionFlg" class="stat-container">
+          <span *ngIf="action.speed" class="stat-container">
             <span class="stat-value" [ngClass]="{'unity':action.unityFlg}">{{action.speed}}</span>
             <img class="stat-icon" src="{{getImagePath('speed')}}">
           </span>
