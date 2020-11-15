@@ -5,121 +5,87 @@
   ],
   "actions": [
     {
-      "abilityName": "Charming Toxins",
-      "abilityText": "At the start of the turn, your opponent performs:<br><br>[2]: The enemy monster heals 1[HP]",
-      "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "auraDuration": 5,
-      "statusFlg": false,
-      "reactionFlg": false,
-      "attack": null,
-      "speed": 1,
-      "draw": 1
-    },
-    {
-      "abilityName": "Reclaim",
-      "abilityText": "Choose one:<br><br>• Return a card from your discard to your hand, excluding any cards played with this attack.<br><br>• Look at the top 2 cards of your deck. You may change their order or put either/both in your discard.",
-      "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        2,
-        1,
-        0
-      ],
+      "abilityName": "Oozy Liberation",
+      "abilityText": "If your opponent has a <b>goop</b> buff card in their discard pile, this attack gains <div>+5[ATK].</div><br><br><b>Single use</b>.~SINGLE~",
+      "element": "Water",
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 2,
+      "attack": 1,
       "speed": 4,
-      "discard": 1,
-      "buff": 2
+      "discard": 2,
+      "buff": 0,
+      "modifier": 3
     },
     {
       "abilityName": "Viscous Split",
-      "abilityText": "<b>Recoil X</b>[ATK], where X is the number of buff slots used with this attack.<br><br>For each used buff slot, the enemy monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": false}.~RECOIL~",
-      "element": "Water",
-      "modifiers": [
-        2,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
+      "abilityText": "<b>Recoil X</b>[ATK], where X is the number of buff slots used with this attack.<br><br>For each used buff slot, the enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div> If the enemy monster's [SPD][NQ] is at max, then enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}</div> instead.",
+      "element": "Leaf",
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 1,
       "speed": 1,
-      "buff": 3
+      "buff": 3,
+      "modifier": 1
     },
     {
-      "abilityName": "Oozy Liberation",
-      "abilityText": "Your opponent reveals their hand. This attack gains +X[ATK], where X is the number of <b>Goop</b> cards in their hand. Then your opponent discards all <b>Goop</b> cards. <b>Single use.</b>~SINGLE~",
-      "element": "Water",
-      "modifiers": [
-        2,
-        0,
-        0,
-        0,
-        0,
-        4
-      ],
+      "abilityName": "Reclaim",
+      "abilityText": "[1]<br><br>You may exchange a card from your discard pile with a card from your hand, excluding any cards played with this attack.",
+      "element": "Leaf",
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 3,
-      "speed": 4,
+      "attack": 1,
+      "speed": 3,
+      "discard": 1,
+      "buff": 2,
+      "modifier": 1
+    },
+    {
+      "abilityName": "Lickety Split",
+      "abilityText": "[2]",
+      "element": "Water",
+      "auraDuration": null,
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 8,
+      "draw": 0,
       "discard": 2,
-      "buff": 0
+      "buff": 1,
+      "modifier": 3
     }
   ],
   "buffs": [
     {
       "buffName": "Thick Goop",
       "timing": "Post Actions",
-      "buffText": "<b>Goop</b><br>This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}. Shuffle this card into your opponent's deck.~GOOP~",
-      "flipEventText": "Your active monster suffers <div>X[ATK],</div> where X is the number of <b>Goop</b> cards in your discard.",
-      "critFlg": false,
-      "flipEventFlg": true
-    },
-    {
-      "buffName": "Wispy Goop",
-      "timing": "Post Actions",
-      "buffText": "<b>Goop</b><br>This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}. Shuffle this card into your opponent's deck.~GOOP~",
-      "flipEventText": "Your active monster suffers <div>X[ATK],</div> where X is the number of <b>Goop</b> cards in your discard.",
-      "critFlg": false,
+      "buffText": "<b>Goop</b>. This attack gains <div>+X+1[ATK],</div> where X is the number of <b>goop</b> cards in your opponent's discard pile. Shuffle this card into your opponent's deck.~GOOP~",
+      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div>{\"stat\": \"SPD\", \"num\": 3, \"isPositive\": false}.</div> If you do, this monster heals <div>1[HP].</div>",
       "flipEventFlg": true
     },
     {
       "buffName": "Prickly Goop",
       "timing": "Post Actions",
-      "buffText": "<b>Goop</b><br>This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}. Shuffle this card into your opponent's deck.~GOOP~",
-      "flipEventText": "Your active monster suffers <div>X[ATK],</div> where X is the number of <b>Goop</b> cards in your discard.",
-      "critFlg": false,
+      "buffText": "<b>Goop</b>. This attack gains <div>+X+1[ATK],</div> where X is the number of <b>goop</b> cards in your opponent's discard pile. Shuffle this card into your opponent's deck.~GOOP~",
+      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div> If you do, this monster heals <div>1[HP].</div>",
       "flipEventFlg": true
     },
     {
-      "buffName": "Super Goop",
+      "buffName": "Prickly Goop",
       "timing": "Post Actions",
-      "buffText": "<b>Super, Goop</b>~SUPER~~GOOP~",
-      "flipEventText": "If you do not have <b>Oozygoopz</b> on your team, your active monster suffers <div>X+3[ATK],</div> where X is the number of <b>Goop</b> cards in your discard.",
-      "critFlg": false,
+      "buffText": "<b>Goop</b>. This attack gains <div>+X+1[ATK],</div> where X is the number of <b>goop</b> cards in your opponent's discard pile. Shuffle this card into your opponent's deck.~GOOP~",
+      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div> If you do, this monster heals <div>1[HP].</div>",
+      "flipEventFlg": true
+    },
+    {
+      "buffName": "Hungry Goop",
+      "timing": "Post Actions",
+      "buffText": "<b>Super, Goop</b>. This attack gains <div>+X+2[ATK],</div> where X is the number of <b>goop</b> cards in the opponent's discard pile. Shuffle this card into your opponent's deck.~GOOP~",
+      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div><b>leech</b> [STATUS].</div> If you do, this monster heals <div>1[HP].</div>",
       "flipEventFlg": true
     }
   ],
-  "abilityName": "Goopophyll",
+  "abilityName": "Gobble Up",
   "monsterName": "Oozygoopz",
-  "abilityText": "At the start of the turn, if this monster is not at full HP, perform:<br><br>[1]: Heal <div>1[HP]</div>",
+  "abilityText": "When this monsters <b>switches in</b>, <b>crush 1[PQ]</b>.~SWITCH~~CRUSH~",
   "hp": 12,
   "complexity": 3,
   "promiseDescription": "Drive your opponent crazy by loading their deck up with a bunch of painfully useless goop!",
