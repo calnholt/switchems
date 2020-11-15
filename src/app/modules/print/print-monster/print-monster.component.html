@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <!-- <div class="overlay">
+      <div class="overlay">
         <div class="card" (click)="monster.referenceFlg = !monster.referenceFlg">
           <div class="wrapper" [ngClass]="{unselected: !monster.referenceFlg}">
             <monster-reference
@@ -27,7 +27,7 @@
             </monster-reference>
           </div>
         </div>
-      </div> -->
+      </div>
       <div class="overlay" *ngFor="let action of monster.actions">
         <div class="card" (click)="action.isSelected = !action.isSelected">
           <div class="wrapper" [ngClass]="{unselected: !action.isSelected}">

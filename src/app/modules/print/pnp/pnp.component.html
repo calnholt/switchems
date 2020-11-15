@@ -6,11 +6,11 @@
           [monster]="card">
         </monster-card>
       </span>
-      <!-- <span *ngIf="card.isMonster && card.referenceFlg">
+      <span *ngIf="card.referenceFlg">
         <monster-reference
           [monster]="card">
         </monster-reference>
-      </span> -->
+      </span>
       <span *ngIf="card.isAction">
         <monster-action
           [action]="card">
@@ -44,7 +44,7 @@
       <stat-cube-board></stat-cube-board>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
     </span>
-    <span *ngIf="allCards.length && extraFlg">
+    <!-- <span *ngIf="allCards.length && extraFlg">
       <reference-card></reference-card>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
     </span>
@@ -59,7 +59,7 @@
     <span *ngIf="allCards.length && extraFlg">
       <reference-card></reference-card>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
-    </span>
+    </span> -->
     <!-- <span *ngIf="allCards.length && extraFlg">
       <acorn-board></acorn-board>
       <div [ngClass]="{'break' : isPageBreak()}"></div>

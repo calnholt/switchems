@@ -18,7 +18,7 @@
             justify-content: flex-start;
             align-items: center;
             align-content: flex-start;
-            transform: scale(0.50);
+            transform: scale(0.45);
             transform-origin: top left;
             .overlay{
                 cursor: pointer;
@@ -32,7 +32,7 @@
                     }
                 }
                 .card:hover{
-                    transform: scale(2.0);
+                    transform: scale(2.5);
                     z-index: 100;
                 }
             }
