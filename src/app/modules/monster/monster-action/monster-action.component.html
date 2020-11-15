@@ -26,9 +26,6 @@
             <span class="stat-value" [ngClass]="{'unity':action.unityFlg}">{{action.speed}}</span>
             <img class="stat-icon" src="{{getImagePath('speed')}}">
           </span>
-          <span *ngIf="action.reactionFlg" class="stat-container">
-            <img class="stat-icon" src="{{getImagePath('reaction')}}">
-          </span>
         </span>
       </div>
       <div *ngIf="action.modifier" class="modifier-container">
