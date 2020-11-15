@@ -2,12 +2,13 @@
 @import 'src/styles.scss';
 
 #monster-reference{
-    --container-padding: 4px 5px 0px 5px;
+    --container-padding: 2px 5px 0px 5px;
     --font-size: 9px;
     --icon-max-height: 10px;
     .card-container{
         position: relative;
-        border: black 2px solid;
+        border: rgb(216, 216, 216) 2px solid;
+        border-radius: 11px;
         height: $card-height;
         width: $card-width;
         background-color: white;
@@ -39,18 +40,46 @@
             .ability-text{
                 font-size: var(--font-size);
                 line-height: 1;
+                div {
+                    display: inline-block;
+                }
             }
         }
         .action-container{
             padding: var(--container-padding);
+            .action-name {
+                border-radius: 6px 6px 0px 0px;
+                font-family: 'Beastformer';
+                font-size: 12px;
+                letter-spacing: 0.02em;
+                background: black;
+                color: white;
+                max-height: 13px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
             .action{
-                border: 1px black solid;
-                border-radius: 6px;
-                padding: 2px;
+                padding: 4px;
+                background: #f2f2f2;
+                border: solid black 2px;
+                border-top: 0px;
                 .action-text{
                     font-size: var(--font-size);
                     line-height: 1;
+                    div {
+                        display: inline-block;
+                    }
                 }
+            }
+            .info-container {
+                display: inline-grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                width: 100%;
+                text-align: center;
+                border: 2px solid black;
+                border-top: none;
+                border-radius: 0px 0px 6px 6px;
                 .ref-icon{
                     max-height: var(--icon-max-height);
                 }
@@ -65,7 +94,6 @@
                         max-height: var(--icon-max-height);
                     }
                 }
-
             }
         }
         .buff-container{

@@ -44,6 +44,12 @@ export class MonsterReferenceComponent implements OnInit {
         strCopy = strCopy.replace(html, '');
       }
     });
+    while (strCopy.includes('<em>')) {
+      const start = strCopy.indexOf('<em>');
+      const end = strCopy.indexOf('</em>');
+      const strToRemove = strCopy.substr(start, end - start);
+      strCopy = strCopy.replace(strToRemove, '');
+    }
     return strCopy;
   }
 
