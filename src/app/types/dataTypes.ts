@@ -67,7 +67,8 @@ export const TERM_CODES = [
      new Term(`~FASTER~`, `This action is faster if both players select a monster action and yours has a higher speed.`),
      new Term(`~FATIGUE~`, `Fatigued monsters cannot buff their attacks.`),
      new Term(`~FLINCH~`, `Actions with flinch prevent the enemy monster's monster action if this action is faster.`),
-     new Term(`~GOOP~`, `Goop buffs have no buff effect if you do not have <b>Oozygoopz</b> on your team.`),
+     new Term(`~GOOP~`, `If you do not have <b>Oozygoopz</b> on your team, goop buffs have no buff effect and are returned `
+     + `to its owner's discard pile when played as a buff.`),
      new Term(`~LEECH~`, `At the end of the turn, leeched monsters suffer <div>1[ATK]</div> and your active monster heals `
      + `<div>1[HP].`),
      new Term(`~PARALYZE~`, `If a monster is paralyzed, all of that monster's actions have:<br>`
