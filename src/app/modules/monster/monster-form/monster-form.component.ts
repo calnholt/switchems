@@ -40,6 +40,7 @@ export class MonsterFormComponent implements OnInit {
         this.monster.hp = this.getRandomNumber(20) + 1;
         this.monster.complexity = this.getRandomNumber(3) + 1;
         this.monster.role = ROLES[this.getRandomNumber(ROLES.length)];
+        this.monster.savedFlg = true;
         this.monster.elements = [ELEMENTS[this.getRandomNumber(ELEMENTS.length)]];
         this.monster.actions.push(new Action(), new Action(), new Action(), new Action());
         this.monster.actions.forEach(a => a.element = ELEMENTS[this.getRandomNumber(ELEMENTS.length)]);
@@ -74,6 +75,10 @@ export class MonsterFormComponent implements OnInit {
     this.monsterServce.saveMonster(this.monster);
   }
 
+  delete() {
+    this.monsterServce.deleteMonsterLocalStorage(this.monster);
+  }
+
   // a little janky but for now it's fine
   getCleanMonster(): MonsterComplete {
     const copy = JSON.parse(JSON.stringify(this.monster));
@@ -83,6 +88,7 @@ export class MonsterFormComponent implements OnInit {
         'isHovered',
         'isExtraBoardHovered',
         'referenceFlg',
+        'savedFlg',
       ];
     const actionProps = ['monsterName', 'number'];
     const buffProps = ['monsterName'];

@@ -27,6 +27,7 @@ export class Monster extends Card {
     promiseDescription?: string;
     extraBoard?: string;
     initiative: number;
+    savedFlg?: boolean;
 }
 
 export class MonsterComplete extends Monster {

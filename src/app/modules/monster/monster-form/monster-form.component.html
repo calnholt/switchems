@@ -50,6 +50,7 @@
         </div>
         <button class="save-button" mat-stroked-button (click)="copy()">Copy Monster to Clipboard</button>
         <button class="save-button" mat-stroked-button (click)="save()">Save</button>
+        <button *ngIf="monster.savedFlg" class="save-button" mat-stroked-button (click)="delete()" [routerLink]="['']">Delete</button>
         <div class="tts">
           <img 
             [routerLink]="['/tts', monster.monsterName]" 
