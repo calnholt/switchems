@@ -17,7 +17,7 @@
     },
     {
       "abilityName": "Expunge",
-      "abilityText": "If the enemy monster has a [STATUS], this attack gains <div>[2].</div><br><br><b>Single use</b>.~STATUS~~SINGLE~",
+      "abilityText": "If the enemy monster has a [STATUS], this attack gains <div>[FLIP] [FLIP].</div><br><br><b>Single use</b>.~STATUS~~SINGLE~",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
@@ -30,7 +30,7 @@
     },
     {
       "abilityName": "Foul Play",
-      "abilityText": "[1]",
+      "abilityText": "[FLIP]",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,

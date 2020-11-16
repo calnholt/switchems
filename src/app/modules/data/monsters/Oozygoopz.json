@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Reclaim",
-      "abilityText": "[1]. <br><br>You may exchange a card from your discard pile with a card from your hand, excluding any cards played with this attack.",
+      "abilityText": "[FLIP]. <br><br>You may exchange a card from your discard pile with a card from your hand, excluding any cards played with this attack.",
       "element": "Leaf",
       "auraDuration": 0,
       "statusFlg": false,
@@ -41,7 +41,7 @@
     },
     {
       "abilityName": "Lickety Split",
-      "abilityText": "[2]",
+      "abilityText": "[FLIP] [FLIP]",
       "element": "Water",
       "auraDuration": null,
       "statusFlg": false,

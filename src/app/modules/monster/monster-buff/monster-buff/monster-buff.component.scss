@@ -51,7 +51,6 @@
                 position: absolute;
                 bottom: 25px;
                 width: 100%;
-                min-height: 55px;
             }
             .exclamation-mark{
                 border: 2px black solid;
@@ -66,6 +65,9 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                img {
+                    max-height: 23px;
+                }
             }
             .flip-text{
                 border-style: solid;

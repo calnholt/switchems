@@ -1,3 +1,4 @@
+import { ImageService } from './../../../data/image.service';
 import { getAbilityText } from './../../../common/cards';
 import { SYMBOLS } from './../../../../constants';
 import { Css, Path } from './../../../../types/dataTypes';
@@ -17,7 +18,7 @@ export class MonsterBuffComponent implements OnInit {
   TERM_CSS: Css = 'term';
   ABILITY_IMG_CSS: Css = 'term-img';
 
-  constructor() { }
+  constructor(public imageService: ImageService) { }
 
   ngOnInit() {
     this.buffTextHtml = this.buff.buffText;

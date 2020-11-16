@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Switcheroo",
-      "abilityText": "[1]. <br><br>Perform a switch action and you may keep up to four [PQ] instead of one.<em>(You do not heal or remove a [STATUS] with this switch action.)</em>",
+      "abilityText": "[FLIP]. <br><br>Perform a switch action and you may keep up to four [PQ] instead of one.<em>(You do not heal or remove a [STATUS] with this switch action.)</em>",
       "element": "Leaf",
       "auraDuration": 0,
       "statusFlg": false,
@@ -31,7 +31,7 @@
     },
     {
       "abilityName": "Cyclone",
-      "abilityText": "[2]",
+      "abilityText": "[FLIP] [FLIP]",
       "element": "Leaf",
       "auraDuration": 0,
       "statusFlg": false,

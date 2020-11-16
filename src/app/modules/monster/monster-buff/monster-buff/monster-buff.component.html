@@ -16,7 +16,7 @@
     </div>
     <div *ngIf="buff.flipEventFlg" class="text-container flip">
       <div class="exclamation-mark">
-        <div>!</div>
+        <img src="{{imageService.getImg('flip-white')}}">
       </div>
       <div [innerHTML]="getAbilityText(buff.flipEventText, true)" class="flip-text"></div>
     </div>

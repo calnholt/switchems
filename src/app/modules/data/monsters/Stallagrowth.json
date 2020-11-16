@@ -43,7 +43,7 @@
     },
     {
       "abilityName": "Rock Slide",
-      "abilityText": "[2]",
+      "abilityText": "[FLIP] [FLIP]",
       "element": "Rock",
       "auraDuration": null,
       "statusFlg": false,

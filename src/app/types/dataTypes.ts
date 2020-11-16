@@ -88,7 +88,7 @@ export const TERM_CODES = [
 
 const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[1]`, `[2]`, `[3]`, `[4]`, `[DEF]`, `[TA]`, `[X]`, `[SUCC]`, `[FAIL]`,
 `[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]', '[NQ]', '[PQ]', '[ARROW]', '[!]',
-'[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]', '[ACORN]', '[HONEY]', '[WISH]', '[TORMENT]'] as const;
+'[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]', '[ACORN]', '[HONEY]', '[WISH]', '[TORMENT]', '[FLIP]'] as const;
 export type ImageCode = typeof IMAGE_KEYS[number];
 export const IMAGE_CODES = [
     new Image(`[ATK]`, SYMBOLS_PATH + `attack.png`),
@@ -127,5 +127,6 @@ export const IMAGE_CODES = [
     new Image(`[HONEY]`, SYMBOLS_PATH + `dripping-honey.png`),
     new Image(`[WISH]`, SYMBOLS_PATH + `round-star.png`),
     new Image(`[TORMENT]`, SYMBOLS_PATH + `torment.png`),
+    new Image(`[FLIP]`, SYMBOLS_PATH + `flip.png`),
 ] as const;
 

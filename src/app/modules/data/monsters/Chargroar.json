@@ -19,15 +19,15 @@
     },
     {
       "abilityName": "Lights Out",
-      "abilityText": "[1]. <br><br>If this attack KO's the enemy monster, this monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}",
+      "abilityText": "<b>[FLIP] [FLIP]</b>. <br><br>If this attack KO's the enemy monster, this monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}",
       "element": "Electric",
       "auraDuration": 0,
       "statusFlg": false,
-      "attack": 2,
-      "speed": 6,
+      "attack": 1,
+      "speed": 5,
       "draw": 0,
       "discard": 0,
-      "buff": 2,
+      "buff": 3,
       "modifier": 1
     },
     {
@@ -44,7 +44,7 @@
     },
     {
       "abilityName": "Flamethrower",
-      "abilityText": "<b>Pierce</b>, [1]~PIERCE~",
+      "abilityText": "<b>[FLIP], Pierce</b>~PIERCE~",
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": false,

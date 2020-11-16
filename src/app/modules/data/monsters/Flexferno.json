@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "No Pain, No Gain",
-      "abilityText": "<b>Recoil 1[ATK]</b>, [1]~RECOIL~",
+      "abilityText": "<b>[FLIP] [FLIP], Recoil 1[ATK]</b>~RECOIL~",
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": false,
@@ -42,7 +42,7 @@
     },
     {
       "abilityName": "Scorch",
-      "abilityText": "[3]",
+      "abilityText": "[FLIP] [FLIP] [FLIP]",
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": false,
