@@ -1,3 +1,4 @@
+import { MonsterService } from './../monster/monster.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { MonsterComplete, Action, Buff } from '../monster/model/monster';
@@ -19,12 +20,13 @@ export class ViewAllComponent implements OnInit {
   numOfBuffs: number;
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private monsterService: MonsterService
   ) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.allMonsters = loadMonsters();
+      this.allMonsters = this.monsterService.getMonsters();
       this.filterMonsters(new MonsterForm());
     });
   }

@@ -48,7 +48,8 @@
           </div>
           <span [innerHTML]="getPromiseText()" class="pt-1 promise-text"></span>
         </div>
-        <button class="save-button" mat-stroked-button (click)="save()">Copy Monster to Clipboard</button>
+        <button class="save-button" mat-stroked-button (click)="copy()">Copy Monster to Clipboard</button>
+        <button class="save-button" mat-stroked-button (click)="save()">Save</button>
         <div class="tts">
           <img 
             [routerLink]="['/tts', monster.monsterName]" 

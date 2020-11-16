@@ -1,3 +1,4 @@
+import { MonsterService } from './../monster/monster.service';
 import { MonsterComplete } from './../monster/model/monster';
 import { Component, OnInit } from '@angular/core';
 import { loadMonsters } from '../import/json-to-obj';
@@ -12,10 +13,13 @@ export class PrintComponent implements OnInit {
   allMonsters = Array<MonsterComplete>();
   extraCardFlg: boolean = false;
   isAllToggle: boolean = true;
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private monsterService: MonsterService,
+    ) { }
 
   ngOnInit() {
-    const allMonsters: MonsterComplete[] = loadMonsters();
+    const allMonsters: MonsterComplete[] = this.monsterService.getMonsters();
     this.toggleAll(allMonsters);
     this.allMonsters = allMonsters;
   }

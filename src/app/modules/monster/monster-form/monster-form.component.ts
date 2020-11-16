@@ -5,6 +5,7 @@ import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { Component, ViewChild, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { getAbilityText } from './../../common/cards';
+import { MonsterService } from '../monster.service';
 
 @Component({
   selector: 'monster-form',
@@ -26,7 +27,8 @@ export class MonsterFormComponent implements OnInit {
   ABILITY_IMG_CSS: Css = 'term-img';
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private monsterServce: MonsterService,
   ) {}
 
   ngOnInit() {
@@ -43,7 +45,7 @@ export class MonsterFormComponent implements OnInit {
         this.monster.actions.forEach(a => a.element = ELEMENTS[this.getRandomNumber(ELEMENTS.length)]);
         this.monster.buffs.push(new Buff(), new Buff(), new Buff(), new Buff());
       } else {
-        this.monster = loadMonster(monsterName);
+        this.monster = this.monsterServce.getMonster(monsterName);
       }
       this.originalMonster = Object.assign({}, this.monster);
     });
@@ -53,7 +55,7 @@ export class MonsterFormComponent implements OnInit {
     return Math.floor(Math.random() * max);
   }
 
-  save() {
+  copy() {
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';
@@ -66,6 +68,10 @@ export class MonsterFormComponent implements OnInit {
     selBox.select();
     document.execCommand('copy');
     document.body.removeChild(selBox);
+  }
+
+  save() {
+    this.monsterServce.saveMonster(this.monster);
   }
 
   // a little janky but for now it's fine

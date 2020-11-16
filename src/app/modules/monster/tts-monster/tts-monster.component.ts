@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MonsterComplete } from '../model/monster';
-import { loadMonsters } from './../../import/json-to-obj';
 import { ActivatedRoute } from '@angular/router';
 import { ToolbarService } from '../../common/components/toolbar/toolbar.service';
 import html2canvas from 'html2canvas';
+import { MonsterService } from '../monster.service';
 
 @Component({
   selector: 'tts-monster',
@@ -17,14 +17,14 @@ export class TtsMonsterComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private toolbarService: ToolbarService,
+    private monsterService: MonsterService,
   ) {}
 
   ngOnInit() {
     this.toolbarService.hide();
     this.route.params.subscribe(params => {
-      const allMonsters = loadMonsters();
       const monsterName: string = this.route.snapshot.paramMap.get('monsterName');
-      this.monster = allMonsters.find(m => m.monsterName === monsterName);
+      this.monster = this.monsterService.getMonster(monsterName);
     });
     window.scrollTo({ top: 0, behavior: 'smooth' });
     setTimeout((this.download).bind(this), this.timeout);
