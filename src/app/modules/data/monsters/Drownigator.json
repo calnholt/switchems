@@ -14,7 +14,7 @@
       "draw": 0,
       "discard": 2,
       "buff": 0,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Expunge",
@@ -28,7 +28,7 @@
       "discard": 1,
       "buff": 1,
       "modifier": 3,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Foul Play",
@@ -42,7 +42,7 @@
       "discard": 1,
       "buff": 1,
       "modifier": 1,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Surge",
@@ -56,7 +56,7 @@
       "discard": 0,
       "buff": 3,
       "modifier": 1,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     }
   ],
   "buffs": [
@@ -66,7 +66,7 @@
       "buffText": "<b>Super, Ethereal, Fatigue [STATUS]</b> ~SUPER~~ETHEREAL~~FATIGUE~",
       "flipEventText": "The enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "One Step Ahead",
@@ -74,7 +74,7 @@
       "buffText": "This attack gains +1[ATK] and <b>pierce</b>. ~PIERCE~",
       "flipEventText": "Look at your opponent's hand.",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Cripple",
@@ -82,7 +82,7 @@
       "buffText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "flipEventText": "If your opponent has more cards in their hand than you, your opponent [-].",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Tremble",
@@ -90,7 +90,7 @@
       "buffText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.",
       "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     }
   ],
   "monsterId": 5,
@@ -102,5 +102,5 @@
   "promiseDescription": "Drownigator is an immediate threat. Panic Attack puts your opponent on the defensive and a properly buffed Expunge can devastate leaf and rock types.",
   "initiative": 70,
   "role": "Tricky",
-  "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
 }

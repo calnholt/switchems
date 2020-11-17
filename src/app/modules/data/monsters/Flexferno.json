@@ -15,7 +15,7 @@
       "discard": 4,
       "buff": 1,
       "modifier": 5,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Burn",
@@ -27,7 +27,7 @@
       "draw": 0,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "No Pain, No Gain",
@@ -41,7 +41,7 @@
       "discard": 0,
       "buff": 3,
       "modifier": 2,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Scorch",
@@ -55,7 +55,7 @@
       "discard": 2,
       "buff": 1,
       "modifier": 1,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     }
   ],
   "buffs": [
@@ -65,7 +65,7 @@
       "buffText": "<b>Super, Ethereal, Burn [STATUS]</b>~SUPER~~ETHEREAL~~BURN~",
       "flipEventText": "[+]",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Melt Away",
@@ -73,7 +73,7 @@
       "buffText": "<b>Super, Ethereal</b><br>Remove all [NQ] from this monster and all [STATUS] from all of your monsters.~SUPER~~ETHEREAL~~STATUS~",
       "flipEventText": "You may remove a [NQ] from your active monster.",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Sauna",
@@ -81,7 +81,7 @@
       "buffText": "This monster heals <div>3[HP]</div> if the enemy monster has a [STATUS]. ~STATUS~",
       "flipEventText": "This monster heals 2[HP].",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Sear",
@@ -89,7 +89,7 @@
       "buffText": "This attack gains <div>+3[ATK]</div> if the enemy monster has a [STATUS].~STATUS~",
       "flipEventText": "This attack gains +1[ATK].",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     }
   ],
   "monsterId": 2,
@@ -100,5 +100,5 @@
   "complexity": 1,
   "initiative": 20,
   "role": "Warrior",
-  "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
 }

@@ -15,7 +15,7 @@
       "discard": 2,
       "buff": 0,
       "modifier": 1,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Whirlwind",
@@ -29,7 +29,7 @@
       "discard": 1,
       "buff": 1,
       "modifier": 2,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Cyclone",
@@ -43,7 +43,7 @@
       "discard": 0,
       "buff": 2,
       "modifier": 1,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Vicious Hurricane",
@@ -57,7 +57,7 @@
       "discard": 2,
       "buff": 0,
       "modifier": 2,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     }
   ],
   "buffs": [
@@ -67,7 +67,7 @@
       "buffText": "<b>Super</b><br>This attack gains <div>+4[SPD]</div>.~SUPER~",
       "flipEventText": "This attack gains +1[ATK].",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Sharp Leaves",
@@ -75,7 +75,7 @@
       "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Leaf Shield",
@@ -83,7 +83,7 @@
       "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Leaffy Kicks",
@@ -91,7 +91,7 @@
       "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     }
   ],
   "monsterId": 8,
@@ -102,5 +102,5 @@
   "complexity": 2,
   "initiative": 80,
   "role": "Support",
-  "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
 }
