@@ -44,7 +44,7 @@
     },
     {
       "abilityName": "Flamethrower",
-      "abilityText": "<b>[FLIP], Pierce</b>~PIERCE~",
+      "abilityText": "[FLIP]. <br><br><b>Pierce</b>~PIERCE~",
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": false,
@@ -90,9 +90,10 @@
   "abilityName": "Intimidate",
   "monsterName": "Chargroar",
   "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>~SWITCH~",
-  "hp": 7,
+  "hp": 6,
   "complexity": 1,
   "promiseDescription": "Chargroar is a straightforward assassin. Fast, strong attacks, with ways to increase its attack strength with <div>[PQ].</div> Chargroar's buffs are unconditional and incredibly efficient. Since Chargroar is easy to KO, there is little room error.",
   "initiative": 85,
-  "role": "Assassin"
+  "role": "Assassin",
+  "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
 }

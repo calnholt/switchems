@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "No Pain, No Gain",
-      "abilityText": "<b>[FLIP] [FLIP], Recoil 1[ATK]</b>~RECOIL~",
+      "abilityText": "[FLIP] [FLIP]. <br><br><b>Recoil 1[ATK]</b>~RECOIL~",
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": false,
@@ -49,7 +49,7 @@
       "attack": 1,
       "speed": 7,
       "draw": 0,
-      "discard": 1,
+      "discard": 2,
       "buff": 1,
       "modifier": 1
     }

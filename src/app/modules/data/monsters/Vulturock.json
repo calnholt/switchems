@@ -6,11 +6,11 @@
   "actions": [
     {
       "abilityName": "Kraterkazee",
-      "abilityText": "<b>[FLIP], Recoil 2[ATK]</b>~RECOIL~",
+      "abilityText": "[FLIP] [FLIP]. <br><br><b>Recoil 2[ATK]</b>~RECOIL~",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
-      "attack": 5,
+      "attack": 4,
       "speed": 7,
       "draw": 0,
       "discard": 2,
@@ -19,11 +19,11 @@
     },
     {
       "abilityName": "Roc Rock",
-      "abilityText": "<b>[FLIP], Recoil 1[ATK]</b>~RECOIL~",
+      "abilityText": "<b>Recoil 1[ATK]</b>~RECOIL~",
       "element": "Rock",
       "auraDuration": 0,
       "statusFlg": false,
-      "attack": 3,
+      "attack": 4,
       "speed": 5,
       "draw": 0,
       "discard": 1,
