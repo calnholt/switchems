@@ -5,122 +5,100 @@
   "actions": [
     {
       "abilityName": "Cobolt",
-      "abilityText": "",
+      "abilityText": "[FLIP]",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        3,
-        3,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 1,
       "speed": 2,
       "draw": 0,
       "discard": 0,
-      "buff": 2
+      "buff": 2,
+      "modifier": 3,
+      "lastUpdated": "Tue, 17 Nov 2020 16:44:57 GMT"
     },
     {
       "abilityName": "Download",
       "abilityText": "When the enemy monster performs a switch action, that monster heals 1[HP] and discard this aura. <br><br>When all time counters are removed from this, next turn your opponent must reveal their selected action before you select yours.",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "auraDuration": 4,
       "statusFlg": false,
-      "reactionFlg": false,
       "speed": 1,
       "draw": 1,
       "discard": 0,
-      "buff": 0
+      "buff": 0,
+      "lastUpdated": "Tue, 17 Nov 2020 12:18:32 GMT"
     },
     {
-      "abilityName": "Transfusion",
-      "abilityText": "[1]: <b>Leech [STATUS]</b> ~LEECH~",
+      "abilityName": "Exception Caught",
+      "abilityText": "If the enemy monster switched in this turn, this attack gains <b>pierce</b> and [FLIP] [FLIP] [FLIP].~PIERCE~",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        2,
-        2,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 2,
+      "attack": 3,
       "speed": 1,
       "draw": 0,
       "discard": 1,
-      "buff": 2
+      "buff": 2,
+      "modifier": 1,
+      "lastUpdated": "Tue, 17 Nov 2020 16:44:57 GMT"
     },
     {
       "abilityName": "Cornered",
-      "abilityText": "This attack gains <div>+2[ATK]</div> when this monster has a <b>lockdown</b> counter on it.",
+      "abilityText": "This attack gains [FLIP] [FLIP] when this monster has a <b>lockdown</b> counter on it.",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        1,
-        1,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 5,
       "speed": 4,
       "draw": 0,
       "discard": 3,
-      "buff": 0
+      "buff": 0,
+      "modifier": 1,
+      "lastUpdated": "Tue, 17 Nov 2020 16:44:57 GMT"
     }
   ],
   "buffs": [
     {
-      "buffName": "Target Acquired",
+      "buffName": "Power Hotfix",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} if the opponent selected a switch action this turn.",
-      "critFlg": true
+      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 3, \"isPositive\": true} if the opponent selected a switch action this turn.",
+      "flipEventText": "The enemy monster suffers 1[ATK] and this monster heals 1[HP].",
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 16:44:57 GMT"
     },
     {
-      "buffName": "Target Acquired",
+      "buffName": "Agility Hotfix",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} if the opponent selected a switch action this turn.",
-      "critFlg": true
+      "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 4, \"isPositive\": true} if the opponent selected a switch action this turn.",
+      "flipEventText": "The enemy monster suffers 1[ATK] and this monster heals 1[HP].",
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 16:44:57 GMT"
     },
     {
       "buffName": "Refactor",
       "timing": "Pre-Actions",
       "buffText": "<b>Super</b><br>Attack speeds are reversed this turn and you win all speed ties.~SUPER~",
-      "critFlg": false
+      "flipEventText": "The enemy monster suffers 1[ATK] and this monster heals 1[HP].",
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 16:44:57 GMT"
     },
     {
       "buffName": "Malware",
-      "timing": "None",
-      "buffText": "This card has no buff effect.",
-      "flipEventText": "The enemy monster suffers <div>1[ATK]</div>",
-      "critFlg": false,
-      "flipEventFlg": true
+      "timing": "With Attack",
+      "buffText": "<b>Super</b><br>If the enemy monster is <b>weak</b> to this attack's element, this attack gains <div>+4[ATK].</div>~SUPER~~EFFECTIVE~",
+      "flipEventText": "The enemy monster suffers 1[ATK] and this monster heals 1[HP].",
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 16:44:57 GMT"
     }
   ],
   "monsterId": 10,
   "abilityName": "Lockdown",
   "monsterName": "Phantomaton",
-  "abilityText": "At the start of the turn, put a <b>lockdown</b> counter on this monster if it doesn't already have one. If it does, remove the <b>lockdown</b> counter instead. While this monster has a <b>lockdown</b> counter on it, the enemy monster cannot perform switch actions.",
+  "abilityText": "At the start of the turn, put a <b>lockdown</b> counter on this monster if it doesn't already have one. If it does, remove the <b>lockdown</b> counter instead. <br><br>While this monster has a <b>lockdown</b> counter on it, the enemy monster cannot perform switch actions.",
   "hp": 12,
   "complexity": 2,
   "initiative": 55,
+  "lastUpdated": "Tue, 17 Nov 2020 16:18:41 GMT",
   "role": "Tank"
 }
