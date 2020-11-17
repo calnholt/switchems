@@ -14,6 +14,7 @@ export class Card extends GUI {
     comments?: string;
     playtestNotes?: string;
     unityFlg?: boolean;
+    lastUpdated?: string;
 }
 
 export class Monster extends Card {

@@ -62,7 +62,9 @@ export class MonsterFormComponent implements OnInit {
     selBox.style.left = '0';
     selBox.style.top = '0';
     selBox.style.opacity = '0';
-    const json = JSON.stringify(this.getCleanMonster(), null, 2);
+    let monster = this.getCleanMonster(this.monster);
+    monster = this.setLastUpdated(monster);
+    const json = JSON.stringify(monster, null, 2);
     selBox.value = json;
     document.body.appendChild(selBox);
     selBox.focus();
@@ -80,8 +82,8 @@ export class MonsterFormComponent implements OnInit {
   }
 
   // a little janky but for now it's fine
-  getCleanMonster(): MonsterComplete {
-    const copy = JSON.parse(JSON.stringify(this.monster));
+  getCleanMonster(monster: MonsterComplete): MonsterComplete {
+    const copy = JSON.parse(JSON.stringify(monster));
     const guiProps = [
         'isSelected',
         'isHighlighted',
@@ -100,6 +102,50 @@ export class MonsterFormComponent implements OnInit {
     actionProps.forEach(prop => copy.actions.forEach(a => delete a[prop]));
     buffProps.forEach(prop => copy.buffs.forEach(b => delete b[prop]));
     return copy;
+  }
+
+  setLastUpdated(monsterToCopy: MonsterComplete): MonsterComplete {
+    const savedMonsterComplete = this.getCleanMonster(loadMonster(monsterToCopy.monsterName));
+    const offset = -300; // Timezone offset for EST in minutes.
+    const estDate = new Date(new Date().getTime() + offset * 60 * 1000);
+    const today = estDate.toUTCString();
+    // make comparable copies
+    // saved copies
+    const savedMonster = Object.assign({}, savedMonsterComplete);
+    const savedMonsterActions = Object.assign([], savedMonsterComplete.actions);
+    delete savedMonster.actions;
+    const savedMonsterBuffs = Object.assign([], savedMonsterComplete.buffs);
+    delete savedMonster.buffs;
+    // current copies
+    const currentMonster = Object.assign({}, monsterToCopy);
+    const currentMonsterActions = Object.assign([], currentMonster.actions);
+    delete currentMonster.actions;
+    const currentMonsterBuffs = Object.assign([], currentMonster.buffs);
+    delete currentMonster.buffs;
+    // compare each, and if differences, set lastUpdated property
+    // monster
+    if (!this.compareStringifiedJSON(currentMonster, savedMonster)) {
+      monsterToCopy.lastUpdated = today;
+    }
+    // actions
+    currentMonsterActions.forEach((currentAction, i) => {
+      const savedAction = savedMonsterActions[i];
+      if (!this.compareStringifiedJSON(currentAction, savedAction)) {
+        monsterToCopy.actions[i].lastUpdated = today;
+      }
+    });
+    // buffs
+    currentMonsterBuffs.forEach((currentBuff, i) => {
+      const savedBuff = savedMonsterBuffs[i];
+      if (!this.compareStringifiedJSON(currentBuff, savedBuff)) {
+        monsterToCopy.buffs[i].lastUpdated = today;
+      }
+    });
+    return monsterToCopy;
+  }
+
+  compareStringifiedJSON(a: any, b: any): boolean {
+    return JSON.stringify(a) === JSON.stringify(b);
   }
 
   selectCard(selection: CardTypes, index: number) {
