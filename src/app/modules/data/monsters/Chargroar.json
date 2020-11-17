@@ -15,7 +15,8 @@
       "draw": 0,
       "discard": 3,
       "buff": 0,
-      "modifier": 5
+      "modifier": 5,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Lights Out",
@@ -28,7 +29,8 @@
       "draw": 0,
       "discard": 0,
       "buff": 3,
-      "modifier": 1
+      "modifier": 1,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Hypercharge",
@@ -40,7 +42,8 @@
       "draw": 1,
       "discard": 0,
       "buff": 0,
-      "modifier": 0
+      "modifier": 0,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Flamethrower",
@@ -53,7 +56,8 @@
       "draw": 0,
       "discard": 2,
       "buff": 1,
-      "modifier": 2
+      "modifier": 2,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     }
   ],
   "buffs": [
@@ -62,28 +66,32 @@
       "timing": "With Attack",
       "buffText": "<b>Super</b><br>If the enemy monster is <b>resistant</b> to this attack's element, this attack gains <div>+4[ATK].</div>~SUPER~~RESIST~",
       "flipEventText": "Your active monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div> after the attack.",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Energize",
       "timing": "With Attack",
       "buffText": "This attack gains +2[ATK]",
       "flipEventText": "This attack gains <b>pierce</b>.~PIERCE~",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Charge",
       "timing": "Pre-Actions",
       "buffText": "This attack gains +2[SPD]",
       "flipEventText": "<b>Crush 2 [PQ]</b> ~CRUSH~",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Charge",
       "timing": "Pre-Actions",
       "buffText": "This attack gains +2[SPD]",
       "flipEventText": "This attack gains <div>+1[ATK].</div>",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     }
   ],
   "monsterId": 4,
@@ -94,5 +102,6 @@
   "complexity": 1,
   "promiseDescription": "Chargroar is a straightforward assassin. Fast, strong attacks, with ways to increase its attack strength with <div>[PQ].</div> Chargroar's buffs are unconditional and incredibly efficient. Since Chargroar is easy to KO, there is little room error.",
   "initiative": 85,
-  "role": "Assassin"
+  "role": "Assassin",
+  "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
 }

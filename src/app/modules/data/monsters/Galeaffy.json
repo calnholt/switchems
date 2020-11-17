@@ -14,7 +14,8 @@
       "draw": 0,
       "discard": 2,
       "buff": 0,
-      "modifier": 1
+      "modifier": 1,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Whirlwind",
@@ -27,7 +28,8 @@
       "draw": 0,
       "discard": 1,
       "buff": 1,
-      "modifier": 2
+      "modifier": 2,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Cyclone",
@@ -40,7 +42,8 @@
       "draw": 0,
       "discard": 0,
       "buff": 2,
-      "modifier": 1
+      "modifier": 1,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Vicious Hurricane",
@@ -53,7 +56,8 @@
       "draw": 0,
       "discard": 2,
       "buff": 0,
-      "modifier": 2
+      "modifier": 2,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     }
   ],
   "buffs": [
@@ -62,28 +66,32 @@
       "timing": "Pre-Actions",
       "buffText": "<b>Super</b><br>This attack gains <div>+4[SPD]</div>.~SUPER~",
       "flipEventText": "This attack gains +1[ATK].",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Sharp Leaves",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Leaf Shield",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Leaffy Kicks",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     }
   ],
   "monsterId": 8,
@@ -93,5 +101,6 @@
   "hp": 9,
   "complexity": 2,
   "initiative": 80,
-  "role": "Support"
+  "role": "Support",
+  "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
 }

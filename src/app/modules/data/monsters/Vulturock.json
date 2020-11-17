@@ -15,7 +15,8 @@
       "draw": 0,
       "discard": 2,
       "buff": 1,
-      "modifier": 2
+      "modifier": 2,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Roc Rock",
@@ -28,7 +29,8 @@
       "draw": 0,
       "discard": 1,
       "buff": 2,
-      "modifier": 2
+      "modifier": 2,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Iron Defense",
@@ -39,7 +41,8 @@
       "speed": 1,
       "draw": 1,
       "discard": 0,
-      "buff": 0
+      "buff": 0,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Scavenge",
@@ -50,7 +53,8 @@
       "speed": 9,
       "draw": 0,
       "discard": 1,
-      "buff": 0
+      "buff": 0,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     }
   ],
   "buffs": [
@@ -59,28 +63,32 @@
       "timing": "Pre-Actions",
       "buffText": "[FLIP] [FLIP]",
       "flipEventText": "This monster heals 1[HP], [FLIP].",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Recoil",
       "timing": "Post Actions",
       "buffText": "<b>Super, Ethereal</b><br>The enemy monster suffers <div>1[ATK]</div> for each card your opponent discarded and for each buff slot used this turn.~SUPER~~ETHEREAL~",
       "flipEventText": "This attack gains +2[ATK] and <b>recoil 2[ATK]</b>.",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Bigger Rocs",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
       "flipEventText": "This attack gains +1[ATK].",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Bigger Rocs",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
       "flipEventText": "This attack gains +1[ATK].",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     }
   ],
   "monsterId": 9,
@@ -91,5 +99,6 @@
   "complexity": 1,
   "promiseDescription": "Vulturock is reckless assassin that requires finesse. Knowing how to position Vulturock to maximize Scavenge and Iron Defense is key to its survival.",
   "initiative": 75,
-  "role": "Assassin"
+  "role": "Assassin",
+  "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
 }

@@ -13,7 +13,8 @@
       "speed": 2,
       "draw": 0,
       "discard": 2,
-      "buff": 0
+      "buff": 0,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Vine Whips",
@@ -26,7 +27,8 @@
       "draw": 0,
       "discard": 0,
       "buff": 1,
-      "modifier": 2
+      "modifier": 2,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Rock Smash",
@@ -39,7 +41,8 @@
       "draw": 0,
       "discard": 3,
       "buff": 2,
-      "modifier": 4
+      "modifier": 4,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Rock Slide",
@@ -52,7 +55,8 @@
       "draw": 0,
       "discard": 1,
       "buff": 2,
-      "modifier": 2
+      "modifier": 2,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     }
   ],
   "buffs": [
@@ -61,28 +65,32 @@
       "timing": "Pre-Actions",
       "buffText": "This monster gains +2[DEF] this turn.",
       "flipEventText": "This monster gains +2[DEF] this turn.",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Mossy Overgrowth",
       "timing": "Pre-Actions",
       "buffText": "<b>Super</b><br>This monster gains <div>+4[DEF]</div> this turn. ~SUPER~",
       "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Concussion",
       "timing": "With Attack",
       "buffText": "If this action is <b>faster</b>, this attack gains <b>flinch</b>.~FASTER~~FLINCH~",
       "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "buffName": "Gravelcrust Grip",
       "timing": "With Attack",
       "buffText": "<b>Super, Ethereal, Leech [STATUS]</b> ~SUPER~~ETHEREAL~~LEECH~",
       "flipEventText": "This attack gains <b>flinch</b>.~FLINCH~",
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     }
   ],
   "monsterId": 1,
@@ -93,5 +101,6 @@
   "complexity": 1,
   "promiseDescription": "Slowly drain the enemy's health and stand your ground with Vineshield's defensive boon. Stallagrowth plays for the long game, but struggles to accumulate cards. Knowing when to draw three is essential to sustaining pressure.",
   "initiative": 10,
-  "role": "Tank"
+  "role": "Tank",
+  "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
 }
