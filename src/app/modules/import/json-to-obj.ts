@@ -14,6 +14,7 @@ import { default as Smolderskulk } from '../data/monsters/Smolderskulk.json';
 import { default as Oozygoopz } from '../data/monsters/Oozygoopz.json';
 import { default as Galvanite } from '../data/monsters/Galvanite.json';
 import { default as Squirrberus } from '../data/monsters/Squirrberus.json';
+import { default as Ashdash } from '../data/monsters/Ashdash.json';
 import { ElemType, ELEMENTS, Role, ROLES } from './../../types/dataTypes';
 import { MonsterComplete, Buff, Action } from '../monster/model/monster';
 
@@ -27,6 +28,7 @@ const getRole = (text: string): Role => {
 
 const getMonsterFileByName = (monsterName: string) => {
     switch (monsterName) {
+        case('Ashdash'): return Ashdash;
         case('Boltblebee'): return Boltblebee;
         case('Chargroar'): return Chargroar;
         case('Cleansitoad'): return Cleansitoad;
@@ -54,6 +56,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
         ALL = [selectedMonster];
     } else {
         ALL = [
+            Ashdash,
             //Boltblebee,
             Chargroar,
             //Cleansitoad,
