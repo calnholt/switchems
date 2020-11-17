@@ -90,10 +90,9 @@
   "abilityName": "Intimidate",
   "monsterName": "Chargroar",
   "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>~SWITCH~",
-  "hp": 6,
+  "hp": 7,
   "complexity": 1,
   "promiseDescription": "Chargroar is a straightforward assassin. Fast, strong attacks, with ways to increase its attack strength with <div>[PQ].</div> Chargroar's buffs are unconditional and incredibly efficient. Since Chargroar is easy to KO, there is little room error.",
   "initiative": 85,
-  "role": "Assassin",
-  "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+  "role": "Assassin"
 }
