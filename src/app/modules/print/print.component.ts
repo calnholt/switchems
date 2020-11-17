@@ -79,16 +79,18 @@ export class PrintComponent implements OnInit {
         if (action.lastUpdated) {
           const lastUpdated = new Date(action.lastUpdated);
           action.isSelected = lastUpdated > printDate;
+          monster.referenceFlg = action.isSelected || monster.referenceFlg;
         } else {
           action.isSelected = false;
         }
       });
-      monster.buffs.forEach(buffs => {
-        if (buffs.lastUpdated) {
-          const lastUpdated = new Date(buffs.lastUpdated);
-          buffs.isSelected = lastUpdated > printDate;
+      monster.buffs.forEach(buff => {
+        if (buff.lastUpdated) {
+          const lastUpdated = new Date(buff.lastUpdated);
+          buff.isSelected = lastUpdated > printDate;
+          monster.referenceFlg = buff.isSelected || monster.referenceFlg;
         } else {
-          buffs.isSelected = false;
+          buff.isSelected = false;
         }
       });
     });

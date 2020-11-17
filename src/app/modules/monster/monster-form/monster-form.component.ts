@@ -91,10 +91,9 @@ export class MonsterFormComponent implements OnInit {
         'isExtraBoardHovered',
         'referenceFlg',
         'savedFlg',
-        'lastUpdated',
-      ];
-    const actionProps = ['monsterName', 'number', 'lastUpdated'];
-    const buffProps = ['monsterName', 'lastUpdated'];
+    ];
+    const actionProps = ['monsterName', 'number'];
+    const buffProps = ['monsterName'];
     guiProps.forEach(prop => {
       delete copy[prop];
       copy.actions.forEach(a => delete a[prop]);
@@ -143,6 +142,13 @@ export class MonsterFormComponent implements OnInit {
       }
     });
     return monsterToCopy;
+  }
+
+  deletePropertyFromAllCards(property: string, monster: MonsterComplete): MonsterComplete {
+    delete monster[property];
+    monster.actions.forEach(a => delete a[property]);
+    monster.buffs.forEach(b => delete b[property]);
+    return monster;
   }
 
   compareStringifiedJSON(a: any, b: any): boolean {
