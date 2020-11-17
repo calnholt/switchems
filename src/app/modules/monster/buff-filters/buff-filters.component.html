@@ -11,8 +11,7 @@
       [label]="'Timing'"
       [model]="buff"
       [property]="'timing'"
-      [options]="buffTimings"
-      (selectionChange)="setNoneText($event)">
+      [options]="buffTimings">
     </dropdown>
   </div>
   <div *ngIf="buff.timing !== 'None'" class="col-12 form-element">
@@ -23,7 +22,6 @@
         #autosize="cdkTextareaAutosize"
         cdkAutosizeMinRows="1"
         cdkAutosizeMaxRows="10"
-        (change)="setBuffText()"
         [(ngModel)]="buff.buffText">
       </textarea>
     </mat-form-field>
