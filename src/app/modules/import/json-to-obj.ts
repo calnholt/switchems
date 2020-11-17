@@ -86,7 +86,8 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             'complexity',
             'promiseDescription',
             'extraBoard',
-            'initiative'
+            'initiative',
+            'lastUpdated',
         ];
         MONSTER_PROPERTIES.forEach(p => monster[p] = json[p]);
         const elements = Array<ElemType>();
@@ -106,6 +107,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             'auraDuration',
             'statusFlg',
             'modifier',
+            'lastUpdated',
         ];
         for (let i = 0; i < ACTIONS; i++) {
             const action = new Action();
@@ -123,6 +125,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             'flipEventText',
             'flipEventFlg',
             'buffName',
+            'lastUpdated',
         ];
         for (let i = 0; i < BUFFS; i++) {
             const buff = new Buff();
