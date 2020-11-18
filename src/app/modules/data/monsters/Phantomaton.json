@@ -10,16 +10,16 @@
       "auraDuration": 0,
       "statusFlg": false,
       "attack": 1,
-      "speed": 2,
+      "speed": 1,
       "draw": 0,
       "discard": 0,
       "buff": 2,
       "modifier": 3,
-      "lastUpdated": "Tue, 17 Nov 2020 16:44:57 GMT"
+      "lastUpdated": "Tue, 17 Nov 2020 21:27:37 GMT"
     },
     {
       "abilityName": "Download",
-      "abilityText": "When the enemy monster performs a switch action, that monster heals 1[HP] and discard this aura. <br><br>When all time counters are removed from this, next turn your opponent must reveal their selected action before you select yours.",
+      "abilityText": "When the enemy monster performs a switch action, discard this aura. <br><br>When all time counters are removed from this, next turn your opponent must reveal their selected action before you select yours.",
       "element": "Death",
       "auraDuration": 4,
       "statusFlg": false,
@@ -31,31 +31,31 @@
     },
     {
       "abilityName": "Exception Caught",
-      "abilityText": "If the enemy monster switched in this turn, this attack gains <b>pierce</b> and [FLIP] [FLIP] [FLIP].~PIERCE~",
+      "abilityText": "If this attack is buffed, this attack gains <b>pierce</b>.~PIERCE~",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
       "attack": 3,
-      "speed": 1,
+      "speed": 3,
       "draw": 0,
       "discard": 1,
       "buff": 2,
       "modifier": 1,
-      "lastUpdated": "Tue, 17 Nov 2020 16:44:57 GMT"
+      "lastUpdated": "Tue, 17 Nov 2020 21:27:37 GMT"
     },
     {
       "abilityName": "Cornered",
-      "abilityText": "This attack gains [FLIP] [FLIP] when this monster has a <b>lockdown</b> counter on it.",
+      "abilityText": "This attack gains [FLIP] [FLIP] when this monster has a <b>deadlock</b> counter on it.",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
       "attack": 5,
-      "speed": 4,
+      "speed": 7,
       "draw": 0,
       "discard": 3,
       "buff": 0,
       "modifier": 1,
-      "lastUpdated": "Tue, 17 Nov 2020 16:44:57 GMT"
+      "lastUpdated": "Tue, 17 Nov 2020 21:49:53 GMT"
     }
   ],
   "buffs": [
@@ -71,34 +71,34 @@
       "buffName": "Agility Hotfix",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 4, \"isPositive\": true} if the opponent selected a switch action this turn.",
-      "flipEventText": "The enemy monster suffers 1[ATK] and this monster heals 1[HP].",
+      "flipEventText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 17 Nov 2020 16:44:57 GMT"
+      "lastUpdated": "Tue, 17 Nov 2020 21:35:35 GMT"
     },
     {
       "buffName": "Refactor",
       "timing": "Pre-Actions",
       "buffText": "<b>Super</b><br>Attack speeds are reversed this turn and you win all speed ties.~SUPER~",
-      "flipEventText": "The enemy monster suffers 1[ATK] and this monster heals 1[HP].",
+      "flipEventText": "If this attack is <b>slower</b>, this attack gains +2[ATK].~SLOWER~",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 17 Nov 2020 16:44:57 GMT"
+      "lastUpdated": "Tue, 17 Nov 2020 21:27:37 GMT"
     },
     {
       "buffName": "Malware",
       "timing": "With Attack",
       "buffText": "<b>Super</b><br>If the enemy monster is <b>weak</b> to this attack's element, this attack gains <div>+4[ATK].</div>~SUPER~~EFFECTIVE~",
-      "flipEventText": "The enemy monster suffers 1[ATK] and this monster heals 1[HP].",
+      "flipEventText": "If the enemy monster is <b>weak</b> to this attack's element, this attack gains <div>+2[ATK].</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 17 Nov 2020 16:44:57 GMT"
+      "lastUpdated": "Tue, 17 Nov 2020 20:36:05 GMT"
     }
   ],
   "monsterId": 10,
-  "abilityName": "Lockdown",
+  "abilityName": "Deadlock",
   "monsterName": "Phantomaton",
-  "abilityText": "At the start of the turn, put a <b>lockdown</b> counter on this monster if it doesn't already have one. If it does, remove the <b>lockdown</b> counter instead. <br><br>While this monster has a <b>lockdown</b> counter on it, the enemy monster cannot perform switch actions.",
-  "hp": 12,
+  "abilityText": "At the start of the turn, put a <b>deadlock</b> counter on this monster if it doesn't already have one. If it does, remove the <b>deadlock</b> counter instead. <br><br>While this monster has a <b>deadlock</b> counter on it, the enemy monster cannot perform switch actions.",
+  "hp": 10,
   "complexity": 2,
   "initiative": 55,
-  "lastUpdated": "Tue, 17 Nov 2020 16:18:41 GMT",
-  "role": "Tank"
+  "lastUpdated": "Tue, 17 Nov 2020 21:49:53 GMT",
+  "role": "Technical"
 }
