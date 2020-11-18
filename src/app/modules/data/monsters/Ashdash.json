@@ -18,17 +18,17 @@
     },
     {
       "abilityName": "Slow Burn",
-      "abilityText": "If this monster has 6[HP] or less, <div>[+] [+].</div>",
+      "abilityText": "If this monster has 6[HP] or less, <div>[+].</div>",
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": false,
       "attack": 2,
       "speed": 2,
       "draw": 0,
-      "discard": 2,
+      "discard": 1,
       "buff": 2,
       "modifier": 2,
-      "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Tue, 17 Nov 2020 21:03:13 GMT"
     },
     {
       "abilityName": "Turbulent Outburst",
