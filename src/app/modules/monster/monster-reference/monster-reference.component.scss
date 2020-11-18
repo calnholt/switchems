@@ -37,6 +37,7 @@
         }
         .ability-text-container{
             padding: var(--container-padding);
+            padding-top: 0px;
             .ability-text{
                 font-size: var(--font-size);
                 line-height: 1;
@@ -60,7 +61,7 @@
                 align-items: center;
             }
             .action{
-                padding: 4px;
+                padding: 2px;
                 background: #f2f2f2;
                 border: solid black 2px;
                 border-top: 0px;
@@ -80,6 +81,7 @@
                 border: 2px solid black;
                 border-top: none;
                 border-radius: 0px 0px 6px 6px;
+                font-family: $beastformer;
                 .ref-icon{
                     max-height: var(--icon-max-height);
                 }
