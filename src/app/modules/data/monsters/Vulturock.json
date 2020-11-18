@@ -34,15 +34,15 @@
     },
     {
       "abilityName": "Iron Defense",
-      "abilityText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.</div>",
+      "abilityText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 4, \"isPositive\": true}.</div>",
       "element": "Rock",
       "auraDuration": 0,
       "statusFlg": true,
-      "speed": 1,
-      "draw": 1,
+      "speed": 3,
+      "draw": 0,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Tue, 17 Nov 2020 21:30:43 GMT"
     },
     {
       "abilityName": "Scavenge",
@@ -99,6 +99,6 @@
   "complexity": 1,
   "promiseDescription": "Vulturock is reckless assassin that requires finesse. Knowing how to position Vulturock to maximize Scavenge and Iron Defense is key to its survival.",
   "initiative": 75,
-  "role": "Assassin",
-  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT",
+  "role": "Assassin"
 }

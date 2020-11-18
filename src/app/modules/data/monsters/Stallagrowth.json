@@ -96,11 +96,11 @@
   "monsterId": 1,
   "abilityName": "Vineshield",
   "monsterName": "Stallagrowth",
-  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.</div> ~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.</div> ~SWITCH~",
   "hp": 11,
   "complexity": 1,
   "promiseDescription": "Slowly drain the enemy's health and stand your ground with Vineshield's defensive boon. Stallagrowth plays for the long game, but struggles to accumulate cards. Knowing when to draw three is essential to sustaining pressure.",
   "initiative": 10,
-  "role": "Tank",
-  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+  "lastUpdated": "Tue, 17 Nov 2020 21:32:54 GMT",
+  "role": "Tank"
 }
