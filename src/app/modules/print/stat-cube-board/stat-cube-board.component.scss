@@ -37,10 +37,13 @@
                 }
             }
             table, th, td {
-                border: 1px solid black;
+                border: 2px solid black;
             }
             .stat-cube-table{
+                border-collapse: separate;
+                border-radius: 6px 6px 0px 0px;
                 width: 100%;
+                border-bottom: unset;
                 tr{
                     height: 64px;
                     td:nth-child(1){
@@ -50,20 +53,62 @@
                         background-color: #ffcdcd;
                     }
                     td{
+                        border: unset;
                         text-align: center;
                         font-size: 33px;
-                        font-family: $helvetica;
+                        font-family: $beastformer;
                         width: 50%;
                         img{
                             max-height: 30px;
                         }
                         div{
-                            font-size: 10px;
+                            font-size: 15px;
+                            text-decoration: underline;
                         }
                     }
                 }
+                tr:first-child {
+                    td:first-child {
+                        border-radius: 6px 0px 0px 0px;
+                    }
+                    td:last-child {
+                        border-radius: 0px 6px 0px 0px;
+                    }
+                }
+            }
+            .defense-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                text-align: center;
+                font-family: $beastformer;
+                border: 2px solid black;
+                border-top: unset;
+                border-radius: 0px 0px 6px 6px;
+                align-items: center;
+                .defense {
+                    background-color: #d6ffd6;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px solid white;
+                    border-top: unset;
+                    img {
+                        max-height: 20px;
+                    }
+                }
+                .defense:nth-child(1), .defense:nth-child(2), .defense:nth-child(3) {
+                    border-right: unset;
+                }
+                .defense:nth-child(1) {
+                    border-radius: 0px 0px 0px 6px;
+                }
+                .defense:last-child {
+                    border-radius: 0px 0px 6px 0px;
+                }
             }
             .maneuver-container{
+                font-family: $beastformer;
                 table{
                     margin: auto;
                     width: 66%;
