@@ -19,7 +19,7 @@
     },
     {
       "abilityName": "Burn",
-      "abilityText": "<b>Burn [STATUS]</b> ~BURN~",
+      "abilityText": "<b>Wound [STATUS]</b> ~WOUND~",
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": true,
@@ -27,7 +27,7 @@
       "draw": 0,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Wed, 18 Nov 2020 20:07:20 GMT"
     },
     {
       "abilityName": "No Pain, No Gain",
@@ -62,10 +62,10 @@
     {
       "buffName": "Impulsive Burn",
       "timing": "With Attack",
-      "buffText": "<b>Super, Ethereal, Burn [STATUS]</b>~SUPER~~ETHEREAL~~BURN~",
+      "buffText": "<b>Super, Ethereal, Wound [STATUS]</b>~SUPER~~ETHEREAL~~WOUND~",
       "flipEventText": "[+]",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Wed, 18 Nov 2020 20:07:20 GMT"
     },
     {
       "buffName": "Melt Away",
@@ -78,7 +78,7 @@
     {
       "buffName": "Sauna",
       "timing": "Pre-Actions",
-      "buffText": "This monster heals <div>3[HP]</div> if the enemy monster has a [STATUS]. ~STATUS~",
+      "buffText": "If the enemy monster has a <div>[STATUS],</div> this monster heals <div>3[HP].</div> ~STATUS~",
       "flipEventText": "This monster heals 2[HP].",
       "flipEventFlg": true,
       "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
@@ -86,7 +86,7 @@
     {
       "buffName": "Sear",
       "timing": "With Attack",
-      "buffText": "This attack gains <div>+3[ATK]</div> if the enemy monster has a [STATUS].~STATUS~",
+      "buffText": "If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+3[ATK].</div> ~STATUS~",
       "flipEventText": "This attack gains +1[ATK].",
       "flipEventFlg": true,
       "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
@@ -99,6 +99,6 @@
   "hp": 9,
   "complexity": 1,
   "initiative": 20,
-  "role": "Warrior",
-  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT",
+  "role": "Warrior"
 }
