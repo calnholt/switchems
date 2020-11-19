@@ -54,12 +54,12 @@ export const MODIFIER_OPTIONS_NEG = [0, -1, -2, -3, -4, -5, `X`];
 export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
-const TERM_KEYS = [`~BURN~`, `~SUCCESS~`, `~FLINCH~`, `~PARALYZE~`, `~LEECH~`, `~FATIGUE~`,
+const TERM_KEYS = [`~WOUND~`, `~SUCCESS~`, `~FLINCH~`, `~LEECH~`, `~FATIGUE~`,
     `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~SUPER~`, `~FASTER~`, `~SLOWER~`, 
     `~GOOP~`, `~ETHEREAL~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`, `~CRUSH~`] as const;
 export type TermCode = typeof TERM_KEYS[number];
 export const TERM_CODES = [
-    new Term(`~BURN~`, `Burned monsters ignore their attack's elemental modifiers and are dealt <div>+1[ATK]</div>`
+    new Term(`~WOUND~`, `Wounded monsters ignore their attack's elemental modifiers and are dealt <div>+1[ATK]</div>`
      + ` from attacks they are weak to.`),
      new Term(`~CRUSH~`, `Remove this many number of  [PQ] from the enemy monster.`),
      new Term(`~EFFECTIVE~`, `Monsters are weak to elements found on the bottom left of their monster card.`),
@@ -71,16 +71,14 @@ export const TERM_CODES = [
      + `to its owner's discard pile when played as a buff.`),
      new Term(`~LEECH~`, `At the end of the turn, leeched monsters suffer <div>1[ATK]</div> and your active monster heals `
      + `<div>1[HP].`),
-     new Term(`~PARALYZE~`, `If a monster is paralyzed, all of that monster's actions have:<br>`
-     + `<div>[2]: </div>This action is successful. Perform these flips first and ignore all  [!] `),
+     new Term(`~STUN~`, `Stunned monster's switch actions happen after monster actions.`),
      new Term('~PIERCE~', `Attacks with pierce ignore the enemy monster's [DEF].`),
      new Term(`~RECOIL~`, `This monster suffers this amount of recoil damage to itself. `
      + `This damage cannot be prevented and still occurs if this action is prevented.`),
      new Term(`~RESIST~`, `Monsters are resistant to elements found on the bottom right of their monster card.`),
      new Term(`~SINGLE~`, `Single use actions recharge on switch and are considered used if this action is prevented.`),
      new Term(`~SLOWER~`, `This action is slower if both players select a monster action and yours has a lower speed.`),
-     new Term(`~STATUS~`, `Status conditions [STATUS] – burn, fatigue, leech, paralyze.`),
-     new Term(`~STUN~`, `Stunned monsters cannot perform any actions next turn. Remove at the end of next turn.`),
+     new Term(`~STATUS~`, `Status conditions [STATUS] – wound, fatigue, leech, stun.`),
      new Term(`~SUCCESS~`, `Unsuccessful actions do nothing.`),
      new Term(`~SUPER~`, `Supers require and use two [B] slots.`),
      new Term(`~SWITCH~`, `Switch in abilities also trigger at the start of the game and following a monster KO.`),
