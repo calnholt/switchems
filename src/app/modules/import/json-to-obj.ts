@@ -26,29 +26,6 @@ const getRole = (text: string): Role => {
     return ROLES.find(r => r.toString() === text);
 };
 
-const getMonsterFileByName = (monsterName: string) => {
-    switch (monsterName) {
-        case('Ashdash'): return Ashdash;
-        case('Boltblebee'): return Boltblebee;
-        case('Chargroar'): return Chargroar;
-        case('Cleansitoad'): return Cleansitoad;
-        case('Cragadilo'): return Cragadilo;
-        case('Drownigator'): return Drownigator;
-        case('Flexferno'): return Flexferno;
-        case('Galeaffy'): return Galeaffy;
-        case('Galvanite'): return Galvanite;
-        case('Oozygoopz'): return Oozygoopz;
-        case('Smolderskulk'): return Smolderskulk;
-        case('Stallagrowth'): return Stallagrowth;
-        case('Steamie'): return Steamie;
-        case('Squirrberus'): return Squirrberus;
-        case('Phantomaton'): return Phantomaton;
-        case('Vulturock'): return Vulturock;
-        case('Zappguin'): return Zappguin;
-    }
-    return {};
-};
-
 export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
     let out = new Array<MonsterComplete>();
     let ALL = [];
@@ -72,7 +49,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             //Squirrberus,
             Phantomaton,
             Vulturock,
-            //Zappguin,
+            Zappguin,
         ];
     }
     ALL.forEach(json => {
@@ -146,10 +123,3 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
     });
     return out;
 };
-
-export const loadMonster = (monsterName: string): MonsterComplete => {
-    return loadMonsters(getMonsterFileByName(monsterName))[0];
-};
-
-
-

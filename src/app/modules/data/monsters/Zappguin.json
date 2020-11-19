@@ -5,123 +5,98 @@
   "actions": [
     {
       "abilityName": "Thunderstorm",
-      "abilityText": "This monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.",
+      "abilityText": "[FLIP]. <br><br>This monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}</div>",
       "element": "Electric",
-      "modifiers": [
-        3,
-        0,
-        0,
-        0,
-        3,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 4,
       "speed": 5,
       "draw": 0,
       "discard": 2,
-      "buff": 0
+      "buff": 0,
+      "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
     },
     {
       "abilityName": "Ice Blast",
-      "abilityText": "If this action is <b>faster</b>, perform:<br><br>[1]: <b>Flinch</b>. ~FASTER~~FLINCH~",
+      "abilityText": "If this attack is <b>faster</b>, this attack gains [FLIP] [FLIP] [FLIP]. ~FASTER~",
       "element": "Water",
-      "modifiers": [
-        1,
-        0,
-        0,
-        0,
-        0,
-        2
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 2,
       "speed": 4,
       "draw": 0,
-      "discard": 0,
-      "buff": 1
+      "discard": 1,
+      "buff": 1,
+      "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
     },
     {
       "abilityName": "Vortex",
       "abilityText": "This attack gains two [B] slots if the enemy monster has a [STATUS]. ~STATUS~",
       "element": "Electric",
-      "modifiers": [
-        2,
-        0,
-        0,
-        0,
-        2,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 2,
       "speed": 7,
       "draw": 0,
       "discard": 0,
-      "buff": 1
+      "buff": 1,
+      "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
     },
     {
       "abilityName": "Paralyze",
-      "abilityText": "<b>Paralyze [STATUS]</b> and the enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}. ~PARALYZE~",
+      "abilityText": "<b>Stun [STATUS]</b> and the enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}. ~STUN~",
       "element": "Electric",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": true,
-      "reactionFlg": false,
-      "speed": 2,
-      "draw": 1,
+      "speed": 7,
+      "draw": 0,
       "discard": 0,
-      "buff": 0
+      "buff": 0,
+      "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
     }
   ],
   "buffs": [
     {
-      "buffName": "Prepared Zap",
+      "buffName": "Zap",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super, Ethereal, Paralyze [STATUS]</b>~SUPER~~ETHEREAL~~PARALYZE~",
-      "critFlg": true
+      "buffText": "<b>Super, Stun [STATUS]</b>~SUPER~~STUN~",
+      "flipEventText": "<b>Stun</b> [STATUS] ~STUN~",
+      "flipEventFlg": true,
+      "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
     },
     {
-      "buffName": "Impulsive Zap",
-      "timing": "With Attack",
-      "buffText": "[1]: <b>Paralyze [STATUS]</b>. ~PARALYZE~",
-      "flipEventText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffName": "Morning Jolt",
+      "timing": "Post Actions",
+      "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.",
+      "flipEventText": "If the enemy monster has a <div>[STATUS],</div> this attack gains <b>flinch</b>.",
+      "flipEventFlg": true,
+      "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
     },
     {
       "buffName": "High Voltage",
       "timing": "Pre-Actions",
-      "buffText": "[+] and this attack gains <b><div>recoil 1[ATK]</div></b>. If the enemy monster is <b>paralzyed</b>, that monster flips only [1] for its <b>paralzyed</b> condition this turn, ignoring any other modifiers. ~RECOIL~.",
-      "critFlg": false
+      "buffText": "If the enemy monster has a <div>[STATUS],</div> this attack gains <b>pierce</b> and <b>flinch</b>.~PIERCE~~FLINCH~",
+      "flipEventText": "If the enemy monster has a <div>[STATUS],</div> this attack gains <b>flinch</b>.",
+      "flipEventFlg": true,
+      "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
     },
     {
       "buffName": "Retaliate",
       "timing": "With Attack",
-      "buffText": "If this attack is <b>slower</b>, this attack gains +{\"positive\": 3, \"neutral\": 3, \"negative\": 1}[ATK].~SLOWER~",
-      "critFlg": true
+      "buffText": "If this attack is <b>slower</b>, this attack gains +3[ATK].~SLOWER~",
+      "flipEventText": "The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.</div>",
+      "flipEventFlg": true,
+      "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
     }
   ],
   "monsterId": 7,
   "abilityName": "Static Shock",
   "monsterName": "Zappguin",
   "abilityText": "This monster's attacks gain <div>+1[ATK]</div> for each different [STATUS] the enemy monster has.~STATUS~",
-  "hp": 9,
+  "hp": 8,
   "complexity": 1,
-  "promiseDescription": "Zappguin wants nothing more than to paralyze every monster it meets. This requires a little bit of work because Zappguin is on the slower side. But a carefully timed Zap from a teammate can setup Zappguin wonderfully.",
+  "promiseDescription": "<b>Zappguin</b> wants nothing more than to <b>stun</b> [STATUS] and <b>flinch</b> every monster it meets.",
   "initiative": 40,
+  "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT",
   "role": "Tricky"
 }
