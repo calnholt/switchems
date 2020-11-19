@@ -1,7 +1,6 @@
 <div id="print-all">
   <div class="container">
     <div class="header">
-      <h2>Select which cards you'd like to print:</h2>
       <mat-checkbox [(ngModel)]="isAllToggle" (change)="toggleAll(allMonsters)">Select All?</mat-checkbox>
       <mat-checkbox 
         [(ngModel)]="extraCardFlg"
@@ -14,6 +13,15 @@
         <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
         <mat-datepicker #picker1></mat-datepicker>
       </mat-form-field>
+      <dropdown
+        style="width:inherit;"
+        [label]="'Terms'"
+        [model]="selectedTerms"
+        [property]="'terms'"
+        [options]="termOptions"
+        [multi]="true"
+        (selectionChange)="onTermSelect()">
+      </dropdown>
       <button 
         mat-stroked-button (click)="loadPrevious()">Load Last Print
       </button>

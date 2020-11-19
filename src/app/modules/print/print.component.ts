@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { loadMonsters } from '../import/json-to-obj';
 import { Router } from '@angular/router';
 import { FormControl } from '@angular/forms';
+import { TERM_KEYS } from 'src/app/types/dataTypes';
 
 @Component({
   selector: 'print',
@@ -15,6 +16,8 @@ export class PrintComponent implements OnInit {
   extraCardFlg: boolean = false;
   isAllToggle: boolean = true;
   date = new FormControl(new Date());
+  selectedTerms = {terms: Array<string>()};
+  termOptions = Array<string>();
   constructor(
     private router: Router,
     private monsterService: MonsterService,
@@ -24,6 +27,9 @@ export class PrintComponent implements OnInit {
     const allMonsters: MonsterComplete[] = this.monsterService.getMonsters();
     this.toggleAll(allMonsters);
     this.allMonsters = allMonsters;
+    TERM_KEYS.forEach(term => {
+      this.termOptions.push(`${term.substring(1, 2).toUpperCase()}${term.substring(2, term.length - 1).toLowerCase()}`);
+    });
   }
 
   toggleAll(allMonsters: MonsterComplete[]) {
@@ -88,10 +94,22 @@ export class PrintComponent implements OnInit {
         if (buff.lastUpdated) {
           const lastUpdated = new Date(buff.lastUpdated);
           buff.isSelected = lastUpdated > printDate;
-          monster.referenceFlg = buff.isSelected || monster.referenceFlg;
         } else {
           buff.isSelected = false;
         }
+      });
+    });
+  }
+
+  onTermSelect() {
+    this.allMonsters.forEach(monster => {
+      this.selectedTerms.terms.forEach(term => {
+        const formattedTerm = `~${term.toUpperCase()}~`;
+        monster.isSelected = monster.abilityText.includes(formattedTerm) || monster.isSelected;
+        monster.actions.forEach(a => a.isSelected = a.abilityText.includes(formattedTerm) || a.isSelected);
+        monster.buffs.forEach(b => {
+          return b.isSelected = b.buffText.includes(formattedTerm) || b.flipEventText.includes(formattedTerm) || b.isSelected;
+        });
       });
     });
   }

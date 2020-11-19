@@ -54,7 +54,7 @@ export const MODIFIER_OPTIONS_NEG = [0, -1, -2, -3, -4, -5, `X`];
 export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
-const TERM_KEYS = [`~WOUND~`, `~SUCCESS~`, `~FLINCH~`, `~LEECH~`, `~FATIGUE~`,
+export const TERM_KEYS = [`~WOUND~`, `~SUCCESS~`, `~FLINCH~`, `~LEECH~`, `~FATIGUE~`,
     `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~SUPER~`, `~FASTER~`, `~SLOWER~`, 
     `~GOOP~`, `~ETHEREAL~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`, `~CRUSH~`] as const;
 export type TermCode = typeof TERM_KEYS[number];
