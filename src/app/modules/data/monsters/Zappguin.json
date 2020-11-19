@@ -14,7 +14,8 @@
       "draw": 0,
       "discard": 2,
       "buff": 0,
-      "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
+      "modifier": 3,
+      "lastUpdated": "Wed, 18 Nov 2020 23:14:04 GMT"
     },
     {
       "abilityName": "Ice Blast",
@@ -27,7 +28,8 @@
       "draw": 0,
       "discard": 1,
       "buff": 1,
-      "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
+      "modifier": 2,
+      "lastUpdated": "Wed, 18 Nov 2020 23:14:04 GMT"
     },
     {
       "abilityName": "Vortex",
@@ -40,7 +42,8 @@
       "draw": 0,
       "discard": 0,
       "buff": 1,
-      "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
+      "modifier": 1,
+      "lastUpdated": "Wed, 18 Nov 2020 23:14:04 GMT"
     },
     {
       "abilityName": "Paralyze",
