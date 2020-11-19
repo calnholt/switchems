@@ -45,7 +45,7 @@
     },
     {
       "abilityName": "Reverse Polarity",
-      "abilityText": "Remove three [NQ] from this monster, starting with all your monster's [SPD][NQ] first, then all of your monster's [ATK][NQ]. For each [NQ] removed, the enemy monster gains [NQ] of the type removed.",
+      "abilityText": "Remove up to three [NQ] from this monster. For each [NQ] removed, the enemy monster gains [NQ] of the type removed.",
       "element": "Electric",
       "auraDuration": 0,
       "statusFlg": true,
@@ -93,7 +93,7 @@
   "abilityText": "If this monster switched in this turn and the enemy monster attacked, that attack is <b>unsuccessful</b> and this monster gains <div>[SPD][NQ], [ATK][NQ].</div>~SUCCESS~",
   "hp": 11,
   "complexity": 3,
-  "promiseDescription": "Galvanite's <b>absorb</b> ability turns your switch action into the ultimate defensive maneuver. Leverage this opportunistically. Knowing when to switch out with Galvanite is equally important – sometimes your accumulated [NQ] can't be transformed into a benefit, so it's more advantageous to wipe them off.",
+  "promiseDescription": "Leverage your [NQ] as benefit!",
   "initiative": 25,
   "lastUpdated": "Tue, 17 Nov 2020 22:31:31 GMT",
   "role": "Warrior"
