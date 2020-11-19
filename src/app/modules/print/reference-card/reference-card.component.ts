@@ -1,4 +1,6 @@
+import { getAbilityText } from './../../common/cards';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Css } from 'src/app/types/dataTypes';
 
 @Component({
   selector: 'reference-card',
@@ -7,13 +9,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   // needed to render [innerHTML] class styling
   encapsulation: ViewEncapsulation.None,
 })
-export class ReferenceCardComponent implements OnInit {
+export class ReferenceCardComponent {
+  TERM_CSS: Css = 'term';
+  ABILITY_IMG_CSS: Css = 'term-img';
 
   referenceCardText: any = [
-    {
-      title: 'Start Phase',
-      items: ['All abilities that trigger at the start of turn occur now.']
-    },
     {
       title: 'Selection Phase',
       items: ['Both players secretly place their action cube on one of the actions on '
@@ -35,6 +35,7 @@ export class ReferenceCardComponent implements OnInit {
       items: [
         'Activate end of turn abilities.',
         'Remove one time counter from each Team Aura.',
+        'Remove a [DEF][PQ] from your active monster, if applicable.',
         'Draw a card.',
       ]
     },
@@ -42,7 +43,9 @@ export class ReferenceCardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  getFormattedText(text: string): string {
+    return getAbilityText(text, this.TERM_CSS, this.ABILITY_IMG_CSS);
   }
+
 
 }

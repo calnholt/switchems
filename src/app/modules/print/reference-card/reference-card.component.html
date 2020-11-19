@@ -6,7 +6,7 @@
         <div class="ref-title">{{ref.title}}</div>
         <ul>
           <li *ngFor="let item of ref.items">
-            <span>{{item}}</span>
+            <span [innerHTML]="getFormattedText(item)"></span>
             <ol *ngIf="ref.subOrderedItems">
               <li *ngFor="let subOrderedItem of ref.subOrderedItems">
                 <span>{{subOrderedItem}}</span>
