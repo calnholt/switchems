@@ -54,7 +54,7 @@ export const MODIFIER_OPTIONS_NEG = [0, -1, -2, -3, -4, -5, `X`];
 export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
-export const TERM_KEYS = [`~WOUND~`, `~SUCCESS~`, `~FLINCH~`, `~LEECH~`, `~FATIGUE~`,
+export const TERM_KEYS = [`~WOUND~`, `~SUCCESS~`, `~FLINCH~`, `~DRAIN~`, `~FATIGUE~`,
     `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~SUPER~`, `~FASTER~`, `~SLOWER~`, 
     `~GOOP~`, `~ETHEREAL~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`, `~CRUSH~`] as const;
 export type TermCode = typeof TERM_KEYS[number];
@@ -69,7 +69,7 @@ export const TERM_CODES = [
      new Term(`~FLINCH~`, `Actions with flinch prevent the enemy monster's monster action if this action is faster.`),
      new Term(`~GOOP~`, `If you do not have <b>Oozygoopz</b> on your team, goop buffs have no buff effect and are returned `
      + `to its owner's discard pile when played as a buff.`),
-     new Term(`~LEECH~`, `At the end of the turn, leeched monsters suffer <div>1[ATK]</div> and your active monster heals `
+     new Term(`~DRAIN~`, `At the end of the turn, drained monsters suffer <div>1[ATK]</div> and your active monster heals `
      + `<div>1[HP].`),
      new Term(`~STUN~`, `Stunned monster's switch actions happen after monster actions.`),
      new Term('~PIERCE~', `Attacks with pierce ignore the enemy monster's [DEF].`),
@@ -78,7 +78,7 @@ export const TERM_CODES = [
      new Term(`~RESIST~`, `Monsters are resistant to elements found on the bottom right of their monster card.`),
      new Term(`~SINGLE~`, `Single use actions recharge on switch and are considered used if this action is prevented.`),
      new Term(`~SLOWER~`, `This action is slower if both players select a monster action and yours has a lower speed.`),
-     new Term(`~STATUS~`, `Status conditions [STATUS] – wound, fatigue, leech, stun.`),
+     new Term(`~STATUS~`, `Status conditions [STATUS] – wound, fatigue, drain, stun.`),
      new Term(`~SUCCESS~`, `Unsuccessful actions do nothing.`),
      new Term(`~SUPER~`, `Supers require and use two [B] slots.`),
      new Term(`~SWITCH~`, `Switch in abilities also trigger at the start of the game and following a monster KO.`),

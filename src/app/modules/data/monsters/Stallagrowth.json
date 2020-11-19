@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Leech Seed",
-      "abilityText": "<b>Leech [STATUS]</b> ~LEECH~",
+      "abilityText": "<b>Drain [STATUS]</b> ~DRAIN~",
       "element": "Leaf",
       "auraDuration": null,
       "statusFlg": true,
@@ -79,7 +79,7 @@
     {
       "buffName": "Concussion",
       "timing": "With Attack",
-      "buffText": "If this action is <b>faster</b>, this attack gains <b>flinch</b>.~FASTER~~FLINCH~",
+      "buffText": "This attack gains <b>flinch</b>.~FLINCH~",
       "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "flipEventFlg": true,
       "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
@@ -87,7 +87,7 @@
     {
       "buffName": "Gravelcrust Grip",
       "timing": "With Attack",
-      "buffText": "<b>Super, Ethereal, Leech [STATUS]</b> ~SUPER~~ETHEREAL~~LEECH~",
+      "buffText": "<b>Super, Ethereal, Drain [STATUS]</b> ~SUPER~~ETHEREAL~~DRAIN~",
       "flipEventText": "This attack gains <b>flinch</b>.~FLINCH~",
       "flipEventFlg": true,
       "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"

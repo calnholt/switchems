@@ -86,7 +86,7 @@
       "buffName": "Hungry Goop",
       "timing": "Post Actions",
       "buffText": "<b>Super, Goop</b>. This attack gains <div>+X+2[ATK],</div> where X is the number of <b>goop</b> cards in the opponent's discard pile. Shuffle this card into your opponent's deck.~GOOP~",
-      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div><b>leech</b> [STATUS].</div> If you do, this monster heals <div>1[HP].</div>",
+      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div><b>drain</b> [STATUS].</div> If you do, this monster heals <div>1[HP].</div>",
       "flipEventFlg": true,
       "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     }
@@ -98,6 +98,6 @@
   "complexity": 3,
   "promiseDescription": "Drive your opponent crazy by loading their deck up with a bunch of painfully useless goop!",
   "initiative": 15,
-  "role": "Support",
-  "lastUpdated": "Mon, 17 Nov 2020 08:58:22 GMT"
+  "lastUpdated": "Mon, 17 Nov 2020 08:58:22 GMT",
+  "role": "Support"
 }
