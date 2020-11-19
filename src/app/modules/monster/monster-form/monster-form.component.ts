@@ -1,4 +1,3 @@
-import { loadMonster } from './../../import/json-to-obj';
 import { TERM_CODES, IMAGE_CODES, CardTypes, ROLES, ELEMENTS, Css } from './../../../types/dataTypes';
 import { MonsterComplete, Action, Buff } from './../model/monster';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
@@ -28,7 +27,7 @@ export class MonsterFormComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private monsterServce: MonsterService,
+    private monsterSerivce: MonsterService,
   ) {}
 
   ngOnInit() {
@@ -36,20 +35,24 @@ export class MonsterFormComponent implements OnInit {
       this.selectedCard = 'MONSTER';
       const monsterName: string = this.route.snapshot.paramMap.get('monsterName');
       if (monsterName === 'builder') {
-        this.monster = new MonsterComplete();
-        this.monster.hp = this.getRandomNumber(20) + 1;
-        this.monster.complexity = this.getRandomNumber(3) + 1;
-        this.monster.role = ROLES[this.getRandomNumber(ROLES.length)];
-        this.monster.savedFlg = true;
-        this.monster.elements = [ELEMENTS[this.getRandomNumber(ELEMENTS.length)]];
-        this.monster.actions.push(new Action(), new Action(), new Action(), new Action());
-        this.monster.actions.forEach(a => a.element = ELEMENTS[this.getRandomNumber(ELEMENTS.length)]);
-        this.monster.buffs.push(new Buff(), new Buff(), new Buff(), new Buff());
+        this.createRandomMonster();
       } else {
-        this.monster = this.monsterServce.getMonster(monsterName);
+        this.monster = this.monsterSerivce.getMonster(monsterName);
       }
       this.originalMonster = Object.assign({}, this.monster);
     });
+  }
+
+  createRandomMonster() {
+    this.monster = new MonsterComplete();
+    this.monster.hp = this.getRandomNumber(20) + 1;
+    this.monster.complexity = this.getRandomNumber(3) + 1;
+    this.monster.role = ROLES[this.getRandomNumber(ROLES.length)];
+    this.monster.savedFlg = true;
+    this.monster.elements = [ELEMENTS[this.getRandomNumber(ELEMENTS.length)]];
+    this.monster.actions.push(new Action(), new Action(), new Action(), new Action());
+    this.monster.actions.forEach(a => a.element = ELEMENTS[this.getRandomNumber(ELEMENTS.length)]);
+    this.monster.buffs.push(new Buff(), new Buff(), new Buff(), new Buff());
   }
 
   getRandomNumber(max: number) {
@@ -74,11 +77,11 @@ export class MonsterFormComponent implements OnInit {
   }
 
   save() {
-    this.monsterServce.saveMonster(this.monster);
+    this.monsterSerivce.saveMonster(this.monster);
   }
 
   delete() {
-    this.monsterServce.deleteMonsterLocalStorage(this.monster);
+    this.monsterSerivce.deleteMonsterLocalStorage(this.monster);
   }
 
   // a little janky but for now it's fine
@@ -105,7 +108,7 @@ export class MonsterFormComponent implements OnInit {
   }
 
   setLastUpdated(monsterToCopy: MonsterComplete): MonsterComplete {
-    const savedMonsterComplete = this.getCleanMonster(loadMonster(monsterToCopy.monsterName));
+    const savedMonsterComplete = this.getCleanMonster(this.monsterSerivce.getMonster(monsterToCopy.monsterName));
     const offset = -300; // Timezone offset for EST in minutes.
     const estDate = new Date(new Date().getTime() + offset * 60 * 1000);
     const today = estDate.toUTCString();
@@ -124,20 +127,20 @@ export class MonsterFormComponent implements OnInit {
     delete currentMonster.buffs;
     // compare each, and if differences, set lastUpdated property
     // monster
-    if (!this.compareStringifiedJSON(currentMonster, savedMonster)) {
+    if (!this.compareStringifiedJSON(currentMonster, savedMonster) || !savedMonsterComplete.lastUpdated) {
       monsterToCopy.lastUpdated = today;
     }
     // actions
     currentMonsterActions.forEach((currentAction, i) => {
       const savedAction = savedMonsterActions[i];
-      if (!this.compareStringifiedJSON(currentAction, savedAction)) {
+      if (!this.compareStringifiedJSON(currentAction, savedAction) || !savedAction.lastUpdated) {
         monsterToCopy.actions[i].lastUpdated = today;
       }
     });
     // buffs
     currentMonsterBuffs.forEach((currentBuff, i) => {
       const savedBuff = savedMonsterBuffs[i];
-      if (!this.compareStringifiedJSON(currentBuff, savedBuff)) {
+      if (!this.compareStringifiedJSON(currentBuff, savedBuff) || !savedBuff.lastUpdated) {
         monsterToCopy.buffs[i].lastUpdated = today;
       }
     });
