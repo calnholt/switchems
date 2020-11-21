@@ -1,0 +1,11 @@
+<div id="rulebook" class="container">
+  <div class="section" *ngFor="let section of rulebook">
+    <div *ngIf="section.title" class="title" [innerHTML]="display(section.title)"></div>
+    <div *ngFor="let block of section.blocks">
+      <div *ngIf="block.text" class="text" [innerHTML]="display(block.text)"></div>
+      <ng-container *ngIf="block.ul || block.ol">
+        <rulebook-list [item]="block" [displayFnc]="display"></rulebook-list>
+      </ng-container>
+    </div>
+  </div>
+</div>

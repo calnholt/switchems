@@ -1,0 +1,22 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#rulebook-number {
+    position: relative;
+    background: black;
+    height: 80px;
+    width: 80px;
+    border-radius: 55px;
+    border: solid 4px black;
+    div {
+        font-family: $beastformer;
+        font-size: 76px;
+        top: 24px;
+        right: 15px;
+        color: white;
+        position: absolute;
+        &.n1 {
+            right: 26px;
+        }
+    }
+}
