@@ -15,7 +15,7 @@
                 .image {
                     display: flex;
                     justify-content: center;
-                    &.monster {
+                    &.monster,&.action {
                         padding: 19px;
                     }
                 }
@@ -32,11 +32,11 @@
                 height: 37px;
             }
             .text{
-        
+                margin-bottom: 10px;
             }
         }
         ul,ol{
-            margin-bottom: unset;
+            margin-bottom: 10px;
         }
         h1 {
             font-family: $beastformer;

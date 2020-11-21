@@ -1,0 +1,44 @@
+#rulebook-action {
+    position: relative;
+    .num {
+        position: absolute;
+        z-index: 20;
+        transform: scale(0.4);
+        &.num-1 {
+            top: -37px;
+            left: -33px;
+        }
+        &.num-2 {
+            top: 17px;
+            left: -43px;
+        }
+        &.num-3 {
+            top: 17px;
+            left: 51px;
+        }
+        &.num-4 {
+            top: 17px;
+            left: 196px;
+        }
+        &.num-5 {
+            top: 63px;
+            left: -38px;
+        }
+        &.num-6 {
+            top: 177px;
+            left: 75px;
+        }
+        &.num-7 {
+            top: 294px;
+            left: -52px;
+        }
+        &.num-8 {
+            top: 284px;
+            left: 74px;
+        }
+        &.num-9 {
+            top: 294px;
+            left: 203px;
+        }
+    }
+}

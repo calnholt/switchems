@@ -1,4 +1,4 @@
-import { MonsterComplete } from './../../monster/model/monster';
+import { MonsterComplete } from './../../../monster/model/monster';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({

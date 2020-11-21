@@ -1,7 +1,6 @@
+import { RulebookActionComponent } from './rulebook-image/rulebook-action/rulebook-action.component';
 import { RulebookImageComponent } from './rulebook-image/rulebook-image.component';
-import { RulebookMonsterComponent } from './rulebook-monster/rulebook-monster.component';
 import { RulebookListComponent } from './rulebook-list/rulebook-list.component';
-import { RulebookNumberComponent } from './rulebook-number/rulebook-number.component';
 import { RulebookRoutes } from './rulebook.routing';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -11,6 +10,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MonsterModule } from '../monster/monster.module';
 import { CommonComponentsModule } from '../common/common-components.module';
 import { RulebookComponent } from './rulebook.component';
+import { RulebookNumberComponent } from './rulebook-image/rulebook-number/rulebook-number.component';
+import { RulebookMonsterComponent } from './rulebook-image/rulebook-monster/rulebook-monster.component';
 
 @NgModule({
     imports: [
@@ -29,6 +30,7 @@ import { RulebookComponent } from './rulebook.component';
       RulebookListComponent,
       RulebookMonsterComponent,
       RulebookImageComponent,
+      RulebookActionComponent,
     ],
     exports: [
       RulebookComponent,
@@ -36,6 +38,7 @@ import { RulebookComponent } from './rulebook.component';
       RulebookListComponent,
       RulebookMonsterComponent,
       RulebookImageComponent,
+      RulebookActionComponent,
     ]
   })
 export class RulebookModule { }
