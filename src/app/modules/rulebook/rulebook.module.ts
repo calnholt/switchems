@@ -1,3 +1,5 @@
+import { RulebookImageComponent } from './rulebook-image/rulebook-image.component';
+import { RulebookMonsterComponent } from './rulebook-monster/rulebook-monster.component';
 import { RulebookListComponent } from './rulebook-list/rulebook-list.component';
 import { RulebookNumberComponent } from './rulebook-number/rulebook-number.component';
 import { RulebookRoutes } from './rulebook.routing';
@@ -25,11 +27,15 @@ import { RulebookComponent } from './rulebook.component';
       RulebookComponent,
       RulebookNumberComponent,
       RulebookListComponent,
+      RulebookMonsterComponent,
+      RulebookImageComponent,
     ],
     exports: [
       RulebookComponent,
       RulebookNumberComponent,
       RulebookListComponent,
+      RulebookMonsterComponent,
+      RulebookImageComponent,
     ]
   })
 export class RulebookModule { }

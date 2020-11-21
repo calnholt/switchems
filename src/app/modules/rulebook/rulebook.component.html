@@ -1,11 +1,18 @@
 <div id="rulebook" class="container">
-  <div class="section" *ngFor="let section of rulebook">
-    <div *ngIf="section.title" class="title" [innerHTML]="display(section.title)"></div>
-    <div *ngFor="let block of section.blocks">
-      <div *ngIf="block.text" class="text" [innerHTML]="display(block.text)"></div>
-      <ng-container *ngIf="block.ul || block.ol">
-        <rulebook-list [item]="block" [displayFnc]="display"></rulebook-list>
-      </ng-container>
+  <ng-container *ngFor="let section of rulebook">
+    <div class="section {{section.columns ? 'columns-' + section.columns : ''}}" [ngClass]="{'has-image' : section.rulebookImage}">
+      <div>
+        <div *ngIf="section.title" class="title" [innerHTML]="display(section.title)"></div>
+        <div *ngFor="let block of section.blocks">
+          <div *ngIf="block.text" class="text" [innerHTML]="display(block.text)"></div>
+          <ng-container *ngIf="block.ul || block.ol">
+            <rulebook-list [item]="block" [displayFnc]="display"></rulebook-list>
+          </ng-container>
+        </div>
+      </div>
+      <div *ngIf="section.rulebookImage" class="image {{section.rulebookImage.toLowerCase()}}">
+        <rulebook-image [type]="section.rulebookImage" [monster]="monsterExample"></rulebook-image>
+      </div>
     </div>
-  </div>
+  </ng-container>
 </div>

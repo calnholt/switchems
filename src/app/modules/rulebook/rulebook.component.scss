@@ -2,32 +2,50 @@
 @import 'src/styles.scss';
 
 #rulebook {
-    .section {
-        background: #f1f1f1;
-        padding: 15px;
-        border-radius: 9px;
-        margin-bottom: 15px;
-        .title {
-            text-decoration: underline;
+    &.container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        .section {
+            &.columns-2 {
+                grid-column: span 2;
+            }
+            &.has-image {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                .image {
+                    display: flex;
+                    justify-content: center;
+                    &.monster {
+                        padding: 19px;
+                    }
+                }
+            }
+            background: #f1f1f1;
+            padding: 15px;
+            border-radius: 9px;
+            margin: 10px;
+            .title {
+                text-decoration: underline;
+                font-family: $beastformer;
+                font-size: 40px;
+                text-align: center;
+                height: 37px;
+            }
+            .text{
+        
+            }
+        }
+        ul,ol{
+            margin-bottom: unset;
+        }
+        h1 {
             font-family: $beastformer;
-            font-size: 40px;
+            text-decoration: underline;
+            margin-bottom: unset;
             text-align: center;
-            height: 37px;
+            height: 42px;
+            font-size: 30px;
+            margin-top: 7px;
         }
-        .text{
-    
-        }
-    }
-    ul,ol{
-        margin-bottom: unset;
-    }
-    h1 {
-        font-family: $beastformer;
-        text-decoration: underline;
-        margin-bottom: unset;
-        text-align: center;
-        height: 42px;
-        font-size: 30px;
-        margin-top: 7px;
     }
 }

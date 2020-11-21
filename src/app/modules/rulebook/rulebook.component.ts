@@ -1,13 +1,18 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Css } from 'src/app/types/dataTypes';
 import { getAbilityText } from '../common/cards';
+import { MonsterService } from '../monster/monster.service';
+import { MonsterComplete } from '../monster/model/monster';
+
+export type RulebookImageType = 'Setup' | 'Monster' | 'Action' | 'Buff' | 'Stat-Cube' | 'Action-Board' | 'Standard' | 'Buff-Ex';
 
 export interface RulebookSection {
   title?: string;
   blocks: Array<RulebookBlock>;
+  columns?: number;
+  rulebookImage?: RulebookImageType;
 }
-
-export interface RulebookBlock {
+export class RulebookBlock {
   text?: string;
   ul?: Array<RulebookBlock>;
   ol?: Array<RulebookBlock>;
@@ -21,7 +26,17 @@ export interface RulebookBlock {
 export class RulebookComponent implements OnInit {
   TERM_CSS: Css = 'term';
   ABILITY_IMG_CSS: Css = 'term-img';
+  monsterExample: MonsterComplete;
   rulebook: Array<RulebookSection> = [
+    {
+      title: 'How to Win',
+      columns: 2,
+      blocks: [
+        {
+          text: 'Knockout (KO) all three of your opponent’s monsters to win. Monsters are KO’d when their HP is reduced to 0.'
+        }
+      ]
+    },
     {
       title: 'Components',
       blocks: [{
@@ -136,6 +151,8 @@ export class RulebookComponent implements OnInit {
     },
     {
       title: 'Monster Cards',
+      rulebookImage: 'Monster',
+      columns: 2,
       blocks: [
         {
           ol: [
@@ -143,19 +160,19 @@ export class RulebookComponent implements OnInit {
               text: 'Monster name',
             },
             {
+              text: 'Elements of the monster',
+            },
+            {
               text: 'Monster ability name and ability text',
-            },
-            {
-              text: 'HP (hit points)',
-            },
-            {
-              text: 'Elements of the monster (this monster is of both Rock and Leaf elements)',
             },
             {
               text: 'Role (loosely describes the moster’s playstyle) and complexity (loosely describes how hard the monster is to play)',
             },
             {
               text: 'Initiative (breaks speed ties)',
+            },
+            {
+              text: 'HP (hit points)',
             },
             {
               text: 'Elemental weaknesses (takes more damage from attacks of these elements)',
@@ -302,15 +319,8 @@ export class RulebookComponent implements OnInit {
       ]
     },
     {
-      title: 'How to Win',
-      blocks: [
-        {
-          text: 'Knockout (KO) all three of your opponent’s monsters to win. Monsters are KO’d when their HP is reduced to 0.'
-        }
-      ]
-    },
-    {
       title: 'Selection Phase',
+      columns: 2,
       blocks: [
         {
           text: 'During the Selection Phase, you will secretly place your action cube on one of the 8 spaces on your action board. These 8 actions are split into 3 groups: Monster Actions, Standard Actions, and Switch Actions. <br><br><b>NOTE:</b> When you select any action, you must place your remaining hand face down behind your action screen on the Hand section.',
@@ -388,6 +398,7 @@ export class RulebookComponent implements OnInit {
     },
     {
       title: 'Monster Actions Detailed',
+      columns: 2,
       blocks: [
         {
           text: 'Monster Actions come in three types - attack [ATK], special [SPECIAL], and team aura [TA]. Regardless of the type, Monster Actions may require you to discard a number of cards in order to use, as denoted by the number of these discard symbols [-].. This is known as an action’s discard cost. You must discard a number of cards from your hard equal to the discard cost of the action. This is done behind your player shields and before reveal. If you have fewer cards in your hand than the action’s discard cost, you cannot use that action.'
@@ -428,15 +439,169 @@ export class RulebookComponent implements OnInit {
           text: 'NOTE: When a monster has a Team Aura with time counters on it and switches, keep that Team Aura action card visible to show that its effect is still active. When all of the time counters are removed, return the card to the monster.',
         }
       ]
+    },
+    {
+      title: 'Buff Timing',
+      blocks: [
+        {
+          text: 'Buff Cards have three stages of timing, which denote when they occur during the turn. These timings are Pre-Action, With Attack, and Post Actions.',
+          ul: [
+            {
+              text: '<b>Pre-Actions (I):<b>',
+              ul: [
+                {
+                  text: 'Buff Cards with Pre-Action timing occur before any actions occur. These buffs are resolved in initiative order.'
+                }
+              ]
+            },
+            {
+              text: 'With Attack (II):',
+              ul: [
+                {
+                  text: 'Buff Cards that have With Attack timing occur when that player’s selected monster attack action is being resolved, but before calculating damage.'
+                },
+                {
+                  text: 'NOTE: If an attack action applied with a With Attack timing buff is prevented by another ability (like flinch), the attack never occurs, therefore the buff’s ability is prevented.'
+                }
+              ]
+            },
+            {
+              text: 'Post Action (III):',
+              ul: [
+                {
+                  text: 'Buff Cards with Post Action timing occur after all monster actions have been resolved. These buffs are resolved in initiative order.'
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      title: 'Standard Buff Cards',
+      blocks: [
+        {
+          text: 'When forming your buff deck at the start of a game, both you must include these two Standard buff cards. Including these in player’s decks makes switching monsters potentially less safe. It’s wise to be aware of how many of these are in your opponent’s discard pile.'
+        }
+      ]
+    },
+    {
+      title: 'Stat Cube Board',
+      blocks: [
+        {
+          text: 'Some abilities have monster’s gaining stat cubes. Stat cubes modify your active monster’s stats. These can either be beneficial or detrimental.',
+        },
+        {
+          text: 'When gaining positive stat cubes [PQ], place the number of cubes on the corresponding green space. When gaining negative stat cubes [NQ], place the number of cubes on the corresponding red space. If you gain positive cubes for stats that you already have negative cubes for, instead remove the negative cubes (and vice versa). Each stat has a maximum number of cubes, as denoted on the section.'
+        },
+        {
+          text: 'The bottom of the board is used to track how many maneuver cubes you have used. When you use a maneuver cube, place it on the right-most available slot.'
+        },
+        {
+          text: '<h1>Attack Stat Cubes</h1>Attack Stat Cubes modify the damage value for all of your monster attack actions. If you have 3[ATK][PQ] stat cubes, each of your active monster’s attack actions deal an additional 3 damage. Likewise, if you have 3[ATK][NQ] stat cubes, each of your active monster’s attack actions deal 3 damage less. Remember, attacks always deal at least 1 damage, even if the value is negative!'
+        },
+        {
+          text: '<h1>Speed Stat Cubes</h1>Speed Stat Cubes modify the speed value of all monster actions. If you have 3[PQ] stat cubes, each of your active monster’s actions are 3 faster. Likewise, if you have 3[NQ] stat cubes, each of your active monster’s actions are 3 speed slower.',
+        },
+        {
+          text: '<b>NOTE:</b> Monster actions can never have a speed higher than 9 and lower than 0.'
+        },
+        {
+          text: '<h1>Defense Stat Cubes</h1>Defense Stat Cubes reduce the amount of damage your monster takes from attacks. These work differently from Attack and Speed cubes. No matter how many [DEF][PQ] your monster has, your monster gains +2[DEF]. During the end of turn phase, remove one [DEF][PQ].'
+        },
+      ]
+    },
+    {
+      title: 'Flip Effects',
+      blocks: [
+        {
+          text: 'All buff cards have a flip effect [FLIP], found at the bottom of the card. Sometimes effects have you flip the top card of your deck when resolving a monster attack, denoted by this symbol [FLIP]. For each [FLIP] symbol, flip the top card of your deck and apply its flip effect.'
+        },
+        {
+          text: 'For example, when this card is flipped, your attack gains +1[ATK].'
+        }
+      ]
+    },
+    {
+      title: 'End Phase',
+      blocks: [
+        {
+          text: 'After you and your opponent have resolved your actions:',
+          ul: [
+            {
+              text: 'Resolve any end of turn abilities in initiative order',
+            },
+            {
+              text: 'Remove one time counter from each Team Aura',
+            },
+            {
+              text: 'Remove one [DEF][PQ] from your monster, if applicable'
+            },
+            {
+              text: 'Draw one card'
+            }
+          ]
+        },
+        {
+          text: 'After this has been done, a new turn begins with the Selection Phase.'
+        }
+      ]
+    },
+    {
+      title: 'Status Conditions [STATUS]',
+      blocks: [
+        {
+          text: 'Many monsters have actions or buffs that apply certain status conditions [STATUS]. All [STATUS] remain on monsters until the end of the game unless removed by an effect or chosen to be removed on switch. Here is a list of all [STATUS]:',
+          ul: [
+            {
+              text: 'Fatigue ~FATIGUE~'
+            },
+            {
+              text: 'Wound ~WOUND~'
+            },
+            {
+              text: 'Drain ~DRAIN~'
+            },
+            {
+              text: 'Stun ~STUN~'
+            },
+          ]
+        }
+      ]
+    },
+    {
+      title: 'KO’d Monsters',
+      blocks: [
+        {
+          text: 'Monsters are KO’d when their health points are reduced to 0. Whenever a monster is KO’d, remove ALL cubes from that monster’s stat cube board, and the player controlling that monster selects one of their other monsters to be their new active monster.',
+        },
+        {
+          text: 'NOTE: KO’d monsters can never recover HP.'
+        }
+      ]
+    },
+    {
+      title: 'Deck & Hand Limit',
+      blocks: [
+        {
+          text: 'Whenever you need to draw cards from your deck but your deck is empty, shuffle your discard pile to form a new deck. Then draw the requisite number of cards.'
+        },
+        {
+          text: 'Players have a hand limit of five cards. If players would draw cards while having five cards in their hand, players do not draw additional cards.'
+        }
+      ]
     }
 ];
 
 
 
-constructor() { }
+  constructor(private monsterService: MonsterService) { 
+    const index: number = Math.floor((Math.random() * this.monsterService.getMonsters().length));
+    this.monsterExample = this.monsterService.getMonsters()[index];
+    console.log(this.monsterExample);
+  }
 
-ngOnInit() {
-  console.log(this.rulebook);
+  ngOnInit() {
   }
 
   display(text: string): string {
