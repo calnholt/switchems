@@ -29,7 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ToolbarComponent,
     DropdownComponent,
     TextInputComponent,
-    NumberInputComponent
+    NumberInputComponent,
   ]
 })
 export class CommonComponentsModule { }
