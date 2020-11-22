@@ -35,7 +35,7 @@ export class ReferenceCardComponent {
       items: [
         'Activate end of turn abilities.',
         'Remove one time counter from each Team Aura.',
-        'Remove a [DEF][PQ] from your active monster, if applicable.',
+        'Remove one [DEF][PQ] from your active monster, if applicable.',
         'Draw a card.',
       ]
     },
