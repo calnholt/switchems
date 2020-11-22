@@ -2,6 +2,21 @@ import { RulebookSection } from '../rulebook/rulebook.component';
 
 export const rulebook: Array<RulebookSection> = [
     {
+      title: 'Switchems!',
+      columns: 2,
+      blocks: [
+        {
+          text: 'Leverage your team of monsters in this exciting two-player card game',
+        },
+        {
+          text: 'v.0.5.0',
+        },
+        {
+          text: '2 Players   |   30 - 60 Minutes   |   Ages 12+',
+        }
+      ]
+    },
+    {
       title: 'How to Win',
       columns: 2,
       blocks: [
@@ -83,7 +98,7 @@ export const rulebook: Array<RulebookSection> = [
       title: 'Modes of Play',
       blocks: [
       {
-        text: 'There are a couple different modes of play in OverRealm:',
+        text: 'There are a couple different modes of play in <b>Switchems!</b>:',
       },
       {
         ul: [

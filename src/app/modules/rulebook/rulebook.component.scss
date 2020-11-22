@@ -6,6 +6,28 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         .section {
+            // title styles
+            &:nth-child(-n+2) {
+                text-align: center;
+            }
+            &:first-child {
+                margin-top: 20px;
+                font-size: 22px;
+                .title { 
+                    text-decoration: unset;
+                    font-size: 100px;
+                    line-height: 110px;
+                    letter-spacing: -3px;
+                }
+                div {
+                    &:nth-child(3) {
+                        font-size: 12px; // version text
+                    }
+                    &:nth-child(4) {
+                        font-size: 16px; // game info text
+                    }
+                }
+            }
             &.columns-2 {
                 grid-column: span 2;
             }
@@ -29,7 +51,7 @@
                 font-family: $beastformer;
                 font-size: 40px;
                 text-align: center;
-                height: 37px;
+                line-height: 50px;
             }
             .text{
                 margin-bottom: 10px;
