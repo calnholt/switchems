@@ -12,14 +12,14 @@
       "attack": 4,
       "speed": 5,
       "draw": 0,
-      "discard": 2,
+      "discard": 3,
       "buff": 0,
       "modifier": 3,
       "lastUpdated": "Wed, 18 Nov 2020 23:14:04 GMT"
     },
     {
       "abilityName": "Ice Blast",
-      "abilityText": "If this attack is <b>faster</b>, this attack gains [FLIP] [FLIP] [FLIP]. ~FASTER~",
+      "abilityText": "If this attack is <b>faster</b>, [FLIP] [FLIP] [FLIP]. ~FASTER~",
       "element": "Water",
       "auraDuration": 0,
       "statusFlg": false,
