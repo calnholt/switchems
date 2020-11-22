@@ -5,119 +5,89 @@
   ],
   "actions": [
     {
-      "abilityName": "Adaptive Mists",
-      "abilityText": "If the discarded card is <div>[SUCC],</div> put a <b>water</b> counter on this. Otherwise put a <b>fire</b> counter on this. <br><br>If <b>water</b> counter: enemy monster <div>[W] [E] [F]</div> attacks deal <div>-2[ATK]</div><br><br>If <b>fire</b> counter: enemy monster<br> <div>[L] [R] [S]</div> attacks deal <div>-2[ATK]</div>",
+      "abilityName": "Benevolent Mists",
+      "abilityText": "Whenever you use buff an attack, [FLIP].",
       "element": "Water",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "auraDuration": 7,
+      "auraDuration": 8,
       "statusFlg": false,
-      "reactionFlg": false,
-      "speed": 7,
-      "draw": 2,
-      "discard": 1,
-      "buff": 0
+      "speed": 8,
+      "draw": 1,
+      "discard": 0,
+      "buff": 0,
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
     },
     {
-      "abilityName": "Steampowered",
-      "abilityText": "If you have one or more active [TA], you may remove two time counters from one. If you do, this attack gains:<br><br>[1]: +{\"positive\": 3, \"neutral\": 2, \"negative\": 1}[ATK]",
+      "abilityName": "Friends Forever",
+      "abilityText": "If you have at least one other non-KO'd monster on your team and each of your non-KO'd monsters have one or more [WISH] counters, <b>drain</b> [STATUS]. <b>Single use</b>.~DRAIN~",
       "element": "Water",
-      "modifiers": [
-        2,
-        0,
-        0,
-        0,
-        0,
-        2
-      ],
-      "auraDuration": null,
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 4,
-      "speed": 4,
+      "attack": 3,
+      "speed": 6,
       "draw": 0,
       "discard": 2,
-      "buff": 1
+      "buff": 1,
+      "modifier": 2,
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
     },
     {
       "abilityName": "Torrential Blessing",
-      "abilityText": "[1]: This attack gains +{\"positive\": 2, \"neutral\": 1, \"negative\": 0}[ATK]<br><br>Put a [WISH] counter on one of your monsters.",
+      "abilityText": "[FLIP] <br><br>Put a [WISH] counter on one of your monsters.",
       "element": "Water",
-      "modifiers": [
-        1,
-        0,
-        0,
-        0,
-        0,
-        2
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 1,
       "speed": 3,
       "discard": 0,
-      "buff": 1
+      "buff": 1,
+      "modifier": 2,
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
     },
     {
       "abilityName": "Fierce Blessing",
       "abilityText": "Put a [WISH] counter on one of your monsters.",
       "element": "Fire",
-      "modifiers": [
-        0,
-        1,
-        1,
-        0,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 3,
       "speed": 5,
       "discard": 1,
-      "buff": 3
+      "buff": 3,
+      "modifier": 1,
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
     }
   ],
   "buffs": [
     {
-      "buffName": "Scald",
+      "buffName": "Wishful Strike",
       "timing": "Pre-Actions",
-      "buffText": "[1]: <b>Burn [STATUS]</b>~BURN~",
+      "buffText": "This attack gains <div>+1[ATK].</div>",
       "flipEventText": "Put a [WISH] counter on one of your monsters",
-      "critFlg": true,
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
     },
     {
-      "buffName": "Wishful Strike",
+      "buffName": "Rallying Strike",
       "timing": "With Attack",
       "buffText": "This attack gains <div>+1[ATK].</div>",
       "flipEventText": "If your active monster has two or more [WISH] counters, remove them and [+].",
-      "critFlg": true,
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
     },
     {
       "buffName": "Wishful Embrace",
       "timing": "Pre-Actions",
       "buffText": "This monster gains <div>+1[DEF]</div> this turn.",
       "flipEventText": "Put a [WISH] counter on one of your monsters",
-      "critFlg": true,
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
     },
     {
-      "buffName": "Wishful Embrace",
+      "buffName": "Rallying Embrace",
       "timing": "Pre-Actions",
       "buffText": "This monster gains <div>+1[DEF]</div> this turn.",
       "flipEventText": "If your active monster has two or more [WISH] counters, remove them and [+].",
-      "critFlg": true,
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
     }
   ],
   "abilityName": "Three Wishes",
@@ -126,5 +96,6 @@
   "hp": 8,
   "complexity": 2,
   "initiative": 30,
-  "role": "Support"
+  "role": "Support",
+  "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
 }

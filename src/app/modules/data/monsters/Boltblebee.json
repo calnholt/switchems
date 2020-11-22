@@ -6,82 +6,55 @@
   "actions": [
     {
       "abilityName": "Swarm",
-      "abilityText": "[1]: This attack gains <div>+1[ATK]</div>.<br><br> Do this three times. If one or fewer were successes, <b>paralyze [STATUS]</b>. ~PARALYZE~",
+      "abilityText": "[FLIP] [FLIP].<br><br>If one of the cards flipped with this attack belongs to this monster, the enemy monster gains <div>{\"num\": \"2\", \"stat\": \"SPD\"}.</div>",
       "element": "Electric",
-      "modifiers": [
-        1,
-        0,
-        0,
-        0,
-        1,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 2,
       "speed": 4,
       "discard": 1,
-      "buff": 0
+      "buff": 0,
+      "modifier": 1,
+      "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     },
     {
       "abilityName": "Nectear",
-      "abilityText": "You may choose to discard one [HONEY] counter behind your player shield. If you do, this monster heals <div>3[HP]<div>.",
+      "abilityText": "Discard one [HONEY] counter behind your player shield. If you do, this monster heals <div>2[HP]<div>.",
       "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        4,
-        1,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 4,
       "speed": 6,
       "discard": 2,
-      "buff": 1
+      "buff": 1,
+      "modifier": 2,
+      "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     },
     {
       "abilityName": "Pollinate",
-      "abilityText": "[2]: Gain a [HONEY] counter behind your player shield.",
+      "abilityText": "Gain a [HONEY] counter behind your player shield.",
       "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        1,
-        1,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 1,
       "speed": 3,
-      "draw": 1,
-      "buff": 1
+      "draw": 0,
+      "buff": 1,
+      "modifier": 1,
+      "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     },
     {
       "abilityName": "Sticky Sting",
-      "abilityText": "This attack gains <div>+1[ATK]</div> for each [HONEY] counter you have behind your player shield.",
+      "abilityText": "This attack gains <b>flinch</b> if one or more buff slots were used with this attack and if you used a [HONEY] counter with this attack.~FLINCH~",
       "element": "Electric",
-      "modifiers": [
-        1,
-        0,
-        0,
-        0,
-        3,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 1,
-      "speed": 6,
-      "buff": 2
+      "attack": 2,
+      "speed": 4,
+      "discard": 1,
+      "buff": 2,
+      "modifier": 2,
+      "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     }
   ],
   "buffs": [
@@ -89,33 +62,33 @@
       "buffName": "Hunger",
       "timing": "With Attack",
       "buffText": "Gain a [HONEY] counter behind your player shield.<br><br>This attack gains +1[ATK].",
-      "flipEventText": "",
-      "critFlg": true,
-      "flipEventFlg": false
+      "flipEventText": "<b>Stun [STATUS]</b>. ~STUN~",
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     },
     {
       "buffName": "Hunger",
       "timing": "With Attack",
       "buffText": "Gain a [HONEY] counter behind your player shield.<br><br>This attack gains +1[ATK].",
-      "flipEventText": "",
-      "critFlg": true,
-      "flipEventFlg": false
+      "flipEventText": "This monster gains {\"stat\":\"ATK\", \"num\":1, \"isPositive\": true}",
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     },
     {
       "buffName": "Spring",
       "timing": "Pre-Actions",
       "buffText": "This attack gains +2[SPD]",
       "flipEventText": "If you have two or more [HONEY] counters behind your player shield, discard one and heal <div>2[HP].</div> Otherwise gain a [HONEY] counter behind your player shield.",
-      "critFlg": false,
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     },
     {
       "buffName": "Spring",
       "timing": "Pre-Actions",
       "buffText": "This attack gains +2[SPD]",
       "flipEventText": "If you have two or more [HONEY] counters behind your player shield, discard one and heal <div>2[HP].</div> Otherwise gain a [HONEY] counter behind your player shield.",
-      "critFlg": false,
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     }
   ],
   "abilityName": "Pollinator",
@@ -125,5 +98,6 @@
   "complexity": 2,
   "promiseDescription": "Boltblebee's role heavily depends on your team's composition. As an opener, Boltbebee can either amass honey with Pollinate or paralzye enemy monsters with Swarm. As a closer, Boltblebee can outpace monsters by gobbling up your honey stores with Nectear. However, Boltbebee is least effective in the midgame.",
   "initiative": 65,
+  "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT",
   "role": "Technical"
 }

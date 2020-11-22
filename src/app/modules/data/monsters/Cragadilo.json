@@ -5,116 +5,88 @@
   "actions": [
     {
       "abilityName": "Implosion",
-      "abilityText": "Remove all <div>[DEF] [PQ]</div> from this monster, even this action is prevented.<br><br>For each <div>[DEF] [PQ]</div> removed, perform:<br><br>[1]: +{\"positive\": 2, \"neutral\": 2, \"negative\": 1}[ATK]",
+      "abilityText": "Remove all <div>[DEF] [PQ]</div> from this monster, even this action is prevented.<br><br>For each <div>[DEF] [PQ]</div> removed, this attack gains +1[ATK].",
       "element": "Rock",
-      "modifiers": [
-        0,
-        1,
-        0,
-        0,
-        0,
-        1
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 1,
+      "attack": 2,
       "speed": 9,
       "draw": 0,
       "discard": 1,
-      "buff": 0
+      "buff": 1,
+      "modifier": 1,
+      "lastUpdated": "Sat, 21 Nov 2020 21:09:45 GMT"
     },
     {
       "abilityName": "Beckon Earth",
-      "abilityText": "If <b>exposed</b>, this attack gains <div>-1[ATK],</div> <div>+3[SPD],</div> and <div><b>recoil 1</b>[ATK].</div><br><br>[1]: This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.~RECOIL~",
+      "abilityText": "[FLIP], <b>Recoil 1[ATK].</b><br><br>If <b>exposed</b>, this attack gains <div>-1[ATK],</div> <div>+3[SPD].</div></div>~RECOIL~",
       "element": "Rock",
-      "modifiers": [
-        0,
-        1,
-        0,
-        0,
-        0,
-        2
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 5,
-      "speed": 5,
+      "speed": 4,
       "discard": 2,
-      "buff": 2
+      "buff": 2,
+      "modifier": 2,
+      "lastUpdated": "Sat, 21 Nov 2020 21:09:45 GMT"
     },
     {
       "abilityName": "Unearth",
-      "abilityText": "[4]: This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.<br><br>If <b>exposed</b>, +[2].",
+      "abilityText": "[FLIP] [FLIP].<br><br>If <b>exposed</b>, additionally [FLIP] [FLIP].",
       "element": "Rock",
-      "modifiers": [
-        0,
-        3,
-        0,
-        0,
-        0,
-        1
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 1,
       "speed": 3,
-      "buff": 1
+      "buff": 0,
+      "modifier": 2,
+      "lastUpdated": "Sat, 21 Nov 2020 21:09:45 GMT"
     },
     {
       "abilityName": "Geyser",
       "abilityText": "If two [B] slots are used, this monster heals <div>2[HP],</div> and if <b>exposed</b>, additionally [+].",
       "element": "Water",
-      "modifiers": [
-        2,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 2,
       "speed": 2,
-      "buff": 2
+      "buff": 2,
+      "modifier": 1,
+      "lastUpdated": "Sat, 21 Nov 2020 21:09:45 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Rock Armor",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
-      "flipEventText": "Your active monster may gain {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}",
+      "flipEventText": "Your active monster may gain {\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}",
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 21:09:45 GMT"
     },
     {
       "buffName": "Gaia's Intuition",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains <div>+2[DEF]</div> this turn",
-      "flipEventText": "Your active monster heals <div>1[HP]</div>",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffText": "This monster gains <div>+1[DEF]</div> this turn and this attack gains +1[ATK].",
+      "flipEventText": "Your active monster may gain {\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}",
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 21:09:45 GMT"
     },
     {
       "buffName": "Forced Aggresion",
       "timing": "Pre-Actions",
       "buffText": "<b>Super</b><br>If this attack is <b>faster</b>, this attack becomes <b>slower</b>, gains <b>pierce</b> and <div>+2[ATK]</div>, and this card is returned to your hand at the end of your turn.~SUPER~~FASTER~~PIERCE~",
-      "flipEventText": null,
-      "critFlg": true,
-      "flipEventFlg": false
+      "flipEventText": "Your active monster heals <div>1[HP]</div>",
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 21:09:45 GMT"
     },
     {
       "buffName": "Fight or Flight",
       "timing": "Pre-Actions",
       "buffText": "If this monster has no <div>[DEF] [PQ],</div> this attack gains <div>+2[SPD].</div> Otherwise this attack gains <div>+2[ATK].</div>",
-      "flipEventText": null,
-      "critFlg": true,
-      "flipEventFlg": false
+      "flipEventText": "Your active monster heals <div>1[HP]</div>",
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 21:09:45 GMT"
     }
   ],
   "abilityName": "Fortified",
@@ -123,5 +95,6 @@
   "hp": 5,
   "complexity": 3,
   "initiative": 60,
+  "lastUpdated": "Sat, 21 Nov 2020 21:09:45 GMT",
   "role": "Warrior"
 }

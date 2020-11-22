@@ -6,120 +6,96 @@
   "actions": [
     {
       "abilityName": "Mental Breakdown",
-      "abilityText": "[1]: <b>Paralyze [STATUS]</b><br>[1]: <b>Burn [STATUS]</b><br>[1]: <b>Fatigue [STATUS]</b><br>[1]: <b>Leech [STATUS]</b><br><br>Put a [TORMENT] counter on each of the enemy monster's actions.",
-      "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
+      "abilityText": "<b>Stun [STATUS], Wound [STATUS]</b>, [FLIP] [FLIP]<br><br>Put a [TORMENT] counter on each of the enemy monster's actions.~STUN~~WOUND~~STATUS~",
+      "element": "Fire",
       "auraDuration": 0,
-      "statusFlg": true,
-      "reactionFlg": false,
-      "attack": null,
-      "speed": 4,
-      "discard": 3
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 7,
+      "discard": 3,
+      "buff": 2,
+      "modifier": 4,
+      "lastUpdated": "Sat, 21 Nov 2020 20:08:45 GMT"
     },
     {
       "abilityName": "Wildfire",
-      "abilityText": "This attack gains a [B] slot for each enemy action that has a [TORMENT] counter.<br><br>If the enemy monster is KO'd this turn, put a [TORMENT] counter on each action of the incoming monster.",
+      "abilityText": "[FLIP]. <br><br>This attack gains a [B] slot for each enemy action that has a [TORMENT] counter.<br><br>If the enemy monster is KO'd this turn, put one [TORMENT] counter on each action of the incoming monster.",
       "element": "Fire",
-      "modifiers": [
-        0,
-        1,
-        2,
-        0,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 1,
-      "speed": 4,
-      "buff": 0
+      "speed": 7,
+      "buff": 0,
+      "modifier": 1,
+      "lastUpdated": "Sat, 21 Nov 2020 20:08:45 GMT"
     },
     {
       "abilityName": "Backstab",
-      "abilityText": "If this attack is <b>faster</b>, perform:<br><br>[2]: <b>Flinch</b>~FASTER~~FLINCH~",
+      "abilityText": "<b>Flinch</b>~FLINCH~",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        2,
-        1,
-        0,
-        0
-      ],
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 2,
-      "speed": 7,
+      "speed": 8,
       "discard": 2,
-      "buff": 1
+      "buff": 2,
+      "modifier": 2,
+      "lastUpdated": "Sat, 21 Nov 2020 20:08:45 GMT"
     },
     {
       "abilityName": "Reciprocity",
-      "abilityText": "This monster heals <div>X[HP],</div> where X is equal to triple the number of [TORMENT] counters on the enemy monster's selected monster action this turn, if any.  <b>Single use</b>.~SINGLE~",
-      "element": "Fire",
-      "modifiers": [
-        0,
-        3,
-        2,
-        0,
-        0,
-        0
-      ],
+      "abilityText": "This monster heals <div>X[HP],</div> where X is equal to triple the number of [TORMENT] counters on the enemy monster's selected monster action this turn, if any. <br><br><b>Single use</b>.~SINGLE~",
+      "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 2,
       "speed": 6,
       "discard": 1,
-      "buff": 1
+      "buff": 2,
+      "modifier": 2,
+      "lastUpdated": "Sat, 21 Nov 2020 20:08:45 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Weak Spot",
       "timing": "With Attack",
-      "buffText": "This attack gains <b>pierce</b> and <div>+1[ATK]</div> this turn.~PIERCE~",
-      "flipEventText": "Put two [TORMENT] counters on one of the enemy monster's actions.",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffText": "This attack gains <b>pierce</b> and <div>+1[ATK]</div>.~PIERCE~",
+      "flipEventText": "If you used two [B] slots, this attack gains <b>pierce</b> and +2[ATK].",
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 20:08:45 GMT"
     },
     {
       "buffName": "Dense Smoke",
       "timing": "Post Actions",
-      "buffText": "[1]: <b>Fatigue [STATUS]</b>~FATIGUE~",
-      "critFlg": false
+      "buffText": "<b>Wound</b> [STATUS] ~WOUND~~STATUS~",
+      "flipEventText": "Put two [TORMENT] counters on one of the enemy monster's actions.",
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 20:08:45 GMT"
     },
     {
       "buffName": "Midnight Skulk",
       "timing": "With Attack",
       "buffText": "Remove a [PQ] from the enemy monster and gain a [PQ] of the removed type.",
-      "flipEventText": null,
-      "critFlg": true,
-      "flipEventFlg": false
+      "flipEventText": "If you used two [B] slots, this attack gains <b>flinch</b>.~FLINCH~",
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 20:08:45 GMT"
     },
     {
       "buffName": "Apathy",
       "timing": "Pre-Actions",
       "buffText": "If the enemy monster selected a [SPECIAL] action this turn, that action is <b>unsuccessful</b>.~SUCCESS~",
-      "flipEventText": null,
-      "critFlg": false,
-      "flipEventFlg": false
+      "flipEventText": "Put two [TORMENT] counters on one of the enemy monster's actions",
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 20:08:45 GMT"
     }
   ],
   "abilityName": "Torment",
   "monsterName": "Smolderskulk",
-  "abilityText": "At the end of the turn, put two [TORMENT] counters on the enemy monster's selected monster action, if any. Monster actions with [TORMENT] counters have <div><b>recoil X[ATK]</b>, </div> where X is the number of [TORMENT] counters on the action. <em>(Remove one [TORMENT] counter from each action on enemy switch.)</em>",
+  "abilityText": "At the end of the turn, put two [TORMENT] counters on the enemy monster's selected monster action, if any. Monster actions with [TORMENT] counters have <div><b>recoil X[ATK]</b>, </div> where X is the number of [TORMENT] counters on the action. <em>(Remove all [TORMENT] counters from each action on enemy switch.)</em>",
   "hp": 10,
   "complexity": 3,
   "initiative": 45,
+  "lastUpdated": "Sat, 21 Nov 2020 20:08:45 GMT",
   "role": "Tricky"
 }

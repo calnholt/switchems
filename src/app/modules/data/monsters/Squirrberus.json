@@ -3,80 +3,51 @@
   "actions": [
     {
       "abilityName": "Forage",
-      "abilityText": "Whenever a time counter is removed from this and not by an opponent's ability, gain one of any [ACORN] on your [ACORN] board. If you gain <div>[ACORN] [ARROW] [SPD]</div> this way, perform:<br><br>[1]: Gain another <div>[ACORN] [ARROW] [SPD]</div> on your [ACORN] board.",
+      "abilityText": "Whenever a time counter is removed from this and not by an opponent's ability, gain one of any [ACORN] on your [ACORN] board.",
       "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "auraDuration": 6,
       "statusFlg": false,
-      "reactionFlg": false,
       "speed": 6,
-      "draw": 1
+      "draw": 1,
+      "lastUpdated": "Sat, 21 Nov 2020 21:19:38 GMT"
     },
     {
       "abilityName": "Tail of Power",
-      "abilityText": "Gain <div>[ACORN] [ACORN] [ACORN] [ARROW] [ATK]</div> on your [ACORN] board.",
+      "abilityText": "[FLIP] [FLIP]. <br><br>Gain <div>[ACORN] [ACORN] [ACORN] [ARROW] [ATK]</div> on your [ACORN] board.",
       "element": "Fire",
-      "modifiers": [
-        0,
-        3,
-        1,
-        0,
-        0,
-        0
-      ],
+      "modifier": 2,
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 5,
+      "attack": 3,
       "speed": 1,
       "discard": 3,
-      "buff": 1
+      "buff": 1,
+      "lastUpdated": "Sat, 21 Nov 2020 21:19:38 GMT"
     },
     {
       "abilityName": "Tail of Courage",
       "abilityText": "Gain <div>[ACORN] [ARROW] [DEF]</div> on your [ACORN] board.",
       "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        3,
-        1,
-        0
-      ],
+      "modifier": 1,
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 2,
       "speed": 2,
-      "buff": 3
+      "buff": 3,
+      "lastUpdated": "Sat, 21 Nov 2020 21:19:38 GMT"
     },
     {
       "abilityName": "Tail of Wisdom",
-      "abilityText": "Gain <div>[ACORN] [ARROW] [SPD]</div> on your [ACORN] board.<br><br>[1]: Gain another <div>[ACORN] [ARROW] [SPD]</div> on your [ACORN] board.",
+      "abilityText": "[FLIP]. <br><br>Gain <div>[ACORN] [ARROW] [SPD]</div> on your [ACORN] board.",
       "element": "Water",
-      "modifiers": [
-        3,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
+      "modifier": 2,
       "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 3,
       "speed": 6,
       "discard": 1,
-      "buff": 2
+      "buff": 2,
+      "lastUpdated": "Sat, 21 Nov 2020 21:19:38 GMT"
     }
   ],
   "buffs": [
@@ -84,33 +55,33 @@
       "buffName": "Spicy Acorn",
       "timing": "Pre-Actions",
       "buffText": "Gain <div>[ACORN] [ARROW] [ATK]</div> on your [ACORN] board. If this attack is either [F] [E], this attack gains +2[ATK].",
-      "flipEventText": "Gain <div>[ACORN] [ARROW] [DEF]</div> on your [ACORN] board.",
-      "critFlg": false,
-      "flipEventFlg": true
+      "flipEventText": "Gain <div>[ACORN] [ARROW] [ATK]</div> on your [ACORN] board.",
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 21:19:38 GMT"
     },
     {
       "buffName": "Ripe Acorn",
       "timing": "Pre-Actions",
       "buffText": "Gain <div>[ACORN] [ARROW] [DEF]</div> on your [ACORN] board. If this attack is either [L] [R], this monster gains +2[DEF] this turn.",
       "flipEventText": "Gain <div>[ACORN] [ARROW] [DEF]</div> on your [ACORN] board.",
-      "critFlg": false,
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 21:19:38 GMT"
     },
     {
       "buffName": "Rotten Acorn",
       "timing": "Pre-Actions",
       "buffText": "Gain <div>[ACORN] [ARROW] [SPD]</div> on your [ACORN] board. If this attack is either [W] [S], this attack gains +3[SPD].",
       "flipEventText": "Gain <div>[ACORN] [ARROW] [SPD]</div> on your [ACORN] board.",
-      "critFlg": false,
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 21:19:38 GMT"
     },
     {
       "buffName": "Winter is Coming",
       "timing": "Post Actions",
       "buffText": "<b>Super, Ethereal</b><br><br>Gain any three [ACORN] on your <div>[ACORN] board</div> and <div>[+].</div>~SUPER~~ETHEREAL~",
       "flipEventText": "If you have 4 or more [ACORN] on your [ACORN] board, <div>[+].</div>",
-      "critFlg": true,
-      "flipEventFlg": true
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 21 Nov 2020 21:19:38 GMT"
     }
   ],
   "abilityName": "Hoarder",
@@ -120,5 +91,6 @@
   "complexity": 2,
   "extraBoard": "ACORN",
   "initiative": 35,
-  "role": "Support"
+  "role": "Support",
+  "lastUpdated": "Sat, 21 Nov 2020 21:19:38 GMT"
 }

@@ -61,8 +61,8 @@
   "buffs": [
     {
       "buffName": "Impulsive Burn",
-      "timing": "With Attack",
-      "buffText": "<b>Super, Ethereal, Wound [STATUS]</b>~SUPER~~ETHEREAL~~WOUND~",
+      "timing": "Pre-Actions",
+      "buffText": "<b>Ethereal, Wound [STATUS]</b>~ETHEREAL~~WOUND~",
       "flipEventText": "[+]",
       "flipEventFlg": true,
       "lastUpdated": "Wed, 18 Nov 2020 20:07:20 GMT"
