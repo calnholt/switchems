@@ -1,3 +1,5 @@
+import { RulebookService } from './rulebook.service';
+import { TERM_CODES } from './../../types/dataTypes';
 import { rulebook } from './../data/rulebook';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Css } from 'src/app/types/dataTypes';
@@ -28,11 +30,12 @@ export class RulebookComponent implements OnInit {
   TERM_CSS: Css = 'term';
   ABILITY_IMG_CSS: Css = 'term-img';
   monsterExample: MonsterComplete;
-  rulebook: Array<RulebookSection> = rulebook;
+  rulebook: Array<RulebookSection> = this.rulebookService.rulebook;
 
-  constructor(private monsterService: MonsterService) { 
-    const index: number = Math.floor((Math.random() * this.monsterService.getMonsters().length));
-    this.monsterExample = this.monsterService.getMonsters()[index];
+  constructor(private monsterService: MonsterService, private rulebookService: RulebookService) {
+    const monsters = this.monsterService.getMonsters().filter(m => m.elements && m.elements.length);
+    const index: number = Math.floor((Math.random() * monsters.length));
+    this.monsterExample = monsters[index];
   }
 
   ngOnInit() {

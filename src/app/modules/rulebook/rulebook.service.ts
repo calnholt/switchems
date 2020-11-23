@@ -1,18 +1,31 @@
-import { RulebookSection } from '../rulebook/rulebook.component';
+import { Term } from './../data/data';
+import { TermCode, TERM_CODES } from './../../types/dataTypes';
+import { Injectable } from '@angular/core';
+import { RulebookSection } from './rulebook.component';
 
-export const rulebook: Array<RulebookSection> = [
+@Injectable({
+  providedIn: 'root'
+})
+export class RulebookService {
+
+  constructor() { }
+
+  rulebook: Array<RulebookSection> = [
     {
       title: 'Switchems!',
       columns: 2,
       blocks: [
         {
-          text: 'Leverage your team of monsters in this exciting two-player card game',
+          text: 'Leverage your team of monsters in a battle of cunning and wits in this exciting two-player card game',
         },
         {
           text: 'v.0.5.0',
         },
         {
           text: '2 Players   |   30 - 60 Minutes   |   Ages 12+',
+        },
+        {
+          text: 'Designer: Calvin Holt',
         }
       ]
     },
@@ -82,7 +95,7 @@ export const rulebook: Array<RulebookSection> = [
             text: 'After Choosing your Team (detailed below), form your deck by collecting the buff cards associated with your team of monsters (there will be 4 for each monster) as well as the two standard buff cards (your buff deck will then be 14 cards - 12 from monsters and 2 from standard). Shuffle your deck and place beside you.',
           },
           {
-            text: 'Place your active monster card and its action cards in front of the Player Shield, and arrange the action cards in a 2 by 2 grid (the placement for each action does not matter).',
+            text: 'Place your active monster card and its action cards in front of the Player Shield, and arrange the action cards in a 2 by 2 grid.',
           },
           {
             text: 'For the two non-starting monsters, place one to the left of you, and the other to the right (which is placed where is irrelevant).',
@@ -103,7 +116,7 @@ export const rulebook: Array<RulebookSection> = [
       {
         ul: [
           {
-            text: 'Draft',
+            text: '<b>Draft</b>',
             ul: [
               {
                 text: 'Randomly select and shuffle 4 * [the number of players] monster reference cards together, and deal them out to each player. Each player secretly selects 1 monster from those cards, then passes the remaining monster cards to the left. Repeat this process until all players have 4 monsters.',
@@ -111,7 +124,7 @@ export const rulebook: Array<RulebookSection> = [
             ],
           },
           {
-            text: '1v1 Casual',
+            text: '<b>1v1 Casual</b>',
             ul: [
               {
                 text: 'Randomly select 8 monster cards from the full pool of monsters and collect their respective Reference Cards. Shuffle the 8 reference cards, and deal 4 to each player. Both players will then secretly and simultaneously select 1 monster from the 4 cards. Then the players will exchange the remaining 3 cards and select another monster. All monsters selected after the first are revealed to each player. Keep doing this until both players have 4 monsters.',
@@ -119,7 +132,7 @@ export const rulebook: Array<RulebookSection> = [
             ]
           },
           {
-            text: '1v1 Competitive',
+            text: '<b>1v1 Competitive</b>',
             ul: [
               {
                 text: 'Players select 5 monsters they would like to use from their personal supply of monsters.',
@@ -152,6 +165,7 @@ export const rulebook: Array<RulebookSection> = [
       columns: 2,
       blocks: [
         {
+          text: 'Monster Cards have several unique attributes:',
           ol: [
             {
               text: 'Monster name',
@@ -187,6 +201,7 @@ export const rulebook: Array<RulebookSection> = [
       columns: 2,
       blocks: [
         {
+          text: 'Monster Actions have several unique attributes:',
           ol: [
             {
               text: 'Monster Action name',
@@ -220,11 +235,12 @@ export const rulebook: Array<RulebookSection> = [
       ]
     },
     {
-      title: 'Buff Cards',
+      title: 'Buffs',
       rulebookImage: 'Buff',
       columns: 2,
       blocks: [
         {
+          text: 'Buffs have several unique attributes:',
           ol: [
             {
               text: 'Buff card timing'
@@ -269,7 +285,7 @@ export const rulebook: Array<RulebookSection> = [
           text: 'Each turn is simultaneous (players don’t have their own individual turns). Below is a brief overview of the phases of each turn in the order they occur.',
           ol: [
             {
-              text: 'Selection Phase',
+              text: '<b>Selection Phase</b>',
               ul: [
                 {
                   text: 'Both players secretly place their action cube on one of the eight potential actions on their action boards',
@@ -277,7 +293,7 @@ export const rulebook: Array<RulebookSection> = [
               ]
             },
             {
-              text: 'Action Phase',
+              text: '<b>Action Phase</b>',
               ul : [
                 {
                   text: 'Both players reveal their selected actions and then resolve them:',
@@ -302,7 +318,7 @@ export const rulebook: Array<RulebookSection> = [
               ]
             },
             {
-              text: 'End Phase',
+              text: '<b>End Phase</b>',
               ul: [
                 {
                   text: 'Activate end of turn abilities',
@@ -324,6 +340,7 @@ export const rulebook: Array<RulebookSection> = [
     },
     {
       title: 'Selection Phase',
+      rulebookImage: 'Action-Board',
       columns: 2,
       blocks: [
         {
@@ -333,36 +350,10 @@ export const rulebook: Array<RulebookSection> = [
             text: '<b>NOTE:</b> When you select any action, you must place your remaining hand face down behind your action screen on the Hand section.'
         },
         {
-          text: '<h1>Monster Actions</h1>Monster Actions, labeled 1 - 4, correspond to players’ active monster’s 4 action cards, arranged in a 2 by 2 grid. When you select a monster action, you must place the required number of discards face-up on the Discard section of your action board. For each [B] on the action, you may optionally apply a buff from your hand to the action, placing each applied buff face-up on the Buff section of your action board.'
-        },
-        {
-          text: '<h1>Switch Actions</h1>Switch actions require you to discard a card from your hand, as denoted by the [-] symbol. Place the discarded card face-up on the Discard section of your action board.',
-          
-        },
-        {
-            ul: [
-                {
-                  text: 'Choose <b>one</b>: the monster that is switching out heals 2HP OR remove a status condition from the monster that is switching out.'
-                },
-                {
-                  text: 'Remove all [NQ] from your stat cube board and remove all but one [PQ] from your stat cube board.'
-                },
-                {
-                  text: 'The monster that is switching in gains X[DEF] this turn against elements it is resistant against. The defense value and resistant elements are denoted on the monster card.'
-                }
-              ]
-        },
-        {
-            text: 'Switch Actions enable you to change your active monster, replacing your active monster with the monster to your right or left (as denoted by the arrow on the action space). Additionally, perform the following.'
-        },
-        {
-          text: 'You cannot switch to KO’d monsters.',
-        },
-        {
           text: '<h1>Standard Actions</h1>There are two different Standard Actions. Standard actions require one discard to use, as denoted by the [-]. Place the discarded card face-up on the Discard section of your action board. The two Standard Actions are:',
           ul: [
             {
-              text: 'Draw Cards [+][+][+]',
+              text: 'Draw Cards – [+] [+] [+]',
               ul: [
                 {
                   text: 'When you select the Draw Cards Standard Action, you draw 3 cards as your action for the turn.',
@@ -370,17 +361,47 @@ export const rulebook: Array<RulebookSection> = [
               ]
             },
             {
-              text: 'Counter [COUNTER]',
+              text: 'Counter – [COUNTER]',
               ul: [
                 {
-                  text: 'When you select the Counter Standard Action, this protects your active monster this turn from your opponent’s monster attack action. Counter does not protect against special or team aura actions. If the enemy monster selected a monster attack, the enemy monster loses HP equal to the number of cards that player discarded for the attack and the number of buff slots that were used for the attack. Using the Counter action requires you to discard one maneuver cube. If you have no more maneuver cubes, you cannot use Counter. Spent maneuver cubes are placed on the Used Maneuver Cubes section on your Stat Cube Board.'
+                  text: 'When you select the Counter Standard Action, this protects your active monster this turn from your opponent’s monster attack action. Counter does not protect against special or team aura actions. If the enemy monster selected a monster attack, the enemy monster loses HP equal to the number of cards that player discarded for the attack and the number of buff slots that were used for the attack. Using the Counter action requires you to discard one maneuver cube ([MQ]). If you have no available [MQ], you cannot use Counter. Spent [MQ] are placed on the "Used [MQ]" section on your Stat Cube Board.'
                 }
               ]
             }
           ]
         },
         {
-          text: '<h1>Protect an action</h1>Maneuver cubes can also be used to protect your selected actions. All actions except for Counter and be protected. To protect an action, you may select an action by placing a maneuver cube on the action space instead of the normal action cube. Spent maneuver cubes are placed on the Used Maneuver Cubes section on your Stat Cube Board. When you protect an action, both players ignore all elemental attack modifiers for the remainder of the turn. This discards the maneuver cube. Players without maneuver cubes cannot protect actions. <b>HOWEVER</b>, if both players protect an action, elemental action modifiers are instead NOT ignored for the remainder of the turn.',
+          text: '<h1>Switch Actions</h1>Switch actions require you to discard a card from your hand, as denoted by the [-] symbol. Place the discarded card face-up on the Discard section of your action board. Switch Actions enable you to change your active monster, replacing your active monster with the monster to your right or left (as denoted by the arrow on the action space). Additionally, perform the following:',
+        },
+        {
+            ul: [
+                {
+                  text: 'Choose <b>one</b>: the monster that is switching out heals 2[HP] OR remove a status condition [STATUS] from the monster that is switching out.'
+                },
+                {
+                  text: 'Remove all [NQ] from your stat cube board and remove all but one [PQ] from your stat cube board.'
+                },
+                {
+                  text: 'The monster that is switching in gains X[DEF] this turn against elements it is resistant to. The defense value and resistant elements are denoted on the monster card.'
+                }
+              ]
+        },
+        {
+          text: '<b>NOTE:</b> You cannot switch to KO’d monsters.',
+        },
+        {
+          text: '<h1>Monster Actions</h1>Monster Actions, labeled 1 - 4, correspond to your active monster’s four action cards, arranged in a two by two grid. When you select a monster action, you must place the required number of [-] from your hand face-up on the Discard section of your action board. For each [B] on the action, you may optionally apply a buff from your hand to the action, placing each applied buff face-up on the Buff section of your action board.'
+        },
+      ]
+    },
+    {
+      title: 'Protecting Actions',
+      blocks: [
+        {
+          text: 'Maneuver cubes ([MQ]) can also be used to protect your selected actions. All actions except for Counter and be protected. To protect an action, you may select an action by placing a [MQ] on the action space instead of the normal action cube. When you protect an action, both players ignore all elemental attack modifiers for the remainder of the turn. This discards the [MQ]. If you have no available [MQ], you cannot use protect actions.',
+        },
+        {
+          text: '<b>HOWEVER</b>, if both players protect an action, elemental action modifiers are instead NOT ignored for the remainder of the turn.',
         }
       ]
     },
@@ -420,7 +441,7 @@ export const rulebook: Array<RulebookSection> = [
           text: 'Likewise, monster actions with the draw symbol let you draw that many cards after reveal, when resolving the action. If both players reveal monster actions, the faster action goes first (the action with the greater speed value). When both actions have the same speed, the monster with the higher initiative goes first.'
         },
         {
-          text: '<h1>Monster Actions - Attack [ATK]</h1>A monster action is an attack if it deals damage ([ATK]). When resolving a monster attack:',
+          text: '<h1>Monster Actions - Attack[ATK]</h1>A monster action is an attack if it deals damage ([ATK]). When resolving a monster attack:',
           ul: [
             {
               text: 'Apply all <b>With Attack</b> buff card effects that were applied to this attack'
@@ -437,19 +458,19 @@ export const rulebook: Array<RulebookSection> = [
           text: 'The enemy monster then takes the resulting damage.'
         },
         {
-          text: '<h1>Monster Actions - Special [STATUS]</h1>A monster action is Special if it has this symbol. Special actions behave just like attacks except they do not deal damage and are not prevented by the Counter action. These actions usually make your monster stronger or make your opponent\'s monster weaker.',
+          text: '<h1>Monster Actions - Special[SPECIAL]</h1>A monster action is Special if it has this symbol. Special actions behave just like attacks except they do not deal damage and are not prevented by the Counter action. These actions usually make your monster stronger or make your opponent\'s monster weaker.',
         },
         {
-          text: '<h1>Monster Actions - Team Aura [TA]</h1>A monster action is a Team Aura if it has this symbol. Team Aura actions create ongoing benefits for your active monster for a number of turns, as denoted by the number beside the team aura symbol, called its duration. Put a number of time counters on this action card equal to the action’s team aura duration value. At the end of each turn, remove a time counter.'
+          text: '<h1>Monster Actions - Team Aura[TA]</h1>A monster action is a Team Aura if it has this symbol. Team Aura actions create ongoing benefits for your active monster for a number of turns, as denoted by the number beside the team aura symbol, called its duration. Put a number of time counters on this action card equal to the action’s team aura duration value. At the end of each turn, remove a time counter.'
         },
         {
           text: 'While this action card has time counters on it, the team aura effect is active. This effect is active even if that monster is not your active monster.'
         },
         {
-          text: 'NOTE: Team auras can never have more duration counters on it than its printed duration value.'
+          text: '<b>NOTE:</b> Team auras can never have more duration counters on it than its printed duration value.'
         },
         {
-          text: 'NOTE: When a monster has a Team Aura with time counters on it and switches, keep that Team Aura action card visible to show that its effect is still active. When all of the time counters are removed, return the card to the monster.',
+          text: '<b>NOTE:</b> When a monster has a Team Aura with time counters on it and switches, keep that Team Aura action card visible to show that its effect is still active. When all of the time counters are removed, return the card to the monster.',
         }
       ]
     },
@@ -468,21 +489,24 @@ export const rulebook: Array<RulebookSection> = [
               ]
             },
             {
-              text: 'With Attack (II):',
+              text: '<b>With Attack (II):</b>',
               ul: [
                 {
                   text: 'Buff Cards that have With Attack timing occur when that player’s selected monster attack action is being resolved, but before calculating damage.'
                 },
                 {
-                  text: 'NOTE: If an attack action applied with a With Attack timing buff is prevented by another ability (like flinch), the attack never occurs, therefore the buff’s ability is prevented.'
+                  text: '<b>NOTE:</b> If an attack action applied with a With Attack timing buff is prevented by another ability (like flinch), the attack never occurs, therefore the buff’s ability is prevented.'
                 }
               ]
             },
             {
-              text: 'Post Action (III):',
+              text: '<b>Post Action (III):</b>',
               ul: [
                 {
-                  text: 'Buff Cards with Post Action timing occur after all monster actions have been resolved. These buffs are resolved in initiative order.'
+                  text: 'Buff Cards with Post Action timing occur after all monster actions have been resolved. These buffs are resolved in initiative order.',
+                },
+                {
+                  text: '<b>NOTE:</b> If your active monster is KO\'d before resolving Post Action buffs, the buff is not resolved.',
                 }
               ]
             }
@@ -491,10 +515,20 @@ export const rulebook: Array<RulebookSection> = [
       ]
     },
     {
-      title: 'Standard Buff Cards',
+      title: 'Flip Effects[FLIP]',
       blocks: [
         {
-          text: 'When forming your buff deck at the start of a game, both you must include these two Standard buff cards. Including these in player’s decks makes switching monsters potentially less safe. It’s wise to be aware of how many of these are in your opponent’s discard pile.'
+          text: 'All buff cards have a flip effect [FLIP], found at the bottom of the card. Sometimes effects have you flip the top card of your deck when resolving a monster attack, denoted by this symbol [FLIP]. For each [FLIP] symbol, flip the top card of your deck and apply its flip effect.'
+        },
+      ]
+    },
+    {
+      title: 'Standard Buff Cards',
+      columns: 2,
+      rulebookImage: 'Standard',
+      blocks: [
+        {
+          text: 'When forming your buff deck at the start of a game, you must include two copies of the "Can\'t Escape!" standard buff card. It’s wise to be aware of how many of these are in your opponent’s discard pile if you plan on switching!'
         }
       ]
     },
@@ -527,17 +561,6 @@ export const rulebook: Array<RulebookSection> = [
       ]
     },
     {
-      title: 'Flip Effects',
-      blocks: [
-        {
-          text: 'All buff cards have a flip effect [FLIP], found at the bottom of the card. Sometimes effects have you flip the top card of your deck when resolving a monster attack, denoted by this symbol [FLIP]. For each [FLIP] symbol, flip the top card of your deck and apply its flip effect.'
-        },
-        {
-          text: 'For example, when this card is flipped, your attack gains +1[ATK].'
-        }
-      ]
-    },
-    {
       title: 'End Phase',
       blocks: [
         {
@@ -563,22 +586,42 @@ export const rulebook: Array<RulebookSection> = [
       ]
     },
     {
-      title: 'Status Conditions [STATUS]',
+      title: 'Status Conditions[STATUS]',
       blocks: [
         {
           text: 'Many monsters have actions or buffs that apply certain status conditions [STATUS]. All [STATUS] remain on monsters until the end of the game unless removed by an effect or chosen to be removed on switch. Here is a list of all [STATUS]:',
           ul: [
             {
-              text: 'Fatigue ~FATIGUE~'
+              text: `<b>Fatigue</b>`,
+              ul: [
+                {
+                  text: `${this.getTerm('~FATIGUE~')}`,
+                }
+              ]
             },
             {
-              text: 'Wound ~WOUND~'
+              text: `<b>Wound</b>`,
+              ul: [
+                {
+                  text: `${this.getTerm('~WOUND~')}`,
+                }
+              ]
             },
             {
-              text: 'Drain ~DRAIN~'
+              text: `<b>Drain</b>`,
+              ul: [
+                {
+                  text: `${this.getTerm('~DRAIN~')}`,
+                }
+              ]
             },
             {
-              text: 'Stun ~STUN~'
+              text: '<b>Stun</b>',
+              ul: [
+                {
+                  text: `${this.getTerm('~STUN~')}`,
+                }
+              ]
             },
           ]
         }
@@ -591,7 +634,7 @@ export const rulebook: Array<RulebookSection> = [
           text: 'Monsters are KO’d when their health points are reduced to 0. Whenever a monster is KO’d, remove ALL cubes from that monster’s stat cube board, and the player controlling that monster selects one of their other monsters to be their new active monster.',
         },
         {
-          text: 'NOTE: KO’d monsters can never recover HP.'
+          text: '<b>NOTE:</b> KO’d monsters can never recover HP.'
         }
       ]
     },
@@ -605,5 +648,51 @@ export const rulebook: Array<RulebookSection> = [
           text: 'Players have a hand limit of five cards. If players would draw cards while having five cards in their hand, players do not draw additional cards.'
         }
       ]
+    },
+    {
+      title: 'Playtesters',
+      blocks: [
+        {
+          ul: [
+            {
+              text: 'John Holt',
+            },
+            {
+              text: 'Mike Vessia',
+            },
+            {
+              text: 'Dan Peterson',
+            },
+            {
+              text: 'Jim Palmeri',
+            },
+            {
+              text: 'Bruce',
+            },
+            {
+              text: 'Jeff',
+            },
+            {
+              text: 'Dan',
+            },
+            {
+              text: 'Diego Vizhnay',
+            }
+          ]
+        }
+      ]
     }
 ];
+
+  getTerm(term: TermCode): string {
+    let text = TERM_CODES.find(t => t.key === term).value;
+    ['<div>', '</div>'].forEach(html => {
+      while (text.includes(html)) {
+        text = text.replace(html, '');
+      }
+    });
+    return text;
+  }
+
+
+}

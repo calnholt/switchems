@@ -2,9 +2,14 @@
 @import 'src/styles.scss';
 
 #rulebook {
+    .term-img {
+        max-height: 17px;
+    }
     &.container {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        padding-bottom: 50px;
+        text-align: justify;
         .section {
             // title styles
             &:nth-child(-n+2) {
@@ -12,7 +17,7 @@
             }
             &:first-child {
                 margin-top: 20px;
-                font-size: 22px;
+                font-size: 18px;
                 .title { 
                     text-decoration: unset;
                     font-size: 100px;
@@ -33,12 +38,20 @@
             }
             &.has-image {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 63% 37%;
                 .image {
                     display: flex;
                     justify-content: center;
-                    &.monster,&.action {
-                        padding: 19px;
+                    align-items: center;
+                    padding: 19px;
+                    #stat-cube-board,#action-board {
+                        .title {
+                            text-decoration: unset;
+                            line-height: unset;
+                            img {
+                                padding-left: unset;
+                            }
+                        }
                     }
                 }
             }
@@ -52,6 +65,10 @@
                 font-size: 40px;
                 text-align: center;
                 line-height: 50px;
+                img {
+                    max-height: 40px;
+                    padding-left: 10px;
+                }
             }
             .text{
                 margin-bottom: 10px;
@@ -68,6 +85,10 @@
             height: 42px;
             font-size: 30px;
             margin-top: 7px;
+            img {
+                max-height: 30px;
+                padding-left: 8px;
+            }
         }
     }
 }

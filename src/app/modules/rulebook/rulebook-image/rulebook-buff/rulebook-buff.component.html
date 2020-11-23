@@ -1,0 +1,10 @@
+<div id="rulebook-buff">
+  <div class="monster-action">
+    <monster-buff [buff]="buff"></monster-buff>
+  </div>
+  <ng-container *ngFor="let x of numbers">
+    <div class="num num-{{x}}">
+      <rulebook-number [number]="x"></rulebook-number>
+    </div>
+  </ng-container>
+</div>
