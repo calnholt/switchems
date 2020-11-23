@@ -1,6 +1,7 @@
 import { MonsterService } from './../../../monster/monster.service';
 import { MonsterComplete } from './../../../monster/model/monster';
 import { Component, OnInit, Input } from '@angular/core';
+import { PLAYER_BOARD_TEXT } from 'src/app/types/dataTypes';
 
 class RulebookSetupDisplay {
   monsters: Array<RulebookSetupMonsters> = [];
@@ -20,6 +21,8 @@ class RulebookSetupMonsters {
 export class RulebookSetupDisplayComponent implements OnInit {
   @Input() playerActiveMonster: MonsterComplete;
   monsters: RulebookSetupDisplay = new RulebookSetupDisplay();
+  numbers = [1, 2, 3, 4, 5];
+  boardText = PLAYER_BOARD_TEXT;
 
   constructor(private monsterService: MonsterService) { }
 

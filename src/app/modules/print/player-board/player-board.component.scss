@@ -10,15 +10,20 @@
         background-color: white;
         border: rgb(216, 216, 216) 2px solid;
         border-radius: 11px;
+        &.non-board {
+            border: black 5px dashed;
+        }
         .text {
             font-family: $beastformer;
-            font-size: 48px;
+            font-size: 49px;
             text-align: center;
             padding-top: 20px;
+            line-height: 36px;
             .sub-text {
                 font-family: $helvetica;
                 font-size: 15px;
                 padding-top: 11px;
+                line-height: unset;
             }
         }
         .icon {

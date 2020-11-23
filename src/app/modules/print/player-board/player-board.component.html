@@ -1,8 +1,8 @@
 <div id="player-board">
-  <div class="card-container">
+  <div class="card-container" [ngClass]="{'non-board' : !getIcon()}">
     <div [innerHTML]="text" class="text"></div>
     <div [ngClass]="{'hand' : text !== 'Discards' && text !== 'Buffs'}" class="icon">
-      <img src="{{getIcon()}}">
+      <img *ngIf="getIcon()" src="{{getIcon()}}">
     </div>
   </div>
 </div>

@@ -1,5 +1,5 @@
 <div id="rulebook-setup-display">
-  <div class="player-area-container" *ngFor="let monster of monsters.monsters">
+  <div class="player-area-container" *ngFor="let monster of monsters.monsters; let i = index">
     <div class="monsters-container">
       <div class="switch-monster">
         <div class="card-display">
@@ -32,5 +32,28 @@
         </div>
       </div>
     </div>
+    <div class="board-container">
+      <div class="board">
+        <div class="card-display">
+          <action-board></action-board>
+        </div>
+        <div class="card-display" *ngFor="let text of boardText">
+          <player-board [text]="text"></player-board>
+        </div>
+      </div>
+      <div class="deck-discard">
+        <div class="card-display">
+          <player-board [text]="'Deck'"></player-board>
+        </div>
+        <div class="card-display">
+          <player-board [text]="'Discard Pile'"></player-board>
+        </div>
+      </div>
+    </div>
+    <ng-container *ngFor="let x of numbers">
+      <div class="num num-{{x}}" [ngClass]="{'oppo' : i === 0}">
+        <rulebook-number [number]="x"></rulebook-number>
+      </div>
+    </ng-container>
   </div>
 </div>
