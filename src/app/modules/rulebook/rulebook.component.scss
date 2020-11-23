@@ -39,6 +39,9 @@
             &.has-image {
                 display: grid;
                 grid-template-columns: 63% 37%;
+                &:nth-child(4) { // setup section
+                    grid-template-columns: 40% 60%;
+                }
                 .image {
                     display: flex;
                     justify-content: center;

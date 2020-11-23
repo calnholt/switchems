@@ -1,3 +1,4 @@
+import { RulebookSetupDisplayComponent } from './rulebook-image/rulebook-setup-display/rulebook-setup-display.component';
 import { RulebookBuffComponent } from './rulebook-image/rulebook-buff/rulebook-buff.component';
 import { RulebookActionComponent } from './rulebook-image/rulebook-action/rulebook-action.component';
 import { RulebookImageComponent } from './rulebook-image/rulebook-image.component';
@@ -35,6 +36,7 @@ import { PrintModule } from '../print/print.module';
       RulebookImageComponent,
       RulebookActionComponent,
       RulebookBuffComponent,
+      RulebookSetupDisplayComponent,
     ],
     exports: [
       RulebookComponent,
@@ -44,6 +46,7 @@ import { PrintModule } from '../print/print.module';
       RulebookImageComponent,
       RulebookActionComponent,
       RulebookBuffComponent,
+      RulebookSetupDisplayComponent,
     ]
   })
 export class RulebookModule { }

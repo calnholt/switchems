@@ -79,6 +79,8 @@ export class RulebookService {
     },
     {
       title: 'Setup',
+      rulebookImage: 'Setup',
+      columns: 2,
       blocks: [
       {
         text: 'After determining your Mode of Play (detailed below), selecting your pool of monsters, and retrieving their associated cards (the following directions are for both players)',

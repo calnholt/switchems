@@ -5,4 +5,5 @@
   <stat-cube-board *ngIf="type === 'Stat-Cube'"></stat-cube-board>
   <monster-buff *ngIf="type === 'Standard'" [buff]="cantEscape"></monster-buff>
   <action-board *ngIf="type === 'Action-Board'"></action-board>
+  <rulebook-setup-display *ngIf="type === 'Setup'" [playerActiveMonster]="monster"></rulebook-setup-display>
 </div>

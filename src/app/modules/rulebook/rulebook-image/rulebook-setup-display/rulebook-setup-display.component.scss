@@ -1,0 +1,33 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+
+#rulebook-setup-display {
+    --scale: 0.3;
+    .player-area-container {
+        &:first-child {
+            transform: rotate(180deg);
+            padding-top: 20px;
+        }
+        .monsters-container {
+        display: flex;
+            .switch-monster {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+            }
+            .card-display {
+                transform: scale(var(--scale));
+                height: calc(var(--scale) * #{$card-height});
+                width: calc(var(--scale) * #{$card-width});
+                transform-origin: top left;
+                margin: 3px;
+            }
+            .active-monster-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+    }
+}
