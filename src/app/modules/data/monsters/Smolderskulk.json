@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Mental Breakdown",
-      "abilityText": "<b>Stun [STATUS], Wound [STATUS]</b>, [FLIP] [FLIP]<br><br>Put a [TORMENT] counter on each of the enemy monster's actions.~STUN~~WOUND~~STATUS~",
+      "abilityText": "<b>Stun [STATUS], Wound [STATUS]</b>, [FLIP] [FLIP]. <br><br>Put a [TORMENT] counter on each of the enemy monster's actions.~STUN~~WOUND~",
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": false,
