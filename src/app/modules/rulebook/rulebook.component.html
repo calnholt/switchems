@@ -1,6 +1,6 @@
 <div id="rulebook" class="container">
   <ng-container *ngFor="let section of rulebook">
-    <div class="section {{section.columns ? 'columns-' + section.columns : ''}}" [ngClass]="{'has-image' : section.rulebookImage}">
+    <div id="{{section.id ? section.id : ''}}" class="section {{section.columns ? 'columns-' + section.columns : ''}}" [ngClass]="{'has-image' : section.rulebookImage}">
       <div>
         <div *ngIf="section.title" class="title" [innerHTML]="display(section.title)"></div>
         <div *ngFor="let block of section.blocks">

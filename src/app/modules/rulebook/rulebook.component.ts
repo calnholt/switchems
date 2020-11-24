@@ -1,11 +1,10 @@
 import { RulebookService } from './rulebook.service';
-import { TERM_CODES } from './../../types/dataTypes';
-import { rulebook } from './../data/rulebook';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, AfterViewInit } from '@angular/core';
 import { Css } from 'src/app/types/dataTypes';
 import { getAbilityText } from '../common/cards';
 import { MonsterService } from '../monster/monster.service';
 import { MonsterComplete } from '../monster/model/monster';
+import { ExecFileOptionsWithStringEncoding } from 'child_process';
 
 export type RulebookImageType = 'Setup' | 'Monster' | 'Action' | 'Buff' | 'Stat-Cube' | 'Action-Board' | 'Standard' | 'Buff-Ex';
 
@@ -14,6 +13,7 @@ export interface RulebookSection {
   blocks: Array<RulebookBlock>;
   columns?: number;
   rulebookImage?: RulebookImageType;
+  id?: string;
 }
 export class RulebookBlock {
   text?: string;
@@ -26,11 +26,13 @@ export class RulebookBlock {
   styleUrls: ['./rulebook.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class RulebookComponent implements OnInit {
+export class RulebookComponent implements AfterViewInit {
   TERM_CSS: Css = 'term';
   ABILITY_IMG_CSS: Css = 'term-img';
   monsterExample: MonsterComplete;
   rulebook: Array<RulebookSection> = this.rulebookService.rulebook;
+  slug = 'rulebook';
+  anchors = ['modes_of_play'];
 
   constructor(private monsterService: MonsterService, private rulebookService: RulebookService) {
     const monsters = this.monsterService.getMonsters().filter(m => m.elements && m.elements.length);
@@ -38,7 +40,23 @@ export class RulebookComponent implements OnInit {
     this.monsterExample = monsters[index];
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
+    const aTags = document.getElementsByTagName('a');
+    for (let i = 0; i < aTags.length; i++) {
+      aTags[i].addEventListener('click', (e) => {
+        e.preventDefault();
+        const href = aTags[i].href;
+        const index = href.lastIndexOf('/');
+        const id = href.substring(index + 1, href.length);
+        this.goToSection(id);
+      });
+    }
+  }
+
+  goToSection(id: string): void {
+    const elmnt = document.getElementById(id);
+    const y = elmnt.getBoundingClientRect().top + window.pageYOffset + -75;
+    window.scrollTo({top: y, behavior: 'smooth'});
   }
 
   display(text: string): string {
