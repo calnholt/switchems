@@ -3,5 +3,5 @@ import { RulebookComponent } from './rulebook.component';
 
 
 export const RulebookRoutes: Routes = [
-    { path: 'rulebook', component: RulebookComponent}
+    { path: 'rules', component: RulebookComponent}
 ];
