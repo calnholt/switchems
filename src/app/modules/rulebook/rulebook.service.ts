@@ -39,6 +39,14 @@ export class RulebookService {
       ]
     },
     {
+      title: 'Golden Rule',
+      blocks: [
+        {
+          text: 'Whenever a card\'s text directly contradicts these rules, the card takes precedence.'
+        }
+      ]
+    },
+    {
       title: 'Components',
       blocks: [{
         ul: [
@@ -373,7 +381,7 @@ export class RulebookService {
                   text: 'Choose <b>one</b>: either the monster that is switching out heals 2[HP] OR remove a <a href="status_conditions">status condition</a> [STATUS] from the monster that is switching out.'
                 },
                 {
-                  text: 'Remove all [NQ] from your <a href="stat_cube_board">stat cube board</a> and remove all but one [PQ] from your <a href="stat_cube_board">stat cube board</a>.'
+                  text: 'Remove all [NQ] from your <a href="stat_cube_board">stat cube board</a> and remove all but one [ATK][PQ] or [SPD][PQ] from your <a href="stat_cube_board">stat cube board</a>, or keep all [DEF][PQ]. '
                 },
                 {
                   text: 'The monster that is switching in gains +X[DEF] this turn against elements it is resistant to. The defense value and resistant elements are denoted on the monster card.'
@@ -384,7 +392,7 @@ export class RulebookService {
           text: '<b>NOTE:</b> You cannot switch to <a href="ko">KO’d</a> monsters.',
         },
         {
-          text: '<h1>Monster Actions</h1>Monster actions, labeled 1 - 4, correspond to your active monster’s four action cards, arranged in a two by two grid. When you select a monster action, you must place the required number of [-] from your hand face-up on the discard [-] section of your player board. For each [B] on the action, you may optionally apply a buff from your hand to the action, placing each applied buff face-up on the buff [B] section of your action board.'
+          text: '<h1>Monster Actions</h1>Monster actions, labeled 1 - 4, correspond to your active monster’s four action cards, arranged in a two by two grid. When you select a monster action, you must place the required number of [-] from your hand face-up on the discard [-] section of your player board. For each [B] on the action, you may optionally apply a buff from your hand to the action, placing each applied buff face-up on the buff [B] section of your action board. These actions are discussed in greater detail <a href="monster_actions">below</a>.'
         },
       ]
     },

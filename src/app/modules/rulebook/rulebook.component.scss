@@ -2,9 +2,6 @@
 @import 'src/styles.scss';
 
 #rulebook {
-    .term-img {
-        max-height: 17px;
-    }
     &.container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -23,6 +20,9 @@
                     font-size: 100px;
                     line-height: 110px;
                     letter-spacing: -3px;
+                    .term-img {
+                        max-height: 17px;
+                    }
                 }
                 div {
                     &:nth-child(3) {
@@ -39,7 +39,7 @@
             &.has-image {
                 display: grid;
                 grid-template-columns: 63% 37%;
-                &:nth-child(4) { // setup section
+                &:nth-child(5) { // setup section
                     grid-template-columns: 40% 60%;
                 }
                 .image {
@@ -68,6 +68,9 @@
                 font-size: 40px;
                 text-align: center;
                 line-height: 50px;
+                .term-img {
+                    max-height: 17px;
+                }
                 img {
                     max-height: 40px;
                     padding-left: 10px;
@@ -75,6 +78,9 @@
             }
             .text{
                 margin-bottom: 10px;
+                .term-img {
+                    max-height: 17px;
+                }
                 .cubes {
                     display: contents;
                 }
@@ -82,6 +88,9 @@
         }
         ul,ol{
             margin-bottom: 10px;
+            .term-img {
+                max-height: 17px;
+            }
         }
         h1 {
             font-family: $beastformer;
