@@ -681,16 +681,34 @@ export class RulebookService {
         {
           ul: [
             {
+              text: 'Conor Cain',
+            },
+            {
               text: 'Zachary Gogel'
             },
             {
               text: 'John Holt',
             },
             {
+              text: 'Kevin Levesque',
+            },
+            {
+              text: 'Will Little'
+            },
+            {
+              text: 'Tim Oliva',
+            },
+            {
               text: 'Jim Palmeri',
             },
             {
               text: 'Dan Peterson',
+            },
+            {
+              text: 'Dan S.'
+            },
+            {
+              text: 'Mike Sette'
             },
             {
               text: 'Guy Tuori',
