@@ -1,18 +1,6 @@
 import { Term, Image } from './../data/data';
 import { ElemType, TERM_CODES, IMAGE_CODES, Css, ImageCode } from './../../types/dataTypes';
 
-export const getAdvantages = (elem: ElemType): number[] => {
-  // fire, water, rock, leaf, elec, death
-  // -1 means the monster takes MORE damage
-  // 1 means resistance
-    if (elem === 'Death') {return [0, -1, 1, 1, -1, 0]; }
-    if (elem === 'Electric') { return [-1, 1, -1, 0, 0, 1]; }
-    if (elem === 'Fire') { return [0, -1, -1, 1, 1, 0]; }
-    if (elem === 'Water') { return [1, 0, 0, -1, -1, 1]; }
-    if (elem === 'Leaf') { return [-1, 1, 1, 0, 0, -1]; }
-    if (elem === 'Rock') { return [1, 0, 0, -1, 1, -1]; }
-};
-
 const getImageClass  = (str: string): string => {
   return str.substring(1, str.length - 1).toLowerCase();
 };

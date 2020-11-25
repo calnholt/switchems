@@ -44,7 +44,7 @@
           <img src="{{superEffective}}">
         </div>
         <div class="elements">
-          <ng-container *ngFor="let effectiveness of getEffectivenessArray(monster); index as i" class="elements">
+          <ng-container *ngFor="let effectiveness of monster.getEffectivenessArray(); index as i" class="elements">
             <img *ngIf="effectiveness == -1" class="element-icon" src="{{getElementColorImg(ELEMENT_LIST[i])}}">
           </ng-container>
         </div>
@@ -53,12 +53,12 @@
     <div *ngIf="monster.elements.length" class="element-info-container right">
       <div class="info-container">
         <div class="elements">
-          <ng-container *ngFor="let effectiveness of getEffectivenessArray(monster); index as i">
+          <ng-container *ngFor="let effectiveness of monster.getEffectivenessArray(); index as i">
             <img *ngIf="effectiveness >= 1" class="element-icon" src="{{getElementColorImg(ELEMENT_LIST[i])}}">
           </ng-container>
         </div>
         <div class="type">
-          <div class="defense-value">{{getSwitchDefenseValue()}}</div>
+          <div class="defense-value">{{monster.getSwitchDefenseValue()}}</div>
           <img src="{{switchDefense}}">
         </div>
       </div>

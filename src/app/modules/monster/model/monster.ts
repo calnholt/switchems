@@ -1,4 +1,4 @@
-import { Role, ElemType, BuffTiming } from './../../../types/dataTypes';
+import { Role, ElemType, BuffTiming, getAdvantages } from './../../../types/dataTypes';
 
 export class GUI {
     isSelected?: boolean;
@@ -29,6 +29,41 @@ export class Monster extends Card {
     extraBoard?: string;
     initiative: number;
     savedFlg?: boolean;
+
+    hasElement(elemType: ElemType): boolean {
+        return this.elements.includes(elemType);
+    }
+
+    getSwitchDefenseValue(): number {
+        const effectivenessArray = this.getEffectivenessArray();
+        return effectivenessArray.includes(2) ? 6 : 3;
+      }
+
+    getEffectivenessArray(): number[] {
+        const arrs = [].concat(this.elements.map((el: ElemType) => getAdvantages(el)));
+        let totals = [0, 0, 0, 0, 0, 0];
+        // arrs.forEach(arr => {arr.forEach((num: number, i: number) => {totals[i] += num; }); });
+        if (this.elements.length === 1) {
+          totals = arrs[0];
+        } else {
+          for (let i = 0; i < 6; i++) {
+            const elemArr = [];
+            for (let j = 0; j < arrs.length; j++) {
+              elemArr.push(arrs[j][i]);
+            }
+            const containsNegative = elemArr.some(e => e < 0);
+            const positives = elemArr.filter(e => e > 0);
+            if (containsNegative) {
+              totals[i] = -1;
+            } else if (positives) {
+              totals[i] = positives.length;
+            } else {
+              totals[i] = 0;
+            }
+          }
+        }
+        return totals;
+      }
 }
 
 export class MonsterComplete extends Monster {

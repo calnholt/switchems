@@ -1,8 +1,8 @@
 import { ELEMENTS_GRAY, SYMBOLS, ELEMENTS_COLOR } from './../../../constants';
-import { ELEMENTS, Css, Path, ImageCode, ElemType } from './../../../types/dataTypes';
+import { ELEMENTS, Css, Path, ImageCode, ElemType, getAdvantages } from './../../../types/dataTypes';
 import { Action } from './../model/monster';
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import { getAbilityText, getAdvantages } from './../../common/cards';
+import { getAbilityText } from './../../common/cards';
 
 @Component({
   selector: 'monster-action',
@@ -13,40 +13,17 @@ import { getAbilityText, getAdvantages } from './../../common/cards';
 })
 export class MonsterActionComponent implements OnInit {
   @Input() action: Action;
-  actionTextHtml: string;
-  // need to get reversed array to line up with monster
-  ELEMENTS_LIST = [ELEMENTS[5], ELEMENTS[4], ELEMENTS[3], ELEMENTS[2], ELEMENTS[1], ELEMENTS[0]];
-  EMPTY_MODIFIER = [1, 1, 1, 1, 1, 1];
+  ELEMENTS = ELEMENTS;
 
   TERM_CSS: Css = 'term';
   ABILITY_IMG_CSS: Css = 'term-img';
 
   constructor() { }
 
-  ngOnInit() {
-    this.actionTextHtml = this.action.abilityText;
-  }
-
-  getElementLowerCase(): string {
-    return this.action.element.toLowerCase();
-  }
-
-  isDisadvantage(i: number): boolean {
-    return getAdvantages(this.action.element).reverse()[i] === -1;
-  }
+  ngOnInit() { }
 
   isAdvantage(i: number): boolean {
-    return getAdvantages(this.action.element).reverse()[i] === 1;
-  }
-
-  getModifier(modifier: number): string | number {
-    if (modifier === null) {
-      return 'X';
-    }
-    if (modifier > 0) {
-      return `+${modifier}`;
-    }
-    return `${modifier}`;
+    return getAdvantages(this.action.element)[i] === 1;
   }
 
   getElementImageGrayPath(elemType: ElemType): Path {
@@ -55,7 +32,7 @@ export class MonsterActionComponent implements OnInit {
 
   getElementImageColorPath(elemType?: ElemType): Path {
     if (!elemType) {
-      return `${ELEMENTS_COLOR}/${this.getElementLowerCase()}.png`;
+      return `${ELEMENTS_COLOR}/${this.action.element.toLowerCase()}.png`;
     }
     return `${ELEMENTS_COLOR}/${elemType.toLowerCase()}.png`;
   }
@@ -87,10 +64,5 @@ export class MonsterActionComponent implements OnInit {
     }
     return out;
   }
-
-  hasElement(element: ElemType): boolean {
-    return this.action.element === element;
-  }
-
 
 }

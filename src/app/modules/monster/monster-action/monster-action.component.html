@@ -36,7 +36,7 @@
           <div>VS</div>
         </div>
         <div class="modifier-elements">
-          <ng-container *ngFor="let element of ELEMENTS_LIST; index as i">
+          <ng-container *ngFor="let element of ELEMENTS; index as i">
             <img *ngIf="isAdvantage(i)" src="{{getElementImageColorPath(element)}}">
           </ng-container>
         </div>

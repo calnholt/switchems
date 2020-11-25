@@ -1,7 +1,7 @@
-import { getAdvantages, getAbilityText } from './../../common/cards';
+import { getAbilityText } from './../../common/cards';
 import { MonsterComplete } from './../model/monster';
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import { ElemType, ELEMENTS, Css, Path } from './../../../types/dataTypes';
+import { ELEMENTS, Css, Path } from './../../../types/dataTypes';
 import { ELEMENTS_COLOR, ELEMENTS_GRAY, ROLES_PATH, HP, SYMBOLS } from './../../../constants';
 
 @Component({
@@ -26,61 +26,6 @@ export class MonsterCardComponent implements OnInit {
   ngOnInit() {}
 
   constructor() {}
-
-  getEffectivenessArray(monster: MonsterComplete): number[] {
-    const arrs = [].concat(monster.elements.map((el: ElemType) => getAdvantages(el)));
-    let totals = [0, 0, 0, 0, 0, 0];
-    // arrs.forEach(arr => {arr.forEach((num: number, i: number) => {totals[i] += num; }); });
-    if (monster.elements.length === 1) {
-      totals = arrs[0];
-    } else {
-      for (let i = 0; i < 6; i++) {
-        const elemArr = [];
-        for (let j = 0; j < arrs.length; j++) {
-          elemArr.push(arrs[j][i]);
-        }
-        const containsNegative = elemArr.some(e => e < 0);
-        const positives = elemArr.filter(e => e > 0);
-        if (containsNegative) {
-          totals[i] = -1;
-        } else if (positives) {
-          totals[i] = positives.length;
-        } else {
-          totals[i] = 0;
-        }
-      }
-    }
-    return totals;
-  }
-
-  getEffectivenessArrayStringArray(monster: MonsterComplete): string[] {
-    const totals = this.getEffectivenessArray(monster);
-    const out: string[] = [];
-    totals.forEach((num: number, i: number) => out.push(this.getEffectivenessSymbol(num)));
-    return out;
-  }
-  // old way of displaying these images
-  getEffectivenessSymbol(num: number): string {
-    const shield = `<img src="./assets/images/symbols/switch-defense.png" class="shield">`;
-    const effective = `<img src="./assets/images/symbols/effective.png" class="effective">`;
-    const superEff = `<img src="./assets/images/symbols/super-effective.png" class="effective">`;
-    switch (num) {
-      case 2: return `<span class="value">6</span>` + shield;
-      case 1: return '<span class="value">3</span>' + shield;
-      case 0: return '';
-      case -1: return superEff;
-      case -2: return superEff;
-    }
-  }
-
-  getSwitchDefenseValue(): number {
-    const effectivenessArray = this.getEffectivenessArray(this.monster);
-    return effectivenessArray.includes(2) ? 6 : 3;
-  }
-
-  hasElement(element: ElemType): boolean {
-    return this.monster.elements.includes(element);
-  }
 
   getElementColorImg(element: string): Path {
     return `${ELEMENTS_COLOR}${element.toLocaleLowerCase()}.png`;
