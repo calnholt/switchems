@@ -31,33 +31,33 @@
               </div>
             </div>
           </div>
-          <div class="lg-col-4 sm-col-2 p-0">
-            <div *ngFor="let action of monster.actions" class="hover-card-icon-container col-12">
+          <div class="lg-col-4 sm-col-2 p-0 hoverables">
+            <ng-container *ngFor="let action of monster.actions">
               <div 
                 (mouseover)="action.isHovered = true" 
                 (mouseout)="action.isHovered = false"
-                class="hover-card-icon"
+                class="col-12 hover-card-icon"
                 [ngClass]="{'highlight' : action.isHighlighted}">
                 <div class="icon">A</div>
               </div>
-            </div>
-            <div *ngFor="let buff of monster.buffs" class="hover-card-icon-container col-12">
+            </ng-container>
+            <ng-container *ngFor="let buff of monster.buffs">
               <div 
                 (mouseover)="buff.isHovered = true" 
                 (mouseout)="buff.isHovered = false" 
-                class="hover-card-icon"
+                class="col-12 hover-card-icon"
                 [ngClass]="{'highlight' : buff.isHighlighted}">
                 <span class="icon">B</span>
               </div>
-            </div>
-            <div *ngIf="monster.extraBoard" class="hover-card-icon-container col-12">
+            </ng-container>
+            <ng-container *ngIf="monster.extraBoard">
               <div 
-                class="hover-card-icon"
+              class="col-12 hover-card-icon"
                 (mouseover)="monster.isExtraBoardHovered = true" 
                 (mouseout)="monster.isExtraBoardHovered = false">
                 <span class="icon">X</span>
               </div>
-            </div>
+            </ng-container>
           </div>
         </div>
       </div>
