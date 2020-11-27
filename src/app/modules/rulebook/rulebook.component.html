@@ -1,7 +1,7 @@
 <div id="rulebook" class="container">
   <ng-container *ngFor="let section of rulebook">
-    <div id="{{section.id ? section.id : ''}}" class="section {{section.columns ? 'columns-' + section.columns : ''}}" [ngClass]="{'has-image' : section.rulebookImage}">
-      <div>
+    <div id="{{section.id ? section.id : ''}}" class="row section">
+      <div class="{{getSectionColumns(section)}}">
         <div *ngIf="section.title" class="title" [innerHTML]="display(section.title)"></div>
         <div *ngFor="let block of section.blocks">
           <div *ngIf="block.text" class="text" [innerHTML]="display(block.text)"></div>
@@ -10,7 +10,7 @@
           </ng-container>
         </div>
       </div>
-      <div *ngIf="section.rulebookImage" class="image {{section.rulebookImage.toLowerCase()}}">
+      <div *ngIf="section.rulebookImage" class="image {{section.rulebookImage.toLowerCase()}} {{getRulebookImageColumns(section)}}">
         <rulebook-image [type]="section.rulebookImage" [monster]="monsterExample"></rulebook-image>
       </div>
     </div>

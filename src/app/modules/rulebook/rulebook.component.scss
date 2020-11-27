@@ -3,13 +3,11 @@
 
 #rulebook {
     &.container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         padding-bottom: 50px;
         text-align: justify;
         .section {
             // title styles
-            &:nth-child(-n+2) {
+            &:nth-child(-n+3) {
                 text-align: center;
             }
             &:first-child {
@@ -36,24 +34,17 @@
             &.columns-2 {
                 grid-column: span 2;
             }
-            &.has-image {
-                display: grid;
-                grid-template-columns: 63% 37%;
-                &:nth-child(5) { // setup section
-                    grid-template-columns: 40% 60%;
-                }
-                .image {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 19px;
-                    #stat-cube-board,#action-board {
-                        .title {
-                            text-decoration: unset;
-                            line-height: unset;
-                            img {
-                                padding-left: unset;
-                            }
+            .image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 19px;
+                #stat-cube-board,#action-board {
+                    .title {
+                        text-decoration: unset;
+                        line-height: unset;
+                        img {
+                            padding-left: unset;
                         }
                     }
                 }
@@ -96,7 +87,6 @@
             text-decoration: underline;
             margin-bottom: unset;
             text-align: center;
-            height: 42px;
             font-size: 30px;
             margin-top: 7px;
             img {

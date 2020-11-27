@@ -13,7 +13,6 @@ export class RulebookService {
   rulebook: Array<RulebookSection> = [
     {
       title: 'Switchems!',
-      columns: 2,
       blocks: [
         {
           text: 'Leverage your team of monsters in a battle of cunning and wits in this exciting two-player card game',
@@ -31,7 +30,6 @@ export class RulebookService {
     },
     {
       title: 'How to Win',
-      columns: 2,
       blocks: [
         {
           text: '<a href="ko">Knockout (KO)</a> all three of your opponent’s monsters to win. Monsters are KO’d when their HP [HP] is reduced to 0.'
@@ -88,7 +86,7 @@ export class RulebookService {
     {
       title: 'Setup',
       rulebookImage: 'Setup',
-      columns: 2,
+      columns: 5,
       blocks: [
       {
         text: `After determining your <a href="modes_of_play">mode of play</a>, selecting your supply of monsters, and retrieving their associated cards:`,
@@ -175,7 +173,6 @@ export class RulebookService {
       title: 'Monster Cards',
       rulebookImage: 'Monster',
       id: 'monster_card',
-      columns: 2,
       blocks: [
         {
           text: 'Monster cards have several unique attributes:',
@@ -212,7 +209,6 @@ export class RulebookService {
       title: 'Monster Actions',
       rulebookImage: 'Action',
       id: 'action_card',
-      columns: 2,
       blocks: [
         {
           text: 'Monster actions have several unique attributes:',
@@ -252,7 +248,6 @@ export class RulebookService {
       title: 'Buffs',
       rulebookImage: 'Buff',
       id: 'buff_card',
-      columns: 2,
       blocks: [
         {
           text: 'Buffs have several unique attributes:',
@@ -343,7 +338,6 @@ export class RulebookService {
       title: 'Selection Phase',
       id: 'selection_phase',
       rulebookImage: 'Action-Board',
-      columns: 2,
       blocks: [
         {
           text: 'During the Selection Phase, you will secretly place your action cube on one of the 8 spaces on your action board. These eight actions are split into three groups: Standard Actions, Switch Actions, and Monster Actions. This is also the order in which they resolve.',
@@ -436,7 +430,6 @@ export class RulebookService {
     {
       title: 'Monster Actions Detailed',
       id: 'monster_actions',
-      columns: 2,
       blocks: [
         {
           text: 'Monster actions come in three types - attack [ATK], special [SPECIAL], and team aura [TA]. Regardless of the type, monster actions may require you to discard a number of cards in order to use, as denoted by the number of discard symbols [-]. This is known as an action’s discard cost. You must discard a number of cards from your hard equal to the discard cost of the action. This is done by placing the required number of [-] from your hand face-up on the discard [-] section of your player board before reveal. If you have fewer cards in your hand than the action’s discard cost, you cannot use that action.'
@@ -534,7 +527,6 @@ export class RulebookService {
     },
     {
       title: 'Standard Buff Cards',
-      columns: 2,
       id: 'standard_buffs',
       rulebookImage: 'Standard',
       blocks: [
@@ -546,7 +538,6 @@ export class RulebookService {
     {
       title: 'Stat Cube Board',
       id: 'stat_cube_board',
-      columns: 2,
       rulebookImage: 'Stat-Cube',
       blocks: [
         {
@@ -685,6 +676,9 @@ export class RulebookService {
             },
             {
               text: 'Zachary Gogel'
+            },
+            {
+              text: 'Ethan Grosso',
             },
             {
               text: 'John Holt',

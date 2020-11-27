@@ -13,6 +13,7 @@ export interface RulebookSection {
   blocks: Array<RulebookBlock>;
   columns?: number;
   rulebookImage?: RulebookImageType;
+  class?: string;
   id?: string;
 }
 export class RulebookBlock {
@@ -64,5 +65,31 @@ export class RulebookComponent implements AfterViewInit {
 
   display(text: string): string {
     return getAbilityText(text, 'term', 'term-img');
+  }
+
+  getSectionColumns(section: RulebookSection): string {
+    const css = 'col-md-12 col-sm-12 ';
+    let large = '';
+    if (section.rulebookImage) {
+      if (section.columns) {
+        large = `col-lg-${section.columns}`;
+      } else {
+        large = `col-lg-8`;
+      }
+    }
+    return `${css} ${large}`;
+  }
+
+  getRulebookImageColumns(section: RulebookSection): string {
+    const css = 'col-md-12 col-sm-12 ';
+    let large = '';
+    if (section.rulebookImage) {
+      if (section.columns) {
+        large = `col-lg-${12 - (section.columns ? section.columns : 6)}`;
+      } else {
+        large = `col-lg-4`;
+      }
+    }
+    return `${css} ${large}`;
   }
 }
