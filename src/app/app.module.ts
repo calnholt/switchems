@@ -1,3 +1,4 @@
+import { MaterialModule } from 'src/app/material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonComponentsModule } from './modules/common/common-components.module';
 import { MonsterModule } from './modules/monster/monster.module';
@@ -27,7 +28,8 @@ import { RulebookModule } from './modules/rulebook/rulebook.module';
     ViewAllModule,
     BrowserAnimationsModule,
     PrintModule,
-    RulebookModule
+    RulebookModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent],

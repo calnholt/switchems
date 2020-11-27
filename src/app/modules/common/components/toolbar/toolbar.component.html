@@ -1,4 +1,4 @@
-<div id="toolbar">
+<!-- <div id="toolbar">
   <div *ngIf="toolbarService.visible" class="padding">
     <mat-toolbar color="primary">
       <div class="button-container">
@@ -17,4 +17,42 @@
       </div>
     </mat-toolbar>
   </div>
+</div> -->
+
+<div id="toolbar"> 
+  <mat-toolbar color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <a mat-button class="companyName" routerLink="/">
+      <span>Switchems!</span>
+    </a>
+    <span class="example-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button [routerLink]="['/monster', 'builder']">Create</a>
+      <a mat-button [routerLink]="['print']">Print & Play</a>
+      <a mat-button [routerLink]="['/rules']">How to Play</a>
+      <!-- <dropdown
+          class="dropdown"
+          [label]="'Search Monsters'"
+          [model]="monster"
+          [options]="monsters"
+          [property]="'monsterName'"
+          (selectionChange)="goToMonster()">
+        </dropdown> -->
+    </div>
+
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill class="example-container">
+    <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over"  opened="true" fxHide.gt-sm="true">
+      <div fxLayout="column">
+        <a mat-button [routerLink]="['/monster', 'builder']">Create</a>
+        <a mat-button [routerLink]="['/print']">Print & Play</a>
+        <a mat-button [routerLink]="['/rules']">How to Play</a>
+      </div>
+    </mat-sidenav>
+  </mat-sidenav-container>
 </div>

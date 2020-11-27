@@ -2,6 +2,9 @@
 @import 'src/styles.scss';
 
 #display-all{
+    .row {
+        justify-content: space-around;
+    }
     .hoverables {
         margin: 10px 14px 0px 0px;
         .hover-card-icon{
