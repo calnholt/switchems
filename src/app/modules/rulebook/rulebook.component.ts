@@ -41,7 +41,7 @@ export class RulebookComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    const aTags = document.getElementsByTagName('a');
+    const aTags = document.getElementById('rulebook').getElementsByTagName('a');
     for (let i = 0; i < aTags.length; i++) {
       aTags[i].addEventListener('click', (e) => {
         e.preventDefault();
@@ -54,6 +54,9 @@ export class RulebookComponent implements AfterViewInit {
   }
 
   goToSection(id: string): void {
+    if (!id || !id.length) {
+      return;
+    }
     const elmnt = document.getElementById(id);
     const y = elmnt.getBoundingClientRect().top + window.pageYOffset + -75;
     window.scrollTo({top: y, behavior: 'smooth'});

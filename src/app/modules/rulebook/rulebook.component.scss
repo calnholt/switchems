@@ -69,10 +69,9 @@
                 text-align: center;
                 line-height: 50px;
                 .term-img {
-                    max-height: 17px;
+                    max-height: 40px;
                 }
                 img {
-                    max-height: 40px;
                     padding-left: 10px;
                 }
             }
@@ -101,7 +100,7 @@
             font-size: 30px;
             margin-top: 7px;
             img {
-                max-height: 30px;
+                max-height: 30px !important;
                 padding-left: 8px;
             }
         }
