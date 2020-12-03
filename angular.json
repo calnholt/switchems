@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "overrealm": {
+    "switchems": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/overrealm",
+            "outputPath": "dist/switchems",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "overrealm:build"
+            "browserTarget": "switchems:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "overrealm:build:production"
+              "browserTarget": "switchems:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "overrealm:build"
+            "browserTarget": "switchems:build"
           }
         },
         "test": {
@@ -125,11 +125,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "overrealm:serve"
+            "devServerTarget": "switchems:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "overrealm:serve:production"
+              "devServerTarget": "switchems:serve:production"
             }
           }
         },
@@ -140,5 +140,5 @@
       }
     }
   },
-  "defaultProject": "overrealm"
+  "defaultProject": "switchems"
 }

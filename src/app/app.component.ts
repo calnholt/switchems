@@ -11,7 +11,7 @@ import { MonsterService } from './modules/monster/monster.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'overrealm';
+  title = 'switchems';
   visible: boolean;
     logo: Path = '../../../../assets/images/website/logo.png';
     monsters: string[] = [];
