@@ -15,6 +15,9 @@ export class ActionBoardComponent implements OnInit {
   counter: Path = SYMBOLS_PATH + 'counter.png';
   heal: Path = SYMBOLS_PATH + 'heart.png';
   status: Path = SYMBOLS_PATH + 'wound.png';
+  manuever: Path = SYMBOLS_PATH + 'blue-cube.png';
+  flip: Path = SYMBOLS_PATH + 'flip.png';
+  speed: Path = SYMBOLS_PATH + 'speed.png';
   constructor() { }
 
   ngOnInit() {

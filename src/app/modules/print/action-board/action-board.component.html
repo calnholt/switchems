@@ -4,11 +4,6 @@
       <div class="title">Standard Actions
         <img src="{{discard}}" class="no-draw">
       </div>
-      <div class="line-container">
-        <hr align="left" class="name-line left">
-        <span class="dot"></span>
-        <hr align="right" class="name-line right">
-      </div>
       <table>
         <tr>
           <td>
@@ -17,7 +12,8 @@
             <img src="{{draw}}">
           </td>
           <td>
-            <img src="{{counter}}">
+            <img src="{{draw}}" class="draw">
+            <img src="{{manuever}}">
           </td>
         </tr>
       </table>
@@ -29,11 +25,6 @@
         </div>
         Switch Actions
         <img src="{{discard}}" class="no-draw">
-      </div>
-      <div class="line-container">
-        <hr align="left" class="name-line left">
-        <span class="dot"></span>
-        <hr align="right" class="name-line right">
       </div>
       <table>
         <tr>
@@ -50,17 +41,34 @@
     </div>
     <div class="actions-container">
       <div class="title">Monster Actions</div>
-      <div class="line-container">
-        <hr align="left" class="name-line left">
-        <span class="dot"></span>
-        <hr align="right" class="name-line right">
-      </div>
       <table class="monster-actions">
         <tr>
           <td>1</td><td>2</td>
         </tr>
         <tr>
           <td>3</td><td>4</td>
+        </tr>
+      </table>
+    </div>
+    <div class="actions-container maneuver-table">
+      <div class="title">
+        Manuevers
+        <img src="{{manuever}}" class="no-draw">
+      </div>
+      <table class="monster-actions">
+        <tr>
+          <td>
+            <img src="{{counter}}" class="draw">
+          </td>
+          <td>
+            <img src="{{flip}}" class="draw">
+            <img src="{{flip}}" class="draw">
+          </td>
+          <td>
+            <span>
+              +3<img src="{{speed}}" class="draw">
+            </span>
+          </td>
         </tr>
       </table>
     </div>
