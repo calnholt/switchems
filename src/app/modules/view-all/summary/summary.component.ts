@@ -48,7 +48,7 @@ export class SummaryComponent implements OnInit {
     let num = 0;
     this.monsters.forEach(m => {
       m.actions.forEach(a => {
-        if ((a.attack !== undefined || a.attack !== null) && a.element === elem) {
+        if ((a.attack !== undefined || a.attack !== null) && a.element === elem && !a.statusFlg) {
           num++;
         }
       });
