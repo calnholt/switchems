@@ -108,7 +108,7 @@ export class MonsterFormComponent implements OnInit {
   }
 
   setLastUpdated(monsterToCopy: MonsterComplete): MonsterComplete {
-    const savedMonsterComplete = this.getCleanMonster(this.monsterSerivce.getMonster(monsterToCopy.monsterName));
+    const savedMonsterComplete = this.getCleanMonster(this.monsterSerivce.getMonster(monsterToCopy.monsterName, true));
     const offset = -300; // Timezone offset for EST in minutes.
     const estDate = new Date(new Date().getTime() + offset * 60 * 1000);
     const today = estDate.toUTCString();
