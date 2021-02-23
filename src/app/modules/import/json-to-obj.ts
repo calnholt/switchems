@@ -33,31 +33,36 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
         ALL = [selectedMonster];
     } else {
         ALL = [
-            Ashdash,
-            Boltblebee,
+            // Ashdash,
+            // Boltblebee,
             Chargroar,
             //Cleansitoad,
-            Cragadilo,
+            // Cragadilo,
             Drownigator,
             Flexferno,
-            Galvanite,
+            // Galvanite,
             Galeaffy,
-            Oozygoopz,
-            Smolderskulk,
+            // Oozygoopz,
+            // Smolderskulk,
             Stallagrowth,
-            Steamie,
-            Squirrberus,
-            Phantomaton,
+            // Steamie,
+            // Squirrberus,
+            // Phantomaton,
             Vulturock,
             Zappguin,
         ];
     }
-    ALL.forEach(json => {
+    return convertFromJSON(ALL);
+};
+
+export const convertFromJSON = (all: Array<any>, keepGUI?: boolean): Array<MonsterComplete> => {
+    let out = new Array<MonsterComplete>();
+    all.forEach(json => {
         const monster = new MonsterComplete();
         if (!json.abilityName) {
             return null;
         }
-        const MONSTER_PROPERTIES = [
+        let MONSTER_PROPERTIES = [
             'monsterId',
             'abilityName',
             'monsterName',
@@ -69,6 +74,12 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             'initiative',
             'lastUpdated',
         ];
+        if (keepGUI) {
+            MONSTER_PROPERTIES = MONSTER_PROPERTIES.concat(
+                'isSelected',
+                'referenceFlg'
+            )
+        }
         MONSTER_PROPERTIES.forEach(p => monster[p] = json[p]);
         const elements = Array<ElemType>();
         json.elements.forEach(element => elements.push(getElemType(element)));
@@ -76,7 +87,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
         monster.role = getRole(json.role);
         monster.actions = new Array<Action>();
         const ACTIONS = 4;
-        const ACTION_PROPERTIES = [
+        let ACTION_PROPERTIES = [
             'abilityName',
             'abilityText',
             'attack',
@@ -89,6 +100,11 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             'modifier',
             'lastUpdated',
         ];
+        if (keepGUI) {
+            ACTION_PROPERTIES = ACTION_PROPERTIES.concat(
+                'isSelected',
+            )
+        }
         for (let i = 0; i < ACTIONS; i++) {
             const action = new Action();
             ACTION_PROPERTIES.forEach(p => action[p] = json.actions[i][p]);
@@ -99,7 +115,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
         }
         monster.buffs = new Array<Buff>();
         const BUFFS = 4;
-        const BUFF_PROPERTIES = [
+        let BUFF_PROPERTIES = [
             'timing',
             'buffText',
             'flipEventText',
@@ -107,13 +123,17 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             'buffName',
             'lastUpdated',
         ];
+        if (keepGUI) {
+            BUFF_PROPERTIES = BUFF_PROPERTIES.concat(
+                'isSelected',
+            )
+        }
         for (let i = 0; i < BUFFS; i++) {
             const buff = new Buff();
             BUFF_PROPERTIES.forEach(p => buff[p] = json.buffs[i][p]);
             buff.monsterName = monster.monsterName;
             monster.buffs.push(buff);
         }
-        console.log(monster);
         out = out.sort((a, b) => {
             if (a.monsterName > b.monsterName) {return 1; }
             if (a.monsterName < b.monsterName) {return -1; }
@@ -122,4 +142,4 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
         out.push(monster);
     });
     return out;
-};
+}
