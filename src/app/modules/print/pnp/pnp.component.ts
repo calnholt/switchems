@@ -3,6 +3,7 @@ import { STANDARD_BUFFS, PLAYER_BOARD_TEXT } from './../../../types/dataTypes';
 import { MonsterComplete, Buff, Monster } from './../../monster/model/monster';
 import { ToolbarService } from './../../common/components/toolbar/toolbar.service';
 import { Component, OnInit } from '@angular/core';
+import { convertFromJSON } from '../../import/json-to-obj';
 
 @Component({
   selector: 'app-pnp',
@@ -24,16 +25,17 @@ export class PnpComponent implements OnInit {
     this.count = 0;
     const cache = JSON.parse(localStorage.getItem('allMonsters'));
     this.extraFlg = (cache.name === 'PRINT_EXTRA');
-    const allMonsters = cache.token;
+    const allMonsters: Array<MonsterComplete> = convertFromJSON(cache.token, true);
     const allCards = [];
     allMonsters.forEach(m => {
+      let isReference = m.referenceFlg;
       if (m.isSelected) {
-        const monster: Monster = Object.assign({}, m);
-        monster['isMonster'] = true;
-        monster.referenceFlg = false;
-        allCards.push(monster);
+        //let monster: Monster = Object.assign({}, m);
+        m['isMonster'] = true;
+        m.referenceFlg = false;
+        allCards.push(m);
       }
-      if (m.referenceFlg) {
+      if (isReference) {
         const ref: Monster = Object.assign({}, m);
         ref.referenceFlg = true;
         allCards.push(ref);
@@ -58,7 +60,7 @@ export class PnpComponent implements OnInit {
         allCards.push(b);
       });
       // adds player boards
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 2; i++) {
         PLAYER_BOARD_TEXT.forEach(txt => allCards.push({isPlayerBoard: true, text: txt}));
       }
     }
@@ -68,8 +70,8 @@ export class PnpComponent implements OnInit {
 
   isPageBreak() {
     this.count++;
-    if ([5, 6, 7, 8].includes(this.count)) {
-      if (this.count === 8) {
+    if ([10,12,14,16].includes(this.count)) {
+      if (this.count === 16) {
         this.count = 0;
       }
       return true;

@@ -1,5 +1,5 @@
 <div id="pnp">
-  <div class="all-cards">
+  <div class="all-cards" *ngIf="allCards.length > 0">
     <span *ngFor="let card of allCards; index as i">
       <span *ngIf="card.isMonster && !card.referenceFlg">
         <monster-card
