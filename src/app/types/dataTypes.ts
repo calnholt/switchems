@@ -59,29 +59,28 @@ export const TERM_KEYS = [`~WOUND~`, `~SUCCESS~`, `~FLINCH~`, `~DRAIN~`, `~FATIG
     `~GOOP~`, `~ETHEREAL~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`, `~CRUSH~`] as const;
 export type TermCode = typeof TERM_KEYS[number];
 export const TERM_CODES = [
-    new Term(`~WOUND~`, `Wounded monsters ignore their attack's elemental modifiers and are dealt <div>+1[ATK]</div>`
-     + ` from attacks they are weak to.`),
-     new Term(`~CRUSH~`, `Remove this many number of  [PQ] from the enemy monster.`),
-     new Term(`~EFFECTIVE~`, `Monsters are weak to elements found on the bottom left of their monster card.`),
-     new Term(`~ETHEREAL~`, `Ethereals are removed from the game after played as buffs.`),
-     new Term(`~FASTER~`, `This action is faster if both players select a monster action and yours has a higher speed.`),
-     new Term(`~FATIGUE~`, `Fatigued monsters cannot buff their attacks.`),
-     new Term(`~FLINCH~`, `Actions with flinch prevent the enemy monster's monster action if this action is faster.`),
-     new Term(`~GOOP~`, `If you do not have <b>Oozygoopz</b> on your team, goop buffs have no buff effect and are returned `
-     + `to its owner's discard pile when played as a buff.`),
-     new Term(`~DRAIN~`, `At the end of the turn, drained monsters suffer <div>1[ATK]</div> and your active monster heals `
-     + `<div>1[HP].`),
-     new Term(`~STUN~`, `Stunned monster's switch actions happen after monster actions.`),
-     new Term('~PIERCE~', `Attacks with pierce ignore the enemy monster's [DEF].`),
-     new Term(`~RECOIL~`, `This monster suffers this amount of recoil damage to itself. `
-     + `This damage cannot be prevented and still occurs if this action is prevented.`),
-     new Term(`~RESIST~`, `Monsters are resistant to elements found on the bottom right of their monster card.`),
-     new Term(`~SINGLE~`, `Single use actions recharge on switch and are considered used if this action is prevented.`),
-     new Term(`~SLOWER~`, `This action is slower if both players select a monster action and yours has a lower speed.`),
-     new Term(`~STATUS~`, `Status conditions [STATUS] – wound, fatigue, drain, stun.`),
-     new Term(`~SUCCESS~`, `Unsuccessful actions do nothing.`),
-     new Term(`~SUPER~`, `Supers require and use two [B] slots.`),
-     new Term(`~SWITCH~`, `Switch in abilities also trigger at the start of the game and following a monster KO.`),
+    new Term(`~CRUSH~`, `Remove up to this many of the specified type(s) of stat cubes from either monster.`),
+    new Term(`~DRAIN~`, `At the end of the turn, monsters with <b>Drain</b> [STATUS] suffer <div>1[ATK]</div> and your active monster heals `
+    + `<div>1[HP].</div>`),
+    new Term(`~EFFECTIVE~`, `Monsters are <b>Weak</b> to elements found on the bottom left of their monster card.`),
+    new Term(`~ETHEREAL~`, `<b>Ethereal</b> buffs are removed from the game after played as buffs.`),
+    new Term(`~FASTER~`, `This action is <b>faster</b> if both players select a monster action and yours has a higher speed.`),
+    new Term(`~FATIGUE~`, `Monsters with <b>Fatigue</b> [STATUS] cannot buff their attacks.`),
+    new Term(`~FLINCH~`, `Actions with <b>Flinch</b> prevent the enemy monster's monster action if this action is faster.`),
+    new Term(`~GOOP~`, `If you do not have <b>Oozygoopz</b> on your team, goop buffs have no buff effect and are returned `
+    + `to its owner's discard pile when played as a buff.`),
+    new Term('~PIERCE~', `Attacks with <b>Pierce</b> ignore the enemy monster's [DEF] and [COUNTER].`),
+    new Term(`~RECOIL~`, `This monster suffers this amount of </b>Recoil</b> damage to itself. `
+    + `This damage cannot be prevented and still occurs if this action is prevented.`),
+    new Term(`~RESIST~`, `Monsters are <b>Resistant</b> to elements found on the bottom right of their monster card.`),
+    new Term(`~SINGLE~`, `<b>Single Use</b> actions recharge on switch.`),
+    new Term(`~SLOWER~`, `This action is <b>Slower</b> if both players select a monster action and yours has a lower speed.`),
+    new Term(`~STATUS~`, `<b>Status Conditions</b> [STATUS] – wound, fatigue, drain, stun.`),
+    new Term(`~STUN~`, `Monsters with <b>Stun</b> [STATUS] perform their switch actions after monster actions.`),
+    new Term(`~SUCCESS~`, `<b>Unsuccessful</b> actions do nothing.`),
+    new Term(`~SUPER~`, `<b>Supers</b> require and use two [B] slots.`),
+    new Term(`~SWITCH~`, `<b>Switch In</b> abilities also trigger at the start of the game and following a monster KO.`),
+    new Term(`~WOUND~`, `Monsters with <b>Wound</b> [STATUS] cannot perform [FLIP] in any way`),
 ] as const;
 
 const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[1]`, `[2]`, `[3]`, `[4]`, `[DEF]`, `[TA]`, `[X]`, `[SUCC]`, `[FAIL]`,
