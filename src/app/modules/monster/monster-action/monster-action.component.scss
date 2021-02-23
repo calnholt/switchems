@@ -127,16 +127,19 @@
             border: 2px solid black;
             font-family: $beastformer;
             font-size: 25px;
-            width: 145px;
+            width: 129px;
             margin: auto;
-            left: 43px;
+            left: 52px;
             bottom: 61px;
             img {
-                max-height: 20px;
+                max-height: 24px;
+                padding-right: 4px;
             }
             .modifier-value {
-                margin-left: 2px;
                 color: black;
+                &.unity{
+                    color: #ebebeb;
+                }
             }
             .vs-container {
                 color: white;
@@ -153,12 +156,7 @@
             .modifier-elements {
                 position: relative;
                 display: flex;
-                img:first-child {
-                    padding-right: 2px;
-                }
-                img {
-                    padding: 0px 2px;
-                }
+                padding: 0px 5px;
             }
         }
         .cards-container{

@@ -83,15 +83,6 @@
     </mat-form-field>
   </div>
   <div class="col-12 form-element">
-    <dropdown
-      style="width:inherit;"
-      [label]="'Modifier'"
-      [model]="action"
-      [property]="'modifier'"
-      [options]="positiveModifierOptions">
-    </dropdown>
-  </div>
-  <div class="col-12 form-element">
     <mat-checkbox [(ngModel)]="action.statusFlg">Status?</mat-checkbox>
   </div>
   <div class="col-12 form-element">
