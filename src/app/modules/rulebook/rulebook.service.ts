@@ -75,7 +75,7 @@ export class RulebookService {
             text: '8 <a href="standard_buffs">Standard Buff Cards</a>',
           },
           {
-            text: '12 Maneuver Cubes',
+            text: '12 <a href="selection_phase">Maneuver</a> Cubes',
           },
           {
             text: 'A variety of tokens (lots of cubes, dice for damage, etc)',
@@ -94,7 +94,7 @@ export class RulebookService {
       {
         ol: [
           {
-            text: 'Place your player shield in front of you, action Board, and three maneuver cubes [MQ] behind it (all of which are hidden from your opponent).',
+            text: 'Place your player shield in front of you, action Board, and one <a href="selection_phase">maneuver</a> cube [MQ] behind it (all of which are hidden from your opponent).',
           },
           {
             text: 'Place your stat cube board in front of the player shield.',
@@ -229,7 +229,7 @@ export class RulebookService {
               text: 'Monster Action ability (not all monster actions have an ability)',
             },
             {
-              text: 'Elemental modifier, dealing more damage if the enemy monster has one or more of these elements',
+              text: 'Elemental bonus, granting one additional <a href="flip_effects">flip</a> [FLIP] if the enemy monster has one or more of these elements',
             },
             {
               text: 'Action number, so actions are always laid out in the same configuration',
@@ -357,10 +357,10 @@ export class RulebookService {
               ]
             },
             {
-              text: 'Counter – [COUNTER]',
+              text: 'Draw and Gain Maneuver Cube – [+] [MQ]',
               ul: [
                 {
-                  text: 'When you select the counter [COUNTER] standard action, this protects your active monster this turn from your opponent’s monster attack [ATK] action. Counter does not protect against special [SPECIAL] or team aura [TA] actions. If the enemy monster selected a monster attack [ATK], the enemy monster loses HP equal to the number of cards that player discarded [-] for the attack and the number of buff slots [B] that were used for the attack. Using the [COUNTER] action requires you to discard one maneuver cube ([MQ]). If you have no available [MQ], you cannot use [COUNTER]. Spent [MQ] are placed on the "Used [MQ]" section on your <a href="stat_cube_board">stat cube board</a>.'
+                  text: 'When you select the Draw and Gain Maneuver Cube standard action, draw one card and gain one maneuver cube as your action for the turn.'
                 }
               ]
             }
@@ -388,16 +388,21 @@ export class RulebookService {
         {
           text: '<h1>Monster Actions</h1>Monster actions, labeled 1 - 4, correspond to your active monster’s four action cards, arranged in a two by two grid. When you select a monster action, you must place the required number of [-] from your hand face-up on the discard [-] section of your player board. For each [B] on the action, you may optionally apply a buff from your hand to the action, placing each applied buff face-up on the buff [B] section of your action board. These actions are discussed in greater detail <a href="monster_actions">below</a>.'
         },
-      ]
-    },
-    {
-      title: 'Protecting Actions',
-      blocks: [
         {
-          text: 'Maneuver cubes [MQ] can also be used to protect your selected actions. All actions except for counter [COUNTER] and be protected. To protect an action, you may select an action by placing a [MQ] on the action space instead of the normal action cube. When you protect an action, both players ignore all elemental attack modifiers for the remainder of the turn. This discards the [MQ]. If you have no available [MQ], you cannot use protect actions.',
+          text: '<h1>Maneuvers</h1>Maneuver cubes [MQ] are used to augment monster attacks. To use a maneuver, when you select a monster attack action, you may select a maneuver by placing one of your [MQ] on the maneuver space. Afterwards, the [MQ] is discarded.',
         },
         {
-          text: '<b>HOWEVER</b>, if both players protect an action, elemental action modifiers are instead NOT ignored for the remainder of the turn.',
+          ul: [
+            {
+              text: '[COUNTER] (Block an attack) – Your active monster takes no damage from the enemy monster\'s attack this turn, if any.'
+            },
+            {
+              text: '[FLIP] [FLIP] – This attack gains [FLIP] [FLIP] this turn (<a href="flip_effects">flip</a> the top two cards from you deck and apply their <a href="flip_effects">flip</a> effects).'
+            },
+            {
+              text: '+3[SPD] – This attack gains +3[SPD] this turn.'
+            }
+          ]
         }
       ]
     },
@@ -550,7 +555,7 @@ export class RulebookService {
           text: 'For example, if an abilty shows this: {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}, that means the monster gains two positive [PQ] attack [ATK] stat cubes.'
         },
         {
-          text: 'The bottom of the board is used to track how many maneuver cubes you have used. When you discard a maneuver cube, place it on the right-most available slot.'
+          text: 'The bottom of the board is used to track how many <a href="selection_phase">maneuver</a> cubes you have used. When you discard a <a href="selection_phase">maneuver</a> cube, place it on the right-most available slot.'
         },
         {
           text: '<h1>Attack Stat Cubes</h1>Attack stat cubes modify the damage value for all of your monster attack actions. If you have 3[ATK][PQ] stat cubes, each of your active monster’s attack actions deal an additional 3[ATK]. Likewise, if you have 3[ATK][NQ] stat cubes, each of your active monster’s attack actions deal 3[ATK] less. <b>Remember</b>, attacks always deal at least 1 damage, even if the attack value is less than one!'
