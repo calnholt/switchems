@@ -28,8 +28,8 @@ export class MonsterService {
     return this.monsters;
   }
 
-  getMonster(monsterName: string): MonsterComplete {
-    if (!this.monsters) {
+  getMonster(monsterName: string, useJson?: boolean): MonsterComplete {
+    if (!this.monsters || useJson) {
       this.loadMonsters();
     }
     return this.monsters.find(m => m.monsterName === monsterName);
