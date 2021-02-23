@@ -1,4 +1,3 @@
-import { MonsterComplete } from 'src/app/modules/monster/model/monster';
 import { Component } from '@angular/core';
 import { Path } from './types/dataTypes';
 import { ToolbarService } from './modules/common/components/toolbar/toolbar.service';
@@ -16,6 +15,8 @@ export class AppComponent {
     logo: Path = '../../../../assets/images/website/logo.png';
     monsters: string[] = [];
     monster: any = {};
+    // TODO: set dynamically when in pnp component
+    isPrint: boolean = false;
   
     constructor(public toolbarService: ToolbarService, private router: Router, private monsterService: MonsterService) { }
   

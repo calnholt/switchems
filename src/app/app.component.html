@@ -1,5 +1,5 @@
-<div id="toolbar"> 
-    <mat-toolbar color="primary">
+<div *ngIf="!isPrint" id="toolbar"> 
+    <mat-toolbar *ngIf="true" color="primary">
       <div fxShow="true" fxHide.gt-sm="true">
         <button mat-icon-button (click)="sidenav.toggle()">
           <mat-icon>menu</mat-icon>
@@ -26,7 +26,7 @@
   
     </mat-toolbar>
     <mat-sidenav-container fxFlexFill class="sidenav-container">
-      <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" class="sidenav">
+      <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" class="sidenav" fixedInViewport="true">
         <div fxLayout="column" class="sidenav-options">
           <a mat-button [routerLink]="['/monster', 'builder']">Create</a>
           <a mat-button [routerLink]="['/print']">Print & Play</a>
@@ -37,4 +37,7 @@
           <router-outlet></router-outlet>
       </mat-sidenav-content>
     </mat-sidenav-container>
+  </div>
+  <div *ngIf="isPrint">
+    <router-outlet></router-outlet>
   </div>

@@ -1,4 +1,4 @@
-<!-- <div id="toolbar">
+<div id="toolbar">
   <div *ngIf="toolbarService.visible" class="padding">
     <mat-toolbar color="primary">
       <div class="button-container">
@@ -17,7 +17,7 @@
       </div>
     </mat-toolbar>
   </div>
-</div> -->
+</div>
 
 <div id="toolbar"> 
   <mat-toolbar color="primary">
@@ -35,14 +35,14 @@
       <a mat-button [routerLink]="['/monster', 'builder']">Create</a>
       <a mat-button [routerLink]="['print']">Print & Play</a>
       <a mat-button [routerLink]="['/rules']">How to Play</a>
-      <!-- <dropdown
+      <dropdown
           class="dropdown"
           [label]="'Search Monsters'"
           [model]="monster"
           [options]="monsters"
           [property]="'monsterName'"
           (selectionChange)="goToMonster()">
-        </dropdown> -->
+        </dropdown>
     </div>
 
   </mat-toolbar>
