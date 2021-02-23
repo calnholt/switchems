@@ -18,7 +18,7 @@
     },
     {
       "abilityName": "Expunge",
-      "abilityText": "If the enemy monster has a [STATUS], this attack gains <div>[FLIP] [FLIP].</div><br><br><b>Single use</b>.~STATUS~~SINGLE~",
+      "abilityText": "<b>Single use. </b><br><br>If the enemy monster has a [STATUS], this attack gains <div>[FLIP] [FLIP].</div>~STATUS~~SINGLE~",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
@@ -28,11 +28,11 @@
       "discard": 1,
       "buff": 1,
       "modifier": 3,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Tue, 23 Feb 2021 07:55:20 GMT"
     },
     {
-      "abilityName": "Foul Play",
-      "abilityText": "[FLIP]",
+      "abilityName": "Swamped",
+      "abilityText": "[FLIP]<br><br>The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
@@ -40,9 +40,9 @@
       "speed": 3,
       "draw": 0,
       "discard": 1,
-      "buff": 1,
+      "buff": 2,
       "modifier": 1,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Tue, 23 Feb 2021 07:55:20 GMT"
     },
     {
       "abilityName": "Surge",
@@ -69,20 +69,20 @@
       "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     },
     {
-      "buffName": "One Step Ahead",
+      "buffName": "Famished",
       "timing": "Pre-Actions",
-      "buffText": "This attack gains +1[ATK] and <b>pierce</b>. ~PIERCE~",
-      "flipEventText": "Look at your opponent's hand.",
+      "buffText": "<b>Crush 3 [PQ] / [NQ]</b>.<br><br>This monster heals 1[HP] for each stat cube removed with this card.~CRUSH~",
+      "flipEventText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Tue, 23 Feb 2021 07:55:20 GMT"
     },
     {
       "buffName": "Cripple",
       "timing": "Pre-Actions",
       "buffText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "flipEventText": "If your opponent has more cards in their hand than you, your opponent [-].",
+      "flipEventText": "This monster suffers 1[ATK] and [+]",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Tue, 23 Feb 2021 07:55:20 GMT"
     },
     {
       "buffName": "Tremble",
@@ -99,8 +99,8 @@
   "abilityText": "When this monster <b>switches in</b>, the opponent <div>[-].</div>~SWITCH~",
   "hp": 9,
   "complexity": 1,
-  "promiseDescription": "Drownigator is an immediate threat. Panic Attack puts your opponent on the defensive and a properly buffed Expunge can devastate leaf and rock types.",
+  "promiseDescription": "Drownigator is an immediate threat. Panic Attack puts your opponent on the defensive and a properly buffed Expunge can devastate.",
   "initiative": 70,
-  "role": "Tricky",
-  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT",
+  "role": "Tricky"
 }

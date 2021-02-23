@@ -39,11 +39,11 @@
       "auraDuration": 0,
       "statusFlg": true,
       "speed": 4,
-      "draw": 1,
+      "draw": 0,
       "discard": 0,
       "buff": 0,
       "modifier": 0,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Tue, 23 Feb 2021 07:20:49 GMT"
     },
     {
       "abilityName": "Flamethrower",
@@ -51,47 +51,47 @@
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": false,
-      "attack": 4,
-      "speed": 5,
+      "attack": 3,
+      "speed": 3,
       "draw": 0,
       "discard": 2,
       "buff": 1,
       "modifier": 2,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Tue, 23 Feb 2021 07:20:49 GMT"
     }
   ],
   "buffs": [
     {
-      "buffName": "Revenge",
-      "timing": "With Attack",
-      "buffText": "<b>Super</b><br>If the enemy monster is <b>resistant</b> to this attack's element, this attack gains <div>+4[ATK].</div>~SUPER~~RESIST~",
-      "flipEventText": "Your active monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div> after the attack.",
-      "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
-    },
-    {
-      "buffName": "Energize",
-      "timing": "With Attack",
-      "buffText": "This attack gains +2[ATK]",
-      "flipEventText": "This attack gains <b>pierce</b>.~PIERCE~",
-      "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
-    },
-    {
       "buffName": "Charge",
       "timing": "Pre-Actions",
-      "buffText": "This attack gains +2[SPD]",
+      "buffText": "This attack gains +1[SPD]. If your opponent has a KO'd monster, this attack gains +2[SPD] instead.",
       "flipEventText": "<b>Crush 2 [PQ]</b> ~CRUSH~",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Wed, 13 Feb 2020 08:00:00 GMT"
     },
     {
-      "buffName": "Charge",
+      "buffName": "Roar",
+      "timing": "With Attack",
+      "buffText": "This attack gains +1[ATK]. If your opponent has a KO'd monster, this attack gains +2[ATK] instead.",
+      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div> after the attack.",
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 23 Feb 2021 07:30:21 GMT"
+    },
+    {
+      "buffName": "Revenge",
+      "timing": "With Attack",
+      "buffText": "<b>Super, Ethereal</b><br>If the enemy monster is <b>resistant</b> to this attack's element, this attack gains <div>+3[ATK].</div>~SUPER~~ETHEREAL~~RESIST~",
+      "flipEventText": "This attack gains <b>pierce</b>.~PIERCE~",
+      "flipEventFlg": true,
+      "lastUpdated": "Tue, 23 Feb 2021 07:30:21 GMT"
+    },
+    {
+      "buffName": "Prey Upon",
       "timing": "Pre-Actions",
-      "buffText": "This attack gains +2[SPD]",
+      "buffText": "<b>Super, Ethereal</b><br>If the enemy monster is <b>weak</b> to this attack's element, this attack gains <div>+3[ATK].</div>~SUPER~~ETHEREAL~~EFFECTIVE~",
       "flipEventText": "This attack gains <div>+1[ATK].</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Tue, 23 Feb 2021 07:30:21 GMT"
     }
   ],
   "monsterId": 4,
@@ -100,8 +100,8 @@
   "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>~SWITCH~",
   "hp": 7,
   "complexity": 1,
-  "promiseDescription": "<b>Chargroar</b> is the quintessential assassin – fast, lethal, and fragile.",
+  "promiseDescription": "<b>Chargroar</b> is the quintessential assassin – fast, lethal, and fragile. Knockout a monster quickly to improve your buffs!",
   "initiative": 85,
-  "role": "Assassin",
-  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT",
+  "role": "Assassin"
 }

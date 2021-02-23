@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Vicious Hurricane",
-      "abilityText": "You may choose to remove any number of <div>[SPD] [PQ].</div> For each removed, this attack gains <div>+1[ATK].</div> <b><br><br>Single use.</b> ~SINGLE~",
+      "abilityText": "<br>Single use.</b> <b><br>You may choose to remove any number of <div>[SPD] [PQ].</div> For each removed, this attack gains <div>+1[ATK].</div> ~SINGLE~",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
@@ -57,7 +57,7 @@
       "discard": 2,
       "buff": 0,
       "modifier": 2,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Tue, 23 Feb 2021 08:04:04 GMT"
     }
   ],
   "buffs": [
@@ -89,9 +89,9 @@
       "buffName": "Leaffy Kicks",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.",
-      "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
+      "flipEventText": "This enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Sun, 07 Feb 2021 09:12:49 GMT"
     }
   ],
   "monsterId": 8,

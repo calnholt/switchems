@@ -63,17 +63,17 @@
       "buffName": "Impulsive Burn",
       "timing": "Pre-Actions",
       "buffText": "<b>Ethereal, Wound [STATUS]</b>~ETHEREAL~~WOUND~",
-      "flipEventText": "[+]",
+      "flipEventText": "This monster suffers 1[ATK] and [+]",
       "flipEventFlg": true,
-      "lastUpdated": "Wed, 18 Nov 2020 20:07:20 GMT"
+      "lastUpdated": "Tue, 23 Feb 2021 07:59:51 GMT"
     },
     {
       "buffName": "Melt Away",
       "timing": "Post Actions",
       "buffText": "<b>Super, Ethereal</b><br>Remove all [NQ] from this monster and all [STATUS] from all of your monsters.~SUPER~~ETHEREAL~~STATUS~",
-      "flipEventText": "You may remove a [NQ] from your active monster.",
+      "flipEventText": "<b>Crush 1[NQ]</b>~CRUSH~",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Tue, 23 Feb 2021 07:59:51 GMT"
     },
     {
       "buffName": "Sauna",
@@ -87,9 +87,9 @@
       "buffName": "Sear",
       "timing": "With Attack",
       "buffText": "If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+3[ATK].</div> ~STATUS~",
-      "flipEventText": "This attack gains +1[ATK].",
+      "flipEventText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Tue, 23 Feb 2021 07:59:51 GMT"
     }
   ],
   "monsterId": 2,

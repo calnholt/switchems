@@ -24,7 +24,7 @@
       "element": "Rock",
       "auraDuration": 0,
       "statusFlg": false,
-      "attack": 4,
+      "attack": 3,
       "speed": 5,
       "draw": 0,
       "discard": 1,
@@ -46,15 +46,15 @@
     },
     {
       "abilityName": "Scavenge",
-      "abilityText": "This monster heals <div>X[HP],</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, heal <div>5[HP]</div> instead. <br><br><b>Single use.</b> ~SINGLE~",
+      "abilityText": "<b>Single use. </b><br><br>This monster heals <div>X[HP],</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, heal <div>5[HP]</div> instead.~SINGLE~",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": true,
       "speed": 9,
       "draw": 0,
-      "discard": 1,
+      "discard": 2,
       "buff": 0,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Tue, 23 Feb 2021 08:04:04 GMT"
     }
   ],
   "buffs": [
@@ -78,15 +78,15 @@
       "buffName": "Bigger Rocs",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
-      "flipEventText": "This attack gains +1[ATK].",
+      "flipEventText": "This monster heals 1[HP], [FLIP].",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Sun, 07 Feb 2021 09:12:49 GMT"
     },
     {
       "buffName": "Bigger Rocs",
       "timing": "Pre-Actions",
       "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
-      "flipEventText": "This attack gains +1[ATK].",
+      "flipEventText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true} and this attack gains <b>recoil 1[ATK] </b>",
       "flipEventFlg": true,
       "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
     }
@@ -95,10 +95,10 @@
   "abilityName": "Wing Clip",
   "monsterName": "Vulturock",
   "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.</div>~SWITCH~",
-  "hp": 9,
+  "hp": 8,
   "complexity": 1,
   "promiseDescription": "Vulturock is reckless assassin that requires finesse. Knowing how to position Vulturock to maximize Scavenge and Iron Defense is key to its survival.",
   "initiative": 75,
-  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT",
+  "lastUpdated": "Sun, 07 Feb 2021 09:12:49 GMT",
   "role": "Assassin"
 }

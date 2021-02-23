@@ -90,7 +90,7 @@
   ],
   "abilityName": "Absorb",
   "monsterName": "Galvanite",
-  "abilityText": "If this monster switched in this turn and the enemy monster attacked, that attack is <b>unsuccessful</b> and this monster gains <div>[SPD][NQ], [ATK][NQ].</div>~SUCCESS~",
+  "abilityText": "If this monster switched in this turn and the enemy monster attacked, that attack is <b>unsuccessful</b> and this monster gains <div>{\"stat\": \"SPD\", \"num\": 1}</div> and <div>{\"stat\": \"ATK\", \"num\": 1}.</div>~SUCCESS~",
   "hp": 11,
   "complexity": 3,
   "promiseDescription": "Leverage your [NQ] as benefit!",

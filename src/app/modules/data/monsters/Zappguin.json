@@ -61,8 +61,8 @@
   "buffs": [
     {
       "buffName": "Zap",
-      "timing": "Pre-Actions",
-      "buffText": "<b>Super, Stun [STATUS]</b>~SUPER~~STUN~",
+      "timing": "Post Actions",
+      "buffText": "<b>Stun [STATUS]</b>~STUN~",
       "flipEventText": "<b>Stun</b> [STATUS] ~STUN~",
       "flipEventFlg": true,
       "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
