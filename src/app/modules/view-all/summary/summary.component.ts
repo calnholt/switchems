@@ -55,16 +55,4 @@ export class SummaryComponent implements OnInit {
     });
     return num;
   }
-
-  getTotalModifiersPerElement(elem: ElemType): number {
-    let total = 0;
-    // const index = getElementIndex(elem);
-    // this.monsters.forEach(m => {
-    //   m.actions.forEach(a => {
-    //     total += a.modifiers[index];
-    //   });
-    // });
-    return total;
-  }
-
 }
