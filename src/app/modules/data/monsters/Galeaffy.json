@@ -37,17 +37,17 @@
       "element": "Leaf",
       "auraDuration": 0,
       "statusFlg": false,
-      "attack": 1,
+      "attack": 2,
       "speed": 3,
       "draw": 0,
       "discard": 0,
       "buff": 2,
       "modifier": 1,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 07:11:11 GMT"
     },
     {
       "abilityName": "Vicious Hurricane",
-      "abilityText": "<br>Single use.</b> <b><br>You may choose to remove any number of <div>[SPD] [PQ].</div> For each removed, this attack gains <div>+1[ATK].</div> ~SINGLE~",
+      "abilityText": "<b>Single use.</b> <br><br>You may choose to remove any number of <div>[SPD] [PQ].</div> For each removed, this attack gains <div>+1[ATK].</div> ~SINGLE~",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
@@ -57,7 +57,7 @@
       "discard": 2,
       "buff": 0,
       "modifier": 2,
-      "lastUpdated": "Tue, 23 Feb 2021 08:04:04 GMT"
+      "lastUpdated": "Wed, 24 Feb 2021 10:00:26 GMT"
     }
   ],
   "buffs": [
@@ -71,11 +71,11 @@
     },
     {
       "buffName": "Sharp Leaves",
-      "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
+      "timing": "With Attack",
+      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}. [FLIP].",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:38:15 GMT"
     },
     {
       "buffName": "Leaf Shield",
@@ -87,11 +87,11 @@
     },
     {
       "buffName": "Leaffy Kicks",
-      "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.",
+      "timing": "With Attack",
+      "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}. [FLIP].",
       "flipEventText": "This enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Sun, 07 Feb 2021 09:12:49 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:38:15 GMT"
     }
   ],
   "monsterId": 8,
