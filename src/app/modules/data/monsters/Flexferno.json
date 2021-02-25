@@ -49,28 +49,28 @@
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": false,
-      "attack": 1,
+      "attack": 2,
       "speed": 7,
       "draw": 0,
       "discard": 2,
       "buff": 1,
       "modifier": 1,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 07:08:56 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Impulsive Burn",
       "timing": "Pre-Actions",
-      "buffText": "<b>Ethereal, Wound [STATUS]</b>~ETHEREAL~~WOUND~",
-      "flipEventText": "This monster suffers 1[ATK] and [+]",
+      "buffText": "<b>Wound [STATUS], Exhaust</b>~EXHAUST~~WOUND~",
+      "flipEventText": "This attack gains <div>+X[ATK]</div> and <div><b>recoil</b> X[ATK],</div> where X is the number of flipped cards before this one.",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 23 Feb 2021 07:59:51 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:30:32 GMT"
     },
     {
       "buffName": "Melt Away",
       "timing": "Post Actions",
-      "buffText": "<b>Super, Ethereal</b><br>Remove all [NQ] from this monster and all [STATUS] from all of your monsters.~SUPER~~ETHEREAL~~STATUS~",
+      "buffText": "<b>Super, Exhaust</b><br>Remove all [NQ] from this monster and all [STATUS] from all of your monsters.~SUPER~~EXHAUST~~STATUS~",
       "flipEventText": "<b>Crush 1[NQ]</b>~CRUSH~",
       "flipEventFlg": true,
       "lastUpdated": "Tue, 23 Feb 2021 07:59:51 GMT"
@@ -78,10 +78,10 @@
     {
       "buffName": "Sauna",
       "timing": "Pre-Actions",
-      "buffText": "If the enemy monster has a <div>[STATUS],</div> this monster heals <div>3[HP].</div> ~STATUS~",
-      "flipEventText": "This monster heals 2[HP].",
+      "buffText": "If the enemy monster has a <div>[STATUS],</div> this monster heals <div>2[HP].</div> ~STATUS~",
+      "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:30:32 GMT"
     },
     {
       "buffName": "Sear",
@@ -95,10 +95,10 @@
   "monsterId": 2,
   "abilityName": "Heatwave",
   "monsterName": "Flexferno",
-  "abilityText": "At the end of the turn, the enemy monster suffers <div>1[ATK].</div>",
+  "abilityText": "Whenever this monster flips one or more buff cards that <b>belongs</b> to it, the attack gains <div>+1[ATK].</div>~BELONGS~",
   "hp": 9,
   "complexity": 1,
   "initiative": 20,
-  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT",
+  "lastUpdated": "Thu, 25 Feb 2021 06:30:32 GMT",
   "role": "Warrior"
 }
