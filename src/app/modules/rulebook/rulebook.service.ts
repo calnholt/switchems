@@ -329,6 +329,11 @@ export class RulebookService {
             },
             {
               text: '<b><a href="end_phase">End Phase</a></b>',
+              ul: [
+                {
+                  text: 'Perform end of turn effects and various cleanup.'
+                }
+              ]
             }
           ]
         }
@@ -464,20 +469,20 @@ export class RulebookService {
           text: 'The enemy monster then takes the resulting damage, by lowering its [HP] that much.'
         },
         {
-          text: '<h1>Monster Actions - Special[SPECIAL]</h1>A monster action is special if it has the special [SPECIAL] symbol. Special [SPECIAL] actions behave just like attacks except they do not deal damage and are not prevented by the counter [COUNTER] action. These actions usually make your monster stronger or make your opponent\'s monster weaker.',
+          text: '<h1>Monster Actions - Special[SPECIAL]</h1>A monster action is special if it has the special [SPECIAL] symbol. Special [SPECIAL] actions behave just like attacks except they do not deal damage. These actions usually make your monster stronger or make your opponent\'s monster weaker.',
         },
-        {
-          text: '<h1>Monster Actions - Team Aura[TA]</h1>A monster action is a team aura if it has the team aura [TA] symbol. Team aura actions create ongoing benefits for your active monster for a number of turns, as denoted by the number beside the team aura [TA] symbol, called its duration. Put a number of time counters on this action card equal to the action’s team aura [TA] duration value. At the end of each turn, remove a time counter.'
-        },
-        {
-          text: 'While this action card has time counters on it, the team aura effect is active. This effect is active even if that monster is not your active monster.'
-        },
-        {
-          text: '<b>NOTE:</b> Team auras [TA] can never have more duration counters on it than its printed duration value.'
-        },
-        {
-          text: '<b>NOTE:</b> When a monster has a team aura [TA] with time counters on it and switches, keep that card visible to show that its effect is still active. When all of the time counters are removed, return the card to the monster.',
-        }
+        // {
+        //   text: '<h1>Monster Actions - Team Aura[TA]</h1>A monster action is a team aura if it has the team aura [TA] symbol. Team aura actions create ongoing benefits for your active monster for a number of turns, as denoted by the number beside the team aura [TA] symbol, called its duration. Put a number of time counters on this action card equal to the action’s team aura [TA] duration value. At the end of each turn, remove a time counter.'
+        // },
+        // {
+        //   text: 'While this action card has time counters on it, the team aura effect is active. This effect is active even if that monster is not your active monster.'
+        // },
+        // {
+        //   text: '<b>NOTE:</b> Team auras [TA] can never have more duration counters on it than its printed duration value.'
+        // },
+        // {
+        //   text: '<b>NOTE:</b> When a monster has a team aura [TA] with time counters on it and switches, keep that card visible to show that its effect is still active. When all of the time counters are removed, return the card to the monster.',
+        // }
       ]
     },
     {
@@ -531,16 +536,6 @@ export class RulebookService {
       ]
     },
     {
-      title: 'Standard Buff Cards',
-      id: 'standard_buffs',
-      rulebookImage: 'Standard',
-      blocks: [
-        {
-          text: 'When forming your buff deck at the start of a game, you must include two copies of the <b>Can\'t Escape!</b> standard buff card. It’s wise to be aware of how many of these are in your opponent’s discard pile if you plan on switching!'
-        }
-      ]
-    },
-    {
       title: 'Stat Cube Board',
       id: 'stat_cube_board',
       rulebookImage: 'Stat-Cube',
@@ -553,9 +548,6 @@ export class RulebookService {
         },
         {
           text: 'For example, if an abilty shows this: {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}, that means the monster gains two positive [PQ] attack [ATK] stat cubes.'
-        },
-        {
-          text: 'The bottom of the board is used to track how many <a href="selection_phase">maneuver</a> cubes you have used. When you discard a <a href="selection_phase">maneuver</a> cube, place it on the right-most available slot.'
         },
         {
           text: '<h1>Attack Stat Cubes</h1>Attack stat cubes modify the damage value for all of your monster attack actions. If you have 3[ATK][PQ] stat cubes, each of your active monster’s attack actions deal an additional 3[ATK]. Likewise, if you have 3[ATK][NQ] stat cubes, each of your active monster’s attack actions deal 3[ATK] less. <b>Remember</b>, attacks always deal at least 1 damage, even if the attack value is less than one!'
@@ -680,6 +672,9 @@ export class RulebookService {
               text: 'Conor Cain',
             },
             {
+              text: 'Chris Eyer',
+            },
+            {
               text: 'Zachary Gogel'
             },
             {
@@ -711,6 +706,9 @@ export class RulebookService {
             },
             {
               text: 'Guy Tuori',
+            },
+            {
+              text: 'Eric Twardzik',
             },
             {
               text: 'Mike Vessia',
