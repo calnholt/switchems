@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Leech Seed",
-      "abilityText": "<b>Drain [STATUS], Single Use. </b><br><br>If this monster has no [DEF][PQ], [+]. ~DRAIN~~SINGLE~",
+      "abilityText": "<b>Drain [STATUS], Single Use. </b><br><br>If this monster has no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.</div> ~DRAIN~~SINGLE~",
       "element": "Leaf",
       "auraDuration": null,
       "statusFlg": true,
@@ -14,7 +14,7 @@
       "draw": 0,
       "discard": 2,
       "buff": 0,
-      "lastUpdated": "Tue, 23 Feb 2021 07:05:20 GMT"
+      "lastUpdated": "Wed, 24 Feb 2021 08:42:24 GMT"
     },
     {
       "abilityName": "Vine Whips",
@@ -26,9 +26,9 @@
       "speed": 3,
       "draw": 0,
       "discard": 0,
-      "buff": 1,
+      "buff": 2,
       "modifier": 2,
-      "lastUpdated": "Tue, 23 Feb 2021 07:05:20 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 07:13:07 GMT"
     },
     {
       "abilityName": "Rock Smash",
@@ -50,13 +50,13 @@
       "element": "Rock",
       "auraDuration": null,
       "statusFlg": false,
-      "attack": 1,
+      "attack": 2,
       "speed": 5,
       "draw": 0,
       "discard": 1,
       "buff": 2,
       "modifier": 2,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 07:12:26 GMT"
     }
   ],
   "buffs": [
@@ -72,9 +72,9 @@
       "buffName": "Mossy Overgrowth",
       "timing": "Pre-Actions",
       "buffText": "<b>Super</b><br>This monster gains <div>+5[DEF]</div> this turn. ~SUPER~",
-      "flipEventText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.",
+      "flipEventText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 23 Feb 2021 07:05:20 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:54:19 GMT"
     },
     {
       "buffName": "Concussion",
@@ -87,20 +87,20 @@
     {
       "buffName": "Gravelcrust Grip",
       "timing": "With Attack",
-      "buffText": "<b>Super, Ethereal, Drain [STATUS]</b> ~SUPER~~ETHEREAL~~DRAIN~",
+      "buffText": "<b>Super, Exhaust, Drain [STATUS]</b> ~SUPER~~EXHAUST~~DRAIN~",
       "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 23 Feb 2021 06:51:38 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:39:01 GMT"
     }
   ],
   "monsterId": 1,
   "abilityName": "Vineshield",
   "monsterName": "Stallagrowth",
   "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.</div> ~SWITCH~",
-  "hp": 11,
+  "hp": 10,
   "complexity": 1,
   "promiseDescription": "Slowly drain the enemy's health and stand your ground with Vineshield's defensive boon. Stallagrowth plays for the long game, but struggles to accumulate cards. Knowing when to draw three is essential to sustaining pressure.",
   "initiative": 10,
-  "lastUpdated": "Tue, 17 Nov 2020 21:32:54 GMT",
+  "lastUpdated": "Wed, 24 Feb 2021 08:42:24 GMT",
   "role": "Tank"
 }
