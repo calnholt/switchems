@@ -109,7 +109,7 @@ export class RulebookService {
             text: 'For the two non-starting monsters, place one to the left of you, and the other to the right (which is placed where is irrelevant).',
           },
           {
-            text: 'Both players draw [+] two cards and you’re ready to play!',
+            text: 'Both players draw [+] three cards and you’re ready to play!',
           }
         ]
       },
@@ -351,7 +351,7 @@ export class RulebookService {
             text: '<b>NOTE:</b> When you select any action, you must place the cards remaining in your hand (if any) face down on the hand section of your player board.'
         },
         {
-          text: '<h1>Standard Actions</h1>There are two different standard actions. Standard actions require one discard to use, as denoted by [-]. Place the discarded card face-up on the discard [-] section of your player board. The two standard actions are:',
+          text: '<h1>Standard Actions</h1>There are two different standard actions. The two standard actions are:',
           ul: [
             {
               text: 'Draw Cards – [+] [+] [+]',
@@ -470,6 +470,9 @@ export class RulebookService {
         },
         {
           text: '<h1>Monster Actions - Special[SPECIAL]</h1>A monster action is special if it has the special [SPECIAL] symbol. Special [SPECIAL] actions behave just like attacks except they do not deal damage. These actions usually make your monster stronger or make your opponent\'s monster weaker.',
+        },
+        {
+          text: '<h1>Disabled Actions</h1>A monster action becomes disabled when it is selected. When a monster action is disabled, it cannot be selected. A disabled monster action becomes enabled after your next action.',
         },
         // {
         //   text: '<h1>Monster Actions - Team Aura[TA]</h1>A monster action is a team aura if it has the team aura [TA] symbol. Team aura actions create ongoing benefits for your active monster for a number of turns, as denoted by the number beside the team aura [TA] symbol, called its duration. Put a number of time counters on this action card equal to the action’s team aura [TA] duration value. At the end of each turn, remove a time counter.'
