@@ -1,9 +1,7 @@
 <div id="action-board">
   <div class="card-container">
-    <div class="actions-container">
-      <div class="title">Standard Actions
-        <img src="{{discard}}" class="no-draw">
-      </div>
+    <div class="actions-container standard-table">
+      <div class="title">Standard Actions</div>
       <table>
         <tr>
           <td>
@@ -18,23 +16,23 @@
         </tr>
       </table>
     </div>
-    <div class="actions-container">
+    <div class="actions-container switch-table">
       <div class="title">
-        <div class="switch-heal">
-          <img src="{{heal}}">/<img src="{{status}}">
-        </div>
         Switch Actions
+          <div class="switch-heal">
+            <img src="{{heal}}">/<img src="{{status}}">
+          </div>
         <img src="{{discard}}" class="no-draw">
       </div>
       <table>
         <tr>
           <td>
             <img src="{{switchLeft}}" class="switch">
-            & (<img src="{{cube}}" class="cube">)
+            & <img src="{{cube}}" class="cube">
           </td>
           <td>
             <img src="{{switchRight}}" class="switch">
-            & (<img src="{{cube}}" class="cube">)
+            & <img src="{{cube}}" class="cube">
           </td>
         </tr>
       </table>

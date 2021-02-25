@@ -3,6 +3,7 @@
 
 #action-board{
     .card-container{
+        font-family: $beastformer;
         position: relative;
         border: rgb(216, 216, 216) 2px solid;
         border-radius: 11px;
@@ -10,27 +11,28 @@
         width: $card-width;
         background-color: white;
         .no-draw{
-            position: absolute;
             max-height: 18px;
-            right: 11px;
         }
         .switch-heal{
-            position: absolute;
-            left: 6px;
-            top: 79px;
             font-size: 15px;
             img {
                 max-height: 15px;
             }
         }
         .actions-container{
-            padding: 8px 5px 0px 5px;
+            background-color: #f3f3f3;
+            border-radius: 6px;
+            margin: 3px;
+            padding: 1px;
             // margin-top: 10px;
             .title{
                 font-size: 23px;
                 text-align: center;
-                font-family: $beastformer;
                 margin: 0px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 10px;
             }
             .line-container{
                 padding-left: 5px;
@@ -48,37 +50,71 @@
                     display: inline-block;
                 }
             }
-            table, th, td {
-                border: 1px solid black;
-            }
             table{
                 width: 100%;
+                border-radius: 6px;
+                border: 2px solid black;
+                border-collapse: separate;
+                background-color: white;
                 tr{
                     td{
                         text-align: center;
                         font-size: 16px;
-                        font-family: $helvetica;
                         width: 50%;
                         padding: 6px;
                         height: 38px;
+                        background-color: #ebebeb;
+                        box-shadow: $recessed;
                         img{
-                            max-height: 30px;
+                            max-height: 26px;
                         }
                         .switch{
-                            max-height: 30px;
+                            max-height: 26px;
                         }
                         .draw{
                             padding-right: 4px;
                         }
                         .cube {
-                            max-height: 16px;
+                            max-height: 20px;
                         }
+                    }
+                }
+                tr:nth-child(odd) {
+                    td:nth-child(odd) {
+                        background-color: aliceblue;
+                    }
+                    td:nth-child(even) {
+                        background-color: #ffefd3;
+                    }
+                }
+                tr:nth-child(even) {
+                    td:nth-child(odd) {
+                        background-color: #ffefd3;
+                    }
+                    td:nth-child(even) {
+                        background-color: aliceblue;
                     }
                 }
                 &.monster-actions {
                     tr {
                         td {
                             font-size: 30px;
+                        }
+                    }
+                    tr:nth-child(1) {
+                        td:first-child {
+                            border-radius: 4px 0px 0px 0px;
+                        }
+                        td:last-child {
+                            border-radius: 0px 4px 0px 0px;
+                        }
+                    }
+                    tr:nth-child(2) {
+                        td:first-child {
+                            border-radius: 0px 0px 0px 4px;
+                        }
+                        td:last-child {
+                            border-radius: 0px 0px 4px 0px;
                         }
                     }
                 }
@@ -88,6 +124,7 @@
                     tr{
                         td:nth-child(1){
                             width: 30%;
+                            border-radius: 4px 0px 0px 4px;
                         }
                         td:nth-child(2){
                             width: 35%;
@@ -95,8 +132,21 @@
                         td:last-child {
                             font-family: $beastformer;
                             width: 35%;
-                            font-size: 33px;
+                            font-size: 29px;
+                            border-radius: 0px 4px 4px 0px;
                         }
+                    }
+                }
+            }
+        }
+        .standard-table, .switch-table {
+            table {
+                tr{
+                    td:nth-child(1){
+                        border-radius: 4px 0px 0px 4px;
+                    }
+                    td:nth-child(2){
+                        border-radius: 0px 4px 4px 0px;
                     }
                 }
             }
