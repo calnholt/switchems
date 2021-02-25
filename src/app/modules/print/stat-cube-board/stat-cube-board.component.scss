@@ -46,7 +46,7 @@
                 width: 100%;
                 border-bottom: unset;
                 tr{
-                    height: 64px;
+                    height: 106px;
                     td:nth-child(1){
                         background-color: #d6ffd6;
                     }
@@ -59,6 +59,7 @@
                         font-size: 33px;
                         font-family: $beastformer;
                         width: 50%;
+                        box-shadow: $recessed;
                         img{
                             max-height: 30px;
                         }
@@ -87,6 +88,7 @@
                 border-radius: 0px 0px 6px 6px;
                 align-items: center;
                 .defense {
+                    box-shadow: $recessed;
                     background-color: #d6ffd6;
                     height: 50px;
                     display: flex;
