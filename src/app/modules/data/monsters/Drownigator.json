@@ -46,7 +46,7 @@
     },
     {
       "abilityName": "Surge",
-      "abilityText": "",
+      "abilityText": "<b>Spammable</b>. ~SPAM~",
       "element": "Water",
       "auraDuration": 0,
       "statusFlg": false,
@@ -56,33 +56,33 @@
       "discard": 0,
       "buff": 3,
       "modifier": 1,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:59:12 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Abrupt Weakness",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super, Ethereal, Fatigue [STATUS]</b> ~SUPER~~ETHEREAL~~FATIGUE~",
+      "buffText": "<b>Super, Exhaust, Fatigue [STATUS]</b> ~SUPER~~EXHAUST~~FATIGUE~",
       "flipEventText": "The enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:37:36 GMT"
     },
     {
       "buffName": "Famished",
       "timing": "Pre-Actions",
-      "buffText": "<b>Crush 3 [PQ] / [NQ]</b>.<br><br>This monster heals 1[HP] for each stat cube removed with this card.~CRUSH~",
+      "buffText": "<b>Crush 2 [PQ] / [NQ]</b>.<br><br>This monster heals 1[HP] for each stat cube removed with this card.~CRUSH~",
       "flipEventText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 23 Feb 2021 07:55:20 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:48:32 GMT"
     },
     {
       "buffName": "Cripple",
-      "timing": "Pre-Actions",
-      "buffText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
+      "timing": "With Attack",
+      "buffText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}. [FLIP].",
       "flipEventText": "This monster suffers 1[ATK] and [+]",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 23 Feb 2021 07:55:20 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:48:32 GMT"
     },
     {
       "buffName": "Tremble",
