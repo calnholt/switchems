@@ -60,35 +60,35 @@
   "buffs": [
     {
       "buffName": "Beak Drill",
-      "timing": "Pre-Actions",
+      "timing": "With Attack",
       "buffText": "[FLIP] [FLIP]",
-      "flipEventText": "This monster heals 1[HP], [FLIP].",
+      "flipEventText": "The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:57:48 GMT"
     },
     {
       "buffName": "Recoil",
       "timing": "Post Actions",
-      "buffText": "<b>Super, Ethereal</b><br>The enemy monster suffers <div>1[ATK]</div> for each card your opponent discarded and for each buff slot used this turn.~SUPER~~ETHEREAL~",
+      "buffText": "<b>Super, Exhaust</b><br>The enemy monster suffers <div>1[ATK]</div> for each card your opponent discarded and for each buff slot used this turn.~SUPER~~EXHAUST~",
       "flipEventText": "This attack gains +2[ATK] and <b>recoil 2[ATK]</b>.",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:40:35 GMT"
     },
     {
-      "buffName": "Bigger Rocs",
+      "buffName": "Self Defense",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
-      "flipEventText": "This monster heals 1[HP], [FLIP].",
+      "buffText": "This monster heals 1[HP] and does not suffer <b>recoil</b> damage this turn. ~RECOIL~",
+      "flipEventText": "This monster heals <div>1[HP].</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Sun, 07 Feb 2021 09:12:49 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:57:48 GMT"
     },
     {
       "buffName": "Bigger Rocs",
-      "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
+      "timing": "With Attack",
+      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}. [FLIP].",
       "flipEventText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true} and this attack gains <b>recoil 1[ATK] </b>",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:41:03 GMT"
     }
   ],
   "monsterId": 9,
