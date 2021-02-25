@@ -20,17 +20,17 @@
     },
     {
       "abilityName": "Lights Out",
-      "abilityText": "<b>[FLIP] [FLIP]</b>. <br><br>If this attack KO's the enemy monster, this monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}",
+      "abilityText": "<b>[FLIP] [FLIP]</b>. <br><br>If this attack KO's the enemy monster, this monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.</div>",
       "element": "Electric",
       "auraDuration": 0,
       "statusFlg": false,
-      "attack": 1,
+      "attack": 2,
       "speed": 5,
       "draw": 0,
       "discard": 0,
       "buff": 3,
       "modifier": 1,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 07:09:57 GMT"
     },
     {
       "abilityName": "Hypercharge",
@@ -80,18 +80,18 @@
     {
       "buffName": "Revenge",
       "timing": "With Attack",
-      "buffText": "<b>Super, Ethereal</b><br>If the enemy monster is <b>resistant</b> to this attack's element, this attack gains <div>+3[ATK].</div>~SUPER~~ETHEREAL~~RESIST~",
+      "buffText": "<b>Exhaust</b><br>If the enemy monster is <b>resistant</b> to this attack's element, this attack gains <div>+3[ATK].</div>~SUPER~~RESIST~",
       "flipEventText": "This attack gains <b>pierce</b>.~PIERCE~",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 23 Feb 2021 07:30:21 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:47:15 GMT"
     },
     {
       "buffName": "Prey Upon",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super, Ethereal</b><br>If the enemy monster is <b>weak</b> to this attack's element, this attack gains <div>+3[ATK].</div>~SUPER~~ETHEREAL~~EFFECTIVE~",
+      "buffText": "<b>Exhaust</b><br>If the enemy monster is <b>weak</b> to this attack's element, this attack gains <div>+3[ATK].</div>~EXHAUST~~EFFECTIVE~",
       "flipEventText": "This attack gains <div>+1[ATK].</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 23 Feb 2021 07:30:21 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 06:47:15 GMT"
     }
   ],
   "monsterId": 4,
