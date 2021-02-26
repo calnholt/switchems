@@ -159,6 +159,22 @@
                 padding: 0px 5px;
             }
         }
+        .locked-container {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2px;
+            border-radius: 6px;
+            font-family: "Beastformer";
+            font-size: 25px;
+            margin: auto;
+            bottom: 61px;
+            right: 5px;
+            img {
+                height: 29px;
+            }
+        }
         .cards-container{
             display: flex;
             justify-content: center;
