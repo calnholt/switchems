@@ -6,17 +6,17 @@
   "actions": [
     {
       "abilityName": "Kraterkazee",
-      "abilityText": "[FLIP] [FLIP]. <br><br><b>Recoil 2[ATK]</b>~RECOIL~",
+      "abilityText": "[FLIP]. <br><br><b>Recoil 2[ATK]</b>~RECOIL~",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
       "attack": 4,
       "speed": 7,
       "draw": 0,
-      "discard": 2,
+      "discard": 1,
       "buff": 1,
       "modifier": 2,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:36:31 GMT"
     },
     {
       "abilityName": "Roc Rock",
@@ -27,10 +27,10 @@
       "attack": 3,
       "speed": 5,
       "draw": 0,
-      "discard": 1,
+      "discard": 0,
       "buff": 2,
       "modifier": 2,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:36:31 GMT"
     },
     {
       "abilityName": "Iron Defense",
@@ -39,10 +39,10 @@
       "auraDuration": 0,
       "statusFlg": true,
       "speed": 3,
-      "draw": 0,
+      "draw": 1,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Tue, 17 Nov 2020 21:30:43 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:36:31 GMT"
     },
     {
       "abilityName": "Scavenge",
@@ -52,9 +52,9 @@
       "statusFlg": true,
       "speed": 9,
       "draw": 0,
-      "discard": 2,
+      "discard": 1,
       "buff": 0,
-      "lastUpdated": "Tue, 23 Feb 2021 08:04:04 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:36:31 GMT"
     }
   ],
   "buffs": [

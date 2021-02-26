@@ -12,10 +12,10 @@
       "attack": 2,
       "speed": 6,
       "draw": 0,
-      "discard": 2,
+      "discard": 1,
       "buff": 0,
       "modifier": 1,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:33:25 GMT"
     },
     {
       "abilityName": "Whirlwind",
@@ -24,12 +24,12 @@
       "auraDuration": 0,
       "statusFlg": false,
       "attack": 4,
-      "speed": 3,
+      "speed": 4,
       "draw": 0,
-      "discard": 1,
-      "buff": 1,
+      "discard": 0,
+      "buff": 2,
       "modifier": 2,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:33:25 GMT"
     },
     {
       "abilityName": "Cyclone",
@@ -39,25 +39,25 @@
       "statusFlg": false,
       "attack": 2,
       "speed": 3,
-      "draw": 0,
+      "draw": 1,
       "discard": 0,
       "buff": 2,
       "modifier": 1,
-      "lastUpdated": "Thu, 25 Feb 2021 07:11:11 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:33:25 GMT"
     },
     {
       "abilityName": "Vicious Hurricane",
-      "abilityText": "<b>Single use.</b> <br><br>You may choose to remove any number of <div>[SPD] [PQ].</div> For each removed, this attack gains <div>+1[ATK].</div> ~SINGLE~",
+      "abilityText": "You may choose to remove any number of <div>[SPD] [PQ].</div> For each removed, this attack gains <div>+1[ATK].</div>",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
       "attack": 3,
-      "speed": 5,
+      "speed": 6,
       "draw": 0,
-      "discard": 2,
-      "buff": 0,
+      "discard": 1,
+      "buff": 1,
       "modifier": 2,
-      "lastUpdated": "Wed, 24 Feb 2021 10:00:26 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:33:25 GMT"
     }
   ],
   "buffs": [
@@ -65,9 +65,9 @@
       "buffName": "Propulsive Winds",
       "timing": "Pre-Actions",
       "buffText": "<b>Super</b><br>This attack gains <div>+4[SPD]</div>.~SUPER~",
-      "flipEventText": "This attack gains +1[ATK].",
+      "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:33:25 GMT"
     },
     {
       "buffName": "Sharp Leaves",
@@ -89,9 +89,9 @@
       "buffName": "Leaffy Kicks",
       "timing": "With Attack",
       "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}. [FLIP].",
-      "flipEventText": "This enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div>",
+      "flipEventText": "If this monster has 2 or more <div>[SPD][PQ],</div> this attack gains +2[ATK].",
       "flipEventFlg": true,
-      "lastUpdated": "Thu, 25 Feb 2021 06:38:15 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 17:38:15 GMT"
     }
   ],
   "monsterId": 8,

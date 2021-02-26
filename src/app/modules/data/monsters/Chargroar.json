@@ -13,24 +13,24 @@
       "attack": 6,
       "speed": 9,
       "draw": 0,
-      "discard": 3,
+      "discard": 2,
       "buff": 0,
       "modifier": 5,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 07:53:40 GMT"
     },
     {
       "abilityName": "Lights Out",
-      "abilityText": "<b>[FLIP] [FLIP]</b>. <br><br>If this attack KO's the enemy monster, this monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.</div>",
+      "abilityText": "<b>[FLIP]</b>. <br><br>If this attack KO's the enemy monster, this monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.</div>",
       "element": "Electric",
       "auraDuration": 0,
       "statusFlg": false,
       "attack": 2,
-      "speed": 5,
-      "draw": 0,
+      "speed": 3,
+      "draw": 1,
       "discard": 0,
-      "buff": 3,
+      "buff": 2,
       "modifier": 1,
-      "lastUpdated": "Thu, 25 Feb 2021 07:09:57 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 07:53:40 GMT"
     },
     {
       "abilityName": "Hypercharge",
@@ -39,11 +39,11 @@
       "auraDuration": 0,
       "statusFlg": true,
       "speed": 4,
-      "draw": 0,
+      "draw": 1,
       "discard": 0,
       "buff": 0,
       "modifier": 0,
-      "lastUpdated": "Tue, 23 Feb 2021 07:20:49 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 07:53:40 GMT"
     },
     {
       "abilityName": "Flamethrower",
@@ -54,10 +54,10 @@
       "attack": 3,
       "speed": 3,
       "draw": 0,
-      "discard": 2,
+      "discard": 1,
       "buff": 1,
       "modifier": 2,
-      "lastUpdated": "Tue, 23 Feb 2021 07:20:49 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 07:53:40 GMT"
     }
   ],
   "buffs": [
@@ -73,9 +73,9 @@
       "buffName": "Roar",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]. If your opponent has a KO'd monster, this attack gains +2[ATK] instead.",
-      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div> after the attack.",
+      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Tue, 23 Feb 2021 07:30:21 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 17:34:00 GMT"
     },
     {
       "buffName": "Revenge",

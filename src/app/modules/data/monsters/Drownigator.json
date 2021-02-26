@@ -10,11 +10,11 @@
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": true,
-      "speed": 3,
-      "draw": 0,
-      "discard": 2,
+      "speed": 8,
+      "draw": 1,
+      "discard": 0,
       "buff": 0,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:02:45 GMT"
     },
     {
       "abilityName": "Expunge",
@@ -25,10 +25,10 @@
       "attack": 4,
       "speed": 8,
       "draw": 0,
-      "discard": 1,
+      "discard": 0,
       "buff": 1,
       "modifier": 3,
-      "lastUpdated": "Tue, 23 Feb 2021 07:55:20 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:02:45 GMT"
     },
     {
       "abilityName": "Swamped",
@@ -36,13 +36,13 @@
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
-      "attack": 2,
-      "speed": 3,
+      "attack": 3,
+      "speed": 2,
       "draw": 0,
-      "discard": 1,
+      "discard": 0,
       "buff": 2,
       "modifier": 1,
-      "lastUpdated": "Tue, 23 Feb 2021 07:55:20 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:02:45 GMT"
     },
     {
       "abilityName": "Surge",
@@ -51,22 +51,22 @@
       "auraDuration": 0,
       "statusFlg": false,
       "attack": 1,
-      "speed": 7,
-      "draw": 0,
+      "speed": 6,
+      "draw": 1,
       "discard": 0,
-      "buff": 3,
+      "buff": 2,
       "modifier": 1,
-      "lastUpdated": "Thu, 25 Feb 2021 06:59:12 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:02:45 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Abrupt Weakness",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super, Exhaust, Fatigue [STATUS]</b> ~SUPER~~EXHAUST~~FATIGUE~",
+      "buffText": "<b>Fatigue [STATUS], Exhaust</b> ~FATIGUE~~EXHAUST~",
       "flipEventText": "The enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Thu, 25 Feb 2021 06:37:36 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 17:22:19 GMT"
     },
     {
       "buffName": "Famished",
@@ -87,10 +87,10 @@
     {
       "buffName": "Tremble",
       "timing": "Post Actions",
-      "buffText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.",
-      "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
+      "buffText": "This attack gains +X[ATK] where X is equal to the number of [NQ] the enemy monster has.",
+      "flipEventText": "This attack gains +1[ATK].",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:02:45 GMT"
     }
   ],
   "monsterId": 5,

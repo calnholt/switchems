@@ -12,9 +12,9 @@
       "statusFlg": true,
       "speed": 2,
       "draw": 0,
-      "discard": 2,
+      "discard": 1,
       "buff": 0,
-      "lastUpdated": "Wed, 24 Feb 2021 08:42:24 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:34:36 GMT"
     },
     {
       "abilityName": "Vine Whips",
@@ -24,11 +24,11 @@
       "statusFlg": false,
       "attack": 1,
       "speed": 3,
-      "draw": 0,
+      "draw": 1,
       "discard": 0,
       "buff": 2,
       "modifier": 2,
-      "lastUpdated": "Thu, 25 Feb 2021 07:13:07 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:34:36 GMT"
     },
     {
       "abilityName": "Rock Smash",
@@ -39,10 +39,10 @@
       "attack": 4,
       "speed": 7,
       "draw": 0,
-      "discard": 3,
+      "discard": 2,
       "buff": 2,
       "modifier": 4,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:34:36 GMT"
     },
     {
       "abilityName": "Rock Slide",
@@ -53,10 +53,10 @@
       "attack": 2,
       "speed": 5,
       "draw": 0,
-      "discard": 1,
+      "discard": 0,
       "buff": 2,
       "modifier": 2,
-      "lastUpdated": "Thu, 25 Feb 2021 07:12:26 GMT"
+      "lastUpdated": "Fri, 26 Feb 2021 08:34:36 GMT"
     }
   ],
   "buffs": [
@@ -72,9 +72,9 @@
       "buffName": "Mossy Overgrowth",
       "timing": "Pre-Actions",
       "buffText": "<b>Super</b><br>This monster gains <div>+5[DEF]</div> this turn. ~SUPER~",
-      "flipEventText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
+      "flipEventText": "This attack gains +1[ATK].",
       "flipEventFlg": true,
-      "lastUpdated": "Thu, 25 Feb 2021 06:54:19 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 17:39:31 GMT"
     },
     {
       "buffName": "Concussion",
@@ -88,9 +88,9 @@
       "buffName": "Gravelcrust Grip",
       "timing": "With Attack",
       "buffText": "<b>Super, Exhaust, Drain [STATUS]</b> ~SUPER~~EXHAUST~~DRAIN~",
-      "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
+      "flipEventText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "flipEventFlg": true,
-      "lastUpdated": "Thu, 25 Feb 2021 06:39:01 GMT"
+      "lastUpdated": "Thu, 25 Feb 2021 17:42:05 GMT"
     }
   ],
   "monsterId": 1,
