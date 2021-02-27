@@ -553,7 +553,7 @@ export class RulebookService {
           text: 'For example, if an abilty shows this: {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}, that means the monster gains two positive [PQ] attack [ATK] stat cubes.'
         },
         {
-          text: '<h1>Attack Stat Cubes</h1>Attack stat cubes modify the damage value for all of your monster attack actions. If you have 3[ATK][PQ] stat cubes, each of your active monster’s attack actions deal an additional 3[ATK]. Likewise, if you have 3[ATK][NQ] stat cubes, each of your active monster’s attack actions deal 3[ATK] less. <b>Remember</b>, attacks always deal at least 1 damage, even if the attack value is less than one!'
+          text: '<h1>Attack Stat Cubes</h1>Attack stat cubes modify the damage value for all of your monster attack actions. If you have 3[ATK][PQ] stat cubes, each of your active monster’s attack actions deal an additional 3[ATK]. Likewise, if you have 3[ATK][NQ] stat cubes, each of your active monster’s attack actions deal 3[ATK] less.'
         },
         {
           text: '<h1>Speed Stat Cubes</h1>Speed Stat Cubes modify the speed value of all monster actions. If you have 3[PQ] stat cubes, each of your active monster’s actions are +3[SPD] speed faster. Likewise, if you have 3[NQ] stat cubes, each of your active monster’s actions are -3[SPD] speed slower.',
