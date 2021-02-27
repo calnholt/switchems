@@ -6,41 +6,42 @@
   "actions": [
     {
       "abilityName": "Oozy Liberation",
-      "abilityText": "If your opponent has a <b>goop</b> buff card in their discard pile, this attack gains <div>+5[ATK]. </div><br><br><b>Single use</b>.~SINGLE~",
+      "abilityText": "<b>Single use</b>.<br><br>If your opponent has a <b>goop</b> buff card in their discard pile, this attack gains <div>+5[ATK].</div>~SINGLE~",
       "element": "Water",
       "auraDuration": 0,
       "statusFlg": false,
       "attack": 1,
       "speed": 4,
-      "discard": 2,
+      "discard": 1,
       "buff": 0,
       "modifier": 3,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 09:25:25 GMT"
     },
     {
       "abilityName": "Viscous Split",
-      "abilityText": "<b>Recoil X</b>[ATK], where X is the number of buff slots used with this attack.<br><br>For each used buff slot, the enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div> If the enemy monster's <div>[SPD][NQ]</div> is at max, then enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}</div> instead.",
+      "abilityText": "<b>Recoil X</b>[ATK], where X is the number of buff slots used with this attack.<br><br>For each used buff slot, the enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div> If the enemy monster's <div>[SPD][NQ]</div> is at max, the enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}</div> instead.",
       "element": "Leaf",
       "auraDuration": 0,
       "statusFlg": false,
       "attack": 1,
       "speed": 1,
+      "draw": 1,
       "buff": 3,
       "modifier": 1,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 09:25:25 GMT"
     },
     {
       "abilityName": "Reclaim",
-      "abilityText": "[FLIP]. <br><br>You may exchange a card from your discard pile with a card from your hand, excluding any cards played with this attack.",
+      "abilityText": "You may exchange a card from your discard pile with a card from your hand, excluding any cards played with this attack.",
       "element": "Leaf",
       "auraDuration": 0,
       "statusFlg": false,
-      "attack": 1,
+      "attack": 2,
       "speed": 3,
-      "discard": 1,
+      "discard": 0,
       "buff": 2,
       "modifier": 1,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 09:25:25 GMT"
     },
     {
       "abilityName": "Lickety Split",
@@ -48,13 +49,13 @@
       "element": "Water",
       "auraDuration": null,
       "statusFlg": false,
-      "attack": 1,
-      "speed": 8,
+      "attack": 3,
+      "speed": 5,
       "draw": 0,
-      "discard": 2,
+      "discard": 1,
       "buff": 1,
       "modifier": 3,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 09:25:25 GMT"
     }
   ],
   "buffs": [
@@ -62,42 +63,42 @@
       "buffName": "Thick Goop",
       "timing": "With Attack",
       "buffText": "<b>Goop</b>. This attack gains <div>+X+1[ATK],</div> where X is the number of <b>goop</b> cards in your opponent's discard pile. Shuffle this card into your opponent's deck.~GOOP~",
-      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div>{\"stat\": \"SPD\", \"num\": 3, \"isPositive\": false}.</div> If you do, this monster heals <div>1[HP].</div>",
+      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div> If you do, this monster gains <div>+2[DEF]</div> this turn.",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 09:25:25 GMT"
+    },
+    {
+      "buffName": "Hostile Goop",
+      "timing": "With Attack",
+      "buffText": "<b>Goop</b>. This attack gains <div>+X+1[ATK],</div> where X is the number of <b>goop</b> cards in your opponent's discard pile. Shuffle this card into your opponent's deck.~GOOP~",
+      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div> If you do, this attack gains <div>+1[ATK].</div>",
+      "flipEventFlg": true,
+      "lastUpdated": "Sat, 27 Feb 2021 09:28:04 GMT"
     },
     {
       "buffName": "Prickly Goop",
       "timing": "With Attack",
       "buffText": "<b>Goop</b>. This attack gains <div>+X+1[ATK],</div> where X is the number of <b>goop</b> cards in your opponent's discard pile. Shuffle this card into your opponent's deck.~GOOP~",
-      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div> If you do, this monster heals <div>1[HP].</div>",
+      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this attack gains <div><b>recoil 1[ATK]</b>.</div> If you do, this monster heals <div>1[HP].</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
-    },
-    {
-      "buffName": "Prickly Goop",
-      "timing": "With Attack",
-      "buffText": "<b>Goop</b>. This attack gains <div>+X+1[ATK],</div> where X is the number of <b>goop</b> cards in your opponent's discard pile. Shuffle this card into your opponent's deck.~GOOP~",
-      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div> If you do, this monster heals <div>1[HP].</div>",
-      "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 09:25:25 GMT"
     },
     {
       "buffName": "Hungry Goop",
       "timing": "With Attack",
       "buffText": "<b>Super, Goop</b>. This attack gains <div>+X+2[ATK],</div> where X is the number of <b>goop</b> cards in the opponent's discard pile. Shuffle this card into your opponent's deck.~GOOP~",
-      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div><b>drain</b> [STATUS].</div> If you do, this monster heals <div>1[HP].</div>",
+      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div><b>drain</b> [STATUS].</div> If you do, <div><b>pierce 2[DEF]</b>.</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 09:25:25 GMT"
     }
   ],
   "abilityName": "Gobble Up",
   "monsterName": "Oozygoopz",
   "abilityText": "When this monster <b>switches in</b>, <b>crush <div>1[PQ]</div></b>.~SWITCH~~CRUSH~",
-  "hp": 12,
+  "hp": 11,
   "complexity": 3,
   "promiseDescription": "Drive your opponent crazy by loading their deck up with a bunch of painfully useless goop!",
   "initiative": 15,
-  "lastUpdated": "Mon, 17 Nov 2020 08:58:22 GMT",
+  "lastUpdated": "Sat, 27 Feb 2021 09:25:25 GMT",
   "role": "Support"
 }
