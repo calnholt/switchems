@@ -121,18 +121,21 @@
             }
             &.maneuver-table{
                 table{
+                    font-size: 29px;
+                    font-family: $beastformer;
+                    img {
+                        max-height: 24px;
+                    }
                     tr{
                         td:nth-child(1){
-                            width: 30%;
+                            width: 33.33%;
                             border-radius: 4px 0px 0px 4px;
                         }
                         td:nth-child(2){
-                            width: 35%;
+                            width: 33.33%;
                         }
                         td:last-child {
-                            font-family: $beastformer;
-                            width: 35%;
-                            font-size: 29px;
+                            width: 33.33%;
                             border-radius: 0px 4px 4px 0px;
                         }
                     }
