@@ -70,7 +70,7 @@ export const TERM_CODES = [
     new Term(`~FLINCH~`, `Actions with <b>Flinch</b> prevent the enemy monster's monster action if this action is faster.`),
     new Term(`~GOOP~`, `If you do not have <b>Oozygoopz</b> on your team, goop buffs have no buff effect and are returned `
     + `to its owner's discard pile when played as a buff.`),
-    new Term('~PIERCE~', `Attacks with <b>Pierce</b> ignore the enemy monster's [DEF].`),
+    new Term('~PIERCE~', `Attacks with <b>Pierce</b> ignore this amount of the enemy monster's <div>[DEF].</div> Multiple instances of pierce stack.`),
     new Term(`~RECOIL~`, `This monster suffers this amount of <b>Recoil</b> damage to itself. `
     + `This damage cannot be prevented and still occurs if this action is prevented.`),
     new Term(`~RESIST~`, `Monsters are <b>Resistant</b> to elements found on the bottom right of their monster card.`),

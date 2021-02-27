@@ -79,10 +79,10 @@
     {
       "buffName": "Cripple",
       "timing": "With Attack",
-      "buffText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}. [FLIP].",
+      "buffText": "<b>Pierce 2[DEF]</b>. The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}~PIERCE~",
       "flipEventText": "This monster suffers 1[ATK] and [+]",
       "flipEventFlg": true,
-      "lastUpdated": "Thu, 25 Feb 2021 06:48:32 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 09:01:07 GMT"
     },
     {
       "buffName": "Tremble",

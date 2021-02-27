@@ -47,7 +47,7 @@
     },
     {
       "abilityName": "Flamethrower",
-      "abilityText": "[FLIP]. <br><br><b>Pierce</b>~PIERCE~",
+      "abilityText": "[FLIP]. <br><br><b>Pierce 2[DEF]</b>~PIERCE~",
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": false,
@@ -57,7 +57,7 @@
       "discard": 1,
       "buff": 1,
       "modifier": 2,
-      "lastUpdated": "Fri, 26 Feb 2021 07:53:40 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 09:02:35 GMT"
     }
   ],
   "buffs": [
@@ -81,9 +81,9 @@
       "buffName": "Revenge",
       "timing": "With Attack",
       "buffText": "<b>Exhaust</b><br>If the enemy monster is <b>resistant</b> to this attack's element, this attack gains <div>+3[ATK].</div>~SUPER~~RESIST~",
-      "flipEventText": "This attack gains <b>pierce</b>.~PIERCE~",
+      "flipEventText": "<b>Pierce 3[DEF]</b>.~PIERCE~",
       "flipEventFlg": true,
-      "lastUpdated": "Thu, 25 Feb 2021 06:47:15 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 09:02:35 GMT"
     },
     {
       "buffName": "Prey Upon",

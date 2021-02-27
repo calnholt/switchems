@@ -78,18 +78,18 @@
     {
       "buffName": "High Voltage",
       "timing": "Pre-Actions",
-      "buffText": "If the enemy monster has a <div>[STATUS],</div> this attack gains <b>pierce</b> and <b>flinch</b>.~PIERCE~~FLINCH~",
+      "buffText": "<b>Pierce <div>2[DEF]</b>.</div> If the enemy monster has a <div>[STATUS],</div> this attack gains  <b>flinch</b>.~PIERCE~~FLINCH~",
       "flipEventText": "If the enemy monster has a <div>[STATUS],</div> this attack gains <b>flinch</b>.",
       "flipEventFlg": true,
-      "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 09:06:41 GMT"
     },
     {
       "buffName": "Retaliate",
       "timing": "With Attack",
-      "buffText": "If this attack is <b>slower</b>, this attack gains +3[ATK].~SLOWER~",
-      "flipEventText": "The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.</div>",
+      "buffText": "This attack gains +1[ATK]. If this attack is <b>slower</b>, this attack gains +2[ATK] instead.~SLOWER~",
+      "flipEventText": "The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 09:06:41 GMT"
     }
   ],
   "monsterId": 7,
