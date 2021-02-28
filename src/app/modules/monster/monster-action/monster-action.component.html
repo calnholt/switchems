@@ -43,7 +43,7 @@
         </div>
       </div>
       <div class="locked-container">
-        <img src="{{getImagePath('unlocked')}}">
+        <img src="{{getImagePath(getLockedIcon())}}">
       </div>
       <div *ngIf="action.abilityText" class="ability-text-container">
         <div [innerHTML]="getAbilityText()" class="ability-text"></div>

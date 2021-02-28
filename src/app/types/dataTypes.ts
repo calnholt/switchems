@@ -74,7 +74,7 @@ export const TERM_CODES = [
     new Term(`~RECOIL~`, `This monster suffers this amount of <b>Recoil</b> damage to itself. `
     + `This damage cannot be prevented and still occurs if this action is prevented.`),
     new Term(`~RESIST~`, `Monsters are <b>Resistant</b> to elements found on the bottom right of their monster card.`),
-    new Term(`~SINGLE~`, `<b>Single Use</b> actions recharge on switch.`),
+    new Term(`~SINGLE~`, `<b>Single Use</b> actions remain disabled until switched out.`),
     new Term(`~SLOWER~`, `This action is <b>Slower</b> if both players select a monster action and yours has a lower speed.`),
     new Term(`~SPAM~`, `<b>Spammable</b> actions do not become disabled.`),
     new Term(`~STATUS~`, `<b>Status Conditions</b> [STATUS] – wound, fatigue, drain, stun.`),
