@@ -18,7 +18,7 @@
     },
     {
       "abilityName": "Vine Whips",
-      "abilityText": "Remove all [STATUS] from the enemy monster.<br><br>This attack gains <div>+2[ATK]</div> for each [STATUS] removed.<br><br>If a <b>drain</b> [STATUS] was removed this way, recharge <b>Leech Seed</b>.",
+      "abilityText": "Remove all [STATUS] from the enemy monster.<br><br>This attack gains <div>+2[ATK]</div> for each [STATUS] removed.<br><br>If a <b>drain</b> [STATUS] was removed this way, enable <b>Leech Seed</b>.",
       "element": "Leaf",
       "auraDuration": null,
       "statusFlg": false,
@@ -28,7 +28,7 @@
       "discard": 0,
       "buff": 2,
       "modifier": 2,
-      "lastUpdated": "Fri, 26 Feb 2021 08:34:36 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 21:32:11 GMT"
     },
     {
       "abilityName": "Rock Smash",
@@ -88,9 +88,9 @@
       "buffName": "Gravelcrust Grip",
       "timing": "With Attack",
       "buffText": "<b>Super, Exhaust, Drain [STATUS]</b> ~SUPER~~EXHAUST~~DRAIN~",
-      "flipEventText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
+      "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "flipEventFlg": true,
-      "lastUpdated": "Thu, 25 Feb 2021 17:42:05 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 21:15:55 GMT"
     }
   ],
   "monsterId": 1,

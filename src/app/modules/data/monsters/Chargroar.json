@@ -73,9 +73,9 @@
       "buffName": "Roar",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]. If your opponent has a KO'd monster, this attack gains +2[ATK] instead.",
-      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div>",
+      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div>after the attack.",
       "flipEventFlg": true,
-      "lastUpdated": "Thu, 25 Feb 2021 17:34:00 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 21:01:28 GMT"
     },
     {
       "buffName": "Revenge",

@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Inferno",
-      "abilityText": "If the enemy monster has a [STATUS], this attack gains one [B] slot and [FLIP].<br><br>This attack gains +X[ATK], where X is equal to <b>twice</b> the number of buffs cards played with this attack that <b>belongs</b> to this monster.~BELONGS~",
+      "abilityText": "If the enemy monster has a [STATUS], this attack gains one [B] slot and [FLIP].<br><br>This attack gains +2[ATK] for each buff card used if all [B] slots used with this attack <b>belong</b> to this monster.",
       "element": "Fire",
       "auraDuration": 0,
       "statusFlg": false,
@@ -15,7 +15,7 @@
       "discard": 1,
       "buff": 1,
       "modifier": 5,
-      "lastUpdated": "Fri, 26 Feb 2021 08:24:00 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 21:11:34 GMT"
     },
     {
       "abilityName": "Burn",
@@ -87,9 +87,9 @@
       "buffName": "Sear",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]. If the enemy monster has a <div>[STATUS],</div>this attack gains <div>+2[ATK]</div> instead. ~STATUS~",
-      "flipEventText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
+      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div> after the attack.",
       "flipEventFlg": true,
-      "lastUpdated": "Fri, 26 Feb 2021 08:27:30 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 21:11:34 GMT"
     }
   ],
   "monsterId": 2,
