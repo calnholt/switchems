@@ -86,12 +86,12 @@
       "lastUpdated": "Tue, 17 Nov 2020 21:31:26 GMT"
     },
     {
-      "buffName": "Leaffy Kicks",
-      "timing": "With Attack",
-      "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}. [FLIP].",
+      "buffName": "Outta Here",
+      "timing": "Post Actions",
+      "buffText": "<b>Exhaust</b><br>Perform a switch action.~EXHAUST~",
       "flipEventText": "If this monster has 2 or more <div>[SPD][PQ],</div> this attack gains +2[ATK].",
       "flipEventFlg": true,
-      "lastUpdated": "Thu, 25 Feb 2021 17:38:15 GMT"
+      "lastUpdated": "Sat, 27 Feb 2021 22:06:53 GMT"
     }
   ],
   "monsterId": 8,
