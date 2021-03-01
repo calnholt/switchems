@@ -1,10 +1,11 @@
+import { Term } from './../data/data';
+import { TermCode } from './../../types/dataTypes';
 import { RulebookService } from './rulebook.service';
 import { Component, OnInit, ViewEncapsulation, AfterViewInit } from '@angular/core';
-import { Css } from 'src/app/types/dataTypes';
+import { Css, TERM_CODES } from 'src/app/types/dataTypes';
 import { getAbilityText } from '../common/cards';
 import { MonsterService } from '../monster/monster.service';
 import { MonsterComplete } from '../monster/model/monster';
-import { ExecFileOptionsWithStringEncoding } from 'child_process';
 
 export type RulebookImageType = 'Setup' | 'Monster' | 'Action' | 'Buff' | 'Stat-Cube' | 'Action-Board' | 'Standard' | 'Buff-Ex';
 

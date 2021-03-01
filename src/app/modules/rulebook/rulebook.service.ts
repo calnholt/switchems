@@ -1,7 +1,8 @@
 import { Term } from './../data/data';
 import { TermCode, TERM_CODES } from './../../types/dataTypes';
 import { Injectable } from '@angular/core';
-import { RulebookSection } from './rulebook.component';
+import { RulebookSection, RulebookBlock } from './rulebook.component';
+import { getAbilityText } from '../common/cards';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class RulebookService {
           text: 'Leverage your team of monsters in a battle of cunning and wits in this exciting two-player card game',
         },
         {
-          text: 'v.0.5.0',
+          text: 'v.0.6.0',
         },
         {
           text: '2 Players   |   30 - 60 Minutes   |   Ages 12+',
@@ -32,7 +33,7 @@ export class RulebookService {
       title: 'How to Win',
       blocks: [
         {
-          text: '<a href="ko">Knockout (KO)</a> all three of your opponent’s monsters to win. Monsters are KO’d when their HP [HP] is reduced to 0.'
+          text: '<a href="ko">Knockout (KO)</a> two of your opponent\'s monsters to win. Monsters are KO’d when their HP [HP] is reduced to 0.'
         }
       ]
     },
@@ -72,9 +73,6 @@ export class RulebookService {
             text: '4 <a href="stat_cube_board">Stat Cube Boards</a>',
           },
           {
-            text: '8 <a href="standard_buffs">Standard Buff Cards</a>',
-          },
-          {
             text: '12 <a href="selection_phase">Maneuver</a> Cubes',
           },
           {
@@ -100,7 +98,7 @@ export class RulebookService {
             text: 'Place your stat cube board in front of the player shield.',
           },
           {
-            text: 'After <a href="choosing_your_team">choosing your team</a>, form your deck by collecting the buff cards associated with your team of monsters (there will be four for each monster) as well as the two standard buff cards. Your buff deck will then be 14 cards - 12 from monsters and two from standard. Shuffle your deck and place beside you.',
+            text: 'After <a href="choosing_your_team">choosing your team</a>, form your deck by collecting the buff cards associated with your team of monsters (there will be four for each monster) for a total of 12 cards. Shuffle your deck and place beside you.',
           },
           {
             text: 'Place your active monster\'s monster card and its action cards in front of the player shield, and arrange the action cards in a two by two grid.',
@@ -109,7 +107,7 @@ export class RulebookService {
             text: 'For the two non-starting monsters, place one to the left of you, and the other to the right (which is placed where is irrelevant).',
           },
           {
-            text: 'Both players draw [+] three cards and you’re ready to play!',
+            text: 'Both players draw [+] two cards and you’re ready to play!',
           }
         ]
       },
@@ -196,7 +194,7 @@ export class RulebookService {
               text: 'HP (hit points)',
             },
             {
-              text: 'Elemental weaknesses (takes more damage from attacks of these elements)',
+              text: 'Elemental weaknesses (attacks of these types against this monster result in one additional <a href="flip_effects">flip</a> [FLIP] for the enemy monster\'s attack)',
             },
             {
               text: 'Elemental resistances (gains defense against attacks of the elements when switching in)',
@@ -217,7 +215,7 @@ export class RulebookService {
               text: 'Monster action name',
             },
             {
-              text: 'Denotes the type of monster action – [ATK] | [SPECIAL] | [TA])',
+              text: 'Denotes the type of monster action – [ATK] | [SPECIAL]',
             },
             {
               text: 'Denotes the element of this action – [F] | [W] | [R] | [L] | [E] | [S]',
@@ -270,7 +268,7 @@ export class RulebookService {
           ]
         },
         {
-          text: 'Each monster has four buff cards. Your deck consists of the four buff cards from each of the three monsters in your team, plus the two <a href="standard_buffs">standard buff</a> cards. Buff cards are used for either:',
+          text: 'Each monster has four buff cards. Your deck consists of the four buff cards from each of the three monsters in your team. Buff cards are used for either:',
           ul: [
             {
               text: 'Discarding them for actions with discard costs – [-]'
@@ -391,18 +389,18 @@ export class RulebookService {
           text: '<b>NOTE:</b> You cannot switch to <a href="ko">KO’d</a> monsters.',
         },
         {
-          text: '<h1>Monster Actions</h1>Monster actions, labeled 1 - 4, correspond to your active monster’s four action cards, arranged in a two by two grid. When you select a monster action, you must place the required number of [-] from your hand face-up on the discard [-] section of your player board. For each [B] on the action, you may optionally apply a buff from your hand to the action, placing each applied buff face-up on the buff [B] section of your action board. These actions are discussed in greater detail <a href="monster_actions">below</a>.'
+          text: '<h1>Monster Actions</h1>Monster actions, labeled 1 - 4, correspond to your active monster’s four action cards, arranged in a two by two grid. When you select a monster action, you must place the required number of [-] from your hand face-up on the discard [-] section of your player board. For each [B] on the action, you may optionally apply a <a href="buff_card">buff</a> from your hand to the action, placing each applied <a href="buff_card">buff</a> face-up on the buff [B] section of your action board. These actions are discussed in greater detail <a href="monster_actions">below</a>.'
         },
         {
-          text: '<h1>Maneuvers</h1>Maneuver cubes [MQ] are used to augment monster attacks. To use a maneuver, when you select a monster attack action, you may select a maneuver by placing one of your [MQ] on the maneuver space. Afterwards, the [MQ] is discarded.',
+          text: '<h1>Maneuvers</h1>Maneuver cubes [MQ] are used to augment monster attacks. To use a maneuver, when you select a monster attack [ATK] action, you may select a maneuver by placing one of your [MQ] on the maneuver space. Afterwards, the [MQ] is discarded.',
         },
         {
           ul: [
             {
-              text: '[COUNTER] (Block an attack) – Your active monster takes no damage from the enemy monster\'s attack this turn, if any.'
+              text: '+3[DEF] – Your monster gains +3[DEF] this turn.'
             },
             {
-              text: '[FLIP] [FLIP] – This attack gains [FLIP] [FLIP] this turn (<a href="flip_effects">flip</a> the top two cards from you deck and apply their <a href="flip_effects">flip</a> effects).'
+              text: '[FLIP] [FLIP] – This attack gains two <a href="flip_effects">flips</a>.'
             },
             {
               text: '+3[SPD] – This attack gains +3[SPD] this turn.'
@@ -442,7 +440,7 @@ export class RulebookService {
       id: 'monster_actions',
       blocks: [
         {
-          text: 'Monster actions come in three types - attack [ATK], special [SPECIAL], and team aura [TA]. Regardless of the type, monster actions may require you to discard a number of cards in order to use, as denoted by the number of discard symbols [-]. This is known as an action’s discard cost. You must discard a number of cards from your hard equal to the discard cost of the action. This is done by placing the required number of [-] from your hand face-up on the discard [-] section of your player board before reveal. If you have fewer cards in your hand than the action’s discard cost, you cannot use that action.'
+          text: 'Monster actions come in two types - attack [ATK] and special [SPECIAL]. Regardless of the type, monster actions may require you to discard a number of cards in order to use, as denoted by the number of discard symbols [-]. This is known as an action’s discard cost. You must discard a number of cards from your hard equal to the discard cost of the action. This is done by placing the required number of [-] from your hand face-up on the discard [-] section of your player board before reveal. If you have fewer cards in your hand than the action’s discard cost, you cannot use that action.'
         },
         {
           text: 'Monster actions with the draw [+] symbol let you draw that many cards after reveal, when resolving the action.',
@@ -461,7 +459,7 @@ export class RulebookService {
               text: 'Resolve the attack’s ability (if any)',
             },
             {
-              text: 'If the enemy monster is weak to the attack’s element, add this attack’s element modifier to the attack’s damage',
+              text: 'If the enemy monster is weak to the attack’s element, apply one additional <a href="flip_effects">flip</a> [FLIP]',
             }
           ]
         },
@@ -472,7 +470,7 @@ export class RulebookService {
           text: '<h1>Monster Actions - Special[SPECIAL]</h1>A monster action is special if it has the special [SPECIAL] symbol. Special [SPECIAL] actions behave just like attacks except they do not deal damage. These actions usually make your monster stronger or make your opponent\'s monster weaker.',
         },
         {
-          text: '<h1>Disabled Actions</h1>A monster action becomes disabled when it is selected. When a monster action is disabled, it cannot be selected. A disabled monster action becomes enabled after your next action.',
+          text: '<h1>Disabled Actions[DISABLE]</h1>A monster action becomes disabled when it is selected. When a monster action is disabled, place a disabled token on the [DISABLE] space on the action. Actions that are disabled cannot be selected. A disabled monster action becomes enabled after performing your next action.',
         },
         // {
         //   text: '<h1>Monster Actions - Team Aura[TA]</h1>A monster action is a team aura if it has the team aura [TA] symbol. Team aura actions create ongoing benefits for your active monster for a number of turns, as denoted by the number beside the team aura [TA] symbol, called its duration. Put a number of time counters on this action card equal to the action’s team aura [TA] duration value. At the end of each turn, remove a time counter.'
@@ -493,13 +491,13 @@ export class RulebookService {
       id: 'buff_timing',
       blocks: [
         {
-          text: 'Buff cards have three stages of timing, which denote when they resolve during the action phase. These timings are Pre-Action, With Attack, and Post Actions.',
+          text: '<a href="buff_card">Buff</a> cards have three stages of timing, which denote when they resolve during the action phase. These timings are Pre-Actions, With Attack, and Post Actions.',
           ul: [
             {
               text: '<b>Pre-Actions (I):<b>',
               ul: [
                 {
-                  text: 'Buff cards with Pre-Action timing reolve before any actions occur. These buffs are resolved in <a href="monster_card">initiative</a> order.'
+                  text: 'Buff cards with Pre-Actions timing reolve before any actions occur. These buffs are resolved in <a href="monster_card">initiative</a> order.'
                 }
               ]
             },
@@ -515,13 +513,13 @@ export class RulebookService {
               ]
             },
             {
-              text: '<b>Post Action (III):</b>',
+              text: '<b>Post Actions (III):</b>',
               ul: [
                 {
-                  text: 'Buff cards with Post Action timing occur after all monster actions have been resolved. These buffs are resolved in <a href="monster_card">initiative order</a>.',
+                  text: 'Buff cards with Post Actions timing occur after all monster actions have been resolved. These buffs are resolved in <a href="monster_card">initiative order</a>.',
                 },
                 {
-                  text: '<b>NOTE:</b> If your active monster is <a href="ko">KO\'d</a> before resolving Post Action buffs, the buff is not resolved.',
+                  text: '<b>NOTE:</b> If your active monster is <a href="ko">KO\'d</a> before resolving Post Actions buffs, they are not resolved.',
                 }
               ]
             }
@@ -534,7 +532,7 @@ export class RulebookService {
       id: 'flip_effects',
       blocks: [
         {
-          text: 'All buff cards have a flip effect [FLIP], found at the bottom of the card. Sometimes effects have you flip the top card of your deck when resolving a monster attack, denoted by this symbol [FLIP]. For each [FLIP] symbol, flip the top card of your deck and apply its flip effect to your attack [ATK] action.'
+          text: 'All <a href="buff_card">buff</a> cards have a flip effect [FLIP], found at the bottom of the card. Sometimes effects have you flip the top card of your deck when resolving a monster attack, denoted by this symbol [FLIP]. For each [FLIP] symbol, flip the top card of your deck and apply its flip effect to your attack [ATK] action.'
         },
       ]
     },
@@ -544,19 +542,19 @@ export class RulebookService {
       rulebookImage: 'Stat-Cube',
       blocks: [
         {
-          text: 'Some abilities have monster’s gaining stat cubes. Stat cubes modify your active monster’s stats. These can either be beneficial or detrimental.',
+          text: 'Some abilities have monsters gaining stat cubes. Stat cubes modify your active monster’s stats. These can either be beneficial or detrimental.',
         },
         {
           text: 'When gaining positive stat cubes [PQ], place the number of cubes on the corresponding green space. When gaining negative stat cubes [NQ], place the number of cubes on the corresponding red space. If you gain positive cubes for stats that you already have negative cubes for, instead remove the negative cubes (and vice versa). Each stat has a maximum number of cubes, as denoted on the section.'
         },
         {
-          text: 'For example, if an abilty shows this: {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}, that means the monster gains two positive [PQ] attack [ATK] stat cubes.'
+          text: 'For example, if an abilty shows this: {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}, that means the monster gains two positive attack stat cubes.'
         },
         {
-          text: '<h1>Attack Stat Cubes</h1>Attack stat cubes modify the damage value for all of your monster attack actions. If you have 3[ATK][PQ] stat cubes, each of your active monster’s attack actions deal an additional 3[ATK]. Likewise, if you have 3[ATK][NQ] stat cubes, each of your active monster’s attack actions deal 3[ATK] less.'
+          text: '<h1>Attack Stat Cubes</h1>Attack stat cubes modify the damage value for all of your monster attack actions. If your monster has 2[ATK][PQ] stat cubes, each of your active monster’s attack actions deal an additional 2[ATK]. Likewise, if your monster has 1[ATK][NQ] stat cubes, each of your active monster’s attack actions deal 1[ATK] less.'
         },
         {
-          text: '<h1>Speed Stat Cubes</h1>Speed Stat Cubes modify the speed value of all monster actions. If you have 3[PQ] stat cubes, each of your active monster’s actions are +3[SPD] speed faster. Likewise, if you have 3[NQ] stat cubes, each of your active monster’s actions are -3[SPD] speed slower.',
+          text: '<h1>Speed Stat Cubes</h1>Speed Stat Cubes modify the speed value for all of your monster actions. If your monster has 3[SPD][PQ] stat cubes, each of your active monster’s actions are +3[SPD] speed faster. Likewise, if your monster has 2[SPD][NQ] stat cubes, each of your active monster’s actions are -2[SPD] speed slower.',
         },
         {
           text: '<b>NOTE:</b> Monster actions can never have a speed higher than 9 or lower than 0.'
@@ -640,7 +638,10 @@ export class RulebookService {
       id: 'ko',
       blocks: [
         {
-          text: 'Monsters are KO’d when their health points are reduced to 0. Whenever a monster is KO’d, remove ALL cubes from that monster’s <a href="stat_cube_board">stat cube board</a>, and the player controlling that monster selects one of their other monsters to be their new active monster.',
+          text: 'Monsters are KO’d when their health points are reduced to 0. Whenever a monster is KO’d, remove ALL cubes from that monster’s <a href="stat_cube_board">stat cube board</a>, and the player controlling that monster selects one of their other monsters to be their new active monster after resolving Post Actions buffs.',
+        },
+        {
+          text: '<b>NOTE:</b> In the instance where both monsters select a monster action, and the faster monster is KO’d from suffer damage before the enemy monster resolves their attack, the slower monster’s action is prevented because there is no valid monster to target.'
         },
         {
           text: '<b>NOTE:</b> KO’d monsters can never recover HP.'
@@ -659,12 +660,8 @@ export class RulebookService {
       ]
     },
     {
-      title: 'Suffer Damage',
-      blocks: [
-        {
-          text: 'Whenever a monster suffers damage, that damage cannot be prevented in any way and ignores your monster\'s current defense [DEF] value.',
-        }
-      ]
+      title: 'Keyword Glossary',
+      blocks: this.getKeywordGlossary(),
     },
     {
       title: 'Playtesters',
@@ -744,5 +741,23 @@ export class RulebookService {
     return text;
   }
 
+  getKeywordGlossary(): Array<RulebookBlock> {
+    let out = new Array<RulebookBlock>();
+    TERM_CODES.forEach((term: Term) => {
+      if (!['~GOOP~'].includes(term.key)) {
+        let description: string = term.value;
+        ['<div>', '</div>'].forEach(html => {
+          while (description.includes(html)) {
+            description = description.replace(html, '');
+          }
+        });
+        let block: RulebookBlock = new RulebookBlock();
+        block.text = `<b>${term.name}</b>`;
+        block.ul = [{text: getAbilityText(description, 'term', 'term-img')}];
+        out.push(block);
+      }
+    });
+    return out;
+  }
 
 }
