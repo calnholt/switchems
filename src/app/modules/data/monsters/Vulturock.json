@@ -97,7 +97,7 @@
   "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.</div>~SWITCH~",
   "hp": 8,
   "complexity": 1,
-  "promiseDescription": "Vulturock is reckless assassin that requires finesse. Knowing how to position Vulturock to maximize Scavenge and Iron Defense is key to its survival.",
+  "promiseDescription": "<b>Vulturock</b> hits hard – including itself!",
   "initiative": 75,
   "lastUpdated": "Sun, 07 Feb 2021 09:12:49 GMT",
   "role": "Assassin"

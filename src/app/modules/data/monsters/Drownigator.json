@@ -99,7 +99,7 @@
   "abilityText": "When this monster <b>switches in</b>, the opponent <div>[-].</div>~SWITCH~",
   "hp": 9,
   "complexity": 1,
-  "promiseDescription": "Drownigator is an immediate threat. Panic Attack puts your opponent on the defensive and a properly buffed Expunge can devastate.",
+  "promiseDescription": "<b>Drownigator</b> is an immediate nuisance and threat with many debuffs.",
   "initiative": 70,
   "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT",
   "role": "Tricky"

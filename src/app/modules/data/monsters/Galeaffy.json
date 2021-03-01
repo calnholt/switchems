@@ -102,5 +102,6 @@
   "complexity": 2,
   "initiative": 80,
   "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT",
-  "role": "Support"
+  "role": "Support",
+  "promiseDescription": "Aid your allied monsters by encouraging switching to keep more of your precious [PQ]!"
 }

@@ -99,7 +99,7 @@
   "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.</div> ~SWITCH~",
   "hp": 10,
   "complexity": 1,
-  "promiseDescription": "Slowly drain the enemy's health and stand your ground with Vineshield's defensive boon. Stallagrowth plays for the long game, but struggles to accumulate cards. Knowing when to draw three is essential to sustaining pressure.",
+  "promiseDescription": "<b>Stallagrowth</b> plays for the long game – slowly drain the enemy's health and stand your ground with bolstered defense.",
   "initiative": 10,
   "lastUpdated": "Wed, 24 Feb 2021 08:42:24 GMT",
   "role": "Tank"
