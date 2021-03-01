@@ -87,11 +87,11 @@
     },
     {
       "buffName": "Prey Upon",
-      "timing": "Pre-Actions",
+      "timing": "With Attack",
       "buffText": "<b>Exhaust</b><br>If the enemy monster is <b>weak</b> to this attack's element, this attack gains <div>+3[ATK].</div>~EXHAUST~~EFFECTIVE~",
       "flipEventText": "This attack gains <div>+1[ATK].</div>",
       "flipEventFlg": true,
-      "lastUpdated": "Thu, 25 Feb 2021 06:47:15 GMT"
+      "lastUpdated": "Mon, 01 Mar 2021 10:52:40 GMT"
     }
   ],
   "monsterId": 4,

@@ -18,7 +18,7 @@
     },
     {
       "abilityName": "Expunge",
-      "abilityText": "<b>Single use. </b><br><br>If the enemy monster has a [STATUS], this attack gains <div>[FLIP] [FLIP].</div>~STATUS~~SINGLE~",
+      "abilityText": "<b>Single use. </b><br><br>If the enemy monster has a [STATUS], this attack gains <div>[FLIP] [FLIP].</div>~SINGLE~~STATUS~",
       "element": "Death",
       "auraDuration": 0,
       "statusFlg": false,
@@ -28,7 +28,7 @@
       "discard": 0,
       "buff": 1,
       "modifier": 3,
-      "lastUpdated": "Fri, 26 Feb 2021 08:02:45 GMT"
+      "lastUpdated": "Mon, 01 Mar 2021 10:50:35 GMT"
     },
     {
       "abilityName": "Swamped",
@@ -80,9 +80,9 @@
       "buffName": "Cripple",
       "timing": "With Attack",
       "buffText": "<b>Pierce 2[DEF]</b>. The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}~PIERCE~",
-      "flipEventText": "This monster suffers 1[ATK] and [+]",
+      "flipEventText": "[+]",
       "flipEventFlg": true,
-      "lastUpdated": "Sat, 27 Feb 2021 09:01:07 GMT"
+      "lastUpdated": "Mon, 1 Mar 2021 09:01:07 GMT"
     },
     {
       "buffName": "Tremble",
@@ -99,7 +99,7 @@
   "abilityText": "When this monster <b>switches in</b>, the opponent <div>[-].</div>~SWITCH~",
   "hp": 9,
   "complexity": 1,
-  "promiseDescription": "<b>Drownigator</b> is an immediate nuisance and threat with many debuffs.",
+  "promiseDescription": "<b>Drownigator</b> is a total nuisance with discards and debuffs.",
   "initiative": 70,
   "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT",
   "role": "Tricky"

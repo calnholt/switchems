@@ -86,11 +86,11 @@
     },
     {
       "buffName": "Gravelcrust Grip",
-      "timing": "With Attack",
+      "timing": "Pre-Actions",
       "buffText": "<b>Super, Exhaust, Drain [STATUS]</b> ~SUPER~~EXHAUST~~DRAIN~",
       "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "flipEventFlg": true,
-      "lastUpdated": "Sat, 27 Feb 2021 21:15:55 GMT"
+      "lastUpdated": "Mon, 01 Mar 2021 10:54:04 GMT"
     }
   ],
   "monsterId": 1,

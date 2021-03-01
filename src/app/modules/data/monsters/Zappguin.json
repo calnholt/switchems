@@ -77,11 +77,11 @@
     },
     {
       "buffName": "High Voltage",
-      "timing": "Pre-Actions",
+      "timing": "With Attack",
       "buffText": "<b>Pierce <div>2[DEF]</b>.</div> If the enemy monster has a <div>[STATUS],</div> this attack gains  <b>flinch</b>.~PIERCE~~FLINCH~",
       "flipEventText": "If the enemy monster has a <div>[STATUS],</div> this attack gains <b>flinch</b>.",
       "flipEventFlg": true,
-      "lastUpdated": "Sat, 27 Feb 2021 09:06:41 GMT"
+      "lastUpdated": "Mon, 01 Mar 2021 10:55:59 GMT"
     },
     {
       "buffName": "Retaliate",
