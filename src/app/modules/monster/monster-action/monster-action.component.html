@@ -42,7 +42,7 @@
           </ng-container>
         </div>
       </div>
-      <div class="locked-container">
+      <div *ngIf="!action.abilityText.includes('SPAM')" class="locked-container">
         <img src="{{getImagePath(getLockedIcon())}}">
       </div>
       <div *ngIf="action.abilityText" class="ability-text-container">
