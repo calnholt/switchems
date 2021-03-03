@@ -28,7 +28,7 @@
           </span>
         </span>
       </div>
-      <div *ngIf="action.modifier" class="modifier-container">
+      <div *ngIf="!action.statusFlg" class="modifier-container">
         <div class="modifier-value" [ngClass]="{'unity':action.unityFlg}">
           <!-- +{{action.modifier}}<img src="{{getImagePath('attack')}}"> -->
           <img src="{{getImagePath('flip')}}">

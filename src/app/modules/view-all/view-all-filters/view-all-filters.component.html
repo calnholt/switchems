@@ -90,14 +90,6 @@
         [max]="5"
         (selectionChange)="applyFilters()">
       </min-max>
-      <min-max
-        [label]="'Aura Duration'"
-        [model]="form"
-        [property]="'aura'"
-        [min]="1"
-        [max]="10"
-        (selectionChange)="applyFilters()">
-      </min-max>
       <dropdown
         [label]="'Elements'"
         [model]="form"
@@ -121,6 +113,14 @@
         [multi]="true"
         (selectionChange)="applyFilters()">
       </dropdown>
+      <min-max
+        [label]="'Aura Duration'"
+        [model]="form"
+        [property]="'aura'"
+        [min]="1"
+        [max]="10"
+        (selectionChange)="applyFilters()">
+      </min-max>
     </div>
     <button class="clear-button" mat-stroked-button (click)="clearFilters()">Reset Filters</button>
   </div>
