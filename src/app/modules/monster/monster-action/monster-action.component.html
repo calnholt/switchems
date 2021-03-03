@@ -10,10 +10,6 @@
           <img class="stat-icon" src="{{getImagePath('attack')}}">
         </span>
         <span *ngIf="!action.attack" class="stat-container">
-          <span *ngIf="action.auraDuration" class="stat-container">
-            <span class="stat-value">{{action.auraDuration}}</span>
-            <img class="stat-icon" src="{{getImagePath('aura')}}">
-          </span>
           <span *ngIf="action.statusFlg" class="stat-container">
             <img class="stat-icon" src="{{getImagePath('status')}}">
           </span>
