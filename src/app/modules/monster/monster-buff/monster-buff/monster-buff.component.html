@@ -5,6 +5,10 @@
       <span class="numeral">{{getTimingRomanNumeral()}}</span>
       <span class="name">{{buff.timing}}</span>
     </div>
+    <div *ngIf="buff.auraDuration" class="team-aura-container">
+      <div>{{buff.auraDuration}}</div>
+      <img src="{{imageService.getImg('aura')}}">
+    </div>
     <div class="name">{{buff.buffName}}</div>
     <div class="line-container">
       <hr align="left" class="name-line left">

@@ -35,6 +35,20 @@
                 bottom: 8px;
             }
         }
+        .team-aura-container {
+            position: absolute;
+            top: 9px;
+            right: 5px;
+            display: flex;
+            align-items: baseline;
+            :nth-child(1) {
+                font-family: $beastformer;
+                font-size: 38px;
+            }
+            img {
+                max-height: 26px;
+            }
+        }
         .name{
             font-family: $beastformer;
             font-size: 28px;
