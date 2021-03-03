@@ -7,21 +7,18 @@
       "abilityName": "Inferno",
       "abilityText": "If the enemy monster has a [STATUS], this attack gains one [B] slot and [FLIP].<br><br>This attack gains +2[ATK] for each buff card used if all [B] slots used with this attack <b>belong</b> to this monster.",
       "element": "Fire",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 3,
       "speed": 5,
       "draw": 0,
       "discard": 1,
       "buff": 1,
-      "modifier": 5,
       "lastUpdated": "Sat, 27 Feb 2021 21:11:34 GMT"
     },
     {
       "abilityName": "Burn",
       "abilityText": "<b>Wound [STATUS]</b> ~WOUND~",
       "element": "Fire",
-      "auraDuration": 0,
       "statusFlg": true,
       "speed": 8,
       "draw": 1,
@@ -33,28 +30,24 @@
       "abilityName": "No Pain, No Gain",
       "abilityText": "[FLIP] [FLIP]. <br><br><b>Recoil 1[ATK]</b>~RECOIL~",
       "element": "Fire",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 1,
       "speed": 3,
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "modifier": 2,
       "lastUpdated": "Fri, 26 Feb 2021 08:08:54 GMT"
     },
     {
       "abilityName": "Scorch",
       "abilityText": "[FLIP] [FLIP]",
       "element": "Fire",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 2,
       "speed": 7,
       "draw": 0,
       "discard": 1,
       "buff": 1,
-      "modifier": 1,
       "lastUpdated": "Fri, 26 Feb 2021 08:08:54 GMT"
     }
   ],
@@ -64,7 +57,6 @@
       "timing": "Pre-Actions",
       "buffText": "<b>Wound [STATUS], Exhaust</b>~WOUND~~EXHAUST~",
       "flipEventText": "This attack gains <div>+1[ATK].</div>",
-      "flipEventFlg": true,
       "lastUpdated": "Fri, 26 Feb 2021 08:08:54 GMT"
     },
     {
@@ -72,7 +64,6 @@
       "timing": "With Attack",
       "buffText": "[FLIP] [FLIP]",
       "flipEventText": "<b>Crush 1[NQ]</b>~CRUSH~",
-      "flipEventFlg": true,
       "lastUpdated": "Fri, 26 Feb 2021 08:28:06 GMT"
     },
     {
@@ -80,7 +71,6 @@
       "timing": "Pre-Actions",
       "buffText": "This attack gains +1[SPD]. If the enemy monster has a <div>[STATUS],</div>this attack gains <div>+2[SPD]</div> instead. ~STATUS~",
       "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "flipEventFlg": true,
       "lastUpdated": "Fri, 26 Feb 2021 08:27:30 GMT"
     },
     {
@@ -88,7 +78,6 @@
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]. If the enemy monster has a <div>[STATUS],</div>this attack gains <div>+2[ATK]</div> instead. ~STATUS~",
       "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div> after the attack.",
-      "flipEventFlg": true,
       "lastUpdated": "Sat, 27 Feb 2021 21:11:34 GMT"
     }
   ],

@@ -7,49 +7,42 @@
       "abilityName": "Thunderstorm",
       "abilityText": "[FLIP]. <br><br>This monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}</div>",
       "element": "Electric",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 4,
       "speed": 5,
       "draw": 0,
       "discard": 2,
       "buff": 0,
-      "modifier": 3,
       "lastUpdated": "Fri, 26 Feb 2021 08:39:49 GMT"
     },
     {
       "abilityName": "Ice Blast",
       "abilityText": "If this attack is <b>faster</b>, [FLIP] [FLIP]. ~FASTER~",
       "element": "Water",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 3,
       "speed": 4,
       "draw": 0,
       "discard": 0,
       "buff": 1,
-      "modifier": 2,
       "lastUpdated": "Fri, 26 Feb 2021 08:39:49 GMT"
     },
     {
       "abilityName": "Vortex",
       "abilityText": "This attack gains two [B] slots if the enemy monster has a [STATUS]. ~STATUS~",
       "element": "Electric",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 2,
       "speed": 7,
       "draw": 1,
       "discard": 0,
       "buff": 1,
-      "modifier": 1,
       "lastUpdated": "Fri, 26 Feb 2021 08:39:49 GMT"
     },
     {
       "abilityName": "Paralyze",
       "abilityText": "<b>Stun [STATUS]</b> and the enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}. ~STUN~",
       "element": "Electric",
-      "auraDuration": 0,
       "statusFlg": true,
       "speed": 7,
       "draw": 1,
@@ -64,7 +57,6 @@
       "timing": "Post Actions",
       "buffText": "<b>Stun [STATUS]</b>~STUN~",
       "flipEventText": "<b>Stun</b> [STATUS] ~STUN~",
-      "flipEventFlg": true,
       "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
     },
     {
@@ -72,7 +64,6 @@
       "timing": "Post Actions",
       "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.",
       "flipEventText": "If the enemy monster has a <div>[STATUS],</div> this attack gains <b>flinch</b>.",
-      "flipEventFlg": true,
       "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
     },
     {
@@ -80,7 +71,6 @@
       "timing": "With Attack",
       "buffText": "<b>Pierce <div>2[DEF]</b>.</div> If the enemy monster has a <div>[STATUS],</div> this attack gains  <b>flinch</b>.~PIERCE~~FLINCH~",
       "flipEventText": "If the enemy monster has a <div>[STATUS],</div> this attack gains <b>flinch</b>.",
-      "flipEventFlg": true,
       "lastUpdated": "Mon, 01 Mar 2021 10:55:59 GMT"
     },
     {
@@ -88,7 +78,6 @@
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]. If this attack is <b>slower</b>, this attack gains +2[ATK] instead.~SLOWER~",
       "flipEventText": "The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div>",
-      "flipEventFlg": true,
       "lastUpdated": "Sat, 27 Feb 2021 09:06:41 GMT"
     }
   ],

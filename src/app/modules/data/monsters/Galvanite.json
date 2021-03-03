@@ -8,46 +8,39 @@
       "abilityName": "Discharge",
       "abilityText": "Remove all [NQ] from this monster, even if this action is prevented. This attack gains <div>+1[ATK]</div> for each [NQ] removed this way.<br><br><b>Single use</b>.~SINGLE~",
       "element": "Electric",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 3,
       "speed": 5,
       "discard": 2,
       "buff": 1,
-      "modifier": 2,
       "lastUpdated": "Tue, 17 Nov 2020 22:33:51 GMT"
     },
     {
       "abilityName": "Entrenched Barrage",
       "abilityText": "[FLIP] [FLIP]. <br><br>This monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}, even if this action is prevented.",
       "element": "Rock",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 3,
       "speed": 4,
       "discard": 2,
       "buff": 2,
-      "modifier": 2,
       "lastUpdated": "Tue, 17 Nov 2020 22:31:31 GMT"
     },
     {
       "abilityName": "Frazzle",
       "abilityText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}, even if this action is prevented.",
       "element": "Electric",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 4,
       "speed": 7,
       "discard": 1,
       "buff": 1,
-      "modifier": 2,
       "lastUpdated": "Tue, 17 Nov 2020 22:14:55 GMT"
     },
     {
       "abilityName": "Reverse Polarity",
       "abilityText": "Remove up to three [NQ] from this monster. For each [NQ] removed, the enemy monster gains [NQ] of the type removed.",
       "element": "Electric",
-      "auraDuration": 0,
       "statusFlg": true,
       "speed": 3,
       "draw": 1,
@@ -60,7 +53,6 @@
       "timing": "Pre-Actions",
       "buffText": "<b>Super, Ethereal</b><br>Remove all [NQ] from this monster, even if this action is prevented. This attack gains <div>+1[ATK]</div> for each [NQ] removed this way.~SUPER~~ETHEREAL~",
       "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}, </div> [FLIP] [FLIP].",
-      "flipEventFlg": true,
       "lastUpdated": "Tue, 17 Nov 2020 22:31:31 GMT"
     },
     {
@@ -68,7 +60,6 @@
       "timing": "With Attack",
       "buffText": "If this action is <b>faster</b>, this attack gains <b>flinch</b>~FLINCH~",
       "flipEventText": "Crush 2 [PQ]. ~CRUSH~",
-      "flipEventFlg": true,
       "lastUpdated": "Tue, 17 Nov 2020 22:31:31 GMT"
     },
     {
@@ -76,7 +67,6 @@
       "timing": "With Attack",
       "buffText": "<b>Super</b><br>If your active monster switched in last turn, this attack gains <div>+3[ATK]</div> and <div>+3[SPD].</div>~SUPER~",
       "flipEventText": "This monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false} and this attack gains +2[ATK].",
-      "flipEventFlg": true,
       "lastUpdated": "Tue, 17 Nov 2020 22:33:51 GMT"
     },
     {
@@ -84,7 +74,6 @@
       "timing": "Pre-Actions",
       "buffText": "This monster gains +2[DEF] this turn.",
       "flipEventText": "This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false} and {\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true} .",
-      "flipEventFlg": true,
       "lastUpdated": "Tue, 17 Nov 2020 22:31:31 GMT"
     }
   ],

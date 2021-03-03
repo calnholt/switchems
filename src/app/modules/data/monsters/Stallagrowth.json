@@ -8,7 +8,6 @@
       "abilityName": "Leech Seed",
       "abilityText": "<b>Drain [STATUS], Single Use. </b><br><br>If this monster has no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.</div> ~DRAIN~~SINGLE~",
       "element": "Leaf",
-      "auraDuration": null,
       "statusFlg": true,
       "speed": 2,
       "draw": 0,
@@ -20,42 +19,36 @@
       "abilityName": "Vine Whips",
       "abilityText": "Remove all [STATUS] from the enemy monster.<br><br>This attack gains <div>+2[ATK]</div> for each [STATUS] removed.<br><br>If a <b>drain</b> [STATUS] was removed this way, enable <b>Leech Seed</b>.",
       "element": "Leaf",
-      "auraDuration": null,
       "statusFlg": false,
       "attack": 1,
       "speed": 3,
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "modifier": 2,
       "lastUpdated": "Sat, 27 Feb 2021 21:32:11 GMT"
     },
     {
       "abilityName": "Rock Smash",
       "abilityText": "<b>Flinch</b>~FLINCH~",
       "element": "Rock",
-      "auraDuration": null,
       "statusFlg": false,
       "attack": 4,
       "speed": 7,
       "draw": 0,
       "discard": 2,
       "buff": 2,
-      "modifier": 4,
       "lastUpdated": "Fri, 26 Feb 2021 08:34:36 GMT"
     },
     {
       "abilityName": "Rock Slide",
       "abilityText": "[FLIP] [FLIP]",
       "element": "Rock",
-      "auraDuration": null,
       "statusFlg": false,
       "attack": 2,
       "speed": 5,
       "draw": 0,
       "discard": 0,
       "buff": 2,
-      "modifier": 2,
       "lastUpdated": "Fri, 26 Feb 2021 08:34:36 GMT"
     }
   ],
@@ -65,7 +58,6 @@
       "timing": "Pre-Actions",
       "buffText": "This monster gains +3[DEF] this turn.",
       "flipEventText": "This monster gains {\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}",
-      "flipEventFlg": true,
       "lastUpdated": "Tue, 23 Feb 2021 07:05:20 GMT"
     },
     {
@@ -73,23 +65,20 @@
       "timing": "Pre-Actions",
       "buffText": "<b>Super</b><br>This monster gains <div>+5[DEF]</div> this turn. ~SUPER~",
       "flipEventText": "This attack gains +1[ATK].",
-      "flipEventFlg": true,
       "lastUpdated": "Thu, 25 Feb 2021 17:39:31 GMT"
     },
     {
       "buffName": "Concussion",
       "timing": "With Attack",
-      "buffText": "This attack gains <b>flinch</b>.~FLINCH~",
+      "buffText": "<b>Exhaust</b>.<br>This attack gains <b>flinch</b>.~EXHAUST~~FLINCH~",
       "flipEventText": "This attack gains <b>flinch</b>.",
-      "flipEventFlg": true,
-      "lastUpdated": "Tue, 23 Feb 2021 06:51:38 GMT"
+      "lastUpdated": "Mon, 01 Mar 2021 19:55:19 GMT"
     },
     {
       "buffName": "Gravelcrust Grip",
       "timing": "Pre-Actions",
       "buffText": "<b>Super, Exhaust, Drain [STATUS]</b> ~SUPER~~EXHAUST~~DRAIN~",
       "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "flipEventFlg": true,
       "lastUpdated": "Mon, 01 Mar 2021 10:54:04 GMT"
     }
   ],

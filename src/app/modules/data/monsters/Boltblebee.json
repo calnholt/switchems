@@ -8,52 +8,44 @@
       "abilityName": "Swarm",
       "abilityText": "[FLIP] [FLIP].<br><br>If one of the cards flipped with this attack belongs to this monster, the enemy monster gains <div>{\"num\": \"2\", \"stat\": \"SPD\"}.</div>",
       "element": "Electric",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 2,
       "speed": 4,
       "discard": 1,
       "buff": 0,
-      "modifier": 1,
       "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     },
     {
       "abilityName": "Nectear",
       "abilityText": "Discard one [HONEY] counter behind your player shield. If you do, this monster heals <div>2[HP]<div>.",
       "element": "Leaf",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 4,
       "speed": 6,
       "discard": 2,
       "buff": 1,
-      "modifier": 2,
       "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     },
     {
       "abilityName": "Pollinate",
       "abilityText": "Gain a [HONEY] counter behind your player shield.",
       "element": "Leaf",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 1,
       "speed": 3,
       "draw": 0,
       "buff": 1,
-      "modifier": 1,
       "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     },
     {
       "abilityName": "Sticky Sting",
       "abilityText": "This attack gains <b>flinch</b> if one or more buff slots were used with this attack and if you used a [HONEY] counter with this attack.~FLINCH~",
       "element": "Electric",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 2,
       "speed": 4,
       "discard": 1,
       "buff": 2,
-      "modifier": 2,
       "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     }
   ],
@@ -63,7 +55,6 @@
       "timing": "With Attack",
       "buffText": "Gain a [HONEY] counter behind your player shield.<br><br>This attack gains +1[ATK].",
       "flipEventText": "<b>Stun [STATUS]</b>. ~STUN~",
-      "flipEventFlg": true,
       "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     },
     {
@@ -71,7 +62,6 @@
       "timing": "With Attack",
       "buffText": "Gain a [HONEY] counter behind your player shield.<br><br>This attack gains +1[ATK].",
       "flipEventText": "This monster gains {\"stat\":\"ATK\", \"num\":1, \"isPositive\": true}",
-      "flipEventFlg": true,
       "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     },
     {
@@ -79,7 +69,6 @@
       "timing": "Pre-Actions",
       "buffText": "This attack gains +2[SPD]",
       "flipEventText": "If you have two or more [HONEY] counters behind your player shield, discard one and heal <div>2[HP].</div> Otherwise gain a [HONEY] counter behind your player shield.",
-      "flipEventFlg": true,
       "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     },
     {
@@ -87,7 +76,6 @@
       "timing": "Pre-Actions",
       "buffText": "This attack gains +2[SPD]",
       "flipEventText": "If you have two or more [HONEY] counters behind your player shield, discard one and heal <div>2[HP].</div> Otherwise gain a [HONEY] counter behind your player shield.",
-      "flipEventFlg": true,
       "lastUpdated": "Sat, 21 Nov 2020 21:38:31 GMT"
     }
   ],

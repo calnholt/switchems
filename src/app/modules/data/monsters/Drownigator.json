@@ -8,7 +8,6 @@
       "abilityName": "Fatigue",
       "abilityText": "<b>Fatigue [STATUS]</b> ~FATIGUE~",
       "element": "Death",
-      "auraDuration": 0,
       "statusFlg": true,
       "speed": 8,
       "draw": 1,
@@ -20,42 +19,36 @@
       "abilityName": "Expunge",
       "abilityText": "<b>Single use. </b><br><br>If the enemy monster has a [STATUS], this attack gains <div>[FLIP] [FLIP].</div>~SINGLE~~STATUS~",
       "element": "Death",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 4,
       "speed": 8,
       "draw": 0,
       "discard": 0,
       "buff": 1,
-      "modifier": 3,
       "lastUpdated": "Mon, 01 Mar 2021 10:50:35 GMT"
     },
     {
       "abilityName": "Swamped",
       "abilityText": "[FLIP]<br><br>The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
       "element": "Death",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 3,
       "speed": 2,
       "draw": 0,
       "discard": 0,
       "buff": 2,
-      "modifier": 1,
       "lastUpdated": "Fri, 26 Feb 2021 08:02:45 GMT"
     },
     {
       "abilityName": "Surge",
       "abilityText": "<b>Spammable</b>. ~SPAM~",
       "element": "Water",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 1,
       "speed": 6,
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "modifier": 1,
       "lastUpdated": "Fri, 26 Feb 2021 08:02:45 GMT"
     }
   ],
@@ -65,7 +58,6 @@
       "timing": "Pre-Actions",
       "buffText": "<b>Fatigue [STATUS], Exhaust</b> ~FATIGUE~~EXHAUST~",
       "flipEventText": "The enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
-      "flipEventFlg": true,
       "lastUpdated": "Thu, 25 Feb 2021 17:22:19 GMT"
     },
     {
@@ -73,7 +65,6 @@
       "timing": "Post Actions",
       "buffText": "<b>Crush 2 [PQ] / [NQ]</b>.<br><br>This monster heals 1[HP] for each stat cube removed with this card.~CRUSH~",
       "flipEventText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
-      "flipEventFlg": true,
       "lastUpdated": "Sat, 27 Feb 2021 21:03:39 GMT"
     },
     {
@@ -81,7 +72,6 @@
       "timing": "With Attack",
       "buffText": "<b>Pierce 2[DEF]</b>. The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}~PIERCE~",
       "flipEventText": "[+]",
-      "flipEventFlg": true,
       "lastUpdated": "Mon, 1 Mar 2021 09:01:07 GMT"
     },
     {
@@ -89,7 +79,6 @@
       "timing": "With Attack",
       "buffText": "This attack gains +X[ATK] where X is equal to the number of [NQ] the enemy monster has.",
       "flipEventText": "This attack gains +1[ATK].",
-      "flipEventFlg": true,
       "lastUpdated": "Sat, 27 Feb 2021 21:03:39 GMT"
     }
   ],

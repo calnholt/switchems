@@ -7,47 +7,40 @@
       "abilityName": "Flare Up",
       "abilityText": "If this monster was dealt damage this turn, [FLIP] [FLIP] [FLIP]. Otherwise <div>[FLIP].</div>",
       "element": "Fire",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 1,
       "speed": 4,
       "discard": 2,
       "buff": 0,
-      "modifier": 1,
       "lastUpdated": "Tue, 17 Nov 2020 08:58:22 GMT"
     },
     {
       "abilityName": "Slow Burn",
       "abilityText": "If this monster has 6[HP] or less, <div>[+].</div>",
       "element": "Fire",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 2,
       "speed": 2,
       "draw": 0,
       "discard": 1,
       "buff": 2,
-      "modifier": 2,
       "lastUpdated": "Tue, 17 Nov 2020 21:03:13 GMT"
     },
     {
       "abilityName": "Turbulent Outburst",
       "abilityText": "[FLIP]. <br><br>This attack's buffs and [FLIP] effects trigger twice.",
       "element": "Fire",
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 3,
       "speed": 8,
       "discard": 3,
       "buff": 2,
-      "modifier": 1,
       "lastUpdated": "Tue, 17 Nov 2020 20:49:57 GMT"
     },
     {
       "abilityName": "From the Ashes",
       "abilityText": "This monster suffers <div>1[ATK]</div> for each card in your deck. If this monster survives, restore it to full <div>[HP].</div>",
       "element": "Fire",
-      "auraDuration": 0,
       "statusFlg": true,
       "speed": 6,
       "discard": 3,
@@ -60,7 +53,6 @@
       "timing": "Pre-Actions",
       "buffText": "<b>Ethereal</b><br>Each time this monster would be KO'd this turn, this monster is instead reduced to <div>1[HP].</div>~ETHEREAL~",
       "flipEventText": "Heal 1[HP]. [FLIP].",
-      "flipEventFlg": true,
       "lastUpdated": "Tue, 17 Nov 2020 20:49:57 GMT"
     },
     {
@@ -68,7 +60,6 @@
       "timing": "Pre-Actions",
       "buffText": "As an additional cost to play this buff, [-] during the selection phase.<br><br> This attack gains +1[ATK], +1[SPD], and [+].",
       "flipEventText": "[+]",
-      "flipEventFlg": true,
       "lastUpdated": "Tue, 17 Nov 2020 20:49:57 GMT"
     },
     {
@@ -76,7 +67,6 @@
       "timing": "Post Actions",
       "buffText": "Heal 1[HP] for each card you have drawn this turn.",
       "flipEventText": "[+] [+]. <b>Recoil 2[ATK].</b>",
-      "flipEventFlg": true,
       "lastUpdated": "Tue, 17 Nov 2020 12:32:26 GMT"
     },
     {
@@ -84,7 +74,6 @@
       "timing": "With Attack",
       "buffText": "For each monster with 6[HP] or less on your team, this attack gains +1[ATK], then heal 1[HP] to those monsters.",
       "flipEventText": "[FLIP]. If the flipped card belongs to a monster with 6[HP] or less, heal 2[HP] to that monster.",
-      "flipEventFlg": true,
       "lastUpdated": "Tue, 17 Nov 2020 20:49:57 GMT"
     }
   ],

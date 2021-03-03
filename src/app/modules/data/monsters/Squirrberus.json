@@ -5,7 +5,6 @@
       "abilityName": "Forage",
       "abilityText": "Whenever a time counter is removed from this and not by an opponent's ability, gain one of any [ACORN] on your [ACORN] board.",
       "element": "Leaf",
-      "auraDuration": 6,
       "statusFlg": false,
       "speed": 6,
       "draw": 1,
@@ -15,8 +14,6 @@
       "abilityName": "Tail of Power",
       "abilityText": "[FLIP] [FLIP]. <br><br>Gain <div>[ACORN] [ACORN] [ACORN] [ARROW] [ATK]</div> on your [ACORN] board.",
       "element": "Fire",
-      "modifier": 2,
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 3,
       "speed": 1,
@@ -28,8 +25,6 @@
       "abilityName": "Tail of Courage",
       "abilityText": "Gain <div>[ACORN] [ARROW] [DEF]</div> on your [ACORN] board.",
       "element": "Leaf",
-      "modifier": 1,
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 2,
       "speed": 2,
@@ -40,8 +35,6 @@
       "abilityName": "Tail of Wisdom",
       "abilityText": "[FLIP]. <br><br>Gain <div>[ACORN] [ARROW] [SPD]</div> on your [ACORN] board.",
       "element": "Water",
-      "modifier": 2,
-      "auraDuration": 0,
       "statusFlg": false,
       "attack": 3,
       "speed": 6,
@@ -56,7 +49,6 @@
       "timing": "Pre-Actions",
       "buffText": "Gain <div>[ACORN] [ARROW] [ATK]</div> on your [ACORN] board. If this attack is either [F] [E], this attack gains +2[ATK].",
       "flipEventText": "Gain <div>[ACORN] [ARROW] [ATK]</div> on your [ACORN] board.",
-      "flipEventFlg": true,
       "lastUpdated": "Sat, 21 Nov 2020 21:19:38 GMT"
     },
     {
@@ -64,7 +56,6 @@
       "timing": "Pre-Actions",
       "buffText": "Gain <div>[ACORN] [ARROW] [DEF]</div> on your [ACORN] board. If this attack is either [L] [R], this monster gains +2[DEF] this turn.",
       "flipEventText": "Gain <div>[ACORN] [ARROW] [DEF]</div> on your [ACORN] board.",
-      "flipEventFlg": true,
       "lastUpdated": "Sat, 21 Nov 2020 21:19:38 GMT"
     },
     {
@@ -72,7 +63,6 @@
       "timing": "Pre-Actions",
       "buffText": "Gain <div>[ACORN] [ARROW] [SPD]</div> on your [ACORN] board. If this attack is either [W] [S], this attack gains +3[SPD].",
       "flipEventText": "Gain <div>[ACORN] [ARROW] [SPD]</div> on your [ACORN] board.",
-      "flipEventFlg": true,
       "lastUpdated": "Sat, 21 Nov 2020 21:19:38 GMT"
     },
     {
@@ -80,7 +70,6 @@
       "timing": "Post Actions",
       "buffText": "<b>Super, Ethereal</b><br><br>Gain any three [ACORN] on your <div>[ACORN] board</div> and <div>[+].</div>~SUPER~~ETHEREAL~",
       "flipEventText": "If you have 4 or more [ACORN] on your [ACORN] board, <div>[+].</div>",
-      "flipEventFlg": true,
       "lastUpdated": "Sat, 21 Nov 2020 21:19:38 GMT"
     }
   ],
