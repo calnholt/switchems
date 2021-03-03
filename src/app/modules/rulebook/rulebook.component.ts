@@ -19,6 +19,7 @@ export class RulebookBlock {
   text?: string;
   ul?: Array<RulebookBlock>;
   ol?: Array<RulebookBlock>;
+  id?: string;
 }
 @Component({
   selector: 'rulebook',

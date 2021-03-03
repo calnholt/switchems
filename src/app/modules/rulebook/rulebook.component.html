@@ -4,7 +4,7 @@
       <div class="{{getSectionColumns(section)}}">
         <div *ngIf="section.title" class="title" [innerHTML]="display(section.title)"></div>
         <div *ngFor="let block of section.blocks">
-          <div *ngIf="block.text" class="text" [innerHTML]="display(block.text)"></div>
+          <div *ngIf="block.text" id="{{block.id ? block.id : ''}}" class="text" [innerHTML]="display(block.text)"></div>
           <ng-container *ngIf="block.ul || block.ol">
             <rulebook-list [item]="block" [displayFnc]="display"></rulebook-list>
           </ng-container>

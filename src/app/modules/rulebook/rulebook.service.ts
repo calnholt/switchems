@@ -282,7 +282,13 @@ export class RulebookService {
           text: 'When enhancing attack [ATK] actions with buff cards, players may select a buff card from their hand for each buff symbol on the selected monster attack. Buff cards are chosen before the <a href="action_phase">action phase</a>, before you and your opponent reveal your selected action.'
         },
         {
-            text: '<b>NOTE:</b> You can buff monster attacks with any buff card in your hand - they do NOT have to match your active monster.'
+          text: '<b>NOTE:</b> You can buff monster attacks with any buff card in your hand - they do NOT have to match your active monster.'
+        },
+        {
+          text: '<h1>Team Auras[TA]</h1>Some buffs are also Team Auras, as denoted by the [TA] symbol at the top right of the card, with a number beside it, called its duration. When a Team Aura buff is played, put time counters on it equal to its duration. Team Auras grant your monsters additional passive effects for several turns. During the <a href="end_phase">end phase</a>, remove one time counter from your active Team Aura. If there are no more time counters on the card, <a href="exhaust">exhaust</a> it.'
+        },
+        {
+          text: '<b>NOTE: </b>You can only have one active Team Aura at any given time. If you play a Team Aura while another is active, exhaust the active one and replace it with the new one.'
         }
       ]
     },
@@ -472,18 +478,6 @@ export class RulebookService {
         {
           text: '<h1>Disabled Actions[DISABLE]</h1>A monster action becomes disabled when it is selected. When a monster action is disabled, place a disabled token on the [DISABLE] space on the action. Actions that are disabled cannot be selected. A disabled monster action becomes enabled after performing your next action.',
         },
-        // {
-        //   text: '<h1>Monster Actions - Team Aura[TA]</h1>A monster action is a team aura if it has the team aura [TA] symbol. Team aura actions create ongoing benefits for your active monster for a number of turns, as denoted by the number beside the team aura [TA] symbol, called its duration. Put a number of time counters on this action card equal to the action’s team aura [TA] duration value. At the end of each turn, remove a time counter.'
-        // },
-        // {
-        //   text: 'While this action card has time counters on it, the team aura effect is active. This effect is active even if that monster is not your active monster.'
-        // },
-        // {
-        //   text: '<b>NOTE:</b> Team auras [TA] can never have more duration counters on it than its printed duration value.'
-        // },
-        // {
-        //   text: '<b>NOTE:</b> When a monster has a team aura [TA] with time counters on it and switches, keep that card visible to show that its effect is still active. When all of the time counters are removed, return the card to the monster.',
-        // }
       ]
     },
     {
@@ -575,7 +569,7 @@ export class RulebookService {
               text: 'Resolve any end of turn abilities in <a href="monster_card">initiative</a> order',
             },
             {
-              text: 'Remove one time counter from each team aura [TA]',
+              text: 'Remove one time counter from your active <a href="buff_card">team aura</a> [TA], if applicable',
             },
             {
               text: 'Remove one [DEF][PQ] from your monster, if applicable'
@@ -753,6 +747,7 @@ export class RulebookService {
         });
         let block: RulebookBlock = new RulebookBlock();
         block.text = `<b>${term.name}</b>`;
+        block.id = term.name.toLowerCase();
         block.ul = [{text: getAbilityText(description, 'term', 'term-img')}];
         out.push(block);
       }
