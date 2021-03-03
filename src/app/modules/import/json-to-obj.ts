@@ -95,7 +95,6 @@ export const convertFromJSON = (all: Array<any>, keepGUI?: boolean): Array<Monst
             'draw',
             'discard',
             'buff',
-            'auraDuration',
             'statusFlg',
             'modifier',
             'lastUpdated',
@@ -119,8 +118,8 @@ export const convertFromJSON = (all: Array<any>, keepGUI?: boolean): Array<Monst
             'timing',
             'buffText',
             'flipEventText',
-            'flipEventFlg',
             'buffName',
+            'auraDuration',
             'lastUpdated',
         ];
         if (keepGUI) {

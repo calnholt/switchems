@@ -1,6 +1,5 @@
 import { TypeChart } from './../modules/data/data';
 import { Term, Image } from '../modules/data/data';
-import { Buff } from '../modules/monster/model/monster';
 
 export const ELEMENTS = [`Fire`, `Water`, `Rock`, `Leaf`, `Electric`, `Death`] as const;
 export type ElemType = typeof ELEMENTS[number];
@@ -14,19 +13,6 @@ export type BuffTiming = typeof BUFF_TIMINGS[number];
 const typeChart = new Array;
 ELEMENTS.forEach(e => typeChart.push(new TypeChart(e)));
 export const TYPE_CHART = typeChart;
-
-const standardBuffArray: Buff[] = [];
-for (let i = 0; i < 2; i++) {
-    const b = new Buff();
-    b.monsterName = `Standard`;
-    b.buffName = `Cant Escape!`;
-    b.timing = `Pre-Actions`;
-    b.buffText = `Prevent the enemy monster from switching this turn if your opponent selected a switch action.`;
-    b.flipEventFlg = true;
-    b.flipEventText = `This attack gains <div>+1[ATK].</div>`;
-    standardBuffArray.push(b);
-}
-export const STANDARD_BUFFS: Buff[] = standardBuffArray;
 
 export const PLAYER_BOARD_TEXT: string[] = [
     'Buffs', 
@@ -72,12 +58,12 @@ export const TERM_CODES = [
     + `to its owner's discard pile when played as a buff.`),
     new Term('Pierce', '~PIERCE~', `Attacks with <b>Pierce</b> ignore this amount of the enemy monster's <div>[DEF].</div> Multiple sources of pierce stack.`),
     new Term('Recoil', `~RECOIL~`, `This monster suffers this amount of <b>Recoil</b> damage to itself after the attack. `
-    + `This damage cannot be prevented and still occurs if this action is prevented. Multiple sources of recoil stack.`),
+    + `This damage still occurs if this action is prevented. Multiple sources of recoil stack.`),
     new Term('Resistant', `~RESIST~`, `Monsters are <b>Resistant</b> to elements found on the bottom right of their monster card.`),
     new Term('Single Use', `~SINGLE~`, `<b>Single Use</b> actions remain disabled until switched out, as denoted by [SINGLE].`),
     new Term('Slower', `~SLOWER~`, `This action is <b>Slower</b> if both players select a monster action and yours has a lower speed.`),
     new Term('Spammable', `~SPAM~`, `<b>Spammable</b> actions do not become disabled.`),
-    new Term('Status Condition', `~STATUS~`, `<b>Status Conditions</b> [STATUS] – wound, fatigue, drain, stun.`),
+    new Term('Status Condition', `~STATUS~`, `<b>Status Conditions</b> [STATUS] – drain, fatigue , stun, wound.`),
     new Term('Stun', `~STUN~`, `Monsters with <b>Stun</b> [STATUS] perform their switch actions after monster actions.`),
     new Term('Super', `~SUPER~`, `<b>Supers</b> require and use two [B] slots.`),
     new Term('Switch In', `~SWITCH~`, `<b>Switch In</b> abilities also trigger at the start of the game and following a monster KO.`),

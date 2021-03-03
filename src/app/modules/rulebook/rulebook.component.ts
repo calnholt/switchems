@@ -1,8 +1,6 @@
-import { Term } from './../data/data';
-import { TermCode } from './../../types/dataTypes';
 import { RulebookService } from './rulebook.service';
-import { Component, OnInit, ViewEncapsulation, AfterViewInit } from '@angular/core';
-import { Css, TERM_CODES } from 'src/app/types/dataTypes';
+import { Component, ViewEncapsulation, AfterViewInit } from '@angular/core';
+import { Css } from 'src/app/types/dataTypes';
 import { getAbilityText } from '../common/cards';
 import { MonsterService } from '../monster/monster.service';
 import { MonsterComplete } from '../monster/model/monster';

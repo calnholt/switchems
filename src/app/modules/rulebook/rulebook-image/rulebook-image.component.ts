@@ -1,4 +1,3 @@
-import { STANDARD_BUFFS } from 'src/app/types/dataTypes';
 import { Buff } from 'src/app/modules/monster/model/monster';
 import { MonsterComplete, Action } from './../../monster/model/monster';
 import { RulebookImageType } from './../rulebook.component';
@@ -14,7 +13,6 @@ export class RulebookImageComponent implements OnInit {
   @Input() monster?: MonsterComplete;
   action: Action;
   buff: Buff;
-  cantEscape: Buff = STANDARD_BUFFS[0];
 
   constructor() {
   }

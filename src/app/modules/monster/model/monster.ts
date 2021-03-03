@@ -35,8 +35,9 @@ export class Monster extends Card {
     }
 
     getSwitchDefenseValue(): number {
+        const defaultValue = 2;
         const effectivenessArray = this.getEffectivenessArray();
-        return effectivenessArray.includes(2) ? 6 : 3;
+        return effectivenessArray.includes(2) ? defaultValue * 2 : defaultValue;
       }
 
     getEffectivenessArray(): number[] {
@@ -77,7 +78,7 @@ export class Buff extends Card {
     timing: BuffTiming = null;
     buffText: string = null;
     flipEventText?: string = null;
-    flipEventFlg: boolean = false;
+    auraDuration?: number = null;
 }
 
 export class Action extends Card {
@@ -92,6 +93,5 @@ export class Action extends Card {
     draw?: number;
     number: number;
     modifier?: number;
-    auraDuration?: number = 0;
     statusFlg?: boolean = false;
 }
