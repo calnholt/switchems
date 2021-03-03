@@ -21,30 +21,30 @@
           [buff]="card">
         </monster-buff>
       </span>
-      <span *ngIf="card.isPlayerBoard">
+      <!-- <span *ngIf="card.isPlayerBoard">
         <player-board
           [text]="card.text">
         </player-board>
-      </span>
+      </span> -->
       <div [ngClass]="{'break' : isPageBreak()}"></div>
     </span>
     <span *ngIf="allCards.length && extraFlg">
       <action-board></action-board>
-      <div [ngClass]="{'break' : isPageBreak()}"></div>
+      <div class="break"></div>
     </span>
     <span *ngIf="allCards.length && extraFlg">
       <action-board></action-board>
-      <div [ngClass]="{'break' : isPageBreak()}"></div>
+      <div class="break"></div>
     </span>
-    <span *ngIf="allCards.length && extraFlg">
+    <!-- <span *ngIf="allCards.length && extraFlg">
       <stat-cube-board></stat-cube-board>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
     </span>
     <span *ngIf="allCards.length && extraFlg">
       <stat-cube-board></stat-cube-board>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
-    </span>
-    <span *ngIf="allCards.length && extraFlg">
+    </span> -->
+    <!-- <span *ngIf="allCards.length && extraFlg">
       <reference-card></reference-card>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
     </span>
@@ -63,6 +63,6 @@
     <span *ngIf="allCards.length && extraFlg">
       <acorn-board></acorn-board>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
-    </span>
+    </span> -->
   </div>
 </div>
