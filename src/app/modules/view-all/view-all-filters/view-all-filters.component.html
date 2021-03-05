@@ -47,6 +47,15 @@
         [max]="3"
         (selectionChange)="applyFilters()">
       </min-max>
+      <dropdown
+        style="width:inherit;"
+        [label]="'Terms'"
+        [model]="form"
+        [property]="'terms'"
+        [options]="termOptions"
+        [multi]="true"
+        (selectionChange)="applyFilters()">
+      </dropdown>
     </div>
     <div class="title">Action Filters ({{numOfActions}})</div>
     <div class="filters-wrapper">
@@ -100,7 +109,7 @@
       </dropdown>
       <mat-checkbox 
         [(ngModel)]="form.statusFlg"
-        (change)="applyFilters()">Status?
+        (change)="applyFilters()">Special?
       </mat-checkbox>
     </div>
     <div class="title">Buff Filters ({{numOfBuffs}})</div>

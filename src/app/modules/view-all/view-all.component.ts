@@ -57,7 +57,8 @@ export class ViewAllComponent implements OnInit {
     const isElements = this.filterElement(m.elements, form.elements);
     const isHp = this.filterValueMinMax(m.hp, form.hpMin, form.hpMax);
     const isComplexity = this.filterValueMinMax(m.complexity, form.complexityMin, form.complexityMax);
-    return isRole && isElements && isHp && isComplexity;
+    const isTerms = form.terms.length ? this.filterTerms(form.terms, m) : true;
+    return isRole && isElements && isHp && isComplexity && isTerms;
   }
 
   filterRole(m: MonsterComplete, form: MonsterForm): boolean {
@@ -91,13 +92,17 @@ export class ViewAllComponent implements OnInit {
     const isDiscard = this.filterValueMinMax(a.discard, form.discardMin, form.discardMax);
     const isDraw = this.filterValueMinMax(a.draw, form.drawMin, form.drawMax);
     const isStatus = a.statusFlg === form.statusFlg;
-    return isElements && isSpeed && isAttack && isBuff && isDiscard && isDraw && isStatus;
+    const terms = this.getLowerCaseTerms(form.terms);
+    const isTerms = terms.length ? terms.some(t => a.abilityText.toLowerCase().includes(t)) : true;
+    return isElements && isSpeed && isAttack && isBuff && isDiscard && isDraw && isStatus && isTerms;
   }
 
   getBuffHighlight(b: Buff, form: MonsterForm) {
     const isTiming = this.filterTiming(b, form);
-    const isAura = this.filterValueMinMax(b.auraDuration, form.auraMin, form.auraMin);
-    return isTiming && isAura;
+    const isAura = this.filterValueMinMax(b.auraDuration, form.auraMin, form.auraMax);
+    const terms = this.getLowerCaseTerms(form.terms);
+    const isTerms = terms.length ? terms.some(t => b.buffText.toLowerCase().includes(t) || b.flipEventText.toLowerCase().includes(t)) : true;
+    return isTiming && isAura && isTerms;
   }
 
   filterTiming(b: Buff, form: MonsterForm) {
@@ -116,5 +121,29 @@ export class ViewAllComponent implements OnInit {
     return compareValue >= formMin && compareValue <= formMax;
   }
 
+  getLowerCaseTerms(terms: Array<string>): Array<string> {
+    let out = new Array<string>();
+    terms.forEach(term => out.push(term.toLowerCase()));
+    return out;
+  }
+
+  filterTerms(terms: Array<string>, monster: MonsterComplete): boolean {
+    const lowerCaseTerms = this.getLowerCaseTerms(terms);
+    let termOnMonsterCard = false;
+    let termOnActionCard = false;
+    let termOnBuffCard = false;
+    lowerCaseTerms.forEach(t => {
+      if (monster.abilityText.toLowerCase().includes(t)) {
+        termOnMonsterCard = true;
+      }
+      if (monster.actions.some(a => a.abilityText.toLowerCase().includes(t))) {
+        termOnActionCard = true;
+      }
+      if (monster.buffs.some(b => b.buffText.toLowerCase().includes(t) || b.flipEventText.toLowerCase().includes(t))) {
+        termOnBuffCard = true;
+      }
+    });
+    return termOnMonsterCard || termOnActionCard || termOnBuffCard;
+  }
 
 }

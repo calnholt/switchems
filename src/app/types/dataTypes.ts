@@ -66,7 +66,7 @@ export const TERM_CODES = [
     new Term('Status Condition', `~STATUS~`, `<b>Status Conditions</b> [STATUS] – drain, fatigue , stun, wound.`),
     new Term('Stun', `~STUN~`, `Monsters with <b>Stun</b> [STATUS] perform their switch actions after monster actions.`),
     new Term('Super', `~SUPER~`, `<b>Supers</b> require and use two [B] slots.`),
-    new Term('Switch In', `~SWITCH~`, `<b>Switch In</b> abilities also trigger at the start of the game and following a monster KO.`),
+    new Term('Switches In', `~SWITCH~`, `<b>Switch In</b> abilities also trigger at the start of the game and following a monster KO.`),
     new Term('Unsuccessful', `~SUCCESS~`, `<b>Unsuccessful</b> actions do nothing.`),
     new Term('Wound', `~WOUND~`, `Monsters with <b>Wound</b> [STATUS] perform one less [FLIP] on all of their attacks.`),
 ] as const;
@@ -117,6 +117,7 @@ export const IMAGE_CODES = [
     new Image(`[SINGLE]`, SYMBOLS_PATH + `single-use.png`),
 ] as const;
 
+//TODO: this should return an object with two properties: advElems and DisElems that are arrays of elemtypes
 export const getAdvantages = (elem: ElemType): number[] => {
     // fire, water, rock, leaf, elec, death
     // -1 means the monster takes MORE damage
