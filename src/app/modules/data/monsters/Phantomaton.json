@@ -10,10 +10,10 @@
       "statusFlg": false,
       "attack": 1,
       "speed": 1,
-      "draw": 0,
+      "draw": 1,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Tue, 17 Nov 2020 21:27:37 GMT"
+      "lastUpdated": "Wed, 03 Mar 2021 07:27:37 GMT"
     },
     {
       "abilityName": "Download",
@@ -28,7 +28,7 @@
     },
     {
       "abilityName": "Exception Caught",
-      "abilityText": "If this attack is buffed, this attack gains <b>pierce</b>.~PIERCE~",
+      "abilityText": "If this attack is buffed, this attack gains <b>pierce 2[DEF]</b>.~PIERCE~",
       "element": "Death",
       "statusFlg": false,
       "attack": 3,
@@ -36,7 +36,7 @@
       "draw": 0,
       "discard": 1,
       "buff": 2,
-      "lastUpdated": "Tue, 17 Nov 2020 21:27:37 GMT"
+      "lastUpdated": "Wed, 03 Mar 2021 07:27:37 GMT"
     },
     {
       "abilityName": "Cornered",
@@ -46,25 +46,25 @@
       "attack": 5,
       "speed": 7,
       "draw": 0,
-      "discard": 3,
+      "discard": 2,
       "buff": 0,
-      "lastUpdated": "Tue, 17 Nov 2020 21:49:53 GMT"
+      "lastUpdated": "Wed, 03 Mar 2021 07:27:37 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Power Hotfix",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 3, \"isPositive\": true} if the opponent selected a switch action this turn.",
+      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} if the opponent selected a switch action this turn.",
       "flipEventText": "The enemy monster suffers 1[ATK] and this monster heals 1[HP].",
-      "lastUpdated": "Tue, 17 Nov 2020 16:44:57 GMT"
+      "lastUpdated": "Wed, 03 Mar 2021 07:27:37 GMT"
     },
     {
       "buffName": "Agility Hotfix",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 4, \"isPositive\": true} if the opponent selected a switch action this turn.",
+      "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 3, \"isPositive\": true} if the opponent selected a switch action this turn.",
       "flipEventText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.</div>",
-      "lastUpdated": "Tue, 17 Nov 2020 21:35:35 GMT"
+      "lastUpdated": "Wed, 03 Mar 2021 07:27:37 GMT"
     },
     {
       "buffName": "Refactor",
@@ -74,20 +74,21 @@
       "lastUpdated": "Tue, 17 Nov 2020 21:27:37 GMT"
     },
     {
-      "buffName": "Malware",
-      "timing": "With Attack",
-      "buffText": "<b>Super</b><br>If the enemy monster is <b>weak</b> to this attack's element, this attack gains <div>+4[ATK].</div>~SUPER~~EFFECTIVE~",
+      "buffName": "Download",
+      "timing": "Post Actions",
+      "buffText": "When the enemy monster performs a switch action, discard this aura. <br><br>When all time counters are removed from this, next turn your opponent must reveal their selected action before you select yours.",
       "flipEventText": "If the enemy monster is <b>weak</b> to this attack's element, this attack gains <div>+2[ATK].</div>",
-      "lastUpdated": "Tue, 17 Nov 2020 20:36:05 GMT"
+      "auraDuration": 3,
+      "lastUpdated": "Wed, 03 Mar 2021 07:27:37 GMT"
     }
   ],
   "monsterId": 10,
   "abilityName": "Deadlock",
   "monsterName": "Phantomaton",
-  "abilityText": "At the start of the turn, put a <b>deadlock</b> counter on this monster if it doesn't already have one. If it does, remove the <b>deadlock</b> counter instead. <br><br>While this monster has a <b>deadlock</b> counter on it, the enemy monster cannot perform switch actions.",
+  "abilityText": "At the end of the turn, put a <b>deadlock</b> counter on this monster if it doesn't already have one. If it does, remove the <b>deadlock</b> counter instead. <br><br>While this monster has a <b>deadlock</b> counter on it, the enemy monster cannot perform switch actions.",
   "hp": 10,
   "complexity": 2,
   "initiative": 55,
-  "lastUpdated": "Tue, 17 Nov 2020 21:49:53 GMT",
+  "lastUpdated": "Fri, 05 Mar 2021 08:03:25 GMT",
   "role": "Technical"
 }
