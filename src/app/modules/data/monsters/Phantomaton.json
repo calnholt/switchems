@@ -86,10 +86,10 @@
   "monsterId": 10,
   "abilityName": "Deadlock",
   "monsterName": "Phantomaton",
-  "abilityText": "At the end of the turn, put a <b>deadlock</b> counter on this monster if it doesn't already have one. If it does, remove the <b>deadlock</b> counter instead. <br><br>While this monster has a <b>deadlock</b> counter on it, the enemy monster cannot perform switch actions.",
+  "abilityText": "At the end of the turn, put a <b>deadlock</b> counter on this monster if it doesn't already have one. If it does, remove the <b>deadlock</b> counter instead. <br><br>While this monster has a <b>deadlock</b> counter on it, your opponent must [-] an additional card when performing a switch action.",
   "hp": 10,
   "complexity": 2,
   "initiative": 55,
-  "lastUpdated": "Fri, 05 Mar 2021 08:03:25 GMT",
+  "lastUpdated": "Fri, 05 Mar 2021 14:59:12 GMT",
   "role": "Technical"
 }
