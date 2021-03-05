@@ -17,14 +17,14 @@
     },
     {
       "abilityName": "Burn",
-      "abilityText": "<b>Wound [STATUS]</b> ~WOUND~",
+      "abilityText": "<b>Wound [STATUS]</b> \n<br><br>The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.\n\n~WOUND~",
       "element": "Fire",
       "statusFlg": true,
       "speed": 8,
       "draw": 1,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Fri, 26 Feb 2021 08:08:54 GMT"
+      "lastUpdated": "Thu, 04 Mar 2021 15:38:53 GMT"
     },
     {
       "abilityName": "No Pain, No Gain",
@@ -63,15 +63,15 @@
       "buffName": "Inner Strength",
       "timing": "With Attack",
       "buffText": "[FLIP] [FLIP]",
-      "flipEventText": "<b>Crush 1[NQ]</b>~CRUSH~",
-      "lastUpdated": "Fri, 26 Feb 2021 08:28:06 GMT"
+      "flipEventText": "<b>Crush 2[NQ]</b>~CRUSH~",
+      "lastUpdated": "Thu, 04 Mar 2021 15:38:53 GMT"
     },
     {
       "buffName": "Sauna",
       "timing": "Pre-Actions",
       "buffText": "This attack gains +1[SPD]. If the enemy monster has a <div>[STATUS],</div>this attack gains <div>+2[SPD]</div> instead. ~STATUS~",
-      "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "lastUpdated": "Fri, 26 Feb 2021 08:27:30 GMT"
+      "flipEventText": "Remove a <div>[STATUS]</div>.",
+      "lastUpdated": "Thu, 04 Mar 2021 15:38:53 GMT"
     },
     {
       "buffName": "Sear",
@@ -87,8 +87,8 @@
   "abilityText": "Whenever this monster flips one or more buff cards that <b>belongs</b> to it, the attack gains <div>+2[ATK].</div>~BELONGS~",
   "hp": 9,
   "complexity": 1,
+  "promiseDescription": "<b>Flexferno</b> loves himself some <b>Flexferno</b>! A few strong flips can devastate an enemy monster.",
   "initiative": 20,
   "lastUpdated": "Fri, 26 Feb 2021 08:08:54 GMT",
-  "role": "Warrior",
-  "promiseDescription": "<b>Flexferno</b> loves himself some <b>Flexferno</b>! A few strong flips can devastate an enemy monster."
+  "role": "Warrior"
 }
