@@ -6,36 +6,36 @@
   "actions": [
     {
       "abilityName": "Oozy Liberation",
-      "abilityText": "<b>Single use</b>.<br><br>If your opponent has a <b>goop</b> buff card in their discard pile, this attack gains <div>+5[ATK].</div>~SINGLE~",
+      "abilityText": "If your opponent has a <b>goop</b> buff card in their discard pile, this attack gains <div>+4[ATK].</div><br><br>Choose a <b>goop</b> card from the opponent’s discard pile. Your opponent shuffles that card into their deck.</div>",
       "element": "Water",
       "statusFlg": false,
       "attack": 1,
-      "speed": 4,
+      "speed": 6,
       "discard": 1,
-      "buff": 0,
-      "lastUpdated": "Sat, 27 Feb 2021 09:25:25 GMT"
+      "buff": 1,
+      "lastUpdated": "Thu, 04 Mar 2021 08:11:50 GMT"
     },
     {
       "abilityName": "Viscous Split",
-      "abilityText": "<b>Recoil X</b>[ATK], where X is the number of buff slots used with this attack.<br><br>For each used buff slot, the enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div> If the enemy monster's <div>[SPD][NQ]</div> is at max, the enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}</div> instead.",
+      "abilityText": "<b>Recoil X+1</b>[ATK], where X is the number of goop cards in your discard pile. <br><br>Shuffle all <b>goop</b> cards from your discard pile into your opponent's deck. ",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 1,
-      "speed": 1,
+      "speed": 8,
       "draw": 1,
-      "buff": 3,
-      "lastUpdated": "Sat, 27 Feb 2021 09:25:25 GMT"
+      "buff": 1,
+      "lastUpdated": "Thu, 04 Mar 2021 08:22:08 GMT"
     },
     {
       "abilityName": "Reclaim",
-      "abilityText": "You may exchange a card from your discard pile with a card from your hand, excluding any cards played with this attack.",
+      "abilityText": "Put the top two cards of your opponent's deck in their discard pile. If any of these cards are <b>goop</b> cards, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div> If this monster's [ATK][PQ] is at max, this monster heals 1[HP] instead.",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 2,
       "speed": 3,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Sat, 27 Feb 2021 09:25:25 GMT"
+      "lastUpdated": "Thu, 04 Mar 2021 08:11:50 GMT"
     },
     {
       "abilityName": "Lickety Split",
