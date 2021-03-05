@@ -55,9 +55,9 @@
     {
       "buffName": "Beak Drill",
       "timing": "With Attack",
-      "buffText": "[FLIP] [FLIP]",
+      "buffText": "<b>Pierce 4[DEF]</b>~PIERCE~",
       "flipEventText": "The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div>",
-      "lastUpdated": "Thu, 25 Feb 2021 06:57:48 GMT"
+      "lastUpdated": "Thu, 04 Mar 2021 15:47:56 GMT"
     },
     {
       "buffName": "Recoil",
