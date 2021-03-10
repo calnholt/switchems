@@ -46,19 +46,19 @@ export const TERM_KEYS = [`~WOUND~`, `~SUCCESS~`, `~FLINCH~`, `~DRAIN~`, `~FATIG
 export type TermCode = typeof TERM_KEYS[number];
 export const TERM_CODES = [
     new Term('Belongs', `~BELONGS~`, `A buff card <b>Belongs</b> to a monster if the monster name on the bottom of the buff card matches.`),
-    new Term('Crush', `~CRUSH~`, `Remove up to this many of the specified type(s) of stat cubes from either monster.`),
+    new Term('Crush', `~CRUSH~`, `<b>Crush</b> – Remove up to this many of the specified type(s) of stat cubes from either monster.`),
     new Term('Drain', `~DRAIN~`, `At the end of the turn, monsters with <b>Drain</b> [STATUS] suffer <div>1[ATK]</div> and your active monster heals `
     + `<div>1[HP].</div>`),
     new Term('Weak', `~EFFECTIVE~`, `Monsters are <b>Weak</b> to elements found on the bottom left of their monster card.`),
     new Term('Exhaust', `~EXHAUST~`, `<b>Exhaust</b> buffs are removed from the game after played as buffs.`),
-    new Term('Faster', `~FASTER~`, `This action is <b>faster</b> if both players select a monster action and yours has a higher speed.`),
+    new Term('Faster', `~FASTER~`, `This action is <b>faster</b> if both players selected a monster action and yours has a higher speed, or if your opponent selected a standard action.`),
     new Term('Fatigue', `~FATIGUE~`, `When a monster with <b>Fatigue</b> [STATUS] buffs an attack, the attack gains <div><b>recoil 1[ATK]</b></div> for each buff slot used.`),
     new Term('Flinch', `~FLINCH~`, `Actions with <b>Flinch</b> prevent the enemy monster's monster action if this action is faster.`),
     new Term('Goop', `~GOOP~`, `If you do not have <b>Oozygoopz</b> on your team, goop buffs have no buff effect and are returned `
     + `to its owner's discard pile when played as a buff.`),
-    new Term('Pierce', '~PIERCE~', `Attacks with <b>Pierce</b> ignore this amount of the enemy monster's <div>[DEF].</div> Multiple sources of pierce stack.`),
+    new Term('Pierce', '~PIERCE~', `Attacks with <b>Pierce</b> ignore this amount of the enemy monster's <div>[DEF].</div> Multiple instances of pierce stack.`),
     new Term('Recoil', `~RECOIL~`, `This monster suffers this amount of <b>Recoil</b> damage to itself after the attack. `
-    + `This damage still occurs if this action is prevented. Multiple sources of recoil stack.`),
+    + `Multiple instances of recoil stack.`),
     new Term('Resistant', `~RESIST~`, `Monsters are <b>Resistant</b> to elements found on the bottom right of their monster card.`),
     new Term('Single Use', `~SINGLE~`, `<b>Single Use</b> actions remain disabled until switched out, as denoted by [SINGLE].`),
     new Term('Slower', `~SLOWER~`, `This action is <b>Slower</b> if both players select a monster action and yours has a lower speed.`),
