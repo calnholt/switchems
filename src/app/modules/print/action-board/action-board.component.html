@@ -1,38 +1,28 @@
 <div id="action-board">
   <div class="card-container">
-    <div class="actions-container standard-table">
-      <div class="title">Standard Actions</div>
-      <table>
-        <tr>
-          <td>
-            <img src="{{draw}}" class="draw">
-            <img src="{{draw}}" class="draw">
-            <img src="{{draw}}">
-          </td>
-          <td>
-            <img src="{{manuever}}" class="draw">
-            <img src="{{draw}}">
-          </td>
-        </tr>
-      </table>
-    </div>
     <div class="actions-container switch-table">
       <div class="title">
         Switch Actions
           <div class="switch-heal">
-            <img src="{{heal}}">/<img src="{{status}}">
+            <div>
+              <img src="{{heal}}">
+              <div>2</div>
+            </div>
+            /
+            <img src="{{status}}">
           </div>
+        <img src="{{discard}}" class="no-draw">
         <img src="{{discard}}" class="no-draw">
       </div>
       <table>
         <tr>
           <td>
             <img src="{{switchLeft}}" class="switch">
-            & <img src="{{cube}}" class="cube">
+            + <img src="{{cube}}" class="cube pr-1"><img src="{{cube}}" class="cube">
           </td>
           <td>
             <img src="{{switchRight}}" class="switch">
-            & <img src="{{cube}}" class="cube">
+            + <img src="{{cube}}" class="cube pr-1"><img src="{{cube}}" class="cube">
           </td>
         </tr>
       </table>
@@ -50,7 +40,7 @@
     </div>
     <div class="actions-container maneuver-table">
       <div class="title">
-        Manuevers
+        Maneuvers
         <img src="{{manuever}}" class="no-draw">
       </div>
       <table class="monster-actions">
@@ -68,6 +58,22 @@
             <span>
               +3<img src="{{speed}}" class="draw">
             </span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="actions-container standard-table">
+      <div class="title">Standard Actions</div>
+      <table>
+        <tr>
+          <td>
+            <img src="{{draw}}" class="draw">
+            <img src="{{draw}}" class="draw">
+            <img src="{{draw}}">
+          </td>
+          <td>
+            <img src="{{manuever}}" class="draw">
+            <img src="{{draw}}">
           </td>
         </tr>
       </table>

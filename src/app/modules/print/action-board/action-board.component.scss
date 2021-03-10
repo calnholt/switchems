@@ -15,8 +15,20 @@
         }
         .switch-heal{
             font-size: 15px;
+            display: flex;
+            align-items: center;
             img {
                 max-height: 15px;
+            }
+            :first-child {
+                position: relative;
+                div {
+                    position: absolute;
+                    top: 1px;
+                    left: 4px;
+                    color: white;
+                    font-size: 12px;
+                }
             }
         }
         .actions-container{
@@ -32,7 +44,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 0px 10px;
+                padding: 0px 5px;
             }
             .line-container{
                 padding-left: 5px;
