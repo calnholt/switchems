@@ -23,9 +23,9 @@
       "attack": 4,
       "speed": 8,
       "draw": 0,
-      "discard": 0,
+      "discard": 1,
       "buff": 1,
-      "lastUpdated": "Mon, 01 Mar 2021 10:50:35 GMT"
+      "lastUpdated": "Wed, 10 Mar 2021 07:51:43 GMT"
     },
     {
       "abilityName": "Swamped",
@@ -77,9 +77,9 @@
     {
       "buffName": "Tremble",
       "timing": "With Attack",
-      "buffText": "This attack gains +X[ATK] where X is equal to the number of [NQ] the enemy monster has.",
+      "buffText": "This attack gains +1+X[ATK] where X is equal to the number of [NQ] the enemy monster has.",
       "flipEventText": "This attack gains +1[ATK].",
-      "lastUpdated": "Sat, 27 Feb 2021 21:03:39 GMT"
+      "lastUpdated": "Wed, 10 Mar 2021 07:52:32 GMT"
     }
   ],
   "monsterId": 5,
