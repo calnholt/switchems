@@ -28,14 +28,14 @@
     },
     {
       "abilityName": "Reclaim",
-      "abilityText": "Put the top two cards of your opponent's deck in their discard pile. If any of these cards are <b>goop</b> cards, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div> If this monster's [ATK][PQ] is at max, this monster heals 1[HP] instead.",
+      "abilityText": "Put up to three of the top cards of your opponent's deck in their discard pile. If any of these cards are <b>goop</b> cards, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div> If this monster's [ATK][PQ] is at max, this monster heals 1[HP] instead.",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 2,
       "speed": 3,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Thu, 04 Mar 2021 08:11:50 GMT"
+      "lastUpdated": "Sat, 06 Mar 2021 08:18:50 GMT"
     },
     {
       "abilityName": "Lickety Split",
@@ -55,8 +55,8 @@
       "buffName": "Thick Goop",
       "timing": "With Attack",
       "buffText": "<b>Goop</b>. This attack gains <div>+X+1[ATK],</div> where X is the number of <b>goop</b> cards in your opponent's discard pile. Shuffle this card into your opponent's deck.~GOOP~",
-      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div> If you do, this monster gains <div>+2[DEF]</div> this turn.",
-      "lastUpdated": "Sat, 27 Feb 2021 09:25:25 GMT"
+      "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div> If you do, this monster gains <div>{\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.</div>",
+      "lastUpdated": "Sat, 06 Mar 2021 08:18:50 GMT"
     },
     {
       "buffName": "Hostile Goop",
