@@ -5,27 +5,27 @@
   "actions": [
     {
       "abilityName": "Switcheroo",
-      "abilityText": "[FLIP]. <br><br>Perform a switch action and you may keep up to four [PQ] instead of one.<em>(You do not heal or remove a [STATUS] with this switch action.)</em>",
+      "abilityText": "[FLIP]. <br><br>Remove one [SPD][PQ]. If this attack was buffed, this monster gains <div>{\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}. Otherwise, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div></div>",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 2,
-      "speed": 6,
+      "speed": 5,
       "draw": 0,
       "discard": 1,
-      "buff": 0,
-      "lastUpdated": "Fri, 26 Feb 2021 08:33:25 GMT"
+      "buff": 1,
+      "lastUpdated": "Sat, 06 Mar 2021 09:28:37 GMT"
     },
     {
       "abilityName": "Whirlwind",
-      "abilityText": "If this action is <b>slower</b>, this action is <b>unsuccessful</b>.~SLOWER~~SUCCESS~",
+      "abilityText": "If this action is <b>faster</b>, this attack gains +3[ATK].~FASTER~",
       "element": "Leaf",
       "statusFlg": false,
-      "attack": 4,
-      "speed": 4,
+      "attack": 1,
+      "speed": 2,
       "draw": 0,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Fri, 26 Feb 2021 08:33:25 GMT"
+      "lastUpdated": "Sat, 06 Mar 2021 09:28:37 GMT"
     },
     {
       "abilityName": "Cyclone",
@@ -33,23 +33,23 @@
       "element": "Leaf",
       "statusFlg": false,
       "attack": 2,
-      "speed": 3,
+      "speed": 4,
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Fri, 26 Feb 2021 08:33:25 GMT"
+      "lastUpdated": "Sat, 06 Mar 2021 09:28:37 GMT"
     },
     {
       "abilityName": "Vicious Hurricane",
-      "abilityText": "You may choose to remove any number of <div>[SPD] [PQ].</div> For each removed, this attack gains <div>+1[ATK].</div>",
+      "abilityText": "<b>Single use.</b><br><br>Remove all <div>[SPD] [PQ]</div> from this monster and this attack gains <div>+1[ATK]</div> for each removed this way.~SINGLE~",
       "element": "Death",
       "statusFlg": false,
-      "attack": 3,
+      "attack": 2,
       "speed": 6,
       "draw": 0,
-      "discard": 1,
+      "discard": 2,
       "buff": 1,
-      "lastUpdated": "Fri, 26 Feb 2021 08:33:25 GMT"
+      "lastUpdated": "Sat, 06 Mar 2021 09:28:37 GMT"
     }
   ],
   "buffs": [
@@ -85,11 +85,11 @@
   "monsterId": 8,
   "abilityName": "Gusting Winds",
   "monsterName": "Galeaffy",
-  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div><br><br>Whenever any monster on your team performs a switch action, you may keep two [PQ] instead of one. ~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.</div><br><br>There is no maximum number of [SPD][PQ] this monster can have. ~SWITCH~",
   "hp": 9,
   "complexity": 2,
+  "promiseDescription": "The master of speed has arrived!",
   "initiative": 80,
-  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT",
-  "role": "Support",
-  "promiseDescription": "Aid your allied monsters by encouraging switching to keep more of your precious [PQ]!"
+  "lastUpdated": "Sat, 06 Mar 2021 09:28:37 GMT",
+  "role": "Technical"
 }
