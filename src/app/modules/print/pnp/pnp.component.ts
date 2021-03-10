@@ -53,12 +53,13 @@ export class PnpComponent implements OnInit {
         }
       });
     });
-    // if (this.extraFlg) {
-    //   // adds player boards
-    //   for (let i = 0; i < 2; i++) {
-    //     PLAYER_BOARD_TEXT.forEach(txt => allCards.push({isPlayerBoard: true, text: txt}));
-    //   }
-    // }
+    if (this.extraFlg) {
+      // adds player boards
+      allCards.push({isActionBoard: true});
+      allCards.push({isActionBoard: true});
+      allCards.push({isCubeBoard: true});
+      allCards.push({isCubeBoard: true});
+    }
     this.allCards = allCards;
     this.count = 0;
   }
