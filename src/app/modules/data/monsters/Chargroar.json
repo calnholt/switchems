@@ -12,10 +12,10 @@
       "attack": 6,
       "speed": 9,
       "draw": 0,
-      "discard": 2,
+      "discard": 4,
       "buff": 0,
       "modifier": 5,
-      "lastUpdated": "Fri, 26 Feb 2021 07:53:40 GMT"
+      "lastUpdated": "Wed, 10 Mar 2021 07:49:51 GMT"
     },
     {
       "abilityName": "Lights Out",
