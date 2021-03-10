@@ -47,9 +47,9 @@
       "attack": 5,
       "speed": 7,
       "draw": 0,
-      "discard": 2,
+      "discard": 3,
       "buff": 0,
-      "lastUpdated": "Fri, 05 Mar 2021 08:29:42 GMT"
+      "lastUpdated": "Wed, 10 Mar 2021 07:56:38 GMT"
     }
   ],
   "buffs": [
