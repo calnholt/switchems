@@ -40,7 +40,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             // Cragadilo,
             Drownigator,
             Flexferno,
-            // Galvanite,
+            Galvanite,
             Galeaffy,
             Oozygoopz,
             // Smolderskulk,
