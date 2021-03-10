@@ -35,7 +35,7 @@ export class Monster extends Card {
     }
 
     getSwitchDefenseValue(): number {
-        const defaultValue = 2;
+        const defaultValue = 3;
         const effectivenessArray = this.getEffectivenessArray();
         return effectivenessArray.includes(2) ? defaultValue * 2 : defaultValue;
       }
