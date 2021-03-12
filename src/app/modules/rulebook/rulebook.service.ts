@@ -19,7 +19,7 @@ export class RulebookService {
           text: 'Leverage your team of monsters in a battle of cunning and wits in this exciting two-player card game',
         },
         {
-          text: 'v.0.6.0',
+          text: 'v.0.6.1',
         },
         {
           text: '2 Players   |   30 - 60 Minutes   |   Ages 12+',
@@ -33,7 +33,7 @@ export class RulebookService {
       title: 'How to Win',
       blocks: [
         {
-          text: '<a href="ko">Knockout (KO)</a> two of your opponent\'s monsters to win. Monsters are KO’d when their HP [HP] is reduced to 0.'
+          text: '<a href="ko">Knockout (KO)</a> all three of your opponent\'s monsters to win. Monsters are KO’d when their HP [HP] is reduced to 0.'
         }
       ]
     },
@@ -237,7 +237,10 @@ export class RulebookService {
             },
             {
               text: 'The name of the monster this action belongs to',
-            }
+            },
+            {
+              text: 'Denotes whether a monster action is <a href="monster_actions">disabled</a>.',
+            },
           ]
         }
       ]
@@ -316,9 +319,6 @@ export class RulebookService {
                       text: 'Pre-Action Buffs',
                     },
                     {
-                      text: 'Standard Actions',
-                    },
-                    {
                       text: 'Switch Actions',
                     },
                     {
@@ -326,6 +326,9 @@ export class RulebookService {
                     },
                     {
                       text: 'Post Action Buffs',
+                    },
+                    {
+                      text: 'Standard Actions',
                     },
                   ]
                 }
@@ -349,10 +352,51 @@ export class RulebookService {
       rulebookImage: 'Action-Board',
       blocks: [
         {
-          text: 'During the Selection Phase, you will secretly place your action cube on one of the 8 spaces on your action board. These eight actions are split into three groups: Standard Actions, Switch Actions, and Monster Actions. This is also the order in which they resolve.',
+          text: 'During the Selection Phase, you will secretly place your action cube on one of the 8 spaces on your action board. These eight actions are split into three groups: Switch Actions, Monster Actions, and Standard Actions. This is also the order in which they resolve.',
         },
         {
             text: '<b>NOTE:</b> When you select any action, you must place the cards remaining in your hand (if any) face down on the hand section of your player board.'
+        },
+        {
+          text: '<h1>Switch Actions</h1>Switch actions require you to discard two cards from your hand, as denoted by [-] [-]. Place the discarded cards face-up on the discard [-] section of your player board. Switch actions enable you to change your active monster, replacing your active monster with the monster to your right or left (as denoted by the arrow on the action space). Additionally, perform the following:',
+        },
+        {
+            ul: [
+                {
+                  text: 'Choose <b>one</b>: either the monster that is switching out heals 2[HP] OR remove a <a href="status_conditions">status condition</a> [STATUS] from the monster that is switching out.'
+                },
+                {
+                  text: 'Remove all [NQ] from your <a href="stat_cube_board">stat cube board</a> and remove all but two[PQ] from your <a href="stat_cube_board">stat cube board</a>. '
+                },
+                {
+                  text: 'The monster that is switching in gains +X[DEF] this turn against elements it is resistant to. The defense value and resistant elements are denoted on the monster card.'
+                }
+              ]
+        },
+        {
+          text: '<b>NOTE:</b> You cannot switch to <a href="ko">KO’d</a> monsters.',
+        },
+        {
+          text: '<h1>Monster Actions</h1>Monster actions, labeled 1 - 4, correspond to your active monster’s four action cards, arranged in a two by two grid. When you select a monster action, you must place the required number of [-] from your hand face-up on the discard [-] section of your player board. For each [B] on the action, you may optionally apply a <a href="buff_card">buff</a> from your hand to the action, placing each applied <a href="buff_card">buff</a> face-up on the buff [B] section of your action board. These actions are discussed in greater detail <a href="monster_actions">below</a>.'
+        },
+        {
+          text: '<h1>Maneuvers</h1>Maneuver cubes [MQ] are used to augment monster <b>attacks [ATK]</b>. To use a maneuver, when you select a monster attack [ATK] action, you may select a maneuver by placing one of your [MQ] on the maneuver space. Afterwards, the [MQ] is discarded.',
+        },
+        {
+          ul: [
+            {
+              text: '+3[DEF] – Your monster gains +3[DEF] this turn.'
+            },
+            {
+              text: '[FLIP] [FLIP] – This attack gains two <a href="flip_effects">flips</a>.'
+            },
+            {
+              text: '+3[SPD] – This attack gains +3[SPD] this turn.'
+            }
+          ]
+        },
+        {
+          text: "<b>NOTE:</b> You cannot apply maneuvers to special monster [SPECIAL] actions."
         },
         {
           text: '<h1>Standard Actions</h1>There are two different standard actions. The two standard actions are:',
@@ -375,44 +419,6 @@ export class RulebookService {
             }
           ]
         },
-        {
-          text: '<h1>Switch Actions</h1>Switch actions require you to discard a card from your hand, as denoted by [-]. Place the discarded card face-up on the discard [-] section of your player board. Switch actions enable you to change your active monster, replacing your active monster with the monster to your right or left (as denoted by the arrow on the action space). Additionally, perform the following:',
-        },
-        {
-            ul: [
-                {
-                  text: 'Choose <b>one</b>: either the monster that is switching out heals 2[HP] OR remove a <a href="status_conditions">status condition</a> [STATUS] from the monster that is switching out.'
-                },
-                {
-                  text: 'Remove all [NQ] from your <a href="stat_cube_board">stat cube board</a> and remove all but one [ATK][PQ] or [SPD][PQ] from your <a href="stat_cube_board">stat cube board</a>, or keep all [DEF][PQ]. '
-                },
-                {
-                  text: 'The monster that is switching in gains +X[DEF] this turn against elements it is resistant to. The defense value and resistant elements are denoted on the monster card.'
-                }
-              ]
-        },
-        {
-          text: '<b>NOTE:</b> You cannot switch to <a href="ko">KO’d</a> monsters.',
-        },
-        {
-          text: '<h1>Monster Actions</h1>Monster actions, labeled 1 - 4, correspond to your active monster’s four action cards, arranged in a two by two grid. When you select a monster action, you must place the required number of [-] from your hand face-up on the discard [-] section of your player board. For each [B] on the action, you may optionally apply a <a href="buff_card">buff</a> from your hand to the action, placing each applied <a href="buff_card">buff</a> face-up on the buff [B] section of your action board. These actions are discussed in greater detail <a href="monster_actions">below</a>.'
-        },
-        {
-          text: '<h1>Maneuvers</h1>Maneuver cubes [MQ] are used to augment monster attacks. To use a maneuver, when you select a monster attack [ATK] action, you may select a maneuver by placing one of your [MQ] on the maneuver space. Afterwards, the [MQ] is discarded.',
-        },
-        {
-          ul: [
-            {
-              text: '+3[DEF] – Your monster gains +3[DEF] this turn.'
-            },
-            {
-              text: '[FLIP] [FLIP] – This attack gains two <a href="flip_effects">flips</a>.'
-            },
-            {
-              text: '+3[SPD] – This attack gains +3[SPD] this turn.'
-            }
-          ]
-        }
       ]
     },
     {
@@ -426,9 +432,6 @@ export class RulebookService {
               text: '<a href="buff_timing">Pre-Action Buffs</a>',
             },
             {
-              text: '<a href="selection_phase">Standard Actions</a>',
-            },
-            {
               text: '<a href="selection_phase">Switch Actions</a>',
             },
             {
@@ -436,6 +439,9 @@ export class RulebookService {
             },
             {
               text: '<a href="buff_timing">Post Action Buffs</a>',
+            },
+            {
+              text: '<a href="selection_phase">Standard Actions</a>',
             },
           ]
         }
@@ -554,7 +560,13 @@ export class RulebookService {
           text: '<b>NOTE:</b> Monster actions can never have a speed higher than 9 or lower than 0.'
         },
         {
-          text: '<h1>Defense Stat Cubes</h1>Defense stat cubes reduce the amount of damage your monster takes from attacks. These work differently from attack [ATK] and speed [SPD] cubes. No matter how many [DEF][PQ] your monster has, your monster gains +2[DEF]. During the <a href="end_phase">end phase</a>, remove one [DEF][PQ].'
+          text: '<h1>Defense Stat Cubes</h1>Defense stat cubes reduce the amount of damage your monster takes from attacks. These work differently from attack [ATK] and speed [SPD] cubes. When you gain [DEF][PQ], use one [PQ] on the defense track, and move it to the right to increase it or to the left to decrease it. No matter how many [DEF][PQ] notches your monster has, your monster gains +2[DEF]. During the <a href="end_phase">end phase</a>, decrease it one notch.'
+        },
+        {
+          text: '<b>NOTE:</b> When switching, all of your [DEF][PQ] notches count as one [PQ].'
+        },
+        {
+          text: '<b>NOTE:</b> When resolving a <a href="crush">Crush [PQ]</a> effect, each [DEF][PQ] notch counts as one [PQ].'
         },
       ]
     },
