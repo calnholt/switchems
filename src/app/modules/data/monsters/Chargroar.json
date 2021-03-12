@@ -6,16 +6,16 @@
   "actions": [
     {
       "abilityName": "Lightning",
-      "abilityText": "",
+      "abilityText": "If this attack is <b>faster</b>,  this attack gains +2[ATK].~FASTER~",
       "element": "Electric",
       "statusFlg": false,
-      "attack": 6,
-      "speed": 9,
+      "attack": 4,
+      "speed": 7,
       "draw": 0,
-      "discard": 4,
+      "discard": 3,
       "buff": 0,
       "modifier": 5,
-      "lastUpdated": "Wed, 10 Mar 2021 07:49:51 GMT"
+      "lastUpdated": "Thu, 11 Mar 2021 07:32:07 GMT"
     },
     {
       "abilityName": "Lights Out",
@@ -36,11 +36,11 @@
       "element": "Electric",
       "statusFlg": true,
       "speed": 4,
-      "draw": 1,
+      "draw": 0,
       "discard": 0,
       "buff": 0,
       "modifier": 0,
-      "lastUpdated": "Fri, 26 Feb 2021 07:53:40 GMT"
+      "lastUpdated": "Wed, 10 Mar 2021 12:46:25 GMT"
     },
     {
       "abilityName": "Flamethrower",
