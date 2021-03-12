@@ -53,7 +53,7 @@ export const TERM_CODES = [
     new Term('Exhaust', `~EXHAUST~`, `<b>Exhaust</b> buffs are removed from the game after played as buffs.`),
     new Term('Faster', `~FASTER~`, `This action is <b>faster</b> if both players selected a monster action and yours has a higher speed, or if your opponent selected a standard action.`),
     new Term('Fatigue', `~FATIGUE~`, `When a monster with <b>Fatigue</b> [STATUS] buffs an attack, the attack gains <div><b>recoil 1[ATK]</b></div> for each buff slot used.`),
-    new Term('Flinch', `~FLINCH~`, `Actions with <b>Flinch</b> prevent the enemy monster's monster action if this action is faster.`),
+    new Term('Flinch', `~FLINCH~`, `Actions with <b>Flinch</b> prevent the enemy monster's <b>attack</b>[ATK] if this action is faster.`),
     new Term('Goop', `~GOOP~`, `If you do not have <b>Oozygoopz</b> on your team, goop buffs have no buff effect and are returned `
     + `to its owner's discard pile when played as a buff.`),
     new Term('Pierce', '~PIERCE~', `Attacks with <b>Pierce</b> ignore this amount of the enemy monster's <div>[DEF].</div> Multiple instances of pierce stack.`),
