@@ -52,7 +52,7 @@ export const TERM_CODES = [
     new Term('Weak', `~EFFECTIVE~`, `Monsters are <b>Weak</b> to elements found on the bottom left of their monster card.`),
     new Term('Exhaust', `~EXHAUST~`, `<b>Exhaust</b> buffs are removed from the game after played as buffs.`),
     new Term('Faster', `~FASTER~`, `This action is <b>faster</b> if both players selected a monster action and yours has a higher speed, or if your opponent selected a standard action.`),
-    new Term('Fatigue', `~FATIGUE~`, `When a monster with <b>Fatigue</b> [STATUS] buffs an attack, the attack gains <div><b>recoil 1[ATK]</b></div> for each buff slot used.`),
+    new Term('Fatigue', `~FATIGUE~`, `Whenever a monster with <b>Fatigue</b> [STATUS] attacks, the attack gains <div><b>recoil X[ATK]</b></div>, where X is the number of buff slots used.`),
     new Term('Flinch', `~FLINCH~`, `Actions with <b>Flinch</b> prevent the enemy monster's <b>attack</b>[ATK] if this action is faster.`),
     new Term('Goop', `~GOOP~`, `If you do not have <b>Oozygoopz</b> on your team, goop buffs have no buff effect and are returned `
     + `to its owner's discard pile when played as a buff.`),
@@ -63,7 +63,7 @@ export const TERM_CODES = [
     new Term('Single Use', `~SINGLE~`, `<b>Single Use</b> actions remain disabled until switched out, as denoted by [SINGLE].`),
     new Term('Slower', `~SLOWER~`, `This action is <b>Slower</b> if both players select a monster action and yours has a lower speed.`),
     new Term('Spammable', `~SPAM~`, `<b>Spammable</b> actions do not become disabled.`),
-    new Term('Status Condition', `~STATUS~`, `<b>Status Conditions</b> [STATUS] – drain, fatigue , stun, wound.`),
+    new Term('Status Condition', `~STATUS~`, `<b>Status Conditions</b> [STATUS] – drain, fatigue, stun, wound.`),
     new Term('Stun', `~STUN~`, `Monsters with <b>Stun</b> [STATUS] perform their switch actions after monster actions.`),
     new Term('Super', `~SUPER~`, `<b>Supers</b> require and use two [B] slots.`),
     new Term('Switches In', `~SWITCH~`, `<b>Switch In</b> abilities also trigger at the start of the game and following a monster KO.`),
