@@ -70,7 +70,7 @@ export const TERM_CODES = [
 
 const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[1]`, `[2]`, `[3]`, `[4]`, `[DEF]`, `[TA]`, `[X]`, `[SUCC]`, `[FAIL]`,
 `[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]', '[NQ]', '[PQ]', '[ARROW]', '[!]',
-'[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]', '[ACORN]', '[HONEY]', '[WISH]', '[TORMENT]', '[FLIP]', '[DISABLE]', '[SINGLE]'] as const;
+'[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]', '[ACORN]', '[HONEY]', '[WISH]', '[TORMENT]', '[FLIP]', '[DISABLE]', '[SINGLE]', '[SR]', '[SL]'] as const;
 export type ImageCode = typeof IMAGE_KEYS[number];
 export const IMAGE_CODES = [
     new Image(`[ATK]`, SYMBOLS_PATH + `attack.png`),
@@ -112,6 +112,8 @@ export const IMAGE_CODES = [
     new Image(`[FLIP]`, SYMBOLS_PATH + `flip.png`),
     new Image(`[DISABLE]`, SYMBOLS_PATH + `unlocked.png`),
     new Image(`[SINGLE]`, SYMBOLS_PATH + `single-use.png`),
+    new Image(`[SR]`, SYMBOLS_PATH + `switch-right.png`),
+    new Image(`[SL]`, SYMBOLS_PATH + `switch-left.png`),
 ] as const;
 
 //TODO: this should return an object with two properties: advElems and DisElems that are arrays of elemtypes

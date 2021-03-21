@@ -32,6 +32,12 @@
       <span *ngIf="card.isCubeBoard">
         <stat-cube-board></stat-cube-board>
       </span>
+      <span *ngIf="card.isReferenceCard">
+        <reference-card></reference-card>
+      </span>
+      <span *ngIf="card.isSwitchReferenceCard">
+        <switch-reference></switch-reference>
+      </span>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
     </span>
   </div>

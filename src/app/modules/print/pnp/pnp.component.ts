@@ -59,6 +59,10 @@ export class PnpComponent implements OnInit {
       allCards.push({isActionBoard: true});
       allCards.push({isCubeBoard: true});
       allCards.push({isCubeBoard: true});
+      allCards.push({isReferenceCard: true});
+      allCards.push({isReferenceCard: true});
+      allCards.push({isSwitchReferenceCard: true});
+      allCards.push({isSwitchReferenceCard: true});
     }
     this.allCards = allCards;
     this.count = 0;

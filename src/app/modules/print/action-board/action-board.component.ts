@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActionBoardComponent implements OnInit {
   cube: Path = SYMBOLS_PATH + 'green-cube.png';
-  switchLeft: Path = SYMBOLS_PATH + 'switch-defense.png';
-  switchRight: Path = SYMBOLS_PATH + 'switch-defense-right.png';
+  switchLeft: Path = SYMBOLS_PATH + 'switch-left.png';
+  switchRight: Path = SYMBOLS_PATH + 'switch-right.png';
   draw: Path = SYMBOLS_PATH + 'draw.png';
   discard: Path = SYMBOLS_PATH + 'discard.png';
   counter: Path = SYMBOLS_PATH + 'counter.png';
