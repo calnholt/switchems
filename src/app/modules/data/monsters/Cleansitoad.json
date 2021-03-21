@@ -76,6 +76,5 @@
   "abilityText": "When this monster <b>switches in</b>, <div>[+].</div> ~SWITCH~",
   "hp": 11,
   "complexity": 2,
-  "initiative": 50,
-  "role": "Technical"
+  "initiative": 50
 }

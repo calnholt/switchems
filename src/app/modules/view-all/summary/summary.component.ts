@@ -1,9 +1,7 @@
-import { Role, ROLES, Path, ELEMENTS, ELEMENT_PATH_COLOR } from './../../../types/dataTypes';
+import { Path, ELEMENTS, ELEMENT_PATH_COLOR } from './../../../types/dataTypes';
 import { ElemType } from 'src/app/types/dataTypes';
 import { MonsterComplete } from 'src/app/modules/monster/model/monster';
 import { Component, OnInit, Input } from '@angular/core';
-import { ROLES_PATH } from 'src/app/constants';
-import { getElementIndex } from '../../common/cards';
 
 @Component({
   selector: 'summary',
@@ -14,9 +12,7 @@ export class SummaryComponent implements OnInit {
   @Input() monsters: Array<MonsterComplete>;
   @Input() filteredMonsters: Array<MonsterComplete>;
   ELEMENTS = ELEMENTS;
-  ROLES = ROLES;
   COMPLEXITY = [1, 2, 3];
-  ROLES_PATH = ROLES_PATH;
 
   constructor() { }
 
@@ -28,16 +24,8 @@ export class SummaryComponent implements OnInit {
     return `${ELEMENT_PATH_COLOR}${elem.toLocaleLowerCase()}.png`;
   }
 
-  getRoleIcon(role: string): Path {
-    return `${ROLES_PATH}${role.toLocaleLowerCase()}.png`;
-  }
-
   getNumberOfMonstersPerElement(elem: ElemType): number {
     return this.monsters.filter(m => m.elements.includes(elem)).length;
-  }
-
-  getNumberOfMonstersPerRole(role: Role): number {
-    return this.monsters.filter(m => m.role === role).length;
   }
 
   getNumberOfMonsterComplexity(num: number): number {

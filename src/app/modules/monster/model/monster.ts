@@ -1,4 +1,4 @@
-import { Role, ElemType, BuffTiming, getAdvantages } from './../../../types/dataTypes';
+import { ElemType, getAdvantages, BuffTiming } from 'src/app/types/dataTypes';
 
 export class GUI {
     isSelected?: boolean;
@@ -22,7 +22,6 @@ export class Monster extends Card {
     abilityName: string;
     abilityText?: string;
     hp: number;
-    role: Role;
     referenceFlg?: boolean = true;
     complexity: number;
     promiseDescription?: string;

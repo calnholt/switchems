@@ -20,10 +20,6 @@
       </div>
     </div>
     <div class="bottom-container" [ngClass]="{'bottom' : !monster.elements.length}">
-      <div class="role-container">
-        <img class="img" src="{{getRoleIcon()}}">
-        <span class="name">{{this.monster.role}}</span>
-      </div>
       <div class="star-container">
         <span *ngFor="let x of ' '.repeat(3).split(''), let i = index">
           <mat-icon *ngIf="monster.complexity >= i+1">star</mat-icon>

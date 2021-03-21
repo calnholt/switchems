@@ -17,23 +17,6 @@
     </table>
   </div>
   <div class="table-container">
-    <h2>Number of monsters with roles</h2>
-    <table>
-      <thead>
-        <tr>
-          <th *ngFor="let role of ROLES">
-            <img src="{{getRoleIcon(role)}}">
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td *ngFor="let role of ROLES">{{getNumberOfMonstersPerRole(role)}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="table-container">
     <h2>Number of monsters with complexity</h2>
     <table>
       <thead>

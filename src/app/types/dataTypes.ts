@@ -4,9 +4,6 @@ import { Term, Image } from '../modules/data/data';
 export const ELEMENTS = [`Fire`, `Water`, `Rock`, `Leaf`, `Electric`, `Death`] as const;
 export type ElemType = typeof ELEMENTS[number];
 
-export const ROLES = [`Warrior`, `Assassin`, `Technical`, `Tank`, `Support`, `Tricky`] as const;
-export type Role = typeof ROLES[number];
-
 export const BUFF_TIMINGS = [`Pre-Actions`, `With Attack`, `Post Actions`];
 export type BuffTiming = typeof BUFF_TIMINGS[number];
 

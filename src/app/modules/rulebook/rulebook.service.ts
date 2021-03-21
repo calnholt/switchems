@@ -185,7 +185,7 @@ export class RulebookService {
               text: 'Monster ability name and ability text',
             },
             {
-              text: 'Role (loosely describes the moster’s playstyle) and complexity (loosely describes how hard the monster is to play)',
+              text: 'Complexity (loosely describes how difficult the monster is to play, one to three stars)',
             },
             {
               text: 'Initiative (determines when abilities resolve and breaks speed ties)',

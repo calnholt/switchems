@@ -127,27 +127,11 @@
             &.bottom{
                 bottom: 5px;
             }
-            .role-container{
-                position: relative;
-                top: 13px;
-                .img{
-                    width: 15%;
-                    margin-left: 6px;
-                    float: left;
-                }
-                .name{
-                    position: relative;
-                    font-family: $beastformer;
-                    font-size: 18px;
-                    letter-spacing: 0.02em;
-                    bottom: -11px;
-                }
-            }
             .star-container{
                 position: relative;
                 display: flex;
                 top: 23px;
-                right: 34px;
+                right: -4px;
                 height: 0px;
                 span{
                     .mat-icon{

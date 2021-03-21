@@ -1,4 +1,4 @@
-import { TERM_CODES, IMAGE_CODES, CardTypes, ROLES, ELEMENTS, Css } from './../../../types/dataTypes';
+import { TERM_CODES, IMAGE_CODES, CardTypes, ELEMENTS, Css } from './../../../types/dataTypes';
 import { MonsterComplete, Action, Buff } from './../model/monster';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { Component, ViewChild, OnInit, ViewEncapsulation } from '@angular/core';
@@ -47,7 +47,6 @@ export class MonsterFormComponent implements OnInit {
     this.monster = new MonsterComplete();
     this.monster.hp = this.getRandomNumber(20) + 1;
     this.monster.complexity = this.getRandomNumber(3) + 1;
-    this.monster.role = ROLES[this.getRandomNumber(ROLES.length)];
     this.monster.savedFlg = true;
     this.monster.elements = [ELEMENTS[this.getRandomNumber(ELEMENTS.length)]];
     this.monster.actions.push(new Action(), new Action(), new Action(), new Action());

@@ -1,5 +1,5 @@
 import { Term } from './../../data/data';
-import { ELEMENTS, ROLES, ElemType, Role, BuffTiming, BUFF_TIMINGS, TERM_CODES } from './../../../types/dataTypes';
+import { ELEMENTS, ElemType, BuffTiming, BUFF_TIMINGS, TERM_CODES } from './../../../types/dataTypes';
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { SelectionChange } from '@angular/cdk/collections';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
@@ -11,7 +11,6 @@ export class MonsterForm {
   hpMax?: number = 20;
   complexityMin?: number = 1;
   complexityMax?: number = 3;
-  roles?: Array<Role> = new Array<Role>();
   attackMin?: number = 0;
   attackMax?: number = 10;
   speedMin?: number = 0;
@@ -47,7 +46,6 @@ export class ViewAllFiltersComponent implements SelectionChange<any>, OnInit {
   @Output() filtersChanged: EventEmitter<any> = new EventEmitter<any>();
 
   elementList = ELEMENTS;
-  roleList = ROLES;
   timingList = BUFF_TIMINGS;
   form: MonsterForm = new MonsterForm();
   isCollapsed: boolean = true;

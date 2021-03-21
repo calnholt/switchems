@@ -15,15 +15,11 @@ import { default as Oozygoopz } from '../data/monsters/Oozygoopz.json';
 import { default as Galvanite } from '../data/monsters/Galvanite.json';
 import { default as Squirrberus } from '../data/monsters/Squirrberus.json';
 import { default as Ashdash } from '../data/monsters/Ashdash.json';
-import { ElemType, ELEMENTS, Role, ROLES } from './../../types/dataTypes';
+import { ElemType, ELEMENTS } from './../../types/dataTypes';
 import { MonsterComplete, Buff, Action } from '../monster/model/monster';
 
 const getElemType = (text: string): ElemType => {
     return ELEMENTS.find(e => e.toString() === text);
-};
-
-const getRole = (text: string): Role => {
-    return ROLES.find(r => r.toString() === text);
 };
 
 export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
@@ -84,7 +80,6 @@ export const convertFromJSON = (all: Array<any>, keepGUI?: boolean): Array<Monst
         const elements = Array<ElemType>();
         json.elements.forEach(element => elements.push(getElemType(element)));
         monster.elements = elements;
-        monster.role = getRole(json.role);
         monster.actions = new Array<Action>();
         const ACTIONS = 4;
         let ACTION_PROPERTIES = [

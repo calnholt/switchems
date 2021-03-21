@@ -2,7 +2,6 @@ import { MonsterService } from './../monster/monster.service';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { MonsterComplete, Action, Buff } from '../monster/model/monster';
-import { loadMonsters } from '../import/json-to-obj';
 import { MonsterForm } from './view-all-filters/view-all-filters.component';
 import { ElemType } from './../../types/dataTypes';
 
@@ -53,20 +52,11 @@ export class ViewAllComponent implements OnInit {
   }
 
   isWithinFormSettings(m: MonsterComplete, form: MonsterForm): boolean {
-    const isRole = this.filterRole(m, form);
     const isElements = this.filterElement(m.elements, form.elements);
     const isHp = this.filterValueMinMax(m.hp, form.hpMin, form.hpMax);
     const isComplexity = this.filterValueMinMax(m.complexity, form.complexityMin, form.complexityMax);
     const isTerms = form.terms.length ? this.filterTerms(form.terms, m) : true;
-    return isRole && isElements && isHp && isComplexity && isTerms;
-  }
-
-  filterRole(m: MonsterComplete, form: MonsterForm): boolean {
-    let isRoles: boolean = true;
-    if (form.roles.length > 0) {
-      isRoles = form.roles.includes(m.role);
-    }
-    return isRoles;
+    return isElements && isHp && isComplexity && isTerms;
   }
 
   filterElement(elements: Array<ElemType>, formElements: Array<ElemType>): boolean {
