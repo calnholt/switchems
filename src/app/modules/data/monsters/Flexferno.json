@@ -70,8 +70,8 @@
       "buffName": "Sauna",
       "timing": "Pre-Actions",
       "buffText": "This attack gains +1[SPD]. If the enemy monster has a <div>[STATUS],</div>this attack gains <div>+2[SPD]</div> instead. ~STATUS~",
-      "flipEventText": "Remove a <div>[STATUS]</div>.",
-      "lastUpdated": "Thu, 04 Mar 2021 15:38:53 GMT"
+      "flipEventText": "Remove a <div>[STATUS]</div> from this monster.",
+      "lastUpdated": "Sun, 21 Mar 2021 09:42:25 GMT"
     },
     {
       "buffName": "Sear",
