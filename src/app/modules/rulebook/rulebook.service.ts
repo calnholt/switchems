@@ -534,6 +534,9 @@ export class RulebookService {
         {
           text: 'All <a href="buff_card">buff</a> cards have a flip effect [FLIP], found at the bottom of the card. Sometimes effects have you flip the top card of your deck when resolving a monster attack, denoted by this symbol [FLIP]. For each [FLIP] symbol, flip the top card of your deck and apply its flip effect to your attack [ATK] action.'
         },
+        {
+          text: 'After all flips are resolved, all flipped buff cards are put into your discard pile. If your deck needs to be reshuffled between flips, any cards previously flipped are not included in the reshuffle.'
+        },
       ]
     },
     {
