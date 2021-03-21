@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Arraydicate",
-      "abilityText": "If this attack is buffed, this attack gains <b>pierce 2[DEF]</b>.~PIERCE~",
+      "abilityText": "If the opponent selected a switch action this turn, this attack gains <div><b>pierce 2[DEF]</b>.</div>~PIERCE~",
       "element": "Death",
       "statusFlg": false,
       "attack": 3,
@@ -37,7 +37,7 @@
       "draw": 0,
       "discard": 1,
       "buff": 2,
-      "lastUpdated": "Fri, 05 Mar 2021 08:29:42 GMT"
+      "lastUpdated": "Sun, 21 Mar 2021 09:41:05 GMT"
     },
     {
       "abilityName": "Exception Caught",
@@ -56,16 +56,16 @@
     {
       "buffName": "Power Hotfix",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} if the opponent selected a switch action this turn.",
+      "buffText": "If the opponent selected a switch action this turn, this monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.",
       "flipEventText": "<b>Crush 1 [PQ] / [NQ]</b>. ~CRUSH~",
-      "lastUpdated": "Fri, 05 Mar 2021 08:32:15 GMT"
+      "lastUpdated": "Sun, 21 Mar 2021 09:41:05 GMT"
     },
     {
       "buffName": "Agility Hotfix",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 3, \"isPositive\": true} if the opponent selected a switch action this turn.",
+      "buffText": "If the opponent selected a switch action this turn, this monster gains {\"stat\": \"SPD\", \"num\": 3, \"isPositive\": true}.",
       "flipEventText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.</div>",
-      "lastUpdated": "Wed, 03 Mar 2021 07:27:37 GMT"
+      "lastUpdated": "Sun, 21 Mar 2021 09:41:05 GMT"
     },
     {
       "buffName": "Refactor",
@@ -77,10 +77,10 @@
     {
       "buffName": "Download",
       "timing": "Post Actions",
-      "buffText": "When the enemy monster performs a switch action, <b>exhaust</b> this aura. <br><br>When all time counters are removed from this, next turn your opponent must reveal their selected action before you select yours.",
+      "buffText": "When the enemy monster performs a switch action, <div>heal 1[HP]</div> and <b>exhaust</b> this aura. <br><br>When all time counters are removed from this, next turn your opponent must reveal their selected action before you select yours.",
       "flipEventText": "If the enemy monster is <b>weak</b> to this attack's element, this attack gains <div>+2[ATK].</div>",
       "auraDuration": 3,
-      "lastUpdated": "Fri, 05 Mar 2021 08:29:42 GMT"
+      "lastUpdated": "Sun, 21 Mar 2021 09:41:05 GMT"
     }
   ],
   "monsterId": 10,
