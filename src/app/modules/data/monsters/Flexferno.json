@@ -5,15 +5,15 @@
   "actions": [
     {
       "abilityName": "Inferno",
-      "abilityText": "If the enemy monster has a [STATUS], this attack gains one [B] slot and [FLIP].<br><br>This attack gains +2[ATK] for each buff card used if all [B] slots used with this attack <b>belong</b> to this monster.",
+      "abilityText": "If the enemy monster has a [STATUS], this attack gains one [B] slot and [FLIP].<br><br>If all [B] slots are used <b>and</b> all applied buffs <b>belong</b> to this monster, this attack gains +2[ATK] for each buff slot used.",
       "element": "Fire",
       "statusFlg": false,
-      "attack": 3,
+      "attack": 2,
       "speed": 5,
       "draw": 0,
       "discard": 1,
       "buff": 1,
-      "lastUpdated": "Sat, 27 Feb 2021 21:11:34 GMT"
+      "lastUpdated": "Thu, 25 Mar 2021 07:21:09 GMT"
     },
     {
       "abilityName": "Burn",
