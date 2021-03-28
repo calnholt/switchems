@@ -54,25 +54,25 @@
   ],
   "buffs": [
     {
-      "buffName": "Toughen Vines",
-      "timing": "Pre-Actions",
-      "buffText": "This monster gains +3[DEF] this turn.",
+      "buffName": "Regrowth",
+      "timing": "Post Actions",
+      "buffText": "This monster heals <div>1[HP].</div> If the enemy monster has a [STATUS], this monster heals <div>2[HP]</div> instead.",
       "flipEventText": "This monster gains {\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}",
-      "lastUpdated": "Tue, 23 Feb 2021 07:05:20 GMT"
+      "lastUpdated": "Sun, 28 Mar 2021 08:35:00 GMT"
     },
     {
       "buffName": "Mossy Overgrowth",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super</b><br>This monster gains <div>+5[DEF]</div> this turn. ~SUPER~",
+      "buffText": "<b>Super</b><br>This monster gains <div>+3[DEF]</div> this turn. ~SUPER~",
       "flipEventText": "This attack gains +1[ATK].",
-      "lastUpdated": "Thu, 25 Feb 2021 17:39:31 GMT"
+      "lastUpdated": "Sun, 28 Mar 2021 08:28:03 GMT"
     },
     {
       "buffName": "Concussion",
       "timing": "With Attack",
       "buffText": "<b>Exhaust</b>.<br>This attack gains <b>flinch</b>.~EXHAUST~~FLINCH~",
-      "flipEventText": "This attack gains <b>flinch</b>.",
-      "lastUpdated": "Mon, 01 Mar 2021 19:55:19 GMT"
+      "flipEventText": "If the enemy monster has a [STATUS], the enemy monster gains <div><b>Stun [STATUS].</b></div>~STUN~",
+      "lastUpdated": "Sun, 28 Mar 2021 08:28:03 GMT"
     },
     {
       "buffName": "Gravelcrust Grip",
