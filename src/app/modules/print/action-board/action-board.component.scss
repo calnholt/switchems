@@ -10,6 +10,7 @@
         height: $card-height;
         width: $card-width;
         background-color: white;
+        position: relative;
         .no-draw{
             max-height: 18px;
         }
@@ -34,9 +35,14 @@
         .actions-container{
             background-color: #f3f3f3;
             border-radius: 6px;
-            margin: 3px;
+            margin: 7px 3px 3px 3px;
             padding: 1px;
             // margin-top: 10px;
+            .actions-container {
+                margin: unset;
+                padding: unset;
+                border-radius: unset;
+            }
             .title{
                 font-size: 23px;
                 text-align: center;
@@ -135,23 +141,41 @@
                 }
             }
             &.maneuver-table{
-                table{
-                    font-size: 29px;
-                    font-family: $beastformer;
+                background-color: unset;
+                display: flex;
+                .maneuver {
+                    padding: 10px 0px 0px 12px;
                     img {
-                        max-height: 24px;
+                        max-height: 20px;
                     }
+                }
+                table{
+                    font-family: $beastformer;
+                    position: relative;
+                    top: -2px;
+                    left: 8px;
+                    width: 84%;
+                    border-radius: 0px 0px 6px 6px;
                     tr{
+                        td {
+                            font-size: 22px;
+                            img {
+                                max-height: 20px;
+                            }
+                        }
                         td:nth-child(1){
+                            background-color: #8abcf9;
                             width: 33.33%;
-                            border-radius: 4px 0px 0px 4px;
+                            border-radius: 0px 0px 0px 4px !important;
                         }
                         td:nth-child(2){
+                            background-color: #8abcf9;
                             width: 33.33%;
                         }
                         td:last-child {
+                            background-color: #8abcf9;
                             width: 33.33%;
-                            border-radius: 0px 4px 4px 0px;
+                            border-radius: 0px 0px 4px 0px !important;
                         }
                     }
                 }
