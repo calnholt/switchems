@@ -60,11 +60,11 @@
       "lastUpdated": "Thu, 04 Mar 2021 15:47:56 GMT"
     },
     {
-      "buffName": "Recoil",
-      "timing": "Post Actions",
-      "buffText": "<b>Super, Exhaust</b><br>The enemy monster suffers <div>1[ATK]</div> for each card your opponent discarded and for each buff slot used this turn.~SUPER~~EXHAUST~",
+      "buffName": "Hard Headed",
+      "timing": "Pre-Actions",
+      "buffText": "If your opponent selected a monster <b>attack</b> action this turn, the enemy monster's attack gains <div><b>recoil 2[ATK]</b>.</div>~RECOIL~",
       "flipEventText": "This attack gains +2[ATK] and <b>recoil 2[ATK]</b>.",
-      "lastUpdated": "Thu, 25 Feb 2021 06:40:35 GMT"
+      "lastUpdated": "Thu, 25 Mar 2021 07:27:58 GMT"
     },
     {
       "buffName": "Self Defense",
