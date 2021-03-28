@@ -24,17 +24,17 @@ export class ReferenceCardComponent {
       items: ['Both players reveal their selected actions and then resolve them in this order:'],
       subOrderedItems: [
         'Pre-Action buffs',
-        'Standard actions',
         'Switch actions',
         'Monster actions',
         'Post-Action buffs',
+        'Standard actions',
       ],
     },
     {
       title: 'End Phase',
       items: [
         'Activate end of turn abilities.',
-        'Remove one time counter from each Team Aura.',
+        'Add one time counter to each Team Aura.',
         'Remove one [DEF][PQ] from your active monster, if applicable.',
         'Draw a card.',
       ]
