@@ -60,11 +60,12 @@
       "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
     },
     {
-      "buffName": "Morning Jolt",
-      "timing": "Post Actions",
-      "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.",
+      "buffName": "Static Shock",
+      "timing": "Pre-Actions",
+      "buffText": "Your monster attacks gain <div>+1[ATK]</div> for each different [STATUS] the enemy monster has.~STATUS~~AURA~",
       "flipEventText": "If the enemy monster has a <div>[STATUS],</div> this attack gains <b>flinch</b>.",
-      "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
+      "auraDuration": 6,
+      "lastUpdated": "Sun, 28 Mar 2021 08:50:13 GMT"
     },
     {
       "buffName": "High Voltage",
@@ -84,10 +85,10 @@
   "monsterId": 7,
   "abilityName": "Static Shock",
   "monsterName": "Zappguin",
-  "abilityText": "This monster's attacks gain <div>+1[ATK]</div> for each different [STATUS] the enemy monster has.~STATUS~",
+  "abilityText": "If this monster's attack actions are <b>faster</b>, this monster's attack <div>gains +1[ATK].</div>~FASTER~",
   "hp": 8,
   "complexity": 1,
   "promiseDescription": "<b>Zappguin</b> wants nothing more than to <b>stun</b> [STATUS] and <b>flinch</b> every monster it meets.",
   "initiative": 40,
-  "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
+  "lastUpdated": "Sun, 28 Mar 2021 08:43:57 GMT"
 }
