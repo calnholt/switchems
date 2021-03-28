@@ -39,7 +39,7 @@ export type TermCodeValue = string;
 // best method I could think of with the least redundancy while maintaining strong typing
 export const TERM_KEYS = [`~WOUND~`, `~SUCCESS~`, `~FLINCH~`, `~DRAIN~`, `~FATIGUE~`,
     `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~SUPER~`, `~FASTER~`, `~SLOWER~`, 
-    `~GOOP~`, `~EXHAUST~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`, `~CRUSH~`, `~BELONGS~`, `~SPAM~`] as const;
+    `~GOOP~`, `~EXHAUST~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`, `~CRUSH~`, `~BELONGS~`, `~SPAM~`, `~AURA~`] as const;
 export type TermCode = typeof TERM_KEYS[number];
 export const TERM_CODES = [
     new Term('Belongs', `~BELONGS~`, `A buff card <b>Belongs</b> to a monster if the monster name on the bottom of the buff card matches.`),
@@ -48,7 +48,7 @@ export const TERM_CODES = [
     + `<div>1[HP].</div>`),
     new Term('Weak', `~EFFECTIVE~`, `Monsters are <b>Weak</b> to elements found on the bottom left of their monster card.`),
     new Term('Exhaust', `~EXHAUST~`, `<b>Exhaust</b> buffs are removed from the game after played as buffs.`),
-    new Term('Faster', `~FASTER~`, `This action is <b>faster</b> if both players selected a monster action and yours has a higher speed, or if your opponent selected a standard action.`),
+    new Term('Faster', `~FASTER~`, `This attack is <b>faster</b> if both players selected a monster action and yours has a higher speed, or if your opponent selected a standard action.`),
     new Term('Fatigue', `~FATIGUE~`, `Whenever a monster with <b>Fatigue</b> [STATUS] attacks, the attack gains <div><b>recoil X[ATK]</b></div>, where X is the number of buff slots used.`),
     new Term('Flinch', `~FLINCH~`, `Actions with <b>Flinch</b> prevent the enemy monster's <b>attack</b>[ATK] if this action is faster.`),
     new Term('Goop', `~GOOP~`, `If you do not have <b>Oozygoopz</b> on your team, goop buffs have no buff effect and are returned `
@@ -64,6 +64,7 @@ export const TERM_CODES = [
     new Term('Stun', `~STUN~`, `Monsters with <b>Stun</b> [STATUS] perform their switch actions after monster actions.`),
     new Term('Super', `~SUPER~`, `<b>Supers</b> require and use two [B] slots.`),
     new Term('Switches In', `~SWITCH~`, `<b>Switch In</b> abilities also trigger at the start of the game and following a monster KO.`),
+    new Term('Team Aura', '~AURA~', '<b>Team Aura</b> [TA] – At the end of your turn, put a time counter on this. If the number of time counters equals its duration, exhaust this. You can only have one active Team Aura at any time.'),
     new Term('Unsuccessful', `~SUCCESS~`, `<b>Unsuccessful</b> actions do nothing.`),
     new Term('Wound', `~WOUND~`, `Monsters with <b>Wound</b> [STATUS] perform one less [FLIP] on all of their attacks.`),
 ] as const;
