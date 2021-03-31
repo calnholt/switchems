@@ -37,7 +37,7 @@ export const MODIFIER_OPTIONS_NEG = [0, -1, -2, -3, -4, -5, `X`];
 export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
-export const TERM_KEYS = [`~WOUND~`, `~SUCCESS~`, `~FLINCH~`, `~DRAIN~`, `~FATIGUE~`,
+export const TERM_KEYS = [`~WOUND~`, `~FLINCH~`, `~DRAIN~`, `~FATIGUE~`,
     `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~SUPER~`, `~FASTER~`, `~SLOWER~`, 
     `~GOOP~`, `~EXHAUST~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`, `~CRUSH~`, `~BELONGS~`, `~SPAM~`, `~AURA~`] as const;
 export type TermCode = typeof TERM_KEYS[number];
@@ -46,17 +46,17 @@ export const TERM_CODES = [
     new Term('Crush', `~CRUSH~`, `<b>Crush</b> – Remove up to this many of the specified type(s) of stat cubes from either monster.`),
     new Term('Drain', `~DRAIN~`, `At the end of the turn, monsters with <b>Drain</b> [STATUS] suffer <div>1[ATK]</div> and your active monster heals `
     + `<div>1[HP].</div>`),
-    new Term('Weak', `~EFFECTIVE~`, `Monsters are <b>Weak</b> to elements found on the bottom left of their monster card.`),
+    new Term('Weak', `~EFFECTIVE~`, `Monsters are <b>Weak</b> to elements in the [WEAK] section of their monster card.`),
     new Term('Exhaust', `~EXHAUST~`, `<b>Exhaust</b> buffs are removed from the game after played as buffs.`),
     new Term('Faster', `~FASTER~`, `This attack is <b>faster</b> if both players selected a monster action and yours has a higher speed, or if your opponent selected a standard action.`),
     new Term('Fatigue', `~FATIGUE~`, `Whenever a monster with <b>Fatigue</b> [STATUS] attacks, the attack gains <div><b>recoil X[ATK]</b></div>, where X is the number of buff slots used.`),
-    new Term('Flinch', `~FLINCH~`, `Actions with <b>Flinch</b> prevent the enemy monster's <b>attack</b>[ATK] if this action is faster.`),
+    new Term('Flinch', `~FLINCH~`, `Actions with <b>Flinch</b> prevent the enemy monster's monster action if this action is faster.`),
     new Term('Goop', `~GOOP~`, `If you do not have <b>Oozygoopz</b> on your team, goop buffs have no buff effect and are returned `
     + `to its owner's discard pile when played as a buff.`),
     new Term('Pierce', '~PIERCE~', `Attacks with <b>Pierce</b> ignore this amount of the enemy monster's <div>[DEF].</div> Multiple instances of pierce stack.`),
     new Term('Recoil', `~RECOIL~`, `This monster suffers this amount of <b>Recoil</b> damage to itself after the attack. `
     + `Multiple instances of recoil stack.`),
-    new Term('Resistant', `~RESIST~`, `Monsters are <b>Resistant</b> to elements found on the bottom right of their monster card.`),
+    new Term('Resistant', `~RESIST~`, `Monsters are <b>Resistant</b> to elements in the [RESIST] section of their monster card.`),
     new Term('Single Use', `~SINGLE~`, `<b>Single Use</b> actions remain disabled until switched out, as denoted by [SINGLE].`),
     new Term('Slower', `~SLOWER~`, `This action is <b>Slower</b> if both players select a monster action and yours has a lower speed.`),
     new Term('Spammable', `~SPAM~`, `<b>Spammable</b> actions do not become disabled.`),
@@ -65,13 +65,14 @@ export const TERM_CODES = [
     new Term('Super', `~SUPER~`, `<b>Supers</b> require and use two [B] slots.`),
     new Term('Switches In', `~SWITCH~`, `<b>Switch In</b> abilities also trigger at the start of the game and following a monster KO.`),
     new Term('Team Aura', '~AURA~', '<b>Team Aura</b> [TA] – At the end of your turn, put a time counter on this. If the number of time counters equals its duration, exhaust this. You can only have one active Team Aura at any time.'),
-    new Term('Unsuccessful', `~SUCCESS~`, `<b>Unsuccessful</b> actions do nothing.`),
     new Term('Wound', `~WOUND~`, `Monsters with <b>Wound</b> [STATUS] perform one less [FLIP] on all of their attacks.`),
 ] as const;
 
 const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[1]`, `[2]`, `[3]`, `[4]`, `[DEF]`, `[TA]`, `[X]`, `[SUCC]`, `[FAIL]`,
-`[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]', '[NQ]', '[PQ]', '[ARROW]', '[!]',
-'[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]', '[ACORN]', '[HONEY]', '[WISH]', '[TORMENT]', '[FLIP]', '[DISABLE]', '[SINGLE]', '[SR]', '[SL]'] as const;
+    `[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]', '[NQ]', '[PQ]', '[ARROW]', '[!]',
+    '[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]', '[ACORN]', '[HONEY]', '[WISH]', '[TORMENT]', '[FLIP]', '[DISABLE]', '[SINGLE]', 
+    '[SR]', '[SL]', '[RESIST]', '[WEAK]', '[DEADLOCK]'
+] as const;
 export type ImageCode = typeof IMAGE_KEYS[number];
 export const IMAGE_CODES = [
     new Image(`[ATK]`, SYMBOLS_PATH + `attack.png`),
@@ -115,6 +116,9 @@ export const IMAGE_CODES = [
     new Image(`[SINGLE]`, SYMBOLS_PATH + `single-use.png`),
     new Image(`[SR]`, SYMBOLS_PATH + `switch-right.png`),
     new Image(`[SL]`, SYMBOLS_PATH + `switch-left.png`),
+    new Image(`[RESIST]`, SYMBOLS_PATH + `switch-defense-right.png`),
+    new Image(`[WEAK]`, SYMBOLS_PATH + `effective.png`),
+    new Image(`[DEADLOCK]`, SYMBOLS_PATH + `deadlock.png`),
 ] as const;
 
 //TODO: this should return an object with two properties: advElems and DisElems that are arrays of elemtypes
