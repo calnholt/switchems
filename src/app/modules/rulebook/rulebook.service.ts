@@ -288,7 +288,7 @@ export class RulebookService {
           text: '<b>NOTE:</b> You can buff monster attacks with any buff card in your hand - they do NOT have to match your active monster.'
         },
         {
-          text: '<h1>Team Auras[TA]</h1>Some buffs are also Team Auras, as denoted by the [TA] symbol at the top right of the card, with a number beside it, called its duration. When a Team Aura buff is played, put time counters on it equal to its duration. Team Auras grant your monsters additional passive effects for several turns. During the <a href="end_phase">end phase</a>, remove one time counter from your active Team Aura. If there are no more time counters on the card, <a href="exhaust">exhaust</a> it.'
+          text: '<h1>Team Auras[TA]</h1>Some buffs are also Team Auras, as denoted by the [TA] symbol at the top right of the card, with a number beside it, called its duration. When a Team Aura buff is played. Team Auras grant your monsters additional passive effects for several turns. During the <a href="end_phase">end phase</a>, add one time counter to your active Team Aura. If the number of time counters on the card equals its duration, <a href="exhaust">exhaust</a> it.'
         },
         {
           text: '<b>NOTE: </b>You can only have one active Team Aura at any given time. If you play a Team Aura while another is active, exhaust the active one and replace it with the new one.'
@@ -358,7 +358,7 @@ export class RulebookService {
             text: '<b>NOTE:</b> When you select any action, you must place the cards remaining in your hand (if any) face down on the hand section of your player board.'
         },
         {
-          text: '<h1>Switch Actions</h1>Switch actions require you to discard two cards from your hand, as denoted by [-] [-]. Place the discarded cards face-up on the discard [-] section of your player board. Switch actions enable you to change your active monster, replacing your active monster with the monster to your right or left (as denoted by the arrow on the action space). Additionally, perform the following:',
+          text: '<h1>Switch Actions[SL]</h1>Switch actions require you to discard two cards from your hand, as denoted by [-] [-]. Place the discarded cards face-up on the discard [-] section of your player board. Switch actions enable you to change your active monster, replacing your active monster with the monster to your right or left (as denoted by the arrow on the action space). Additionally, perform the following:',
         },
         {
             ul: [
@@ -396,7 +396,7 @@ export class RulebookService {
           ]
         },
         {
-          text: "<b>NOTE:</b> You cannot apply maneuvers to special monster [SPECIAL] actions."
+          text: "<b>NOTE:</b> You cannot apply maneuvers to monster special [SPECIAL] actions."
         },
         {
           text: '<h1>Standard Actions</h1>There are two different standard actions. The two standard actions are:',
