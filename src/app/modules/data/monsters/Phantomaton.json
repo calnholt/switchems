@@ -17,7 +17,7 @@
     },
     {
       "abilityName": "Static Void",
-      "abilityText": "If the enemy monster is <b>weak</b> to this attack's element, <div><b>stun [STATUS]</b>.</div>~EFFECTIVE~~STUN~",
+      "abilityText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, <div><b>stun [STATUS]</b>.</div>~EFFECTIVE~~STUN~",
       "element": "Electric",
       "statusFlg": false,
       "attack": 2,
@@ -25,7 +25,7 @@
       "draw": 0,
       "discard": 0,
       "buff": 1,
-      "lastUpdated": "Fri, 05 Mar 2021 08:29:42 GMT"
+      "lastUpdated": "Mon, 29 Mar 2021 18:04:27 GMT"
     },
     {
       "abilityName": "Arraydicate",
@@ -77,10 +77,10 @@
     {
       "buffName": "Download",
       "timing": "Post Actions",
-      "buffText": "When the enemy monster performs a switch action, <div>heal 1[HP]</div> and <b>exhaust</b> this aura. <br><br>When all time counters are removed from this, next turn your opponent must reveal their selected action before you select yours.",
-      "flipEventText": "If the enemy monster is <b>weak</b> to this attack's element, this attack gains <div>+2[ATK].</div>",
+      "buffText": "When the enemy monster switches, that monster <div>suffers 1[ATK]</div> and <b>exhaust</b> this aura.<br><br>When this card <b>exhausts</b> from duration, next turn your opponent must reveal their action before you select yours.",
+      "flipEventText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains <div>+2[ATK].</div>",
       "auraDuration": 3,
-      "lastUpdated": "Sun, 21 Mar 2021 09:41:05 GMT"
+      "lastUpdated": "Mon, 29 Mar 2021 18:04:27 GMT"
     }
   ],
   "monsterId": 10,

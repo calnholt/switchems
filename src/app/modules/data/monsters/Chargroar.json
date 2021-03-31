@@ -74,16 +74,16 @@
     {
       "buffName": "Revenge",
       "timing": "With Attack",
-      "buffText": "<b>Exhaust</b><br>If the enemy monster is <b>resistant</b> to this attack's element, this attack gains <div>+3[ATK].</div>~SUPER~~RESIST~",
+      "buffText": "<b>Exhaust</b><br>If the enemy monster is <div><b>resistant</b> [RESIST]</div> to this attack's element, this attack gains <div>+3[ATK].</div>~RESIST~",
       "flipEventText": "<b>Pierce 3[DEF]</b>.~PIERCE~",
-      "lastUpdated": "Sat, 27 Feb 2021 09:02:35 GMT"
+      "lastUpdated": "Mon, 29 Mar 2021 18:27:51 GMT"
     },
     {
       "buffName": "Prey Upon",
       "timing": "With Attack",
-      "buffText": "<b>Exhaust</b><br>If the enemy monster is <b>weak</b> to this attack's element, this attack gains <div>+3[ATK].</div>~EXHAUST~~EFFECTIVE~",
+      "buffText": "<b>Exhaust</b><br>If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains <div>+3[ATK].</div>~EXHAUST~~EFFECTIVE~",
       "flipEventText": "This attack gains <div>+1[ATK].</div>",
-      "lastUpdated": "Mon, 01 Mar 2021 10:52:40 GMT"
+      "lastUpdated": "Mon, 29 Mar 2021 18:16:44 GMT"
     }
   ],
   "monsterId": 4,
