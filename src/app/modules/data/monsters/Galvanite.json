@@ -72,9 +72,9 @@
     {
       "buffName": "Pulse",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +3[DEF] this turn.",
+      "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}. If this monster has 4 or less [HP], this monster gains {\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true} instead.",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}</div> and <div>{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.</div>",
-      "lastUpdated": "Fri, 05 Mar 2021 17:54:03 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 06:55:32 GMT"
     }
   ],
   "abilityName": "Absorb",
