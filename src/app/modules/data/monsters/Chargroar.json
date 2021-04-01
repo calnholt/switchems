@@ -6,41 +6,41 @@
   "actions": [
     {
       "abilityName": "Lightning",
-      "abilityText": "If this attack is <b>faster</b>,  this attack gains +2[ATK].~FASTER~",
+      "abilityText": "If this attack is <b>faster</b>,  this attack gains +3[ATK].~FASTER~",
       "element": "Electric",
       "statusFlg": false,
       "attack": 4,
-      "speed": 7,
+      "speed": 6,
       "draw": 0,
       "discard": 3,
       "buff": 0,
       "modifier": 5,
-      "lastUpdated": "Thu, 11 Mar 2021 07:32:07 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 06:04:34 GMT"
     },
     {
       "abilityName": "Lights Out",
-      "abilityText": "<b>[FLIP]</b>. <br><br>If this attack KO's the enemy monster, this monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.</div>",
+      "abilityText": "<b>[FLIP]</b>. <br><br>If this attack KO's the enemy monster, this monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.</div>",
       "element": "Electric",
       "statusFlg": false,
       "attack": 2,
-      "speed": 3,
+      "speed": 7,
       "draw": 1,
       "discard": 0,
-      "buff": 2,
+      "buff": 1,
       "modifier": 1,
-      "lastUpdated": "Fri, 26 Feb 2021 07:53:40 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 06:04:34 GMT"
     },
     {
       "abilityName": "Hypercharge",
       "abilityText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.</div>",
       "element": "Electric",
       "statusFlg": true,
-      "speed": 4,
+      "speed": 9,
       "draw": 0,
       "discard": 0,
       "buff": 0,
       "modifier": 0,
-      "lastUpdated": "Wed, 10 Mar 2021 12:46:25 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 05:45:20 GMT"
     },
     {
       "abilityName": "Flamethrower",
@@ -48,12 +48,12 @@
       "element": "Fire",
       "statusFlg": false,
       "attack": 3,
-      "speed": 3,
+      "speed": 5,
       "draw": 0,
       "discard": 1,
-      "buff": 1,
+      "buff": 2,
       "modifier": 2,
-      "lastUpdated": "Sat, 27 Feb 2021 09:02:35 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 06:04:34 GMT"
     }
   ],
   "buffs": [
@@ -74,7 +74,7 @@
     {
       "buffName": "Revenge",
       "timing": "With Attack",
-      "buffText": "<b>Exhaust</b><br>If the enemy monster is <div><b>resistant</b> [RESIST]</div> to this attack's element, this attack gains <div>+3[ATK].</div>~RESIST~",
+      "buffText": "<b>Exhaust</b><br>If the enemy monster is <div><b>resistant</b> [RESIST]</div> to this attack's element, this attack gains <div>+3[ATK].</div>~EXHAUST~~RESIST~",
       "flipEventText": "<b>Pierce 3[DEF]</b>.~PIERCE~",
       "lastUpdated": "Mon, 29 Mar 2021 18:27:51 GMT"
     },
