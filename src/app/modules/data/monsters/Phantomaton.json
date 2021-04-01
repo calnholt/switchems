@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Cobolt",
-      "abilityText": "[FLIP]",
+      "abilityText": "[FLIP]. <br><br>If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this monster gains <div>{\"num\":1, \"isPositive\":true, \"stat\":\"ATK\"}.</div>~EFFECTIVE~",
       "element": "Death",
       "statusFlg": false,
       "attack": 2,
@@ -13,7 +13,7 @@
       "draw": 1,
       "discard": 0,
       "buff": 3,
-      "lastUpdated": "Fri, 05 Mar 2021 08:29:42 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 05:56:29 GMT"
     },
     {
       "abilityName": "Static Void",
@@ -41,7 +41,7 @@
     },
     {
       "abilityName": "Exception Caught",
-      "abilityText": "<b>Single use.</b><br><br>If this monster has a <b>deadlock</b> counter on it, this attack gains <div>[FLIP] [FLIP].</div>~SINGLE~",
+      "abilityText": "<b>Single use. </b><br><br>If this monster has a <b>deadlock</b> counter on it, this attack gains <div>[FLIP] [FLIP].</div>~SINGLE~",
       "element": "Death",
       "statusFlg": false,
       "attack": 5,
@@ -49,7 +49,7 @@
       "draw": 0,
       "discard": 3,
       "buff": 0,
-      "lastUpdated": "Wed, 10 Mar 2021 07:56:38 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 05:57:19 GMT"
     }
   ],
   "buffs": [
@@ -90,5 +90,6 @@
   "hp": 10,
   "complexity": 2,
   "initiative": 55,
+  "promiseDescription": "Strike fear in your opponent when <b>Phantomaton</b> switches in to an advantageous matchup! Watch the enemy monster squirm when the cost of switching out is too high.",
   "lastUpdated": "Fri, 05 Mar 2021 14:59:12 GMT"
 }
