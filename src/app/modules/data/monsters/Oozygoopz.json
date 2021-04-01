@@ -75,9 +75,9 @@
     {
       "buffName": "Hungry Goop",
       "timing": "With Attack",
-      "buffText": "<b>Super, Goop</b>. This attack gains <div>+X+2[ATK],</div> where X is the number of <b>goop</b> cards in the opponent's discard pile. Shuffle this card into your opponent's deck.~GOOP~",
+      "buffText": "<b>Super [B] [B], Goop</b>. This attack gains <div>+X+2[ATK],</div> where X is the number of <b>goop</b> cards in the opponent's discard pile. Shuffle this into your opponent's deck.~GOOP~",
       "flipEventText": "If you <b>do not</b> have <b>Oozygoopz</b> on your team, this monster gains <div><b>drain</b> [STATUS].</div> If you do, <div><b>pierce 2[DEF]</b>.</div>",
-      "lastUpdated": "Sat, 27 Feb 2021 09:25:25 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 06:44:58 GMT"
     }
   ],
   "abilityName": "Gobble Up",

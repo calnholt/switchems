@@ -70,9 +70,9 @@
     {
       "buffName": "Refactor",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super</b><br>Attack speeds are reversed this turn and you win all speed ties.~SUPER~",
+      "buffText": "<b>Super [B] [B]</b><br>Attack speeds are reversed this turn and you win all speed ties.~SUPER~",
       "flipEventText": "If this attack is <b>slower</b>, this attack gains +2[ATK].~SLOWER~",
-      "lastUpdated": "Tue, 17 Nov 2020 21:27:37 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 06:45:26 GMT"
     },
     {
       "buffName": "Download",
@@ -89,7 +89,7 @@
   "abilityText": "At the end of the turn, put a <b>deadlock</b> counter on this monster if it doesn't already have one. If it does, remove the <b>deadlock</b> counter instead. <br><br>While this monster has a <b>deadlock</b> counter on it, your opponent must [-] an additional card when performing a switch action.",
   "hp": 10,
   "complexity": 2,
-  "initiative": 55,
   "promiseDescription": "Strike fear in your opponent when <b>Phantomaton</b> switches in to an advantageous matchup! Watch the enemy monster squirm when the cost of switching out is too high.",
+  "initiative": 55,
   "lastUpdated": "Fri, 05 Mar 2021 14:59:12 GMT"
 }

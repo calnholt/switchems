@@ -63,9 +63,9 @@
     {
       "buffName": "Mossy Overgrowth",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super</b><br>This monster gains <div>+3[DEF]</div> this turn. ~SUPER~",
+      "buffText": "<b>Super [B] [B]</b><br>This monster gains <div>+3[DEF]</div> this turn. ~SUPER~",
       "flipEventText": "This attack gains +1[ATK].",
-      "lastUpdated": "Sun, 28 Mar 2021 08:28:03 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 06:46:28 GMT"
     },
     {
       "buffName": "Concussion",
@@ -77,9 +77,9 @@
     {
       "buffName": "Gravelcrust Grip",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super, Exhaust, Drain [STATUS]</b> ~SUPER~~EXHAUST~~DRAIN~",
+      "buffText": "<b>Super [B] [B], Exhaust, Drain [STATUS]</b> ~SUPER~~EXHAUST~~DRAIN~",
       "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "lastUpdated": "Mon, 01 Mar 2021 10:54:04 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 06:46:28 GMT"
     }
   ],
   "monsterId": 1,

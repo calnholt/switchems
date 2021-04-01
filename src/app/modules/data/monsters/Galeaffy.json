@@ -56,16 +56,16 @@
     {
       "buffName": "Propulsive Winds",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super</b><br>This attack gains <div>+4[SPD]</div>.~SUPER~",
+      "buffText": "<b>Super [B] [B]</b><br>This attack gains <div>+4[SPD]</div>.~SUPER~",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
-      "lastUpdated": "Fri, 26 Feb 2021 08:33:25 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 06:39:31 GMT"
     },
     {
       "buffName": "Sharp Leaves",
       "timing": "With Attack",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}. [FLIP].",
+      "buffText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div>",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
-      "lastUpdated": "Thu, 25 Feb 2021 06:38:15 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 06:36:54 GMT"
     },
     {
       "buffName": "Leaf Shield",

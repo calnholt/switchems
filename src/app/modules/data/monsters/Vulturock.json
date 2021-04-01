@@ -76,9 +76,9 @@
     {
       "buffName": "Bigger Rocs",
       "timing": "With Attack",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}. [FLIP].",
-      "flipEventText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true} and this attack gains <b>recoil 1[ATK] </b>",
-      "lastUpdated": "Thu, 25 Feb 2021 06:41:03 GMT"
+      "buffText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div>",
+      "flipEventText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true} and this attack gains <b>recoil 1[ATK].</b>~RECOIL~",
+      "lastUpdated": "Thu, 01 Apr 2021 06:38:07 GMT"
     }
   ],
   "monsterId": 9,

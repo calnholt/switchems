@@ -9,11 +9,11 @@
       "abilityText": "<b>Single use</b>.<br><br>Remove all [NQ] from this monster, and this attack gains <div>+1[ATK]</div> for each [NQ] removed this way.~SINGLE~",
       "element": "Electric",
       "statusFlg": false,
-      "attack": 5,
-      "speed": 5,
+      "attack": 3,
+      "speed": 6,
       "discard": 1,
       "buff": 1,
-      "lastUpdated": "Fri, 05 Mar 2021 17:54:03 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 06:43:12 GMT"
     },
     {
       "abilityName": "Entrenched Barrage",
@@ -21,10 +21,10 @@
       "element": "Rock",
       "statusFlg": false,
       "attack": 3,
-      "speed": 4,
+      "speed": 8,
       "discard": 1,
       "buff": 2,
-      "lastUpdated": "Fri, 05 Mar 2021 17:54:48 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 06:43:12 GMT"
     },
     {
       "abilityName": "Frazzle",
@@ -42,18 +42,18 @@
       "abilityText": "Remove all [NQ] from this monster. For each [NQ] removed, the enemy monster gains [NQ] of the type removed.",
       "element": "Electric",
       "statusFlg": true,
-      "speed": 3,
+      "speed": 5,
       "draw": 1,
-      "lastUpdated": "Fri, 05 Mar 2021 17:54:03 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 06:43:12 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Catalyst",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super, Exhaust</b><br>Remove all [NQ] from this monster and this attack gains <div>+1[ATK]</div> for each [NQ] removed this way.~SUPER~~EXHAUST~",
+      "buffText": "<b>Super [B] [B], Exhaust</b><br>Remove all [NQ] from this monster and this attack gains <div>+1[ATK]</div> for each [NQ] removed this way.~SUPER~~EXHAUST~",
       "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}, </div> [FLIP] [FLIP].",
-      "lastUpdated": "Fri, 05 Mar 2021 17:54:03 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 06:41:03 GMT"
     },
     {
       "buffName": "Deactivate",
@@ -65,9 +65,9 @@
     {
       "buffName": "Amped Up",
       "timing": "With Attack",
-      "buffText": "<b>Super</b><br>If your active monster switched in last turn, this attack gains <div>+3[ATK]</div> and <div>+3[SPD].</div>~SUPER~",
+      "buffText": "<b>Super [B] [B]</b><br>If your active monster switched in last turn, this attack gains <div>+3[ATK]</div> and <div>+3[SPD].</div>~SUPER~",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}</div> and this attack gains <div>+2[ATK].</div>",
-      "lastUpdated": "Fri, 05 Mar 2021 17:54:03 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 06:41:03 GMT"
     },
     {
       "buffName": "Pulse",
