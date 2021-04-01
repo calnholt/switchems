@@ -45,6 +45,9 @@
         <div *ngIf="monster.promiseDescription" class="promise-container">
           <div class="promise-title">Descripition</div>
           <span [innerHTML]="getPromiseText()" class="pt-1 promise-text"></span>
+          <div class="promise-title">
+            Average Speed: <span>{{monster.getAverageSpeed()}}</span>
+          </div>
         </div>
         <button class="save-button" mat-stroked-button (click)="copy()">Copy Monster to Clipboard</button>
         <button class="save-button" mat-stroked-button (click)="save()">Save</button>

@@ -45,7 +45,8 @@ export class Monster extends Card {
         // arrs.forEach(arr => {arr.forEach((num: number, i: number) => {totals[i] += num; }); });
         if (this.elements.length === 1) {
           totals = arrs[0];
-        } else {
+        } 
+        else {
           for (let i = 0; i < 6; i++) {
             const elemArr = [];
             for (let j = 0; j < arrs.length; j++) {
@@ -62,13 +63,19 @@ export class Monster extends Card {
             }
           }
         }
-        return totals;
-      }
+      return totals;
+    }
 }
 
 export class MonsterComplete extends Monster {
     actions: Action[] = [];
     buffs: Buff[] = [];
+
+    getAverageSpeed(): number {
+      let total = 0;
+      this.actions.forEach(a => total += a.speed);
+      return Number((total / this.actions.length).toFixed(1));
+    }
 }
 
 export class Buff extends Card {
