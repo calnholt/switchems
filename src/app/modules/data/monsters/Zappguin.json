@@ -78,8 +78,8 @@
       "buffName": "Retaliate",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]. If this attack is <b>slower</b>, this attack gains +2[ATK] instead.~SLOWER~",
-      "flipEventText": "The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div>",
-      "lastUpdated": "Sat, 27 Feb 2021 09:06:41 GMT"
+      "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
+      "lastUpdated": "Sat, 03 Apr 2021 07:05:59 GMT"
     }
   ],
   "monsterId": 7,

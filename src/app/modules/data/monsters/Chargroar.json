@@ -19,7 +19,7 @@
     },
     {
       "abilityName": "Lights Out",
-      "abilityText": "<b>[FLIP]</b>. <br><br>If this attack KO's the enemy monster, this monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.</div>",
+      "abilityText": "<b>[FLIP]</b>. <br><br>If this attack KO's the enemy monster, this monster gains <div>{\"stat\": \"SPD\", \"num\": 3, \"isPositive\": true}.</div>",
       "element": "Electric",
       "statusFlg": false,
       "attack": 2,
@@ -28,11 +28,11 @@
       "discard": 0,
       "buff": 1,
       "modifier": 1,
-      "lastUpdated": "Thu, 01 Apr 2021 06:04:34 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 20:21:50 GMT"
     },
     {
       "abilityName": "Hypercharge",
-      "abilityText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.</div>",
+      "abilityText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 3, \"isPositive\": true}.</div>",
       "element": "Electric",
       "statusFlg": true,
       "speed": 9,
@@ -40,7 +40,7 @@
       "discard": 0,
       "buff": 0,
       "modifier": 0,
-      "lastUpdated": "Thu, 01 Apr 2021 05:45:20 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 20:00:04 GMT"
     },
     {
       "abilityName": "Flamethrower",
@@ -61,8 +61,8 @@
       "buffName": "Charge",
       "timing": "Pre-Actions",
       "buffText": "This attack gains +1[SPD]. If your opponent has a KO'd monster, this attack gains +2[SPD] instead.",
-      "flipEventText": "<b>Crush 2 [PQ]</b> ~CRUSH~",
-      "lastUpdated": "Wed, 13 Feb 2020 08:00:00 GMT"
+      "flipEventText": "The enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
+      "lastUpdated": "Sat, 03 Apr 2021 06:43:58 GMT"
     },
     {
       "buffName": "Roar",
@@ -89,10 +89,10 @@
   "monsterId": 4,
   "abilityName": "Intimidate",
   "monsterName": "Chargroar",
-  "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.</div>~SWITCH~",
   "hp": 7,
   "complexity": 1,
   "promiseDescription": "<b>Chargroar</b> is the quintessential assassin – fast, lethal, and fragile. Knockout a monster quickly to improve your buffs!",
   "initiative": 85,
-  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+  "lastUpdated": "Sat, 03 Apr 2021 06:43:58 GMT"
 }

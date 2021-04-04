@@ -14,6 +14,13 @@ export class StatCubeBoardComponent implements OnInit {
   negativeCube: Path = SYMBOLS_PATH + 'red-cube.png';
   maneuverCube: Path = SYMBOLS_PATH + 'blue-cube.png';
 
+  // ATK
+  // +2 +2 +1 +1 -1 -1 -1
+  // SPD
+  // +3 +3 +2 +1 -1 -2 -2
+  // DEF
+  // +2 +2 +2 +2
+
   constructor() { }
 
   ngOnInit() {

@@ -1,3 +1,4 @@
+import { GoopComponent } from './goop/goop.component';
 import { AcornBoardComponent } from './acorn-board/acorn-board.component';
 import { ExtraBoardComponent } from './extra-board/extra-board.component';
 import { TtsMonsterComponent } from './tts-monster/tts-monster.component';
@@ -39,6 +40,7 @@ import { PrintModule } from '../print/print.module';
     TtsMonsterComponent,
     ExtraBoardComponent,
     AcornBoardComponent,
+    GoopComponent,
   ],
   exports: [
     MonsterActionComponent,
@@ -48,6 +50,7 @@ import { PrintModule } from '../print/print.module';
     TtsMonsterComponent,
     ExtraBoardComponent,
     AcornBoardComponent,
+    GoopComponent,
   ]
 })
 export class MonsterModule { }

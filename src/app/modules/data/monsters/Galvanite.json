@@ -59,8 +59,8 @@
       "buffName": "Deactivate",
       "timing": "With Attack",
       "buffText": "If this monster has one or more [NQ], this attack gains <b>flinch</b>~FLINCH~",
-      "flipEventText": "Crush 2 [PQ]. ~CRUSH~",
-      "lastUpdated": "Fri, 05 Mar 2021 17:54:03 GMT"
+      "flipEventText": "If this monster has one or more [NQ], this attack gains <b>flinch</b>",
+      "lastUpdated": "Sat, 03 Apr 2021 07:27:59 GMT"
     },
     {
       "buffName": "Amped Up",

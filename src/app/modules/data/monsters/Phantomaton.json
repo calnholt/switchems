@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Cobolt",
-      "abilityText": "[FLIP]. <br><br>If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this monster gains <div>{\"num\":1, \"isPositive\":true, \"stat\":\"ATK\"}.</div>~EFFECTIVE~",
+      "abilityText": "[FLIP]. <br><br>If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, the enemy monster gains <div>{\"num\":1, \"isPositive\":false, \"stat\":\"ATK\"}.</div>~EFFECTIVE~",
       "element": "Death",
       "statusFlg": false,
       "attack": 2,
@@ -13,7 +13,7 @@
       "draw": 1,
       "discard": 0,
       "buff": 3,
-      "lastUpdated": "Thu, 01 Apr 2021 05:56:29 GMT"
+      "lastUpdated": "Sat, 03 Apr 2021 06:58:37 GMT"
     },
     {
       "abilityName": "Static Void",
@@ -41,31 +41,31 @@
     },
     {
       "abilityName": "Exception Caught",
-      "abilityText": "<b>Single use. </b><br><br>If this monster has a <b>deadlock</b> counter on it, this attack gains <div>[FLIP] [FLIP].</div>~SINGLE~",
+      "abilityText": "<b>Single use. </b><br><br>[FLIP] [FLIP].</div>~SINGLE~",
       "element": "Death",
       "statusFlg": false,
       "attack": 5,
-      "speed": 7,
+      "speed": 6,
       "draw": 0,
       "discard": 3,
-      "buff": 0,
-      "lastUpdated": "Thu, 01 Apr 2021 05:57:19 GMT"
+      "buff": 1,
+      "lastUpdated": "Sat, 03 Apr 2021 06:58:37 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Power Hotfix",
       "timing": "Pre-Actions",
-      "buffText": "If the opponent selected a switch action this turn, this monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.",
-      "flipEventText": "<b>Crush 1 [PQ] / [NQ]</b>. ~CRUSH~",
-      "lastUpdated": "Sun, 21 Mar 2021 09:41:05 GMT"
+      "buffText": "If the opponent selected a switch action this turn, this monster gains {\"stat\": \"ATK\", \"num\": 3, \"isPositive\": true}.",
+      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div>",
+      "lastUpdated": "Sat, 03 Apr 2021 07:02:33 GMT"
     },
     {
       "buffName": "Agility Hotfix",
       "timing": "Pre-Actions",
       "buffText": "If the opponent selected a switch action this turn, this monster gains {\"stat\": \"SPD\", \"num\": 3, \"isPositive\": true}.",
-      "flipEventText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.</div>",
-      "lastUpdated": "Sun, 21 Mar 2021 09:41:05 GMT"
+      "flipEventText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.</div>",
+      "lastUpdated": "Fri, 02 Apr 2021 07:08:36 GMT"
     },
     {
       "buffName": "Refactor",
@@ -86,10 +86,10 @@
   "monsterId": 10,
   "abilityName": "Deadlock",
   "monsterName": "Phantomaton",
-  "abilityText": "At the end of the turn, put a <b>deadlock</b> counter on this monster if it doesn't already have one. If it does, remove the <b>deadlock</b> counter instead. <br><br>While this monster has a <b>deadlock</b> counter on it, your opponent must [-] an additional card when performing a switch action.",
+  "abilityText": "If <b>Exception Caught</b> is enabled, your opponent must [-] an additional card when performing a switch action. <br><br>If <b>Exception Caught</b> is enabled and this monster attacks a monster that is <b>weak</b> [WEAK] to the attack's element, this monster gains <div>{\"num\":1, \"isPositive\":true, \"stat\":\"ATK\"}.</div>",
   "hp": 10,
   "complexity": 2,
   "promiseDescription": "Strike fear in your opponent when <b>Phantomaton</b> switches in to an advantageous matchup! Watch the enemy monster squirm when the cost of switching out is too high.",
   "initiative": 55,
-  "lastUpdated": "Fri, 05 Mar 2021 14:59:12 GMT"
+  "lastUpdated": "Sun, 04 Apr 2021 09:54:44 GMT"
 }
