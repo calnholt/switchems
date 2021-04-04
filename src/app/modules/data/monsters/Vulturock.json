@@ -30,14 +30,14 @@
     },
     {
       "abilityName": "Iron Defense",
-      "abilityText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 4, \"isPositive\": true}.</div>",
+      "abilityText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.</div>",
       "element": "Rock",
       "statusFlg": true,
       "speed": 3,
       "draw": 1,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Fri, 26 Feb 2021 08:36:31 GMT"
+      "lastUpdated": "Fri, 02 Apr 2021 07:09:39 GMT"
     },
     {
       "abilityName": "Scavenge",
@@ -85,9 +85,9 @@
   "abilityName": "Wing Clip",
   "monsterName": "Vulturock",
   "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.</div>~SWITCH~",
-  "hp": 8,
+  "hp": 9,
   "complexity": 1,
   "promiseDescription": "<b>Vulturock</b> hits hard – including itself!",
   "initiative": 75,
-  "lastUpdated": "Sun, 07 Feb 2021 09:12:49 GMT"
+  "lastUpdated": "Sat, 03 Apr 2021 07:07:21 GMT"
 }

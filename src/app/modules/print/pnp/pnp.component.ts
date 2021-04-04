@@ -57,12 +57,15 @@ export class PnpComponent implements OnInit {
       // adds player boards
       allCards.push({isActionBoard: true});
       allCards.push({isActionBoard: true});
-      allCards.push({isCubeBoard: true});
-      allCards.push({isCubeBoard: true});
       allCards.push({isReferenceCard: true});
       allCards.push({isReferenceCard: true});
       allCards.push({isSwitchReferenceCard: true});
       allCards.push({isSwitchReferenceCard: true});
+
+      // GOOP
+      for (var i = 0; i < 8; i++) {
+        allCards.push({isGoop: true});
+      }
     }
     this.allCards = allCards;
     this.count = 0;

@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Swamped",
-      "abilityText": "[FLIP]<br><br>The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
+      "abilityText": "[FLIP]<br><br>The enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.",
       "element": "Death",
       "statusFlg": false,
       "attack": 3,
@@ -37,7 +37,7 @@
       "draw": 0,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Fri, 26 Feb 2021 08:02:45 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 20:02:07 GMT"
     },
     {
       "abilityName": "Surge",
@@ -63,23 +63,23 @@
     {
       "buffName": "Famished",
       "timing": "Post Actions",
-      "buffText": "<b>Crush 2 [PQ] / [NQ]</b>.<br><br>This monster heals 1[HP] for each stat cube removed with this card.~CRUSH~",
+      "buffText": "This monster heals <div>X[HP],</div> where X is either the total number of [PQ] stacks this monster has, or the total number of [NQ] stacks the enemy monster has.",
       "flipEventText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
-      "lastUpdated": "Sat, 27 Feb 2021 21:03:39 GMT"
+      "lastUpdated": "Sat, 03 Apr 2021 06:41:06 GMT"
     },
     {
       "buffName": "Cripple",
       "timing": "With Attack",
       "buffText": "<b>Pierce 2[DEF]</b>. The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}~PIERCE~",
       "flipEventText": "[+]",
-      "lastUpdated": "Mon, 1 Mar 2021 09:01:07 GMT"
+      "lastUpdated": "Thu, 01 Apr 2021 20:23:00 GMT"
     },
     {
       "buffName": "Tremble",
       "timing": "With Attack",
-      "buffText": "This attack gains +1+X[ATK] where X is equal to the number of [NQ] the enemy monster has.",
-      "flipEventText": "This attack gains +1[ATK].",
-      "lastUpdated": "Wed, 10 Mar 2021 07:52:32 GMT"
+      "buffText": "<b>Super [B] [B]</b><br><br>The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}</div> and <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.</div>~SUPER~",
+      "flipEventText": "If the enemy monster is <div><b>frail</b> [FRAIL],</div> this attack gains <div>+2[ATK].</div>",
+      "lastUpdated": "Sat, 03 Apr 2021 06:41:06 GMT"
     }
   ],
   "monsterId": 5,

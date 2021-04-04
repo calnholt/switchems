@@ -26,17 +26,19 @@ export class ReferenceCardComponent {
         'Pre-Action buffs',
         'Switch actions',
         'Monster actions',
-        'Post-Action buffs',
         'Standard actions',
+        'Post-Action buffs',
       ],
     },
     {
       title: 'End Phase',
       items: [
         'Activate end of turn abilities.',
-        'Add one time counter to each Team Aura.',
-        'Remove one [DEF][PQ] from your active monster, if applicable.',
-        'Draw a card.',
+        'Move all played buff cards and discards from you player board to your discard pile, and retrieve your facedown hand.',
+        'Remove one time counter from your active <b>Team Aura</b> [TA], if applicable.',
+        'If your monster is <b>strengthened</b> [STR], remove it. Otherwise decay each [PQ] by one.',
+        'If your monster is <b>frail</b> [FRAIL], remove it. Otherwise decay each [NQ] by one.',
+        'Draw [+] one card.',
       ]
     },
   ];
