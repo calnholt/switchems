@@ -19,7 +19,7 @@ export class RulebookService {
           text: 'Leverage your team of monsters in a battle of cunning and wits in this exciting two-player card game',
         },
         {
-          text: 'v.0.6.1',
+          text: 'v.0.7.0',
         },
         {
           text: '2 Players   |   30 - 60 Minutes   |   Ages 12+',
