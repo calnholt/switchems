@@ -75,7 +75,7 @@
     {
       "buffName": "Goopy Goop",
       "timing": "With Attack",
-      "buffText": "<b>Super [B] [B]. </b><br><br>Shuffle two <div><b>Goop</b> [GOOP]</div> cards into your opponent's deck.",
+      "buffText": "<b>Super [B] [B]. </b><br><br>Shuffle two <div><b>Goop</b> [GOOP]</div> cards into your opponent's deck.~SUPER~",
       "flipEventText": "If there is one or more <div><b>Goop</b> [GOOP]</div> cards in your opponent's discard pile, this attack gains <div>+2[ATK].</div>~SUPER~",
       "lastUpdated": "Sat, 03 Apr 2021 08:10:02 GMT"
     }
