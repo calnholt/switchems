@@ -12,21 +12,33 @@
         border-style: solid;
         &.fire{
             border-color: $red;
+            background-color: $fire-action-background-color;
+            background-image: $fire-action-background-image;
         }
         &.water{
             border-color: $blue;
+            background-color: $water-action-background-color;
+            background-image: $water-action-background-image;
         }
         &.leaf{
             border-color: $green;
+            background-color: $leaf-action-background-color;
+            background-image: $leaf-action-background-image;
         }
         &.electric{
             border-color: $yellow;
+            background-color: $electric-action-background-color;
+            background-image: $electric-action-background-image;
         }
         &.rock{
             border-color: $brown;
+            background-color: $rock-action-background-color;
+            background-image: $rock-action-background-image;
         }
         &.death{
             border-color: $purple;
+            background-color: $death-action-background-color;
+            background-image: $death-action-background-image;
         }
         .ability-container{
             padding-top: 7px;
@@ -62,7 +74,6 @@
                 position: relative;
                 top: -13px;
                 display: flex;
-                background-color: hsl(0, 0%, 94%);
                 border: 2px black solid;
                 margin: auto;
                 width: 90%;
@@ -75,6 +86,9 @@
                     font-size: 12px;
                     padding: 7px;
                     line-height: 13px;
+                    background-color: #efefefdb;
+                    border-radius: 0px 0px 9px 9px;
+                    width: 100%;
                     div {
                         display: inline-block;
                     }
@@ -121,7 +135,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #ebebeb;
+            background-color: #efefefdb;
             padding: 2px;
             border-radius: 6px;
             border: 2px solid black;
