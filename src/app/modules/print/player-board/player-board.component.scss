@@ -14,13 +14,13 @@
             border: black 5px dashed;
         }
         .text {
-            font-family: $beastformer;
+            font-family: $header-font;
             font-size: 49px;
             text-align: center;
             padding-top: 20px;
             line-height: 36px;
             .sub-text {
-                font-family: $helvetica;
+                font-family: $text-font;
                 font-size: 15px;
                 padding-top: 11px;
                 line-height: unset;

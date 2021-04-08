@@ -3,7 +3,7 @@
 
 #action-board{
     .card-container{
-        font-family: $beastformer;
+        font-family: $header-font;
         position: relative;
         border: rgb(216, 216, 216) 2px solid;
         border-radius: 11px;
@@ -150,7 +150,7 @@
                     }
                 }
                 table{
-                    font-family: $beastformer;
+                    font-family: $header-font;
                     position: relative;
                     top: -2px;
                     left: 8px;

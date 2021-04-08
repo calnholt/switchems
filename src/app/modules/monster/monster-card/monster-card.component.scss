@@ -18,7 +18,7 @@
                 padding-bottom: 5px;
             }
             .effectiveness{
-                font-family: $beastformer;
+                font-family: $header-font;
                 .effective{
                     max-height: 19px;
                     top: 2px;
@@ -55,7 +55,7 @@
                 padding: 1px 8px;
             }
             .name{
-                font-family: $beastformer;
+                font-family: $header-font;
                 font-size: 26px;
                 text-align: left;
                 margin-top: 5px;
@@ -88,7 +88,7 @@
                 padding: 2px 0px 2px;
                 .ability-name{
                     margin: auto;
-                    font-family: $beastformer;
+                    font-family: $header-font;
                     color: white;
                     font-size: 22px;
                     padding-bottom: 6px;
@@ -110,7 +110,7 @@
                 border-radius: 10px;
                 //box-shadow: 0px 0px 18px -4px black;
                 .ability-text{
-                    font-family: $helvetica;
+                    font-family: $text-font;
                     font-size: 12px;
                     padding: 10px;
                     line-height: 13px;
@@ -192,7 +192,7 @@
                     .defense-value {
                         font-size: 25px;
                         color: white;
-                        font-family: $beastformer;
+                        font-family: $header-font;
                         padding-left: 2px;
                     }
                 }

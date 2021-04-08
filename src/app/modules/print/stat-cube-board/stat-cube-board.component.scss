@@ -15,7 +15,7 @@
                 padding-top: 4px;
                 font-size: 20px;
                 text-align: center;
-                font-family: $beastformer;
+                font-family: $header-font;
                 margin: 0px;
                 img{
                     max-height: 20px;
@@ -57,7 +57,7 @@
                         border: unset;
                         text-align: center;
                         font-size: 33px;
-                        font-family: $beastformer;
+                        font-family: $header-font;
                         width: 50%;
                         box-shadow: $recessed;
                         img{
@@ -82,7 +82,7 @@
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 text-align: center;
-                font-family: $beastformer;
+                font-family: $header-font;
                 border: 2px solid black;
                 border-top: unset;
                 border-radius: 0px 0px 6px 6px;
@@ -112,7 +112,7 @@
                 }
             }
             .maneuver-container{
-                font-family: $beastformer;
+                font-family: $header-font;
                 table{
                     margin: auto;
                     width: 66%;
