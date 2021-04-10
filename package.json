@@ -31,6 +31,7 @@
     "@types/electron": "^1.6.10",
     "@types/mocha": "^7.0.1",
     "bootstrap": "^4.4.1",
+    "electron-store": "^7.0.3",
     "file-saver": "^2.0.2",
     "file-system": "^2.2.2",
     "font-awesome": "^4.7.0",
@@ -67,7 +68,7 @@
     "tslint": "~5.18.0",
     "typescript": "~3.7.5"
   },
-  "main": "main.ts",
+  "main": "main.js",
   "browser": {
     "fs": false,
     "os": false,

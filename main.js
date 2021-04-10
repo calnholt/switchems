@@ -3,15 +3,16 @@
 const {app, BrowserWindow, ipcMain} = require('electron');
 const ipc = require('electron').ipcMain;
 const path = require('path')
+const Store = require('electron-store');
 let win;
 var options = {
     silent: false,
     printBackground: true,
-    color: false,
+    color: true,
     margin: {
         marginType: 'printableArea'
     },
-    landscape: false,
+    landscape: true,
     pagesPerSheet: 1,
     collate: false,
     copies: 1,
@@ -26,7 +27,17 @@ ipc.on('print', (event, arg) => {
         }
         console.log('Print Initiated');
     });
-})
+});
+
+ipc.on('store', (event, arg) => {
+  const store = new Store();
+  var objToSave = {test:'test'};
+  console.log(objToSave);
+  store.set('test', objToSave);
+  var obj = store.get('test');
+  console.log(obj);
+  //return obj;
+});
 
 function createWindow () {
   win = new BrowserWindow({

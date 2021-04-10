@@ -5,6 +5,7 @@ import { Component, ViewChild, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { getAbilityText } from './../../common/cards';
 import { MonsterService } from '../monster.service';
+import { ElectronService } from 'ngx-electron';
 
 @Component({
   selector: 'monster-form',
@@ -28,6 +29,7 @@ export class MonsterFormComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private monsterSerivce: MonsterService,
+    private electronService: ElectronService,
   ) {}
 
   ngOnInit() {
@@ -40,6 +42,14 @@ export class MonsterFormComponent implements OnInit {
         this.monster = this.monsterSerivce.getMonster(monsterName);
       }
       this.originalMonster = Object.assign({}, this.monster);
+      // test print
+      // let bool = this.electronService.isElectronApp;
+      // let print = this.electronService.ipcRenderer.sendSync('print');
+      // console.log(print);
+      // test store
+      let bool = this.electronService.isElectronApp;
+      let store = this.electronService.ipcRenderer.sendSync('store');
+      console.log(store);
     });
   }
 
