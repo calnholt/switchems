@@ -13,6 +13,7 @@ import { ViewAllModule } from './modules/view-all/view-all.module';
 import { RouterModule } from '@angular/router';
 import { PrintModule } from './modules/print/print.module';
 import { RulebookModule } from './modules/rulebook/rulebook.module';
+import { NgxElectronModule } from 'ngx-electron';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RulebookModule } from './modules/rulebook/rulebook.module';
     BrowserAnimationsModule,
     PrintModule,
     RulebookModule,
-    MaterialModule
+    MaterialModule,
+    NgxElectronModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
