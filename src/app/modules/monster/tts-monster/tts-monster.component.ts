@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MonsterComplete } from '../model/monster';
 import { ActivatedRoute } from '@angular/router';
-import { ToolbarService } from '../../common/components/toolbar/toolbar.service';
+import { ToolbarService } from '../../common/services/toolbar.service';
 import html2canvas from 'html2canvas';
 import { MonsterService } from '../monster.service';
 

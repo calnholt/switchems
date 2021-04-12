@@ -1,9 +1,7 @@
-import { MonsterComplete } from './../../../monster/model/monster';
-import { ToolbarService } from './toolbar.service';
-import { Path } from './../../../../types/dataTypes';
-import { Component, OnInit } from '@angular/core';
+import { ToolbarService } from '../../services/toolbar.service';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router, Event } from '@angular/router';
-import { MonsterService } from './../../../monster/monster.service';
+import { DropdownOption, ToolbarTab } from '../../models/common';
 
 @Component({
   selector: 'toolbar',
@@ -11,27 +9,26 @@ import { MonsterService } from './../../../monster/monster.service';
   styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit {
-  visible: boolean;
-  logo: Path = '../../../../assets/images/website/logo.png';
-  monsters: string[] = [];
-  monster: MonsterComplete = new MonsterComplete();
+  @Input() title: string;
+  @Input() searchOptions: Array<DropdownOption>;
+  @Input() tabs: Array<ToolbarTab>;
+  searchOption: DropdownOption = new DropdownOption();
 
-  constructor(public toolbarService: ToolbarService, private router: Router, private monsterService: MonsterService) { }
+  constructor(public toolbarService: ToolbarService, private router: Router) { }
 
   ngOnInit() {
     this.router.events.subscribe((event: Event) => {
       this.toolbarService.show();
     });
-    this.monsterService.getMonsters().forEach(m => this.monsters.push(m.monsterName));
   }
 
-  goToMonster() {
-    this.router.navigate([`monster/${this.monster.monsterName}`], {});
-    this.monster = new MonsterComplete();
+  selectTab(tab: ToolbarTab) {
+    let link = tab.param? [`${tab.routerLink}`, tab.param] : [`${tab.routerLink}`];
+    this.router.navigate(link, {});
   }
 
-  openRulebook() {
-    window.open('https://drive.google.com/open?id=1Y0YeI9Vpbk1hV7j8d_r5A5i1hkmWXcgg', '_blank');
+  selectSearchOption() {
+    this.router.navigate([`${this.searchOption.routerLink}`], {});
+    this.searchOption = new DropdownOption();
   }
-
 }

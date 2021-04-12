@@ -1,58 +1,44 @@
-<div id="toolbar">
-  <div *ngIf="toolbarService.visible" class="padding">
-    <mat-toolbar color="primary">
-      <div class="button-container">
-        <span [routerLink]="['']" class="logo">Switchems!</span>
-        <span [routerLink]="['/monster', 'builder']" class="button">Create New Monster</span>
-        <span [routerLink]="['/print']" class="button">Print & Play</span>
-        <span [routerLink]="['/rules']" class="button">How to Play</span>
-        <dropdown
-          class="dropdown"
-          [label]="'Search Monsters'"
-          [model]="monster"
-          [options]="monsters"
-          [property]="'monsterName'"
-          (selectionChange)="goToMonster()">
-        </dropdown>
-      </div>
-    </mat-toolbar>
-  </div>
-</div>
-
-<div id="toolbar"> 
-  <mat-toolbar color="primary">
+<div *ngIf="toolbarService.visible" id="toolbar"> 
+  <mat-toolbar *ngIf="true" color="primary">
     <div fxShow="true" fxHide.gt-sm="true">
       <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
     </div>
 
-    <a mat-button class="companyName" routerLink="/">
-      <span>Switchems!</span>
+    <a mat-button class="name" routerLink="/">
+      <span>{{title}}</span>
     </a>
     <span class="example-spacer"></span>
     <div fxShow="true" fxHide.lt-md="true">
-      <a mat-button [routerLink]="['/monster', 'builder']">Create</a>
-      <a mat-button [routerLink]="['print']">Print & Play</a>
-      <a mat-button [routerLink]="['/rules']">How to Play</a>
+      <ng-container *ngFor="let tab of tabs">
+        <a mat-button (click)="selectTab(tab)">{{tab.name}}</a>
+      </ng-container>
       <dropdown
           class="dropdown"
-          [label]="'Search Monsters'"
-          [model]="monster"
-          [options]="monsters"
-          [property]="'monsterName'"
-          (selectionChange)="goToMonster()">
+          [label]="'Search'"
+          [model]="searchOption"
+          [options]="searchOptions"
+          [property]="'routerLink'"
+          [route]="true"
+          (selectionChange)="selectSearchOption()">
         </dropdown>
     </div>
 
   </mat-toolbar>
-  <mat-sidenav-container fxFlexFill class="example-container">
-    <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over"  opened="true" fxHide.gt-sm="true">
-      <div fxLayout="column">
-        <a mat-button [routerLink]="['/monster', 'builder']">Create</a>
-        <a mat-button [routerLink]="['/print']">Print & Play</a>
-        <a mat-button [routerLink]="['/rules']">How to Play</a>
+  <mat-sidenav-container fxFlexFill class="sidenav-container">
+    <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" class="sidenav" fixedInViewport="true">
+      <div fxLayout="column" class="sidenav-options">
+        <ng-container *ngFor="let tab of tabs">
+          <a mat-button (click)="selectTab(tab)">{{tab.name}}</a>
+        </ng-container>
       </div>
     </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
   </mat-sidenav-container>
+</div>
+<div *ngIf="!toolbarService.visible">
+  <router-outlet></router-outlet>
 </div>

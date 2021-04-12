@@ -1,7 +1,7 @@
 import { Action } from 'src/app/modules/monster/model/monster';
 import { PLAYER_BOARD_TEXT } from './../../../types/dataTypes';
 import { MonsterComplete, Buff, Monster } from './../../monster/model/monster';
-import { ToolbarService } from './../../common/components/toolbar/toolbar.service';
+import { ToolbarService } from '../../common/services/toolbar.service';
 import { Component, OnInit } from '@angular/core';
 import { convertFromJSON } from '../../import/json-to-obj';
 

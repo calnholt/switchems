@@ -1,8 +1,10 @@
+import { CardDataService } from './modules/common/services/card-data.service';
 import { Component } from '@angular/core';
 import { Path } from './types/dataTypes';
-import { ToolbarService } from './modules/common/components/toolbar/toolbar.service';
+import { ToolbarService } from './modules/common/services/toolbar.service';
 import { Router } from '@angular/router';
 import { MonsterService } from './modules/monster/monster.service';
+import { DropdownOption, ToolbarTab } from './modules/common/models/common';
 
 @Component({
   selector: 'app-root',
@@ -10,25 +12,19 @@ import { MonsterService } from './modules/monster/monster.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'switchems';
-  visible: boolean;
-    logo: Path = '../../../../assets/images/website/logo.png';
-    monsters: string[] = [];
-    monster: any = {};
-    // TODO: set dynamically when in pnp component
-    isPrint: boolean = false;
-  
-    constructor(public toolbarService: ToolbarService, private router: Router, private monsterService: MonsterService) { }
+    searchOptions: Array<DropdownOption>;
+    tabs: Array<ToolbarTab>;
+    constructor(private cardDataService: CardDataService, private monsterService: MonsterService) { }
   
     ngOnInit() {
-      this.router.events.subscribe(() => {
-        this.toolbarService.show();
-      });
-      this.monsterService.getMonsters().forEach(m => this.monsters.push(m.monsterName));
+      this.searchOptions = this.cardDataService.getSearchOptions('monsterName', this.monsterService.getMonsters(), 'monster')
+      this.tabs = [
+        new ToolbarTab('Create', 'monster', 'builder'),
+        new ToolbarTab('Print & Play', 'print'),
+        new ToolbarTab('How to Play', 'rules'),
+      ];
     }
+
+
   
-    goToMonster() {
-      this.router.navigate([`monster/${this.monster.monsterName}`], {});
-      this.monster = {};
-    }
 }
