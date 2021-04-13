@@ -1,8 +1,8 @@
-import { Term } from './../../data/data';
 import { ELEMENTS, ElemType, BuffTiming, BUFF_TIMINGS, TERM_CODES } from './../../../types/dataTypes';
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { SelectionChange } from '@angular/cdk/collections';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
+import { Term } from '../../common/models/common';
 
 export class MonsterForm {
   monsterName?: string = null;

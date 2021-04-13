@@ -1,9 +1,9 @@
 import { RulebookService } from './rulebook.service';
 import { Component, ViewEncapsulation, AfterViewInit } from '@angular/core';
-import { Css } from 'src/app/types/dataTypes';
 import { getAbilityText } from '../common/cards';
 import { MonsterService } from '../monster/monster.service';
 import { MonsterComplete } from '../monster/model/monster';
+import { Css } from '../common/models/common';
 
 export type RulebookImageType = 'Setup' | 'Monster' | 'Action' | 'Buff' | 'Stat-Cube' | 'Action-Board' | 'Standard' | 'Buff-Ex';
 

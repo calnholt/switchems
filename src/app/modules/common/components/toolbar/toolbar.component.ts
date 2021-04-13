@@ -27,8 +27,4 @@ export class ToolbarComponent implements OnInit {
     this.router.navigate(link, {});
   }
 
-  selectSearchOption() {
-    this.router.navigate([`${this.searchOption.routerLink}`], {});
-    this.searchOption = new DropdownOption();
-  }
 }

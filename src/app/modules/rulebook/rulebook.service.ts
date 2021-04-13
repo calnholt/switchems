@@ -1,5 +1,4 @@
-import { Term } from './../data/data';
-import { TermCode, TERM_CODES } from './../../types/dataTypes';
+import { TERM_CODES } from './../../types/dataTypes';
 import { Injectable } from '@angular/core';
 import { RulebookSection, RulebookBlock } from './rulebook.component';
 import { getAbilityText } from '../common/cards';

@@ -1,7 +1,8 @@
-import { Path, ELEMENTS, ELEMENT_PATH_COLOR } from './../../../types/dataTypes';
+import { ELEMENTS, ELEMENT_PATH_COLOR } from './../../../types/dataTypes';
 import { ElemType } from 'src/app/types/dataTypes';
 import { MonsterComplete } from 'src/app/modules/monster/model/monster';
 import { Component, OnInit, Input } from '@angular/core';
+import { Path } from '../../common/models/common';
 
 @Component({
   selector: 'summary',

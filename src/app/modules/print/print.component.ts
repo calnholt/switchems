@@ -1,10 +1,10 @@
+import { TERM_CODES } from './../../types/dataTypes';
 import { MonsterService } from './../monster/monster.service';
 import { MonsterComplete } from './../monster/model/monster';
 import { Component, OnInit } from '@angular/core';
 import { loadMonsters } from '../import/json-to-obj';
 import { Router } from '@angular/router';
 import { FormControl } from '@angular/forms';
-import { TERM_KEYS } from 'src/app/types/dataTypes';
 
 @Component({
   selector: 'print',
@@ -27,8 +27,8 @@ export class PrintComponent implements OnInit {
     const allMonsters: MonsterComplete[] = this.monsterService.getMonsters();
     this.toggleAll(allMonsters);
     this.allMonsters = allMonsters;
-    TERM_KEYS.forEach(term => {
-      this.termOptions.push(`${term.substring(1, 2).toUpperCase()}${term.substring(2, term.length - 1).toLowerCase()}`);
+    TERM_CODES.forEach(term => {
+      this.termOptions.push(`${term.toString().substring(1, 2).toUpperCase()}${term.toString().substring(2, term.toString().length - 1).toLowerCase()}`);
     });
   }
 

@@ -1,26 +1,4 @@
-import { TermCode, ImageCode, Path, ElemType } from './../../types/dataTypes';
-
-export class Term {
-    key: TermCode;
-    value: string;
-    name: string;
-
-    constructor(name: string, key: TermCode, value: string) {
-        this.key = key;
-        this.value = value;
-        this.name = name;
-    }
-}
-
-export class Image {
-    key: ImageCode;
-    path: Path;
-
-    constructor(key: ImageCode, path: Path) {
-        this.key = key;
-        this.path = path;
-    }
-}
+import { ElemType } from './../../types/dataTypes';
 
 export class TypeChart {
     element: ElemType;

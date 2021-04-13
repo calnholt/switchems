@@ -1,7 +1,7 @@
-import { Css } from './../../../../types/dataTypes';
 import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { SelectionChange } from '@angular/cdk/collections';
 import { MatSelectChange } from '@angular/material/select';
+import { Css } from '../../models/common';
 
 @Component({
   selector: 'min-max',

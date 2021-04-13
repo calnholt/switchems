@@ -1,5 +1,5 @@
-import { Term, Image } from './../data/data';
-import { ElemType, TERM_CODES, IMAGE_CODES, Css, ImageCode } from './../../types/dataTypes';
+import { ElemType, TERM_CODES, IMAGE_CODES } from './../../types/dataTypes';
+import { Css, Term, Image } from './models/common';
 
 const getImageClass  = (str: string): string => {
   return str.substring(1, str.length - 1).toLowerCase();
@@ -59,7 +59,7 @@ function convertInnerTextJson(innerHtml) {
       const isCubes = obj.hasOwnProperty('stat') || obj.hasOwnProperty('num') || obj.hasOwnProperty('isPositive');
       if (isCubes) {
         html = '<div class="cubes">';
-          const cubeType: ImageCode = obj.isPositive ? '[PQ]' : '[NQ]';
+          const cubeType = obj.isPositive ? '[PQ]' : '[NQ]';
           let cubeStr = '';
           for (let i = 0; i < obj.num; i++) {
             cubeStr += cubeType + ' ';

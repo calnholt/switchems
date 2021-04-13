@@ -1,10 +1,11 @@
-import { TERM_CODES, IMAGE_CODES, CardTypes, ELEMENTS, Css } from './../../../types/dataTypes';
+import { TERM_CODES, IMAGE_CODES, CardTypes, ELEMENTS } from './../../../types/dataTypes';
 import { MonsterComplete, Action, Buff } from './../model/monster';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { Component, ViewChild, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { getAbilityText } from './../../common/cards';
 import { MonsterService } from '../monster.service';
+import { Css } from '../../common/models/common';
 
 @Component({
   selector: 'monster-form',
