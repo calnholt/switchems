@@ -1,0 +1,22 @@
+<div id="accordian">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{title}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="icon-grid">
+        <div *ngFor="let segment of segments">
+          <div *ngIf="!term">
+            <img src="{{segment.description}}" class="term-img"> - {{segment.value}}
+          </div>
+          <div *ngIf="term">
+            <strong>{{item.value}}</strong> - <span [innerHTML]="getTermText(item.description)"></span>
+            <br><br>
+          </div>
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

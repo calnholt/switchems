@@ -8,6 +8,7 @@ import { MaterialModule } from './../../material-module';
 import { NgModule } from '@angular/core';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AccordianComponent } from './components/accordian/accordian.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ToolbarComponent,
     DropdownComponent,
     TextInputComponent,
-    NumberInputComponent
+    NumberInputComponent,
+    AccordianComponent
   ],
   declarations: [
     MinMaxComponent,
@@ -30,6 +32,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DropdownComponent,
     TextInputComponent,
     NumberInputComponent,
+    AccordianComponent
   ]
 })
 export class CommonComponentsModule { }
