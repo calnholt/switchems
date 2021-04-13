@@ -21,10 +21,10 @@
       "element": "Fire",
       "statusFlg": true,
       "speed": 8,
-      "draw": 1,
+      "draw": 0,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Thu, 01 Apr 2021 20:02:59 GMT"
+      "lastUpdated": "Mon, 12 Apr 2021 20:58:22 GMT"
     },
     {
       "abilityName": "No Pain, No Gain",
@@ -84,10 +84,10 @@
   "monsterId": 2,
   "abilityName": "Heatwave",
   "monsterName": "Flexferno",
-  "abilityText": "Whenever this monster flips one or more buff cards that <b>belongs</b> to it, the attack gains <div>+2[ATK].</div>~BELONGS~",
+  "abilityText": "Whenever this monster flips one or more buff cards that <b>belongs</b> to it, the attack gains <div>+1[ATK].</div>~BELONGS~",
   "hp": 8,
   "complexity": 1,
   "promiseDescription": "<b>Flexferno</b> loves himself some <b>Flexferno</b>! A few strong flips can devastate an enemy monster.",
   "initiative": 20,
-  "lastUpdated": "Sat, 03 Apr 2021 06:28:05 GMT"
+  "lastUpdated": "Mon, 12 Apr 2021 20:58:22 GMT"
 }
