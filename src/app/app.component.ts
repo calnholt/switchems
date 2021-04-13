@@ -1,8 +1,5 @@
 import { CardDataService } from './modules/common/services/card-data.service';
 import { Component } from '@angular/core';
-import { Path } from './types/dataTypes';
-import { ToolbarService } from './modules/common/services/toolbar.service';
-import { Router } from '@angular/router';
 import { MonsterService } from './modules/monster/monster.service';
 import { DropdownOption, ToolbarTab } from './modules/common/models/common';
 
