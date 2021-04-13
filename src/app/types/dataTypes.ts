@@ -1,5 +1,5 @@
 import { TypeChart } from './../modules/data/data';
-import { Term, Image } from '../modules/data/data';
+import { Term, Image, Path } from '../modules/common/models/common';
 
 export const ELEMENTS = [`Fire`, `Water`, `Rock`, `Leaf`, `Electric`, `Death`] as const;
 export type ElemType = typeof ELEMENTS[number];
@@ -17,11 +17,6 @@ export const PLAYER_BOARD_TEXT: string[] = [
     'Hand<br><div class="sub-text">(facedown)</div>'
 ];
 
-export type Url = string;
-export type Path = string;
-export type Css = string;
-export type ImageFile = string;
-
 export type CardTypes = `MONSTER` | `ACTION` | `BUFF` | 'EXTRA';
 
 export const ICON_PATH: Path = `./assets/images`;
@@ -37,10 +32,6 @@ export const MODIFIER_OPTIONS_NEG = [0, -1, -2, -3, -4, -5, `X`];
 export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
-export const TERM_KEYS = [`~WOUND~`, `~FLINCH~`, `~DRAIN~`, `~FATIGUE~`,
-    `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~SUPER~`, `~FASTER~`, `~SLOWER~`, 
-    `~GOOP~`, `~EXHAUST~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`, `~BELONGS~`, `~SPAM~`, `~AURA~`, `~STRENGTHEN~`, `~FRAIL~`] as const;
-export type TermCode = typeof TERM_KEYS[number];
 export const TERM_CODES = [
     new Term('Belongs', `~BELONGS~`, `A buff card <b>Belongs</b> to a monster if the monster name on the bottom of the buff card matches.`),
     new Term('Drain', `~DRAIN~`, `At the end of the turn, monsters with <b>Drain</b> [STATUS] suffer <div>1[ATK]</div> and your active monster heals `
@@ -66,15 +57,8 @@ export const TERM_CODES = [
     new Term('Wound', `~WOUND~`, `Monsters with <b>Wound</b> [STATUS] perform one less [FLIP] on all of their attacks.`),
     new Term('Frail', `~FRAIL~`, `At the end of the turn, <b>frail</b> [FRAIL] monsters remove <b>frail</b> [FRAIL] instead of removing [NQ].`),
     new Term('Strengthen', `~STRENGTHEN~`, `At the end of the turn, <b>strengthened</b> [STR] monsters remove <b>strengthen</b> [STR] instead of removing [PQ].`),
-    
 ] as const;
 
-const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[1]`, `[2]`, `[3]`, `[4]`, `[DEF]`, `[TA]`, `[X]`, `[SUCC]`, `[FAIL]`,
-    `[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]', '[NQ]', '[PQ]', '[ARROW]', '[!]',
-    '[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]', '[ACORN]', '[HONEY]', '[WISH]', '[TORMENT]', '[FLIP]', '[DISABLE]', '[SINGLE]', 
-    '[SR]', '[SL]', '[RESIST]', '[WEAK]', '[DEADLOCK]', '[STR]', '[FRAIL]', '[GOOP]'
-] as const;
-export type ImageCode = typeof IMAGE_KEYS[number];
 export const IMAGE_CODES = [
     new Image(`[ATK]`, SYMBOLS_PATH + `attack.png`),
     new Image(`[+]`, SYMBOLS_PATH + `draw.png`),
