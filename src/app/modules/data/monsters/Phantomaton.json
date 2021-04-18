@@ -71,16 +71,16 @@
       "buffName": "Refactor",
       "timing": "Pre-Actions",
       "buffText": "<b>Super [B] [B]</b><br>Attack speeds are reversed this turn and you win all speed ties.~SUPER~",
-      "flipEventText": "If this attack is <b>slower</b>, this attack gains +2[ATK].~SLOWER~",
-      "lastUpdated": "Thu, 01 Apr 2021 06:45:26 GMT"
+      "flipEventText": "If this attack is <b>slower</b>, this attack gains +1[ATK].~SLOWER~",
+      "lastUpdated": "Tue, 13 Apr 2021 11:54:48 GMT"
     },
     {
       "buffName": "Download",
       "timing": "Post Actions",
       "buffText": "When the enemy monster switches, that monster <div>suffers 1[ATK]</div> and <b>exhaust</b> this aura.<br><br>When this card <b>exhausts</b> from duration, next turn your opponent must reveal their action before you select yours.",
-      "flipEventText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains <div>+2[ATK].</div>",
+      "flipEventText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains <div>+1[ATK].</div>",
       "auraDuration": 3,
-      "lastUpdated": "Mon, 29 Mar 2021 18:04:27 GMT"
+      "lastUpdated": "Tue, 13 Apr 2021 11:54:48 GMT"
     }
   ],
   "monsterId": 10,

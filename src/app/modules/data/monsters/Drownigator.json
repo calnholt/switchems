@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Swamped",
-      "abilityText": "[FLIP]<br><br>The enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.",
+      "abilityText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}. <br><br>[FLIP]",
       "element": "Death",
       "statusFlg": false,
       "attack": 3,
@@ -37,7 +37,7 @@
       "draw": 0,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Thu, 01 Apr 2021 20:02:07 GMT"
+      "lastUpdated": "Tue, 13 Apr 2021 12:03:40 GMT"
     },
     {
       "abilityName": "Surge",
@@ -78,8 +78,8 @@
       "buffName": "Tremble",
       "timing": "With Attack",
       "buffText": "<b>Super [B] [B]</b><br><br>The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}</div> and <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.</div>~SUPER~",
-      "flipEventText": "If the enemy monster is <div><b>frail</b> [FRAIL],</div> this attack gains <div>+2[ATK].</div>",
-      "lastUpdated": "Sat, 03 Apr 2021 06:41:06 GMT"
+      "flipEventText": "If the enemy monster is <div><b>frail</b> [FRAIL],</div> this attack gains <div>+1[ATK].</div>",
+      "lastUpdated": "Tue, 13 Apr 2021 11:56:06 GMT"
     }
   ],
   "monsterId": 5,

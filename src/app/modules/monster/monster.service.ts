@@ -109,4 +109,37 @@ export class MonsterService {
     if (buff.timing === 'Post Actions') {return 'III'; }
     if (buff.timing === 'None') {return 'X'; }
   }
+
+  getAverageMonsterSpeed(): number {
+    let total: number = 0;
+    this.getMonsters().forEach(monster => {
+      monster.actions.forEach(action => {
+        total += action.speed;
+      });
+    });
+    return total / (this.getMonsters().length * 4);
+  }
+
+  getCardsLastUpdatedByDate(date: Date): Array< Monster | Action | Buff > {
+    let out = new Array<Monster | Action | Buff>();
+    const offset = -300; // Timezone offset for EST in minutes.
+    const today = new Date(new Date().getTime() + offset * 60 * 1000);
+    let monsters = this.getMonsters();
+    monsters.forEach(monster => {
+      if (new Date(monster.lastUpdated) > date) {
+        out.push(monster);
+      }
+      monster.actions.forEach(action => {
+        if (new Date(action.lastUpdated) > date) {
+          out.push(action);
+        }
+      });
+      monster.buffs.forEach(buff => {
+        if (new Date(buff.lastUpdated) > date) {
+          out.push(buff);
+        }
+      });
+    });
+    return out;
+  }
 }

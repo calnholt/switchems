@@ -48,9 +48,13 @@
           <div class="promise-title">
             Average Speed: <span>{{monster.getAverageSpeed()}}</span>
           </div>
+          <div class="promise-title">
+            Last Update: <span>{{monster.lastUpdated}}</span>
+          </div>
         </div>
         <button class="save-button" mat-stroked-button (click)="copy()">Copy Monster to Clipboard</button>
         <button class="save-button" mat-stroked-button (click)="save()">Save</button>
+        <button class="save-button" mat-stroked-button (click)="discord()">Discord</button>
         <button *ngIf="monster.savedFlg" class="save-button" mat-stroked-button (click)="delete()" [routerLink]="['']">Delete</button>
         <div class="tts">
           <img 

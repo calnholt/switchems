@@ -27,7 +27,7 @@ export class MonsterFormComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private monsterSerivce: MonsterService,
+    public monsterSerivce: MonsterService,
   ) {}
 
   ngOnInit() {
@@ -169,4 +169,61 @@ export class MonsterFormComponent implements OnInit {
   getTermText(term: string): string {
     return getAbilityText(term, this.TERM_CSS, this.ABILITY_IMG_CSS);
   }
+
+  discord() {
+    var request = new XMLHttpRequest();
+    request.open("POST", "https://discord.com/api/webhooks/831677858493366324/v-OidtpcJe8bnhjqbRbGAIuQetl-17Y0yRL2gSh3dDRfM6u_tmE8WK5xho-9xXykKYQ0");
+
+    request.setRequestHeader('Content-type', 'application/json');
+    let now = new Date();
+    var myEmbed = {
+      title: `Switchems! Weekly Card Changelog ${now.getMonth()+1}/${now.getDate()}/${now.getFullYear()}`,
+      description: this.getWeeklyUpdatedText(),
+      color: this.hexToDecimal("#ff0000")
+    }
+
+    var params = {
+      username: "Mr. Update Alert 3000",
+      embeds: [myEmbed]
+    }
+
+    request.send(JSON.stringify(params));
+  }
+
+  getWeeklyUpdatedText(): string {
+    let out = "";
+    var date = new Date();
+    date.setDate(date.getDate()-7);
+    let cards = this.monsterSerivce.getCardsLastUpdatedByDate(date);
+    let lastMonsterName = '';
+    cards.forEach(card => {
+      if (lastMonsterName != card.monsterName) {
+        lastMonsterName = card.monsterName;
+        out += `**${this.getLinkToMonster(card.monsterName)}**:\n`;
+      }
+      if (card instanceof MonsterComplete) {
+        out += `+ ${card.monsterName} - [Monster]`;
+      }
+      if (card instanceof Action) {
+        out += `+ ${card.abilityName} - [Action]`;
+      }
+      if (card instanceof Buff) {
+        out += `+ ${card.buffName} - [Buff]`;
+      }
+      out += '\n';
+    });
+    return out;
+  }
+
+  hexToDecimal(hex) {
+    return parseInt(hex.replace("#",""), 16)
+  }
+
+  getLinkToMonster(monsterName: string): string {
+    let link = 'http://calnholt.github.io/switchems/monster/' + monsterName;
+    return `[${monsterName}](${link})`;
+  }
+
+
+
 }

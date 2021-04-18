@@ -12,7 +12,13 @@
       <hr align="right" class="name-line right">
     </div>
     <div class="text-container">
-      <div [innerHTML]="getAbilityText()" class="buff-text"></div>
+      <div [innerHTML]="getAbilityText(goopText)" class="buff-text"></div>
+    </div>
+    <div class="text-container flip">
+      <div class="exclamation-mark">
+        <img src="{{imageService.getImg('flip-white')}}">
+      </div>
+      <div [innerHTML]="getAbilityText(goopFlipText)" class="flip-text"></div>
     </div>
   </div>
 </div>
