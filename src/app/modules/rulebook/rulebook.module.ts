@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from 'src/app/material-module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MonsterModule } from '../monster/monster.module';
-import { CommonComponentsModule } from '../common/common-components.module';
+import { CommonComponentsModule } from 'card-builder-framework';
 import { RulebookComponent } from './rulebook.component';
 import { RulebookNumberComponent } from './rulebook-image/rulebook-number/rulebook-number.component';
 import { RulebookMonsterComponent } from './rulebook-image/rulebook-monster/rulebook-monster.component';

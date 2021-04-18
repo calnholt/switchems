@@ -6,7 +6,7 @@ import { MonsterReferenceComponent } from './monster-reference/monster-reference
 import { BuffFiltersComponent } from './buff-filters/buff-filters.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CommonComponentsModule } from './../common/common-components.module';
+import { CommonComponentsModule } from 'card-builder-framework';
 import { MaterialModule } from './../../material-module';
 import { MonsterRoutes } from './monster.routing';
 import { MonsterActionComponent } from './monster-action/monster-action.component';

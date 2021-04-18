@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Path } from './types/dataTypes';
-import { ToolbarService } from './modules/common/components/toolbar/toolbar.service';
+import { ToolbarService } from 'card-builder-framework';
 import { Router } from '@angular/router';
 import { MonsterService } from './modules/monster/monster.service';
 

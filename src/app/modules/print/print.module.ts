@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from './../../material-module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MonsterModule } from './../monster/monster.module';
-import { CommonComponentsModule } from './../common/common-components.module';
+import { CommonComponentsModule } from 'card-builder-framework';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PrintComponent } from './print.component';
