@@ -16,6 +16,19 @@
         </buff-filters>
         <!-- EXPANSION PANEL -->
         <div class="expansion-container">
+          <accordian 
+            [title]="'Icon Codes'"
+            [images]="imageCodes"
+            [terms]="termCodes"
+            [segments]="imageCodeSegments">
+          </accordian>
+          <accordian 
+            [title]="'Term Codes'"
+            [segments]="termCodeSegments"
+            [terms]="termCodes"
+            [images]="imageCodes"
+            [term]="true">
+          </accordian>
           <mat-accordion>
             <mat-expansion-panel>
               <mat-expansion-panel-header>

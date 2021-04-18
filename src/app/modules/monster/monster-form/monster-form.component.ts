@@ -5,6 +5,7 @@ import { Component, ViewChild, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { getAbilityText } from './../../common/cards';
 import { MonsterService } from '../monster.service';
+import { AccordianSegment } from 'card-builder-framework';
 
 @Component({
   selector: 'monster-form',
@@ -18,8 +19,10 @@ export class MonsterFormComponent implements OnInit {
   monster: MonsterComplete;
   originalMonster: MonsterComplete;
   panelOpenState: false;
-  termCodes = TERM_CODES;
+  termCodeSegments = Array<AccordianSegment>();
+  imageCodeSegments = Array<AccordianSegment>();
   imageCodes = IMAGE_CODES;
+  termCodes = TERM_CODES;
   selectedCard: CardTypes = 'MONSTER';
   index: number = 0;
   TERM_CSS: Css = 'term';
@@ -40,6 +43,8 @@ export class MonsterFormComponent implements OnInit {
         this.monster = this.monsterSerivce.getMonster(monsterName);
       }
       this.originalMonster = Object.assign({}, this.monster);
+      this.termCodeSegments = AccordianSegment.getTermAccordianSegments(TERM_CODES);
+      this.imageCodeSegments = AccordianSegment.getImageAccordianSegments(IMAGE_CODES);
     });
   }
 

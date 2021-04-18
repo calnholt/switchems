@@ -1,5 +1,5 @@
 import { TypeChart } from './../modules/data/data';
-import { Term, Image } from '../modules/data/data';
+import { Term, Image } from 'card-builder-framework';
 
 export const ELEMENTS = [`Fire`, `Water`, `Rock`, `Leaf`, `Electric`, `Death`] as const;
 export type ElemType = typeof ELEMENTS[number];
@@ -67,7 +67,7 @@ export const TERM_CODES = [
     new Term('Frail', `~FRAIL~`, `At the end of the turn, <b>frail</b> [FRAIL] monsters remove <b>frail</b> [FRAIL] instead of removing [NQ].`),
     new Term('Strengthen', `~STRENGTHEN~`, `At the end of the turn, <b>strengthened</b> [STR] monsters remove <b>strengthen</b> [STR] instead of removing [PQ].`),
     
-] as const;
+];
 
 const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[1]`, `[2]`, `[3]`, `[4]`, `[DEF]`, `[TA]`, `[X]`, `[SUCC]`, `[FAIL]`,
     `[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]', '[NQ]', '[PQ]', '[ARROW]', '[!]',
@@ -123,7 +123,7 @@ export const IMAGE_CODES = [
     new Image(`[STR]`, SYMBOLS_PATH + `strengthen.png`),
     new Image(`[FRAIL]`, SYMBOLS_PATH + `frail.png`),
     new Image(`[GOOP]`, SYMBOLS_PATH + `goop.png`),
-] as const;
+];
 
 //TODO: this should return an object with two properties: advElems and DisElems that are arrays of elemtypes
 export const getAdvantages = (elem: ElemType): number[] => {
