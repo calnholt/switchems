@@ -1,6 +1,5 @@
 import { MaterialModule } from 'src/app/material-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CommonComponentsModule } from './modules/common/common-components.module';
 import { MonsterModule } from './modules/monster/monster.module';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,6 +13,7 @@ import { RouterModule } from '@angular/router';
 import { PrintModule } from './modules/print/print.module';
 import { RulebookModule } from './modules/rulebook/rulebook.module';
 import { NgxElectronModule } from 'ngx-electron';
+import { CommonComponentsModule } from 'card-builder-framework';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,6 @@ import { NgxElectronModule } from 'ngx-electron';
       enableTracing: false
     }),
     BrowserModule,
-    CommonComponentsModule,
     MonsterModule,
     ViewAllModule,
     BrowserAnimationsModule,
@@ -32,6 +31,7 @@ import { NgxElectronModule } from 'ngx-electron';
     RulebookModule,
     MaterialModule,
     NgxElectronModule,
+    CommonComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

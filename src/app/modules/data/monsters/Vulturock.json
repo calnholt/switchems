@@ -33,22 +33,23 @@
       "abilityText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.</div>",
       "element": "Rock",
       "statusFlg": true,
-      "speed": 3,
+      "speed": 4,
       "draw": 1,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Fri, 02 Apr 2021 07:09:39 GMT"
+      "lastUpdated": "Mon, 12 Apr 2021 21:19:10 GMT"
     },
     {
       "abilityName": "Scavenge",
-      "abilityText": "<b>Single use. </b><br><br>This monster heals <div>X[HP],</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, heal <div>5[HP]</div> instead.~SINGLE~",
+      "abilityText": "If this attack KO's the enemy monster, this monster heals <div>4[HP]</div>.",
       "element": "Death",
       "statusFlg": true,
-      "speed": 9,
+      "attack": 3,
+      "speed": 3,
       "draw": 0,
       "discard": 1,
       "buff": 0,
-      "lastUpdated": "Fri, 26 Feb 2021 08:36:31 GMT"
+      "lastUpdated": "Mon, 12 Apr 2021 21:19:10 GMT"
     }
   ],
   "buffs": [
@@ -63,8 +64,8 @@
       "buffName": "Hard Headed",
       "timing": "Pre-Actions",
       "buffText": "If your opponent selected a monster <b>attack</b> action this turn, the enemy monster's attack gains <div><b>recoil 2[ATK]</b>.</div>~RECOIL~",
-      "flipEventText": "This attack gains +2[ATK] and <b>recoil 2[ATK]</b>.",
-      "lastUpdated": "Thu, 25 Mar 2021 07:27:58 GMT"
+      "flipEventText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.</div>",
+      "lastUpdated": "Tue, 13 Apr 2021 12:01:19 GMT"
     },
     {
       "buffName": "Self Defense",

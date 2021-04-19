@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { SYMBOLS } from 'src/app/constants';
 import { Path } from 'src/app/types/dataTypes';
 import { ViewEncapsulation } from '@angular/compiler/src/core';
+import { ImageService } from '../../data/image.service';
 
 @Component({
   selector: 'goop',
@@ -13,14 +14,15 @@ import { ViewEncapsulation } from '@angular/compiler/src/core';
 export class GoopComponent implements OnInit {
 
   goopText: string = 'Remove this card from your deck.';
+  goopFlipText: string = 'You may have this attack gain <div><b>recoil</b> 1[ATK].</div> If you do, remove this card from your deck.~RECOIL~'
 
-  constructor() { }
+  constructor(public imageService: ImageService) { }
 
   ngOnInit() {
   }
 
-  getAbilityText(): string {
-    return getAbilityText(this.goopText, 'term', 'term-ing');
+  getAbilityText(text: string): string {
+    return getAbilityText(text, 'term', 'term-img');
   }
 
   getBuffImagePath(): Path {

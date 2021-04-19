@@ -41,15 +41,15 @@
     },
     {
       "abilityName": "Vicious Hurricane",
-      "abilityText": "<b>Single use.</b><br><br>Remove all <div>[SPD] [PQ]</div> from this monster and this attack gains <div>+1[ATK]</div> for each removed this way.~SINGLE~",
+      "abilityText": "<b>Single use.</b><br><br>This attack gains <div>+X[ATK]</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, this attack gains <div>+2[ATK]</div> instead.",
       "element": "Death",
       "statusFlg": false,
       "attack": 2,
-      "speed": 6,
+      "speed": 4,
       "draw": 0,
       "discard": 2,
-      "buff": 1,
-      "lastUpdated": "Sat, 06 Mar 2021 09:28:37 GMT"
+      "buff": 2,
+      "lastUpdated": "Tue, 13 Apr 2021 11:56:50 GMT"
     }
   ],
   "buffs": [

@@ -5,29 +5,20 @@ body{
     -webkit-print-color-adjust:exact;
 }
 
-#toolbar{
-    mat-toolbar {
-        height: 63px;
-        top: 0;
-        position: fixed;
-        z-index: 100;
-        .name {
-            font-family: $header-font;
-            font-size: 40px;
-        }
-        .name,a:hover{
-            color: white;
-        }
-        .dropdown {
-            position: fixed;
-            right: 0;
-            top: -11px;
+#app {
+    #toolbar{
+        color: red;
+        mat-toolbar, .mat-toolbar-single-row {
+            color: red;
+            background: black !important;
+            .name {
+                color: red;
+                font-family: $header-font !important;
+            }
         }
     }
-    .sidenav-options {
-        padding-top: 66px;
-    }
-    mat-sidenav-content {
-        margin-top: 60px;
-    }
+}
+
+a.name.mat-button.mat-button-base {
+    font-family: 'Beastformer';
 }

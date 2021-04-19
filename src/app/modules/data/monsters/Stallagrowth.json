@@ -56,16 +56,16 @@
     {
       "buffName": "Regrowth",
       "timing": "Post Actions",
-      "buffText": "This monster heals <div>1[HP].</div> If the enemy monster has a [STATUS], this monster heals <div>2[HP]</div> instead.",
+      "buffText": "This monster heals <div>1[HP].</div> If the enemy monster has a [STATUS], this monster heals <div>2[HP]</div> instead.~STATUS~",
       "flipEventText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
-      "lastUpdated": "Thu, 01 Apr 2021 20:15:39 GMT"
+      "lastUpdated": "Tue, 13 Apr 2021 11:59:45 GMT"
     },
     {
       "buffName": "Mossy Overgrowth",
       "timing": "Pre-Actions",
       "buffText": "<b>Super [B] [B]</b><br>This monster gains <div>+3[DEF]</div> this turn. ~SUPER~",
-      "flipEventText": "This attack gains +1[ATK].",
-      "lastUpdated": "Thu, 01 Apr 2021 06:46:28 GMT"
+      "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
+      "lastUpdated": "Tue, 13 Apr 2021 11:59:45 GMT"
     },
     {
       "buffName": "Concussion",
@@ -78,8 +78,8 @@
       "buffName": "Gravelcrust Grip",
       "timing": "Pre-Actions",
       "buffText": "<b>Super [B] [B], Exhaust, Drain [STATUS]</b> ~SUPER~~EXHAUST~~DRAIN~",
-      "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "lastUpdated": "Thu, 01 Apr 2021 06:46:28 GMT"
+      "flipEventText": "If the enemy monster has a <div>[STATUS],</div>this attack gains <div>+1[ATK].</div> ~STATUS~",
+      "lastUpdated": "Tue, 13 Apr 2021 11:59:45 GMT"
     }
   ],
   "monsterId": 1,
