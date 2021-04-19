@@ -12,6 +12,7 @@ import { ViewAllModule } from './modules/view-all/view-all.module';
 import { RouterModule } from '@angular/router';
 import { PrintModule } from './modules/print/print.module';
 import { RulebookModule } from './modules/rulebook/rulebook.module';
+import { NgxElectronModule } from 'ngx-electron';
 import { CommonComponentsModule } from 'card-builder-framework';
 
 @NgModule({
@@ -29,6 +30,7 @@ import { CommonComponentsModule } from 'card-builder-framework';
     PrintModule,
     RulebookModule,
     MaterialModule,
+    NgxElectronModule,
     CommonComponentsModule
   ],
   providers: [],
