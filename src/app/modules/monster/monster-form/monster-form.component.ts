@@ -43,7 +43,7 @@ export class MonsterFormComponent implements OnInit {
         this.monster = this.monsterSerivce.getMonster(monsterName);
       }
       this.originalMonster = Object.assign({}, this.monster);
-      this.termCodeSegments = AccordianSegment.getTermAccordianSegments(TERM_CODES);
+      this.termCodeSegments = TERM_CODES.map(tc => ({value: tc.key, description: tc.value}));
       this.imageCodeSegments = AccordianSegment.getImageAccordianSegments(IMAGE_CODES);
     });
   }

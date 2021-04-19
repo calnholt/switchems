@@ -2,6 +2,8 @@
   <toolbar
     [title]="'Switchems!'"
     [searchOptions]="searchOptions"
-    [tabs]="tabs">
+    [tabs]="tabs"
+    [searchRoute]="'monster'"
+    (selectionChange)="goToPage($event)">
   </toolbar>
 </div>
