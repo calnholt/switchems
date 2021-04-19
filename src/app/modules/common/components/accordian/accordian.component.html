@@ -12,7 +12,7 @@
             <img src="{{segment.description}}" class="term-img"> - {{segment.value}}
           </div>
           <div *ngIf="term">
-            <strong>{{item.value}}</strong> - <span [innerHTML]="getTermText(item.description)"></span>
+            <strong>{{segment.value}}</strong> - <span [innerHTML]="segment.description"></span>
             <br><br>
           </div>
         </div>

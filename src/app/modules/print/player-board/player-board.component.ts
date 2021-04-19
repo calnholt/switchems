@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ViewEncapsulation } from '@angular/compiler/src/core';
-import { Path } from 'src/app/types/dataTypes';
 import { SYMBOLS } from 'src/app/constants';
+import { Path } from '../../common/models/common';
 
 @Component({
   selector: 'player-board',

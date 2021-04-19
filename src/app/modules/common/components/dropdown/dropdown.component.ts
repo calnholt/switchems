@@ -15,11 +15,11 @@ export class DropdownComponent implements OnInit, OnChanges {
 
   @Input() label?: string;
   @Input() model: any;
-  @Input() options: Array<DropdownOption>;
+  @Input() options: Array<any>;
   @Input() property?: string;
   @Input() multi?: boolean;
   @Input() index?: number; // used when model is an item from array
-  @Input() route?: boolean; // used when dropdown selection should route to new component
+  @Input() route?: string; // used when dropdown selection should route to new component
   @Output()
   selectionChange?: EventEmitter<any> = new EventEmitter<DropdownOption>();
   formControl: FormControl;
@@ -46,16 +46,14 @@ export class DropdownComponent implements OnInit, OnChanges {
   }
 
   selectionChanged(event: MatSelectChange) {
-    let dropdownOption: DropdownOption = event.value;
     if (this.route) {
       this.formControl = new FormControl(); // clear selection from dropdown
-      this.router.navigate([`${dropdownOption.routerLink}`], {});
+      this.router.navigate([`${this.route}`, `${event.value}`], {});
     }
-    else if (this.index !== undefined) {
-      this.model[this.property][this.index] = dropdownOption.value;
-    } 
-    else {
-      this.model[this.property] = dropdownOption.value;
+    if (this.index !== undefined) {
+      this.model[this.property][this.index] = event.value;
+    } else {
+      this.model[this.property] = event.value;
     }
     this.selectionChange.emit();
   }

@@ -1,6 +1,7 @@
 import { ElemType } from 'src/app/types/dataTypes';
-import { Path, HP_PATH, ELEMENT_PATH_GRAY, ELEMENT_PATH_COLOR, SYMBOLS_PATH } from './../../types/dataTypes';
+import { HP_PATH, ELEMENT_PATH_GRAY, ELEMENT_PATH_COLOR, SYMBOLS_PATH } from './../../types/dataTypes';
 import { Injectable } from '@angular/core';
+import { Path } from '../common/models/common';
 
 @Injectable({
   providedIn: 'root'

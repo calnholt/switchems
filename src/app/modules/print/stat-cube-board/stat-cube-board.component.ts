@@ -1,5 +1,6 @@
-import { SYMBOLS_PATH, Path } from './../../../types/dataTypes';
+import { SYMBOLS_PATH } from './../../../types/dataTypes';
 import { Component, OnInit } from '@angular/core';
+import { Path } from '../../common/models/common';
 
 @Component({
   selector: 'stat-cube-board',

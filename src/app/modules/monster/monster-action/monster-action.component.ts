@@ -1,8 +1,9 @@
 import { ELEMENTS_GRAY, SYMBOLS, ELEMENTS_COLOR } from './../../../constants';
-import { ELEMENTS, Css, Path, ImageCode, ElemType, getAdvantages } from './../../../types/dataTypes';
+import { ELEMENTS, ElemType, getAdvantages } from './../../../types/dataTypes';
 import { Action } from './../model/monster';
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { getAbilityText } from './../../common/cards';
+import { Css, Path } from '../../common/models/common';
 
 @Component({
   selector: 'monster-action',
@@ -41,7 +42,7 @@ export class MonsterActionComponent implements OnInit {
     return `${SYMBOLS}${name}.png`;
   }
 
-  getImagePathFromImageCode(code: ImageCode): Path {
+  getImagePathFromImageCode(code: string): Path {
     if (code === '[B]') {return this.getImagePath('buff'); }
     if (code === '[-]') {return this.getImagePath('discard'); }
     if (code === '[+]') {return this.getImagePath('draw'); }
@@ -51,8 +52,8 @@ export class MonsterActionComponent implements OnInit {
     return getAbilityText(this.action.abilityText, this.TERM_CSS, this.ABILITY_IMG_CSS);
   }
 
-  getCardIcons(): Array<ImageCode> {
-    const out = Array<ImageCode>();
+  getCardIcons(): Array<string> {
+    const out = Array<string>();
     for (let i = 0; i < this.action.buff; i++) {
       out.push('[B]');
     }

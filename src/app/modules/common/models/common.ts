@@ -22,25 +22,23 @@ export class ToolbarTab {
 export type Url = string;
 export type Path = string;
 export type Css = string;
-export type IconCode = string;
-export type TermCode = string;
 
 export class Image {
-    key: IconCode;
+    key: string;
     path: Path;
 
-    constructor(key: IconCode, path: Path) {
+    constructor(key: string, path: Path) {
         this.key = key;
         this.path = path;
     }
 }
 
 export class Term {
-    key: TermCode;
+    key: string;
     value: string;
     name: string;
 
-    constructor(name: string, key: TermCode, value: string) {
+    constructor(name: string, key: string, value: string) {
         this.key = key;
         this.value = value;
         this.name = name;

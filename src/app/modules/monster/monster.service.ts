@@ -1,5 +1,5 @@
 import { Action, Buff, MonsterComplete } from 'src/app/modules/monster/model/monster';
-import { ElemType, ImageCode } from 'src/app/types/dataTypes';
+import { ElemType } from 'src/app/types/dataTypes';
 import { Monster } from './model/monster';
 import { Injectable } from '@angular/core';
 import { loadMonsters } from '../import/json-to-obj';

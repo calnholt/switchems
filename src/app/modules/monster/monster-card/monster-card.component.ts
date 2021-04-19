@@ -1,8 +1,9 @@
 import { getAbilityText } from './../../common/cards';
 import { MonsterComplete } from './../model/monster';
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import { ELEMENTS, Css, Path } from './../../../types/dataTypes';
+import { ELEMENTS } from './../../../types/dataTypes';
 import { ELEMENTS_COLOR, ELEMENTS_GRAY, HP, SYMBOLS } from './../../../constants';
+import { Css, Path } from '../../common/models/common';
 
 @Component({
   selector: 'monster-card',

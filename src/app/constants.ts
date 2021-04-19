@@ -1,4 +1,4 @@
-import { Path } from './types/dataTypes';
+import { Path } from './modules/common/models/common';
 
 export const IMAGES: Path = './assets/images/';
 export const SYMBOLS: Path = IMAGES + 'symbols/';

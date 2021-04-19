@@ -1,9 +1,9 @@
 import { ImageService } from './../../../data/image.service';
 import { getAbilityText } from './../../../common/cards';
 import { SYMBOLS } from './../../../../constants';
-import { Css, Path } from './../../../../types/dataTypes';
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { Buff } from '../../model/monster';
+import { Css, Path } from 'src/app/modules/common/models/common';
 
 @Component({
   selector: 'monster-buff',

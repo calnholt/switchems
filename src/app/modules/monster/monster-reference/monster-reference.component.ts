@@ -1,10 +1,10 @@
-import { Term } from './../../data/data';
 import { MonsterService } from './../monster.service';
 import { ELEMENTS, TERM_CODES } from './../../../types/dataTypes';
 import { getAbilityText } from './../../common/cards';
 import { ImageService } from './../../data/image.service';
 import { MonsterComplete } from 'src/app/modules/monster/model/monster';
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Term } from '../../common/models/common';
 
 @Component({
   selector: 'monster-reference',

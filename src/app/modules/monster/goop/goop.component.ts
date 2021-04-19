@@ -1,8 +1,8 @@
 import { getAbilityText } from './../../common/cards';
 import { Component, OnInit } from '@angular/core';
 import { SYMBOLS } from 'src/app/constants';
-import { Path } from 'src/app/types/dataTypes';
 import { ViewEncapsulation } from '@angular/compiler/src/core';
+import { Path } from '../../common/models/common';
 
 @Component({
   selector: 'goop',

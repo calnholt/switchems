@@ -2,6 +2,7 @@ import { TERM_CODES } from './../../types/dataTypes';
 import { Injectable } from '@angular/core';
 import { RulebookSection, RulebookBlock } from './rulebook.component';
 import { getAbilityText } from '../common/cards';
+import { Term } from '../common/models/common';
 
 @Injectable({
   providedIn: 'root'
@@ -763,7 +764,7 @@ export class RulebookService {
     }
 ];
 
-  getTerm(term: TermCode): string {
+  getTerm(term: string): string {
     let text = TERM_CODES.find(t => t.key === term).value;
     ['<div>', '</div>'].forEach(html => {
       while (text.includes(html)) {

@@ -9,12 +9,13 @@ import { DropdownOption, ToolbarTab } from './modules/common/models/common';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    searchOptions: Array<DropdownOption>;
+    searchOptions: Array<string>;
     tabs: Array<ToolbarTab>;
     constructor(private cardDataService: CardDataService, private monsterService: MonsterService) { }
   
     ngOnInit() {
-      this.searchOptions = this.cardDataService.getSearchOptions('monsterName', this.monsterService.getMonsters(), 'monster')
+
+      this.searchOptions = this.monsterService.getMonsters().map(m => (m.monsterName));
       this.tabs = [
         new ToolbarTab('Create', 'monster', 'builder'),
         new ToolbarTab('Print & Play', 'print'),

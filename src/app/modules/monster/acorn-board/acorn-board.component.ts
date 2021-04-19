@@ -1,6 +1,6 @@
 import { SYMBOLS } from './../../../constants';
 import { Component, OnInit } from '@angular/core';
-import { Path } from 'src/app/types/dataTypes';
+import { Path } from '../../common/models/common';
 
 @Component({
   selector: 'acorn-board',

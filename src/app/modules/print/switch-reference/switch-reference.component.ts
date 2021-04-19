@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Css } from 'src/app/types/dataTypes';
 import { getAbilityText } from '../../common/cards';
+import { Css } from '../../common/models/common';
 
 @Component({
   selector: 'switch-reference',
