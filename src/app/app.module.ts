@@ -31,7 +31,7 @@ import { CommonComponentsModule } from 'card-builder-framework';
     RulebookModule,
     MaterialModule,
     NgxElectronModule,
-    CommonComponentsModule
+    CommonComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

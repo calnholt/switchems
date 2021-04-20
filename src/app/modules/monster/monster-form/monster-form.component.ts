@@ -50,9 +50,10 @@ export class MonsterFormComponent implements OnInit {
       // let print = this.electronService.ipcRenderer.sendSync('print');
       // console.log(print);
       // test store
-      let bool = this.electronService.isElectronApp;
-      let store = this.electronService.ipcRenderer.sendSync('store');
-      console.log(store);
+      if (this.electronService.isElectronApp) {
+        // this.electronService.ipcRenderer.send('saveMonster', this.monster);
+        // console.log(store);
+      }
       this.termCodeSegments = TERM_CODES.map(tc => ({value: tc.key, description: tc.value}));
       this.imageCodeSegments = AccordianSegment.getImageAccordianSegments(IMAGE_CODES);
     });
@@ -74,6 +75,9 @@ export class MonsterFormComponent implements OnInit {
   }
 
   copy() {
+    this.electronService.ipcRenderer.invoke('getMonster', this.monster.monsterName).then((result: MonsterComplete) => { 
+      console.log(result);
+    }); 
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';

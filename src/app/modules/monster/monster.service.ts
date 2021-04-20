@@ -31,6 +31,7 @@ export class MonsterService {
   getMonster(monsterName: string, useJson?: boolean): MonsterComplete {
     if (!this.monsters || useJson) {
       this.loadMonsters();
+      loadMonsters().find(m => m.monsterName === monsterName);
     }
     return this.monsters.find(m => m.monsterName === monsterName);
   }

@@ -4,6 +4,7 @@ const {app, BrowserWindow, ipcMain} = require('electron');
 const ipc = require('electron').ipcMain;
 const path = require('path')
 const Store = require('electron-store');
+const storage = new Store();
 let win;
 var options = {
     silent: false,
@@ -21,22 +22,27 @@ var options = {
 }
 
 ipc.on('print', (event, arg) => {
+  console.log('Print Initiated');
     win.webContents.print(options, (success, failureReason) => {
         if (!success) {
           console.log(failureReason);
         }
-        console.log('Print Initiated');
     });
 });
 
-ipc.on('store', (event, arg) => {
-  const store = new Store();
-  var objToSave = {test:'test'};
-  console.log(objToSave);
-  store.set('test', objToSave);
-  var obj = store.get('test');
-  console.log(obj);
-  //return obj;
+ipc.on('saveMonster', (event, monster) => {
+    console.log(monster);
+    storage.set(monster.monsterName, monster);
+    var obj = storage.get(monster.monsterName);
+    console.log(obj);
+    return obj;
+});
+
+ipc.handle('getMonster', async (event, monsterName) => {
+  let monster = storage.get(monsterName);
+  console.log(monster);
+  storage.openInEditor();
+  return monster;
 });
 
 function createWindow () {

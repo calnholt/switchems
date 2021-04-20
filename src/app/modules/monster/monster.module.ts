@@ -1,3 +1,4 @@
+import { FrameworkModule } from './../framework/framework.module';
 import { GoopComponent } from './goop/goop.component';
 import { AcornBoardComponent } from './acorn-board/acorn-board.component';
 import { ExtraBoardComponent } from './extra-board/extra-board.component';
@@ -17,7 +18,6 @@ import { MonsterCardFiltersComponent } from './monster-card-filters/monster-card
 import { ActionFiltersComponent } from './action-filters/action-filters.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PrintModule } from '../print/print.module';
 
 @NgModule({
   imports: [
@@ -27,6 +27,7 @@ import { PrintModule } from '../print/print.module';
     CommonComponentsModule,
     FormsModule,
     ReactiveFormsModule,
+    FrameworkModule
   ],
   declarations: [
     MonsterActionComponent,

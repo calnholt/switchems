@@ -1,8 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { MonsterComplete } from '../model/monster';
+import { Action, Buff } from './../model/monster';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import html2canvas from 'html2canvas';
-import { ToolbarService } from 'card-builder-framework';
 import { MonsterService } from '../monster.service';
 
 @Component({
@@ -11,32 +9,33 @@ import { MonsterService } from '../monster.service';
   styleUrls: ['./tts-monster.component.scss']
 })
 export class TtsMonsterComponent implements OnInit {
-  monster: MonsterComplete;
-  timeout: number = 1500;
+  @ViewChild('tts', {static: true}) public template: TemplateRef<any>;
+  cards = [];
+  monsterName: string;
 
   constructor(
     private route: ActivatedRoute,
-    private toolbarService: ToolbarService,
     private monsterService: MonsterService,
   ) {}
 
   ngOnInit() {
-    this.toolbarService.hide();
     this.route.params.subscribe(params => {
-      const monsterName: string = this.route.snapshot.paramMap.get('monsterName');
-      this.monster = this.monsterService.getMonster(monsterName);
+      this.monsterName = this.route.snapshot.paramMap.get('monsterName');
+      const monster = this.monsterService.getMonster(this.monsterName, true);
+      const monsterRef = this.monsterService.getMonster(this.monsterName, true);
+      monster.referenceFlg = false;
+      this.cards.push(monsterRef);
+      monster.buffs.forEach(b => this.cards.push(b));
+      monster.actions.forEach(a => this.cards.push(a));
+      this.cards.push(monster);
     });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    setTimeout((this.download).bind(this), this.timeout);
   }
 
-  download() {
-    html2canvas(document.querySelector('.tts-container')).then(canvas => {
-      const a = document.createElement('a');
-      a.setAttribute('download', `${this.monster.monsterName}.jpg`);
-      a.setAttribute('href', canvas.toDataURL('image/jpg').replace('image/jpg', 'image/octet-stream'));
-      a.click();
-    });
+  isBuff(card: any): boolean {
+    return (card instanceof Buff);
+  }
+  isAction(card: any): boolean {
+    return (card instanceof Action);
   }
 
 }
