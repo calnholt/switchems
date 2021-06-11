@@ -26,7 +26,7 @@ export class GoopComponent implements OnInit {
   }
 
   getBuffImagePath(): Path {
-    return `${SYMBOLS}goop.png`;
+    return `${SYMBOLS}goop-card.png`;
   }
 
 }
