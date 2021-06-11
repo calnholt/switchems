@@ -83,12 +83,12 @@
     }
   ],
   "monsterId": 5,
-  "abilityName": "Panic Attack",
+  "abilityName": "Flash Flood",
   "monsterName": "Drownigator",
-  "abilityText": "When this monster <b>switches in</b>, the opponent <div>[-].</div>~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, <div>[+].</div>~SWITCH~",
   "hp": 9,
   "complexity": 1,
-  "promiseDescription": "<b>Drownigator</b> is a total nuisance with discards and debuffs.",
+  "promiseDescription": "<b>Drownigator</b> is a total nuisance with debuffs.",
   "initiative": 70,
-  "lastUpdated": "Mon, 16 Nov 2020 08:58:22 GMT"
+  "lastUpdated": "Sat, 01 May 2021 12:53:33 GMT"
 }

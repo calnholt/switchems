@@ -56,9 +56,9 @@
     {
       "buffName": "Propulsive Winds",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super [B] [B]</b><br>This attack gains <div>+4[SPD]</div>.~SUPER~",
+      "buffText": "<b>Super [B] [B].</b> This attack gains <div>+4[SPD]</div>.~SUPER~",
       "flipEventText": "This enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div>",
-      "lastUpdated": "Thu, 01 Apr 2021 20:07:37 GMT"
+      "lastUpdated": "Wed, 09 Jun 2021 07:12:10 GMT"
     },
     {
       "buffName": "Sharp Leaves",
@@ -77,9 +77,9 @@
     {
       "buffName": "Outta Here",
       "timing": "Post Actions",
-      "buffText": "<b>Exhaust</b><br>Perform a switch action.~EXHAUST~",
+      "buffText": "Perform a switch action. <b>Exhaust</b>.~EXHAUST~",
       "flipEventText": "If this attack is <b>faster</b>, this monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.</div> ~FASTER~",
-      "lastUpdated": "Thu, 01 Apr 2021 20:07:37 GMT"
+      "lastUpdated": "Wed, 09 Jun 2021 07:12:10 GMT"
     }
   ],
   "monsterId": 8,

@@ -1,5 +1,4 @@
-import { TypeChart } from './../modules/data/data';
-import { Term, Image } from 'card-builder-framework';
+import { Term, TypeChart, Image } from './../modules/data/data';
 
 export const ELEMENTS = [`Fire`, `Water`, `Rock`, `Leaf`, `Electric`, `Death`] as const;
 export type ElemType = typeof ELEMENTS[number];

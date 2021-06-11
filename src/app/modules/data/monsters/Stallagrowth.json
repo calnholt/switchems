@@ -1,7 +1,7 @@
 {
   "elements": [
-    "Rock",
-    "Leaf"
+    "Leaf",
+    "Rock"
   ],
   "actions": [
     {
@@ -28,11 +28,11 @@
       "lastUpdated": "Sat, 27 Feb 2021 21:32:11 GMT"
     },
     {
-      "abilityName": "Rock Smash",
+      "abilityName": "Pulverize",
       "abilityText": "<b>Flinch</b>~FLINCH~",
       "element": "Rock",
       "statusFlg": false,
-      "attack": 4,
+      "attack": 3,
       "speed": 7,
       "draw": 0,
       "discard": 2,
@@ -40,12 +40,12 @@
       "lastUpdated": "Wed, 10 Mar 2021 07:54:10 GMT"
     },
     {
-      "abilityName": "Rock Slide",
+      "abilityName": "Skewer",
       "abilityText": "[FLIP] [FLIP]",
       "element": "Rock",
       "statusFlg": false,
       "attack": 2,
-      "speed": 5,
+      "speed": 4,
       "draw": 0,
       "discard": 0,
       "buff": 2,
@@ -63,16 +63,16 @@
     {
       "buffName": "Mossy Overgrowth",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super [B] [B]</b><br>This monster gains <div>+3[DEF]</div> this turn. ~SUPER~",
+      "buffText": "<b>Super [B] [B]</b>. This monster gains <div>+3[DEF]</div> this turn. ~SUPER~",
       "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "lastUpdated": "Tue, 13 Apr 2021 11:59:45 GMT"
+      "lastUpdated": "Wed, 09 Jun 2021 07:04:16 GMT"
     },
     {
       "buffName": "Concussion",
       "timing": "With Attack",
-      "buffText": "<b>Exhaust</b>.<br>This attack gains <b>flinch</b>.~EXHAUST~~FLINCH~",
+      "buffText": "This attack gains <b>flinch</b>. <b>Exhaust</b>. ~FLINCH~~EXHAUST~",
       "flipEventText": "If the enemy monster has a [STATUS], the enemy monster gains <div><b>Stun [STATUS].</b></div>~STUN~",
-      "lastUpdated": "Sun, 28 Mar 2021 08:28:03 GMT"
+      "lastUpdated": "Wed, 09 Jun 2021 07:04:16 GMT"
     },
     {
       "buffName": "Gravelcrust Grip",
@@ -84,11 +84,12 @@
   ],
   "monsterId": 1,
   "abilityName": "Vineshield",
-  "monsterName": "Stallagrowth",
+  "monsterName": "Stalagrowth",
   "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.</div> ~SWITCH~",
   "hp": 10,
   "complexity": 1,
   "promiseDescription": "<b>Stallagrowth</b> plays for the long game – slowly drain the enemy's health and stand your ground with bolstered defense.",
   "initiative": 10,
-  "lastUpdated": "Thu, 01 Apr 2021 20:15:39 GMT"
+  "imageFlg": true,
+  "lastUpdated": "Wed, 09 Jun 2021 07:04:16 GMT"
 }

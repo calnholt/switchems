@@ -35,7 +35,7 @@
         .actions-container{
             background-color: #f3f3f3;
             border-radius: 6px;
-            margin: 7px 3px 3px 3px;
+            margin: 4px 3px 3px 3px;
             padding: 1px;
             // margin-top: 10px;
             .actions-container {
@@ -144,7 +144,7 @@
                 background-color: unset;
                 display: flex;
                 .maneuver {
-                    padding: 10px 0px 0px 12px;
+                    padding: 18px 0px 0px 12px;
                     img {
                         max-height: 20px;
                     }
@@ -159,23 +159,22 @@
                     tr{
                         td {
                             font-size: 22px;
+                            width: 25%;
                             img {
                                 max-height: 20px;
                             }
                         }
-                        td:nth-child(1){
+                        td:nth-child(even){
                             background-color: #8abcf9;
-                            width: 33.33%;
-                            border-radius: 0px 0px 0px 4px !important;
                         }
-                        td:nth-child(2){
-                            background-color: #8abcf9;
-                            width: 33.33%;
+                        td:nth-child(odd){
+                            background-color: #aae3ff;
+                        }
+                        td:first-child{
+                            border-radius: 4px 0px 0px 4px !important;
                         }
                         td:last-child {
-                            background-color: #8abcf9;
-                            width: 33.33%;
-                            border-radius: 0px 0px 4px 0px !important;
+                            border-radius: 0px 4px 4px 0px !important;
                         }
                     }
                 }

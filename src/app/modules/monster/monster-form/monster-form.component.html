@@ -16,19 +16,31 @@
         </buff-filters>
         <!-- EXPANSION PANEL -->
         <div class="expansion-container">
-          <accordian 
-            [title]="'Icon Codes'"
-            [images]="imageCodes"
-            [terms]="termCodes"
-            [segments]="imageCodeSegments">
-          </accordian>
-          <accordian 
-            [title]="'Term Codes'"
-            [segments]="termCodeSegments"
-            [terms]="termCodes"
-            [images]="imageCodes"
-            [term]="true">
-          </accordian>
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Icon Codes
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div class="icon-grid">
+                <div *ngFor="let item of imageCodes">
+                  <img src="{{item.path}}" class="term-img"> - {{item.key}}
+                </div>
+              </div>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Term Codes
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div *ngFor="let item of termCodes">
+                <strong>{{item.key}}</strong> - <span [innerHTML]="getTermText(item.value)"></span>
+                <br><br>
+              </div>
+            </mat-expansion-panel>
+          </mat-accordion>
         </div>
         <div *ngIf="monster.promiseDescription" class="promise-container">
           <div class="promise-title">Descripition</div>

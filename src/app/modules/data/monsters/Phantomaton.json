@@ -45,11 +45,11 @@
       "element": "Death",
       "statusFlg": false,
       "attack": 5,
-      "speed": 6,
+      "speed": 3,
       "draw": 0,
-      "discard": 3,
+      "discard": 2,
       "buff": 1,
-      "lastUpdated": "Sat, 03 Apr 2021 06:58:37 GMT"
+      "lastUpdated": "Thu, 03 Jun 2021 19:40:46 GMT"
     }
   ],
   "buffs": [
@@ -86,10 +86,10 @@
   "monsterId": 10,
   "abilityName": "Deadlock",
   "monsterName": "Phantomaton",
-  "abilityText": "If <b>Exception Caught</b> is enabled, your opponent must [-] an additional card when performing a switch action. <br><br>If <b>Exception Caught</b> is enabled and this monster attacks a monster that is <b>weak</b> [WEAK] to the attack's element, this monster gains <div>{\"num\":1, \"isPositive\":true, \"stat\":\"ATK\"}.</div>",
+  "abilityText": "If <b>Exception Caught</b> is enabled, your opponent must [-] an additional card when performing a switch action. <br><br>If <b>Exception Caught</b> is disabled and this monster attacks a monster that is <b>weak</b> [WEAK] to the attack's element, this monster gains <div>{\"num\":1, \"isPositive\":true, \"stat\":\"ATK\"}.</div>",
   "hp": 10,
   "complexity": 2,
   "promiseDescription": "Strike fear in your opponent when <b>Phantomaton</b> switches in to an advantageous matchup! Watch the enemy monster squirm when the cost of switching out is too high.",
   "initiative": 55,
-  "lastUpdated": "Sun, 04 Apr 2021 09:54:44 GMT"
+  "lastUpdated": "Wed, 09 Jun 2021 14:31:55 GMT"
 }

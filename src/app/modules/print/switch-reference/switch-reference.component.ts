@@ -14,7 +14,9 @@ export class SwitchReferenceComponent implements OnInit {
   ABILITY_IMG_CSS: Css = 'term-img';
   items: Array<string> = [
       'Heal 2[HP] OR remove a [STATUS] from the monster that is switching out',
+      'Gain [STR]',
       'Remove all [NQ] from your Stat Cube Board',
+      'Gain one [MQ]',
       'The monster switching in gains +X[DEF] this turn against attacks with elements it is <b>resistant</b> [RESIST] to'
     ];
 

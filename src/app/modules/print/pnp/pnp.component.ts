@@ -63,7 +63,7 @@ export class PnpComponent implements OnInit {
       allCards.push({isSwitchReferenceCard: true});
 
       // GOOP
-      for (var i = 0; i < 8; i++) {
+      for (var i = 0; i < 10; i++) {
         allCards.push({isGoop: true});
       }
     }

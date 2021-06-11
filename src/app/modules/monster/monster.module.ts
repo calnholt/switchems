@@ -1,4 +1,3 @@
-import { FrameworkModule } from './../framework/framework.module';
 import { GoopComponent } from './goop/goop.component';
 import { AcornBoardComponent } from './acorn-board/acorn-board.component';
 import { ExtraBoardComponent } from './extra-board/extra-board.component';
@@ -27,7 +26,6 @@ import { CommonModule } from '@angular/common';
     CommonComponentsModule,
     FormsModule,
     ReactiveFormsModule,
-    FrameworkModule
   ],
   declarations: [
     MonsterActionComponent,

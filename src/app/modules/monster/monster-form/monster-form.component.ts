@@ -5,8 +5,6 @@ import { Component, ViewChild, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { getAbilityText } from './../../common/cards';
 import { MonsterService } from '../monster.service';
-import { ElectronService } from 'ngx-electron';
-import { AccordianSegment } from 'card-builder-framework';
 
 @Component({
   selector: 'monster-form',
@@ -20,8 +18,6 @@ export class MonsterFormComponent implements OnInit {
   monster: MonsterComplete;
   originalMonster: MonsterComplete;
   panelOpenState: false;
-  termCodeSegments = Array<AccordianSegment>();
-  imageCodeSegments = Array<AccordianSegment>();
   imageCodes = IMAGE_CODES;
   termCodes = TERM_CODES;
   selectedCard: CardTypes = 'MONSTER';
@@ -31,7 +27,6 @@ export class MonsterFormComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private electronService: ElectronService,
     public monsterSerivce: MonsterService,
   ) {}
 
@@ -45,17 +40,6 @@ export class MonsterFormComponent implements OnInit {
         this.monster = this.monsterSerivce.getMonster(monsterName);
       }
       this.originalMonster = Object.assign({}, this.monster);
-      // test print
-      // let bool = this.electronService.isElectronApp;
-      // let print = this.electronService.ipcRenderer.sendSync('print');
-      // console.log(print);
-      // test store
-      if (this.electronService.isElectronApp) {
-        // this.electronService.ipcRenderer.send('saveMonster', this.monster);
-        // console.log(store);
-      }
-      this.termCodeSegments = TERM_CODES.map(tc => ({value: tc.key, description: tc.value}));
-      this.imageCodeSegments = AccordianSegment.getImageAccordianSegments(IMAGE_CODES);
     });
   }
 
@@ -75,9 +59,6 @@ export class MonsterFormComponent implements OnInit {
   }
 
   copy() {
-    this.electronService.ipcRenderer.invoke('getMonster', this.monster.monsterName).then((result: MonsterComplete) => { 
-      console.log(result);
-    }); 
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';

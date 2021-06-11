@@ -16,12 +16,12 @@ export class ReferenceCardComponent {
   referenceCardText: any = [
     {
       title: 'Selection Phase',
-      items: ['Both players secretly place their action cube on one of the actions on '
-      + 'their action boards, placing all relevant cards on the buffs, discards, and hand sections.']
+      items: ['Secretly place your action cube on one of the actions on '
+      + 'your action board, placing all relevant cards on the buffs, discards, and hand sections.']
     },
     {
       title: 'Action Phase',
-      items: ['Both players reveal their selected actions and then resolve them in this order:'],
+      items: ['Reveal your selected actions and then resolve them in this order:'],
       subOrderedItems: [
         'Pre-Action buffs',
         'Switch actions',

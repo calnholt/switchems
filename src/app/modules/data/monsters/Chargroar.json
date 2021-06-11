@@ -74,16 +74,16 @@
     {
       "buffName": "Revenge",
       "timing": "With Attack",
-      "buffText": "<b>Exhaust</b><br>If the enemy monster is <div><b>resistant</b> [RESIST]</div> to this attack's element, this attack gains <div>+3[ATK].</div>~EXHAUST~~RESIST~",
+      "buffText": "If the enemy monster is <div><b>resistant</b> [RESIST]</div> to this attack's element, this attack gains <div>+3[ATK]. <b>Exhaust</b>.<br></div>~RESIST~~EXHAUST~",
       "flipEventText": "<b>Pierce 3[DEF]</b>.~PIERCE~",
-      "lastUpdated": "Mon, 29 Mar 2021 18:27:51 GMT"
+      "lastUpdated": "Wed, 09 Jun 2021 07:06:12 GMT"
     },
     {
       "buffName": "Prey Upon",
       "timing": "With Attack",
-      "buffText": "<b>Exhaust</b><br>If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains <div>+3[ATK].</div>~EXHAUST~~EFFECTIVE~",
+      "buffText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains <div>+3[ATK]. <b>Exhaust</b>.</div>~EFFECTIVE~~EXHAUST~",
       "flipEventText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains <div>+1[ATK].</div>",
-      "lastUpdated": "Tue, 13 Apr 2021 12:09:33 GMT"
+      "lastUpdated": "Wed, 09 Jun 2021 07:06:12 GMT"
     }
   ],
   "monsterId": 4,
@@ -94,5 +94,6 @@
   "complexity": 1,
   "promiseDescription": "<b>Chargroar</b> is the quintessential assassin – fast, lethal, and fragile. Knockout a monster quickly to improve your buffs!",
   "initiative": 85,
+  "imageFlg": true,
   "lastUpdated": "Sat, 03 Apr 2021 06:43:58 GMT"
 }

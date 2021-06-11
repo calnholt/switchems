@@ -1,38 +1,28 @@
 <div id="monster-card">
-  <div class="card-container">
+  <div class="card-container {{getBackgroundImageCss()}}">
     <div class="name-container">
       <div class="name">{{monster.monsterName}}</div>
       <div class="elements">
         <img *ngFor="let element of monster.elements" class="element-icon" src="{{getElementColorImg(element)}}">
       </div>
     </div>
-    <div class="line-container">
-      <hr align="left" class="name-line left">
-      <span class="dot"></span>
-      <hr align="right" class="name-line right">
+    <div class="monster-image">
+      <img *ngIf ="monster.imageFlg" src="{{getMonsterImage()}}">
+    </div>
+    <div class="stat-container">
+      <div class="stats">
+        <div class="hp-container">
+          {{monster.hp}} <img class="hp" src="./assets/images/symbols/heart.png">
+        </div>
+        <div class="initiative-container">
+          {{monster.initiative}}
+        </div>
+      </div>
     </div>
     <div class="ability-container">
-      <div class="ability-name-container">
-        <span class="ability-name">{{monster.abilityName}}</span>
-      </div>
-      <div class="ability-text-container">
+      <div class="ability-text-container" #ABILITY>
         <span [innerHTML]="getAbilityText()" class="ability-text"></span>
       </div>
-    </div>
-    <div class="bottom-container" [ngClass]="{'bottom' : !monster.elements.length}">
-      <div class="star-container">
-        <span *ngFor="let x of ' '.repeat(3).split(''), let i = index">
-          <mat-icon *ngIf="monster.complexity >= i+1">star</mat-icon>
-          <mat-icon *ngIf="monster.complexity < i+1">star_border</mat-icon>
-        </span>
-      </div>
-      <span class="initiative-container">
-        <span>{{monster.initiative}}</span>
-      </span>
-      <span class="heart-container">
-        <img *ngIf="!monster.unityFlg" class="hp" src="{{getHpIcon()}}">
-        <img *ngIf="monster.unityFlg" class="hp" src="./assets/images/symbols/heart.png">
-      </span>
     </div>
     <div *ngIf="monster.elements.length" class="element-info-container">
       <div class="info-container">

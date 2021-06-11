@@ -27,6 +27,7 @@ export class Monster extends Card {
     promiseDescription?: string;
     extraBoard?: string;
     initiative: number;
+    imageFlg?: boolean;
     savedFlg?: boolean;
 
     hasElement(elemType: ElemType): boolean {

@@ -36,7 +36,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             // Cragadilo,
             Drownigator,
             Flexferno,
-            Galvanite,
+            // Galvanite,
             Galeaffy,
             Oozygoopz,
             // Smolderskulk,
@@ -68,6 +68,7 @@ export const convertFromJSON = (all: Array<any>, keepGUI?: boolean): Array<Monst
             'promiseDescription',
             'extraBoard',
             'initiative',
+            'imageFlg',
             'lastUpdated',
         ];
         if (keepGUI) {
