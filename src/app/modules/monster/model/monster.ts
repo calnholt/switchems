@@ -19,11 +19,9 @@ export class Card extends GUI {
 
 export class Monster extends Card {
     elements: Array<ElemType> = new Array<ElemType>();
-    abilityName: string;
     abilityText?: string;
     hp: number;
     referenceFlg?: boolean = true;
-    complexity: number;
     promiseDescription?: string;
     extraBoard?: string;
     initiative: number;

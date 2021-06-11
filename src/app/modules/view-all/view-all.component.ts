@@ -54,9 +54,8 @@ export class ViewAllComponent implements OnInit {
   isWithinFormSettings(m: MonsterComplete, form: MonsterForm): boolean {
     const isElements = this.filterElement(m.elements, form.elements);
     const isHp = this.filterValueMinMax(m.hp, form.hpMin, form.hpMax);
-    const isComplexity = this.filterValueMinMax(m.complexity, form.complexityMin, form.complexityMax);
     const isTerms = form.terms.length ? this.filterTerms(form.terms, m) : true;
-    return isElements && isHp && isComplexity && isTerms;
+    return isElements && isHp && isTerms;
   }
 
   filterElement(elements: Array<ElemType>, formElements: Array<ElemType>): boolean {

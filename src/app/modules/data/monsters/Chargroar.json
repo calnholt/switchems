@@ -87,11 +87,9 @@
     }
   ],
   "monsterId": 4,
-  "abilityName": "Intimidate",
   "monsterName": "Chargroar",
   "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.</div>~SWITCH~",
   "hp": 7,
-  "complexity": 1,
   "promiseDescription": "<b>Chargroar</b> is the quintessential assassin – fast, lethal, and fragile. Knockout a monster quickly to improve your buffs!",
   "initiative": 85,
   "imageFlg": true,

@@ -55,16 +55,14 @@ export const convertFromJSON = (all: Array<any>, keepGUI?: boolean): Array<Monst
     let out = new Array<MonsterComplete>();
     all.forEach(json => {
         const monster = new MonsterComplete();
-        if (!json.abilityName) {
+        if (!json.monsterName) {
             return null;
         }
         let MONSTER_PROPERTIES = [
             'monsterId',
-            'abilityName',
             'monsterName',
             'abilityText',
             'hp',
-            'complexity',
             'promiseDescription',
             'extraBoard',
             'initiative',

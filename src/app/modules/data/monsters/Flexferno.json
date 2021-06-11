@@ -82,11 +82,9 @@
     }
   ],
   "monsterId": 2,
-  "abilityName": "Heatwave",
   "monsterName": "Flexferno",
   "abilityText": "Whenever this monster flips one or more buff cards that <b>belongs</b> to it, the attack gains <div>+1[ATK].</div>~BELONGS~",
   "hp": 8,
-  "complexity": 1,
   "promiseDescription": "<b>Flexferno</b> loves himself some <b>Flexferno</b>! A few strong flips can devastate an enemy monster.",
   "initiative": 20,
   "lastUpdated": "Mon, 12 Apr 2021 20:58:22 GMT"

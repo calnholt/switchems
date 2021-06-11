@@ -17,26 +17,6 @@
     </table>
   </div>
   <div class="table-container">
-    <h2>Number of monsters with complexity</h2>
-    <table>
-      <thead>
-        <tr>
-          <th *ngFor="let complexity of COMPLEXITY">
-            <span *ngFor="let x of ' '.repeat(3).split(''), let i = index">
-              <mat-icon *ngIf="complexity >= i+1">star</mat-icon>
-              <mat-icon *ngIf="complexity < i+1">star_border</mat-icon>
-            </span>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td *ngFor="let complexity of COMPLEXITY">{{getNumberOfMonsterComplexity(complexity)}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="table-container">
     <h2>Number of attacks with elements</h2>
     <table>
       <thead>

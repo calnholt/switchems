@@ -80,11 +80,9 @@
       "lastUpdated": "Tue, 13 Apr 2021 15:58:33 GMT"
     }
   ],
-  "abilityName": "Gooped",
   "monsterName": "Oozygoopz",
   "abilityText": "When this monster <b>switches in</b>, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck.~SWITCH~",
   "hp": 10,
-  "complexity": 3,
   "promiseDescription": "Drive your opponent crazy by loading their deck with a bunch of useless goop!",
   "extraBoard": "GOOP",
   "initiative": 15,

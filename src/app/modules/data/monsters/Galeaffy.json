@@ -83,11 +83,9 @@
     }
   ],
   "monsterId": 8,
-  "abilityName": "Gusting Winds",
   "monsterName": "Galeaffy",
   "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.</div><br><br>This monster's [SPD][PQ] do not decay.~SWITCH~",
   "hp": 9,
-  "complexity": 2,
   "promiseDescription": "The master of speed has arrived!",
   "initiative": 80,
   "lastUpdated": "Fri, 02 Apr 2021 07:07:24 GMT"

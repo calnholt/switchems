@@ -46,7 +46,6 @@ export class MonsterFormComponent implements OnInit {
   createRandomMonster() {
     this.monster = new MonsterComplete();
     this.monster.hp = this.getRandomNumber(20) + 1;
-    this.monster.complexity = this.getRandomNumber(3) + 1;
     this.monster.savedFlg = true;
     this.monster.elements = [ELEMENTS[this.getRandomNumber(ELEMENTS.length)]];
     this.monster.actions.push(new Action(), new Action(), new Action(), new Action());

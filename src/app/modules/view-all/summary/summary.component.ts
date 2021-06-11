@@ -28,10 +28,6 @@ export class SummaryComponent implements OnInit {
     return this.monsters.filter(m => m.elements.includes(elem)).length;
   }
 
-  getNumberOfMonsterComplexity(num: number): number {
-    return this.monsters.filter(m => m.complexity === num).length;
-  }
-
   getNumberOfAttacksPerElement(elem: ElemType): number {
     let num = 0;
     this.monsters.forEach(m => {

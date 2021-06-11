@@ -83,11 +83,9 @@
     }
   ],
   "monsterId": 1,
-  "abilityName": "Vineshield",
   "monsterName": "Stalagrowth",
   "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.</div> ~SWITCH~",
   "hp": 10,
-  "complexity": 1,
   "promiseDescription": "<b>Stallagrowth</b> plays for the long game – slowly drain the enemy's health and stand your ground with bolstered defense.",
   "initiative": 10,
   "imageFlg": true,

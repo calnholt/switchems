@@ -83,11 +83,9 @@
     }
   ],
   "monsterId": 7,
-  "abilityName": "Static Shock",
   "monsterName": "Zappguin",
   "abilityText": "If this monster's attack actions are <b>faster</b>, this monster's attack <div>gains +1[ATK].</div>~FASTER~",
   "hp": 8,
-  "complexity": 1,
   "promiseDescription": "<b>Zappguin</b> wants nothing more than to <b>stun</b> [STATUS] and <b>flinch</b> every monster it meets.",
   "initiative": 40,
   "lastUpdated": "Sun, 28 Mar 2021 08:43:57 GMT"

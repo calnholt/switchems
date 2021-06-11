@@ -82,11 +82,9 @@
     }
   ],
   "monsterId": 9,
-  "abilityName": "Wing Clip",
   "monsterName": "Vulturock",
   "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.</div>~SWITCH~",
   "hp": 9,
-  "complexity": 1,
   "promiseDescription": "<b>Vulturock</b> hits hard – including itself!",
   "initiative": 75,
   "lastUpdated": "Sat, 03 Apr 2021 07:07:21 GMT"
