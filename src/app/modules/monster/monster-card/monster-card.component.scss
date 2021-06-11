@@ -74,23 +74,13 @@
                     top: -29px;
                 }
             }
-            .elements{
-                display: grid;
-                grid-template-rows: auto;
-                justify-items: center;
-                .element-icon{
-                    max-height: 30px;
-                }
-            }
         }
         .name-container{
             border-radius: 6px;
-            margin: 3px;
-            border: 2px solid darkgray;
-            border-top: unset;
+            margin: 5px;
             display: flex;
             justify-content: space-between;
-            height: 26px;
+            height: 28px;
             div {
                 padding: 1px 6px;
             }
@@ -112,6 +102,8 @@
                 border-radius: 0px 4px 4px 0px;
                 display: flex;
                 align-items: center;
+                border: 2px solid black;
+                border-left: unset;
                 img {
                     max-height: 18px;
                 }

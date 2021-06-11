@@ -62,7 +62,7 @@ export class MonsterCardComponent implements AfterViewChecked {
   setAbilityTextHeight(): void {
     // full height = 255px
     const height = this.ability.nativeElement.offsetHeight;
-    this.ability.nativeElement.style.top = `${210 - height}px`;
+    this.ability.nativeElement.style.top = `${206 - height}px`;
   }
 
 }
