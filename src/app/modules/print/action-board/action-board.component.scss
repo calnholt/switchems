@@ -5,7 +5,7 @@
     .card-container{
         font-family: $header-font;
         position: relative;
-        border: rgb(216, 216, 216) 2px solid;
+        border: rgb(255, 210, 210) 2px solid;
         border-radius: 11px;
         height: $card-height;
         width: $card-width;
@@ -144,7 +144,7 @@
                 background-color: unset;
                 display: flex;
                 .maneuver {
-                    padding: 18px 0px 0px 12px;
+                    padding: 11px 0px 0px 12px;
                     img {
                         max-height: 20px;
                     }

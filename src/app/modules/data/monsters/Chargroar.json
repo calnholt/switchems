@@ -5,8 +5,8 @@
   ],
   "actions": [
     {
-      "abilityName": "Lightning",
-      "abilityText": "If this attack is <b>faster</b>,  this attack gains +3[ATK].~FASTER~",
+      "abilityName": "Lightning Fang",
+      "abilityText": "If this attack is <b>faster</b>, this attack gains +3[ATK].~FASTER~",
       "element": "Electric",
       "statusFlg": false,
       "attack": 4,
@@ -43,7 +43,7 @@
       "lastUpdated": "Thu, 01 Apr 2021 20:00:04 GMT"
     },
     {
-      "abilityName": "Flamethrower",
+      "abilityName": "Blazing Roar",
       "abilityText": "[FLIP]. <br><br><b>Pierce 2[DEF]</b>~PIERCE~",
       "element": "Fire",
       "statusFlg": false,
@@ -74,16 +74,16 @@
     {
       "buffName": "Revenge",
       "timing": "With Attack",
-      "buffText": "If the enemy monster is <div><b>resistant</b> [RESIST]</div> to this attack's element, this attack gains <div>+3[ATK]. <b>Exhaust</b>.<br></div>~RESIST~~EXHAUST~",
-      "flipEventText": "<b>Pierce 3[DEF]</b>.~PIERCE~",
-      "lastUpdated": "Wed, 09 Jun 2021 07:06:12 GMT"
+      "buffText": "If the enemy monster is <div><b>resistant</b> [RESIST]</div> to this attack's element, this attack gains +2[ATK] and <b>exhaust</b>. If not, this attack gains <b>recoil 1[ATK]</b>.~RESIST~~RECOIL~~EXHAUST~",
+      "flipEventText": "<b>Pierce 2[DEF]</b>",
+      "lastUpdated": "Mon, 05 Jul 2021 10:15:05 GMT"
     },
     {
       "buffName": "Prey Upon",
       "timing": "With Attack",
-      "buffText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains <div>+3[ATK]. <b>Exhaust</b>.</div>~EFFECTIVE~~EXHAUST~",
+      "buffText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains +2[ATK] and <b>exhaust</b>. If not, this attack gains <b>recoil 1[ATK]</b>.~EFFECTIVE~~EXHAUST~",
       "flipEventText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains <div>+1[ATK].</div>",
-      "lastUpdated": "Wed, 09 Jun 2021 07:06:12 GMT"
+      "lastUpdated": "Mon, 05 Jul 2021 10:15:05 GMT"
     }
   ],
   "monsterId": 4,

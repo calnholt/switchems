@@ -57,6 +57,11 @@ export class MonsterFormComponent implements OnInit {
     return Math.floor(Math.random() * max);
   }
 
+  getLastUpdateFormatted(): string {
+    const locale = new Date(this.monster.lastUpdated).toLocaleString();
+    return locale.substr(0, locale.indexOf(','));
+  }
+
   copy() {
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';

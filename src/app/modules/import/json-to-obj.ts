@@ -1,4 +1,4 @@
-import { default as Stallagrowth } from '../data/monsters/Stallagrowth.json';
+import { default as Stalagrowth } from '../data/monsters/Stalagrowth.json';
 import { default as Cleansitoad } from '../data/monsters/Cleansitoad.json';
 import { default as Chargroar } from '../data/monsters/Chargroar.json';
 import { default as Flexferno } from '../data/monsters/Flexferno.json';
@@ -40,7 +40,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             Galeaffy,
             Oozygoopz,
             // Smolderskulk,
-            Stallagrowth,
+            Stalagrowth,
             // Steamie,
             // Squirrberus,
             Phantomaton,

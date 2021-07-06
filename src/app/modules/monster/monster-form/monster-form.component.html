@@ -49,7 +49,7 @@
             Average Speed: <span>{{monster.getAverageSpeed()}}</span>
           </div>
           <div class="promise-title">
-            Last Update: <span>{{monster.lastUpdated}}</span>
+            Last Update: <span>{{getLastUpdateFormatted()}}</span>
           </div>
         </div>
         <button class="save-button" mat-stroked-button (click)="copy()">Copy Monster to Clipboard</button>

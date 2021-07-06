@@ -41,7 +41,7 @@
     },
     {
       "abilityName": "Surge",
-      "abilityText": "<b>Spammable</b>. ~SPAM~",
+      "abilityText": "<b>Spammable</b>. <br><br>If the enemy monster is <b>frail [FRAIL]</b>, this attack gains +2[ATK],~SPAM~",
       "element": "Water",
       "statusFlg": false,
       "attack": 1,
@@ -49,44 +49,44 @@
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Fri, 26 Feb 2021 08:02:45 GMT"
+      "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Abrupt Weakness",
       "timing": "Pre-Actions",
-      "buffText": "<b>Fatigue [STATUS], Exhaust</b> ~FATIGUE~~EXHAUST~",
+      "buffText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "flipEventText": "The enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
-      "lastUpdated": "Thu, 25 Feb 2021 17:22:19 GMT"
+      "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"
     },
     {
       "buffName": "Famished",
       "timing": "Post Actions",
       "buffText": "This monster heals <div>X[HP],</div> where X is either the total number of [PQ] stacks this monster has, or the total number of [NQ] stacks the enemy monster has.",
-      "flipEventText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
-      "lastUpdated": "Sat, 03 Apr 2021 06:41:06 GMT"
+      "flipEventText": "[+].",
+      "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"
     },
     {
       "buffName": "Cripple",
-      "timing": "With Attack",
-      "buffText": "<b>Pierce 2[DEF]</b>. The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}~PIERCE~",
-      "flipEventText": "[+]",
-      "lastUpdated": "Thu, 01 Apr 2021 20:23:00 GMT"
+      "timing": "Pre-Actions",
+      "buffText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
+      "flipEventText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
+      "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"
     },
     {
       "buffName": "Tremble",
-      "timing": "With Attack",
-      "buffText": "<b>Super [B] [B]</b><br><br>The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}</div> and <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.</div>~SUPER~",
+      "timing": "Pre-Actions",
+      "buffText": "<b>Super [B] [B], Exhaust.</b><br><br>The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}</div> and <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.</div>~SUPER~ ~EXHAUST~",
       "flipEventText": "If the enemy monster is <div><b>frail</b> [FRAIL],</div> this attack gains <div>+1[ATK].</div>",
-      "lastUpdated": "Tue, 13 Apr 2021 11:56:06 GMT"
+      "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"
     }
   ],
   "monsterId": 5,
   "monsterName": "Drownigator",
   "abilityText": "When this monster <b>switches in</b>, <div>[+].</div>~SWITCH~",
-  "hp": 9,
+  "hp": 8,
   "promiseDescription": "<b>Drownigator</b> is a total nuisance with debuffs.",
   "initiative": 70,
-  "lastUpdated": "Sat, 01 May 2021 12:53:33 GMT"
+  "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"
 }

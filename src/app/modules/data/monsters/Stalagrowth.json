@@ -5,19 +5,19 @@
   ],
   "actions": [
     {
-      "abilityName": "Leech Seed",
-      "abilityText": "<b>Drain [STATUS], Single Use. </b><br><br>If this monster has no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.</div> ~DRAIN~~SINGLE~",
+      "abilityName": "Gravelcrust Grip",
+      "abilityText": "<b>Drain [STATUS], Recoil 3[ATK], Single Use. </b><br><br>If this monster has no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.</div> ~DRAIN~~SINGLE~",
       "element": "Leaf",
       "statusFlg": true,
       "speed": 2,
       "draw": 0,
       "discard": 1,
       "buff": 0,
-      "lastUpdated": "Thu, 01 Apr 2021 20:15:39 GMT"
+      "lastUpdated": "Tue, 06 Jul 2021 05:36:04 GMT"
     },
     {
       "abilityName": "Vine Whips",
-      "abilityText": "Remove all [STATUS] from the enemy monster.<br><br>This attack gains <div>+2[ATK]</div> for each [STATUS] removed.<br><br>If a <b>drain</b> [STATUS] was removed this way, enable <b>Leech Seed</b>.",
+      "abilityText": "Remove all [STATUS] from the enemy monster. This attack gains <div>+2[ATK]</div> for each [STATUS] removed.<br><br>If the enemy monster <div><b>Switched In [SL]</b></div> this turn and <b>Leech Seed</b> is disabled, <div><b>drain [STATUS]</b>.</div>",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 1,
@@ -25,7 +25,7 @@
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Sat, 27 Feb 2021 21:32:11 GMT"
+      "lastUpdated": "Tue, 06 Jul 2021 05:33:52 GMT"
     },
     {
       "abilityName": "Pulverize",
@@ -63,9 +63,9 @@
     {
       "buffName": "Mossy Overgrowth",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super [B] [B]</b>. This monster gains <div>+3[DEF]</div> this turn. ~SUPER~",
+      "buffText": "<b>Super [B] [B]. </b><br><br>This monster gains <div>+3[DEF]</div> this turn. ~SUPER~",
       "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "lastUpdated": "Wed, 09 Jun 2021 07:04:16 GMT"
+      "lastUpdated": "Tue, 06 Jul 2021 05:33:52 GMT"
     },
     {
       "buffName": "Concussion",
@@ -75,19 +75,19 @@
       "lastUpdated": "Wed, 09 Jun 2021 07:04:16 GMT"
     },
     {
-      "buffName": "Gravelcrust Grip",
+      "buffName": "Leech Seed",
       "timing": "Pre-Actions",
       "buffText": "<b>Super [B] [B], Exhaust, Drain [STATUS]</b> ~SUPER~~EXHAUST~~DRAIN~",
       "flipEventText": "If the enemy monster has a <div>[STATUS],</div>this attack gains <div>+1[ATK].</div> ~STATUS~",
-      "lastUpdated": "Tue, 13 Apr 2021 11:59:45 GMT"
+      "lastUpdated": "Tue, 06 Jul 2021 05:36:04 GMT"
     }
   ],
   "monsterId": 1,
   "monsterName": "Stalagrowth",
-  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.</div> ~SWITCH~",
-  "hp": 10,
+  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.</div> ~SWITCH~",
+  "hp": 9,
   "promiseDescription": "<b>Stallagrowth</b> plays for the long game – slowly drain the enemy's health and stand your ground with bolstered defense.",
   "initiative": 10,
   "imageFlg": true,
-  "lastUpdated": "Wed, 09 Jun 2021 07:04:16 GMT"
+  "lastUpdated": "Tue, 06 Jul 2021 05:33:52 GMT"
 }

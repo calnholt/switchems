@@ -1,7 +1,7 @@
 {
   "elements": [
-    "Water",
-    "Leaf"
+    "Leaf",
+    "Water"
   ],
   "actions": [
     {
@@ -17,14 +17,14 @@
     },
     {
       "abilityName": "Viscous Split",
-      "abilityText": "",
+      "abilityText": "If this attack deals two or more damage, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck.",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 1,
       "speed": 8,
       "draw": 1,
-      "buff": 1,
-      "lastUpdated": "Tue, 13 Apr 2021 15:58:33 GMT"
+      "buff": 2,
+      "lastUpdated": "Mon, 05 Jul 2021 11:04:21 GMT"
     },
     {
       "abilityName": "Reclaim",
@@ -34,8 +34,8 @@
       "attack": 2,
       "speed": 3,
       "discard": 0,
-      "buff": 2,
-      "lastUpdated": "Tue, 13 Apr 2021 15:58:33 GMT"
+      "buff": 1,
+      "lastUpdated": "Tue, 06 Jul 2021 04:59:33 GMT"
     },
     {
       "abilityName": "Lickety Split",
@@ -53,38 +53,38 @@
   "buffs": [
     {
       "buffName": "Thick Goop",
-      "timing": "With Attack",
-      "buffText": "This monster gains +X[DEF] this turn, where X is the number of <div><b>Goop</b> [GOOP]</div> cards into your opponent's discard pile.",
-      "flipEventText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.</div>",
-      "lastUpdated": "Tue, 13 Apr 2021 15:58:33 GMT"
+      "timing": "Pre-Actions",
+      "buffText": "If there are two or less <b>Goop</b> [GOOP] cards in your supply, this monster gains <div>+2[DEF]</div> this turn. If not, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck instead.",
+      "flipEventText": "If this attack deals two or more damage, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck.",
+      "lastUpdated": "Tue, 06 Jul 2021 04:59:33 GMT"
     },
     {
       "buffName": "Hostile Goop",
       "timing": "With Attack",
-      "buffText": "This attack gains +X[ATK], where X is the number of <div><b>Goop</b> [GOOP]</div> cards into your opponent's discard pile.",
+      "buffText": "If there are two or less <b>Goop</b> [GOOP] cards in your supply, this monster gains <div>+2[ATK]</div> this turn. If not, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck instead.",
       "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div>",
-      "lastUpdated": "Tue, 13 Apr 2021 15:58:33 GMT"
+      "lastUpdated": "Tue, 06 Jul 2021 04:59:33 GMT"
     },
     {
       "buffName": "Slippery Goop",
-      "timing": "With Attack",
-      "buffText": "This attack gains +X[SPD], where X is the number of <div><b>Goop</b> [GOOP]</div> cards into your opponent's discard pile.",
+      "timing": "Pre-Actions",
+      "buffText": "If there are two or less <b>Goop</b> [GOOP] cards in your supply, this monster gains <div>+2[SPD]</div> this turn. If not, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck instead.",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
-      "lastUpdated": "Tue, 13 Apr 2021 15:58:33 GMT"
+      "lastUpdated": "Tue, 06 Jul 2021 04:59:33 GMT"
     },
     {
       "buffName": "Goopy Goop",
-      "timing": "With Attack",
-      "buffText": "<b>Super [B] [B], Exhaust. </b><br><br>Shuffle two <div><b>Goop</b> [GOOP]</div> cards into your opponent's deck.~SUPER~~EXHAUST~",
-      "flipEventText": "Shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck.",
-      "lastUpdated": "Tue, 13 Apr 2021 15:58:33 GMT"
+      "timing": "Post Actions",
+      "buffText": "<b>Super [B] [B]. </b><br><br>If this attack is <b>faster</b>, shuffle two <div><b>Goop</b> [GOOP]</div> cards into your opponent's deck. If not, shuffle one instead. ~SUPER~~FASTER~",
+      "flipEventText": "If this attack deals two or more damage, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck.",
+      "lastUpdated": "Tue, 06 Jul 2021 04:59:33 GMT"
     }
   ],
   "monsterName": "Oozygoopz",
-  "abilityText": "When this monster <b>switches in</b>, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck.~SWITCH~",
-  "hp": 10,
+  "abilityText": "If <b>Oozygoopz</b> is your active monster and a <div><b>Goop [GOOP]</b></div> card is returned to your supply, if there are now <b>exactly</b> three <div><b>Goop [GOOP]</b></div> cards in your supply, this monster <div>heals 1[HP].</div>",
+  "hp": 9,
   "promiseDescription": "Drive your opponent crazy by loading their deck with a bunch of useless goop!",
   "extraBoard": "GOOP",
   "initiative": 15,
-  "lastUpdated": "Tue, 13 Apr 2021 15:58:33 GMT"
+  "lastUpdated": "Tue, 06 Jul 2021 05:10:12 GMT"
 }

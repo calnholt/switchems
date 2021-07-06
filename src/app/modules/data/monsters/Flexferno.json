@@ -29,14 +29,14 @@
     {
       "abilityName": "No Pain, No Gain",
       "abilityText": "[FLIP] [FLIP]. <br><br><b>Recoil 1[ATK]</b>~RECOIL~",
-      "element": "Fire",
+      "element": "Rock",
       "statusFlg": false,
       "attack": 1,
       "speed": 3,
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Fri, 26 Feb 2021 08:08:54 GMT"
+      "lastUpdated": "Tue, 06 Jul 2021 06:01:48 GMT"
     },
     {
       "abilityName": "Scorch",
@@ -56,15 +56,15 @@
       "buffName": "Sauna",
       "timing": "Pre-Actions",
       "buffText": "<b>Wound [STATUS], Exhaust</b>~WOUND~~EXHAUST~",
-      "flipEventText": "Remove a <div>[STATUS]</div> from this monster.",
-      "lastUpdated": "Sat, 03 Apr 2021 07:25:48 GMT"
+      "flipEventText": "If any previous or future [FLIP] <b>belongs</b> to your active monster this turn, this attack gains <div>+1[ATK].</div> ~BELONGS~",
+      "lastUpdated": "Tue, 06 Jul 2021 06:01:48 GMT"
     },
     {
       "buffName": "Inner Strength",
       "timing": "With Attack",
       "buffText": "[FLIP] [FLIP]",
-      "flipEventText": "[FLIP]. If the next [FLIP] <b>belongs</b> to your active monster, this attack gains <div>+1[ATK].</div> ~BELONGS~",
-      "lastUpdated": "Tue, 13 Apr 2021 11:55:31 GMT"
+      "flipEventText": "Remove a <div>[STATUS]</div> from this monster.",
+      "lastUpdated": "Tue, 06 Jul 2021 06:01:48 GMT"
     },
     {
       "buffName": "Keep Up",

@@ -17,7 +17,7 @@ export class StatCubeBoardAltComponent implements OnInit {
   strengthen: Path = SYMBOLS_PATH + 'strengthen.png';
   ATK: Array<String> = ['+2', '+1', '+1', '0', '-1', '-1'];
   SPD: Array<String> = ['+3', '+2', '+1', '0', '-1', '-2'];
-  DEF: Array<String> = ['+2', '+2', '+2', '0'];
+  DEF: Array<String> = ['+2', '+1', '+1', '0'];
   OPACITY: Array<String> = ['op-75', 'op-50', 'op-25', 'op-0', 'op-25', 'op-50'];
 
   constructor() { }
