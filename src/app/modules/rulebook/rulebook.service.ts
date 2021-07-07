@@ -182,16 +182,10 @@ export class RulebookService {
               text: 'Elements of the monster',
             },
             {
+              text: 'HP (hit points) and Initiative (determines when abilities resolve and breaks speed ties)',
+            },
+            {
               text: 'Monster ability name and ability text',
-            },
-            {
-              text: 'Complexity (loosely describes how difficult the monster is to play, one to three stars)',
-            },
-            {
-              text: 'Initiative (determines when abilities resolve and breaks speed ties)',
-            },
-            {
-              text: 'HP (hit points)',
             },
             {
               text: 'Elemental weaknesses (attacks of these types against this monster result in one additional <a href="flip_effects">flip</a> [FLIP] for the enemy monster\'s attack)',
