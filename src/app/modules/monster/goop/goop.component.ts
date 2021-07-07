@@ -13,8 +13,8 @@ import { ImageService } from '../../data/image.service';
 })
 export class GoopComponent implements OnInit {
 
-  goopText: string = 'Remove this card from your deck.';
-  goopFlipText: string = 'You may have this attack gain <div><b>recoil</b> 1[ATK].</div> If you do, remove this card from your deck.~RECOIL~'
+  goopText: string = 'Return this card to your opponent\'s supply.';
+  goopFlipText: string = 'You may have this attack gain <div><b>recoil</b> 1[ATK].</div> If you do, return this card to your opponent\'s supply. ~RECOIL~';
 
   constructor(public imageService: ImageService) { }
 

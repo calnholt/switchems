@@ -17,7 +17,7 @@
     },
     {
       "abilityName": "Vine Whips",
-      "abilityText": "Remove all [STATUS] from the enemy monster. This attack gains <div>+2[ATK]</div> for each [STATUS] removed.<br><br>If the enemy monster <div><b>Switched In [SL]</b></div> this turn and <b>Leech Seed</b> is disabled, <div><b>drain [STATUS]</b>.</div>",
+      "abilityText": "Remove all [STATUS] from the enemy monster. This attack gains <div>+2[ATK]</div> for each [STATUS] removed.<br><br>If the enemy monster <div><b>Switched In [SL]</b></div> this turn,  <div><b>drain [STATUS]</b>.</div>",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 1,
@@ -25,7 +25,7 @@
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Tue, 06 Jul 2021 05:33:52 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 05:16:58 GMT"
     },
     {
       "abilityName": "Pulverize",

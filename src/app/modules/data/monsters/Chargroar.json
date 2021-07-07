@@ -91,7 +91,7 @@
   "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.</div>~SWITCH~",
   "hp": 7,
   "promiseDescription": "<b>Chargroar</b> is the quintessential assassin – fast, lethal, and fragile. Knockout a monster quickly to improve your buffs!",
-  "initiative": 85,
+  "initiative": 80,
   "imageFlg": true,
-  "lastUpdated": "Sat, 03 Apr 2021 06:43:58 GMT"
+  "lastUpdated": "Wed, 07 Jul 2021 06:36:56 GMT"
 }

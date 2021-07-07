@@ -20,24 +20,24 @@
       "abilityText": "If this attack is <b>faster</b>, [FLIP] [FLIP]. ~FASTER~",
       "element": "Water",
       "statusFlg": false,
-      "attack": 3,
+      "attack": 2,
       "speed": 4,
       "draw": 0,
       "discard": 0,
       "buff": 1,
-      "lastUpdated": "Fri, 26 Feb 2021 08:39:49 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 07:02:19 GMT"
     },
     {
       "abilityName": "Vortex",
-      "abilityText": "This attack gains two [B] slots if the enemy monster has a [STATUS]. ~STATUS~",
+      "abilityText": "This attack gains two [B] slots if the enemy monster has a [STATUS]. <br><br>This attack gains [FLIP] for each [B] slot used.~STATUS~",
       "element": "Electric",
       "statusFlg": false,
       "attack": 2,
-      "speed": 7,
-      "draw": 1,
-      "discard": 0,
-      "buff": 1,
-      "lastUpdated": "Fri, 26 Feb 2021 08:39:49 GMT"
+      "speed": 6,
+      "draw": 0,
+      "discard": 1,
+      "buff": 0,
+      "lastUpdated": "Wed, 07 Jul 2021 07:05:46 GMT"
     },
     {
       "abilityName": "Paralyze",
@@ -55,31 +55,31 @@
     {
       "buffName": "Zap",
       "timing": "Post Actions",
-      "buffText": "<b>Stun [STATUS]</b>~STUN~",
-      "flipEventText": "<b>Stun</b> [STATUS] ~STUN~",
-      "lastUpdated": "Wed, 18 Nov 2020 20:14:04 GMT"
+      "buffText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.</div>",
+      "flipEventText": "If the enemy monster switched in this turn, that monster <div>suffers 1[ATK].</div>",
+      "lastUpdated": "Wed, 07 Jul 2021 07:02:19 GMT"
     },
     {
       "buffName": "Static Shock",
       "timing": "Pre-Actions",
       "buffText": "Your monster attacks gain <div>+1[ATK]</div> for each different [STATUS] the enemy monster has.~STATUS~~AURA~",
-      "flipEventText": "If the enemy monster has a <div>[STATUS],</div> this attack gains <b>flinch</b>.",
+      "flipEventText": "If the enemy monster has a <div>[STATUS]</div> and this attack is <b>faster</b>, this attack gains <b>flinch</b> and <b>exhaust</b>.",
       "auraDuration": 6,
-      "lastUpdated": "Sun, 28 Mar 2021 08:50:13 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 07:02:19 GMT"
     },
     {
       "buffName": "High Voltage",
       "timing": "With Attack",
-      "buffText": "<b>Pierce <div>2[DEF]</b>.</div> If the enemy monster has a <div>[STATUS],</div> this attack gains  <b>flinch</b>.~PIERCE~~FLINCH~",
-      "flipEventText": "If the enemy monster has a <div>[STATUS],</div> this attack gains <b>flinch</b>.",
-      "lastUpdated": "Mon, 01 Mar 2021 10:55:59 GMT"
+      "buffText": "If the enemy monster has a <div>[STATUS],</div> the enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.</div>~PIERCE~",
+      "flipEventText": "If the enemy monster has a <div>[STATUS]</div> and this attack is <b>faster</b>, this attack gains <b>flinch</b> and <b>exhaust</b>.",
+      "lastUpdated": "Wed, 07 Jul 2021 07:02:19 GMT"
     },
     {
       "buffName": "Retaliate",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]. If this attack is <b>slower</b>, this attack gains +2[ATK] instead.~SLOWER~",
-      "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
-      "lastUpdated": "Sat, 03 Apr 2021 07:05:59 GMT"
+      "flipEventText": "If the enemy monster switched in this turn, that monster <div>suffers 1[ATK].</div>",
+      "lastUpdated": "Wed, 07 Jul 2021 07:02:19 GMT"
     }
   ],
   "monsterId": 7,

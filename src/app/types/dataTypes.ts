@@ -45,7 +45,7 @@ export const TERM_CODES = [
     new Term('Drain', `~DRAIN~`, `At the end of the turn, monsters with <b>Drain</b> [STATUS] suffer <div>1[ATK]</div> and your active monster heals `
     + `<div>1[HP].</div>`),
     new Term('Weak', `~EFFECTIVE~`, `Monsters are <b>Weak</b> to elements in the [WEAK] section of their monster card.`),
-    new Term('Exhaust', `~EXHAUST~`, `<b>Exhaust</b> buffs are removed from the game after played as buffs.`),
+    new Term('Exhaust', `~EXHAUST~`, `Cards with <b>exhaust</b> are removed from the game after they are resolved.`),
     new Term('Faster', `~FASTER~`, `This attack is <b>faster</b> if both players selected a monster action and yours has a higher speed, or if your opponent selected a standard action.`),
     new Term('Fatigue', `~FATIGUE~`, `Whenever a monster with <b>Fatigue</b> [STATUS] attacks, the attack gains <div><b>recoil X[ATK]</b></div>, where X is the number of buff slots used.`),
     new Term('Flinch', `~FLINCH~`, `Actions with <b>Flinch</b> prevent the enemy monster's monster action if this action is faster.`),

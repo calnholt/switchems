@@ -16,7 +16,7 @@ export class StatCubeBoardAltComponent implements OnInit {
   frail: Path = SYMBOLS_PATH + 'frail.png';
   strengthen: Path = SYMBOLS_PATH + 'strengthen.png';
   ATK: Array<String> = ['+2', '+1', '+1', '0', '-1', '-1'];
-  SPD: Array<String> = ['+3', '+2', '+1', '0', '-1', '-2'];
+  SPD: Array<String> = ['+3', '+2', '+2', '0', '-2', '-2'];
   DEF: Array<String> = ['+2', '+1', '+1', '0'];
   OPACITY: Array<String> = ['op-75', 'op-50', 'op-25', 'op-0', 'op-25', 'op-50'];
 

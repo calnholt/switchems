@@ -54,10 +54,11 @@
   "buffs": [
     {
       "buffName": "Sauna",
-      "timing": "Pre-Actions",
-      "buffText": "<b>Wound [STATUS], Exhaust</b>~WOUND~~EXHAUST~",
+      "timing": "Post Actions",
+      "buffText": "Whenever your monster flips one or more buff cards that <b>belongs</b> to it, the attack gains <div>+1[ATK].</div>~AURA~",
       "flipEventText": "If any previous or future [FLIP] <b>belongs</b> to your active monster this turn, this attack gains <div>+1[ATK].</div> ~BELONGS~",
-      "lastUpdated": "Tue, 06 Jul 2021 06:01:48 GMT"
+      "auraDuration": 6,
+      "lastUpdated": "Wed, 07 Jul 2021 05:06:09 GMT"
     },
     {
       "buffName": "Inner Strength",
@@ -69,16 +70,16 @@
     {
       "buffName": "Keep Up",
       "timing": "Pre-Actions",
-      "buffText": "This attack gains +1[SPD]. If the enemy monster has a <div>[STATUS],</div>this attack gains <div>+2[SPD]</div> instead. ~STATUS~",
+      "buffText": "This attack gains +1[SPD]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+2[SPD]</div> instead. ~STATUS~",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div> ",
-      "lastUpdated": "Sat, 03 Apr 2021 07:25:48 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 05:06:09 GMT"
     },
     {
       "buffName": "Sear",
       "timing": "With Attack",
-      "buffText": "This attack gains +1[ATK]. If the enemy monster has a <div>[STATUS],</div>this attack gains <div>+2[ATK]</div> instead. ~STATUS~",
+      "buffText": "This attack gains +1[ATK]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+2[ATK]</div> instead. ~STATUS~",
       "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div> after the attack.",
-      "lastUpdated": "Sat, 27 Feb 2021 21:11:34 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 05:06:09 GMT"
     }
   ],
   "monsterId": 2,

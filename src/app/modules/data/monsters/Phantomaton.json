@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Arraydicate",
-      "abilityText": "If the opponent selected a switch action this turn, this attack gains <div><b>pierce 2[DEF]</b>.</div>~PIERCE~",
+      "abilityText": "If the enemy monster switched in this turn, this attack gains <div><b>pierce 2[DEF]</b>.</div>~PIERCE~",
       "element": "Death",
       "statusFlg": false,
       "attack": 3,
@@ -37,19 +37,19 @@
       "draw": 0,
       "discard": 1,
       "buff": 2,
-      "lastUpdated": "Sun, 21 Mar 2021 09:41:05 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 05:58:10 GMT"
     },
     {
       "abilityName": "Exception Caught",
-      "abilityText": "<b>Single use. </b><br><br>[FLIP] [FLIP].</div>~SINGLE~",
+      "abilityText": "If this attack deals four or more damage, the opponent [-] a card of their choice. If your opponent has no cards in hand, [+].",
       "element": "Death",
       "statusFlg": false,
-      "attack": 5,
+      "attack": 3,
       "speed": 3,
       "draw": 0,
       "discard": 2,
       "buff": 1,
-      "lastUpdated": "Thu, 03 Jun 2021 19:40:46 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 05:58:10 GMT"
     }
   ],
   "buffs": [
@@ -57,8 +57,8 @@
       "buffName": "Power Hotfix",
       "timing": "Pre-Actions",
       "buffText": "If the opponent selected a switch action this turn, this monster gains {\"stat\": \"ATK\", \"num\": 3, \"isPositive\": true}.",
-      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div>",
-      "lastUpdated": "Sat, 03 Apr 2021 07:02:33 GMT"
+      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true} after the attack.</div>",
+      "lastUpdated": "Wed, 07 Jul 2021 05:58:10 GMT"
     },
     {
       "buffName": "Agility Hotfix",
@@ -85,9 +85,9 @@
   ],
   "monsterId": 10,
   "monsterName": "Phantomaton",
-  "abilityText": "If <b>Exception Caught</b> is enabled, your opponent must [-] an additional card when performing a switch action. <br><br>If <b>Exception Caught</b> is disabled and this monster attacks a monster that is <b>weak</b> [WEAK] to the attack's element, this monster gains <div>{\"num\":1, \"isPositive\":true, \"stat\":\"ATK\"}.</div>",
-  "hp": 10,
+  "abilityText": "If <b>Exception Caught</b> is disabled, your opponent must [-] an additional card when performing a switch action. <br><br>If <b>Exception Caught</b> is enabled and this monster attacks a monster that is <b>weak</b> [WEAK] to the attack's element, this monster gains <div>{\"num\":1, \"isPositive\":true, \"stat\":\"ATK\"} after the attack.</div>",
+  "hp": 9,
   "promiseDescription": "Strike fear in your opponent when <b>Phantomaton</b> switches in to an advantageous matchup! Watch the enemy monster squirm when the cost of switching out is too high.",
   "initiative": 55,
-  "lastUpdated": "Wed, 09 Jun 2021 14:31:55 GMT"
+  "lastUpdated": "Wed, 07 Jul 2021 05:58:10 GMT"
 }

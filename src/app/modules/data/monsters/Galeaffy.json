@@ -4,16 +4,16 @@
   ],
   "actions": [
     {
-      "abilityName": "Switcheroo",
-      "abilityText": "[FLIP]. <br><br>Remove one [SPD][PQ]. If this attack was buffed, this monster gains <div>{\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}. Otherwise, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div></div>",
+      "abilityName": "Foreboding Winds",
+      "abilityText": "[FLIP]. <br><br>If this attack deals two or more damage to the enemy monster, look at the top two cards of your deck and put them back on the top or bottom of you deck in any order.",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 2,
-      "speed": 5,
+      "speed": 6,
       "draw": 0,
       "discard": 1,
       "buff": 1,
-      "lastUpdated": "Sat, 06 Mar 2021 09:28:37 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 06:36:03 GMT"
     },
     {
       "abilityName": "Whirlwind",
@@ -21,11 +21,11 @@
       "element": "Leaf",
       "statusFlg": false,
       "attack": 1,
-      "speed": 2,
+      "speed": 3,
       "draw": 0,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Sat, 06 Mar 2021 09:28:37 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 06:36:03 GMT"
     },
     {
       "abilityName": "Cyclone",
@@ -33,15 +33,15 @@
       "element": "Leaf",
       "statusFlg": false,
       "attack": 2,
-      "speed": 4,
+      "speed": 5,
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Sat, 06 Mar 2021 09:28:37 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 06:36:03 GMT"
     },
     {
       "abilityName": "Vicious Hurricane",
-      "abilityText": "<b>Single use.</b><br><br>This attack gains <div>+X[ATK]</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, this attack gains <div>+2[ATK]</div> instead.",
+      "abilityText": "<b>Single use.</b> This attack gains <div>+X[ATK]</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, this attack gains <div>+2[ATK]</div> instead.<br><br>This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false} after the attack.</div>",
       "element": "Death",
       "statusFlg": false,
       "attack": 2,
@@ -49,7 +49,7 @@
       "draw": 0,
       "discard": 2,
       "buff": 2,
-      "lastUpdated": "Tue, 13 Apr 2021 11:56:50 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 06:36:03 GMT"
     }
   ],
   "buffs": [
@@ -57,36 +57,36 @@
       "buffName": "Propulsive Winds",
       "timing": "Pre-Actions",
       "buffText": "<b>Super [B] [B].</b> This attack gains <div>+4[SPD]</div>.~SUPER~",
-      "flipEventText": "This enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div>",
-      "lastUpdated": "Wed, 09 Jun 2021 07:12:10 GMT"
+      "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
+      "lastUpdated": "Wed, 07 Jul 2021 06:36:03 GMT"
     },
     {
       "buffName": "Sharp Leaves",
       "timing": "With Attack",
-      "buffText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div>",
+      "buffText": "If this attack is <b>faster</b>, this monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.</div>~FASTER~",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
-      "lastUpdated": "Thu, 01 Apr 2021 06:36:54 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 06:36:03 GMT"
     },
     {
-      "buffName": "Leaf Shield",
+      "buffName": "Leafy Kicks",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.",
+      "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
-      "lastUpdated": "Thu, 01 Apr 2021 20:07:37 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 06:36:03 GMT"
     },
     {
       "buffName": "Outta Here",
       "timing": "Post Actions",
       "buffText": "Perform a switch action. <b>Exhaust</b>.~EXHAUST~",
-      "flipEventText": "If this attack is <b>faster</b>, this monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.</div> ~FASTER~",
-      "lastUpdated": "Wed, 09 Jun 2021 07:12:10 GMT"
+      "flipEventText": "If this attack is <b>faster</b>, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div> ~FASTER~",
+      "lastUpdated": "Wed, 07 Jul 2021 06:36:03 GMT"
     }
   ],
   "monsterId": 8,
   "monsterName": "Galeaffy",
-  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.</div><br><br>This monster's [SPD][PQ] do not decay.~SWITCH~",
+  "abilityText": "When this monster <b>switches in or out</b>, look at the top two cards of your deck and put them back on the top or bottom of you deck in any order.<br><br>This monster's [SPD][PQ] do not decay.~SWITCH~",
   "hp": 9,
   "promiseDescription": "The master of speed has arrived!",
-  "initiative": 80,
-  "lastUpdated": "Fri, 02 Apr 2021 07:07:24 GMT"
+  "initiative": 85,
+  "lastUpdated": "Wed, 07 Jul 2021 06:36:32 GMT"
 }

@@ -54,21 +54,21 @@
     {
       "buffName": "Thick Goop",
       "timing": "Pre-Actions",
-      "buffText": "If there are two or less <b>Goop</b> [GOOP] cards in your supply, this monster gains <div>+2[DEF]</div> this turn. If not, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck instead.",
+      "buffText": "If there are two or fewer <b>Goop</b> [GOOP] cards in your supply, this monster gains <div>+2[DEF]</div> this turn. If not, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck instead.",
       "flipEventText": "If this attack deals two or more damage, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck.",
       "lastUpdated": "Tue, 06 Jul 2021 04:59:33 GMT"
     },
     {
       "buffName": "Hostile Goop",
       "timing": "With Attack",
-      "buffText": "If there are two or less <b>Goop</b> [GOOP] cards in your supply, this monster gains <div>+2[ATK]</div> this turn. If not, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck instead.",
-      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div>",
-      "lastUpdated": "Tue, 06 Jul 2021 04:59:33 GMT"
+      "buffText": "If there are two or fewer <b>Goop</b> [GOOP] cards in your supply, this monster gains <div>+2[ATK]</div> this turn. If not, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck instead.",
+      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true} after the attack.</div>",
+      "lastUpdated": "Wed, 07 Jul 2021 06:01:03 GMT"
     },
     {
       "buffName": "Slippery Goop",
       "timing": "Pre-Actions",
-      "buffText": "If there are two or less <b>Goop</b> [GOOP] cards in your supply, this monster gains <div>+2[SPD]</div> this turn. If not, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck instead.",
+      "buffText": "If there are two or fewer <b>Goop</b> [GOOP] cards in your supply, this monster gains <div>+2[SPD]</div> this turn. If not, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck instead.",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
       "lastUpdated": "Tue, 06 Jul 2021 04:59:33 GMT"
     },
