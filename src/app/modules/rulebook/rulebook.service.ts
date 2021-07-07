@@ -30,6 +30,14 @@ export class RulebookService {
       ]
     },
     {
+      title: 'Overview',
+      blocks: [
+        {
+          text: 'Switchems! is a game of outsmarting your opponent (with a healthy dose of doublethink), action sequencing, and team composition. Each turn you and your opponent will choose one action secretly. Some actions require you to discard cards from your hand. Some actions can be augmented with the cards from your hand. It\'s up to you decide what the best choice is! After you and your opponent have made your decisions, you will both reveal your actions and resolve them. At this point, almost no decisions are made - you will follow the sequence in which the actions resolve. After doing so, a new turn begins.',
+        }
+      ]
+    },
+    {
       title: 'How to Win',
       blocks: [
         {
