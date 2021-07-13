@@ -57,8 +57,8 @@
       "buffName": "Power Hotfix",
       "timing": "Pre-Actions",
       "buffText": "If the opponent selected a switch action this turn, this monster gains {\"stat\": \"ATK\", \"num\": 3, \"isPositive\": true}.",
-      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true} after the attack.</div>",
-      "lastUpdated": "Wed, 07 Jul 2021 05:58:10 GMT"
+      "flipEventText": "The enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
+      "lastUpdated": "Fri, 09 Jul 2021 12:58:21 GMT"
     },
     {
       "buffName": "Agility Hotfix",
@@ -85,9 +85,9 @@
   ],
   "monsterId": 10,
   "monsterName": "Phantomaton",
-  "abilityText": "If <b>Exception Caught</b> is disabled, your opponent must [-] an additional card when performing a switch action. <br><br>If <b>Exception Caught</b> is enabled and this monster attacks a monster that is <b>weak</b> [WEAK] to the attack's element, this monster gains <div>{\"num\":1, \"isPositive\":true, \"stat\":\"ATK\"} after the attack.</div>",
+  "abilityText": "If <b>Exception Caught</b> is enabled and this monster attacks a monster that is <b>weak</b> [WEAK] to the attack's element, this monster gains <div>{\"num\":1, \"isPositive\":true, \"stat\":\"ATK\"} <u>after</u> the attack.</div><br><br>If <b>Exception Caught</b> is disabled, your opponent must [-] an additional card when performing a switch action.",
   "hp": 9,
   "promiseDescription": "Strike fear in your opponent when <b>Phantomaton</b> switches in to an advantageous matchup! Watch the enemy monster squirm when the cost of switching out is too high.",
   "initiative": 55,
-  "lastUpdated": "Wed, 07 Jul 2021 05:58:10 GMT"
+  "lastUpdated": "Thu, 08 Jul 2021 07:57:07 GMT"
 }

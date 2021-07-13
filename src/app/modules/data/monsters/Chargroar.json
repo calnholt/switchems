@@ -19,7 +19,7 @@
     },
     {
       "abilityName": "Lights Out",
-      "abilityText": "<b>[FLIP]</b>. <br><br>If this attack KO's the enemy monster, this monster gains <div>{\"stat\": \"SPD\", \"num\": 3, \"isPositive\": true}.</div>",
+      "abilityText": "If this attack KO's the enemy monster, this monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.</div>",
       "element": "Electric",
       "statusFlg": false,
       "attack": 2,
@@ -28,7 +28,7 @@
       "discard": 0,
       "buff": 1,
       "modifier": 1,
-      "lastUpdated": "Thu, 01 Apr 2021 20:21:50 GMT"
+      "lastUpdated": "Thu, 08 Jul 2021 07:19:12 GMT"
     },
     {
       "abilityName": "Hypercharge",
@@ -44,16 +44,16 @@
     },
     {
       "abilityName": "Blazing Roar",
-      "abilityText": "[FLIP]. <br><br><b>Pierce 2[DEF]</b>~PIERCE~",
+      "abilityText": "[FLIP]. <br><br><b>Pierce 1[DEF]. </b>~PIERCE~",
       "element": "Fire",
       "statusFlg": false,
       "attack": 3,
-      "speed": 5,
+      "speed": 4,
       "draw": 0,
       "discard": 1,
       "buff": 2,
       "modifier": 2,
-      "lastUpdated": "Thu, 01 Apr 2021 06:04:34 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 20:09:11 GMT"
     }
   ],
   "buffs": [
@@ -68,8 +68,8 @@
       "buffName": "Roar",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]. If your opponent has a KO'd monster, this attack gains +2[ATK] instead.",
-      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div>after the attack.",
-      "lastUpdated": "Sat, 27 Feb 2021 21:01:28 GMT"
+      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div><u>after</u> the attack.",
+      "lastUpdated": "Thu, 08 Jul 2021 07:47:35 GMT"
     },
     {
       "buffName": "Revenge",
@@ -89,9 +89,9 @@
   "monsterId": 4,
   "monsterName": "Chargroar",
   "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.</div>~SWITCH~",
-  "hp": 7,
+  "hp": 6,
   "promiseDescription": "<b>Chargroar</b> is the quintessential assassin – fast, lethal, and fragile. Knockout a monster quickly to improve your buffs!",
   "initiative": 80,
   "imageFlg": true,
-  "lastUpdated": "Wed, 07 Jul 2021 06:36:56 GMT"
+  "lastUpdated": "Wed, 07 Jul 2021 20:17:05 GMT"
 }

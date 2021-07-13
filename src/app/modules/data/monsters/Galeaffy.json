@@ -8,12 +8,12 @@
       "abilityText": "[FLIP]. <br><br>If this attack deals two or more damage to the enemy monster, look at the top two cards of your deck and put them back on the top or bottom of you deck in any order.",
       "element": "Leaf",
       "statusFlg": false,
-      "attack": 2,
+      "attack": 3,
       "speed": 6,
       "draw": 0,
       "discard": 1,
       "buff": 1,
-      "lastUpdated": "Wed, 07 Jul 2021 06:36:03 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 20:21:29 GMT"
     },
     {
       "abilityName": "Whirlwind",
@@ -21,11 +21,11 @@
       "element": "Leaf",
       "statusFlg": false,
       "attack": 1,
-      "speed": 3,
+      "speed": 4,
       "draw": 0,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Wed, 07 Jul 2021 06:36:03 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 20:21:29 GMT"
     },
     {
       "abilityName": "Cyclone",
@@ -33,23 +33,23 @@
       "element": "Leaf",
       "statusFlg": false,
       "attack": 2,
-      "speed": 5,
+      "speed": 3,
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Wed, 07 Jul 2021 06:36:03 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 20:21:29 GMT"
     },
     {
       "abilityName": "Vicious Hurricane",
-      "abilityText": "<b>Single use.</b> This attack gains <div>+X[ATK]</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, this attack gains <div>+2[ATK]</div> instead.<br><br>This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false} after the attack.</div>",
+      "abilityText": "<b>Single use.</b> This attack gains <div>+X[ATK]</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, this attack gains <div>+2[ATK]</div> instead. ~SINGLE~",
       "element": "Death",
       "statusFlg": false,
       "attack": 2,
-      "speed": 4,
+      "speed": 5,
       "draw": 0,
       "discard": 2,
       "buff": 2,
-      "lastUpdated": "Wed, 07 Jul 2021 06:36:03 GMT"
+      "lastUpdated": "Wed, 07 Jul 2021 20:21:29 GMT"
     }
   ],
   "buffs": [
@@ -57,8 +57,8 @@
       "buffName": "Propulsive Winds",
       "timing": "Pre-Actions",
       "buffText": "<b>Super [B] [B].</b> This attack gains <div>+4[SPD]</div>.~SUPER~",
-      "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
-      "lastUpdated": "Wed, 07 Jul 2021 06:36:03 GMT"
+      "flipEventText": "The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div>",
+      "lastUpdated": "Thu, 08 Jul 2021 07:15:02 GMT"
     },
     {
       "buffName": "Sharp Leaves",

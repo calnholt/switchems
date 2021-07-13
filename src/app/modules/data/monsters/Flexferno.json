@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Inferno",
-      "abilityText": "If the enemy monster has a [STATUS], this attack gains one [B] slot and [FLIP].<br><br>If all [B] slots are used <b>and</b> all applied buffs <b>belong</b> to this monster, this attack gains +2[ATK] for each buff slot used.",
+      "abilityText": "If the enemy monster has a [STATUS], this attack gains one [B] slot and [FLIP].<br><br>If all [B] slots are used <u>and</u> all applied buffs <b>belong</b> to this monster, this attack gains +2[ATK] for each buff slot used.",
       "element": "Fire",
       "statusFlg": false,
       "attack": 2,
@@ -13,7 +13,7 @@
       "draw": 0,
       "discard": 1,
       "buff": 1,
-      "lastUpdated": "Sat, 03 Apr 2021 06:28:05 GMT"
+      "lastUpdated": "Thu, 08 Jul 2021 07:48:54 GMT"
     },
     {
       "abilityName": "Burn",
@@ -28,7 +28,7 @@
     },
     {
       "abilityName": "No Pain, No Gain",
-      "abilityText": "[FLIP] [FLIP]. <br><br><b>Recoil 1[ATK]</b>~RECOIL~",
+      "abilityText": "[FLIP] [FLIP]. <br><br><b>Recoil 1[ATK]</b>. This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div> <u>after</u> the attack.~RECOIL~",
       "element": "Rock",
       "statusFlg": false,
       "attack": 1,
@@ -36,19 +36,19 @@
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Tue, 06 Jul 2021 06:01:48 GMT"
+      "lastUpdated": "Thu, 08 Jul 2021 07:34:43 GMT"
     },
     {
       "abilityName": "Scorch",
-      "abilityText": "[FLIP] [FLIP]",
+      "abilityText": "[FLIP].<br><br>If the enemy monster has a [STATUS], this attack gains [FLIP].",
       "element": "Fire",
       "statusFlg": false,
-      "attack": 2,
-      "speed": 7,
+      "attack": 3,
+      "speed": 6,
       "draw": 0,
       "discard": 1,
       "buff": 1,
-      "lastUpdated": "Fri, 26 Feb 2021 08:08:54 GMT"
+      "lastUpdated": "Thu, 08 Jul 2021 07:57:53 GMT"
     }
   ],
   "buffs": [
@@ -78,8 +78,8 @@
       "buffName": "Sear",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+2[ATK]</div> instead. ~STATUS~",
-      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div> after the attack.",
-      "lastUpdated": "Wed, 07 Jul 2021 05:06:09 GMT"
+      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div> <u>after</u> the attack.",
+      "lastUpdated": "Thu, 08 Jul 2021 07:34:43 GMT"
     }
   ],
   "monsterId": 2,

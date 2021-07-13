@@ -81,10 +81,10 @@
     }
   ],
   "monsterName": "Oozygoopz",
-  "abilityText": "If <b>Oozygoopz</b> is your active monster and a <div><b>Goop [GOOP]</b></div> card is returned to your supply, if there are now <b>exactly</b> three <div><b>Goop [GOOP]</b></div> cards in your supply, this monster <div>heals 1[HP].</div>",
+  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true} </div> X times, where X is the number of <b>Goop [GOOP] not</b> in your supply <u>minus one</u>.~SWITCH~",
   "hp": 9,
   "promiseDescription": "Drive your opponent crazy by loading their deck with a bunch of useless goop!",
   "extraBoard": "GOOP",
   "initiative": 15,
-  "lastUpdated": "Tue, 06 Jul 2021 05:10:12 GMT"
+  "lastUpdated": "Thu, 08 Jul 2021 07:55:16 GMT"
 }
