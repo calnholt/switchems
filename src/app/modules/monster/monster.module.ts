@@ -17,6 +17,7 @@ import { MonsterCardFiltersComponent } from './monster-card-filters/monster-card
 import { ActionFiltersComponent } from './action-filters/action-filters.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AcornComponent } from './acorn/acorn.component';
 
 @NgModule({
   imports: [
@@ -39,6 +40,7 @@ import { CommonModule } from '@angular/common';
     TtsMonsterComponent,
     ExtraBoardComponent,
     AcornBoardComponent,
+    AcornComponent,
     GoopComponent,
   ],
   exports: [
@@ -49,6 +51,7 @@ import { CommonModule } from '@angular/common';
     TtsMonsterComponent,
     ExtraBoardComponent,
     AcornBoardComponent,
+    AcornComponent,
     GoopComponent,
   ]
 })

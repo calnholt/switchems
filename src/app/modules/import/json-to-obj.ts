@@ -42,7 +42,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             // Smolderskulk,
             Stalagrowth,
             // Steamie,
-            // Squirrberus,
+            Squirrberus,
             Phantomaton,
             Vulturock,
             Zappguin,
