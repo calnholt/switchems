@@ -787,7 +787,7 @@ export class RulebookService {
           }
         });
         let block: RulebookBlock = new RulebookBlock();
-        block.text = `<b>${term.name}</b>`;
+        block.text = `<b><u>${term.name}</u></b>`;
         block.id = term.name.toLowerCase();
         block.ul = [{text: getAbilityText(description, 'term', 'term-img')}];
         out.push(block);

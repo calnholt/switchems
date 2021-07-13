@@ -11,6 +11,11 @@
         width: calc(var(--scale) * #{$card-width});
         transform-origin: top left;
         margin: 3px;
+        &.stat-cube {
+            height: calc(0.2 * #{$card-height});
+            width: calc(0.2 * #{$card-width});
+            transform: scale(0.2);
+        }
     }
     .player-area-container {
         &:first-child {

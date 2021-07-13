@@ -1,4 +1,4 @@
-import { Path, ELEMENTS, ELEMENT_PATH_COLOR } from './../../../types/dataTypes';
+import { Path, ELEMENTS, ELEMENT_PATH_COLOR, getElementIndex } from './../../../types/dataTypes';
 import { ElemType } from 'src/app/types/dataTypes';
 import { MonsterComplete } from 'src/app/modules/monster/model/monster';
 import { Component, OnInit, Input } from '@angular/core';
@@ -36,6 +36,30 @@ export class SummaryComponent implements OnInit {
           num++;
         }
       });
+    });
+    return num;
+  }
+
+  getNumberOfWeaknessesPerMonster(elem: ElemType): number {
+    let num = 0;
+    this.monsters.forEach(m => {
+      const effectiveness = m.getEffectivenessArray();
+      const index = getElementIndex(elem);
+      if (effectiveness[index] < 0) {
+        num++;
+      }
+    });
+    return num;
+  }
+
+  getNumberOfResistancesPerMonster(elem: ElemType): number {
+    let num = 0;
+    this.monsters.forEach(m => {
+      const effectiveness = m.getEffectivenessArray();
+      const index = getElementIndex(elem);
+      if (effectiveness[index] > 0) {
+        num++;
+      }
     });
     return num;
   }

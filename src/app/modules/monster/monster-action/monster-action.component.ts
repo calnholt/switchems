@@ -66,7 +66,7 @@ export class MonsterActionComponent implements OnInit {
   }
 
   getLockedIcon(): string {
-    if (this.action.abilityText.includes('~SINGLE~')) {
+    if (this.action.abilityText.toLowerCase().includes('single use')) {
       return 'single-use';
     }
     return 'unlocked';
