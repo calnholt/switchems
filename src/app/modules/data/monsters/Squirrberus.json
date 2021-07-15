@@ -6,25 +6,25 @@
   "actions": [
     {
       "abilityName": "Nutcracker",
-      "abilityText": "If you discarded an <b>Acorn [ACORN]</b> this turn, this attack gains <div><b>pierce 2[DEF]</b>.</div>",
+      "abilityText": "If you discarded an <b>acorn [ACORN]</b> this turn, this attack gains <div><b>pierce 2[DEF]</b>.</div>",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 2,
-      "speed": 8,
+      "speed": 7,
       "draw": 0,
       "buff": 2,
-      "lastUpdated": "Fri, 09 Jul 2021 15:39:54 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:29:45 GMT"
     },
     {
       "abilityName": "Smolder",
-      "abilityText": "If this monster has a [STATUS], remove it and this attack gains <div>+2[ATK].</div><br><br>If you discarded an <b>Acorn [ACORN]</b> this turn, this attack gains <div><b>Wound [STATUS]</b>.</div>",
+      "abilityText": "If this monster has a [STATUS], remove it and this attack gains <div>+2[ATK].</div><br><br>If you discarded an <b>acorn [ACORN]</b> this turn, this attack gains <div><b>wound [STATUS]</b>.</div>",
       "element": "Fire",
       "statusFlg": false,
       "attack": 4,
       "speed": 4,
       "discard": 2,
       "buff": 1,
-      "lastUpdated": "Fri, 09 Jul 2021 15:29:57 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:29:45 GMT"
     },
     {
       "abilityName": "Lava Barrier",
@@ -32,14 +32,14 @@
       "element": "Fire",
       "statusFlg": true,
       "attack": 0,
-      "speed": 2,
+      "speed": 8,
       "discard": 3,
       "buff": 0,
       "lastUpdated": "Sun, 11 Jul 2021 19:39:43 GMT"
     },
     {
       "abilityName": "Crunch",
-      "abilityText": "If you discarded an <b>Acorn [ACORN]</b> this turn, [+].",
+      "abilityText": "If you discarded an <b>acorn [ACORN]</b> this turn, [+].",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 2,
@@ -47,43 +47,43 @@
       "draw": 1,
       "discard": 0,
       "buff": 1,
-      "lastUpdated": "Fri, 09 Jul 2021 15:39:54 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:29:45 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Spicy Acorn",
       "timing": "Pre-Actions",
-      "buffText": "If you do not have an <b>Acorn [ACORN],</b> gain one randomly from the supply.<br><br>If you do, return it to the supply and gain its effect at the <b>Acorn's [ACORN]</b> specified buff timing.",
+      "buffText": "If you do not have an <b>acorn [ACORN],</b> gain one randomly from the supply.<br><br>If you do, return it to the supply and gain its effect at the <b>acorn's [ACORN]</b> specified buff timing.",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div> ",
-      "lastUpdated": "Fri, 09 Jul 2021 15:22:25 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:29:45 GMT"
     },
     {
       "buffName": "Ripe Acorn",
       "timing": "Pre-Actions",
-      "buffText": "If you do not have an <b>Acorn [ACORN],</b> gain one randomly from the supply.<br><br>If you do, return it to the supply and gain its effect at the <b>Acorn's [ACORN]</b> specified buff timing.",
+      "buffText": "If you do not have an <b>acorn [ACORN],</b> gain one randomly from the supply.<br><br>If you do, return it to the supply and gain its effect at the <b>acorn's [ACORN]</b> specified buff timing.",
       "flipEventText": "The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div> ",
-      "lastUpdated": "Fri, 09 Jul 2021 15:22:25 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:29:45 GMT"
     },
     {
       "buffName": "Rotten Acorn",
       "timing": "Pre-Actions",
-      "buffText": "If you do not have an <b>Acorn [ACORN],</b> gain one randomly from the supply.<br><br>If you do, return it to the supply and gain its effect at the <b>Acorn's [ACORN]</b> specified buff timing.",
-      "flipEventText": "If you have an <b>Acorn [ACORN],</b> this attack gains <div>+1[ATK].</div>",
-      "lastUpdated": "Fri, 09 Jul 2021 15:22:25 GMT"
+      "buffText": "If you do not have an <b>acorn [ACORN],</b> gain one randomly from the supply.<br><br>If you do, return it to the supply and gain its effect at the <b>acorn's [ACORN]</b> specified buff timing.",
+      "flipEventText": "If you have an <b>acorn [ACORN],</b> this attack gains <div>+1[ATK].</div>",
+      "lastUpdated": "Thu, 15 Jul 2021 08:29:45 GMT"
     },
     {
       "buffName": "Winter is Coming",
       "timing": "Post Actions",
-      "buffText": "<b>Super [B] [B], Exhaust</b>. <br><br>If you do not have an <b>Acorn [ACORN]</b>, select any one from the supply, gain its effect at the <b>Acorn's [ACORN]</b> specified buff timing, and then remove it from the game.~SUPER~~EXHAUST~",
-      "flipEventText": "If you do not have an <b>Acorn [ACORN],</b> gain one randomly.",
-      "lastUpdated": "Fri, 09 Jul 2021 15:22:25 GMT"
+      "buffText": "<b>Super [B] [B], exhaust</b>. <br><br>If you do not have an <b>acorn [ACORN]</b>, select any one from the supply, gain its effect at the <b>acorn's [ACORN]</b> specified buff timing, and then remove it from the game.~SUPER~~EXHAUST~",
+      "flipEventText": "If you do not have an <b>acorn [ACORN],</b> gain one randomly.",
+      "lastUpdated": "Thu, 15 Jul 2021 08:29:45 GMT"
     }
   ],
   "monsterName": "Squirrberus",
-  "abilityText": "When this monster is your active monster, whenever you gain an <b>Acorn [ACORN]</b> randomly, secretly choose which one you want instead.",
+  "abilityText": "When this monster is your active monster, whenever you gain an <div><b>acorn [ACORN]</b></div> randomly, secretly <u>choose</u> which <div><b>acorn [ACORN]</b></div> you gain instead.",
   "hp": 9,
-  "initiative": 35,
   "extraBoard": "ACORN",
-  "lastUpdated": "Fri, 09 Jul 2021 15:23:42 GMT"
+  "initiative": 35,
+  "lastUpdated": "Thu, 15 Jul 2021 08:29:45 GMT"
 }

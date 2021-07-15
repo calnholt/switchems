@@ -6,36 +6,36 @@
   "actions": [
     {
       "abilityName": "Oozy Liberation",
-      "abilityText": "If this attack is <b>faster</b>, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck. ~FASTER~",
+      "abilityText": "If this attack is <b>faster</b>, shuffle one <div><b>goop</b> [GOOP]</div> card into your opponent's deck. ~FASTER~",
       "element": "Water",
       "statusFlg": false,
       "attack": 4,
       "speed": 6,
       "discard": 2,
       "buff": 1,
-      "lastUpdated": "Tue, 13 Apr 2021 15:58:33 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:15:58 GMT"
     },
     {
       "abilityName": "Viscous Split",
-      "abilityText": "If this attack deals two or more damage, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck.",
+      "abilityText": "If this attack deals two or more damage, shuffle one <div><b>goop</b> [GOOP]</div> card into your opponent's deck.",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 1,
       "speed": 8,
       "draw": 1,
       "buff": 2,
-      "lastUpdated": "Mon, 05 Jul 2021 11:04:21 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:15:58 GMT"
     },
     {
       "abilityName": "Reclaim",
-      "abilityText": "Put up to three of the top cards of your opponent's deck in their discard pile. If any of these cards are <div><b>Goop</b> [GOOP]</div> cards, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div>",
+      "abilityText": "Put up to three of the top cards of your opponent's deck in their discard pile. If any of these cards are <div><b>goop</b> [GOOP]</div> cards, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div>",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 2,
       "speed": 3,
       "discard": 0,
       "buff": 1,
-      "lastUpdated": "Tue, 06 Jul 2021 04:59:33 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:15:58 GMT"
     },
     {
       "abilityName": "Lickety Split",
@@ -54,37 +54,37 @@
     {
       "buffName": "Thick Goop",
       "timing": "Pre-Actions",
-      "buffText": "If there are two or fewer <b>Goop</b> [GOOP] cards in your supply, this monster gains <div>+2[DEF]</div> this turn. If not, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck instead.",
-      "flipEventText": "If this attack deals two or more damage, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck.",
-      "lastUpdated": "Tue, 06 Jul 2021 04:59:33 GMT"
+      "buffText": "If there are two or fewer <b>goop</b> [GOOP] cards in your supply, this monster gains <div>+2[DEF]</div> this turn. If not, shuffle one <div><b>goop</b> [GOOP]</div> card into your opponent's deck instead.",
+      "flipEventText": "If this attack deals two or more damage, shuffle one <div><b>goop</b> [GOOP]</div> card into your opponent's deck.",
+      "lastUpdated": "Thu, 15 Jul 2021 08:15:58 GMT"
     },
     {
       "buffName": "Hostile Goop",
       "timing": "With Attack",
-      "buffText": "If there are two or fewer <b>Goop</b> [GOOP] cards in your supply, this monster gains <div>+2[ATK]</div> this turn. If not, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck instead.",
+      "buffText": "If there are two or fewer <b>goop</b> [GOOP] cards in your supply, this monster gains <div>+2[ATK]</div> this turn. If not, shuffle one <div><b>goop</b> [GOOP]</div> card into your opponent's deck instead.",
       "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true} after the attack.</div>",
-      "lastUpdated": "Wed, 07 Jul 2021 06:01:03 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:15:58 GMT"
     },
     {
       "buffName": "Slippery Goop",
       "timing": "Pre-Actions",
-      "buffText": "If there are two or fewer <b>Goop</b> [GOOP] cards in your supply, this monster gains <div>+2[SPD]</div> this turn. If not, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck instead.",
+      "buffText": "If there are two or fewer <b>goop</b> [GOOP] cards in your supply, this monster gains <div>+2[SPD]</div> this turn. If not, shuffle one <div><b>goop</b> [GOOP]</div> card into your opponent's deck instead.",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div>",
-      "lastUpdated": "Tue, 06 Jul 2021 04:59:33 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:15:58 GMT"
     },
     {
       "buffName": "Goopy Goop",
       "timing": "Post Actions",
-      "buffText": "<b>Super [B] [B]. </b><br><br>If this attack is <b>faster</b>, shuffle two <div><b>Goop</b> [GOOP]</div> cards into your opponent's deck. If not, shuffle one instead. ~SUPER~~FASTER~",
-      "flipEventText": "If this attack deals two or more damage, shuffle one <div><b>Goop</b> [GOOP]</div> card into your opponent's deck.",
-      "lastUpdated": "Tue, 06 Jul 2021 04:59:33 GMT"
+      "buffText": "<b>Super [B] [B]. </b><br><br>If this attack is <b>faster</b>, shuffle two <div><b>goop</b> [GOOP]</div> cards into your opponent's deck. If not, shuffle one instead. ~SUPER~~FASTER~",
+      "flipEventText": "If this attack deals two or more damage, shuffle one <div><b>goop</b> [GOOP]</div> card into your opponent's deck.",
+      "lastUpdated": "Thu, 15 Jul 2021 08:15:58 GMT"
     }
   ],
   "monsterName": "Oozygoopz",
-  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true} </div> X times, where X is the number of <b>Goop [GOOP] not</b> in your supply <u>minus one</u>.~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true} </div> X times, where X is the number of <b>goop [GOOP] not</b> in your supply <u>minus one</u>.~SWITCH~",
   "hp": 9,
   "promiseDescription": "Drive your opponent crazy by loading their deck with a bunch of useless goop!",
   "extraBoard": "GOOP",
   "initiative": 15,
-  "lastUpdated": "Thu, 08 Jul 2021 07:55:16 GMT"
+  "lastUpdated": "Thu, 15 Jul 2021 08:15:58 GMT"
 }

@@ -56,8 +56,8 @@
       "buffName": "Zap",
       "timing": "Post Actions",
       "buffText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.</div>",
-      "flipEventText": "Pierce 1[DEF]. ~PIERCE~",
-      "lastUpdated": "Fri, 09 Jul 2021 13:00:28 GMT"
+      "flipEventText": "<b>Pierce 1[DEF]</b>. ~PIERCE~",
+      "lastUpdated": "Thu, 15 Jul 2021 08:20:51 GMT"
     },
     {
       "buffName": "Static Shock",
@@ -78,8 +78,8 @@
       "buffName": "Retaliate",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]. If this attack is <b>slower</b>, this attack gains +2[ATK] instead.~SLOWER~",
-      "flipEventText": "Pierce 1[DEF]. ~PIERCE~",
-      "lastUpdated": "Fri, 09 Jul 2021 13:00:28 GMT"
+      "flipEventText": "<b>Pierce 1[DEF]</b>. ~PIERCE~",
+      "lastUpdated": "Thu, 15 Jul 2021 08:20:51 GMT"
     }
   ],
   "monsterId": 7,

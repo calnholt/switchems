@@ -77,9 +77,9 @@
     {
       "buffName": "Tremble",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super [B] [B], Exhaust.</b><br><br>The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}</div> and <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.</div>~SUPER~ ~EXHAUST~",
+      "buffText": "<b>Super [B] [B], exhaust.</b><br><br>The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}</div> and <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.</div>~SUPER~ ~EXHAUST~",
       "flipEventText": "If the enemy monster is <div><b>frail</b> [FRAIL],</div> this attack gains <div>+1[ATK].</div>",
-      "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:22:09 GMT"
     }
   ],
   "monsterId": 5,

@@ -41,7 +41,7 @@
     },
     {
       "abilityName": "Vicious Hurricane",
-      "abilityText": "<b>Single use.</b> This attack gains <div>+X[ATK]</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, this attack gains <div>+2[ATK]</div> instead. ~SINGLE~",
+      "abilityText": "<b>Single use.</b> <br><br>This attack gains <div>+X[ATK]</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, this attack gains <div>+2[ATK]</div> instead. ~SINGLE~",
       "element": "Death",
       "statusFlg": false,
       "attack": 2,
@@ -49,16 +49,16 @@
       "draw": 0,
       "discard": 2,
       "buff": 2,
-      "lastUpdated": "Wed, 07 Jul 2021 20:21:29 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:24:03 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Propulsive Winds",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super [B] [B].</b> This attack gains <div>+4[SPD]</div>.~SUPER~",
+      "buffText": "<b>Super [B] [B].</b> <br><br>This attack gains <div>+4[SPD]</div>.~SUPER~",
       "flipEventText": "The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div>",
-      "lastUpdated": "Thu, 08 Jul 2021 07:15:02 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:24:03 GMT"
     },
     {
       "buffName": "Sharp Leaves",

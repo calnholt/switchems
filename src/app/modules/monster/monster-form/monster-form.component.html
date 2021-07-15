@@ -45,6 +45,8 @@
         <div *ngIf="monster.promiseDescription" class="promise-container">
           <div class="promise-title">Descripition</div>
           <span [innerHTML]="getPromiseText()" class="pt-1 promise-text"></span>
+        </div>
+        <div class="promise-container">
           <div class="promise-title">
             Average Speed: <span>{{monster.getAverageSpeed()}}</span>
           </div>

@@ -32,7 +32,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             // Ashdash,
             // Boltblebee,
             Chargroar,
-            //Cleansitoad,
+            Cleansitoad,
             // Cragadilo,
             Drownigator,
             Flexferno,

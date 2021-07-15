@@ -70,9 +70,9 @@
     {
       "buffName": "Refactor",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super [B] [B]</b><br>Attack speeds are reversed this turn and you win all speed ties.~SUPER~",
+      "buffText": "<b>Super [B] [B]. </b><br><br>Attack speeds are reversed this turn and you win all speed ties.~SUPER~",
       "flipEventText": "If this attack is <b>slower</b>, this attack gains +1[ATK].~SLOWER~",
-      "lastUpdated": "Tue, 13 Apr 2021 11:54:48 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:25:53 GMT"
     },
     {
       "buffName": "Download",

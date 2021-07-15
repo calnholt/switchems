@@ -6,18 +6,18 @@
   "actions": [
     {
       "abilityName": "Gravelcrust Grip",
-      "abilityText": "<b>Drain [STATUS], Recoil 3[ATK], Single Use. </b><br><br>If this monster has no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.</div> ~DRAIN~~SINGLE~",
+      "abilityText": "<b>Drain [STATUS], recoil 3[ATK], single use. </b><br><br>If this monster has no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.</div> ~DRAIN~~SINGLE~",
       "element": "Leaf",
       "statusFlg": true,
       "speed": 2,
       "draw": 0,
       "discard": 1,
       "buff": 0,
-      "lastUpdated": "Tue, 06 Jul 2021 05:36:04 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:31:58 GMT"
     },
     {
       "abilityName": "Vine Whips",
-      "abilityText": "Remove all [STATUS] from the enemy monster. This attack gains <div>+2[ATK]</div> for each [STATUS] removed.<br><br>If the enemy monster <div><b>Switched In [SL]</b></div> this turn,  <div><b>drain [STATUS]</b>.</div>",
+      "abilityText": "Remove all [STATUS] from the enemy monster. This attack gains <div>+2[ATK]</div> for each [STATUS] removed.<br><br>If the enemy monster <div><b>switched In [SL]</b></div> this turn,  <div><b>drain [STATUS]</b>.</div>",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 1,
@@ -25,11 +25,11 @@
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Wed, 07 Jul 2021 05:16:58 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:31:58 GMT"
     },
     {
       "abilityName": "Pulverize",
-      "abilityText": "<b>Flinch</b>~FLINCH~",
+      "abilityText": "<b>Flinch.</b>~FLINCH~",
       "element": "Rock",
       "statusFlg": false,
       "attack": 3,
@@ -37,7 +37,7 @@
       "draw": 0,
       "discard": 2,
       "buff": 1,
-      "lastUpdated": "Wed, 10 Mar 2021 07:54:10 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:31:58 GMT"
     },
     {
       "abilityName": "Skewer",
@@ -71,15 +71,15 @@
       "buffName": "Concussion",
       "timing": "With Attack",
       "buffText": "This attack gains <b>flinch</b>. <b>Exhaust</b>. ~FLINCH~~EXHAUST~",
-      "flipEventText": "If the enemy monster has a [STATUS], the enemy monster gains <div><b>Stun [STATUS].</b></div>~STUN~",
-      "lastUpdated": "Wed, 09 Jun 2021 07:04:16 GMT"
+      "flipEventText": "If the enemy monster has a [STATUS], the enemy monster gains <div><b>stun [STATUS].</b></div>~STUN~",
+      "lastUpdated": "Thu, 15 Jul 2021 08:31:58 GMT"
     },
     {
       "buffName": "Leech Seed",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super [B] [B], Exhaust, Drain [STATUS]</b> ~SUPER~~EXHAUST~~DRAIN~",
+      "buffText": "<b>Super [B] [B], drain [STATUS], exhaust.</b> ~SUPER~~DRAIN~~EXHAUST~",
       "flipEventText": "If the enemy monster has a <div>[STATUS],</div>this attack gains <div>+1[ATK].</div> ~STATUS~",
-      "lastUpdated": "Tue, 06 Jul 2021 05:36:04 GMT"
+      "lastUpdated": "Thu, 15 Jul 2021 08:31:58 GMT"
     }
   ],
   "monsterId": 1,

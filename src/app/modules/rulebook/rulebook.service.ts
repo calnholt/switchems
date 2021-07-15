@@ -374,6 +374,9 @@ export class RulebookService {
                   text: 'Choose <b>one</b>: either the monster that is switching out heals 2[HP] OR remove a <a href="status_conditions">status condition</a> [STATUS] from the monster that is switching out.'
                 },
                 {
+                  text: 'Gain <a href="stat_cube_board">strengthen</a> [STR].'
+                },
+                {
                   text: 'Remove all [NQ] from your <a href="stat_cube_board">stat cube board</a>. '
                 },
                 {
@@ -404,13 +407,13 @@ export class RulebookService {
           ]
         },
         {
-          text: "<b>NOTE:</b> You cannot apply [MQ] to monster special [SPECIAL] actions."
+          text: '<b>NOTE:</b> You cannot apply [MQ] to monster special [SPECIAL] actions.'
         },
         {
-          text: "<b>NOTE:</b> There is no limit to the number of [MQ] a player can have."
+          text: '<b>NOTE:</b> There is no limit to the number of [MQ] a player can have.'
         },
         {
-          text: "<b>NOTE:</b> You can always ask your opponent how many [MQ] your opponent has."
+          text: '<b>NOTE:</b> You can always ask your opponent how many [MQ] your opponent has.'
         },
         {
           text: '<h1>Standard Actions</h1>There are two different standard actions. The two standard actions are:',
@@ -571,13 +574,13 @@ export class RulebookService {
           text: 'For example, if an abilty shows this: {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}, move the [ATK] marker two spaces to the left and place a <b>strengthen</b> [STR] token on the [STR] space if one was not there already.'
         },
         {
-          text: 'The number above each space on the stat tracks is the stat modifier for you active monster. These stat modifiers are not cumulative.'
+          text: 'The number above each space on the stat tracks is the stat modifier for you active monster. These stat modifiers are <b>not</b> cumulative.'
         },
         {
-          text: '[ATK][PQ]/[NQ] affect all of your monster attacks [ATK].'
+          text: '[ATK][PQ]/[NQ] affect all of your monster attack [ATK] damage.'
         },
         {
-          text: '[SPD][PQ]/[NQ] modifiers affect all of your monster actions [SPD].'
+          text: '[SPD][PQ]/[NQ] modifiers affect all of your monster action speed [SPD].'
         },
         {
           text: '[DEF][PQ] grant defense to your active monster.'
@@ -673,7 +676,7 @@ export class RulebookService {
       id: 'ko',
       blocks: [
         {
-          text: 'Monsters are KO’d when their health points are reduced to 0. Whenever a monster is KO’d, remove ALL cubes from that monster’s <a href="stat_cube_board">stat cube board</a>, and the player controlling that monster selects one of their other monsters to be their new active monster after resolving Post Actions buffs.',
+          text: 'Monsters are KO’d when their health points are reduced to 0. Whenever a monster is KO’d, remove all [NQ] from that monster’s <a href="stat_cube_board">stat cube board</a>, and the player controlling that monster selects one of their other monsters to be their new active monster after resolving Post Actions buffs.',
         },
         {
           text: '<b>NOTE:</b> In the instance where both monsters select a monster action, and the faster monster is KO’d from suffer damage before the enemy monster resolves their action, the slower monster’s action targets the KO’d monster.'
