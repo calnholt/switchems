@@ -38,11 +38,10 @@
             }
         }
         .team-aura-container {
-            position: absolute;
-            top: 9px;
-            right: 5px;
             display: flex;
-            align-items: baseline;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
             :nth-child(1) {
                 font-family: $header-font;
                 font-size: 38px;

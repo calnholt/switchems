@@ -30,14 +30,14 @@
     },
     {
       "abilityName": "Iron Defense",
-      "abilityText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.</div>",
+      "abilityText": "{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}",
       "element": "Rock",
       "statusFlg": true,
       "speed": 5,
       "draw": 1,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Thu, 08 Jul 2021 08:00:22 GMT"
+      "lastUpdated": "Sat, 04 Sep 2021 12:51:49 GMT"
     },
     {
       "abilityName": "Scavenge",
@@ -56,15 +56,15 @@
       "buffName": "Beak Drill",
       "timing": "With Attack",
       "buffText": "<b>Pierce 2[DEF]</b>~PIERCE~",
-      "flipEventText": "The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div>",
-      "lastUpdated": "Thu, 08 Jul 2021 08:00:22 GMT"
+      "flipEventText": "{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}",
+      "lastUpdated": "Sat, 04 Sep 2021 12:51:49 GMT"
     },
     {
       "buffName": "Hard Headed",
       "timing": "Pre-Actions",
       "buffText": "If your opponent selected a monster <b>attack</b> action this turn, the enemy monster's attack gains <div><b>recoil 2[ATK]</b>.</div>~RECOIL~",
-      "flipEventText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.</div>",
-      "lastUpdated": "Tue, 13 Apr 2021 12:01:19 GMT"
+      "flipEventText": "{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
+      "lastUpdated": "Sat, 04 Sep 2021 12:51:49 GMT"
     },
     {
       "buffName": "Self Defense",
@@ -76,16 +76,16 @@
     {
       "buffName": "Bigger Rocs",
       "timing": "With Attack",
-      "buffText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div>",
-      "flipEventText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true} and this attack gains <b>recoil 1[ATK].</b>~RECOIL~",
-      "lastUpdated": "Thu, 01 Apr 2021 06:38:07 GMT"
+      "buffText": "This attack gains +2[HOLLOW].",
+      "flipEventText": "{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} and this attack gains <b>recoil 1[ATK].</b>~RECOIL~",
+      "lastUpdated": "Sat, 04 Sep 2021 12:51:49 GMT"
     }
   ],
   "monsterId": 9,
   "monsterName": "Vulturock",
-  "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.</div>~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, <div>{\"stat\": \"SPD\", \"num\": 3, \"isPositive\": true}.</div>~SWITCH~",
   "hp": 9,
   "promiseDescription": "<b>Vulturock</b> hits hard – including itself!",
   "initiative": 75,
-  "lastUpdated": "Thu, 08 Jul 2021 08:00:22 GMT"
+  "lastUpdated": "Sat, 04 Sep 2021 12:51:49 GMT"
 }

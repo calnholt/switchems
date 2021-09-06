@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="monster-image">
-      <img *ngIf ="monster.imageFlg" src="{{getMonsterImage()}}">
+      <img class="{{monster.monsterName.toLowerCase()}}" *ngIf ="monster.imageFlg" src="{{getMonsterImage()}}">
     </div>
     <div class="stat-container">
       <div class="stats">

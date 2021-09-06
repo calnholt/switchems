@@ -19,6 +19,7 @@ export class ActionBoardComponent implements OnInit {
   flip: Path = SYMBOLS_PATH + 'flip.png';
   speed: Path = SYMBOLS_PATH + 'speed.png';
   defense: Path = SYMBOLS_PATH + 'defense.png';
+  attack: Path = SYMBOLS_PATH + 'hollow.png';
   constructor() { }
 
   ngOnInit() {

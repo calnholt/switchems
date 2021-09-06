@@ -17,18 +17,18 @@
     },
     {
       "abilityName": "Burn",
-      "abilityText": "<b>Wound [STATUS]</b> \n<br><br>The enemy monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.\n\n~WOUND~",
+      "abilityText": "<b>Wound [STATUS]</b> \n<br><br>This monster gains +1[DEF] this turn. \n\n~WOUND~",
       "element": "Fire",
       "statusFlg": true,
       "speed": 8,
       "draw": 0,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Mon, 12 Apr 2021 20:58:22 GMT"
+      "lastUpdated": "Sat, 04 Sep 2021 12:22:21 GMT"
     },
     {
       "abilityName": "No Pain, No Gain",
-      "abilityText": "[FLIP] [FLIP]. <br><br><b>Recoil 1[ATK]</b>. This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div> <u>after</u> the attack.~RECOIL~",
+      "abilityText": "[FLIP] [FLIP]. <br><br><b>Recoil 1[ATK]</b>,  {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.~RECOIL~",
       "element": "Rock",
       "statusFlg": false,
       "attack": 1,
@@ -36,7 +36,7 @@
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Thu, 08 Jul 2021 07:34:43 GMT"
+      "lastUpdated": "Sat, 04 Sep 2021 12:22:21 GMT"
     },
     {
       "abilityName": "Scorch",
@@ -56,30 +56,30 @@
       "buffName": "Sauna",
       "timing": "Post Actions",
       "buffText": "Whenever your monster flips one or more buff cards that <b>belongs</b> to it, the attack gains <div>+1[ATK].</div>~AURA~",
-      "flipEventText": "If any previous or future [FLIP] <b>belongs</b> to your active monster this turn, this attack gains <div>+1[ATK].</div> ~BELONGS~",
+      "flipEventText": "This attack gains +1[HOLLOW].",
       "auraDuration": 6,
-      "lastUpdated": "Wed, 07 Jul 2021 05:06:09 GMT"
+      "lastUpdated": "Sat, 04 Sep 2021 12:22:21 GMT"
     },
     {
       "buffName": "Inner Strength",
       "timing": "With Attack",
       "buffText": "[FLIP] [FLIP]",
-      "flipEventText": "Remove a <div>[STATUS]</div> from this monster.",
-      "lastUpdated": "Tue, 06 Jul 2021 06:01:48 GMT"
+      "flipEventText": "{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
+      "lastUpdated": "Sat, 04 Sep 2021 12:22:21 GMT"
     },
     {
       "buffName": "Keep Up",
       "timing": "Pre-Actions",
       "buffText": "This attack gains +1[SPD]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+2[SPD]</div> instead. ~STATUS~",
-      "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div> ",
-      "lastUpdated": "Wed, 07 Jul 2021 05:06:09 GMT"
+      "flipEventText": "{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}</div> ",
+      "lastUpdated": "Sat, 04 Sep 2021 12:22:21 GMT"
     },
     {
       "buffName": "Sear",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+2[ATK]</div> instead. ~STATUS~",
-      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div> <u>after</u> the attack.",
-      "lastUpdated": "Thu, 08 Jul 2021 07:34:43 GMT"
+      "flipEventText": "{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}",
+      "lastUpdated": "Sat, 04 Sep 2021 12:22:21 GMT"
     }
   ],
   "monsterId": 2,

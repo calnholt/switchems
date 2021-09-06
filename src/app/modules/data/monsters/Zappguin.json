@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Thunderstorm",
-      "abilityText": "[FLIP]. <br><br>This monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}</div>",
+      "abilityText": "[FLIP]. <br><br>{\"stat\": \"SPD\", \"num\": 4, \"isPositive\": true}</div>",
       "element": "Electric",
       "statusFlg": false,
       "attack": 4,
@@ -13,7 +13,7 @@
       "draw": 0,
       "discard": 2,
       "buff": 0,
-      "lastUpdated": "Fri, 26 Feb 2021 08:39:49 GMT"
+      "lastUpdated": "Sat, 04 Sep 2021 12:58:50 GMT"
     },
     {
       "abilityName": "Ice Blast",
@@ -41,23 +41,23 @@
     },
     {
       "abilityName": "Paralyze",
-      "abilityText": "<b>Stun [STATUS]</b> and the enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}. ~STUN~",
+      "abilityText": "<b>Stun [STATUS]</b> and <b>crush 2</b>. ~STUN~ ~CRUSH~",
       "element": "Electric",
       "statusFlg": true,
       "speed": 7,
       "draw": 1,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Fri, 26 Feb 2021 08:39:49 GMT"
+      "lastUpdated": "Sat, 04 Sep 2021 12:58:50 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Zap",
       "timing": "Post Actions",
-      "buffText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.</div>",
+      "buffText": "{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}",
       "flipEventText": "<b>Pierce 1[DEF]</b>. ~PIERCE~",
-      "lastUpdated": "Thu, 15 Jul 2021 08:20:51 GMT"
+      "lastUpdated": "Sat, 04 Sep 2021 12:58:50 GMT"
     },
     {
       "buffName": "Static Shock",
@@ -70,9 +70,9 @@
     {
       "buffName": "High Voltage",
       "timing": "With Attack",
-      "buffText": "If the enemy monster has a <div>[STATUS],</div> the enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.</div>~PIERCE~",
+      "buffText": "This attack gains +1[HOLLOW]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+3[HOLLOW] and <b>exhaust</b> instead.</div> ~EXHAUST~",
       "flipEventText": "If the enemy monster has a <div>[STATUS]</div> and this attack is <b>faster</b>, this attack gains <b>flinch</b> and <b>exhaust</b>.",
-      "lastUpdated": "Wed, 07 Jul 2021 07:02:19 GMT"
+      "lastUpdated": "Sat, 04 Sep 2021 12:58:50 GMT"
     },
     {
       "buffName": "Retaliate",

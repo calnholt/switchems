@@ -33,6 +33,14 @@
                 padding-left: 17px;
                 font-weight: normal;
             }
+            li {
+                padding-bottom: 10px;
+                span {
+                    div {
+                        display: inline;
+                    }
+                }
+            }
         }
     }
 }

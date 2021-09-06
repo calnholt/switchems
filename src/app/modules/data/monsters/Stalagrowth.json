@@ -57,15 +57,15 @@
       "buffName": "Regrowth",
       "timing": "Post Actions",
       "buffText": "This monster heals <div>1[HP].</div> If the enemy monster has a [STATUS], this monster heals <div>2[HP]</div> instead.~STATUS~",
-      "flipEventText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
-      "lastUpdated": "Tue, 13 Apr 2021 11:59:45 GMT"
+      "flipEventText": "{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
+      "lastUpdated": "Sat, 04 Sep 2021 12:47:52 GMT"
     },
     {
       "buffName": "Mossy Overgrowth",
       "timing": "Pre-Actions",
       "buffText": "<b>Super [B] [B]. </b><br><br>This monster gains <div>+3[DEF]</div> this turn. ~SUPER~",
-      "flipEventText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "lastUpdated": "Tue, 06 Jul 2021 05:33:52 GMT"
+      "flipEventText": "{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
+      "lastUpdated": "Sat, 04 Sep 2021 12:47:52 GMT"
     },
     {
       "buffName": "Concussion",
@@ -84,10 +84,10 @@
   ],
   "monsterId": 1,
   "monsterName": "Stalagrowth",
-  "abilityText": "When this monster <b>switches in</b>, this monster gains <div>{\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.</div> ~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, {\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.</div> ~SWITCH~",
   "hp": 9,
   "promiseDescription": "<b>Stallagrowth</b> plays for the long game – slowly drain the enemy's health and stand your ground with bolstered defense.",
   "initiative": 10,
   "imageFlg": true,
-  "lastUpdated": "Tue, 06 Jul 2021 05:33:52 GMT"
+  "lastUpdated": "Sat, 04 Sep 2021 12:47:52 GMT"
 }

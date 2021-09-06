@@ -64,7 +64,7 @@ function convertInnerTextJson(innerHtml) {
           for (let i = 0; i < obj.num; i++) {
             cubeStr += cubeType + ' ';
           }
-          html += `${cubeStr}[ARROW] [${obj.stat}]</div>`;
+          html += `${cubeStr}[ARROW] [${['ATK', 'HOLLOW'].includes(obj.stat) ? 'HOLLOW' : obj.stat}]</div>`;
       }
       innerHtml = innerHtml.replace(jsonInText, html);
     } catch (error) {

@@ -61,10 +61,20 @@ export class PnpComponent implements OnInit {
       allCards.push({isReferenceCard: true});
       allCards.push({isSwitchReferenceCard: true});
       allCards.push({isSwitchReferenceCard: true});
+      allCards.push({isStatusReferenceCard: true});
+      allCards.push({isStatusReferenceCard: true});
+      allCards.push({isStatCubeBoard: true});
+      allCards.push({isStatCubeBoard: true});
 
       // GOOP
-      for (var i = 0; i < 10; i++) {
+      for (let i = 0; i < 4; i++) {
         allCards.push({isGoop: true});
+      }
+    }
+    const extraSlots = allCards.length % 8;
+    if (extraSlots) {
+      for (let i = 0; i < extraSlots; i++) {
+        allCards.push({isExtraSlot: true});
       }
     }
     this.allCards = allCards;

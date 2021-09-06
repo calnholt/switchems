@@ -1,3 +1,4 @@
+import { StatusReferenceComponent } from './status-reference/status-reference.component';
 import { StatCubeBoardAltComponent } from './stat-cube-board-alt/stat-cube-board-alt.component';
 import { SwitchReferenceComponent } from './switch-reference/switch-reference.component';
 import { ReferenceCardComponent } from './reference-card/reference-card.component';
@@ -39,6 +40,7 @@ import { ActionBoardComponent } from './action-board/action-board.component';
     ReferenceCardComponent,
     SwitchReferenceComponent,
     StatCubeBoardAltComponent,
+    StatusReferenceComponent
   ],
   exports: [
     ActionBoardComponent,
@@ -47,6 +49,7 @@ import { ActionBoardComponent } from './action-board/action-board.component';
     ReferenceCardComponent,
     SwitchReferenceComponent,
     StatCubeBoardAltComponent,
+    StatusReferenceComponent
   ]
 })
 export class PrintModule { }

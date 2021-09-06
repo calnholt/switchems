@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Swamped",
-      "abilityText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}. <br><br>[FLIP]",
+      "abilityText": "[FLIP]. <br><br>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}",
       "element": "Death",
       "statusFlg": false,
       "attack": 3,
@@ -37,49 +37,49 @@
       "draw": 0,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Tue, 13 Apr 2021 12:03:40 GMT"
+      "lastUpdated": "Sat, 04 Sep 2021 12:06:36 GMT"
     },
     {
       "abilityName": "Surge",
-      "abilityText": "<b>Spammable</b>. <br><br>If the enemy monster is <b>frail [FRAIL]</b>, this attack gains +2[ATK],~SPAM~",
+      "abilityText": "<b>Spammable</b>. <br><br>If this attack is <b>faster</b>,  {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}. ~FASTER~",
       "element": "Water",
       "statusFlg": false,
       "attack": 1,
-      "speed": 6,
+      "speed": 5,
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"
+      "lastUpdated": "Sat, 04 Sep 2021 12:16:21 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Abrupt Weakness",
       "timing": "Pre-Actions",
-      "buffText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "flipEventText": "The enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
-      "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"
+      "buffText": "<b> Crush 1</b>, then gain one [PQ] of the type that was crushed.",
+      "flipEventText": "{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
+      "lastUpdated": "Sat, 04 Sep 2021 12:16:21 GMT"
     },
     {
       "buffName": "Famished",
       "timing": "Post Actions",
-      "buffText": "This monster heals <div>X[HP],</div> where X is either the total number of [PQ] stacks this monster has, or the total number of [NQ] stacks the enemy monster has.",
+      "buffText": "Discard X number of [PQ] to gain X[HP], where X cannot exceed 4. <b>Exhaust</b>. ~EXHAUST~",
       "flipEventText": "[+].",
-      "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"
+      "lastUpdated": "Sat, 04 Sep 2021 12:16:21 GMT"
     },
     {
       "buffName": "Cripple",
       "timing": "Pre-Actions",
-      "buffText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
-      "flipEventText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
-      "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"
+      "buffText": "<b>Crush 3</b> ~CRUSH~",
+      "flipEventText": "<b>Crush 2</b> ~CRUSH~",
+      "lastUpdated": "Sat, 04 Sep 2021 12:16:21 GMT"
     },
     {
       "buffName": "Tremble",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super [B] [B], exhaust.</b><br><br>The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}</div> and <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.</div>~SUPER~ ~EXHAUST~",
-      "flipEventText": "If the enemy monster is <div><b>frail</b> [FRAIL],</div> this attack gains <div>+1[ATK].</div>",
-      "lastUpdated": "Thu, 15 Jul 2021 08:22:09 GMT"
+      "buffText": "<b>Super [B] [B]. </b><br><br><div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}</div> and <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.</div>~SUPER~",
+      "flipEventText": "If you have two or more cards if you hand, you may discard a random card. If you do, this attacks gains +1[ATK].",
+      "lastUpdated": "Sat, 04 Sep 2021 12:16:21 GMT"
     }
   ],
   "monsterId": 5,

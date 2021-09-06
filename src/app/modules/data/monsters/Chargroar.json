@@ -19,7 +19,7 @@
     },
     {
       "abilityName": "Lights Out",
-      "abilityText": "If this attack KO's the enemy monster, this monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.</div>",
+      "abilityText": "If this attack KO's the enemy monster, <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.</div>",
       "element": "Electric",
       "statusFlg": false,
       "attack": 2,
@@ -28,11 +28,11 @@
       "discard": 0,
       "buff": 1,
       "modifier": 1,
-      "lastUpdated": "Thu, 08 Jul 2021 07:19:12 GMT"
+      "lastUpdated": "Sat, 04 Sep 2021 11:57:39 GMT"
     },
     {
       "abilityName": "Hypercharge",
-      "abilityText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 3, \"isPositive\": true}.</div>",
+      "abilityText": "{\"stat\": \"ATK\", \"num\": 3, \"isPositive\": true}",
       "element": "Electric",
       "statusFlg": true,
       "speed": 9,
@@ -40,7 +40,7 @@
       "discard": 0,
       "buff": 0,
       "modifier": 0,
-      "lastUpdated": "Thu, 01 Apr 2021 20:00:04 GMT"
+      "lastUpdated": "Sat, 04 Sep 2021 11:57:39 GMT"
     },
     {
       "abilityName": "Blazing Roar",
@@ -61,37 +61,37 @@
       "buffName": "Charge",
       "timing": "Pre-Actions",
       "buffText": "This attack gains +1[SPD]. If your opponent has a KO'd monster, this attack gains +2[SPD] instead.",
-      "flipEventText": "The enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
-      "lastUpdated": "Sat, 03 Apr 2021 06:43:58 GMT"
+      "flipEventText": "{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}",
+      "lastUpdated": "Sat, 04 Sep 2021 12:25:34 GMT"
     },
     {
       "buffName": "Roar",
       "timing": "With Attack",
       "buffText": "This attack gains +1[ATK]. If your opponent has a KO'd monster, this attack gains +2[ATK] instead.",
-      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}</div><u>after</u> the attack.",
-      "lastUpdated": "Thu, 08 Jul 2021 07:47:35 GMT"
+      "flipEventText": "{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}",
+      "lastUpdated": "Sat, 04 Sep 2021 11:56:07 GMT"
     },
     {
       "buffName": "Revenge",
       "timing": "With Attack",
-      "buffText": "If the enemy monster is <div><b>resistant</b> [RESIST]</div> to this attack's element, this attack gains +2[ATK] and <b>exhaust</b>. If not, this attack gains <b>recoil 1[ATK]</b>.~RESIST~~RECOIL~~EXHAUST~",
+      "buffText": "If the enemy monster is <div><b>resistant</b> [RESIST]</div> to this attack's element, this attack gains +2[ATK] and <b>exhaust</b>. If not, this attack gains <b>recoil 1[ATK]</b>.~RESIST~~EXHAUST~~RECOIL~",
       "flipEventText": "<b>Pierce 2[DEF]</b>",
-      "lastUpdated": "Mon, 05 Jul 2021 10:15:05 GMT"
+      "lastUpdated": "Sat, 04 Sep 2021 12:25:34 GMT"
     },
     {
       "buffName": "Prey Upon",
       "timing": "With Attack",
-      "buffText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains +2[ATK] and <b>exhaust</b>. If not, this attack gains <b>recoil 1[ATK]</b>.~EFFECTIVE~~EXHAUST~",
-      "flipEventText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains <div>+1[ATK].</div>",
-      "lastUpdated": "Mon, 05 Jul 2021 10:15:05 GMT"
+      "buffText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains +2[ATK] and <b>exhaust</b>. If not, this attack gains <b>recoil 1[ATK]</b>.~EFFECTIVE~~EXHAUST~~RECOIL~",
+      "flipEventText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains <div>+2[HOLLOW].</div>",
+      "lastUpdated": "Sat, 04 Sep 2021 12:25:34 GMT"
     }
   ],
   "monsterId": 4,
   "monsterName": "Chargroar",
-  "abilityText": "When this monster <b>switches in</b>, the enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.</div>~SWITCH~",
-  "hp": 6,
+  "abilityText": "When this monster <b>switches in</b>, you may disable a different monster action on the enemy monster.~SWITCH~",
+  "hp": 7,
   "promiseDescription": "<b>Chargroar</b> is the quintessential assassin – fast, lethal, and fragile. Knockout a monster quickly to improve your buffs!",
   "initiative": 80,
   "imageFlg": true,
-  "lastUpdated": "Wed, 07 Jul 2021 20:17:05 GMT"
+  "lastUpdated": "Sat, 04 Sep 2021 11:56:07 GMT"
 }

@@ -38,15 +38,15 @@ export type TermCodeValue = string;
 // best method I could think of with the least redundancy while maintaining strong typing
 export const TERM_KEYS = [`~WOUND~`, `~FLINCH~`, `~DRAIN~`, `~FATIGUE~`,
     `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~SUPER~`, `~FASTER~`, `~SLOWER~`, 
-    `~GOOP~`, `~EXHAUST~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`, `~BELONGS~`, `~SPAM~`, `~AURA~`, `~STRENGTHEN~`, `~FRAIL~`, '~CAPTURE~'] as const;
+    `~GOOP~`, `~EXHAUST~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`, `~BELONGS~`, `~SPAM~`, `~AURA~`, `~STRENGTHEN~`, `~FRAIL~`, '~CAPTURE~', '~CRUSH~'] as const;
 export type TermCode = typeof TERM_KEYS[number];
 const termCodes = [
     new Term('Belongs', `~BELONGS~`, `A buff card <b>belongs</b> to a monster if the monster name on the bottom of the buff card matches.`),
-    new Term('Drain', `~DRAIN~`, `At the end of the turn, monsters with <b>drain</b> [STATUS] suffer <div>1[ATK]</div> and your active monster heals <div>1[HP].</div>`),
+    new Term('Drain', `~DRAIN~`, `At the end of the turn, monsters with <b>drain</b> [STATUS] suffer <span>1[ATK]</span> and your active monster heals <span>1[HP].</span>`),
     new Term('Weak', `~EFFECTIVE~`, `Monsters are <b>weak</b> to elements in the [WEAK] section of their monster card.`),
     new Term('Exhaust', `~EXHAUST~`, `Cards with <b>exhaust</b> are removed from the game after they are resolved.`),
     new Term('Faster', `~FASTER~`, `This action is <b>faster</b> if your opponent selects a standard action, or if both players select a monster action and yours resolves first.`),
-    new Term('Fatigue', `~FATIGUE~`, `Whenever a monster with <b>fatigue</b> [STATUS] attacks, the attack gains <div><b>recoil X[ATK]</b></div>, where X is the number of buff slots used.`),
+    new Term('Fatigue', `~FATIGUE~`, `Whenever a monster with <b>fatigue</b> [STATUS] attacks, the attack gains <span><b>recoil X[ATK]</b></span>, where X is the number of buff slots used.`),
     new Term('Flinch', `~FLINCH~`, `Actions with <b>flinch</b> prevent the enemy monster's monster action if this action is <b>faster.</b>`),
     new Term('Pierce', '~PIERCE~', `Attacks with <b>pierce</b> ignore this amount of the enemy monster's <div>[DEF].</div> Multiple instances of pierce stack.`),
     new Term('Recoil', `~RECOIL~`, `This monster suffers this amount of <b>recoil</b> damage to itself after the attack resolves. Multiple instances of recoil stack.`),
@@ -63,13 +63,14 @@ const termCodes = [
     new Term('Frail', `~FRAIL~`, `At the end of the turn, <b>frail</b> [FRAIL] monsters remove <b>frail</b> [FRAIL] instead of removing [NQ].`),
     new Term('Strengthen', `~STRENGTHEN~`, `At the end of the turn, <b>strengthened</b> [STR] monsters remove <b>strengthen</b> [STR] instead of removing [PQ].`),
     new Term('Capture', `~CAPTURE~`, `Choose a card from your opponent's discard to remove from play. If you have already removed a card from play from a capture ability, you may replace it with a different card instead. Captured cards are returned to your opponent's discard when this monster switches out.`),
+    new Term('Crush', '~CRUSH~', 'Discard the specified number of [PQ] from your opponent of your choice.')
 ];
 export const TERM_CODES = termCodes.sort((a,b) => a.name.localeCompare(b.name));
 
 
 const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[DEF]`, `[TA]`,
     `[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]', '[NQ]', '[PQ]', '[ARROW]',
-    '[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]', '[ACORN]', '[HONEY]', '[WISH]', '[TORMENT]', '[FLIP]', '[DISABLE]', '[SINGLE]', 
+    '[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]', '[ACORN]', '[HONEY]', '[WISH]', '[TORMENT]', '[FLIP]', '[DISABLE]', '[SINGLE]', '[HOLLOW]',
     '[SR]', '[SL]', '[RESIST]', '[WEAK]', '[STR]', '[FRAIL]', '[GOOP]'
 ] as const;
 export type ImageCode = typeof IMAGE_KEYS[number];
@@ -112,6 +113,7 @@ export const IMAGE_CODES = [
     new Image(`[STR]`, SYMBOLS_PATH + `strengthen.png`),
     new Image(`[FRAIL]`, SYMBOLS_PATH + `frail.png`),
     new Image(`[GOOP]`, SYMBOLS_PATH + `goop.png`),
+    new Image(`[HOLLOW]`, SYMBOLS_PATH + `hollow.png`),
 ];
 
 //TODO: this should return an object with two properties: advElems and DisElems that are arrays of elemtypes

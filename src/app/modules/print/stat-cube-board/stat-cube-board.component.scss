@@ -10,7 +10,7 @@
         width: $card-width;
         background-color: white;
         .table-container{
-            padding: 0px 10px 0px 10px;
+            padding: 10px;
             .title{
                 padding-top: 4px;
                 font-size: 20px;
@@ -42,16 +42,12 @@
             }
             .stat-cube-table{
                 border-collapse: separate;
-                border-radius: 6px 6px 0px 0px;
+                border-radius: 6px;
                 width: 100%;
-                border-bottom: unset;
                 tr{
-                    height: 106px;
+                    height: 99px;
                     td:nth-child(1){
                         background-color: #d6ffd6;
-                    }
-                    td:nth-child(2){
-                        background-color: #ffcdcd;
                     }
                     td{
                         border: unset;
@@ -62,6 +58,7 @@
                         box-shadow: $recessed;
                         img{
                             max-height: 30px;
+                            padding-left: 5px;
                         }
                         div{
                             font-size: 15px;
@@ -70,11 +67,13 @@
                     }
                 }
                 tr:first-child {
-                    td:first-child {
-                        border-radius: 4px 0px 0px 0px;
+                    td {
+                        border-radius: 4px 4px 0px 0px;
                     }
-                    td:last-child {
-                        border-radius: 0px 4px 0px 0px;
+                }
+                tr:last-child {
+                    td {
+                        border-radius: 0px 0px 4px 4px;
                     }
                 }
             }

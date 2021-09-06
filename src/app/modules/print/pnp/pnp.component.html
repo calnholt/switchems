@@ -35,12 +35,19 @@
       <span *ngIf="card.isSwitchReferenceCard">
         <switch-reference></switch-reference>
       </span>
+      <span *ngIf="card.isStatusReferenceCard">
+        <status-reference></status-reference>
+      </span>
+      <span *ngIf="card.isStatCubeBoard">
+        <stat-cube-board></stat-cube-board>
+      </span>
       <span *ngIf="card.isGoop">
         <goop></goop>
+      </span>
+      <span *ngIf="card.isExtraSlot">
+        <div class="extra-slot"></div>
       </span>
       <div [ngClass]="{'break' : isPageBreak()}"></div>
     </span>
   </div>
-  <stat-cube-board-alt></stat-cube-board-alt>
-  <stat-cube-board-alt></stat-cube-board-alt>
 </div>

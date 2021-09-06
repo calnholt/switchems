@@ -1,16 +1,12 @@
 <div id="buff-card">
   <div class="card-container">
     <img class="buff-background" src="{{getBuffImagePath()}}">
-    <div class="timing-container">
-      <span class="numeral">{{getTimingRomanNumeral()}}</span>
-      <span class="timing-name">{{buff.timing}}</span>
-    </div>
-    <div *ngIf="buff.auraDuration" class="team-aura-container">
-      <div>{{buff.auraDuration}}</div>
-      <img src="{{imageService.getImg('aura')}}">
-    </div>
     <div class="name">{{buff.buffName}}</div>
     <div class="text-container ability">
+      <div *ngIf="buff.auraDuration" class="team-aura-container">
+        <div>{{buff.auraDuration}}</div>
+        <img src="{{imageService.getImg('aura')}}">
+      </div>
       <div [innerHTML]="getAbilityText(buff.buffText, false)" class="buff-text"></div>
     </div>
     <div class="text-container flip">

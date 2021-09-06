@@ -12,7 +12,7 @@
         background-color: white;
         position: relative;
         .no-draw{
-            max-height: 18px;
+            max-height: 14px;
         }
         .switch-heal{
             font-size: 15px;
@@ -44,13 +44,14 @@
                 border-radius: unset;
             }
             .title{
-                font-size: 23px;
+                font-size: 18px;
                 text-align: center;
                 margin: 0px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 padding: 0px 5px;
+                line-height: 15px !important;
                 .discards {
                     padding-bottom: 1px;
                 }
@@ -144,9 +145,14 @@
                 background-color: unset;
                 display: flex;
                 .maneuver {
-                    padding: 11px 0px 0px 12px;
+                    position: absolute;
+                    right: 9px;
+                    top: 186px;
                     img {
                         max-height: 20px;
+                    }
+                    &.green {
+                        top: 226px;
                     }
                 }
                 table{
@@ -156,25 +162,43 @@
                     left: 8px;
                     width: 84%;
                     border-radius: 0px 0px 6px 6px;
-                    tr{
+                    tr {
                         td {
                             font-size: 22px;
-                            width: 25%;
+                            width: 30%;
                             img {
-                                max-height: 20px;
+                                max-height: 18px;
                             }
                         }
-                        td:nth-child(even){
-                            background-color: #8abcf9;
+                    }
+                    tr:nth-child(1) {
+                        td {
+                            background-color: #aaf5aa;
                         }
-                        td:nth-child(odd){
+                        td:nth-child(1) {
+                            width: 40%;
+                        }
+                    }
+                    tr:nth-child(2) {
+                        td {
                             background-color: #aae3ff;
                         }
                         td:first-child{
-                            border-radius: 4px 0px 0px 4px !important;
+                            width: 40%;
+                            border-radius: 0px 0px 0px 4px !important;
+                            font-size: 14px;
+                            img {
+                                max-height: 11px;
+                            }
+                        }
+                        td:nth-child(2) {
+                            div {
+                                display: flex;
+                                align-items: center;
+                            }
                         }
                         td:last-child {
-                            border-radius: 0px 4px 4px 0px !important;
+                            border-radius: 0px 0px 4px 0px !important;
                         }
                     }
                 }
