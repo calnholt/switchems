@@ -71,7 +71,7 @@ export class PnpComponent implements OnInit {
         allCards.push({isGoop: true});
       }
     }
-    const extraSlots = allCards.length % 8;
+    const extraSlots = allCards.length % 4;
     if (extraSlots) {
       for (let i = 0; i < extraSlots; i++) {
         allCards.push({isExtraSlot: true});
