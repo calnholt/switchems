@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RulebookBuffComponent implements OnInit {
   @Input() buff: Buff;
-  numbers = [1, 2, 3, 4, 5];
+  numbers = [1, 2, 3, 4];
   constructor() { }
 
   ngOnInit() {

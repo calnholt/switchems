@@ -60,8 +60,6 @@ const termCodes = [
     new Term('Switches In', `~SWITCH~`, `<b>Switch in</b> abilities also trigger at the start of the game and following a monster KO.`),
     new Term('Team Aura', '~AURA~', '<b>Team aura</b> [TA] – At the end of your turn, put a time counter on this. If the number of time counters equals its duration, <b>exhaust</b> this. You can only have one active <b>team aura</b> at any time.'),
     new Term('Wound', `~WOUND~`, `Monsters with <b>wound</b> [STATUS] perform one less [FLIP] on all of their attacks.`),
-    new Term('Frail', `~FRAIL~`, `At the end of the turn, <b>frail</b> [FRAIL] monsters remove <b>frail</b> [FRAIL] instead of removing [NQ].`),
-    new Term('Strengthen', `~STRENGTHEN~`, `At the end of the turn, <b>strengthened</b> [STR] monsters remove <b>strengthen</b> [STR] instead of removing [PQ].`),
     new Term('Capture', `~CAPTURE~`, `Choose a card from your opponent's discard to remove from play. If you have already removed a card from play from a capture ability, you may replace it with a different card instead. Captured cards are returned to your opponent's discard when this monster switches out.`),
     new Term('Crush', '~CRUSH~', '<b>Crush X</b> - Remove X [PQ] of your choice from your opponent.')
 ];

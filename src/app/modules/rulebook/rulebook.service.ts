@@ -19,7 +19,7 @@ export class RulebookService {
           text: 'Leverage your team of monsters in a battle of cunning and wits in this exciting two-player card game',
         },
         {
-          text: 'v.0.7.0',
+          text: 'v.0.8.0',
         },
         {
           text: '2 Players   |   30 - 60 Minutes   |   Ages 12+',
@@ -270,9 +270,6 @@ export class RulebookService {
           text: 'Buffs have several unique attributes:',
           ol: [
             {
-              text: '<a href="buff_timing">Buff card timing</a>'
-            },
-            {
               text: 'Buff name',
             },
             {
@@ -321,7 +318,10 @@ export class RulebookService {
                   text: 'Both players reveal their selected actions and then resolve them:',
                   ol: [
                     {
-                      text: 'Pre-Action Buffs',
+                      text: 'Apply used [PQ]',
+                    },
+                    {
+                      text: 'Apply Buffs',
                     },
                     {
                       text: 'Switch Actions',
@@ -331,9 +331,6 @@ export class RulebookService {
                     },
                     {
                       text: 'Standard Actions',
-                    },
-                    {
-                      text: 'Post Action Buffs',
                     },
                   ]
                 }
@@ -371,13 +368,7 @@ export class RulebookService {
         {
             ul: [
                 {
-                  text: 'Choose <b>one</b>: either the monster that is switching out heals 2[HP] OR remove a <a href="status_conditions">status condition</a> [STATUS] from the monster that is switching out.'
-                },
-                {
-                  text: 'Gain <a href="stat_cube_board">strengthen</a> [STR].'
-                },
-                {
-                  text: 'Remove all [NQ] from your <a href="stat_cube_board">stat cube board</a>. '
+                  text: 'Choose <b>one</b>: either the monster that is switching out heals 2[HP] OR remove all <a href="status_conditions">status condition</a> [STATUS] from the monster that is switching out.'
                 },
                 {
                   text: 'The monster that is switching in gains +X[DEF] this turn against elements it is resistant [RESIST] to. The defense value and resistant elements are denoted on the <a href="monster_card">monster card</a>.'
@@ -391,23 +382,29 @@ export class RulebookService {
           text: '<h1>Monster Actions</h1>Monster actions, labeled 1 - 4, correspond to your active monster’s four action cards, arranged in a two by two grid. When you select a monster action, you must place the required number of [-] indicated on the <a href="action_card">monster action</a> from your hand face-up on the discard [-] section of your player board. For each [B] on the <a href="action_card">monster action</a>, you may optionally apply a <a href="buff_card">buff</a> from your hand to the action by placing each applied <a href="buff_card">buff</a> face-up on the buff [B] section of your action board. These actions are discussed in greater detail in the <a href="monster_actions">Monster Actions Detailed</a> section.'
         },
         {
+          text: '<h1>Stat Cubes [PQ]</h1>Stat cubes [PQ] are used to augment monster <b>attacks [ATK]</b> using [PQ] you have accumulated. To apply stat cubes, when you select a monster attack [ATK] action, you may choose to apply ALL accumulated stat cubes of a single type to your monster attack action. Afterwards, the applied [PQ] are discarded.',
+        },
+        {
           text: '<h1>Maneuvers</h1>Maneuver cubes [MQ] are used to augment monster <b>attacks [ATK]</b>. To use a maneuver, when you select a monster attack [ATK] action, you may select a maneuver by placing one of your [MQ] on the maneuver space. Afterwards, the [MQ] is discarded.',
         },
         {
           ul: [
             {
-              text: '+3[DEF] – Your monster gains +3[DEF] this turn.'
+              text: '+2[DEF] – Your monster gains +2[DEF] this turn.'
             },
             {
-              text: '[FLIP] [FLIP] – This attack gains two <a href="flip_effects">flips</a>.'
+              text: '<b>Piece 2[DEF]</b> – This attack gains <b>Piece 2[DEF]</b>.'
             },
             {
-              text: '+3[SPD] – This attack gains +3[SPD] this turn.'
+              text: '+2[SPD] – This attack gains +2[SPD] this turn.'
             }
           ]
         },
         {
-          text: '<b>NOTE:</b> You cannot apply [MQ] to monster special [SPECIAL] actions.'
+          text: '<b>NOTE:</b> You cannot apply [PQ] and [MQ] to the same monster attack action.'
+        },
+        {
+          text: '<b>NOTE:</b> You cannot apply [PQ] and [MQ] to monster special [SPECIAL] actions.'
         },
         {
           text: '<b>NOTE:</b> There is no limit to the number of [MQ] a player can have.'
@@ -446,7 +443,10 @@ export class RulebookService {
           text: 'After both players have secretly selected their actions, you simultaneously reveal your selected actions. Actions occur in a specific order:',
           ol: [
             {
-              text: '<a href="buff_timing">Pre-Action Buffs</a>',
+              text: '<a href="buff_timing">Apply used [PQ]</a>',
+            },
+            {
+              text: '<a href="buff_timing">Apply Buffs</a>',
             },
             {
               text: '<a href="selection_phase">Switch Actions</a>',
@@ -456,9 +456,6 @@ export class RulebookService {
             },
             {
               text: '<a href="selection_phase">Standard Actions</a>',
-            },
-            {
-              text: '<a href="buff_timing">Post Action Buffs</a>',
             },
           ]
         }
@@ -482,9 +479,6 @@ export class RulebookService {
           ul:
            [
             {
-              text: 'Resolve all <a href="buff_timing">With Attack</a> buff card effects that were applied to this attack'
-            },
-            {
               text: 'Resolve the attack’s ability (if any)',
             },
             {
@@ -504,47 +498,6 @@ export class RulebookService {
       ]
     },
     {
-      title: 'Buff Timing',
-      id: 'buff_timing',
-      blocks: [
-        {
-          text: '<a href="buff_card">Buff</a> cards have three stages of timing, which denote when they resolve during the action phase. These timings are Pre-Actions, With Attack, and Post Actions.',
-          ul: [
-            {
-              text: '<b>Pre-Actions (I):<b>',
-              ul: [
-                {
-                  text: 'Buff cards with Pre-Actions timing reolve before any actions occur. These buffs are resolved in <a href="monster_card">initiative</a> order.'
-                }
-              ]
-            },
-            {
-              text: '<b>With Attack (II):</b>',
-              ul: [
-                {
-                  text: 'Buff cards that have With Attack timing occur when that player’s selected monster attack action is being resolved, and before calculating damage.'
-                },
-                {
-                  text: '<b>NOTE:</b> If an attack action applied with a With Attack timing buff is prevented by another ability (like flinch), the attack never occurs, therefore the buff’s ability is prevented.'
-                }
-              ]
-            },
-            {
-              text: '<b>Post Actions (III):</b>',
-              ul: [
-                {
-                  text: 'Buff cards with Post Actions timing occur after all monster actions have been resolved. These buffs are resolved in <a href="monster_card">initiative order</a>.',
-                },
-                {
-                  text: '<b>NOTE:</b> If your active monster is <a href="ko">KO\'d</a> before resolving Post Actions buffs, they are not resolved.',
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       title: 'Flip Effects[FLIP]',
       id: 'flip_effects',
       blocks: [
@@ -557,42 +510,12 @@ export class RulebookService {
       ]
     },
     {
-      title: 'Stat Cube Board[PQ][NQ]',
+      title: 'Stat Cube Board[PQ]',
       id: 'stat_cube_board',
       rulebookImage: 'Stat-Cube',
       blocks: [
         {
-          text: 'Some abilities have monsters gaining stat cubes. Stat cubes modify your active monster’s stats - [ATK], [SPD], [DEF]. These can either be beneficial or detrimental. These modifiers decay over time.',
-        },
-        {
-          text: 'When gaining positive stat cubes [PQ] for a stat, move your marker along the corresponding stat track that number of spaces to the left and place a <b>strengthen</b> [STR] token on the [STR] space if one was not there already.'
-        },
-        {
-          text: 'When gaining negative stat cubes [NQ], move your marker along the corresponding stat track that number of spaces to the right and place a <b>frail</b> [FRAIL] token on the [FRAIL] space if one was not there already.'
-        },
-        {
-          text: 'For example, if an abilty shows this: {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}, move the [ATK] marker two spaces to the left and place a <b>strengthen</b> [STR] token on the [STR] space if one was not there already.'
-        },
-        {
-          text: 'The number above each space on the stat tracks is the stat modifier for you active monster. These stat modifiers are <b>not</b> cumulative.'
-        },
-        {
-          text: '[ATK][PQ]/[NQ] affect all of your monster attack [ATK] damage.'
-        },
-        {
-          text: '[SPD][PQ]/[NQ] modifiers affect all of your monster action speed [SPD].'
-        },
-        {
-          text: '[DEF][PQ] grant defense to your active monster.'
-        },
-        {
-          text: 'During the <a href="end_phase">End Phase</a>, if your monster is <b>strengthened</b> [STR], remove it. Otherwise move each [PQ] stat track marker to the right one space (referred to as decay).'
-        },
-        {
-          text: 'During the <a href="end_phase">End Phase</a>, if your monster is <b>frail</b> [FRAIL], remove it. Otherwise move each [NQ] stat track marker to the left one space (referred to as decay).'
-        },
-        {
-          text: '<b>NOTE:</b> Stat tracks with 0[PQ]/[NQ] do not move during the end phase.'
+          text: 'Some abilities have monsters gaining stat cubes. Stat cubes can be used to increase your active monster’s stats - [ATK], [SPD], [DEF]. Whenever a player gains stat cubes, place them on their corresponding space on the stat cube board. Each stat type has a maximum number of cubes it can hold, as displayed on the space. When a player chooses to apply stat cubes during the selection phase, move all of the selected stat type\'s cubes to the USING side of the board, to denote that these are being applied to the attack.',
         },
       ]
     },
@@ -613,10 +536,7 @@ export class RulebookService {
               text: 'Remove one time counter from your active <a href="buff_card">Team Aura</a> [TA], if applicable.',
             },
             {
-              text: 'If your monster is <b>strengthened</b> [STR], remove it. Otherwise decay each [PQ] by one.'
-            },
-            {
-              text: 'If your monster is <b>frail</b> [FRAIL], remove it. Otherwise decay each [NQ] by one.',
+              text: 'Remove all stat cubes from the USING side of your stat cube board'
             },
             {
               text: 'Draw [+] one card.'
