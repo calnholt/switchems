@@ -23,11 +23,11 @@ export class ReferenceCardComponent {
       title: 'Action Phase',
       items: ['Reveal your selected actions and then resolve them in this order:'],
       subOrderedItems: [
-        'Pre-Action buffs',
+        'Apply used [PQ]',
+        'Buffs',
         'Switch actions',
         'Monster actions',
-        'Standard actions',
-        'Post-Action buffs',
+        'Standard actions'
       ],
     },
     {

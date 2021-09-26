@@ -63,7 +63,7 @@ const termCodes = [
     new Term('Frail', `~FRAIL~`, `At the end of the turn, <b>frail</b> [FRAIL] monsters remove <b>frail</b> [FRAIL] instead of removing [NQ].`),
     new Term('Strengthen', `~STRENGTHEN~`, `At the end of the turn, <b>strengthened</b> [STR] monsters remove <b>strengthen</b> [STR] instead of removing [PQ].`),
     new Term('Capture', `~CAPTURE~`, `Choose a card from your opponent's discard to remove from play. If you have already removed a card from play from a capture ability, you may replace it with a different card instead. Captured cards are returned to your opponent's discard when this monster switches out.`),
-    new Term('Crush', '~CRUSH~', 'Discard the specified number of [PQ] from your opponent of your choice.')
+    new Term('Crush', '~CRUSH~', '<b>Crush X</b> - Remove X [PQ] of your choice from your opponent.')
 ];
 export const TERM_CODES = termCodes.sort((a,b) => a.name.localeCompare(b.name));
 

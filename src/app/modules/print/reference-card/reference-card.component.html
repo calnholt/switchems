@@ -9,7 +9,7 @@
             <span class="text" [innerHTML]="getFormattedText(item)"></span>
             <ol *ngIf="ref.subOrderedItems">
               <li *ngFor="let subOrderedItem of ref.subOrderedItems">
-                <span class="text">{{subOrderedItem}}</span>
+                <span class="text" [innerHTML]="getFormattedText(subOrderedItem)"></span>
             </ol>
           </li>
         </ul>
