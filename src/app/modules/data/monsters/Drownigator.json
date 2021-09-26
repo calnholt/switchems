@@ -6,14 +6,14 @@
   "actions": [
     {
       "abilityName": "Fatigue",
-      "abilityText": "<b>Fatigue [STATUS]</b> ~FATIGUE~",
+      "abilityText": "<b>Fatigue [STATUS]</b>, {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}. ~FATIGUE~",
       "element": "Death",
       "statusFlg": true,
       "speed": 8,
       "draw": 1,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Fri, 26 Feb 2021 08:02:45 GMT"
+      "lastUpdated": "Sun, 26 Sep 2021 13:16:53 GMT"
     },
     {
       "abilityName": "Expunge",
@@ -41,7 +41,7 @@
     },
     {
       "abilityName": "Surge",
-      "abilityText": "<b>Spammable</b>. <br><br>If this attack is <b>faster</b>,  {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}. ~FASTER~",
+      "abilityText": "<b>Spammable</b>. <br><br>If this attack is <b>faster</b>,  {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}. ~SPAM~~FASTER~",
       "element": "Water",
       "statusFlg": false,
       "attack": 1,
@@ -49,7 +49,7 @@
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Sat, 04 Sep 2021 12:16:21 GMT"
+      "lastUpdated": "Sun, 26 Sep 2021 13:34:48 GMT"
     }
   ],
   "buffs": [
@@ -78,8 +78,8 @@
       "buffName": "Tremble",
       "timing": "Pre-Actions",
       "buffText": "<b>Super [B] [B]. </b><br><br><div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}</div> and <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.</div>~SUPER~",
-      "flipEventText": "If you have two or more cards if you hand, you may discard a random card. If you do, this attacks gains +1[ATK].",
-      "lastUpdated": "Sat, 04 Sep 2021 12:16:21 GMT"
+      "flipEventText": "You may discard a random card to have this attack gain <div>+1[ATK].</div>",
+      "lastUpdated": "Sun, 26 Sep 2021 13:05:28 GMT"
     }
   ],
   "monsterId": 5,

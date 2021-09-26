@@ -17,14 +17,14 @@
     },
     {
       "abilityName": "Burn",
-      "abilityText": "<b>Wound [STATUS]</b> \n<br><br>This monster gains +1[DEF] this turn. \n\n~WOUND~",
+      "abilityText": "<b>Wound [STATUS]</b>.  \n<br><br>This monster gains +1[DEF] this turn. \n\n~WOUND~",
       "element": "Fire",
       "statusFlg": true,
       "speed": 8,
       "draw": 0,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Sat, 04 Sep 2021 12:22:21 GMT"
+      "lastUpdated": "Thu, 23 Sep 2021 06:37:16 GMT"
     },
     {
       "abilityName": "No Pain, No Gain",

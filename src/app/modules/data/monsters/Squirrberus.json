@@ -54,23 +54,23 @@
     {
       "buffName": "Spicy Acorn",
       "timing": "Pre-Actions",
-      "buffText": "If you do not have an <b>acorn [ACORN],</b> gain one randomly from the supply.<br><br>If you do, return it to the supply and gain its effect at the <b>acorn's [ACORN]</b> specified buff timing.",
+      "buffText": "If you do not have an <b>acorn [ACORN],</b> gain one randomly from the supply.<br><br>If you do have an <b>acorn [ACORN],</b> return it to the supply and gain its effect at the <b>acorn's [ACORN]</b> specified buff timing.",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.</div> ",
-      "lastUpdated": "Thu, 15 Jul 2021 08:29:45 GMT"
+      "lastUpdated": "Fri, 24 Sep 2021 12:23:04 GMT"
     },
     {
       "buffName": "Ripe Acorn",
       "timing": "Pre-Actions",
-      "buffText": "If you do not have an <b>acorn [ACORN],</b> gain one randomly from the supply.<br><br>If you do, return it to the supply and gain its effect at the <b>acorn's [ACORN]</b> specified buff timing.",
+      "buffText": "If you do not have an <b>acorn [ACORN],</b> gain one randomly from the supply.<br><br>If you do have an <b>acorn [ACORN],</b> return it to the supply and gain its effect at the <b>acorn's [ACORN]</b> specified buff timing.",
       "flipEventText": "The enemy monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.</div> ",
-      "lastUpdated": "Thu, 15 Jul 2021 08:29:45 GMT"
+      "lastUpdated": "Fri, 24 Sep 2021 12:23:04 GMT"
     },
     {
       "buffName": "Rotten Acorn",
       "timing": "Pre-Actions",
-      "buffText": "If you do not have an <b>acorn [ACORN],</b> gain one randomly from the supply.<br><br>If you do, return it to the supply and gain its effect at the <b>acorn's [ACORN]</b> specified buff timing.",
+      "buffText": "If you do not have an <b>acorn [ACORN],</b> gain one randomly from the supply.<br><br>If you do have an <b>acorn [ACORN],</b> return it to the supply and gain its effect at the <b>acorn's [ACORN]</b> specified buff timing.",
       "flipEventText": "If you have an <b>acorn [ACORN],</b> this attack gains <div>+1[ATK].</div>",
-      "lastUpdated": "Thu, 15 Jul 2021 08:29:45 GMT"
+      "lastUpdated": "Fri, 24 Sep 2021 12:23:04 GMT"
     },
     {
       "buffName": "Winter is Coming",

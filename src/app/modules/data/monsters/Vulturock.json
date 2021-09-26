@@ -30,25 +30,25 @@
     },
     {
       "abilityName": "Iron Defense",
-      "abilityText": "{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}",
+      "abilityText": "This monster gains <div>+1[DEF]</div> this turn.<br><br>{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}",
       "element": "Rock",
       "statusFlg": true,
-      "speed": 5,
+      "speed": 7,
       "draw": 1,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Sat, 04 Sep 2021 12:51:49 GMT"
+      "lastUpdated": "Sun, 26 Sep 2021 13:29:28 GMT"
     },
     {
       "abilityName": "Scavenge",
-      "abilityText": "If this attack KO's the enemy monster, this monster heals <div>6[HP]</div>.",
+      "abilityText": "If an enemy monster has been or becomes KO'd this turn, this monster heals <div>6[HP]</div>.",
       "element": "Death",
       "attack": 2,
       "speed": 4,
       "draw": 0,
       "discard": 1,
       "buff": 3,
-      "lastUpdated": "Wed, 9 June 2021 21:19:10 GMT"
+      "lastUpdated": "Sun, 26 Sep 2021 13:23:52 GMT"
     }
   ],
   "buffs": [

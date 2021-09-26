@@ -5,15 +5,15 @@
   "actions": [
     {
       "abilityName": "Cobolt",
-      "abilityText": "[FLIP]. <br><br>If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, the enemy monster gains <div>{\"num\":1, \"isPositive\":false, \"stat\":\"ATK\"}.</div>~EFFECTIVE~",
+      "abilityText": "[FLIP]. <br><br>If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, <div>{\"num\":1, \"isPositive\":true, \"stat\":\"DEF\"}.</div>~EFFECTIVE~",
       "element": "Death",
       "statusFlg": false,
       "attack": 2,
       "speed": 1,
       "draw": 1,
       "discard": 0,
-      "buff": 3,
-      "lastUpdated": "Sat, 03 Apr 2021 06:58:37 GMT"
+      "buff": 2,
+      "lastUpdated": "Sun, 26 Sep 2021 13:44:02 GMT"
     },
     {
       "abilityName": "Static Void",
@@ -24,32 +24,32 @@
       "speed": 5,
       "draw": 0,
       "discard": 0,
-      "buff": 1,
-      "lastUpdated": "Mon, 29 Mar 2021 18:04:27 GMT"
+      "buff": 0,
+      "lastUpdated": "Sun, 26 Sep 2021 13:44:02 GMT"
     },
     {
       "abilityName": "Arraydicate",
-      "abilityText": "If the enemy monster switched in this turn, this attack gains <div><b>pierce 2[DEF]</b>.</div>~PIERCE~",
-      "element": "Death",
+      "abilityText": "<b>Crush 1[PQ], spammable.</b>~CRUSH~~SPAM~",
+      "element": "Electric",
       "statusFlg": false,
       "attack": 3,
       "speed": 3,
       "draw": 0,
       "discard": 1,
       "buff": 2,
-      "lastUpdated": "Wed, 07 Jul 2021 05:58:10 GMT"
+      "lastUpdated": "Fri, 24 Sep 2021 12:07:57 GMT"
     },
     {
       "abilityName": "Exception Caught",
-      "abilityText": "If this attack deals four or more damage, the opponent [-] a card of their choice. If your opponent has no cards in hand, [+].",
+      "abilityText": "<b>Single use</b>. <br><br>This attack gains <div>+4[HOLLOW].</div> ~SINGLE~",
       "element": "Death",
       "statusFlg": false,
-      "attack": 3,
+      "attack": 1,
       "speed": 3,
       "draw": 0,
-      "discard": 2,
-      "buff": 1,
-      "lastUpdated": "Wed, 07 Jul 2021 05:58:10 GMT"
+      "discard": 3,
+      "buff": 2,
+      "lastUpdated": "Sun, 26 Sep 2021 13:44:02 GMT"
     }
   ],
   "buffs": [
@@ -57,15 +57,15 @@
       "buffName": "Power Hotfix",
       "timing": "Pre-Actions",
       "buffText": "If the opponent selected a switch action this turn, this monster gains {\"stat\": \"ATK\", \"num\": 3, \"isPositive\": true}.",
-      "flipEventText": "The enemy monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
-      "lastUpdated": "Fri, 09 Jul 2021 12:58:21 GMT"
+      "flipEventText": "{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}",
+      "lastUpdated": "Fri, 24 Sep 2021 12:07:57 GMT"
     },
     {
-      "buffName": "Agility Hotfix",
+      "buffName": "Protection Hotfix",
       "timing": "Pre-Actions",
-      "buffText": "If the opponent selected a switch action this turn, this monster gains {\"stat\": \"SPD\", \"num\": 3, \"isPositive\": true}.",
-      "flipEventText": "This monster gains <div>{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.</div>",
-      "lastUpdated": "Fri, 02 Apr 2021 07:08:36 GMT"
+      "buffText": "If the opponent selected a switch action this turn, this monster gains {\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.",
+      "flipEventText": "{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
+      "lastUpdated": "Sun, 26 Sep 2021 13:44:02 GMT"
     },
     {
       "buffName": "Refactor",
@@ -85,9 +85,9 @@
   ],
   "monsterId": 10,
   "monsterName": "Phantomaton",
-  "abilityText": "If <b>Exception Caught</b> is enabled and this monster attacks a monster that is <b>weak</b> [WEAK] to the attack's element, this monster gains <div>{\"num\":1, \"isPositive\":true, \"stat\":\"ATK\"} <u>after</u> the attack.</div><br><br>If <b>Exception Caught</b> is disabled, your opponent must [-] an additional card when performing a switch action.",
+  "abilityText": "If <b>Exception Caught</b> is <u>enabled</u> and this monster attacks a monster that is <b>weak</b> [WEAK] to the attack's element, <div>{\"num\":1, \"isPositive\":true, \"stat\":\"ATK\"}.</div><br><br>If <b>Exception Caught</b> is <u>disabled</u>, your opponent must [-] an additional card when performing a switch action.",
   "hp": 9,
   "promiseDescription": "Strike fear in your opponent when <b>Phantomaton</b> switches in to an advantageous matchup! Watch the enemy monster squirm when the cost of switching out is too high.",
   "initiative": 55,
-  "lastUpdated": "Thu, 08 Jul 2021 07:57:07 GMT"
+  "lastUpdated": "Sun, 26 Sep 2021 13:44:02 GMT"
 }

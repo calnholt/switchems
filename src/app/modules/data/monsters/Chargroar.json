@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Lightning Fang",
-      "abilityText": "If this attack is <b>faster</b>, this attack gains +3[ATK].~FASTER~",
+      "abilityText": "If this attack is <b>faster</b>, this attack gains +3[HOLLOW].~FASTER~",
       "element": "Electric",
       "statusFlg": false,
       "attack": 4,
@@ -15,7 +15,7 @@
       "discard": 3,
       "buff": 0,
       "modifier": 5,
-      "lastUpdated": "Thu, 01 Apr 2021 06:04:34 GMT"
+      "lastUpdated": "Sun, 26 Sep 2021 13:02:02 GMT"
     },
     {
       "abilityName": "Lights Out",
@@ -44,7 +44,7 @@
     },
     {
       "abilityName": "Blazing Roar",
-      "abilityText": "[FLIP]. <br><br><b>Pierce 1[DEF]. </b>~PIERCE~",
+      "abilityText": "[FLIP]. <br><br><b>Pierce X[DEF]</b>, where X is the number of buff slots used.~PIERCE~",
       "element": "Fire",
       "statusFlg": false,
       "attack": 3,
@@ -53,7 +53,7 @@
       "discard": 1,
       "buff": 2,
       "modifier": 2,
-      "lastUpdated": "Wed, 07 Jul 2021 20:09:11 GMT"
+      "lastUpdated": "Sun, 26 Sep 2021 13:03:34 GMT"
     }
   ],
   "buffs": [
@@ -82,8 +82,8 @@
       "buffName": "Prey Upon",
       "timing": "With Attack",
       "buffText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains +2[ATK] and <b>exhaust</b>. If not, this attack gains <b>recoil 1[ATK]</b>.~EFFECTIVE~~EXHAUST~~RECOIL~",
-      "flipEventText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains <div>+2[HOLLOW].</div>",
-      "lastUpdated": "Sat, 04 Sep 2021 12:25:34 GMT"
+      "flipEventText": "This attack gains <div>+1[HOLLOW]</div>",
+      "lastUpdated": "Thu, 23 Sep 2021 07:03:34 GMT"
     }
   ],
   "monsterId": 4,

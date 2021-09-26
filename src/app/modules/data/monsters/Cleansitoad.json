@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Dispersion Spray",
-      "abilityText": "This monster heals 1[HP] and the enemy monster's action gains <b>recoil 1[ATK]</b>. If this action is <b>faster</b>, this monster cannot lose [HP] for the rest of the turn. ~FASTER~",
+      "abilityText": "This monster heals 2[HP]. If this action is <b>faster</b>, the enemy monster's action gains <b>recoil 2[ATK]</b> and this monster cannot lose [HP] for the rest of the turn. ~FASTER~",
       "element": "Water",
       "statusFlg": true,
       "attack": 0,
@@ -13,18 +13,18 @@
       "draw": 0,
       "discard": 3,
       "buff": 0,
-      "lastUpdated": "Thu, 15 Jul 2021 09:26:17 GMT"
+      "lastUpdated": "Fri, 24 Sep 2021 12:19:52 GMT"
     },
     {
       "abilityName": "Waterfall",
-      "abilityText": "If this was buffed with a <div><b>team aura [TA]</b>,</div> this monster gains <div>{\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.</div>",
+      "abilityText": "If this was buffed with a <div><b>team aura [TA]</b>,</div> {\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.",
       "element": "Water",
       "attack": 3,
       "speed": 6,
       "draw": 0,
       "discard": 1,
       "buff": 1,
-      "lastUpdated": "Thu, 15 Jul 2021 09:17:13 GMT"
+      "lastUpdated": "Fri, 24 Sep 2021 12:19:52 GMT"
     },
     {
       "abilityName": "Refresh",
