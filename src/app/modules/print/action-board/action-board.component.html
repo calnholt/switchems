@@ -4,17 +4,17 @@
       <div class="title">
         Switch Actions
         <div class="discards">
-          <img src="{{discard}}" class="no-draw pr-1">
-          <img src="{{discard}}" class="no-draw">
+          <img src="{{getIcon('discard')}}" class="no-draw pr-1">
+          <img src="{{getIcon('discard')}}" class="no-draw">
         </div>
       </div>
       <table>
         <tr>
           <td>
-            <img src="{{switchLeft}}" class="switch">
+            <img src="{{getIcon('switch-left')}}" class="switch">
           </td>
           <td>
-            <img src="{{switchRight}}" class="switch">
+            <img src="{{getIcon('switch-right')}}" class="switch">
           </td>
         </tr>
       </table>
@@ -36,41 +36,23 @@
           <tr>
             <td>
               <span>
-                +X<img src="{{attack}}">
+                +X<img src="{{getIcon('attack')}}">
               </span>
             </td>
             <td>
               <span>
-                +X<img src="{{speed}}">
+                +X<img src="{{getIcon('speed')}}">
               </span>
             </td>
             <td>
               <span>
-                +X<img src="{{defense}}">
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div>Pierce 2<img src="{{defense}}"></div>
-            </td>
-            <td>
-              <span>
-                +2<img src="{{speed}}">
-              </span>
-            </td>
-            <td>
-              <span>
-                +2<img src="{{defense}}">
+                +X<img src="{{getIcon('defense')}}">
               </span>
             </td>
           </tr>
         </table>
-        <div class="maneuver green">
-          <img src="{{manuever}}" class="draw">
-        </div>
         <div class="maneuver">
-          <img src="{{cube}}" class="draw">
+          <img src="{{getIcon('green-cube')}}" class="icon">
         </div>
       </div>
     </div>
@@ -79,13 +61,15 @@
       <table>
         <tr>
           <td>
-            <img src="{{draw}}" class="draw">
-            <img src="{{draw}}" class="draw">
-            <img src="{{draw}}">
+            <img src="{{getIcon('draw')}}" class="icon">
+            <img src="{{getIcon('draw')}}" class="icon">
+            <img src="{{getIcon('heart')}}">
           </td>
           <td>
-            <img src="{{manuever}}" class="draw">
-            <img src="{{draw}}">
+            <img src="{{getIcon('draw')}}" class="icon">
+            <img src="{{getIcon('question')}}" class="icon q">
+            <img src="{{getIcon('question')}}" class="icon q">
+            <img src="{{getIcon('question')}}" class="q">
           </td>
         </tr>
       </table>

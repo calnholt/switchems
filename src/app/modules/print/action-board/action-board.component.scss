@@ -84,7 +84,7 @@
                         font-size: 16px;
                         width: 50%;
                         padding: 6px;
-                        height: 38px;
+                        height: 45px;
                         background-color: #ebebeb;
                         box-shadow: $recessed;
                         img{
@@ -93,11 +93,14 @@
                         .switch{
                             max-height: 26px;
                         }
-                        .draw{
+                        .icon{
                             padding-right: 4px;
                         }
                         .cube {
                             max-height: 20px;
+                        }
+                        .q{
+                            height: 20px;
                         }
                     }
                 }
@@ -147,7 +150,7 @@
                 .maneuver {
                     position: absolute;
                     right: 9px;
-                    top: 186px;
+                    top: 210px;
                     img {
                         max-height: 20px;
                     }
