@@ -30,14 +30,14 @@
     },
     {
       "abilityName": "Iron Defense",
-      "abilityText": "{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}<br><br>This monster gains <div>+1[DEF]</div> this turn.",
+      "abilityText": "{\"stat\": \"DEF\", \"num\": 3}<br><br>This monster gains <div>+1[DEF]</div> this turn.",
       "element": "Rock",
       "statusFlg": true,
       "speed": 7,
       "draw": 1,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Fri, 30 Dec 2022 09:50:42 GMT"
+      "lastUpdated": "Tue, 24 Jan 2023 13:32:08 GMT"
     },
     {
       "abilityName": "Scavenge",
@@ -55,39 +55,31 @@
   "buffs": [
     {
       "buffName": "Beak Drill",
-      "timing": "With Attack",
       "buffText": "<b>Pierce 2[DEF]</b>~PIERCE~",
-      "flipEventText": "{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}",
       "lastUpdated": "Sat, 04 Sep 2021 12:51:49 GMT"
     },
     {
       "buffName": "Hard Headed",
-      "timing": "Pre-Actions",
       "buffText": "If your opponent selected a monster <b>attack</b> action this turn, the enemy monster's attack gains <div><b>recoil 2[ATK]</b>.</div>~RECOIL~",
-      "flipEventText": "{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
       "lastUpdated": "Sat, 04 Sep 2021 12:51:49 GMT"
     },
     {
       "buffName": "Self Defense",
-      "timing": "Pre-Actions",
       "buffText": "This monster heals 1[HP] and does not suffer <b>recoil</b> damage this turn.",
-      "flipEventText": "This monster heals <div>1[HP].</div>",
       "lastUpdated": "Mon, 01 Mar 2021 19:56:08 GMT"
     },
     {
       "buffName": "Bigger Rocs",
-      "timing": "With Attack",
-      "buffText": "This attack gains +3[HOLLOW] and <div><b>recoil 1[ATK],</b></div>. <b>Exhaust</b>. ~EXHAUST~",
-      "flipEventText": "{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} and this attack gains <b>recoil 1[ATK].</b>~RECOIL~",
-      "lastUpdated": "Thu, 29 Dec 2022 17:45:30 GMT"
+      "buffText": "This attack gains +2[ATK] and <div><b>recoil 1[ATK]</b></div>. ~RECOIL~",
+      "lastUpdated": "Tue, 24 Jan 2023 13:32:08 GMT"
     }
   ],
   "monsterId": 9,
   "monsterName": "Vulturock",
-  "abilityText": "When this monster <b>switches in</b>, <div>{\"stat\": \"SPD\", \"num\": 3, \"isPositive\": true}.</div>~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, <div>{\"stat\": \"SPD\", \"num\": 3}.</div>~SWITCH~",
   "hp": 9,
   "promiseDescription": "<b>Vulturock</b> hits hard – including itself!",
   "initiative": 75,
   "imageFlg": true,
-  "lastUpdated": "Sat, 04 Sep 2021 12:51:49 GMT"
+  "lastUpdated": "Tue, 24 Jan 2023 13:32:08 GMT"
 }

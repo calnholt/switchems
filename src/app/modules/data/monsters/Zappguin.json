@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Thunderstorm",
-      "abilityText": "<div>{\"stat\": \"SPD\", \"num\": 3, \"isPositive\": true}</div>",
+      "abilityText": "<div>{\"stat\": \"SPD\", \"num\": 3}</div>",
       "element": "Electric",
       "statusFlg": false,
       "attack": 4,
@@ -13,7 +13,7 @@
       "draw": 0,
       "discard": 2,
       "buff": 0,
-      "lastUpdated": "Sun, 26 Sep 2021 13:11:28 GMT"
+      "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
       "abilityName": "Ice Blast",
@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Vortex",
-      "abilityText": "This attack gains two [B] slots if the enemy monster has a [STATUS]. <br><br>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true} for each [B] slot used.~STATUS~",
+      "abilityText": "This attack gains two [B] slots if the enemy monster has a [STATUS]. <br><br>{\"stat\": \"ATK\", \"num\": 1} for each [B] slot used.~STATUS~",
       "element": "Electric",
       "statusFlg": false,
       "attack": 2,
@@ -37,57 +37,49 @@
       "draw": 0,
       "discard": 1,
       "buff": 1,
-      "lastUpdated": "Fri, 30 Dec 2022 10:08:42 GMT"
+      "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
       "abilityName": "Paralyze",
-      "abilityText": "<b>Stun [STATUS]</b> and <b>crush 1</b>. ~STUN~ ~CRUSH~",
+      "abilityText": "<b>Stun [STATUS]</b>, <b>Crush 1[PQ]</b>. ~STUN~ ~CRUSH~",
       "element": "Electric",
       "statusFlg": true,
       "speed": 7,
       "draw": 1,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Thu, 23 Sep 2021 06:31:46 GMT"
+      "lastUpdated": "Tue, 24 Jan 2023 14:32:17 GMT"
     }
   ],
   "buffs": [
     {
-      "buffName": "Zap",
-      "timing": "Post Actions",
-      "buffText": "{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}",
-      "flipEventText": "<b>Pierce 1[DEF]</b>. ~PIERCE~",
-      "lastUpdated": "Sat, 04 Sep 2021 12:58:50 GMT"
+      "buffName": "Charge Up",
+      "buffText": "{\"stat\": \"SPD\", \"num\": 2}",
+      "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
       "buffName": "Resuscitate",
-      "timing": "Pre-Actions",
-      "buffText": "Select any of your exhausted cards and put them into your discard.",
-      "flipEventText": "If the enemy monster has a <div>[STATUS]</div>, this attack is <b>faster</b>, and this attack does not have <b>flinch</b>, this attack gains <b>flinch</b> and <b>exhaust</b>.",
+      "buffText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, [Q] [Q] [Q]. If not, [Q] instead. ~EFFECTIVE~",
       "auraDuration": 0,
-      "lastUpdated": "Fri, 30 Dec 2022 10:08:42 GMT"
+      "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
       "buffName": "High Voltage",
-      "timing": "With Attack",
-      "buffText": "This attack gains +1[HOLLOW]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+3[HOLLOW] and <b>exhaust</b> instead.</div> ~EXHAUST~",
-      "flipEventText": "If the enemy monster has a <div>[STATUS]</div>, this attack is <b>faster</b>, and this attack does not have <b>flinch</b>, this attack gains <b>flinch</b> and <b>exhaust</b>.",
-      "lastUpdated": "Thu, 23 Sep 2021 06:19:54 GMT"
+      "buffText": "This attack gains +1[ATK]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+2[ATK] instead.</div> ~EXHAUST~",
+      "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
-      "buffName": "Retaliate",
-      "timing": "With Attack",
-      "buffText": "This attack gains +3[SPD]. <b>Exhaust</b>. ~EXHAUST~",
-      "flipEventText": "<b>Pierce 1[DEF]</b>. ~PIERCE~",
-      "lastUpdated": "Fri, 30 Dec 2022 10:08:42 GMT"
+      "buffName": "Quicken",
+      "buffText": "This attack gains +2[SPD].",
+      "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     }
   ],
   "monsterId": 7,
   "monsterName": "Zappguin",
-  "abilityText": "When this monster <b>switches in</b>, <div>{\"num\": 1, \"stat\": \"SPD\", \"isPositive\": true}</div><br><br>If this monster's attack action is <b>faster</b>, you may [FLIP]. If successful, <b>exhaust</b> the [FLIP] card and the attack gains <b>flinch</b>.~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, <div>{\"num\": 1, \"stat\": \"SPD\"}</div><br><br>If this monster's attack action is <b>faster</b>, you may [FLIP]. If successful, <b>exhaust</b> the [FLIP] card and the attack gains <b>flinch</b>.~SWITCH~",
   "hp": 8,
   "promiseDescription": "<b>Zappguin</b> wants nothing more than to <b>stun</b> [STATUS] and <b>flinch</b> every monster it meets.",
   "initiative": 40,
   "imageFlg": true,
-  "lastUpdated": "Thu, 29 Dec 2022 17:50:49 GMT"
+  "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
 }

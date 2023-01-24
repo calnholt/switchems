@@ -6,14 +6,14 @@
   "actions": [
     {
       "abilityName": "Fatigue",
-      "abilityText": "<b>Fatigue [STATUS]</b>, {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}. ~FATIGUE~",
+      "abilityText": "<b>Fatigue [STATUS]</b>, {\"stat\": \"DEF\", \"num\": 1}. ~FATIGUE~",
       "element": "Death",
       "statusFlg": true,
       "speed": 8,
       "draw": 1,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Sun, 26 Sep 2021 13:16:53 GMT"
+      "lastUpdated": "Tue, 24 Jan 2023 13:29:13 GMT"
     },
     {
       "abilityName": "Expunge",
@@ -23,13 +23,13 @@
       "attack": 4,
       "speed": 8,
       "draw": 0,
-      "discard": 1,
-      "buff": 1,
-      "lastUpdated": "Wed, 10 Mar 2021 07:51:43 GMT"
+      "discard": 2,
+      "buff": 0,
+      "lastUpdated": "Tue, 24 Jan 2023 13:20:19 GMT"
     },
     {
       "abilityName": "Swamped",
-      "abilityText": "[Q]. <br><br>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}",
+      "abilityText": "[Q]. <br><br>{\"stat\": \"SPD\", \"num\": 2}",
       "element": "Death",
       "statusFlg": false,
       "attack": 3,
@@ -37,11 +37,11 @@
       "draw": 0,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Sat, 04 Sep 2021 12:06:36 GMT"
+      "lastUpdated": "Tue, 24 Jan 2023 13:29:13 GMT"
     },
     {
       "abilityName": "Surge",
-      "abilityText": "<b>Spammable</b>. <br><br>If this attack is <b>faster</b>,  {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}. ~SPAM~~FASTER~",
+      "abilityText": "<b>Spammable</b>. <br><br>If this attack is <b>faster</b>,  {\"stat\": \"ATK\", \"num\": 1}. ~SPAM~~FASTER~",
       "element": "Water",
       "statusFlg": false,
       "attack": 1,
@@ -49,37 +49,29 @@
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Sun, 26 Sep 2021 13:34:48 GMT"
+      "lastUpdated": "Tue, 24 Jan 2023 13:29:13 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Abrupt Weakness",
-      "timing": "Pre-Actions",
-      "buffText": "<b> Crush 1</b>, then gain one [PQ] of the type that was crushed.",
-      "flipEventText": "{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
-      "lastUpdated": "Sat, 04 Sep 2021 12:16:21 GMT"
+      "buffText": "<b> Crush 1</b>, then gain one [PQ] of the type that was crushed. ~CRUSH~",
+      "lastUpdated": "Tue, 24 Jan 2023 13:20:19 GMT"
     },
     {
       "buffName": "Famished",
-      "timing": "Post Actions",
-      "buffText": "Discard X number of [PQ] to gain X[HP], where X cannot exceed 4. <b>Exhaust</b>. ~EXHAUST~",
-      "flipEventText": "[+].",
-      "lastUpdated": "Sat, 04 Sep 2021 12:16:21 GMT"
+      "buffText": "Discard up to 2 of your [PQ] and heal this monster that much.",
+      "lastUpdated": "Tue, 24 Jan 2023 13:20:19 GMT"
     },
     {
       "buffName": "Cripple",
-      "timing": "Pre-Actions",
-      "buffText": "<b>Crush 3</b> ~CRUSH~",
-      "flipEventText": "<b>Crush 2</b> ~CRUSH~",
-      "lastUpdated": "Sat, 04 Sep 2021 12:16:21 GMT"
+      "buffText": "<b>Crush 4[PQ]</b> ~CRUSH~",
+      "lastUpdated": "Tue, 24 Jan 2023 13:20:19 GMT"
     },
     {
       "buffName": "Tremble",
-      "timing": "Pre-Actions",
-      "buffText": "<b>Super [B] [B]. </b><br><br><div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}</div> and <div>{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.</div>~SUPER~",
-      "flipEventText": "You may discard a random card to have this attack gain <div>+1[ATK].</div>",
-      "lastUpdated": "Sun, 26 Sep 2021 13:05:28 GMT"
+      "buffText": "<b>Super [B] [B], Recoil 1[ATK].  </b><br><br><div>{\"stat\": \"SPD\", \"num\": 2}</div> and <div>{\"stat\": \"ATK\", \"num\": 2}.</div>~SUPER~ ~RECOIL~",
+      "lastUpdated": "Tue, 24 Jan 2023 13:29:13 GMT"
     }
   ],
   "monsterId": 5,
@@ -88,6 +80,6 @@
   "hp": 8,
   "promiseDescription": "<b>Drownigator</b> is a total nuisance with debuffs.",
   "initiative": 70,
-  "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT",
-  "imageFlg": true
+  "imageFlg": true,
+  "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"
 }

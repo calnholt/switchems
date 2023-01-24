@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Lightning Fang",
-      "abilityText": "If this attack is <b>faster</b>, this attack gains +3[HOLLOW].~FASTER~",
+      "abilityText": "If this attack is <b>faster</b>, this attack gains +3[ATK].~FASTER~",
       "element": "Electric",
       "statusFlg": false,
       "attack": 4,
@@ -15,11 +15,11 @@
       "discard": 3,
       "buff": 0,
       "modifier": 5,
-      "lastUpdated": "Sun, 26 Sep 2021 13:02:02 GMT"
+      "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
     },
     {
       "abilityName": "Lights Out",
-      "abilityText": "If this attack KO's the enemy monster, <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.</div>",
+      "abilityText": "If this attack KO's the enemy monster, <div>{\"stat\": \"SPD\", \"num\": 2}.</div>",
       "element": "Electric",
       "statusFlg": false,
       "attack": 2,
@@ -28,11 +28,11 @@
       "discard": 0,
       "buff": 1,
       "modifier": 1,
-      "lastUpdated": "Sat, 04 Sep 2021 11:57:39 GMT"
+      "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
     },
     {
       "abilityName": "Hypercharge",
-      "abilityText": "{\"stat\": \"ATK\", \"num\": 3, \"isPositive\": true}<br><br>This monster gains <div>+1 [DEF]</div> this turn.",
+      "abilityText": "{\"stat\": \"ATK\", \"num\": 3}<br><br>This monster gains <div>+1 [DEF]</div> this turn.",
       "element": "Electric",
       "statusFlg": true,
       "speed": 6,
@@ -40,7 +40,7 @@
       "discard": 0,
       "buff": 0,
       "modifier": 0,
-      "lastUpdated": "Fri, 30 Dec 2022 09:37:53 GMT"
+      "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
     },
     {
       "abilityName": "Blazing Roar",
@@ -59,31 +59,23 @@
   "buffs": [
     {
       "buffName": "Charge",
-      "timing": "Pre-Actions",
-      "buffText": "This attack gains +1[SPD]. If your opponent has a KO'd monster, this attack gains +3[SPD] and <b>exhaust</b> instead. ~EXHAUST~",
-      "flipEventText": "{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}",
-      "lastUpdated": "Thu, 29 Dec 2022 17:49:24 GMT"
+      "buffText": "This attack gains +1[SPD]. If your opponent has a KO'd monster, this attack gains +2[SPD] instead.",
+      "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
     },
     {
       "buffName": "Roar",
-      "timing": "With Attack",
-      "buffText": "This attack gains +1[ATK]. If your opponent has a KO'd monster, this attack gains +2[HOLLOW] and <b>exhaust</b> instead. ~EXHAUST~",
-      "flipEventText": "{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}",
-      "lastUpdated": "Thu, 29 Dec 2022 17:36:34 GMT"
+      "buffText": "This attack gains +1[ATK]. If your opponent has a KO'd monster, this attack gains +2[ATK] instead.",
+      "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
     },
     {
       "buffName": "Revenge",
-      "timing": "With Attack",
-      "buffText": "If the enemy monster is <div><b>resistant</b> [RESIST]</div> to this attack's element, this attack gains +2[HOLLOW] and <b>exhaust</b>. If not, this attack gains <b>recoil 1[ATK]</b>.~RESIST~~EXHAUST~~RECOIL~",
-      "flipEventText": "<b>Pierce 2[DEF]</b>",
-      "lastUpdated": "Thu, 29 Dec 2022 17:36:34 GMT"
+      "buffText": "If the enemy monster is <div><b>resistant</b> [RESIST]</div> to this attack's element, this attack gains +1[ATK] and + 1[SPD]. If not, this attack gains <b>recoil 1[ATK]</b>.~RESIST~ ~RECOIL~",
+      "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
     },
     {
       "buffName": "Prey Upon",
-      "timing": "With Attack",
-      "buffText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains +2[HOLLOW] and <b>exhaust</b>. If not, this attack gains <b>recoil 1[ATK]</b>.~EFFECTIVE~~EXHAUST~~RECOIL~",
-      "flipEventText": "This attack gains <div>+1[HOLLOW]</div>",
-      "lastUpdated": "Thu, 29 Dec 2022 17:36:34 GMT"
+      "buffText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains +1[ATK] and +1[SPD]. If not, this attack gains <b>recoil 1[ATK]</b>.~EFFECTIVE~~RECOIL~",
+      "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
     }
   ],
   "monsterId": 4,
