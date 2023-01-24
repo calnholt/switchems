@@ -10,14 +10,42 @@
         width: $card-width;
         background-color: white;
         z-index: 1;
-        // background-image: url("~/assets/images/backgrounds/buff-background.png");
         background-size: cover;
-        .buff-background{
-            position: absolute;
-            max-height: 172px;
-            top: 82px;
-            left: 32px;
-            z-index: -1;
+        &.death {
+            background-image: url("~/assets/images/backgrounds/death.png");
+        }
+        &.deathrock {
+            background-image: url("~/assets/images/backgrounds/deathrock.png");
+        }
+        &.deathwater {
+            background-image: url("~/assets/images/backgrounds/deathwater.png");
+        }
+        &.electric {
+            background-image: url("~/assets/images/backgrounds/electric.png");
+        }
+        &.electricfire {
+            background-image: url("~/assets/images/backgrounds/electricfire.png");
+        }
+        &.fire {
+            background-image: url("~/assets/images/backgrounds/fire.png");
+        }
+        &.fireleaf {
+            background-image: url("~/assets/images/backgrounds/fireleaf.png");
+        }
+        &.leaf {
+            background-image: url("~/assets/images/backgrounds/leaf.png");
+        }
+        &.leafrock {
+            background-image: url("~/assets/images/backgrounds/leafrock.png");
+        }
+        &.leafwater {
+            background-image: url("~/assets/images/backgrounds/leafwater.png");
+        }
+        &.rock {
+            background-image: url("~/assets/images/backgrounds/rock.png");
+        }
+        &.water {
+            background-image: url("~/assets/images/backgrounds/water.png");
         }
         .team-aura-container {
             display: flex;

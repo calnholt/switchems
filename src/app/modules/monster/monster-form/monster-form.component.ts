@@ -176,12 +176,12 @@ export class MonsterFormComponent implements OnInit {
 
   discord() {
     var request = new XMLHttpRequest();
-    request.open("POST", "https://discord.com/api/webhooks/831677858493366324/v-OidtpcJe8bnhjqbRbGAIuQetl-17Y0yRL2gSh3dDRfM6u_tmE8WK5xho-9xXykKYQ0");
+    request.open("POST", "https://discord.com/api/webhooks/1067532843514871861/G3iAcjQwcxQy23VoIsLpn2qb8e1bNDr3Hq__7vOWEzeLVW78jIoWehus6BmWfvtVRD5w");
 
     request.setRequestHeader('Content-type', 'application/json');
     let now = new Date();
     var myEmbed = {
-      title: `Switchems! Weekly Card Changelog ${now.getMonth()+1}/${now.getDate()}/${now.getFullYear()}`,
+      title: `Switchems! Card Changelog ${now.getMonth()+1}/${now.getDate()}/${now.getFullYear()}`,
       description: this.getWeeklyUpdatedText(),
       color: this.hexToDecimal("#ff0000")
     }

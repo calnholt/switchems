@@ -81,9 +81,6 @@ export class RulebookService {
             text: '4 <a href="stat_cube_board">Stat Cube Boards</a>',
           },
           {
-            text: '12 <a href="selection_phase">Maneuver</a> Cubes',
-          },
-          {
             text: 'A variety of tokens (lots of cubes, dice for damage, etc)',
           }
         ]
@@ -99,9 +96,6 @@ export class RulebookService {
       },
       {
         ol: [
-          {
-            text: 'Place your player shield in front of you, action Board, and one <a href="selection_phase">maneuver</a> cube [MQ] behind it (all of which are hidden from your opponent).',
-          },
           {
             text: 'Place your stat cube board in front of the player shield.',
           },
@@ -196,7 +190,7 @@ export class RulebookService {
               text: 'Monster ability name and ability text',
             },
             {
-              text: 'Elemental weaknesses (attacks of these types against this monster result in one additional <a href="flip_effects">flip</a> [FLIP] for the enemy monster\'s attack)',
+              text: 'Elemental weaknesses (attacks of these types against this monster result in your opponent rolling a [Q].)',
             },
             {
               text: 'Elemental resistances (gains defense against attacks of the elements when switching in)',
@@ -379,49 +373,21 @@ export class RulebookService {
           text: '<h1>Stat Cubes [PQ]</h1>Stat cubes [PQ] are used to augment monster <b>attacks [ATK]</b> using [PQ] you have accumulated. To apply stat cubes, when you select a monster attack [ATK] action, you may choose to apply ALL accumulated stat cubes of a single type to your monster attack action. Afterwards, the applied [PQ] are discarded.',
         },
         {
-          text: '<h1>Maneuvers</h1>Maneuver cubes [MQ] are used to augment monster <b>attacks [ATK]</b>. To use a maneuver, when you select a monster attack [ATK] action, you may select a maneuver by placing one of your [MQ] on the maneuver space. Afterwards, the [MQ] is discarded.',
-        },
-        {
-          ul: [
-            {
-              text: '+2[DEF] – Your monster gains +2[DEF] this turn.'
-            },
-            {
-              text: '<b>Piece 2[DEF]</b> – This attack gains <b>Piece 2[DEF]</b>.'
-            },
-            {
-              text: '+2[SPD] – This attack gains +2[SPD] this turn.'
-            }
-          ]
-        },
-        {
-          text: '<b>NOTE:</b> You cannot apply [PQ] and [MQ] to the same monster attack action.'
-        },
-        {
-          text: '<b>NOTE:</b> You cannot apply [PQ] and [MQ] to monster special [SPECIAL] actions.'
-        },
-        {
-          text: '<b>NOTE:</b> There is no limit to the number of [MQ] a player can have.'
-        },
-        {
-          text: '<b>NOTE:</b> You can always ask your opponent how many [MQ] your opponent has.'
-        },
-        {
           text: '<h1>Standard Actions</h1>There are two different standard actions. The two standard actions are:',
           ul: [
             {
-              text: 'Draw Cards – [+] [+] [+]',
+              text: '[+] [+] [HP]',
               ul: [
                 {
-                  text: 'When you select the Draw Cards standard action, you draw three cards as your action for the turn.',
+                  text: 'When you select this standard action, you draw two card and heal 1[HP] as your action for the turn.',
                 }
               ]
             },
             {
-              text: 'Draw and Gain Maneuver Cube – [+] [MQ]',
+              text: '[+] [Q] [Q] [Q]',
               ul: [
                 {
-                  text: 'When you select the Draw and Gain Maneuver Cube standard action, draw one card and gain one maneuver cube as your action for the turn. Place the [MQ] behind your player shield.'
+                  text: 'When you select this standard action, draw one card and roll three [Q].'
                 }
               ]
             }
@@ -484,7 +450,7 @@ export class RulebookService {
           text: 'The enemy monster then takes the resulting damage by decreasing its [HP] by that much. If the enemy monster has [DEF], reduce the resulting damage by the enemy monster\'s total [DEF]. Negative damage is 0.'
         },
         {
-          text: '<h1>Monster Actions - Special[SPECIAL]</h1>A monster action is special if it has the special [SPECIAL] symbol. Special [SPECIAL] actions behave just like attacks except they do not deal damage. These actions usually make your monster stronger or make your opponent\'s monster weaker. These actions <b>cannot</b> be modified with [MQ].',
+          text: '<h1>Monster Actions - Special[SPECIAL]</h1>A monster action is special if it has the special [SPECIAL] symbol. Special [SPECIAL] actions behave just like attacks except they do not deal damage. These actions usually make your monster stronger or make your opponent\'s monster weaker.',
         },
         {
           text: '<h1>Disabled Actions[DISABLE]</h1>A monster action becomes disabled when it is selected. When a monster action is disabled, place a disabled token on the [DISABLE] space on the action. Actions that are disabled cannot be selected. A disabled monster action becomes enabled after performing your next action (Switch Action, Monster Action, or Standard Action).',
@@ -497,7 +463,7 @@ export class RulebookService {
       rulebookImage: 'Stat-Cube',
       blocks: [
         {
-          text: 'Some abilities have monsters gaining stat cubes. Stat cubes can be used to increase your active monster’s stats - [HOLLOW], [SPD], [DEF]. Whenever a player gains stat cubes, place them on their corresponding space on the stat cube board. Each stat type has a maximum number of cubes it can hold, as displayed on the space. When a player chooses to apply stat cubes during the selection phase, move all of the selected stat type\'s cubes to the USING side of the board, to denote that these are being applied to the attack.',
+          text: 'Some abilities have monsters gaining stat cubes. Stat cubes can be used to increase your active monster’s stats - [ATK], [SPD], [DEF]. Whenever a player gains stat cubes, place them on their corresponding space on the stat cube board. Each stat type has a maximum number of cubes it can hold, as displayed on the space. When a player chooses to apply stat cubes during the selection phase, move all of the selected stat type\'s cubes to the USING side of the board, to denote that these are being applied to the attack.',
         },
       ]
     },
@@ -639,9 +605,6 @@ export class RulebookService {
               text: 'Dan Peterson',
             },
             {
-              text: 'Dan S.'
-            },
-            {
               text: 'Mike Sette'
             },
             {
@@ -657,13 +620,16 @@ export class RulebookService {
               text: 'Diego Vizhnay',
             },
             {
-              text: 'Bruce',
+              text: 'Jeff Kunkel',
             },
             {
-              text: 'Dan',
+              text: 'Josepth Santianna',
             },
             {
-              text: 'Jeff',
+              text: 'Elijah Calub',
+            },
+            {
+              text: 'Noah Cagle',
             },
           ]
         }

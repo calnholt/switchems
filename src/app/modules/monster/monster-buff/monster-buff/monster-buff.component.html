@@ -1,6 +1,5 @@
 <div id="buff-card">
-  <div class="card-container">
-    <img class="buff-background" src="{{getBuffImagePath()}}">
+  <div class="card-container {{getBackgroundImageCss()}}">
     <div class="name">{{buff.buffName}}</div>
     <div class="text-container ability">
       <div *ngIf="buff.auraDuration" class="team-aura-container">
