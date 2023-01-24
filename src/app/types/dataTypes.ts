@@ -47,7 +47,7 @@ const termCodes = [
     new Term('Exhaust', `~EXHAUST~`, `Cards with <b>exhaust</b> are removed from the game after they are resolved. Put a blank into your discard.`),
     new Term('Faster', `~FASTER~`, `This action is <b>faster</b> if your opponent selects a standard action, or if both players select a monster action and yours resolves first.`),
     new Term('Fatigue', `~FATIGUE~`, `Whenever a monster with <b>fatigue</b> [STATUS] attacks, the attack gains <span><b>recoil X[ATK]</b></span>, where X is the number of buff slots used.`),
-    new Term('Flinch', `~FLINCH~`, `Actions with <b>flinch</b> prevent the enemy monster's monster action if this action is <b>faster.</b>`),
+    new Term('Flinch', `~FLINCH~`, `Actions with <b>flinch</b> prevent the enemy monster's attack action if this action is <b>faster.</b>`),
     new Term('Pierce', '~PIERCE~', `Attacks with <b>pierce</b> ignore this amount of the enemy monster's <div>[DEF].</div> Multiple instances of pierce stack.`),
     new Term('Recoil', `~RECOIL~`, `This monster suffers this amount of <b>recoil</b> damage to itself after the attack resolves. Multiple instances of recoil stack.`),
     new Term('Resistant', `~RESIST~`, `Monsters are <b>resistant</b> to elements in the [RESIST] section of their monster card.`),
@@ -58,9 +58,9 @@ const termCodes = [
     new Term('Stun', `~STUN~`, `Monsters with <b>stun</b> [STATUS] perform their switch actions after monster actions.`),
     new Term('Super', `~SUPER~`, `<b>Supers</b> require and use two [B] slots.`),
     new Term('Switches In', `~SWITCH~`, `<b>Switch in</b> abilities also trigger at the start of the game and following a monster KO.`),
-    new Term('Team Aura', '~AURA~', '<b>Team aura</b> [TA] – At the end of your turn, put a time counter on this. If the number of time counters equals its duration, <b>exhaust</b> this. You can only have one active <b>team aura</b> at any time.'),
+    new Term('Team Aura', '~AURA~', '<b>Team aura</b> [TA] – At the end of your turn, put a time counter on this. If the number of time counters equals its duration, discard this. You can only have one active <b>team aura</b> at any time.'),
     new Term('Wound', `~WOUND~`, `Monsters with <b>wound</b> [STATUS] perform one less [Q] on all of their attacks.`),
-    new Term('Crush', '~CRUSH~', '<b>Crush X</b> - Remove X [PQ] of your choice from your opponent.')
+    new Term('Crush', '~CRUSH~', '<b>Crush X</b> - Remove X [PQ] of the same type of your choice from your opponent.')
 ];
 export const TERM_CODES = termCodes.sort((a,b) => a.name.localeCompare(b.name));
 
