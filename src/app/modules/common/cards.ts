@@ -45,12 +45,11 @@ function convertInnerTextJson(innerHtml) {
       const isCubes = obj.hasOwnProperty('stat') || obj.hasOwnProperty('num') || obj.hasOwnProperty('isPositive');
       if (isCubes) {
         html = '<div class="cubes">';
-          const cubeType: ImageCode = obj.isPositive ? '[PQ]' : '[NQ]';
           let cubeStr = '';
           for (let i = 0; i < obj.num; i++) {
-            cubeStr += cubeType + ' ';
+            cubeStr += '[PQ]' + ' ';
           }
-          html += `${cubeStr}[ARROW] [${['ATK', 'HOLLOW'].includes(obj.stat) ? 'HOLLOW' : obj.stat}]</div>`;
+          html += `${cubeStr}[ARROW] [${['ATK', 'HOLLOW'].includes(obj.stat) ? 'ATK' : obj.stat}]</div>`;
       }
       innerHtml = innerHtml.replace(jsonInText, html);
     } catch (error) {
