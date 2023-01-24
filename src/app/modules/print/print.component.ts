@@ -108,7 +108,7 @@ export class PrintComponent implements OnInit {
         monster.isSelected = monster.abilityText.includes(formattedTerm) || monster.isSelected;
         monster.actions.forEach(a => a.isSelected = a.abilityText.includes(formattedTerm) || a.isSelected);
         monster.buffs.forEach(b => {
-          return b.isSelected = b.buffText.includes(formattedTerm) || b.flipEventText.includes(formattedTerm) || b.isSelected;
+          return b.isSelected = b.buffText.includes(formattedTerm) || b.isSelected;
         });
       });
     });

@@ -140,5 +140,8 @@
       }
     }
   },
-  "defaultProject": "switchems"
+  "defaultProject": "switchems",
+  "cli": {
+    "analytics": false
+  }
 }

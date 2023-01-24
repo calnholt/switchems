@@ -47,7 +47,7 @@
       <span *ngIf="card.isExtraSlot">
         <div class="extra-slot"></div>
       </span>
-      <div [ngClass]="{'break' : isPageBreak()}"></div>
+      <div [ngClass]="{'break' : i % 8 > 4}"></div>
     </span>
   </div>
 </div>

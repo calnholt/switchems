@@ -32,18 +32,18 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             // Ashdash,
             // Boltblebee,
             Chargroar,
-            Cleansitoad,
+            // Cleansitoad,
             // Cragadilo,
             Drownigator,
             Flexferno,
             // Galvanite,
-            Galeaffy,
-            Oozygoopz,
+            // Galeaffy,
+            // Oozygoopz,
             // Smolderskulk,
             Stalagrowth,
             // Steamie,
-            Squirrberus,
-            Phantomaton,
+            // Squirrberus,
+            // Phantomaton,
             Vulturock,
             Zappguin,
         ];
@@ -109,9 +109,7 @@ export const convertFromJSON = (all: Array<any>, keepGUI?: boolean): Array<Monst
         monster.buffs = new Array<Buff>();
         const BUFFS = 4;
         let BUFF_PROPERTIES = [
-            'timing',
             'buffText',
-            'flipEventText',
             'buffName',
             'auraDuration',
             'lastUpdated',

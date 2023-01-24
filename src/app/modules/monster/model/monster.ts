@@ -80,9 +80,7 @@ export class MonsterComplete extends Monster {
 export class Buff extends Card {
     monsterName?: string;
     buffName?: string = null;
-    timing: BuffTiming = null;
     buffText: string = null;
-    flipEventText?: string = null;
     auraDuration?: number = null;
 }
 

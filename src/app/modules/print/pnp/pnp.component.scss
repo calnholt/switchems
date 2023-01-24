@@ -11,8 +11,8 @@
         grid-template-columns: repeat(4, $card-width);
     }
     .break{
-        // padding-bottom: 71px; // only works for chrome
-        padding-bottom: 84px;
+        padding-bottom: 73px; // only works for chrome
+        // padding-bottom: 84px;
     }
     .extra-slot {
         height: 332px;

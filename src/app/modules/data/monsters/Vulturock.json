@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Kraterkazee",
-      "abilityText": "[FLIP]. <br><br><b>Recoil 2[ATK]</b>~RECOIL~",
+      "abilityText": "[Q], <b>Recoil 2[ATK]</b>~RECOIL~",
       "element": "Death",
       "statusFlg": false,
       "attack": 4,
@@ -14,7 +14,7 @@
       "draw": 0,
       "discard": 1,
       "buff": 1,
-      "lastUpdated": "Fri, 26 Feb 2021 08:36:31 GMT"
+      "lastUpdated": "Fri, 30 Dec 2022 09:50:42 GMT"
     },
     {
       "abilityName": "Roc Rock",
@@ -30,19 +30,20 @@
     },
     {
       "abilityName": "Iron Defense",
-      "abilityText": "This monster gains <div>+1[DEF]</div> this turn.<br><br>{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}",
+      "abilityText": "{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}<br><br>This monster gains <div>+1[DEF]</div> this turn.",
       "element": "Rock",
       "statusFlg": true,
       "speed": 7,
       "draw": 1,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Sun, 26 Sep 2021 13:29:28 GMT"
+      "lastUpdated": "Fri, 30 Dec 2022 09:50:42 GMT"
     },
     {
       "abilityName": "Scavenge",
       "abilityText": "If an enemy monster has been or becomes KO'd this turn, this monster heals <div>6[HP]</div>.",
       "element": "Death",
+      "statusFlg": false,
       "attack": 2,
       "speed": 4,
       "draw": 0,
@@ -76,9 +77,9 @@
     {
       "buffName": "Bigger Rocs",
       "timing": "With Attack",
-      "buffText": "This attack gains +2[HOLLOW].",
+      "buffText": "This attack gains +3[HOLLOW] and <div><b>recoil 1[ATK],</b></div>. <b>Exhaust</b>. ~EXHAUST~",
       "flipEventText": "{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} and this attack gains <b>recoil 1[ATK].</b>~RECOIL~",
-      "lastUpdated": "Sat, 04 Sep 2021 12:51:49 GMT"
+      "lastUpdated": "Thu, 29 Dec 2022 17:45:30 GMT"
     }
   ],
   "monsterId": 9,
@@ -87,5 +88,6 @@
   "hp": 9,
   "promiseDescription": "<b>Vulturock</b> hits hard – including itself!",
   "initiative": 75,
+  "imageFlg": true,
   "lastUpdated": "Sat, 04 Sep 2021 12:51:49 GMT"
 }

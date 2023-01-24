@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Cobolt",
-      "abilityText": "[FLIP]. <br><br>If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, <div>{\"num\":1, \"isPositive\":true, \"stat\":\"DEF\"}.</div>~EFFECTIVE~",
+      "abilityText": "[Q]. <br><br>If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, <div>{\"num\":1, \"isPositive\":true, \"stat\":\"DEF\"}.</div>~EFFECTIVE~",
       "element": "Death",
       "statusFlg": false,
       "attack": 2,
@@ -89,5 +89,6 @@
   "hp": 9,
   "promiseDescription": "Strike fear in your opponent when <b>Phantomaton</b> switches in to an advantageous matchup! Watch the enemy monster squirm when the cost of switching out is too high.",
   "initiative": 55,
-  "lastUpdated": "Sun, 26 Sep 2021 13:44:02 GMT"
+  "lastUpdated": "Sun, 26 Sep 2021 13:44:02 GMT",
+  "imageFlg": true
 }

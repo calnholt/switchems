@@ -1,6 +1,6 @@
 import { ImageService } from './../../../data/image.service';
 import { getAbilityText } from './../../../common/cards';
-import { SYMBOLS } from './../../../../constants';
+import { IMAGES, SYMBOLS } from './../../../../constants';
 import { Css, Path } from './../../../../types/dataTypes';
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { Buff } from '../../model/monster';
@@ -24,22 +24,12 @@ export class MonsterBuffComponent implements OnInit {
     this.buffTextHtml = this.buff.buffText;
   }
 
-  getTimingRomanNumeral(): string {
-    if (this.buff.timing === 'Pre-Actions') {return 'I'; }
-    if (this.buff.timing === 'With Attack') {return 'II'; }
-    if (this.buff.timing === 'Post Actions') {return 'III'; }
-  }
-
   getBuffImagePath(): Path {
     return `${SYMBOLS}buff_gray.png`;
   }
 
-  getSuccessImagePath(): Path {
-    return `${SYMBOLS}success.png`;
-  }
-
-  getFailImagePath(): Path {
-    return `${SYMBOLS}fail.png`;
+  getMonsterImagePath(): Path {
+    return `${IMAGES}/monsters/${this.buff.monsterName.toLowerCase()}.png`;
   }
 
   getAbilityText(text: string, isFlipText: boolean): string {

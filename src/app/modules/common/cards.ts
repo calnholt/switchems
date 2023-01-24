@@ -42,20 +42,6 @@ function convertInnerTextJson(innerHtml) {
     try {
       const obj = JSON.parse(jsonInText);
       let html;
-      const isStatSpread = obj.hasOwnProperty('positive') || obj.hasOwnProperty('neutral') || obj.hasOwnProperty('negative');
-      if (isStatSpread) {
-        html = '<span class="stat-spread">';
-        if (obj.hasOwnProperty('positive')) {
-          html += `<span class="positive">${obj.positive}</span>`;
-        }
-        if (obj.hasOwnProperty('neutral')) {
-          html += `<span class="neutral">${obj.neutral}</span>`;
-        }
-        if (obj.hasOwnProperty('negative')) {
-          html += `<span class="negative">${obj.negative}</span>`;
-        }
-        html += '</span>';
-      }
       const isCubes = obj.hasOwnProperty('stat') || obj.hasOwnProperty('num') || obj.hasOwnProperty('isPositive');
       if (isCubes) {
         html = '<div class="cubes">';

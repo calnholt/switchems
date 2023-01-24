@@ -53,28 +53,38 @@ export class PnpComponent implements OnInit {
         }
       });
     });
+    // allCards.push({ isActionBoard: true });
+    // allCards.push({ isActionBoard: true });
+    // allCards.push({ isReferenceCard: true });
+    // allCards.push({ isReferenceCard: true });
+    // allCards.push({ isSwitchReferenceCard: true });
+    // allCards.push({ isSwitchReferenceCard: true });
+    // allCards.push({ isStatusReferenceCard: true });
+    // allCards.push({ isStatusReferenceCard: true });
+    allCards.push({ isStatCubeBoard: true });
+    allCards.push({ isStatCubeBoard: true });
     if (this.extraFlg) {
       // adds player boards
-      allCards.push({isActionBoard: true});
-      allCards.push({isActionBoard: true});
-      allCards.push({isReferenceCard: true});
-      allCards.push({isReferenceCard: true});
-      allCards.push({isSwitchReferenceCard: true});
-      allCards.push({isSwitchReferenceCard: true});
-      allCards.push({isStatusReferenceCard: true});
-      allCards.push({isStatusReferenceCard: true});
-      allCards.push({isStatCubeBoard: true});
-      allCards.push({isStatCubeBoard: true});
+      allCards.push({ isActionBoard: true });
+      allCards.push({ isActionBoard: true });
+      allCards.push({ isReferenceCard: true });
+      allCards.push({ isReferenceCard: true });
+      allCards.push({ isSwitchReferenceCard: true });
+      allCards.push({ isSwitchReferenceCard: true });
+      allCards.push({ isStatusReferenceCard: true });
+      allCards.push({ isStatusReferenceCard: true });
+      allCards.push({ isStatCubeBoard: true });
+      allCards.push({ isStatCubeBoard: true });
 
       // GOOP
       for (let i = 0; i < 4; i++) {
-        allCards.push({isGoop: true});
+        allCards.push({ isGoop: true });
       }
     }
     const extraSlots = allCards.length % 4;
     if (extraSlots) {
       for (let i = 0; i < extraSlots; i++) {
-        allCards.push({isExtraSlot: true});
+        allCards.push({ isExtraSlot: true });
       }
     }
     this.allCards = allCards;
@@ -83,8 +93,8 @@ export class PnpComponent implements OnInit {
 
   isPageBreak() {
     this.count++;
-    if ([10,12,14,16].includes(this.count)) {
-      if (this.count === 16) {
+    if ([4, 5, 6, 7].includes(this.count)) {
+      if (this.count === 7) {
         this.count = 0;
       }
       return true;

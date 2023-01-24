@@ -41,7 +41,7 @@
     },
     {
       "abilityName": "Skewer",
-      "abilityText": "[FLIP] [FLIP]",
+      "abilityText": "[Q] [Q]",
       "element": "Rock",
       "statusFlg": false,
       "attack": 2,
@@ -84,7 +84,7 @@
   ],
   "monsterId": 1,
   "monsterName": "Stalagrowth",
-  "abilityText": "When this monster <b>switches in</b>, {\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.</div> ~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.</div> ~SWITCH~",
   "hp": 10,
   "promiseDescription": "<b>Stallagrowth</b> plays for the long game – slowly drain the enemy's health and stand your ground with bolstered defense.",
   "initiative": 10,

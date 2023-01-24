@@ -17,7 +17,7 @@
     },
     {
       "abilityName": "Expunge",
-      "abilityText": "<b>Single use. </b><br><br>If the enemy monster has a [STATUS], this attack gains <div>[FLIP] [FLIP].</div>~SINGLE~~STATUS~",
+      "abilityText": "<b>Single use. </b><br><br>If the enemy monster has a [STATUS], this attack gains <div>[Q] [Q].</div>~SINGLE~~STATUS~",
       "element": "Death",
       "statusFlg": false,
       "attack": 4,
@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Swamped",
-      "abilityText": "[FLIP]. <br><br>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}",
+      "abilityText": "[Q]. <br><br>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}",
       "element": "Death",
       "statusFlg": false,
       "attack": 3,
@@ -88,5 +88,6 @@
   "hp": 8,
   "promiseDescription": "<b>Drownigator</b> is a total nuisance with debuffs.",
   "initiative": 70,
-  "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"
+  "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT",
+  "imageFlg": true
 }

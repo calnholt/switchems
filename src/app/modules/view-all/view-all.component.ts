@@ -87,19 +87,10 @@ export class ViewAllComponent implements OnInit {
   }
 
   getBuffHighlight(b: Buff, form: MonsterForm) {
-    const isTiming = this.filterTiming(b, form);
     const isAura = this.filterValueMinMax(b.auraDuration, form.auraMin, form.auraMax);
     const terms = this.getLowerCaseTerms(form.terms);
-    const isTerms = terms.length ? terms.some(t => b.buffText.toLowerCase().includes(t) || b.flipEventText.toLowerCase().includes(t)) : true;
-    return isTiming && isAura && isTerms;
-  }
-
-  filterTiming(b: Buff, form: MonsterForm) {
-    let isTimings: boolean = true;
-    if (form.timings.length > 0) {
-      isTimings = form.timings.includes(b.timing);
-    }
-    return isTimings;
+    const isTerms = terms.length ? terms.some(t => b.buffText.toLowerCase().includes(t)) : true;
+    return isAura && isTerms;
   }
 
   filterValueMinMax(value: number, formMin: number, formMax: number): boolean {
@@ -128,7 +119,7 @@ export class ViewAllComponent implements OnInit {
       if (monster.actions.some(a => a.abilityText.toLowerCase().includes(t))) {
         termOnActionCard = true;
       }
-      if (monster.buffs.some(b => b.buffText.toLowerCase().includes(t) || b.flipEventText.toLowerCase().includes(t))) {
+      if (monster.buffs.some(b => b.buffText.toLowerCase().includes(t))) {
         termOnBuffCard = true;
       }
     });

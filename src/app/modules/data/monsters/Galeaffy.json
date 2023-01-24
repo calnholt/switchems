@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Foreboding Winds",
-      "abilityText": "[FLIP]. <br><br>If this attack deals two or more damage to the enemy monster, look at the top two cards of your deck and put them back on the top or bottom of you deck in any order.",
+      "abilityText": "[Q]. <br><br>If this attack deals two or more damage to the enemy monster, look at the top two cards of your deck and put them back on the top or bottom of you deck in any order.",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 3,
@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Cyclone",
-      "abilityText": "[FLIP] [FLIP]",
+      "abilityText": "[Q] [Q]",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 2,
@@ -88,5 +88,6 @@
   "hp": 8,
   "promiseDescription": "The master of speed has arrived!",
   "initiative": 85,
-  "lastUpdated": "Fri, 24 Sep 2021 12:14:02 GMT"
+  "lastUpdated": "Fri, 24 Sep 2021 12:14:02 GMT",
+  "imageFlg": true
 }

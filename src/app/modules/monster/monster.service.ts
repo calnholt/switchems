@@ -104,13 +104,6 @@ export class MonsterService {
     return out;
   }
 
-  getTimingRomanNumeral(buff: Buff): string {
-    if (buff.timing === 'Pre-Actions') {return 'I'; }
-    if (buff.timing === 'With Attack') {return 'II'; }
-    if (buff.timing === 'Post Actions') {return 'III'; }
-    if (buff.timing === 'None') {return 'X'; }
-  }
-
   getAverageMonsterSpeed(): number {
     let total: number = 0;
     this.getMonsters().forEach(monster => {

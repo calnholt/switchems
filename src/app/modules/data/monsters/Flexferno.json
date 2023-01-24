@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Inferno",
-      "abilityText": "If the enemy monster has a [STATUS], this attack gains one [B] slot and [FLIP].<br><br>If all [B] slots are used <u>and</u> all applied buffs <b>belong</b> to this monster, this attack gains +2[ATK] for each buff slot used.",
+      "abilityText": "If the enemy monster has a [STATUS], this attack gains one [B] slot and [Q].<br><br>If all [B] slots are used <u>and</u> all applied buffs <b>belong</b> to this monster, this attack gains +2[HOLLOW] for each buff slot used.",
       "element": "Fire",
       "statusFlg": false,
       "attack": 2,
@@ -13,7 +13,7 @@
       "draw": 0,
       "discard": 1,
       "buff": 1,
-      "lastUpdated": "Thu, 08 Jul 2021 07:48:54 GMT"
+      "lastUpdated": "Thu, 29 Dec 2022 17:41:17 GMT"
     },
     {
       "abilityName": "Burn",
@@ -28,7 +28,7 @@
     },
     {
       "abilityName": "No Pain, No Gain",
-      "abilityText": "[FLIP] [FLIP]. <br><br><b>Recoil 1[ATK]</b>,  {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.~RECOIL~",
+      "abilityText": "[Q] [Q]. <br><br><b>Recoil 1[ATK]</b>,  {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.~RECOIL~",
       "element": "Rock",
       "statusFlg": false,
       "attack": 1,
@@ -40,7 +40,7 @@
     },
     {
       "abilityName": "Scorch",
-      "abilityText": "[FLIP].<br><br>If the enemy monster has a [STATUS], this attack gains [FLIP].",
+      "abilityText": "[Q].<br><br>If the enemy monster has a [STATUS], this attack gains [Q].",
       "element": "Fire",
       "statusFlg": false,
       "attack": 3,
@@ -55,15 +55,15 @@
     {
       "buffName": "Sauna",
       "timing": "Post Actions",
-      "buffText": "Whenever your monster flips one or more buff cards that <b>belongs</b> to it, the attack gains <div>+1[ATK].</div>~AURA~",
+      "buffText": "Whenever your monster rolls a [HOLLOW], the attack gains <div>+1[ATK].</div>~AURA~",
       "flipEventText": "This attack gains +1[HOLLOW].",
       "auraDuration": 6,
-      "lastUpdated": "Sat, 04 Sep 2021 12:22:21 GMT"
+      "lastUpdated": "Thu, 29 Dec 2022 17:41:17 GMT"
     },
     {
       "buffName": "Inner Strength",
       "timing": "With Attack",
-      "buffText": "[FLIP] [FLIP]",
+      "buffText": "[Q] [Q]",
       "flipEventText": "{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
       "lastUpdated": "Sat, 04 Sep 2021 12:22:21 GMT"
     },
@@ -77,16 +77,17 @@
     {
       "buffName": "Sear",
       "timing": "With Attack",
-      "buffText": "This attack gains +1[ATK]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+2[ATK]</div> instead. ~STATUS~",
+      "buffText": "This attack gains +1[ATK]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+2[HOLLOW]</div> instead. ~STATUS~",
       "flipEventText": "{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}",
-      "lastUpdated": "Sat, 04 Sep 2021 12:22:21 GMT"
+      "lastUpdated": "Thu, 29 Dec 2022 17:41:17 GMT"
     }
   ],
   "monsterId": 2,
   "monsterName": "Flexferno",
-  "abilityText": "Whenever this monster flips one or more buff cards that <b>belongs</b> to it, the attack gains <div>+1[ATK].</div>~BELONGS~",
+  "abilityText": "When this monster <b>switches in</b>, <div>{\"num\": 1, \"stat\": \"HOLLOW\", \"isPositive\": true}</div><br><br>Whenever this monster rolls a [HOLLOW], the attack gains <div>+1[ATK].</div> ~SWITCH~",
   "hp": 8,
   "promiseDescription": "<b>Flexferno</b> loves himself some <b>Flexferno</b>! A few strong flips can devastate an enemy monster.",
   "initiative": 20,
-  "lastUpdated": "Mon, 12 Apr 2021 20:58:22 GMT"
+  "imageFlg": true,
+  "lastUpdated": "Thu, 29 Dec 2022 17:50:20 GMT"
 }

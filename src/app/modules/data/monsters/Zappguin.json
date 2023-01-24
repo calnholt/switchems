@@ -17,7 +17,7 @@
     },
     {
       "abilityName": "Ice Blast",
-      "abilityText": "If this attack is <b>faster</b>, [FLIP] [FLIP]. ~FASTER~",
+      "abilityText": "If this attack is <b>faster</b>, [Q] [Q]. ~FASTER~",
       "element": "Water",
       "statusFlg": false,
       "attack": 2,
@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Vortex",
-      "abilityText": "This attack gains one [B] slot if the enemy monster has a [STATUS]. <br><br>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true} for each [B] slot used.~STATUS~",
+      "abilityText": "This attack gains two [B] slots if the enemy monster has a [STATUS]. <br><br>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true} for each [B] slot used.~STATUS~",
       "element": "Electric",
       "statusFlg": false,
       "attack": 2,
@@ -37,7 +37,7 @@
       "draw": 0,
       "discard": 1,
       "buff": 1,
-      "lastUpdated": "Thu, 23 Sep 2021 06:31:46 GMT"
+      "lastUpdated": "Fri, 30 Dec 2022 10:08:42 GMT"
     },
     {
       "abilityName": "Paralyze",
@@ -60,12 +60,12 @@
       "lastUpdated": "Sat, 04 Sep 2021 12:58:50 GMT"
     },
     {
-      "buffName": "Static Shock",
+      "buffName": "Resuscitate",
       "timing": "Pre-Actions",
-      "buffText": "Your monster attacks gain <div>+1[ATK]</div> for each different [STATUS] the enemy monster has.~STATUS~~AURA~",
+      "buffText": "Select any of your exhausted cards and put them into your discard.",
       "flipEventText": "If the enemy monster has a <div>[STATUS]</div>, this attack is <b>faster</b>, and this attack does not have <b>flinch</b>, this attack gains <b>flinch</b> and <b>exhaust</b>.",
-      "auraDuration": 6,
-      "lastUpdated": "Thu, 23 Sep 2021 06:19:54 GMT"
+      "auraDuration": 0,
+      "lastUpdated": "Fri, 30 Dec 2022 10:08:42 GMT"
     },
     {
       "buffName": "High Voltage",
@@ -77,17 +77,17 @@
     {
       "buffName": "Retaliate",
       "timing": "With Attack",
-      "buffText": "This attack gains +1[ATK]. If this attack is <b>slower</b>, this attack gains +2[ATK] instead.~SLOWER~",
+      "buffText": "This attack gains +3[SPD]. <b>Exhaust</b>. ~EXHAUST~",
       "flipEventText": "<b>Pierce 1[DEF]</b>. ~PIERCE~",
-      "lastUpdated": "Thu, 15 Jul 2021 08:20:51 GMT"
+      "lastUpdated": "Fri, 30 Dec 2022 10:08:42 GMT"
     }
   ],
   "monsterId": 7,
   "monsterName": "Zappguin",
-  "abilityText": "If this monster's attack actions are <b>faster</b>, this monster's attack <div>gains +1[ATK].</div>~FASTER~",
+  "abilityText": "When this monster <b>switches in</b>, <div>{\"num\": 1, \"stat\": \"SPD\", \"isPositive\": true}</div><br><br>If this monster's attack action is <b>faster</b>, you may [FLIP]. If successful, <b>exhaust</b> the [FLIP] card and the attack gains <b>flinch</b>.~SWITCH~",
   "hp": 8,
   "promiseDescription": "<b>Zappguin</b> wants nothing more than to <b>stun</b> [STATUS] and <b>flinch</b> every monster it meets.",
   "initiative": 40,
   "imageFlg": true,
-  "lastUpdated": "Sun, 28 Mar 2021 08:43:57 GMT"
+  "lastUpdated": "Thu, 29 Dec 2022 17:50:49 GMT"
 }

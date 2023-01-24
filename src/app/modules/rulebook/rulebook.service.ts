@@ -229,7 +229,7 @@ export class RulebookService {
               text: 'Monster Action ability (not all monster actions have an ability)',
             },
             {
-              text: 'Elemental bonus, granting one additional <a href="flip_effects">flip</a> [FLIP] if the enemy monster has one or more of these elements',
+              text: 'Elemental bonus, granting one additional [Q] if the enemy monster has one or more of these elements',
             },
             {
               text: 'Action number, so actions are always laid out in the same configuration',
@@ -253,16 +253,13 @@ export class RulebookService {
       id: 'buff_card',
       blocks: [
         {
-          text: 'Each monster has four unique Buff cards that are added to your deck. Your deck consists of the four buff cards from each of the three monsters in your team. Buffs have a variety of uses:',
+          text: 'Each monster has four unique Buff cards that are added to your deck. Your deck consists of the four buff cards from each of the three monsters in your team. Buffs have two uses:',
           ul: [
             {
               text: '[B] - Apply buff cards to your monster actions for unique and unpredictable effects'
             },
             {
               text: '[-] - Discard buff cards from your hand to pay for other actions',
-            },
-            {
-              text: '[FLIP] - Flip buffs card from the top of your deck to apply modifiers to your attacks',
             },
           ]
         },
@@ -274,9 +271,6 @@ export class RulebookService {
             },
             {
               text: 'Buff ability text',
-            },
-            {
-              text: '<a href="flip_effects">Flip</a> [FLIP] effect text',
             },
             {
               text: 'The monster the buff card belongs to',
@@ -482,7 +476,7 @@ export class RulebookService {
               text: 'Resolve the attack’s ability (if any)',
             },
             {
-              text: 'If the enemy monster is weak to the attack’s element, apply one additional <a href="flip_effects">flip</a> [FLIP]',
+              text: 'If the enemy monster is weak to the attack’s element, roll one additional [Q]',
             }
           ]
         },
@@ -498,24 +492,12 @@ export class RulebookService {
       ]
     },
     {
-      title: 'Flip Effects[FLIP]',
-      id: 'flip_effects',
-      blocks: [
-        {
-          text: 'All <a href="buff_card">buff</a> cards have a flip effect [FLIP], found at the bottom of the card. Sometimes effects have you flip the top card of your deck when resolving a monster attack, denoted by this symbol [FLIP]. For each [FLIP] symbol, flip the top card of your deck and apply its flip effect to your monster attack [ATK] action.'
-        },
-        {
-          text: 'After all flips are resolved, all flipped buff cards are put into your discard pile. If your deck needs to be reshuffled between flips, any cards previously flipped are not included in this reshuffle.'
-        },
-      ]
-    },
-    {
       title: 'Stat Cube Board[PQ]',
       id: 'stat_cube_board',
       rulebookImage: 'Stat-Cube',
       blocks: [
         {
-          text: 'Some abilities have monsters gaining stat cubes. Stat cubes can be used to increase your active monster’s stats - [ATK], [SPD], [DEF]. Whenever a player gains stat cubes, place them on their corresponding space on the stat cube board. Each stat type has a maximum number of cubes it can hold, as displayed on the space. When a player chooses to apply stat cubes during the selection phase, move all of the selected stat type\'s cubes to the USING side of the board, to denote that these are being applied to the attack.',
+          text: 'Some abilities have monsters gaining stat cubes. Stat cubes can be used to increase your active monster’s stats - [HOLLOW], [SPD], [DEF]. Whenever a player gains stat cubes, place them on their corresponding space on the stat cube board. Each stat type has a maximum number of cubes it can hold, as displayed on the space. When a player chooses to apply stat cubes during the selection phase, move all of the selected stat type\'s cubes to the USING side of the board, to denote that these are being applied to the attack.',
         },
       ]
     },

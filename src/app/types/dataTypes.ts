@@ -44,7 +44,7 @@ const termCodes = [
     new Term('Belongs', `~BELONGS~`, `A buff card <b>belongs</b> to a monster if the monster name on the bottom of the buff card matches.`),
     new Term('Drain', `~DRAIN~`, `At the end of the turn, monsters with <b>drain</b> [STATUS] suffer <span>1[ATK]</span> and your active monster heals <span>1[HP].</span>`),
     new Term('Weak', `~EFFECTIVE~`, `Monsters are <b>weak</b> to elements in the [WEAK] section of their monster card.`),
-    new Term('Exhaust', `~EXHAUST~`, `Cards with <b>exhaust</b> are removed from the game after they are resolved.`),
+    new Term('Exhaust', `~EXHAUST~`, `Cards with <b>exhaust</b> are removed from the game after they are resolved. Put a blank into your discard.`),
     new Term('Faster', `~FASTER~`, `This action is <b>faster</b> if your opponent selects a standard action, or if both players select a monster action and yours resolves first.`),
     new Term('Fatigue', `~FATIGUE~`, `Whenever a monster with <b>fatigue</b> [STATUS] attacks, the attack gains <span><b>recoil X[ATK]</b></span>, where X is the number of buff slots used.`),
     new Term('Flinch', `~FLINCH~`, `Actions with <b>flinch</b> prevent the enemy monster's monster action if this action is <b>faster.</b>`),
@@ -59,8 +59,7 @@ const termCodes = [
     new Term('Super', `~SUPER~`, `<b>Supers</b> require and use two [B] slots.`),
     new Term('Switches In', `~SWITCH~`, `<b>Switch in</b> abilities also trigger at the start of the game and following a monster KO.`),
     new Term('Team Aura', '~AURA~', '<b>Team aura</b> [TA] – At the end of your turn, put a time counter on this. If the number of time counters equals its duration, <b>exhaust</b> this. You can only have one active <b>team aura</b> at any time.'),
-    new Term('Wound', `~WOUND~`, `Monsters with <b>wound</b> [STATUS] perform one less [FLIP] on all of their attacks.`),
-    new Term('Capture', `~CAPTURE~`, `Choose a card from your opponent's discard to remove from play. If you have already removed a card from play from a capture ability, you may replace it with a different card instead. Captured cards are returned to your opponent's discard when this monster switches out.`),
+    new Term('Wound', `~WOUND~`, `Monsters with <b>wound</b> [STATUS] perform one less [Q] on all of their attacks.`),
     new Term('Crush', '~CRUSH~', '<b>Crush X</b> - Remove X [PQ] of your choice from your opponent.')
 ];
 export const TERM_CODES = termCodes.sort((a,b) => a.name.localeCompare(b.name));
@@ -69,7 +68,7 @@ export const TERM_CODES = termCodes.sort((a,b) => a.name.localeCompare(b.name));
 const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[DEF]`, `[TA]`,
     `[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]', '[NQ]', '[PQ]', '[ARROW]',
     '[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]', '[ACORN]', '[HONEY]', '[WISH]', '[TORMENT]', '[FLIP]', '[DISABLE]', '[SINGLE]', '[HOLLOW]',
-    '[SR]', '[SL]', '[RESIST]', '[WEAK]', '[STR]', '[FRAIL]', '[GOOP]'
+    '[SR]', '[SL]', '[RESIST]', '[WEAK]', '[STR]', '[FRAIL]', '[GOOP]', `[Q]`
 ] as const;
 export type ImageCode = typeof IMAGE_KEYS[number];
 export const IMAGE_CODES = [
@@ -87,31 +86,23 @@ export const IMAGE_CODES = [
     new Image(`[E]`, ELEMENT_PATH_COLOR + `electric.png`),
     new Image(`[S]`, ELEMENT_PATH_COLOR + `death.png`),
     new Image(`[ST]`, SYMBOLS_PATH + `status.png`),
-    new Image(`[REAC]`, SYMBOLS_PATH + `reaction.png`),
     new Image(`[HP]`, SYMBOLS_PATH + `heart.png`),
     new Image(`[CUBE]`, SYMBOLS_PATH + `cube.png`),
-    new Image(`[NQ]`, SYMBOLS_PATH + `red-cube.png`),
     new Image(`[PQ]`, SYMBOLS_PATH + `green-cube.png`),
     new Image(`[MQ]`, SYMBOLS_PATH + `blue-cube.png`),
-    new Image(`[ARROW]`, SYMBOLS_PATH + `sideswipe.png`),
     new Image(`[SPECIAL]`, SYMBOLS_PATH + `status.png`),
     new Image(`[STATUS]`, SYMBOLS_PATH + `wound.png`),
-    new Image(`[COUNTER]`, SYMBOLS_PATH + `counter.png`),
-    new Image(`[ACORN]`, SYMBOLS_PATH + `acorn.png`),
-    new Image(`[HONEY]`, SYMBOLS_PATH + `dripping-honey.png`),
-    new Image(`[WISH]`, SYMBOLS_PATH + `round-star.png`),
-    new Image(`[TORMENT]`, SYMBOLS_PATH + `torment.png`),
     new Image(`[FLIP]`, SYMBOLS_PATH + `flip.png`),
+    new Image(`[Q]`, SYMBOLS_PATH + `question.png`),
     new Image(`[DISABLE]`, SYMBOLS_PATH + `unlocked.png`),
     new Image(`[SINGLE]`, SYMBOLS_PATH + `single-use.png`),
     new Image(`[SR]`, SYMBOLS_PATH + `switch-right.png`),
     new Image(`[SL]`, SYMBOLS_PATH + `switch-left.png`),
     new Image(`[RESIST]`, SYMBOLS_PATH + `switch-defense-right.png`),
     new Image(`[WEAK]`, SYMBOLS_PATH + `effective.png`),
-    new Image(`[STR]`, SYMBOLS_PATH + `strengthen.png`),
-    new Image(`[FRAIL]`, SYMBOLS_PATH + `frail.png`),
     new Image(`[GOOP]`, SYMBOLS_PATH + `goop.png`),
     new Image(`[HOLLOW]`, SYMBOLS_PATH + `hollow.png`),
+    new Image(`[ARROW]`, SYMBOLS_PATH + `sideswipe.png`),
 ];
 
 //TODO: this should return an object with two properties: advElems and DisElems that are arrays of elemtypes

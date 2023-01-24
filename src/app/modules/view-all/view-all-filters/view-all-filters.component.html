@@ -98,14 +98,6 @@
     </div>
     <div class="title">Buff Filters ({{numOfBuffs}})</div>
     <div class="filters-wrapper">
-      <dropdown
-        [label]="'Timing'"
-        [model]="form"
-        [property]="'timings'"
-        [options]="timingList"
-        [multi]="true"
-        (selectionChange)="applyFilters()">
-      </dropdown>
       <min-max
         [label]="'Aura Duration'"
         [model]="form"

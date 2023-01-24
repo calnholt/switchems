@@ -39,7 +39,7 @@
     },
     {
       "abilityName": "Lickety Split",
-      "abilityText": "[FLIP] [FLIP]",
+      "abilityText": "[Q] [Q]",
       "element": "Water",
       "statusFlg": false,
       "attack": 3,
