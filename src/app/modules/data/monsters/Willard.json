@@ -1,0 +1,82 @@
+{
+  "elements": [
+    "Water"
+  ],
+  "actions": [
+    {
+      "abilityName": "Grand Slam",
+      "abilityText": "<b>Recoil 2 [ATK].</b><br><br> \nIf this monster currently has higher [HP] than the enemy monster, this attack gains +2[ATK]. ~RECOIL~",
+      "element": "Rock",
+      "statusFlg": false,
+      "attack": 5,
+      "speed": 1,
+      "discard": 1,
+      "buff": 2,
+      "lastUpdated": "Thu, 26 Jan 2023 12:00:46 GMT"
+    },
+    {
+      "abilityName": "Splish Splash",
+      "abilityText": "If this monster currently has 5[HP] or more, this attack gains +2 [ATK]",
+      "element": "Water",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 3,
+      "discard": null,
+      "buff": 2,
+      "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
+    },
+    {
+      "abilityName": "Consume",
+      "abilityText": "This monster heals 5[HP]. ",
+      "element": "Water",
+      "statusFlg": true,
+      "attack": null,
+      "speed": 3,
+      "discard": 1,
+      "lastUpdated": "Thu, 26 Jan 2023 11:51:32 GMT"
+    },
+    {
+      "abilityName": "Big Boned",
+      "abilityText": "<b>Single use</b>. <br><br>This attack gains +X[ATK], where X is equal to the amount of [HP] this monster lost this turn. ~SINGLE~",
+      "element": "Water",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 2,
+      "discard": 1,
+      "buff": 1,
+      "lastUpdated": "Thu, 26 Jan 2023 12:00:46 GMT"
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Take It Easy",
+      "buffText": "<b>Super [B] [B].</b> \n<br><br>\nThis monster heals 2[HP]. If this monster has less than 5[HP], this monster heals 3[HP] instead. ~SUPER~ ",
+      "auraDuration": null,
+      "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
+    },
+    {
+      "buffName": "Water Slide",
+      "buffText": "Your monster attacks gain +1[SPD].",
+      "auraDuration": 6,
+      "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
+    },
+    {
+      "buffName": "Roll Over",
+      "buffText": "The enemy monster loses 1[HP].",
+      "auraDuration": null,
+      "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
+    },
+    {
+      "buffName": "Built Different",
+      "buffText": "This monster cannot be <b>flinched</b> this turn.~FLINCH~",
+      "auraDuration": null,
+      "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
+    }
+  ],
+  "monsterName": "Willard",
+  "abilityText": "When this monster <b>switches in</b>, the enemy monster loses 1[HP]. ~SWITCH~",
+  "hp": 10,
+  "initiative": 5,
+  "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT",
+  "imageFlg": true
+}

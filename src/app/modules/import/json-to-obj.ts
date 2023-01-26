@@ -15,6 +15,7 @@ import { default as Oozygoopz } from '../data/monsters/Oozygoopz.json';
 import { default as Galvanite } from '../data/monsters/Galvanite.json';
 import { default as Squirrberus } from '../data/monsters/Squirrberus.json';
 import { default as Ashdash } from '../data/monsters/Ashdash.json';
+import { default as Willard } from '../data/monsters/Willard.json';
 import { ElemType, ELEMENTS } from './../../types/dataTypes';
 import { MonsterComplete, Buff, Action } from '../monster/model/monster';
 
@@ -45,6 +46,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             // Squirrberus,
             // Phantomaton,
             Vulturock,
+            Willard,
             Zappguin,
         ];
     }
