@@ -56,9 +56,9 @@
     },
     {
       "buffName": "Water Slide",
-      "buffText": "Your monster attacks gain +1[SPD].",
+      "buffText": "Your monster attacks gain +1[SPD]. ~AURA~",
       "auraDuration": 6,
-      "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
+      "lastUpdated": "Thu, 26 Jan 2023 12:25:18 GMT"
     },
     {
       "buffName": "Roll Over",
@@ -77,6 +77,6 @@
   "abilityText": "When this monster <b>switches in</b>, the enemy monster loses 1[HP]. ~SWITCH~",
   "hp": 10,
   "initiative": 5,
-  "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT",
-  "imageFlg": true
+  "imageFlg": true,
+  "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
 }
