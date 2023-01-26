@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Cyclone",
-      "abilityText": "[Q] [Q]",
+      "abilityText": "{\"stat\": \"SPD\", \"num\": 2}.",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 2,
@@ -37,7 +37,7 @@
       "draw": 1,
       "discard": 0,
       "buff": 1,
-      "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
+      "lastUpdated": "Thu, 26 Jan 2023 10:54:24 GMT"
     },
     {
       "abilityName": "Vicious Hurricane",
