@@ -5,25 +5,25 @@
   "actions": [
     {
       "abilityName": "Grand Slam",
-      "abilityText": "<b>Recoil 2 [ATK].</b><br><br> \nIf this monster currently has higher [HP] than the enemy monster, this attack gains +2[ATK]. ~RECOIL~",
+      "abilityText": "<b>Recoil 2[ATK].</b><br><br> \nIf this monster currently has higher [HP] than the enemy monster, this attack gains +2[ATK]. ~RECOIL~",
       "element": "Rock",
       "statusFlg": false,
-      "attack": 5,
+      "attack": 4,
       "speed": 1,
       "discard": 1,
       "buff": 2,
-      "lastUpdated": "Thu, 26 Jan 2023 12:00:46 GMT"
+      "lastUpdated": "Thu, 26 Jan 2023 12:41:12 GMT"
     },
     {
       "abilityName": "Splish Splash",
-      "abilityText": "If this monster currently has 5[HP] or more, this attack gains +2 [ATK]",
+      "abilityText": "If this monster currently has 5[HP] or more, this attack gains +2[ATK].",
       "element": "Water",
       "statusFlg": false,
       "attack": 2,
       "speed": 3,
       "discard": null,
       "buff": 2,
-      "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
+      "lastUpdated": "Thu, 26 Jan 2023 12:41:12 GMT"
     },
     {
       "abilityName": "Consume",
