@@ -76,10 +76,10 @@
   ],
   "monsterId": 7,
   "monsterName": "Zappguin",
-  "abilityText": "When this monster <b>switches in</b>, <div>{\"num\": 1, \"stat\": \"SPD\"}</div><br><br>If this monster's attack action is <b>faster</b>, you may [FLIP]. If successful, <b>exhaust</b> the [FLIP] card and the attack gains <b>flinch</b>.~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, <div>{\"num\": 1, \"stat\": \"SPD\"}</div><br><br>If this monster's attack action is <b>faster</b>, you may [FLIP]. If successful, the attack gains <b>flinch</b>.~SWITCH~~FLINCH~",
   "hp": 8,
   "promiseDescription": "<b>Zappguin</b> wants nothing more than to <b>stun</b> [STATUS] and <b>flinch</b> every monster it meets.",
   "initiative": 40,
   "imageFlg": true,
-  "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
+  "lastUpdated": "Wed, 25 Jan 2023 12:07:15 GMT"
 }

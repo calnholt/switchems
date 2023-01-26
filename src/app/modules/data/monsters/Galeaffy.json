@@ -55,30 +55,22 @@
   "buffs": [
     {
       "buffName": "Propulsive Winds",
-      "timing": "Pre-Actions",
       "buffText": "<b>Super [B] [B].</b> <br><br>This attack gains <div>+4[SPD]</div>.~SUPER~",
-      "flipEventText": "{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}",
       "lastUpdated": "Fri, 24 Sep 2021 12:14:02 GMT"
     },
     {
       "buffName": "Sharp Leaves",
-      "timing": "With Attack",
-      "buffText": "{\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}",
-      "flipEventText": "{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}",
+      "buffText": "{\"stat\": \"ATK\", \"num\": 2}",
       "lastUpdated": "Fri, 24 Sep 2021 12:14:02 GMT"
     },
     {
       "buffName": "Leafy Kicks",
-      "timing": "Pre-Actions",
-      "buffText": "{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}",
-      "flipEventText": "{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}",
+      "buffText": "{\"stat\": \"SPD\", \"num\": 2}",
       "lastUpdated": "Fri, 24 Sep 2021 12:14:02 GMT"
     },
     {
       "buffName": "Outta Here",
-      "timing": "Post Actions",
-      "buffText": "Perform a switch action after the monster action phase. <b>Exhaust</b>.~EXHAUST~",
-      "flipEventText": "If this attack is <b>faster</b>, this attack gains <div>+1 [ATK]</div>. ~FASTER~",
+      "buffText": "Perform a switch action after the monster action phase.",
       "lastUpdated": "Sun, 26 Sep 2021 13:47:29 GMT"
     }
   ],
