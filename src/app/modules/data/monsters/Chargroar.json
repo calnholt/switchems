@@ -69,13 +69,13 @@
     },
     {
       "buffName": "Revenge",
-      "buffText": "If the enemy monster is <div><b>resistant</b> [RESIST]</div> to this attack's element, this attack gains +1[ATK] and + 1[SPD]. If not, this attack gains <b>recoil 1[ATK]</b>.~RESIST~ ~RECOIL~",
-      "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
+      "buffText": "If the enemy monster is <div><b>resistant</b> [RESIST]</div> to this attack's element, this attack gains +1[ATK] and + 2[SPD]. If not, this attack gains <b>recoil 1[ATK]</b>.~RESIST~ ~RECOIL~",
+      "lastUpdated": "Fri, 27 Jan 2023 08:01:56 GMT"
     },
     {
       "buffName": "Prey Upon",
-      "buffText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains +1[ATK] and +1[SPD]. If not, this attack gains <b>recoil 1[ATK]</b>.~EFFECTIVE~~RECOIL~",
-      "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
+      "buffText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains +1[ATK] and +2[SPD]. If not, this attack gains <b>recoil 1[ATK]</b>.~EFFECTIVE~~RECOIL~",
+      "lastUpdated": "Fri, 27 Jan 2023 08:01:56 GMT"
     }
   ],
   "monsterId": 4,

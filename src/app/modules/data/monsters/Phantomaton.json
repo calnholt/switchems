@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Cobolt",
-      "abilityText": "[Q]. <br><br>If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, <div>{\"num\":1, \"isPositive\":true, \"stat\":\"DEF\"}.</div>~EFFECTIVE~",
+      "abilityText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains +2[ATK].</div>~EFFECTIVE~",
       "element": "Death",
       "statusFlg": false,
       "attack": 2,
@@ -13,11 +13,11 @@
       "draw": 1,
       "discard": 0,
       "buff": 2,
-      "lastUpdated": "Sun, 26 Sep 2021 13:44:02 GMT"
+      "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
       "abilityName": "Static Void",
-      "abilityText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, <div><b>stun [STATUS]</b>.</div>~EFFECTIVE~~STUN~",
+      "abilityText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains +2[ATK].</div>~EFFECTIVE~",
       "element": "Electric",
       "statusFlg": false,
       "attack": 2,
@@ -25,11 +25,11 @@
       "draw": 0,
       "discard": 0,
       "buff": 0,
-      "lastUpdated": "Sun, 26 Sep 2021 13:44:02 GMT"
+      "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
       "abilityName": "Arraydicate",
-      "abilityText": "<b>Crush 1[PQ], spammable.</b>~CRUSH~~SPAM~",
+      "abilityText": "<b>Crush 2 [PQ]</b>~CRUSH~",
       "element": "Electric",
       "statusFlg": false,
       "attack": 3,
@@ -37,58 +37,50 @@
       "draw": 0,
       "discard": 1,
       "buff": 2,
-      "lastUpdated": "Fri, 24 Sep 2021 12:07:57 GMT"
+      "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     },
     {
       "abilityName": "Exception Caught",
-      "abilityText": "<b>Single use</b>. <br><br>This attack gains <div>+4[HOLLOW].</div> ~SINGLE~",
+      "abilityText": "<b>Single use.</b><br><br>Your opponent [-] [-] [-].~SINGLE~",
       "element": "Death",
       "statusFlg": false,
       "attack": 1,
-      "speed": 3,
+      "speed": 9,
       "draw": 0,
-      "discard": 3,
+      "discard": 2,
       "buff": 2,
-      "lastUpdated": "Sun, 26 Sep 2021 13:44:02 GMT"
+      "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Power Hotfix",
-      "timing": "Pre-Actions",
-      "buffText": "If the opponent selected a switch action this turn, this monster gains {\"stat\": \"ATK\", \"num\": 3, \"isPositive\": true}.",
-      "flipEventText": "{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}",
-      "lastUpdated": "Fri, 24 Sep 2021 12:07:57 GMT"
+      "buffText": "If the enemy monster switched this turn, this monster gains {\"stat\": \"ATK\", \"num\": 3, \"isPositive\": true}.",
+      "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
       "buffName": "Protection Hotfix",
-      "timing": "Pre-Actions",
-      "buffText": "If the opponent selected a switch action this turn, this monster gains {\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.",
-      "flipEventText": "{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}",
-      "lastUpdated": "Sun, 26 Sep 2021 13:44:02 GMT"
+      "buffText": "If the enemy monster switched this turn, this monster gains {\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.",
+      "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
       "buffName": "Refactor",
-      "timing": "Pre-Actions",
       "buffText": "<b>Super [B] [B]. </b><br><br>Attack speeds are reversed this turn and you win all speed ties.~SUPER~",
-      "flipEventText": "If this attack is <b>slower</b>, this attack gains +1[ATK].~SLOWER~",
       "lastUpdated": "Thu, 15 Jul 2021 08:25:53 GMT"
     },
     {
       "buffName": "Download",
-      "timing": "Post Actions",
-      "buffText": "When the enemy monster switches, that monster <div>suffers 1[ATK]</div> and <b>exhaust</b> this aura.<br><br>When this card <b>exhausts</b> from duration, next turn your opponent must reveal their action before you select yours.",
-      "flipEventText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains <div>+1[ATK].</div>",
-      "auraDuration": 3,
-      "lastUpdated": "Tue, 13 Apr 2021 11:54:48 GMT"
+      "buffText": "When an enemy monster switches in, that monster loses 1[HP] and discard this aura.<br><br>When this card is discarded from duration, next turn your opponent must reveal their action before you select yours. ~AURA~",
+      "auraDuration": 4,
+      "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     }
   ],
   "monsterId": 10,
   "monsterName": "Phantomaton",
-  "abilityText": "If <b>Exception Caught</b> is <u>enabled</u> and this monster attacks a monster that is <b>weak</b> [WEAK] to the attack's element, <div>{\"num\":1, \"isPositive\":true, \"stat\":\"ATK\"}.</div><br><br>If <b>Exception Caught</b> is <u>disabled</u>, your opponent must [-] an additional card when performing a switch action.",
+  "abilityText": "Whenever an enemy monsters performs a switch action, this monster heals 2[HP]. ~SWITCH~",
   "hp": 9,
   "promiseDescription": "Strike fear in your opponent when <b>Phantomaton</b> switches in to an advantageous matchup! Watch the enemy monster squirm when the cost of switching out is too high.",
   "initiative": 55,
-  "lastUpdated": "Sun, 26 Sep 2021 13:44:02 GMT",
-  "imageFlg": true
+  "imageFlg": true,
+  "lastUpdated": "Thu, 26 Jan 2023 18:07:17 GMT"
 }

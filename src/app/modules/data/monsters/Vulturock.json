@@ -76,10 +76,10 @@
   ],
   "monsterId": 9,
   "monsterName": "Vulturock",
-  "abilityText": "When this monster <b>switches in</b>, <div>{\"stat\": \"SPD\", \"num\": 3}.</div>~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, <div>{\"stat\": \"SPD\", \"num\": 2}.</div>~SWITCH~",
   "hp": 9,
   "promiseDescription": "<b>Vulturock</b> hits hard – including itself!",
   "initiative": 75,
   "imageFlg": true,
-  "lastUpdated": "Tue, 24 Jan 2023 13:32:08 GMT"
+  "lastUpdated": "Fri, 27 Jan 2023 08:00:52 GMT"
 }

@@ -51,38 +51,30 @@
   "buffs": [
     {
       "buffName": "Weak Spot",
-      "timing": "With Attack",
       "buffText": "This attack gains <b>pierce</b> and <div>+1[ATK]</div>.~PIERCE~",
-      "flipEventText": "If you used two [B] slots, this attack gains <b>pierce</b> and +2[ATK].",
       "lastUpdated": "Sat, 21 Nov 2020 20:08:45 GMT"
     },
     {
       "buffName": "Dense Smoke",
-      "timing": "Post Actions",
       "buffText": "<b>Wound</b> [STATUS] ~WOUND~~STATUS~",
-      "flipEventText": "Put two [TORMENT] counters on one of the enemy monster's actions.",
       "lastUpdated": "Sat, 21 Nov 2020 20:08:45 GMT"
     },
     {
       "buffName": "Midnight Skulk",
-      "timing": "With Attack",
       "buffText": "Remove a [PQ] from the enemy monster and gain a [PQ] of the removed type.",
-      "flipEventText": "If you used two [B] slots, this attack gains <b>flinch</b>.~FLINCH~",
       "lastUpdated": "Sat, 21 Nov 2020 20:08:45 GMT"
     },
     {
       "buffName": "Apathy",
-      "timing": "Pre-Actions",
       "buffText": "If the enemy monster selected a [SPECIAL] action this turn, that action is <b>unsuccessful</b>.~SUCCESS~",
-      "flipEventText": "Put two [TORMENT] counters on one of the enemy monster's actions",
       "lastUpdated": "Sat, 21 Nov 2020 20:08:45 GMT"
     }
   ],
   "abilityName": "Torment",
   "monsterName": "Smolderskulk",
   "abilityText": "At the end of the turn, put two [TORMENT] counters on the enemy monster's selected monster action, if any. Monster actions with [TORMENT] counters have <div><b>recoil X[ATK]</b>, </div> where X is the number of [TORMENT] counters on the action. <em>(Remove all [TORMENT] counters from each action on enemy switch.)</em>",
-  "hp": 10,
-  "complexity": 3,
+  "hp": 7,
   "initiative": 45,
-  "lastUpdated": "Sat, 21 Nov 2020 20:08:45 GMT"
+  "lastUpdated": "Sat, 21 Nov 2020 20:08:45 GMT",
+  "imageFlg": true
 }
