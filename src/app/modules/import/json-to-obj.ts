@@ -1,4 +1,4 @@
-import { default as Stallagrowth } from '../data/monsters/Stallagrowth.json';
+import { default as Stalagrowth } from '../data/monsters/Stalagrowth.json';
 import { default as Cleansitoad } from '../data/monsters/Cleansitoad.json';
 import { default as Chargroar } from '../data/monsters/Chargroar.json';
 import { default as Flexferno } from '../data/monsters/Flexferno.json';
@@ -14,37 +14,13 @@ import { default as Smolderskulk } from '../data/monsters/Smolderskulk.json';
 import { default as Oozygoopz } from '../data/monsters/Oozygoopz.json';
 import { default as Galvanite } from '../data/monsters/Galvanite.json';
 import { default as Squirrberus } from '../data/monsters/Squirrberus.json';
-import { ElemType, ELEMENTS, Role, ROLES } from './../../types/dataTypes';
+import { default as Ashdash } from '../data/monsters/Ashdash.json';
+import { default as Willard } from '../data/monsters/Willard.json';
+import { ElemType, ELEMENTS } from './../../types/dataTypes';
 import { MonsterComplete, Buff, Action } from '../monster/model/monster';
 
 const getElemType = (text: string): ElemType => {
     return ELEMENTS.find(e => e.toString() === text);
-};
-
-const getRole = (text: string): Role => {
-    return ROLES.find(r => r.toString() === text);
-};
-
-const getMonsterFileByName = (monsterName: string) => {
-    switch (monsterName) {
-        case('Boltblebee'): return Boltblebee;
-        case('Chargroar'): return Chargroar;
-        case('Cleansitoad'): return Cleansitoad;
-        case('Cragadilo'): return Cragadilo;
-        case('Drownigator'): return Drownigator;
-        case('Flexferno'): return Flexferno;
-        case('Galeaffy'): return Galeaffy;
-        case('Galvanite'): return Galvanite;
-        case('Oozygoopz'): return Oozygoopz;
-        case('Smolderskulk'): return Smolderskulk;
-        case('Stallagrowth'): return Stallagrowth;
-        case('Steamie'): return Steamie;
-        case('Squirrberus'): return Squirrberus;
-        case('Phantomaton'): return Phantomaton;
-        case('Vulturock'): return Vulturock;
-        case('Zappguin'): return Zappguin;
-    }
-    return {};
 };
 
 export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
@@ -54,48 +30,60 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
         ALL = [selectedMonster];
     } else {
         ALL = [
-            Boltblebee,
+            // Ashdash,
+            // Boltblebee,
             Chargroar,
-            Cleansitoad,
-            Cragadilo,
+            // Cleansitoad,
+            // Cragadilo,
             Drownigator,
             Flexferno,
-            Galvanite,
+            // Galvanite,
             Galeaffy,
-            Oozygoopz,
-            Smolderskulk,
-            Stallagrowth,
-            Steamie,
-            Squirrberus,
+            // Oozygoopz,
+            // Smolderskulk,
+            Stalagrowth,
+            // Steamie,
+            // Squirrberus,
             Phantomaton,
             Vulturock,
+            Willard,
             Zappguin,
         ];
     }
-    ALL.forEach(json => {
+    return convertFromJSON(ALL);
+};
+
+export const convertFromJSON = (all: Array<any>, keepGUI?: boolean): Array<MonsterComplete> => {
+    let out = new Array<MonsterComplete>();
+    all.forEach(json => {
         const monster = new MonsterComplete();
-        if (!json.abilityName) {
+        if (!json.monsterName) {
             return null;
         }
-        const MONSTER_PROPERTIES = [
+        let MONSTER_PROPERTIES = [
             'monsterId',
-            'abilityName',
             'monsterName',
             'abilityText',
             'hp',
-            'complexity',
             'promiseDescription',
             'extraBoard',
-            'initiative'
+            'initiative',
+            'imageFlg',
+            'lastUpdated',
         ];
+        if (keepGUI) {
+            MONSTER_PROPERTIES = MONSTER_PROPERTIES.concat(
+                'isSelected',
+                'referenceFlg'
+            )
+        }
         MONSTER_PROPERTIES.forEach(p => monster[p] = json[p]);
         const elements = Array<ElemType>();
         json.elements.forEach(element => elements.push(getElemType(element)));
         monster.elements = elements;
-        monster.role = getRole(json.role);
         monster.actions = new Array<Action>();
         const ACTIONS = 4;
-        const ACTION_PROPERTIES = [
+        let ACTION_PROPERTIES = [
             'abilityName',
             'abilityText',
             'attack',
@@ -103,36 +91,42 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             'draw',
             'discard',
             'buff',
-            'auraDuration',
             'statusFlg',
-            'reactionFlg',
+            'modifier',
+            'lastUpdated',
         ];
+        if (keepGUI) {
+            ACTION_PROPERTIES = ACTION_PROPERTIES.concat(
+                'isSelected',
+            )
+        }
         for (let i = 0; i < ACTIONS; i++) {
             const action = new Action();
             ACTION_PROPERTIES.forEach(p => action[p] = json.actions[i][p]);
             action.monsterName = monster.monsterName;
             action.element = getElemType(json.actions[i].element);
-            action.modifiers = json.actions[i].modifiers ? json.actions[i].modifiers : action.modifiers;
             action.number = (i + 1);
             monster.actions.push(action);
         }
         monster.buffs = new Array<Buff>();
         const BUFFS = 4;
-        const BUFF_PROPERTIES = [
-            'timing',
+        let BUFF_PROPERTIES = [
             'buffText',
-            'critFlg',
-            'flipEventText',
-            'flipEventFlg',
             'buffName',
+            'auraDuration',
+            'lastUpdated',
         ];
+        if (keepGUI) {
+            BUFF_PROPERTIES = BUFF_PROPERTIES.concat(
+                'isSelected',
+            )
+        }
         for (let i = 0; i < BUFFS; i++) {
             const buff = new Buff();
             BUFF_PROPERTIES.forEach(p => buff[p] = json.buffs[i][p]);
             buff.monsterName = monster.monsterName;
             monster.buffs.push(buff);
         }
-        console.log(monster);
         out = out.sort((a, b) => {
             if (a.monsterName > b.monsterName) {return 1; }
             if (a.monsterName < b.monsterName) {return -1; }
@@ -141,11 +135,4 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
         out.push(monster);
     });
     return out;
-};
-
-export const loadMonster = (monsterName: string): MonsterComplete => {
-    return loadMonsters(getMonsterFileByName(monsterName))[0];
-};
-
-
-
+}

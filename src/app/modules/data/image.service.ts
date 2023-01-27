@@ -1,5 +1,5 @@
 import { ElemType } from 'src/app/types/dataTypes';
-import { Path, HP_PATH, Role, ROLE_PATH, ELEMENT_PATH_GRAY, ELEMENT_PATH_COLOR, SYMBOLS_PATH } from './../../types/dataTypes';
+import { Path, HP_PATH, ELEMENT_PATH_GRAY, ELEMENT_PATH_COLOR, SYMBOLS_PATH } from './../../types/dataTypes';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -20,10 +20,6 @@ export class ImageService {
 
   getHpImg(num: number): Path {
     return this.getPath(HP_PATH, num);
-  }
-
-  getRoleImg(role: Role): Path {
-    return this.getPath(ROLE_PATH, role.toLowerCase());
   }
 
   getGrayImg(elemType: ElemType): Path {

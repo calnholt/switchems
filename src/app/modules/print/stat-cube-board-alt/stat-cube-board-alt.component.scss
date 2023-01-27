@@ -1,0 +1,169 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#stat-cube-board-alt {
+    .card-container{
+        position: relative;
+        border: rgb(216, 216, 216) 2px solid;
+        border-radius: 11px;
+        width: $card-height;
+        height: $card-width;
+        background-color: white;
+        font-family: $header-font;
+        .table-container{
+            padding: 0px 10px 0px 10px;
+            .title{
+                line-height: unset;
+                padding-top: 4px;
+                font-size: 20px;
+                text-align: center;
+                margin: 0px;
+                text-decoration: unset;
+                img{
+                    padding: unset;
+                    max-height: 20px;
+                }
+            }
+            .condition {
+                position: absolute;
+                border: 2px solid black;
+                border-radius: 6px 6px 6px 6px;
+                position: absolute;
+                top: 8px;
+                box-shadow: $recessed;
+                div {
+                    padding: 3px 5px 0px 5px;
+                    height: 33px;
+                    border: 2px solid white;
+                    border-radius: 4px;
+                }
+                img {
+                    max-height: 20px;
+                }
+                &.strengthen {
+                    left: 10px;
+                    background-color: #d6ffd6;
+                }
+                &.frail {
+                    right: 10px;
+                    background-color: #ffcdcd;
+                }
+            }
+            .numbers {
+                display: flex;
+                justify-content: space-around;
+                margin-bottom: -3px;
+                div {
+                    width: 30px;
+                    text-align: center;
+                }
+            }
+            .line-container{
+                padding-left: unset;
+                text-align: center;
+                .name-line{
+                    border: .04cm solid black;
+                    width: 2.1cm;
+                    display: inline-block;
+                    margin: 0cm .2cm .1cm .2cm;
+                }
+                .dot{
+                    height: 10px;
+                    width: 10px;
+                    background-color: black;
+                    border-radius: 50%;
+                    display: inline-block;
+                }
+            }
+            table, th, td {
+                border: 2px solid black;
+            }
+            .stat-cube-table{
+                border-collapse: separate;
+                border-radius: 6px 6px 6px 6px;
+                width: 100%;
+                tr{
+                    height: 35px;
+                    td:nth-child(-n+3){
+                        background-color: #d6ffd6;
+                    }
+                    td:nth-child(n+5){
+                        background-color: #ffcdcd;
+                    }
+                    td{
+                        border: unset;
+                        text-align: center;
+                        font-size: 15px;
+                        font-family: $header-font;
+                        width: 12.5%;
+                        box-shadow: $recessed;
+                        img{
+                            max-height: 20px;
+                        }
+                        div{
+                            font-size: 15px;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                tr:first-child {
+                    td:first-child {
+                        border-radius: 4px 0px 0px 4px;
+                    }
+                    td:last-child {
+                        border-radius: 0px 4px 4px 0px;
+                    }
+                }
+            }
+            .defense-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                text-align: center;
+                font-family: $header-font;
+                border: 2px solid black;
+                border-top: unset;
+                border-radius: 0px 0px 6px 6px;
+                align-items: center;
+                .defense {
+                    box-shadow: $recessed;
+                    background-color: #d6ffd6;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px solid white;
+                    border-top: unset;
+                    font-size: 23px;
+                    img {
+                        max-height: 20px;
+                    }
+                }
+                .defense:nth-child(1), .defense:nth-child(2), .defense:nth-child(3) {
+                    border-right: unset;
+                }
+                .defense:nth-child(1) {
+                    border-radius: 0px 0px 0px 6px;
+                }
+                .defense:last-child {
+                    border-radius: 0px 0px 6px 0px;
+                }
+            }
+            .maneuver-container{
+                font-family: $header-font;
+                table{
+                    margin: auto;
+                    width: 66%;
+                    font-size: 20px;
+                    tr{
+                        height: 40px;
+                        td{
+                            text-align: center;
+                            width: 33%;
+                            padding: 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

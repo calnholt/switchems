@@ -1,128 +1,85 @@
 {
   "elements": [
-    "Water",
-    "Death"
+    "Death",
+    "Water"
   ],
   "actions": [
     {
       "abilityName": "Fatigue",
-      "abilityText": "<b>Fatigue [STATUS]</b> ~FATIGUE~",
+      "abilityText": "<b>Fatigue [STATUS]</b>, {\"stat\": \"DEF\", \"num\": 1}. ~FATIGUE~",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "auraDuration": 0,
       "statusFlg": true,
-      "reactionFlg": false,
-      "speed": 6,
-      "draw": 0,
-      "discard": 2,
-      "buff": 0
-    },
-    {
-      "abilityName": "Foul Play",
-      "abilityText": "[2]: The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.</div>",
-      "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        2,
-        2,
-        0,
-        0
-      ],
-      "auraDuration": 0,
-      "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 2,
-      "speed": 3,
-      "draw": 0,
-      "discard": 1,
-      "buff": 1
-    },
-    {
-      "abilityName": "Surge",
-      "abilityText": "",
-      "element": "Water",
-      "modifiers": [
-        1,
-        0,
-        0,
-        0,
-        0,
-        2
-      ],
-      "auraDuration": 0,
-      "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 1,
-      "speed": 7,
-      "draw": 0,
+      "speed": 8,
+      "draw": 1,
       "discard": 0,
-      "buff": 3
+      "buff": 0,
+      "lastUpdated": "Tue, 24 Jan 2023 13:29:13 GMT"
     },
     {
       "abilityName": "Expunge",
-      "abilityText": "<b>Single use</b>. If the enemy monster has a [STATUS], this attack gains:<br>[1]: <div>+2[ATK]</div>~SINGLE~~STATUS~",
+      "abilityText": "<b>Single use. </b><br><br>If the enemy monster has a [STATUS], this attack gains <div>[Q] [Q].</div>~SINGLE~~STATUS~",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        3,
-        2,
-        0,
-        0
-      ],
-      "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 4,
       "speed": 8,
       "draw": 0,
-      "discard": 1,
-      "buff": 1
+      "discard": 2,
+      "buff": 0,
+      "lastUpdated": "Tue, 24 Jan 2023 13:20:19 GMT"
+    },
+    {
+      "abilityName": "Swamped",
+      "abilityText": "[Q]. <br><br>{\"stat\": \"SPD\", \"num\": 2}",
+      "element": "Death",
+      "statusFlg": false,
+      "attack": 3,
+      "speed": 2,
+      "draw": 0,
+      "discard": 0,
+      "buff": 2,
+      "lastUpdated": "Tue, 24 Jan 2023 13:29:13 GMT"
+    },
+    {
+      "abilityName": "Surge",
+      "abilityText": "<b>Spammable</b>. <br><br>If this attack is <b>faster</b>,  {\"stat\": \"ATK\", \"num\": 1}. ~SPAM~~FASTER~",
+      "element": "Water",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 5,
+      "draw": 1,
+      "discard": 0,
+      "buff": 2,
+      "lastUpdated": "Tue, 24 Jan 2023 13:29:13 GMT"
     }
   ],
   "buffs": [
     {
-      "buffName": "Disarm",
-      "timing": "Pre-Actions",
-      "buffText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "critFlg": true
+      "buffName": "Abrupt Weakness",
+      "buffText": "<b> Crush 1</b>, then gain one [PQ] of the type that was crushed. ~CRUSH~",
+      "lastUpdated": "Tue, 24 Jan 2023 13:20:19 GMT"
+    },
+    {
+      "buffName": "Famished",
+      "buffText": "Discard up to 2 of your [PQ] and heal this monster that much.",
+      "lastUpdated": "Tue, 24 Jan 2023 13:20:19 GMT"
     },
     {
       "buffName": "Cripple",
-      "timing": "Pre-Actions",
-      "buffText": "The enemy monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
-      "flipEventText": "If your opponent has more cards in their hand than you, that player discards one card at random.",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffText": "<b>Crush 4[PQ]</b> ~CRUSH~",
+      "lastUpdated": "Tue, 24 Jan 2023 13:20:19 GMT"
     },
     {
       "buffName": "Tremble",
-      "timing": "Post Actions",
-      "buffText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.",
-      "critFlg": true
-    },
-    {
-      "buffName": "Abrupt Weakness",
-      "timing": "Pre-Actions",
-      "buffText": "[1]: <b>Fatigue [STATUS]</b> ~FATIGUE~",
-      "critFlg": false
+      "buffText": "<b>Super [B] [B], Recoil 1[ATK].  </b><br><br><div>{\"stat\": \"SPD\", \"num\": 2}</div> and <div>{\"stat\": \"ATK\", \"num\": 2}.</div>~SUPER~ ~RECOIL~",
+      "lastUpdated": "Tue, 24 Jan 2023 13:29:13 GMT"
     }
   ],
   "monsterId": 5,
-  "abilityName": "Panic Attack",
   "monsterName": "Drownigator",
-  "abilityText": "When this monster <b>switches in</b>, the opponent discards a card at random.~SWITCH~",
-  "hp": 9,
-  "complexity": 1,
-  "promiseDescription": "Drownigator is an immediate threat. Panic Attack puts your opponent on the defensive and a properly buffed Expunge can devastate leaf and rock types.",
+  "abilityText": "When this monster <b>switches in</b>, <div>[+].</div>~SWITCH~",
+  "hp": 8,
+  "promiseDescription": "<b>Drownigator</b> is a total nuisance with debuffs.",
   "initiative": 70,
-  "role": "Tricky"
+  "imageFlg": true,
+  "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"
 }

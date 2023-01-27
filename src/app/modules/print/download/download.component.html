@@ -1,15 +1,10 @@
 <div id="download">
   <div>
     <span>
-      <span *ngIf="currentCard.isMonster && !currentCard.referenceFlg">
+      <span *ngIf="currentCard.isMonster">
         <monster-card
           [monster]="currentCard">
         </monster-card>
-      </span>
-      <span *ngIf="currentCard.isMonster && currentCard.referenceFlg">
-        <monster-reference
-          [monster]="currentCard">
-        </monster-reference>
       </span>
       <span *ngIf="currentCard.isAction">
         <monster-action
@@ -20,12 +15,6 @@
         <monster-buff
           [buff]="currentCard">
         </monster-buff>
-      </span>
-      <span *ngIf="boardCount === 1">
-        <action-board></action-board>
-      </span>
-      <span *ngIf="boardCount === 2">
-        <stat-cube-board></stat-cube-board>
       </span>
     </span>
   </div>

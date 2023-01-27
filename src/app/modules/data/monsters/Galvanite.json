@@ -6,123 +6,83 @@
   "actions": [
     {
       "abilityName": "Discharge",
-      "abilityText": "Remove all [NQ] from this monster, even if this action is prevented. <br><br>This attack gains <div>+1[ATK]</div> for each [NQ] removed this way.",
+      "abilityText": "<b>Single use</b>.<br><br>Remove all [NQ] from this monster, and this attack gains <div>+1[ATK]</div> for each [NQ] removed this way.~SINGLE~",
       "element": "Electric",
-      "modifiers": [
-        2,
-        0,
-        0,
-        0,
-        2,
-        0
-      ],
-      "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 2,
-      "speed": 5,
-      "discard": 2,
-      "buff": 1
+      "attack": 3,
+      "speed": 6,
+      "discard": 1,
+      "buff": 1,
+      "lastUpdated": "Thu, 01 Apr 2021 06:43:12 GMT"
     },
     {
       "abilityName": "Entrenched Barrage",
-      "abilityText": "This monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}, even if this action is prevented.",
+      "abilityText": "[FLIP] [FLIP]. <br><br>This monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}.",
       "element": "Rock",
-      "modifiers": [
-        0,
-        1,
-        0,
-        0,
-        0,
-        4
-      ],
-      "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 4,
-      "speed": 3,
-      "discard": 2,
-      "buff": 2
+      "attack": 3,
+      "speed": 8,
+      "discard": 1,
+      "buff": 2,
+      "lastUpdated": "Thu, 01 Apr 2021 06:43:12 GMT"
     },
     {
       "abilityName": "Frazzle",
-      "abilityText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": false}, even if this action is prevented.",
+      "abilityText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.",
       "element": "Electric",
-      "modifiers": [
-        3,
-        0,
-        0,
-        0,
-        1,
-        0
-      ],
-      "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 3,
       "speed": 7,
-      "discard": 1,
-      "buff": 1
+      "discard": 0,
+      "buff": 1,
+      "lastUpdated": "Fri, 05 Mar 2021 17:54:48 GMT"
     },
     {
       "abilityName": "Reverse Polarity",
-      "abilityText": "Remove up to three [NQ] from this monster and the enemy monster gains a [NQ] of any type of your choice for each [NQ] removed.<br><br>[1]: The enemy monster gains {\"stat\":\"SPD\", \"num\":2, \"isPositive\": false}.",
+      "abilityText": "Remove all [NQ] from this monster. For each [NQ] removed, the enemy monster gains [NQ] of the type removed.",
       "element": "Electric",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "auraDuration": 0,
       "statusFlg": true,
-      "reactionFlg": false,
-      "speed": 3,
-      "draw": 1
+      "speed": 5,
+      "draw": 1,
+      "lastUpdated": "Thu, 01 Apr 2021 06:43:12 GMT"
     }
   ],
   "buffs": [
     {
-      "buffName": "Shock Quake",
-      "timing": "With Attack",
-      "buffText": "[1]: <b>Paralyze [STATUS]</b>~PARALYZE~",
-      "flipEventText": "You may gain {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false} to heal <div>3[HP].</div>",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffName": "Catalyst",
+      "timing": "Pre-Actions",
+      "buffText": "<b>Super [B] [B], Exhaust</b><br>Remove all [NQ] from this monster and this attack gains <div>+1[ATK]</div> for each [NQ] removed this way.~SUPER~~EXHAUST~",
+      "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}, </div> [FLIP] [FLIP].",
+      "lastUpdated": "Thu, 01 Apr 2021 06:41:03 GMT"
     },
     {
       "buffName": "Deactivate",
       "timing": "With Attack",
-      "buffText": "If this action is <b>faster</b>, this attack gains:<br>[1]: <b>Flinch</b>~FASTER~~FLINCH~",
-      "flipEventText": "You may gain {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": false} to heal <div>3[HP].</div>",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffText": "If this monster has one or more [NQ], this attack gains <b>flinch</b>~FLINCH~",
+      "flipEventText": "If this monster has one or more [NQ], this attack gains <b>flinch</b>",
+      "lastUpdated": "Sat, 03 Apr 2021 07:27:59 GMT"
     },
     {
       "buffName": "Amped Up",
       "timing": "With Attack",
-      "buffText": "<b>Super</b><br>If your active monster switched in last turn, this attack gains <div>+3[ATK]</div> and <div>+3[SPD].</div>~SUPER~",
-      "flipEventText": null,
-      "critFlg": true,
-      "flipEventFlg": false
+      "buffText": "<b>Super [B] [B]</b><br>If your active monster switched in last turn, this attack gains <div>+3[ATK]</div> and <div>+3[SPD].</div>~SUPER~",
+      "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}</div> and this attack gains <div>+2[ATK].</div>",
+      "lastUpdated": "Thu, 01 Apr 2021 06:41:03 GMT"
     },
     {
       "buffName": "Pulse",
       "timing": "Pre-Actions",
-      "buffText": "This monster gains +2[DEF] this turn.",
-      "flipEventText": null,
-      "critFlg": true,
-      "flipEventFlg": false
+      "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}. If this monster has 4 or less [HP], this monster gains {\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true} instead.",
+      "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}</div> and <div>{\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.</div>",
+      "lastUpdated": "Thu, 01 Apr 2021 06:55:32 GMT"
     }
   ],
   "abilityName": "Absorb",
   "monsterName": "Galvanite",
-  "abilityText": "If this monster switched in this turn and the enemy monster attacked, that attack is <b>unsuccessful</b> and this monster gains <div>[NQ] [NQ]</div> of your choice. If the enemy monster attack was [F] [L], this monster suffers 2[ATK].~SUCCESS~",
-  "hp": 11,
+  "abilityText": "At the end of the turn, if this monster has two or more [NQ], this monster gains <div>{\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}</div>.",
+  "hp": 8,
   "complexity": 3,
-  "promiseDescription": "Galvanite's <b>absorb</b> ability turns your switch action into the ultimate defensive maneuver. Leverage this opportunistically. Knowing when to switch out with Galvanite is equally important – sometimes your accumulated [NQ] can't be transformed into a benefit, so it's more advantageous to wipe them off.",
+  "promiseDescription": "Leverage your [NQ] as benefit!",
   "initiative": 25,
-  "role": "Warrior"
+  "lastUpdated": "Fri, 05 Mar 2021 17:54:03 GMT"
 }

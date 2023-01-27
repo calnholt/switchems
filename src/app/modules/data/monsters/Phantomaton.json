@@ -5,122 +5,82 @@
   "actions": [
     {
       "abilityName": "Cobolt",
-      "abilityText": "",
+      "abilityText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains +2[ATK].</div>~EFFECTIVE~",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        3,
-        3,
-        0,
-        0
-      ],
-      "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 1,
-      "speed": 2,
-      "draw": 0,
-      "discard": 0,
-      "buff": 2
-    },
-    {
-      "abilityName": "Download",
-      "abilityText": "When the enemy monster performs a switch action, that monster heals 1[HP] and discard this aura. <br><br>When all time counters are removed from this, next turn your opponent must reveal their selected action before you select yours.",
-      "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "auraDuration": 4,
-      "statusFlg": false,
-      "reactionFlg": false,
+      "attack": 2,
       "speed": 1,
       "draw": 1,
       "discard": 0,
-      "buff": 0
+      "buff": 2,
+      "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
-      "abilityName": "Transfusion",
-      "abilityText": "[1]: <b>Leech [STATUS]</b> ~LEECH~",
-      "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        2,
-        2,
-        0,
-        0
-      ],
-      "auraDuration": 0,
+      "abilityName": "Static Void",
+      "abilityText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains +2[ATK].</div>~EFFECTIVE~",
+      "element": "Electric",
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 2,
-      "speed": 1,
+      "speed": 5,
+      "draw": 0,
+      "discard": 0,
+      "buff": 0,
+      "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
+    },
+    {
+      "abilityName": "Arraydicate",
+      "abilityText": "<b>Crush 2 [PQ]</b>~CRUSH~",
+      "element": "Electric",
+      "statusFlg": false,
+      "attack": 3,
+      "speed": 3,
       "draw": 0,
       "discard": 1,
-      "buff": 2
+      "buff": 2,
+      "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     },
     {
-      "abilityName": "Cornered",
-      "abilityText": "This attack gains <div>+2[ATK]</div> when this monster has a <b>lockdown</b> counter on it.",
+      "abilityName": "Exception Caught",
+      "abilityText": "<b>Single use.</b><br><br>Your opponent [-] [-] [-].~SINGLE~",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        1,
-        1,
-        0,
-        0
-      ],
-      "auraDuration": 0,
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 5,
-      "speed": 4,
+      "attack": 1,
+      "speed": 9,
       "draw": 0,
-      "discard": 3,
-      "buff": 0
+      "discard": 2,
+      "buff": 2,
+      "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     }
   ],
   "buffs": [
     {
-      "buffName": "Target Acquired",
-      "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} if the opponent selected a switch action this turn.",
-      "critFlg": true
+      "buffName": "Power Hotfix",
+      "buffText": "If the enemy monster switched this turn, this monster gains {\"stat\": \"ATK\", \"num\": 3, \"isPositive\": true}.",
+      "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
-      "buffName": "Target Acquired",
-      "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} if the opponent selected a switch action this turn.",
-      "critFlg": true
+      "buffName": "Protection Hotfix",
+      "buffText": "If the enemy monster switched this turn, this monster gains {\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.",
+      "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
       "buffName": "Refactor",
-      "timing": "Pre-Actions",
-      "buffText": "<b>Super</b><br>Attack speeds are reversed this turn and you win all speed ties.~SUPER~",
-      "critFlg": false
+      "buffText": "<b>Super [B] [B]. </b><br><br>Attack speeds are reversed this turn and you win all speed ties.~SUPER~",
+      "lastUpdated": "Thu, 15 Jul 2021 08:25:53 GMT"
     },
     {
-      "buffName": "Malware",
-      "timing": "None",
-      "buffText": "This card has no buff effect.",
-      "flipEventText": "The enemy monster suffers <div>1[ATK]</div>",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffName": "Download",
+      "buffText": "When an enemy monster switches in, that monster loses 1[HP] and discard this aura.<br><br>When this card is discarded from duration, next turn your opponent must reveal their action before you select yours. ~AURA~",
+      "auraDuration": 4,
+      "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     }
   ],
   "monsterId": 10,
-  "abilityName": "Lockdown",
   "monsterName": "Phantomaton",
-  "abilityText": "At the start of the turn, put a <b>lockdown</b> counter on this monster if it doesn't already have one. If it does, remove the <b>lockdown</b> counter instead. While this monster has a <b>lockdown</b> counter on it, the enemy monster cannot perform switch actions.",
-  "hp": 12,
-  "complexity": 2,
+  "abilityText": "Whenever an enemy monsters performs a switch action, this monster heals 2[HP]. ~SWITCH~",
+  "hp": 9,
+  "promiseDescription": "Strike fear in your opponent when <b>Phantomaton</b> switches in to an advantageous matchup! Watch the enemy monster squirm when the cost of switching out is too high.",
   "initiative": 55,
-  "role": "Tank"
+  "imageFlg": true,
+  "lastUpdated": "Thu, 26 Jan 2023 18:07:17 GMT"
 }

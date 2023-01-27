@@ -121,6 +121,5 @@
   "monsterName": "Shaleshell",
   "abilityText": "When this monster switches in and is hit by a [E] [F] attack, put a <b>quake</b> counter on this monster. <br><br>This monster gains +2[SPD] while it has a <b>quake</b> counter. Removes on switch.",
   "hp": 11,
-  "complexity": 2,
-  "role": "Warrior"
+  "complexity": 2
 }

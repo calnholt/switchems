@@ -1,18 +1,6 @@
 import { Term, Image } from './../data/data';
 import { ElemType, TERM_CODES, IMAGE_CODES, Css, ImageCode } from './../../types/dataTypes';
 
-export const getAdvantages = (elem: ElemType): number[] => {
-  // fire, water, rock, leaf, elec, death
-  // -1 means the monster takes MORE damage
-  // 1 means resistance
-    if (elem === 'Death') {return [0, -1, 1, 1, -1, 0]; }
-    if (elem === 'Electric') { return [-1, 1, -1, 0, 0, 1]; }
-    if (elem === 'Fire') { return [0, -1, -1, 1, 1, 0]; }
-    if (elem === 'Water') { return [1, 0, 0, -1, -1, 1]; }
-    if (elem === 'Leaf') { return [-1, 1, 1, 0, 0, -1]; }
-    if (elem === 'Rock') { return [1, 0, 0, -1, 1, -1]; }
-};
-
 const getImageClass  = (str: string): string => {
   return str.substring(1, str.length - 1).toLowerCase();
 };
@@ -54,29 +42,14 @@ function convertInnerTextJson(innerHtml) {
     try {
       const obj = JSON.parse(jsonInText);
       let html;
-      const isStatSpread = obj.hasOwnProperty('positive') || obj.hasOwnProperty('neutral') || obj.hasOwnProperty('negative');
-      if (isStatSpread) {
-        html = '<span class="stat-spread">';
-        if (obj.hasOwnProperty('positive')) {
-          html += `<span class="positive">${obj.positive}</span>`;
-        }
-        if (obj.hasOwnProperty('neutral')) {
-          html += `<span class="neutral">${obj.neutral}</span>`;
-        }
-        if (obj.hasOwnProperty('negative')) {
-          html += `<span class="negative">${obj.negative}</span>`;
-        }
-        html += '</span>';
-      }
       const isCubes = obj.hasOwnProperty('stat') || obj.hasOwnProperty('num') || obj.hasOwnProperty('isPositive');
       if (isCubes) {
         html = '<div class="cubes">';
-          const cubeType: ImageCode = obj.isPositive ? '[PQ]' : '[NQ]';
           let cubeStr = '';
           for (let i = 0; i < obj.num; i++) {
-            cubeStr += cubeType + ' ';
+            cubeStr += '[PQ]' + ' ';
           }
-          html += `${cubeStr}[ARROW] [${obj.stat}]</div>`;
+          html += `${cubeStr}[ARROW] [${['ATK', 'HOLLOW'].includes(obj.stat) ? 'ATK' : obj.stat}]</div>`;
       }
       innerHtml = innerHtml.replace(jsonInText, html);
     } catch (error) {

@@ -1,19 +1,5 @@
 <div id="action-card">
   <div class="card-container {{action.element.toLowerCase()}}">
-    <div *ngIf="action.modifiers">
-      <div class="elements-container">
-        <span *ngFor="let modifier of action.modifiers; index as i">
-          <span *ngIf="modifier && modifier > 0" class="modifier {{ELEMENTS_LIST[i].toLowerCase()}}-color">{{getModifier(modifier)}}</span>
-          <div *ngIf="action.attack && isDisadvantage(i)" class="disadvantage">-</div>
-        </span>
-      </div>
-    </div>
-    <div class="elements-container">
-      <div *ngFor="let element of ELEMENTS_LIST" class="elements">
-        <img *ngIf="hasElement(element)" class="element" src="{{getElementImageColorPath()}}">
-        <img *ngIf="!hasElement(element)" class="element" src="{{getElementImageGrayPath(element)}}">
-      </div>
-    </div>
     <div class="ability-container">
       <div class="ability-name-container">
         <span class="ability-name" [ngClass]="{'name-offset':!action.abilityText}">{{action.abilityName}}</span>
@@ -24,10 +10,6 @@
           <img class="stat-icon" src="{{getImagePath('attack')}}">
         </span>
         <span *ngIf="!action.attack" class="stat-container">
-          <span *ngIf="action.auraDuration" class="stat-container">
-            <span class="stat-value">{{action.auraDuration}}</span>
-            <img class="stat-icon" src="{{getImagePath('aura')}}">
-          </span>
           <span *ngIf="action.statusFlg" class="stat-container">
             <img class="stat-icon" src="{{getImagePath('status')}}">
           </span>
@@ -36,14 +18,28 @@
           <img *ngIf="action.element" class="stat-icon" src="{{getElementImageColorPath()}}">
         </span>
         <span class="stat-container">
-          <span *ngIf="action.speed && !action.reactionFlg" class="stat-container">
+          <span *ngIf="action.speed" class="stat-container">
             <span class="stat-value" [ngClass]="{'unity':action.unityFlg}">{{action.speed}}</span>
             <img class="stat-icon" src="{{getImagePath('speed')}}">
           </span>
-          <span *ngIf="action.reactionFlg" class="stat-container">
-            <img class="stat-icon" src="{{getImagePath('reaction')}}">
-          </span>
         </span>
+      </div>
+      <div *ngIf="!action.statusFlg" class="modifier-container">
+        <div class="modifier-value" [ngClass]="{'unity':action.unityFlg}">
+          <!-- +{{action.modifier}}<img src="{{getImagePath('attack')}}"> -->
+          <img src="{{getImagePath('question')}}">
+        </div>
+        <div class="vs-container">
+          <div>VS</div>
+        </div>
+        <div class="modifier-elements">
+          <ng-container *ngFor="let element of ELEMENTS; index as i">
+            <img *ngIf="isAdvantage(i)" src="{{getElementImageColorPath(element)}}">
+          </ng-container>
+        </div>
+      </div>
+      <div *ngIf="!action.abilityText.includes('SPAM')" class="locked-container">
+        <img src="{{getImagePath(getLockedIcon())}}">
       </div>
       <div *ngIf="action.abilityText" class="ability-text-container">
         <div [innerHTML]="getAbilityText()" class="ability-text"></div>

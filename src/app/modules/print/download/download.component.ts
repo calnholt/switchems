@@ -2,7 +2,6 @@ import { Monster } from './../../monster/model/monster';
 import { MonsterComplete, Buff, Action } from 'src/app/modules/monster/model/monster';
 import { loadMonsters } from 'src/app/modules/import/json-to-obj';
 import { Component, OnInit } from '@angular/core';
-import { STANDARD_BUFFS } from 'src/app/types/dataTypes';
 import html2canvas from 'html2canvas';
 import { ActivatedRoute } from '@angular/router';
 
@@ -19,7 +18,7 @@ export class DownloadComponent implements OnInit {
   statCubeBoard: number = 1;
   boardCount: number = 0;
   timeout: number = 1500;
-  unityFlg = false;
+  unityFlg = true;
   constructor(
     private route: ActivatedRoute
   ) {}
@@ -32,10 +31,6 @@ export class DownloadComponent implements OnInit {
       m['isMonster'] = true;
       m.unityFlg = this.unityFlg;
       allCards.push(m);
-      const ref = Object.assign({}, m);
-      ref.referenceFlg = false;
-      ref.unityFlg = this.unityFlg;
-      allCards.push(ref);
       m.actions.forEach(a => {
         a['isAction'] = true;
         a.unityFlg = this.unityFlg;
@@ -46,11 +41,6 @@ export class DownloadComponent implements OnInit {
         b.unityFlg = this.unityFlg;
         allCards.push(b);
       });
-    });
-    STANDARD_BUFFS.forEach(b => {
-      b['isBuff'] = true;
-      b.unityFlg = this.unityFlg;
-      allCards.push(b);
     });
     this.allCards = allCards;
     this.currentCard = this.allCards[0];

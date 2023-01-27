@@ -1,0 +1,85 @@
+{
+  "elements": [
+    "Leaf",
+    "Rock"
+  ],
+  "actions": [
+    {
+      "abilityName": "Gravelcrust Grip",
+      "abilityText": "<b>Drain [STATUS], recoil 3[ATK], single use. </b><br><br>If this monster has no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 3}.</div> ~DRAIN~~SINGLE~",
+      "element": "Leaf",
+      "statusFlg": true,
+      "speed": 2,
+      "draw": 0,
+      "discard": 1,
+      "buff": 0,
+      "lastUpdated": "Tue, 24 Jan 2023 13:31:02 GMT"
+    },
+    {
+      "abilityName": "Vine Whips",
+      "abilityText": "Remove all [STATUS] from the enemy monster. This attack gains <div>+3[ATK]</div> for each [STATUS] removed.<br><br>If the enemy monster <div><b>switched In [SL]</b></div> this turn,  <div><b>drain [STATUS]</b>.</div>",
+      "element": "Leaf",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 3,
+      "draw": 1,
+      "discard": 0,
+      "buff": 2,
+      "lastUpdated": "Tue, 24 Jan 2023 13:13:19 GMT"
+    },
+    {
+      "abilityName": "Pulverize",
+      "abilityText": "<b>Flinch.</b>~FLINCH~",
+      "element": "Rock",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 6,
+      "draw": 0,
+      "discard": 3,
+      "buff": 0,
+      "lastUpdated": "Tue, 24 Jan 2023 13:13:19 GMT"
+    },
+    {
+      "abilityName": "Skewer",
+      "abilityText": "[Q] [Q]",
+      "element": "Rock",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 4,
+      "draw": 0,
+      "discard": 0,
+      "buff": 2,
+      "lastUpdated": "Fri, 26 Feb 2021 08:34:36 GMT"
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Regrowth",
+      "buffText": "This monster heals <div>1[HP].</div> If the enemy monster has a [STATUS], this monster heals <div>2[HP]</div> instead.~STATUS~",
+      "lastUpdated": "Sat, 04 Sep 2021 12:47:52 GMT"
+    },
+    {
+      "buffName": "Mossy Overgrowth",
+      "buffText": "<b>Super [B] [B]. </b><br><br>This monster gains <div>+3[DEF]</div> this turn. ~SUPER~",
+      "lastUpdated": "Sat, 04 Sep 2021 12:47:52 GMT"
+    },
+    {
+      "buffName": "Rock Polish",
+      "buffText": "{\"stat\": \"DEF\", \"num\": 2}.",
+      "lastUpdated": "Tue, 24 Jan 2023 13:31:02 GMT"
+    },
+    {
+      "buffName": "Life Siphon",
+      "buffText": "<b>Crush 2</b>[PQ]. If two cubes were removed this way, this monster heals 1[HP]. ~CRUSH~",
+      "lastUpdated": "Tue, 24 Jan 2023 13:13:52 GMT"
+    }
+  ],
+  "monsterId": 1,
+  "monsterName": "Stalagrowth",
+  "abilityText": "When this monster <b>switches in</b>, {\"stat\": \"DEF\", \"num\": 1}.</div> ~SWITCH~",
+  "hp": 10,
+  "promiseDescription": "<b>Stallagrowth</b> plays for the long game – slowly drain the enemy's health and stand your ground with bolstered defense.",
+  "initiative": 10,
+  "imageFlg": true,
+  "lastUpdated": "Tue, 24 Jan 2023 13:31:02 GMT"
+}

@@ -1,0 +1,10 @@
+<div id="rulebook-monster">
+  <div class="monster-card">
+    <monster-card [monster]="monster"></monster-card>
+  </div>
+  <ng-container *ngFor="let x of numbers">
+    <div class="num num-{{x}}">
+      <rulebook-number [number]="x"></rulebook-number>
+    </div>
+  </ng-container>
+</div>

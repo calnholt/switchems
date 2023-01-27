@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-
 @font-face { 
     font-family: 'Beastformer'; 
     src: url('/assets/fonts/Beastformer.ttf') format("ttf")
@@ -15,7 +14,7 @@
 
 html, body { height: 100%; }
 body { 
-    margin: 0; 
+    margin: 0%; 
     font-family: Roboto, "Helvetica Neue", sans-serif; 
     -webkit-print-color-adjust:exact;
 }
@@ -43,4 +42,16 @@ em{
         border-radius: 50%;
         display: inline-block;
     }
+}
+.op-0 {
+    opacity: 0;
+}
+.op-25 {
+    opacity: 0.25;
+}
+.op-50 {
+    opacity: 0.50;
+}
+.op-75 {
+    opacity: 0.75;
 }
