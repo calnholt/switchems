@@ -23,18 +23,18 @@
                 </monster-buff>
               </div>
             </div>
-            <div *ngIf="monster.extraBoard || monster.teamAura">
+            <div *ngIf="monster.extraBoard">
               <div [hidden]="!monster.isExtraBoardHovered">
-                <ng-container *ngIf="monster.extraBoard">
-                  <extra-board
-                    [monster]="monster">
-                  </extra-board>
-                </ng-container>
-                <ng-container *ngIf="monster.teamAura">
-                  <team-aura
-                    [teamAura]="monster.teamAura">
-                  </team-aura>
-                </ng-container>
+                <extra-board
+                  [monster]="monster">
+                </extra-board>
+              </div>
+            </div>
+            <div *ngIf="monster.teamAura">
+              <div [hidden]="!monster.isTeamAuraHovered">
+                <team-aura
+                  [teamAura]="monster.teamAura">
+                </team-aura>
               </div>
             </div>
           </div>
@@ -68,8 +68,8 @@
             <ng-container *ngIf="monster.teamAura">
               <div 
               class="col-12 hover-card-icon"
-                (mouseover)="monster.isExtraBoardHovered = true" 
-                (mouseout)="monster.isExtraBoardHovered = false">
+                (mouseover)="monster.isTeamAuraHovered = true" 
+                (mouseout)="monster.isTeamAuraHovered = false">
                 <span class="icon">T</span>
               </div>
             </ng-container>

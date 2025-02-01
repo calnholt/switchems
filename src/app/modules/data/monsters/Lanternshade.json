@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Flicker",
-      "abilityText": "If the enemy monster has an <b>ailment</b> [STATUS], <div>[Q].</div>",
+      "abilityText": "If the opponent has an <b>ailment</b> [STATUS], <div>[Q].</div>",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
@@ -16,7 +16,7 @@
     },
     {
       "abilityName": "Ignite",
-      "abilityText": "This attack gains <div>+1[ATK]</div> for each <div><b>ailment</b> [STATUS]</div> the enemy monster has.",
+      "abilityText": "This attack gains <div>+1[ATK]</div> for each <div><b>ailment</b> [STATUS]</div> the opponent has.",
       "element": "Fire",
       "attackType": "Ranged",
       "statusFlg": false,
@@ -27,7 +27,7 @@
     },
     {
       "abilityName": "Expose Weakness",
-      "abilityText": "This attack gains <div>+1[ATK]</div> for each <div><b>ailment</b> [STATUS]</div> the enemy monster has.",
+      "abilityText": "This attack gains <div>+1[ATK]</div> for each <div><b>ailment</b> [STATUS]</div> the opponent has.",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
@@ -38,7 +38,7 @@
     },
     {
       "abilityName": "Spreading Curse",
-      "abilityText": "<div>{\"stat\": \"DEF\", \"num\": 1}.</div><br><br>If all of this action's buff slots are used, your opponent gains <div><b>Curse</b> [TA].</div>~CURSE~",
+      "abilityText": "<div>{\"stat\": \"DEF\", \"num\": 1}.</div><br><br>If all of this action's buff slots are used, your opponent gains <div><b>Curse</b> [TA].</div>",
       "element": "Death",
       "attackType": "Ranged",
       "statusFlg": false,
@@ -51,7 +51,7 @@
   "buffs": [
     {
       "buffName": "Infusion",
-      "buffText": "If this is paired with another buff, your opponent gains <div><b>Curse</b> [TA]</div>.~CURSE~",
+      "buffText": "If this is paired with another buff, your opponent gains <div><b>Curse</b> [TA]</div>.",
       "auraDuration": null
     },
     {

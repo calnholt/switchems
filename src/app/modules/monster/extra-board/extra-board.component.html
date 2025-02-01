@@ -3,7 +3,7 @@
     <acorn></acorn>
   </div>
   <div *ngIf="monster.extraBoard === 'GOOP'">
-    <goop></goop>
+    <monster-buff [buff]="goop"></monster-buff>
   </div>
   <div *ngIf="monster.extraBoard === 'FIRMWARE'">
     <team-aura [teamAura]="firmwareUpdate"></team-aura>

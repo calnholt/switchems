@@ -6,6 +6,7 @@ export class GUI {
     isHighlighted?: boolean;
     isHovered?: boolean;
     isExtraBoardHovered?: boolean;
+    isTeamAuraHovered?: boolean;
 }
 
 export class Card extends GUI {

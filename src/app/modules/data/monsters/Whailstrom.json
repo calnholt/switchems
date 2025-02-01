@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Grand Slam",
-      "abilityText": "<b>Recoil</b>.<br><br> \nIf this monster currently has higher [HP] than the enemy monster, this attack gains <div>+2[ATK].</div> ~RECOIL~",
+      "abilityText": "If this monster has less [HP] than the enemy monster, this attack gains <b>recoil 1</b>. ~RECOIL~",
       "element": "Rock",
       "attackType": "Melee",
       "statusFlg": false,
@@ -17,11 +17,11 @@
     },
     {
       "abilityName": "Splish Splash",
-      "abilityText": "If this monster currently has <div>5[HP]</div> or more, this attack gains <div>+2[ATK].<div>",
+      "abilityText": "If this monster has <div>5[HP]</div> or less, this attack gains <div>+2[ATK].<div>",
       "element": "Water",
       "attackType": "Ranged",
       "statusFlg": false,
-      "attack": 2,
+      "attack": 1,
       "speed": 3,
       "discard": null,
       "buff": 2,
@@ -34,7 +34,7 @@
       "statusFlg": true,
       "attack": null,
       "speed": 3,
-      "discard": 1,
+      "discard": 2,
       "lastUpdated": "Thu, 26 Jan 2023 11:51:32 GMT"
     },
     {
@@ -53,7 +53,7 @@
   "buffs": [
     {
       "buffName": "Take It Easy",
-      "buffText": "<b>Heavy [B] [B].</b> \n<br><br>\nThis monster heals 2[HP]. If this monster has less than 5[HP], this monster heals 3[HP] instead. ~HEAVY~ ",
+      "buffText": "<b>Heavy [B] [B].</b> \n<br><br>\nThis monster heals 1[HP]. If this monster has three or less[HP], this monster heals 3[HP] instead. ~HEAVY~ ",
       "auraDuration": null,
       "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
     },

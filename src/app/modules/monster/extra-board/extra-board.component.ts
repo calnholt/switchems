@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MonsterComplete } from '../model/monster';
+import { Buff, MonsterComplete } from '../model/monster';
 import { TeamAura } from '../team-aura/team-aura.model';
 
 @Component({
@@ -10,11 +10,10 @@ import { TeamAura } from '../team-aura/team-aura.model';
 export class ExtraBoardComponent implements OnInit {
   @Input() monster: MonsterComplete;
 
-  stun: TeamAura = {
-    name: 'Stun',
-    text: `If you attack with a <b>faster</b> ranged [RANGED] attack, your attack gains <b>flinch</b> and destroy this.~FASTER~~FLINCH~~AURA~`,
-    duration: 4,
-    monsterName: 'Zappguin',
+  goop: Buff = {
+    buffName: 'Goop',
+    buffText: `[Q] and return this card to your opponent (it is removed from your deck).<br><br>If this card is applied as a discard, <div>[ROLL] [ARROW]</div> if 4 or greater, your active monster loses <div>1[HP].</div>`,
+    monsterName: 'Oozygoopz',
   }
 
   constructor() { }

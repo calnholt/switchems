@@ -78,9 +78,8 @@
   ],
   "monsterId": 7,
   "monsterName": "Zappguin",
-  "abilityText": "When this monster <b>switches in</b>, you gain <b>Stun</b> <div>[TA].</div>~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, you gain <b>Stun</b> <div>[TA]</div> if you do not already control one.~SWITCH~",
   "hp": 8,
-  "promiseDescription": "<b>Zappguin</b> wants nothing more than to <b>stun</b> [STATUS] and <b>flinch</b> every monster it meets.",
   "initiative": 40,
   "imageFlg": true,
   "teamAura": {

@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Gravelcrust Grip",
-      "abilityText": "Your opponent gains <b>Drain [TA], recoil 1, single use. </b><br><br>If you have no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 2}.</div> ~RECOIL~~SINGLE~",
+      "abilityText": "<b>Single use, recoil 1</b>, and our opponent gains <div><b>Drain [TA]</b>.</div> </b><br><br>If you have no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 2}.</div>~SINGLE~~RECOIL~",
       "element": "Leaf",
       "statusFlg": true,
       "speed": 2,
@@ -63,7 +63,7 @@
     },
     {
       "buffName": "Mossy Overgrowth",
-      "buffText": "<b>Heavy [B] [B]. </b><br><br>This monster gains <div>+2[DEF]</div> this turn. ~HEAVY~",
+      "buffText": "<b>Heavy.</b><br><br>This monster gains <div>+2[DEF]</div> this turn. ~HEAVY~",
       "lastUpdated": "Sat, 04 Sep 2021 12:47:52 GMT"
     },
     {
@@ -86,7 +86,7 @@
   "imageFlg": true,
   "teamAura": {
     "name": "Drain",
-    "text": "At the end of the turn, <div>[ROLL] [ARROW]</div> if 4 or greater, your opponent's active monster heals <div>1[HP]</div> and your active monster loses <div>1[HP].</div>",
+    "text": "At the end of the turn, <div>[ROLL] [ARROW]</div> if 4 or greater, the enemy monster heals <div>1[HP]</div> and your active monster loses <div>1[HP].</div>~FASTER~",
     "duration": 4,
     "isAilment": true
   },

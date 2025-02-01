@@ -45,7 +45,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             // Galvanite,
             // Galeaffy,
             Lanternshade,
-            // Oozygoopz,
+            Oozygoopz,
             // Smolderskulk,
             Sorrospine,
             Stalagrowth,

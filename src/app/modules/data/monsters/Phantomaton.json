@@ -18,7 +18,7 @@
     },
     {
       "abilityName": "Static Void",
-      "abilityText": "This monster gains +3[DEF] this turn. If this monster takes no damage this turn, add a time counter to <b>Firmware Update</b> <div>[TA].</div>",
+      "abilityText": "This monster gains +3[DEF] this turn. If this monster takes no damage this turn, add or remove a time counter from any <div<<b>team aura [TA]</b>.</div>",
       "element": "Electric",
       "statusFlg": true,
       "speed": 7,
@@ -78,15 +78,16 @@
   ],
   "monsterId": 10,
   "monsterName": "Phantomaton",
-  "startOfGame": "At the start of the game, you gain <b>Firmware Update</b> <div>[TA].</div>",
+  "startOfGame": "At the start of the game, you gain <b>Downloading...</b> <div>[TA].</div>",
   "abilityText": "When this monster <b>switches in</b>, <div>{\"stat\": \"ATK\", \"num\": 1}.</div> ~SWITCH~",
-  "hp": 9,
+  "hp": 10,
   "initiative": 55,
   "imageFlg": true,
   "teamAura": {
-    "name": "Firmware Update",
-    "text": "While this is active, you cannot apply Phantomaton buff cards as buffs.~AURA~",
-    "duration": 6
+    "name": "Downloading...",
+    "text": "You cannot apply Phantomaton buff cards as buffs.~AURA~",
+    "duration": 6,
+    "isAilment": true
   },
   "lastUpdated": "Thu, 26 Jan 2023 18:07:17 GMT"
 }
