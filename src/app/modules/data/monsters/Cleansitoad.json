@@ -53,7 +53,7 @@
     {
       "buffName": "Defensive Ward",
       "timing": "Pre-Actions",
-      "buffText": "Whenever your active monster is dealt damage from an enemy monster's attack, reduce the amount of damage taken by 1.~AURA~",
+      "buffText": "Whenever your active monster is dealt damage from an enemy monster's attack, reduce the amount of damage taken by 1.",
       "flipEventText": "You many add or remove one time counter from an active <div><b>team aura [TA]</b>.</div>",
       "auraDuration": 4,
       "lastUpdated": "Thu, 15 Jul 2021 09:17:13 GMT"

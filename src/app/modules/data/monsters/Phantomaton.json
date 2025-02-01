@@ -5,23 +5,23 @@
   "actions": [
     {
       "abilityName": "Cobolt",
-      "abilityText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains +2[ATK].</div>~EFFECTIVE~",
+      "abilityText": "Heal X[HP], where X is the number of buff slots used.",
       "element": "Death",
+      "attackType": "Ranged",
       "statusFlg": false,
-      "attack": 2,
-      "speed": 1,
-      "draw": 1,
+      "attack": 1,
+      "speed": 6,
+      "draw": 0,
       "discard": 0,
       "buff": 2,
       "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
       "abilityName": "Static Void",
-      "abilityText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains +2[ATK].</div>~EFFECTIVE~",
+      "abilityText": "This monster gains +3[DEF] this turn. If this monster takes no damage this turn, add a time counter to <b>Firmware Update</b> <div>[TA].</div>",
       "element": "Electric",
-      "statusFlg": false,
-      "attack": 2,
-      "speed": 5,
+      "statusFlg": true,
+      "speed": 7,
       "draw": 0,
       "discard": 0,
       "buff": 0,
@@ -29,58 +29,64 @@
     },
     {
       "abilityName": "Arraydicate",
-      "abilityText": "<b>Crush 2 [PQ]</b>~CRUSH~",
+      "abilityText": "<b>Flinch</b>.~FLINCH~",
       "element": "Electric",
+      "attackType": "Ranged",
       "statusFlg": false,
-      "attack": 3,
-      "speed": 3,
+      "attack": 4,
+      "speed": 4,
       "draw": 0,
-      "discard": 1,
+      "discard": 2,
       "buff": 2,
       "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     },
     {
       "abilityName": "Exception Caught",
-      "abilityText": "<b>Single use.</b><br><br>Your opponent [-] [-] [-].~SINGLE~",
+      "abilityText": "<b>Pierce 5.</b>~PIERCE~",
       "element": "Death",
+      "attackType": "Melee",
       "statusFlg": false,
-      "attack": 1,
-      "speed": 9,
+      "attack": 2,
+      "speed": 5,
       "draw": 0,
-      "discard": 2,
+      "discard": 1,
       "buff": 2,
       "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     }
   ],
   "buffs": [
     {
-      "buffName": "Power Hotfix",
-      "buffText": "If the enemy monster switched this turn, this monster gains {\"stat\": \"ATK\", \"num\": 3, \"isPositive\": true}.",
+      "buffName": "Power Up",
+      "buffText": "<b>Heavy</b>. [+] [+]. ~HEAVY~",
       "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
-      "buffName": "Protection Hotfix",
-      "buffText": "If the enemy monster switched this turn, this monster gains {\"stat\": \"DEF\", \"num\": 3, \"isPositive\": true}.",
+      "buffName": "Speed Hotfix",
+      "buffText": "<b>Heavy</b>. This attack gains <div>+5[SPD].</div> ~HEAVY~",
       "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
-      "buffName": "Refactor",
-      "buffText": "<b>Super [B] [B]. </b><br><br>Attack speeds are reversed this turn and you win all speed ties.~SUPER~",
+      "buffName": "Attack Hotfix",
+      "buffText": "<b>Heavy</b>. This attack gains <div>+3[ATK].</div> ~HEAVY~",      
       "lastUpdated": "Thu, 15 Jul 2021 08:25:53 GMT"
     },
     {
-      "buffName": "Download",
-      "buffText": "When an enemy monster switches in, that monster loses 1[HP] and discard this aura.<br><br>When this card is discarded from duration, next turn your opponent must reveal their action before you select yours. ~AURA~",
-      "auraDuration": 4,
+      "buffName": "Defense Hotfix",
+      "buffText": "<b>Heavy</b>. This attack gains <div>+3[DEF].</div> ~HEAVY~",      
       "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     }
   ],
   "monsterId": 10,
   "monsterName": "Phantomaton",
-  "abilityText": "Whenever an enemy monsters performs a switch action, this monster heals 2[HP]. ~SWITCH~",
+  "startOfGame": "At the start of the game, you gain <b>Firmware Update</b> <div>[TA].</div>",
+  "abilityText": "When this monster <b>switches in</b>, <div>{\"stat\": \"ATK\", \"num\": 1}.</div> ~SWITCH~",
   "hp": 9,
-  "promiseDescription": "Strike fear in your opponent when <b>Phantomaton</b> switches in to an advantageous matchup! Watch the enemy monster squirm when the cost of switching out is too high.",
   "initiative": 55,
   "imageFlg": true,
+  "teamAura": {
+    "name": "Firmware Update",
+    "text": "While this is active, you cannot apply Phantomaton buff cards as buffs.~AURA~",
+    "duration": 6
+  },
   "lastUpdated": "Thu, 26 Jan 2023 18:07:17 GMT"
 }

@@ -1,0 +1,84 @@
+{
+  "elements": [
+    "Death"
+  ],
+  "actions": [
+    {
+      "abilityName": "Flicker",
+      "abilityText": "If the enemy monster has an <b>ailment</b> [STATUS], <div>[Q].</div>",
+      "element": "Death",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 1,
+      "buff": 1,
+      "draw": 1,
+      "speed": 4
+    },
+    {
+      "abilityName": "Ignite",
+      "abilityText": "This attack gains <div>+1[ATK]</div> for each <div><b>ailment</b> [STATUS]</div> the enemy monster has.",
+      "element": "Fire",
+      "attackType": "Ranged",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 4,
+      "discard": 1,
+      "buff": 2
+    },
+    {
+      "abilityName": "Expose Weakness",
+      "abilityText": "This attack gains <div>+1[ATK]</div> for each <div><b>ailment</b> [STATUS]</div> the enemy monster has.",
+      "element": "Death",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "buff": 1,
+      "discard": 2,
+      "attack": 3,
+      "speed": 7
+    },
+    {
+      "abilityName": "Spreading Curse",
+      "abilityText": "<div>{\"stat\": \"DEF\", \"num\": 1}.</div><br><br>If all of this action's buff slots are used, your opponent gains <div><b>Curse</b> [TA].</div>~CURSE~",
+      "element": "Death",
+      "attackType": "Ranged",
+      "statusFlg": false,
+      "discard": 1,
+      "buff": 2,
+      "attack": 2,
+      "speed": 2
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Infusion",
+      "buffText": "If this is paired with another buff, your opponent gains <div><b>Curse</b> [TA]</div>.~CURSE~",
+      "auraDuration": null
+    },
+    {
+      "buffName": "Shade",
+      "buffText": "This monster heals 1[HP].",
+      "auraDuration": null
+    },
+    {
+      "buffName": "Chase",
+      "buffText": "This attack gains +2[SPD].",
+      "auraDuration": null
+    },
+    {
+      "buffName": "Fuel Up",
+      "buffText": "{\"stat\": \"ATK\", \"num\": 1}",
+      "auraDuration": null
+    }
+  ],
+  "hp": 10,
+  "monsterName": "Lanternshade",
+  "initiative": 65,
+  "imageFlg": true,
+  "teamAura": {
+    "name": "Curse",
+    "text": "At the end of the turn, [ROLL] [ARROW]</div> if 5 or greater, your active monster loses <div>1[HP].</div>~AURA~",
+    "duration": 5,
+    "isAilment": true
+  },
+  "abilityText": "When this monster <b>switches in</b>, the opponent gains <b>Curse</b> [TA].~SWITCH~"
+}

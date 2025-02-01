@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RulebookMonsterComponent implements OnInit {
   @Input() monster: MonsterComplete;
-  numbers = [1, 2, 3, 4, 5, 6];
+  numbers = [1, 2, 3];
   constructor() { }
 
   ngOnInit() {

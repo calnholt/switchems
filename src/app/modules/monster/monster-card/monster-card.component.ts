@@ -10,8 +10,7 @@ import { ELEMENTS_COLOR, ELEMENTS_GRAY, HP, IMAGES, SYMBOLS } from './../../../c
   styleUrls: ['./monster-card.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class MonsterCardComponent implements AfterViewChecked {
-  @ViewChild('ABILITY', {static: true}) public ability: ElementRef<any>;
+export class MonsterCardComponent {
   @Input() monster: MonsterComplete;
   ELEMENT_LIST = ELEMENTS;
 
@@ -28,10 +27,6 @@ export class MonsterCardComponent implements AfterViewChecked {
   constructor() {
   }
 
-  ngAfterViewChecked() {
-    this.setAbilityTextHeight();
-  }
-
   getElementColorImg(element: string): Path {
     return `${ELEMENTS_COLOR}${element.toLocaleLowerCase()}.png`;
   }
@@ -44,8 +39,8 @@ export class MonsterCardComponent implements AfterViewChecked {
     return `${HP}${this.monster.hp}.png`;
   }
 
-  getAbilityText(): string {
-    return getAbilityText(this.monster.abilityText, this.TERM_CSS, this.ABILITY_IMG_CSS);
+  getAbilityText(text: string): string {
+    return getAbilityText(text, this.TERM_CSS, this.ABILITY_IMG_CSS);
   }
 
   getMonsterImage(): string {
@@ -57,12 +52,6 @@ export class MonsterCardComponent implements AfterViewChecked {
     let out = '';
     elems.forEach(e => out += e.toLowerCase());
     return out;
-  }
-
-  setAbilityTextHeight(): void {
-    // full height = 255px
-    const height = this.ability.nativeElement.offsetHeight;
-    this.ability.nativeElement.style.top = `${206 - height}px`;
   }
 
 }

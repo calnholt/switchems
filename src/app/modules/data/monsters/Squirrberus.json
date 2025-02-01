@@ -75,7 +75,7 @@
     {
       "buffName": "Winter is Coming",
       "timing": "Post Actions",
-      "buffText": "<b>Super [B] [B], exhaust</b>. <br><br>If you do not have an <b>acorn [ACORN]</b>, select any one from the supply, gain its effect at the <b>acorn's [ACORN]</b> specified buff timing, and then remove it from the game.~SUPER~~EXHAUST~",
+      "buffText": "<b>Heavy [B] [B], exhaust</b>. <br><br>If you do not have an <b>acorn [ACORN]</b>, select any one from the supply, gain its effect at the <b>acorn's [ACORN]</b> specified buff timing, and then remove it from the game.~HEAVY~~EXHAUST~",
       "flipEventText": "If you do not have an <b>acorn [ACORN],</b> gain one randomly.",
       "lastUpdated": "Thu, 15 Jul 2021 08:29:45 GMT"
     }

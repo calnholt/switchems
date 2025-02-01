@@ -1,0 +1,75 @@
+{
+  "elements": [
+    "Electric",
+    "Leaf"
+  ],
+  "actions": [
+    {
+      "abilityName": "Shock",
+      "abilityText": "",
+      "element": "Electric",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 5,
+      "buff": 2
+    },
+    {
+      "abilityName": "Charge Up",
+      "abilityText": "{\"stat\": \"ATK\", \"num\": 2}",
+      "element": "Electric",
+      "statusFlg": true,
+      "speed": 8,
+      "draw": 1
+    },
+    {
+      "abilityName": "Leaf Burst",
+      "abilityText": "",
+      "element": "Leaf",
+      "attackType": "Ranged",
+      "statusFlg": false,
+      "attack": 5,
+      "speed": 3,
+      "discard": 2,
+      "buff": 2
+    },
+    {
+      "abilityName": "Gnaw",
+      "abilityText": "If this attack is <b>faster</b>, heal <div>2[HP].</div>~FASTER~",
+      "element": "Leaf",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 3,
+      "speed": 4,
+      "discard": 1,
+      "buff": 1
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Minor Blessing",
+      "buffText": "This attack gains +1[ATK].",
+      "auraDuration": null
+    },
+    {
+      "buffName": "Major Blessing",
+      "buffText": "If this attack is <div>melee [MELEE],</div> this attack gains <div>+2[ATK].</div>",
+      "auraDuration": null
+    },
+    {
+      "buffName": "Minor Shield",
+      "buffText": "This monster gains +1[DEF].",
+      "auraDuration": null
+    },
+    {
+      "buffName": "Major Shield",
+      "buffText": "If this attack is <div>ranged [RANGED],</div> this attack gains <div>+2[DEF].</div>",
+      "auraDuration": null
+    }
+  ],
+  "hp": 8,
+  "monsterName": "Deusvolt",
+  "initiative": 55,
+  "abilityText": "When this monster <b>switches in</b>, {\"stat\": \"SPD\", \"num\": 2}.~SWITCH~",
+  "imageFlg": true
+}

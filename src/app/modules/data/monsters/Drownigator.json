@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Fatigue",
-      "abilityText": "<b>Fatigue [STATUS]</b>, {\"stat\": \"DEF\", \"num\": 1}. ~FATIGUE~",
+      "abilityText": "Your opponent gains <b>Fatigue</b> [TA] if they don't already own one.<br><br>{\"stat\": \"DEF\", \"num\": 1}.",
       "element": "Death",
       "statusFlg": true,
       "speed": 8,
@@ -17,8 +17,9 @@
     },
     {
       "abilityName": "Expunge",
-      "abilityText": "<b>Single use. </b><br><br>If the enemy monster has a [STATUS], this attack gains <div>[Q] [Q].</div>~SINGLE~~STATUS~",
+      "abilityText": "<b>Single use. </b><br><br>If your opponent has an <div><b>ailment</b> [STATUS],</div> this attack gains <div>[Q] [Q].</div>~SINGLE~",
       "element": "Death",
+      "attackType": "Ranged",
       "statusFlg": false,
       "attack": 4,
       "speed": 8,
@@ -31,6 +32,7 @@
       "abilityName": "Swamped",
       "abilityText": "[Q]. <br><br>{\"stat\": \"SPD\", \"num\": 2}",
       "element": "Death",
+      "attackType": "Melee",
       "statusFlg": false,
       "attack": 3,
       "speed": 2,
@@ -41,8 +43,9 @@
     },
     {
       "abilityName": "Surge",
-      "abilityText": "<b>Spammable</b>. <br><br>If this attack is <b>faster</b>,  {\"stat\": \"ATK\", \"num\": 1}. ~SPAM~~FASTER~",
+      "abilityText": "<b>Spammable</b>. <br><br>If this attack is <b>faster</b>, <div>{\"stat\": \"ATK\", \"num\": 1}.</div>~SPAM~~FASTER~",
       "element": "Water",
+      "attackType": "Ranged",
       "statusFlg": false,
       "attack": 1,
       "speed": 5,
@@ -55,7 +58,7 @@
   "buffs": [
     {
       "buffName": "Abrupt Weakness",
-      "buffText": "<b> Crush 1</b>, then gain one [PQ] of the type that was crushed. ~CRUSH~",
+      "buffText": "<b>Crush 1</b>, then gain one [PQ] of the type that was crushed. ~CRUSH~",
       "lastUpdated": "Tue, 24 Jan 2023 13:20:19 GMT"
     },
     {
@@ -70,7 +73,7 @@
     },
     {
       "buffName": "Tremble",
-      "buffText": "<b>Super [B] [B], Recoil 1[ATK].  </b><br><br><div>{\"stat\": \"SPD\", \"num\": 2}</div> and <div>{\"stat\": \"ATK\", \"num\": 2}.</div>~SUPER~ ~RECOIL~",
+      "buffText": "<b>Heavy, Recoil 1. </b><br><br><div>{\"stat\": \"SPD\", \"num\": 2}</div> and <div>{\"stat\": \"ATK\", \"num\": 2}.</div>~HEAVY~~RECOIL~",
       "lastUpdated": "Tue, 24 Jan 2023 13:29:13 GMT"
     }
   ],
@@ -78,8 +81,13 @@
   "monsterName": "Drownigator",
   "abilityText": "When this monster <b>switches in</b>, <div>[+].</div>~SWITCH~",
   "hp": 8,
-  "promiseDescription": "<b>Drownigator</b> is a total nuisance with debuffs.",
   "initiative": 70,
   "imageFlg": true,
+  "teamAura": {
+    "name": "Fatigue",
+    "text": "When your active monster attacks, the attack gains <span><b>recoil X[ATK]</b></span>, where X is the number of buff slots used.~RECOIL~~AURA~",
+    "duration": 3,
+    "isAilment": true
+  },
   "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"
 }

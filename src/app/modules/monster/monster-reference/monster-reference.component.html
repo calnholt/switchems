@@ -3,10 +3,6 @@
     <div class="top-container">
       <div class="name">{{monster.monsterName}}</div>
       <div>
-          <ng-container *ngFor="let element of monster.elements" class="element">
-            <img *ngIf="monsterService.hasElement(monster, element)" class="element-icon"
-              src="{{imageService.getElementImg(element)}}">
-          </ng-container>
         <img src="{{imageService.getHpImg(monster.hp)}}">
       </div>
     </div>
@@ -30,8 +26,8 @@
           <span>{{action.auraDuration}}</span>
           <img class="ref-icon" src="{{imageService.getImg('aura')}}">
         </span>
-        <span>
-          <img class="ref-icon" src="{{imageService.getElementImg(action.element)}}">
+        <span *ngIf="action.attackType">
+          <img class="ref-icon" src="{{imageService.getImg(action.attackType)}}">
         </span>
         <span *ngIf="action.speed">
           <span>{{action.speed}}</span>

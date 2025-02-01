@@ -51,7 +51,7 @@
     {
       "buffName": "Catalyst",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super [B] [B], Exhaust</b><br>Remove all [NQ] from this monster and this attack gains <div>+1[ATK]</div> for each [NQ] removed this way.~SUPER~~EXHAUST~",
+      "buffText": "<b>Heavy [B] [B], Exhaust</b><br>Remove all [NQ] from this monster and this attack gains <div>+1[ATK]</div> for each [NQ] removed this way.~HEAVY~~EXHAUST~",
       "flipEventText": "This monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}, </div> [FLIP] [FLIP].",
       "lastUpdated": "Thu, 01 Apr 2021 06:41:03 GMT"
     },
@@ -65,7 +65,7 @@
     {
       "buffName": "Amped Up",
       "timing": "With Attack",
-      "buffText": "<b>Super [B] [B]</b><br>If your active monster switched in last turn, this attack gains <div>+3[ATK]</div> and <div>+3[SPD].</div>~SUPER~",
+      "buffText": "<b>Heavy [B] [B]</b><br>If your active monster switched in last turn, this attack gains <div>+3[ATK]</div> and <div>+3[SPD].</div>~HEAVY~",
       "flipEventText": "This monster gains <div>{\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}</div> and this attack gains <div>+2[ATK].</div>",
       "lastUpdated": "Thu, 01 Apr 2021 06:41:03 GMT"
     },

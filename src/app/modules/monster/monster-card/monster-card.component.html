@@ -2,9 +2,6 @@
   <div class="card-container {{getBackgroundImageCss()}}">
     <div class="name-container">
       <div class="name">{{monster.monsterName}}</div>
-      <div class="elements">
-        <img *ngFor="let element of monster.elements" class="element-icon" src="{{getElementColorImg(element)}}">
-      </div>
     </div>
     <div class="monster-image">
       <img class="{{monster.monsterName.toLowerCase()}}" *ngIf ="monster.imageFlg" src="{{getMonsterImage()}}">
@@ -21,32 +18,8 @@
     </div>
     <div class="ability-container">
       <div class="ability-text-container" #ABILITY>
-        <span [innerHTML]="getAbilityText()" class="ability-text"></span>
-      </div>
-    </div>
-    <div *ngIf="monster.elements.length" class="element-info-container">
-      <div class="info-container">
-        <div class="type">
-          <img src="{{superEffective}}">
-        </div>
-        <div class="elements">
-          <ng-container *ngFor="let effectiveness of monster.getEffectivenessArray(); index as i" class="elements">
-            <img *ngIf="effectiveness == -1" class="element-icon" src="{{getElementColorImg(ELEMENT_LIST[i])}}">
-          </ng-container>
-        </div>
-      </div>
-    </div>
-    <div *ngIf="monster.elements.length" class="element-info-container right">
-      <div class="info-container">
-        <div class="elements">
-          <ng-container *ngFor="let effectiveness of monster.getEffectivenessArray(); index as i">
-            <img *ngIf="effectiveness >= 1" class="element-icon" src="{{getElementColorImg(ELEMENT_LIST[i])}}">
-          </ng-container>
-        </div>
-        <div class="type">
-          <div class="defense-value">{{monster.getSwitchDefenseValue()}}</div>
-          <img src="{{switchDefense}}">
-        </div>
+        <span *ngIf="monster.startOfGame" [innerHTML]="getAbilityText(monster.startOfGame)" class="ability-text"></span>
+        <span [innerHTML]="getAbilityText(monster.abilityText)" class="ability-text"></span>
       </div>
     </div>
   </div>

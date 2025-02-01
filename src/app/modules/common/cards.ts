@@ -19,13 +19,26 @@ export const getAbilityText = (text: string, termCss: Css, imageCss: Css): strin
     return null;
   }
   let innerHtml = convertInnerTextJson(text);
+  const terms: Term[] = [];
+  // get order of terms and remove the codes from the text
   TERM_CODES.forEach((term: Term) => {
     while (innerHtml.includes(term.key)) {
-        const html = `<br><span class="${termCss}">(${convertInnerTextJson(term.value)})</span>`;
-        innerHtml = innerHtml.replace(term.key, html);
+      terms.push(term);
+      innerHtml = innerHtml.replace(term.key, '');
     }
   });
-  IMAGE_CODES.forEach((image: Image) => {
+  // add the terms to the full text in the correct order grouped together
+  if (terms.length) {
+    let termsText = '<div class="terms-container">';
+    terms
+      .sort((a, b) => text.indexOf(a.key) > text.indexOf(b.key) ? 1 : -1)
+      .forEach((term: Term) => {
+        termsText += `<span class="${termCss}">${convertInnerTextJson(term.value)}</span>`;
+      });
+    termsText += '</div>';
+    innerHtml += termsText;
+  }
+  IMAGE_CODES.sort((a ,b) => a.key.localeCompare(b.key)).forEach((image: Image) => {
     while (innerHtml.includes(image.key)) {
         const html = `<img src="${image.path}" class="${imageCss} ${getImageClass(image.key)}">`;
         innerHtml = innerHtml.replace(image.key, html);

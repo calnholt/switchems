@@ -97,7 +97,10 @@ export class RulebookService {
       {
         ol: [
           {
-            text: 'Place your stat cube board in front of the player shield.',
+            text: 'Place your action board behind your player shield.',
+          },
+          {
+            text: 'Place your stat cube board in front of your player shield.',
           },
           {
             text: 'After <a href="choosing_your_team">choosing your team</a>, form your deck by collecting the buff cards associated with your team of monsters (there will be four for each monster) for a total of 12 cards. Shuffle your deck and place beside you.',
@@ -181,19 +184,10 @@ export class RulebookService {
               text: 'Monster name',
             },
             {
-              text: 'Elements of the monster',
-            },
-            {
               text: 'HP (hit points) and Initiative (determines when abilities resolve and breaks speed ties)',
             },
             {
-              text: 'Monster ability name and ability text',
-            },
-            {
-              text: 'Elemental weaknesses (attacks of these types against this monster result in your opponent rolling a [Q].)',
-            },
-            {
-              text: 'Elemental resistances (gains defense against attacks of the elements when switching in)',
+              text: 'Monster ability text',
             },
           ]
         },
@@ -214,16 +208,13 @@ export class RulebookService {
               text: 'Denotes the type of monster action – [ATK] | [SPECIAL]',
             },
             {
-              text: 'Denotes the element of this action – [F] | [W] | [R] | [L] | [E] | [S]',
+              text: 'Denotes whether an attack is melee [MELEE] or ranged [RANGED]',
             },
             {
               text: 'Denotes the speed [SPD] of this action',
             },
             {
               text: 'Monster Action ability (not all monster actions have an ability)',
-            },
-            {
-              text: 'Elemental bonus, granting one additional [Q] if the enemy monster has one or more of these elements',
             },
             {
               text: 'Action number, so actions are always laid out in the same configuration',
@@ -280,9 +271,6 @@ export class RulebookService {
         {
           text: '<h1>Team Auras[TA]</h1>Some buffs are also Team Auras, as denoted by the [TA] symbol at the top right of the card, with a number beside it, called its duration. When a Team Aura buff is played. Team Auras grant your monsters additional passive effects for several turns. During the <a href="end_phase">end phase</a>, add one time counter to your active Team Aura. If the number of time counters on the card equals its duration, <a href="exhaust">exhaust</a> it.'
         },
-        {
-          text: '<b>NOTE: </b>You can only have one active Team Aura at any given time. If you play a Team Aura while another is active, <a href="exhaust">exhaust</a> the active one and replace it with the new one.'
-        }
       ]
     },
     {
@@ -351,15 +339,15 @@ export class RulebookService {
           text: '<b>NOTE:</b> You can always ask your opponent how many cards they have in their hand.'
         },
         {
-          text: '<h1>Switch Actions[SL]</h1>Switch actions enable you to change your active monster, replacing your active monster with the monster to your right or left (as denoted by the arrow on the action space). Switch actions require you to discard two cards from your hand, as denoted by [-] [-]. Place the discarded cards face-up on the discard [-] section of your player board. Additionally, perform the following:',
+          text: '<h1>Switch Actions[SL]</h1>Switch actions enable you to change your active monster, replacing your active monster with the monster to your right or left (as denoted by the arrow on the action space). Switch actions require you to discard two cards from your hand, as denoted by [-] [-]. Place the discarded cards face-up on the discard [-] section of your player board. Additionally, select whether you are switch defending against a melee [MELEE] or ranged [RANGED] attack. Then, perform the following:',
         },
         {
             ul: [
                 {
-                  text: 'Choose <b>one</b>: either the monster that is switching out heals 2[HP] OR remove all <a href="status_conditions">status condition</a> [STATUS] from the monster that is switching out.'
+                  text: 'The monster that is switching out heals 2[HP].'
                 },
                 {
-                  text: 'The monster that is switching in gains +X[DEF] this turn against elements it is resistant [RESIST] to. The defense value and resistant elements are denoted on the <a href="monster_card">monster card</a>.'
+                  text: 'The monster that is switching in gains +3[DEF] this turn against attacks of the selected type (melee [MELEE] or ranged [RANGED]).'
                 }
               ]
         },
@@ -376,18 +364,18 @@ export class RulebookService {
           text: '<h1>Standard Actions</h1>There are two different standard actions. The two standard actions are:',
           ul: [
             {
-              text: '[+] [+] [HP]',
+              text: '[+] [HP]',
               ul: [
                 {
-                  text: 'When you select this standard action, you draw two card and heal 1[HP] as your action for the turn.',
+                  text: 'When you select this standard action, you draw one card and heal 1[HP] as your action for the turn.',
                 }
               ]
             },
             {
-              text: '[+] [Q] [Q] [Q]',
+              text: '[Q] [Q] [Q]',
               ul: [
                 {
-                  text: 'When you select this standard action, draw one card and roll three [Q].'
+                  text: 'When you select this standard action, roll three [Q].'
                 }
               ]
             }
@@ -435,22 +423,16 @@ export class RulebookService {
           text: 'If both players reveal monster actions, the faster action goes first (the action with the greater speed [SPD] value). When both actions have the same speed, the monster with the higher <a href="monster_card">initiative</a> goes first.'
         },
         {
-          text: '<h1>Monster Actions - Attack[ATK]</h1>A monster action is an attack if it has the attack [ATK] icon. The number beside the [ATK] icon is how much damage the attack deals. When resolving a monster attack:',
-          ul:
-           [
-            {
-              text: 'Resolve the attack’s ability (if any)',
-            },
-            {
-              text: 'If the enemy monster is weak to the attack’s element, roll one additional [Q]',
-            }
-          ]
+          text: '<h1>Monster Actions - Attack[ATK]</h1>A monster action is an attack if it has the attack [ATK] icon. The number beside the [ATK] icon is how much damage the attack deals then resolve the attack’s ability (if any).',
         },
         {
           text: 'The enemy monster then takes the resulting damage by decreasing its [HP] by that much. If the enemy monster has [DEF], reduce the resulting damage by the enemy monster\'s total [DEF]. Negative damage is 0.'
         },
         {
           text: '<h1>Monster Actions - Special[SPECIAL]</h1>A monster action is special if it has the special [SPECIAL] symbol. Special [SPECIAL] actions behave just like attacks except they do not deal damage. These actions usually make your monster stronger or make your opponent\'s monster weaker.',
+        },
+        {
+          text: '<b>NOTE:</b> You cannot apply stat cubes to special actions.'
         },
         {
           text: '<h1>Disabled Actions[DISABLE]</h1>A monster action becomes disabled when it is selected. When a monster action is disabled, place a disabled token on the [DISABLE] space on the action. Actions that are disabled cannot be selected. A disabled monster action becomes enabled after performing your next action (Switch Action, Monster Action, or Standard Action).',
@@ -463,7 +445,7 @@ export class RulebookService {
       rulebookImage: 'Stat-Cube',
       blocks: [
         {
-          text: 'Some abilities have monsters gaining stat cubes. Stat cubes can be used to increase your active monster’s stats - [ATK], [SPD], [DEF]. Whenever a player gains stat cubes, place them on their corresponding space on the stat cube board. Each stat type has a maximum number of cubes it can hold, as displayed on the space. When a player chooses to apply stat cubes during the selection phase, move all of the selected stat type\'s cubes to the USING side of the board, to denote that these are being applied to the attack.',
+          text: 'Some abilities have monsters gaining stat cubes. Stat cubes can be used to increase your active monster’s stats for a turn - [ATK], [SPD], [DEF]. Whenever a player gains stat cubes, place them on their corresponding space on the stat cube board. Each stat type has a maximum number of cubes it can hold, as displayed on the space. When a player chooses to apply stat cubes during the selection phase, move all of the selected stat type\'s cubes to the USING side of the board, to denote that these are being applied to the attack.',
         },
       ]
     },
@@ -493,49 +475,6 @@ export class RulebookService {
         },
         {
           text: 'After this has been done, a new turn begins with the <a href="selection_phase">selection phase</a>.'
-        }
-      ]
-    },
-    {
-      title: 'Status Conditions[STATUS]',
-      id: 'status_conditions',
-      blocks: [
-        {
-          text: 'Many monsters have abilities that apply status conditions [STATUS]. All [STATUS] remain on monsters for the duration of the game unless removed by an effect or chosen to be removed on <a href="selection_phase">switch</a>. Here is a list of all status conditions:',
-          ul: [
-            {
-              text: `<b>Fatigue</b>`,
-              ul: [
-                {
-                  text: `${this.getTerm('~FATIGUE~')}`,
-                }
-              ]
-            },
-            {
-              text: `<b>Wound</b>`,
-              ul: [
-                {
-                  text: `${this.getTerm('~WOUND~')}`,
-                }
-              ]
-            },
-            {
-              text: `<b>Drain</b>`,
-              ul: [
-                {
-                  text: `${this.getTerm('~DRAIN~')}`,
-                }
-              ]
-            },
-            {
-              text: '<b>Stun</b>',
-              ul: [
-                {
-                  text: `${this.getTerm('~STUN~')}`,
-                }
-              ]
-            },
-          ]
         }
       ]
     },

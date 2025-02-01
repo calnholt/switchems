@@ -53,8 +53,8 @@ export class PnpComponent implements OnInit {
         }
       });
     });
-    // allCards.push({ isActionBoard: true });
-    // allCards.push({ isActionBoard: true });
+    allCards.push({ isActionBoard: true });
+    allCards.push({ isActionBoard: true });
     // allCards.push({ isReferenceCard: true });
     // allCards.push({ isReferenceCard: true });
     // allCards.push({ isSwitchReferenceCard: true });

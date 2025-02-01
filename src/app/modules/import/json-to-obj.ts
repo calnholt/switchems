@@ -15,7 +15,11 @@ import { default as Oozygoopz } from '../data/monsters/Oozygoopz.json';
 import { default as Galvanite } from '../data/monsters/Galvanite.json';
 import { default as Squirrberus } from '../data/monsters/Squirrberus.json';
 import { default as Ashdash } from '../data/monsters/Ashdash.json';
-import { default as Willard } from '../data/monsters/Willard.json';
+import { default as Whailstrom } from '../data/monsters/Whailstrom.json';
+import { default as Deusvolt } from '../data/monsters/Deusvolt.json';
+import { default as Volcanoggin } from '../data/monsters/Volcanoggin.json';
+import { default as Lanternshade } from '../data/monsters/Lanternshade.json';
+import { default as Sorrospine } from '../data/monsters/Sorrospine.json';
 import { ElemType, ELEMENTS } from './../../types/dataTypes';
 import { MonsterComplete, Buff, Action } from '../monster/model/monster';
 
@@ -33,20 +37,24 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             // Ashdash,
             // Boltblebee,
             Chargroar,
+            Deusvolt,
             // Cleansitoad,
             // Cragadilo,
             Drownigator,
-            Flexferno,
+            // Flexferno,
             // Galvanite,
-            Galeaffy,
+            // Galeaffy,
+            Lanternshade,
             // Oozygoopz,
             // Smolderskulk,
+            Sorrospine,
             Stalagrowth,
             // Steamie,
             // Squirrberus,
             Phantomaton,
+            Volcanoggin,
             Vulturock,
-            Willard,
+            Whailstrom,
             Zappguin,
         ];
     }
@@ -63,6 +71,7 @@ export const convertFromJSON = (all: Array<any>, keepGUI?: boolean): Array<Monst
         let MONSTER_PROPERTIES = [
             'monsterId',
             'monsterName',
+            'startOfGame',
             'abilityText',
             'hp',
             'promiseDescription',
@@ -70,6 +79,7 @@ export const convertFromJSON = (all: Array<any>, keepGUI?: boolean): Array<Monst
             'initiative',
             'imageFlg',
             'lastUpdated',
+            'teamAura',
         ];
         if (keepGUI) {
             MONSTER_PROPERTIES = MONSTER_PROPERTIES.concat(
@@ -87,6 +97,7 @@ export const convertFromJSON = (all: Array<any>, keepGUI?: boolean): Array<Monst
             'abilityName',
             'abilityText',
             'attack',
+            'attackType',
             'speed',
             'draw',
             'discard',
@@ -132,6 +143,9 @@ export const convertFromJSON = (all: Array<any>, keepGUI?: boolean): Array<Monst
             if (a.monsterName < b.monsterName) {return -1; }
             return 0;
         });
+        if (monster.teamAura) {
+            monster.teamAura.monsterName = monster.monsterName;
+        }
         out.push(monster);
     });
     return out;

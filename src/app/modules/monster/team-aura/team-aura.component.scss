@@ -1,0 +1,126 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#team-aura{
+    .card-container{
+        position: relative;
+        border: rgb(216, 216, 216) 2px solid;
+        border-radius: 11px;
+        height: $card-height;
+        width: $card-width;
+        background-color: white;
+        z-index: 1;
+        background-size: cover;
+        &.death {
+            background-image: url("~/assets/images/backgrounds/death.png");
+        }
+        &.deathrock {
+            background-image: url("~/assets/images/backgrounds/deathrock.png");
+        }
+        &.deathwater {
+            background-image: url("~/assets/images/backgrounds/deathwater.png");
+        }
+        &.deathfire {
+            background-image: url("~/assets/images/backgrounds/deathfire.png");
+        }
+        &.electric {
+            background-image: url("~/assets/images/backgrounds/electric.png");
+        }
+        &.electricfire {
+            background-image: url("~/assets/images/backgrounds/electricfire.png");
+        }
+        &.electricleaf {
+            background-image: url("~/assets/images/backgrounds/electricleaf.png");
+        }
+        &.fire {
+            background-image: url("~/assets/images/backgrounds/fire.png");
+        }
+        &.fireleaf {
+            background-image: url("~/assets/images/backgrounds/fireleaf.png");
+        }
+        &.firerock {
+            background-image: url("~/assets/images/backgrounds/firerock.png");
+        }
+        &.leaf {
+            background-image: url("~/assets/images/backgrounds/leaf.png");
+        }
+        &.leafrock {
+            background-image: url("~/assets/images/backgrounds/leafrock.png");
+        }
+        &.leafwater {
+            background-image: url("~/assets/images/backgrounds/leafwater.png");
+        }
+        &.rock {
+            background-image: url("~/assets/images/backgrounds/rock.png");
+        }
+        &.water {
+            background-image: url("~/assets/images/backgrounds/water.png");
+        }
+        .team-aura-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            :nth-child(1) {
+                font-family: $header-font;
+                font-size: 38px;
+            }
+            img {
+                max-height: 26px;
+            }
+        }
+        .name{
+            color: white;
+            background: black;
+            padding: 5px;
+            border-radius: 5px 5px 0px 0px;
+            margin: 5px 5px 0px 5px;
+            font-family: $header-font;
+            font-size: 27px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            min-height: 20px;
+            display: flex;
+            justify-content: center;
+            img {
+                height: 22px;
+                filter: invert(100%);
+                margin-left: 10px;
+            }
+        }
+        .text-container{
+            padding: 0px 10px;
+            &.ability {
+                border: 2px solid black;
+                margin: 0px 5px;
+                border-radius: 0px 0px 5px 5px;
+                border-top: unset;
+                background: #f0f0f0bd;
+                padding: 5px;
+
+            }
+            .ta-text{
+                font-family: $text-font;
+                font-size: 12px;
+                letter-spacing: 0.02em;
+                display: inline-block;
+                line-height: 12px;
+                width: 100%;
+                margin: 2px;
+                line-height: 16px;
+                div {
+                    display: inline-block;
+                }
+            }
+        }
+        .bottom-container {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            img {
+                padding: 3px;
+                height: 75px;
+            }
+        }
+    }
+}

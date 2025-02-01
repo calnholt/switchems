@@ -106,8 +106,6 @@
             }
         }
         .name-container{
-            border-radius: 6px;
-            margin: 5px;
             display: flex;
             justify-content: space-between;
             height: 28px;
@@ -117,15 +115,13 @@
             .name{
                 font-family: $header-font;
                 font-size: 26px;
-                text-align: left;
+                justify-content: center;
                 letter-spacing: 0.02em;
-                text-align: center;
                 color: white;
                 display: flex;
                 align-items: center;
                 background-color: black;
                 width: 100%;
-                border-radius: 4px 0px 0px 4px;
             }
             .elements{
                 background: #f0f0f0bd;
@@ -152,6 +148,7 @@
             border: #d8d8d8 2px solid;
             border-left: unset;
             position: relative;
+            margin-top: 20px;
             .stats {
                 .hp-container {
                     display: flex;
@@ -173,28 +170,28 @@
             justify-content: center;
             img {
                 position: absolute;
-                max-height: 200px;
+                max-height: 220px;
+                margin-top: 10px;
             }
-            .oozygoopz {
-                max-height: 120px;
-                margin-top: 25px;
-            }
-            .drownigator {
-                max-height: 236px;
-                top: -12px;
-            }
-            .vulturock {
-                max-height: 236px;
-                top: -12px;
-            }
-            .flexferno {
-                max-height: 236px;
-                top: -12px;
-            }
-            .willard {
-                max-height: 134px;
-                top: 27px;
-            }
+            // .oozygoopz {
+            //     max-height: 120px;
+            //     margin-top: 25px;
+            // }
+            // .drownigator {
+            //     max-height: 236px;
+            //     top: -12px;
+            // }
+            // .vulturock {
+            //     max-height: 236px;
+            //     top: -12px;
+            // }
+            // .flexferno {
+            //     max-height: 236px;
+            // }
+            // .whailstrom {
+            //     max-height: 134px;
+            //     top: 27px;
+            // }
         }
         .ability-container{
             .ability-name-container{
@@ -219,14 +216,14 @@
                 }
             }
             .ability-text-container{
-                border: 2px #d8d8d8 solid;
-                border-right: unset;
-                border-left: unset;
+                border-top: 2px #d8d8d8 solid;
                 text-align: left !important;
-                position: relative;
-                top: 145px;
+                bottom: 0px;
+                position: absolute;
                 display: flex;
+                flex-direction: column;
                 background-color: #f0f0f0bd;
+                width: 100%;
                 .ability-text{
                     font-family: $text-font;
                     font-size: 12px;

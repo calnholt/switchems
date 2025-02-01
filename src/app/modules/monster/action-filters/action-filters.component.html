@@ -42,6 +42,15 @@
   <div class="col-12 form-element">
     <dropdown
       style="width:inherit;"
+      [label]="'Attack Type'"
+      [model]="action"
+      [property]="'attackType'"
+      [options]="attackTypeList">
+    </dropdown>
+  </div>
+  <div class="col-12 form-element">
+    <dropdown
+      style="width:inherit;"
       [label]="'Element'"
       [model]="action"
       [property]="'element'"

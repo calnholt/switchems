@@ -65,7 +65,7 @@
     {
       "buffName": "Forced Aggresion",
       "timing": "Pre-Actions",
-      "buffText": "<b>Super</b><br>If this attack is <b>faster</b>, this attack becomes <b>slower</b>, gains <b>pierce</b> and <div>+2[ATK]</div>, and this card is returned to your hand at the end of your turn.~SUPER~~FASTER~~PIERCE~",
+      "buffText": "<b>Heavy</b><br>If this attack is <b>faster</b>, this attack becomes <b>slower</b>, gains <b>pierce</b> and <div>+2[ATK]</div>, and this card is returned to your hand at the end of your turn.~HEAVY~~FASTER~~PIERCE~",
       "flipEventText": "Your active monster heals <div>1[HP]</div>",
       "lastUpdated": "Sat, 21 Nov 2020 21:09:45 GMT"
     },

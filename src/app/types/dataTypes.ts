@@ -3,6 +3,9 @@ import { Term, TypeChart, Image } from './../modules/data/data';
 export const ELEMENTS = [`Fire`, `Water`, `Rock`, `Leaf`, `Electric`, `Death`] as const;
 export type ElemType = typeof ELEMENTS[number];
 
+export const ATTACK_TYPES = [`Melee`, `Ranged`] as const;
+export type AttackType = typeof ATTACK_TYPES[number];
+
 export const BUFF_TIMINGS = [`Pre-Actions`, `With Attack`, `Post Actions`];
 export type BuffTiming = typeof BUFF_TIMINGS[number];
 
@@ -36,30 +39,24 @@ export const MODIFIER_OPTIONS_NEG = [0, -1, -2, -3, -4, -5, `X`];
 export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
-export const TERM_KEYS = [`~WOUND~`, `~FLINCH~`, `~DRAIN~`, `~FATIGUE~`,
-    `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~SUPER~`, `~FASTER~`, `~SLOWER~`, 
+export const TERM_KEYS = [`~WOUND~`, `~FLINCH~`, `~DRAIN~`, `~FATIGUE~`, `~CURSE~`,
+    `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~HEAVY~`, `~FASTER~`, `~SLOWER~`, 
     `~GOOP~`, `~EXHAUST~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`, `~BELONGS~`, `~SPAM~`, `~AURA~`, `~STRENGTHEN~`, `~FRAIL~`, '~CAPTURE~', '~CRUSH~'] as const;
 export type TermCode = typeof TERM_KEYS[number];
 const termCodes = [
     new Term('Belongs', `~BELONGS~`, `A buff card <b>belongs</b> to a monster if the monster name on the bottom of the buff card matches.`),
-    new Term('Drain', `~DRAIN~`, `At the end of the turn, monsters with <b>drain</b> [STATUS] suffer <span>1[ATK]</span> and your active monster heals <span>1[HP].</span>`),
     new Term('Weak', `~EFFECTIVE~`, `Monsters are <b>weak</b> to elements in the [WEAK] section of their monster card.`),
-    new Term('Exhaust', `~EXHAUST~`, `Cards with <b>exhaust</b> are removed from the game after they are resolved. Put a blank into your discard.`),
     new Term('Faster', `~FASTER~`, `This action is <b>faster</b> if your opponent selects a standard action, or if both players select a monster action and yours resolves first.`),
-    new Term('Fatigue', `~FATIGUE~`, `Whenever a monster with <b>fatigue</b> [STATUS] attacks, the attack gains <span><b>recoil X[ATK]</b></span>, where X is the number of buff slots used.`),
-    new Term('Flinch', `~FLINCH~`, `Actions with <b>flinch</b> prevent the enemy monster's attack action if this action is <b>faster.</b>`),
+    new Term('Flinch', `~FLINCH~`, `Attacks with <b>flinch</b> prevent the enemy monster's attack action if this action is <b>faster.</b>`),
     new Term('Pierce', '~PIERCE~', `Attacks with <b>pierce</b> ignore this amount of the enemy monster's <div>[DEF].</div> Multiple instances of pierce stack.`),
     new Term('Recoil', `~RECOIL~`, `This monster suffers this amount of <b>recoil</b> damage to itself after the attack resolves. Multiple instances of recoil stack.`),
     new Term('Resistant', `~RESIST~`, `Monsters are <b>resistant</b> to elements in the [RESIST] section of their monster card.`),
     new Term('Single Use', `~SINGLE~`, `<b>Single use</b> actions remain disabled until switched out, as denoted by [SINGLE].`),
     new Term('Slower', `~SLOWER~`, `This action is <b>slower</b> if your opponent selects a switch action, or if both players select a monster action and yours resolves second.`),
     new Term('Spammable', `~SPAM~`, `<b>Spammable</b> actions do not become disabled.`),
-    new Term('Status Condition', `~STATUS~`, `<b>Status conditions</b> [STATUS] – drain, fatigue, stun, wound.`),
-    new Term('Stun', `~STUN~`, `Monsters with <b>stun</b> [STATUS] perform their switch actions after monster actions.`),
-    new Term('Super', `~SUPER~`, `<b>Supers</b> require and use two [B] slots.`),
+    new Term('Heavy', `~HEAVY~`, `<b>Heavy's</b> require and use two [B] slots.`),
     new Term('Switches In', `~SWITCH~`, `<b>Switch in</b> abilities also trigger at the start of the game and following a monster KO.`),
-    new Term('Team Aura', '~AURA~', '<b>Team aura</b> [TA] – At the end of your turn, put a time counter on this. If the number of time counters equals its duration, discard this. You can only have one active <b>team aura</b> at any time.'),
-    new Term('Wound', `~WOUND~`, `Monsters with <b>wound</b> [STATUS] perform one less [Q] on all of their attacks.`),
+    new Term('Team Aura', '~AURA~', '<b>Team aura</b> [TA] – At the end of your turn, put a time counter on this. If the number of time counters equals its duration, discard this.'),
     new Term('Crush', '~CRUSH~', '<b>Crush X</b> - Remove X [PQ] of the same type of your choice from your opponent.')
 ];
 export const TERM_CODES = termCodes.sort((a,b) => a.name.localeCompare(b.name));
@@ -68,7 +65,7 @@ export const TERM_CODES = termCodes.sort((a,b) => a.name.localeCompare(b.name));
 const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[DEF]`, `[TA]`,
     `[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]', '[NQ]', '[PQ]', '[ARROW]',
     '[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]', '[ACORN]', '[HONEY]', '[WISH]', '[TORMENT]', '[FLIP]', '[DISABLE]', '[SINGLE]', '[HOLLOW]',
-    '[SR]', '[SL]', '[RESIST]', '[WEAK]', '[STR]', '[FRAIL]', '[GOOP]', `[Q]`
+    '[SR]', '[SL]', '[RESIST]', '[WEAK]', '[STR]', '[FRAIL]', '[GOOP]', `[Q]`, `[RANGED]`, `[MELEE]`, `[ROLL]`,
 ] as const;
 export type ImageCode = typeof IMAGE_KEYS[number];
 export const IMAGE_CODES = [
@@ -103,6 +100,9 @@ export const IMAGE_CODES = [
     new Image(`[GOOP]`, SYMBOLS_PATH + `goop.png`),
     new Image(`[HOLLOW]`, SYMBOLS_PATH + `hollow.png`),
     new Image(`[ARROW]`, SYMBOLS_PATH + `sideswipe.png`),
+    new Image(`[RANGED]`, SYMBOLS_PATH + `ranged.png`),
+    new Image(`[MELEE]`, SYMBOLS_PATH + `melee.png`),
+    new Image(`[ROLL]`, SYMBOLS_PATH + `die.png`),
 ];
 
 //TODO: this should return an object with two properties: advElems and DisElems that are arrays of elemtypes

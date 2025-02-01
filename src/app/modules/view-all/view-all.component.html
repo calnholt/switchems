@@ -1,13 +1,11 @@
-<view-all-filters
-  (filtersChanged)="filterMonsters($event)"
-  [numOfMonsters]="numOfMonsters"
-  [numOfActions]="numOfActions"
-  [numOfBuffs]="numOfBuffs">
-</view-all-filters>
-<view-all-display
-  [monsters]="filteredMonsters">
-</view-all-display>
-<summary
-  [monsters]="allMonsters"
-  [filteredMonsters]="filteredMonsters">
-</summary>
+<div class="mb-5">
+  <view-all-filters
+    (filtersChanged)="filterMonsters($event)"
+    [numOfMonsters]="numOfMonsters"
+    [numOfActions]="numOfActions"
+    [numOfBuffs]="numOfBuffs">
+  </view-all-filters>
+  <view-all-display
+    [monsters]="filteredMonsters">
+  </view-all-display>
+</div>

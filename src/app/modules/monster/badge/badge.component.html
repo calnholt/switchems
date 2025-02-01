@@ -1,0 +1,39 @@
+<div id="badge-card">
+  <div class="card-container">
+    <div class="name-container">
+      <div class="name">
+        <span>
+          {{ badge.name }}
+        </span>
+        <span>
+          <img src="../../../../assets/images/badges/badge.png">
+        </span>
+      </div>
+    </div>
+    <div class="badge-image">
+      <img [src]="img">
+    </div>
+    <ng-container>
+      <div class="uses-rounds">
+        <ng-container *ngIf="usesList.length">
+          <div class="use-text">USES</div>
+          <div class="uses-container">
+            <div *ngFor="let use of usesList" class="space"></div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="roundsList.length">
+          <div class="use-text">ROUNDS</div>
+          <div class="uses-container">
+            <ng-container *ngFor="let round of roundsList; index as i">
+              <div class="space round">{{ i }}</div>
+              <div *ngIf="i < roundsList.length - 1" class="chevron"></div>
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+    <div class="ability-text-container">
+      <div class="ability-text" [innerHTML]="text"></div>
+    </div>
+  </div>
+</div>

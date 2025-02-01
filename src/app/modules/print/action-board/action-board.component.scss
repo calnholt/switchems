@@ -91,7 +91,13 @@
                             max-height: 26px;
                         }
                         .switch{
-                            max-height: 26px;
+                            max-height: 23px;
+                            &.type {
+                                border: 1px solid black;
+                                padding: 2px;
+                                border-radius: 5px;
+                                margin: 0px 2px;
+                            }
                         }
                         .icon{
                             padding-right: 4px;
@@ -179,7 +185,7 @@
                             background-color: #aaf5aa;
                         }
                         td:nth-child(1) {
-                            width: 40%;
+                            // width: 40%;
                         }
                     }
                     tr:nth-child(2) {
@@ -187,7 +193,7 @@
                             background-color: #aae3ff;
                         }
                         td:first-child{
-                            width: 40%;
+                            // width: 40%;
                             border-radius: 0px 0px 0px 4px !important;
                             font-size: 14px;
                             img {
@@ -211,7 +217,7 @@
             table {
                 tr{
                     td{
-                        width: 33%;
+                        width: 50%;
                     }
                     td:nth-child(1){
                         border-radius: 4px 0px 0px 4px;

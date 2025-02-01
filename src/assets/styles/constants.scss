@@ -23,13 +23,18 @@ $recessed: inset 6px 6px 10px 0 rgb(0 0 0 / 20%), inset -6px -6px 10px 0 rgb(255
     font-size: 11px;
     display: inline-block;
     line-height: 11px;
-    padding-top: 5px;
+    padding-top: 7px;
 }
 .term-img{
     max-height: 15px;
     &.torment {
         max-height: 13px;
     }
+}
+
+.terms-container {
+    border-top: 1px solid #adadad;
+    margin-top: 7px;
 }
 
 .stat-spread {

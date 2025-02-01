@@ -75,7 +75,7 @@
     {
       "buffName": "Goopy Goop",
       "timing": "Post Actions",
-      "buffText": "<b>Super [B] [B]. </b><br><br>If this attack is <b>faster</b>, shuffle two <div><b>goop</b> [GOOP]</div> cards into your opponent's deck. If not, shuffle one instead. ~SUPER~~FASTER~",
+      "buffText": "<b>Heavy [B] [B]. </b><br><br>If this attack is <b>faster</b>, shuffle two <div><b>goop</b> [GOOP]</div> cards into your opponent's deck. If not, shuffle one instead. ~HEAVY~~FASTER~",
       "flipEventText": "If this attack deals two or more damage, shuffle one <div><b>goop</b> [GOOP]</div> card into your opponent's deck.",
       "lastUpdated": "Thu, 15 Jul 2021 08:15:58 GMT"
     }

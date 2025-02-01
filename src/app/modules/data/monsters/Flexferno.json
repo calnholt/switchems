@@ -65,12 +65,12 @@
     },
     {
       "buffName": "Keep Up",
-      "buffText": "This attack gains +1[SPD]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+2[SPD]</div> instead. ~STATUS~",
+      "buffText": "This attack gains +1[SPD]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+2[SPD]</div> instead.",
       "lastUpdated": "Sat, 04 Sep 2021 12:22:21 GMT"
     },
     {
       "buffName": "Sear",
-      "buffText": "This attack gains +1[ATK]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+2[ATK]</div> instead. ~STATUS~",
+      "buffText": "This attack gains +1[ATK]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+2[ATK]</div> instead.",
       "lastUpdated": "Tue, 24 Jan 2023 13:23:17 GMT"
     }
   ],

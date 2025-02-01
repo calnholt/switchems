@@ -4,27 +4,29 @@
   ],
   "actions": [
     {
-      "abilityName": "Thunderstorm",
+      "abilityName": "Thunder Slam",
       "abilityText": "<div>{\"stat\": \"SPD\", \"num\": 3}</div>",
       "element": "Electric",
+      "attackType": "Melee",
       "statusFlg": false,
       "attack": 4,
-      "speed": 5,
+      "speed": 3,
       "draw": 0,
       "discard": 2,
-      "buff": 0,
+      "buff": 1,
       "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
       "abilityName": "Ice Blast",
-      "abilityText": "If this attack is <b>faster</b>, [Q] [Q]. ~FASTER~",
+      "abilityText": "If this attack is <b>slower</b>, this attack gains <div><b>recoil 1</b>.</div>~SLOWER~~RECOIL~ ",
       "element": "Water",
+      "attackType": "Ranged",
       "statusFlg": false,
-      "attack": 2,
-      "speed": 4,
+      "attack": 3,
+      "speed": 5,
       "draw": 0,
-      "discard": 0,
-      "buff": 1,
+      "discard": 1,
+      "buff": 2,
       "lastUpdated": "Wed, 07 Jul 2021 07:02:19 GMT"
     },
     {
@@ -65,7 +67,7 @@
     },
     {
       "buffName": "High Voltage",
-      "buffText": "This attack gains +1[ATK]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+2[ATK] instead.</div> ~EXHAUST~",
+      "buffText": "<b>Heavy</b>. Gain <b>Stun</b> [TA] if you don't already control one.~HEAVY~",
       "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
@@ -76,10 +78,15 @@
   ],
   "monsterId": 7,
   "monsterName": "Zappguin",
-  "abilityText": "When this monster <b>switches in</b>, <div>{\"num\": 1, \"stat\": \"SPD\"}</div><br><br>If this monster's attack action is <b>faster</b>, you may [FLIP]. If successful, the attack gains <b>flinch</b>.~SWITCH~~FLINCH~",
+  "abilityText": "When this monster <b>switches in</b>, you gain <b>Stun</b> <div>[TA].</div>~SWITCH~",
   "hp": 8,
   "promiseDescription": "<b>Zappguin</b> wants nothing more than to <b>stun</b> [STATUS] and <b>flinch</b> every monster it meets.",
   "initiative": 40,
   "imageFlg": true,
+  "teamAura": {
+    "name": "Stun",
+    "text": "If you attack with a <b>faster</b> ranged [RANGED] attack, your attack gains <b>flinch</b> and destroy this.~FASTER~~FLINCH~~AURA~",
+    "duration": 4
+  },
   "lastUpdated": "Wed, 25 Jan 2023 12:07:15 GMT"
 }

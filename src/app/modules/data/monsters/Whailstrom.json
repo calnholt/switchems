@@ -5,8 +5,9 @@
   "actions": [
     {
       "abilityName": "Grand Slam",
-      "abilityText": "<b>Recoil 2[ATK].</b><br><br> \nIf this monster currently has higher [HP] than the enemy monster, this attack gains +2[ATK]. ~RECOIL~",
+      "abilityText": "<b>Recoil</b>.<br><br> \nIf this monster currently has higher [HP] than the enemy monster, this attack gains <div>+2[ATK].</div> ~RECOIL~",
       "element": "Rock",
+      "attackType": "Melee",
       "statusFlg": false,
       "attack": 4,
       "speed": 1,
@@ -16,8 +17,9 @@
     },
     {
       "abilityName": "Splish Splash",
-      "abilityText": "If this monster currently has 5[HP] or more, this attack gains +2[ATK].",
+      "abilityText": "If this monster currently has <div>5[HP]</div> or more, this attack gains <div>+2[ATK].<div>",
       "element": "Water",
+      "attackType": "Ranged",
       "statusFlg": false,
       "attack": 2,
       "speed": 3,
@@ -27,7 +29,7 @@
     },
     {
       "abilityName": "Consume",
-      "abilityText": "This monster heals 5[HP]. ",
+      "abilityText": "This monster heals <div>5[HP].</div>",
       "element": "Water",
       "statusFlg": true,
       "attack": null,
@@ -37,8 +39,9 @@
     },
     {
       "abilityName": "Big Boned",
-      "abilityText": "<b>Single use</b>. <br><br>This attack gains +X[ATK], where X is equal to the amount of [HP] this monster lost this turn. ~SINGLE~",
+      "abilityText": "<b>Single use</b>. <br><br>This attack gains <div>+X[ATK],</div> where X is equal to the amount of [HP] this monster lost this turn. ~SINGLE~",
       "element": "Water",
+      "attackType": "Melee",
       "statusFlg": false,
       "attack": 1,
       "speed": 2,
@@ -50,7 +53,7 @@
   "buffs": [
     {
       "buffName": "Take It Easy",
-      "buffText": "<b>Super [B] [B].</b> \n<br><br>\nThis monster heals 2[HP]. If this monster has less than 5[HP], this monster heals 3[HP] instead. ~SUPER~ ",
+      "buffText": "<b>Heavy [B] [B].</b> \n<br><br>\nThis monster heals 2[HP]. If this monster has less than 5[HP], this monster heals 3[HP] instead. ~HEAVY~ ",
       "auraDuration": null,
       "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
     },
@@ -73,7 +76,7 @@
       "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
     }
   ],
-  "monsterName": "Willard",
+  "monsterName": "Whailstrom",
   "abilityText": "When this monster <b>switches in</b>, the enemy monster loses 1[HP]. ~SWITCH~",
   "hp": 10,
   "initiative": 5,

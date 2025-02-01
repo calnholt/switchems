@@ -18,6 +18,9 @@ import { ActionFiltersComponent } from './action-filters/action-filters.componen
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AcornComponent } from './acorn/acorn.component';
+import { BadgeComponent } from './badge/badge.component';
+import { BadgesComponent } from './badges/badges.component';
+import { TeamAuraComponent } from './team-aura/team-aura.component';
 
 @NgModule({
   imports: [
@@ -42,6 +45,9 @@ import { AcornComponent } from './acorn/acorn.component';
     AcornBoardComponent,
     AcornComponent,
     GoopComponent,
+    BadgeComponent,
+    TeamAuraComponent,
+    BadgesComponent,
   ],
   exports: [
     MonsterActionComponent,
@@ -53,6 +59,9 @@ import { AcornComponent } from './acorn/acorn.component';
     AcornBoardComponent,
     AcornComponent,
     GoopComponent,
+    BadgeComponent,
+    TeamAuraComponent,
+    BadgesComponent,
   ]
 })
 export class MonsterModule { }

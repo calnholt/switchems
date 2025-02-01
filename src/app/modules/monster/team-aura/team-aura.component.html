@@ -1,0 +1,23 @@
+<div id="team-aura">
+  <div class="card-container {{getBackgroundImageCss()}}">
+    <div class="name">
+      <span>
+        {{teamAura.name}}
+      </span>
+      <span *ngIf="teamAura.isAilment">
+        <img src="../../../../assets/images/symbols/wound.png">
+      </span>
+    </div>
+    <div class="text-container ability">
+      <div class="team-aura-container">
+        <div *ngIf="teamAura.duration !== 'INFINITE'">{{ teamAura.duration }} </div>
+        <img *ngIf="teamAura.duration === 'INFINITE'" src="{{imageService.getImg('infinity')}}">
+        <img  src="{{imageService.getImg('aura')}}">
+      </div>
+      <div [innerHTML]="getAbilityText(teamAura.text)" class="ta-text"></div>
+    </div>
+    <div class="bottom-container">
+      <img src="{{getMonsterImagePath()}}">
+    </div>
+  </div>
+</div>

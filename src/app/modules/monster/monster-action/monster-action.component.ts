@@ -53,11 +53,11 @@ export class MonsterActionComponent implements OnInit {
 
   getCardIcons(): Array<ImageCode> {
     const out = Array<ImageCode>();
-    for (let i = 0; i < this.action.buff; i++) {
-      out.push('[B]');
-    }
     for (let i = 0; i < this.action.discard; i++) {
       out.push('[-]');
+    }
+    for (let i = 0; i < this.action.buff; i++) {
+      out.push('[B]');
     }
     for (let i = 0; i < this.action.draw; i++) {
       out.push('[+]');

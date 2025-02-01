@@ -1,4 +1,5 @@
-import { ElemType, getAdvantages, BuffTiming } from 'src/app/types/dataTypes';
+import { ElemType, getAdvantages, BuffTiming, AttackType } from 'src/app/types/dataTypes';
+import { TeamAura } from '../team-aura/team-aura.model';
 
 export class GUI {
     isSelected?: boolean;
@@ -19,10 +20,12 @@ export class Card extends GUI {
 
 export class Monster extends Card {
     elements: Array<ElemType> = new Array<ElemType>();
+    startOfGame?: string;
     abilityText?: string;
     hp: number;
     referenceFlg?: boolean = true;
     promiseDescription?: string;
+    teamAura?: TeamAura;
     extraBoard?: string;
     initiative: number;
     imageFlg?: boolean;
@@ -90,6 +93,7 @@ export class Action extends Card {
     abilityText?: string = null;
     attack?: number;
     speed?: number;
+    attackType?: AttackType;
     element?: ElemType = null;
     buff?: number;
     discard?: number;

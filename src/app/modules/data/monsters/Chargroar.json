@@ -8,26 +8,26 @@
       "abilityName": "Lightning Fang",
       "abilityText": "If this attack is <b>faster</b>, this attack gains +3[ATK].~FASTER~",
       "element": "Electric",
+      "attackType": "Melee",
       "statusFlg": false,
       "attack": 4,
       "speed": 6,
       "draw": 0,
       "discard": 3,
-      "buff": 0,
-      "modifier": 5,
+      "buff": 1,
       "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
     },
     {
       "abilityName": "Lights Out",
       "abilityText": "If this attack KO's the enemy monster, <div>{\"stat\": \"SPD\", \"num\": 2}.</div>",
       "element": "Electric",
+      "attackType": "Ranged",
       "statusFlg": false,
       "attack": 2,
       "speed": 7,
       "draw": 1,
       "discard": 0,
       "buff": 1,
-      "modifier": 1,
       "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
     },
     {
@@ -39,42 +39,41 @@
       "draw": 0,
       "discard": 0,
       "buff": 0,
-      "modifier": 0,
       "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
     },
     {
       "abilityName": "Blazing Roar",
-      "abilityText": "[Q]. <br><br><b>Pierce X[DEF]</b>, where X is the number of buff slots used.~PIERCE~",
+      "abilityText": "[Q]. <br><br><b>Pierce X</b>, where X is the number of buff slots used.~PIERCE~",
       "element": "Fire",
+      "attackType": "Melee",
       "statusFlg": false,
       "attack": 3,
       "speed": 4,
       "draw": 0,
       "discard": 1,
       "buff": 2,
-      "modifier": 2,
       "lastUpdated": "Sun, 26 Sep 2021 13:03:34 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Charge",
-      "buffText": "This attack gains +1[SPD]. If your opponent has a KO'd monster, this attack gains +2[SPD] instead.",
+      "buffText": "This attack gains <div>+1[SPD].</div> If your opponent has a KO'd monster, this attack gains +2[SPD] instead.",
       "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
     },
     {
       "buffName": "Roar",
-      "buffText": "This attack gains +1[ATK]. If your opponent has a KO'd monster, this attack gains +2[ATK] instead.",
+      "buffText": "This attack gains <div>+1[ATK].</div> If your opponent has a KO'd monster, this attack gains +2[ATK] instead.",
       "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
     },
     {
       "buffName": "Revenge",
-      "buffText": "If the enemy monster is <div><b>resistant</b> [RESIST]</div> to this attack's element, this attack gains +1[ATK] and + 2[SPD]. If not, this attack gains <b>recoil 1[ATK]</b>.~RESIST~ ~RECOIL~",
+      "buffText": "If the enemy monster selected a <div>melee [MELEE]</div> attack, this attack gains <div>+1[ATK]</div> and <div>+2[SPD].</div> If not, this attack gains <div><b>recoil 1</b></div>.~RECOIL~",
       "lastUpdated": "Fri, 27 Jan 2023 08:01:56 GMT"
     },
     {
       "buffName": "Prey Upon",
-      "buffText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, this attack gains +1[ATK] and +2[SPD]. If not, this attack gains <b>recoil 1[ATK]</b>.~EFFECTIVE~~RECOIL~",
+      "buffText": "If the enemy monster selected a <div>ranged [RANGED]</div> attack, this attack gains <div>+1[ATK]</div> and <div>+2[SPD].</div> If not, this attack gains <div><b>recoil 1</b></div>.~RECOIL~",
       "lastUpdated": "Fri, 27 Jan 2023 08:01:56 GMT"
     }
   ],

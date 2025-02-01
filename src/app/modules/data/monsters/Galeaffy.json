@@ -71,7 +71,7 @@
     },
     {
       "buffName": "Outta Here",
-      "buffText": "<b>Super [B] [B].</b><br><br>Perform a switch action after the monster action phase. ~SUPER~",
+      "buffText": "<b>Heavy [B] [B].</b><br><br>Perform a switch action after the monster action phase. ~HEAVY~",
       "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
     }
   ],

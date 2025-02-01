@@ -1,6 +1,6 @@
 import { element } from 'protractor';
 import { TypeChart } from './../../data/data';
-import { ElemType } from 'src/app/types/dataTypes';
+import { ATTACK_TYPES, ElemType } from 'src/app/types/dataTypes';
 import { Action } from 'src/app/modules/monster/model/monster';
 import { ELEMENTS, MODIFIER_OPTIONS_POS, MODIFIER_OPTIONS_NEG, TYPE_CHART } from './../../../types/dataTypes';
 import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
@@ -14,6 +14,7 @@ export class ActionFiltersComponent implements OnInit, OnChanges {
   @Input() action: Action;
   MODIFIER_ELEMENTS = [ELEMENTS[5], ELEMENTS[4], ELEMENTS[3], ELEMENTS[2], ELEMENTS[1], ELEMENTS[0]];
   elementList = ELEMENTS;
+  attackTypeList = ATTACK_TYPES;
   positiveModifierOptions = MODIFIER_OPTIONS_POS;
   negativeModifierOptions = MODIFIER_OPTIONS_NEG;
   typeChart: TypeChart;
