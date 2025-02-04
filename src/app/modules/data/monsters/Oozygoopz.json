@@ -64,7 +64,7 @@
       "buffText": "If your opponent has four or more <b>Goop</b> cards, this attack gains <div>+3[SPD].</div> If not, shuffle one <b>Goop</b> card into your opponent's deck instead"
     },
     {
-      "buffName": "Gooped Up",
+      "buffName": "Super Goop",
       "buffText": "<b>Heavy</b>. Shuffle two <b>Goop</b> cards into your opponent's deck.~HEAVY~"
     }
   ],
@@ -77,7 +77,7 @@
   "extraBoard": "GOOP",
   "teamAura": {
     "name": "Gooped Up",
-    "text": "If you attacked with a <b>faster</b> melee [MELEE] attack, shuffle a <b>Goop</b> card into your opponent's deck.",
+    "text": "If you attacked with a <b>faster</b> melee [MELEE] attack, shuffle a <b>Goop</b> card into your opponent's deck.~FASTER~~AURA~",
     "duration": 4,
     "isAilment": false
   }

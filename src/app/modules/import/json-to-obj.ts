@@ -1,19 +1,14 @@
 import { default as Stalagrowth } from '../data/monsters/Stalagrowth.json';
-import { default as Cleansitoad } from '../data/monsters/Cleansitoad.json';
 import { default as Chargroar } from '../data/monsters/Chargroar.json';
 import { default as Flexferno } from '../data/monsters/Flexferno.json';
 import { default as Zappguin } from '../data/monsters/Zappguin.json';
 import { default as Phantomaton } from '../data/monsters/Phantomaton.json';
-import { default as Cragadilo } from '../data/monsters/Cragadilo.json';
 import { default as Galeaffy } from '../data/monsters/Galeaffy.json';
 import { default as Drownigator } from '../data/monsters/Drownigator.json';
 import { default as Vulturock } from '../data/monsters/Vulturock.json';
 import { default as Steamie } from '../data/monsters/Steamie.json';
-import { default as Boltblebee } from '../data/monsters/BoltbleBee.json';
 import { default as Smolderskulk } from '../data/monsters/Smolderskulk.json';
 import { default as Oozygoopz } from '../data/monsters/Oozygoopz.json';
-import { default as Galvanite } from '../data/monsters/Galvanite.json';
-import { default as Squirrberus } from '../data/monsters/Squirrberus.json';
 import { default as Ashdash } from '../data/monsters/Ashdash.json';
 import { default as Whailstrom } from '../data/monsters/Whailstrom.json';
 import { default as Deusvolt } from '../data/monsters/Deusvolt.json';
@@ -41,7 +36,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             // Cleansitoad,
             // Cragadilo,
             Drownigator,
-            // Flexferno,
+            Flexferno,
             // Galvanite,
             // Galeaffy,
             Lanternshade,

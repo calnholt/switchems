@@ -5,19 +5,20 @@
   "actions": [
     {
       "abilityName": "Inferno",
-      "abilityText": "If the enemy monster has a [STATUS], this attack gains one [B] slot and [Q].<br><br>If all [B] slots are used <u>and</u> all applied buffs <b>belong</b> to this monster, this attack gains +2[ATK] for each buff slot used.",
+      "abilityText": "<div>[Q].</div> <br><br>If this attack is <b>faster</b>, this attack gains <b>pierce 4</b>.~FASTER~~PIERCE~",
       "element": "Fire",
+      "attackType": "Ranged",
       "statusFlg": false,
-      "attack": 2,
+      "attack": 6,
       "speed": 4,
       "draw": 0,
-      "discard": 1,
-      "buff": 1,
+      "discard": 3,
+      "buff": 2,
       "lastUpdated": "Tue, 24 Jan 2023 13:23:17 GMT"
     },
     {
       "abilityName": "Burn",
-      "abilityText": "<b>Wound [STATUS]</b>.  \n<br><br>This monster gains +1[DEF] this turn. \n\n~WOUND~",
+      "abilityText": "Your opponent gains <div><b>Wound</b> [TA]</div> if they don't already control one.<br><br>This monster gains <div>+1[DEF]</div> this turn.",
       "element": "Fire",
       "statusFlg": true,
       "speed": 8,
@@ -28,8 +29,9 @@
     },
     {
       "abilityName": "No Pain, No Gain",
-      "abilityText": "[Q] [Q]. <br><br><b>Recoil 1[ATK]</b>,  {\"stat\": \"ATK\", \"num\": 1}.~RECOIL~",
+      "abilityText": "[Q] [Q]. <br><br><b>Recoil 1</b>,  {\"stat\": \"ATK\", \"num\": 1}.~RECOIL~",
       "element": "Rock",
+      "attackType": "Melee",
       "statusFlg": false,
       "attack": 1,
       "speed": 3,
@@ -40,8 +42,9 @@
     },
     {
       "abilityName": "Scorch",
-      "abilityText": "[Q].<br><br>If the enemy monster has a [STATUS], this attack gains [Q].",
+      "abilityText": "[Q].<br><br>If the enemy monster has an <div><b>ailment</b> [STATUS],</div> this attack gains [Q].",
       "element": "Fire",
+      "attackType": "Melee",
       "statusFlg": false,
       "attack": 3,
       "speed": 6,
@@ -54,8 +57,7 @@
   "buffs": [
     {
       "buffName": "Sauna",
-      "buffText": "Whenever your monster rolls a [ATK], the attack gains <div>+1[ATK].</div>~AURA~",
-      "auraDuration": 6,
+      "buffText": "Your opponent gains <div><b>Wound</b> [TA]</div> if they don't already control one.",
       "lastUpdated": "Tue, 24 Jan 2023 13:23:17 GMT"
     },
     {
@@ -65,21 +67,27 @@
     },
     {
       "buffName": "Keep Up",
-      "buffText": "This attack gains +1[SPD]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+2[SPD]</div> instead.",
+      "buffText": "If the enemy monster has an <div><b>ailment</b> [STATUS],</div> this attack gains <div>+3[SPD].</div>",
       "lastUpdated": "Sat, 04 Sep 2021 12:22:21 GMT"
     },
     {
       "buffName": "Sear",
-      "buffText": "This attack gains +1[ATK]. If the enemy monster has a <div>[STATUS],</div> this attack gains <div>+2[ATK]</div> instead.",
+      "buffText": "If the enemy monster has an <div><b>ailment</b> [STATUS],</div> this attack gains <div>+2[ATK].</div>",
       "lastUpdated": "Tue, 24 Jan 2023 13:23:17 GMT"
     }
   ],
   "monsterId": 2,
   "monsterName": "Flexferno",
-  "abilityText": "When this monster <b>switches in</b>, <div>{\"num\": 1, \"stat\": \"ATK\"}</div><br><br>Whenever this monster rolls a [ATK], the attack gains <div>+1[ATK].</div> ~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, <div>{\"num\": 1, \"stat\": \"ATK\"}</div><br><br>Whenever this monster gains an [ATK][PQ] from [Q], the attack gains <div>+1[ATK].</div> ~SWITCH~",
   "hp": 8,
   "promiseDescription": "<b>Flexferno</b> loves himself some <b>Flexferno</b>! A few strong flips can devastate an enemy monster.",
   "initiative": 20,
   "imageFlg": true,
+  "teamAura": {
+    "name": "Wound",
+    "duration": 3,
+    "text": "Your opponent's melee [MELEE] attacks gain <b>pierce 2.</b>~PIERCE~~AURA~",
+    "isAilment": true
+  },
   "lastUpdated": "Tue, 24 Jan 2023 13:23:17 GMT"
 }
