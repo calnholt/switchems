@@ -104,6 +104,14 @@
                 }
             }
         }
+        .buff-icon-container {
+            position: absolute;
+            left: 5px;
+            bottom: 5px;
+            img {
+                height: 30px;
+            }
+        }
         .bottom-container {
             position: absolute;
             bottom: 0px;

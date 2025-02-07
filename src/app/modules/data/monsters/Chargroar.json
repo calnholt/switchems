@@ -58,7 +58,7 @@
   "buffs": [
     {
       "buffName": "Charge",
-      "buffText": "This attack gains <div>+1[SPD].</div> If your opponent has a KO'd monster, this attack gains +2[SPD] instead.",
+      "buffText": "This attack gains <div>+1[SPD].</div> If your opponent has a KO'd monster, this attack gains +3[SPD] instead.",
       "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
     },
     {

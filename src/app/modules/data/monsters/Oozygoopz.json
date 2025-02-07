@@ -6,14 +6,14 @@
   "actions": [
     {
       "abilityName": "Sticky Strike",
-      "abilityText": "<b>Single use</b>. If this attack is <b>faster</b>, shuffle one <b>Goop</b> card into your opponent's deck. ~SINGLE~~FASTER~",
+      "abilityText": "If this attack is <b>faster</b>, shuffle one <b>Goop</b> card into your opponent's deck.~FASTER~",
       "element": "Water",
       "attackType": "Ranged",
       "statusFlg": false,
       "attack": 4,
       "speed": 6,
       "discard": 2,
-      "buff": 2
+      "buff": 1
     },
     {
       "abilityName": "Reclaim",
@@ -22,9 +22,9 @@
       "attackType": "Melee",
       "statusFlg": false,
       "attack": 2,
-      "speed": 3,
+      "speed": 1,
       "discard": 0,
-      "buff": 2
+      "buff": 0
     },
     {
       "abilityName": "Viscous Split",

@@ -70,7 +70,7 @@
       "auraDuration": null
     }
   ],
-  "hp": 10,
+  "hp": 8,
   "monsterName": "Lanternshade",
   "initiative": 65,
   "imageFlg": true,
@@ -78,7 +78,8 @@
     "name": "Curse",
     "text": "At the end of the turn, [ROLL] [ARROW]</div> if 5 or greater, your active monster loses <div>1[HP].</div>~AURA~",
     "duration": 5,
-    "isAilment": true
+    "isAilment": true,
+    "copies": 3
   },
   "abilityText": "When this monster <b>switches in</b>, the opponent gains <b>Curse</b> [TA].~SWITCH~"
 }

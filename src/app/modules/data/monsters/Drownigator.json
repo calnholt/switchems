@@ -30,11 +30,11 @@
     },
     {
       "abilityName": "Swamped",
-      "abilityText": "[Q]. <br><br>{\"stat\": \"SPD\", \"num\": 2}",
+      "abilityText": "[Q]. <br><br>{\"stat\": \"SPD\", \"num\": 2}.<br><br>If all buff slots are used, this attack gains <div>+2[ATK].</div>",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
-      "attack": 3,
+      "attack": 1,
       "speed": 2,
       "draw": 0,
       "discard": 0,
@@ -73,7 +73,7 @@
     },
     {
       "buffName": "Tremble",
-      "buffText": "<b>Heavy, Recoil 1. </b><br><br><div>{\"stat\": \"SPD\", \"num\": 2}</div> and <div>{\"stat\": \"ATK\", \"num\": 2}.</div>~HEAVY~~RECOIL~",
+      "buffText": "<b>Heavy, recoil 1. </b><br><br><div>{\"stat\": \"SPD\", \"num\": 2}</div> and <div>{\"stat\": \"ATK\", \"num\": 2}.</div>~HEAVY~~RECOIL~",
       "lastUpdated": "Tue, 24 Jan 2023 13:29:13 GMT"
     }
   ],

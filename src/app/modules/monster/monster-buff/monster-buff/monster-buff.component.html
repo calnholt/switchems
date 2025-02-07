@@ -8,6 +8,9 @@
       </div>
       <div [innerHTML]="getAbilityText(buff.buffText, false)" class="buff-text"></div>
     </div>
+    <div class="buff-icon-container">
+      <img src="{{imageService.getImg('buff')}}">
+    </div>
     <div class="bottom-container">
       <img src="{{getMonsterImagePath()}}">
     </div>

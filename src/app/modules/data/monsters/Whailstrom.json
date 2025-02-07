@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Grand Slam",
-      "abilityText": "If this monster has less [HP] than the enemy monster, this attack gains <b>recoil 1</b>. ~RECOIL~",
+      "abilityText": "If this monster has less [HP] than the enemy monster, this attack gains <b>recoil 3</b>. ~RECOIL~",
       "element": "Rock",
       "attackType": "Melee",
       "statusFlg": false,
@@ -78,7 +78,7 @@
   ],
   "monsterName": "Whailstrom",
   "abilityText": "When this monster <b>switches in</b>, the enemy monster loses 1[HP]. ~SWITCH~",
-  "hp": 10,
+  "hp": 9,
   "initiative": 5,
   "imageFlg": true,
   "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"

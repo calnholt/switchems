@@ -20,8 +20,8 @@ export class AppComponent {
     ngOnInit() {
       this.searchOptions = this.monsterService.getMonsters().map(m => m.monsterName);
       this.tabs = [
-        new ToolbarTab('Create', 'monster', 'builder'),
-        new ToolbarTab('Print & Play', 'print'),
+        // new ToolbarTab('Create', 'monster', 'builder'),
+        // new ToolbarTab('Print & Play', 'print'),
         new ToolbarTab('How to Play', 'rules'),
       ];
     }

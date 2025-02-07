@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Gravelcrust Grip",
-      "abilityText": "<b>Single use, recoil 1</b>, and our opponent gains <div><b>Drain [TA]</b>.</div> </b><br><br>If you have no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 2}.</div>~SINGLE~~RECOIL~",
+      "abilityText": "<b>Single use, recoil 1</b>, and your opponent gains <div><b>Drain [TA]</b>.</div> </b><br><br>If you have no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 2}.</div>~SINGLE~~RECOIL~",
       "element": "Leaf",
       "statusFlg": true,
       "speed": 2,
@@ -34,8 +34,8 @@
       "element": "Rock",
       "attackType": "Melee",
       "statusFlg": false,
-      "attack": 2,
-      "speed": 6,
+      "attack": 3,
+      "speed": 7,
       "draw": 0,
       "discard": 3,
       "buff": 0,
@@ -43,7 +43,7 @@
     },
     {
       "abilityName": "Skewer",
-      "abilityText": "[Q] [Q]",
+      "abilityText": "[Q] [Q]. <br><br>If this attack is buffed, this attack gains <b>spammable</b>. ~SPAM~",
       "element": "Rock",
       "attackType": "Melee",
       "statusFlg": false,
@@ -80,7 +80,7 @@
   "monsterId": 1,
   "monsterName": "Stalagrowth",
   "abilityText": "When this monster <b>switches in</b>, {\"stat\": \"DEF\", \"num\": 1}.</div> ~SWITCH~",
-  "hp": 10,
+  "hp": 9,
   "promiseDescription": "<b>Stallagrowth</b> plays for the long game – slowly drain the enemy's health and stand your ground with bolstered defense.",
   "initiative": 10,
   "imageFlg": true,
