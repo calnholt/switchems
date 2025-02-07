@@ -15,6 +15,7 @@ import { default as Deusvolt } from '../data/monsters/Deusvolt.json';
 import { default as Volcanoggin } from '../data/monsters/Volcanoggin.json';
 import { default as Lanternshade } from '../data/monsters/Lanternshade.json';
 import { default as Sorrospine } from '../data/monsters/Sorrospine.json';
+import { default as Blazamor } from '../data/monsters/Blazamor.json';
 import { ElemType, ELEMENTS } from './../../types/dataTypes';
 import { MonsterComplete, Buff, Action } from '../monster/model/monster';
 
@@ -30,6 +31,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
     } else {
         ALL = [
             // Ashdash,
+            Blazamor,
             // Boltblebee,
             Chargroar,
             Deusvolt,

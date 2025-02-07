@@ -1,0 +1,81 @@
+{
+  "elements": [
+    "Fire"
+  ],
+  "actions": [
+    {
+      "abilityName": "Paw Swipe",
+      "abilityText": "This monster gains +1[DEF] this turn.",
+      "element": "Fire",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 5,
+      "discard": 1,
+      "buff": 2
+    },
+    {
+      "abilityName": "Tail Whip",
+      "abilityText": "This monster gains +2[DEF] this turn.",
+      "element": "Fire",
+      "attackType": "Ranged",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 7,
+      "discard": 2,
+      "buff": 1
+    },
+    {
+      "abilityName": "Nuzzle",
+      "abilityText": "<b>Single use</b>, <b>flinch</b>. ~SINGLE~~FLINCH~",
+      "element": "Fire",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 6,
+      "discard": 1,
+      "draw": 0,
+      "buff": 0
+    },
+    {
+      "abilityName": "Cuddle",
+      "abilityText": "Heal 1[HP], {\"stat\": \"DEF\", \"num\": 1}.",
+      "element": "Fire",
+      "statusFlg": true,
+      "attack": 2,
+      "speed": 2,
+      "draw": 0,
+      "discard": 0,
+      "buff": 0
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Purrsuation",
+      "buffText": "<b>Heavy</b>. Your opponent's selected monster action gains <b>single use [SINGLE]</b>.~HEAVY~~SINGLE~"
+    },
+    {
+      "buffName": "Time Flies",
+      "buffText": "You may add two time counters to any <b>team aura</b> or remove two time counters from any <b>team aura<b>."
+    },
+    {
+      "buffName": "Butterflies",
+      "buffText": "<b>Heavy</b>, <b>recoil 2</b>, <b>flinch</b>.~HEAVY~~RECOIL~~FLINCH~"
+    },
+    {
+      "buffName": "Love Spell",
+      "buffText": "The opponent gains <div><b>Infatuation</b> [TA].</div>"
+    }
+  ],
+  "monsterName": "Blazamor",
+  "abilityText": "When this monster <b>switches in</b>, the opponent gains <div><b>Infatuation</b> [TA].</div><br><br>At the end of your turn, this monster heals <div>1[HP]</div> and the opponent loses <div>1[HP].</div>~SWITCH~",
+  "hp": 5,
+  "initiative": 60,
+  "imageFlg": true,
+  "teamAura": {
+    "name": "Infatuation",
+    "text": "You cannot perform switch actions.~AURA~",
+    "duration": 3,
+    "isAilment": true
+  }
+}
