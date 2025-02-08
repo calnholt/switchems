@@ -3,13 +3,16 @@ import { TermCode, TERM_CODES } from './../../types/dataTypes';
 import { Injectable } from '@angular/core';
 import { RulebookSection, RulebookBlock } from './rulebook.component';
 import { getAbilityText } from '../common/cards';
+import { MonsterService } from '../monster/monster.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RulebookService {
 
-  constructor() { }
+  constructor(
+    private monsterService: MonsterService,
+  ) { }
 
   rulebook: Array<RulebookSection> = [
     {
@@ -58,7 +61,7 @@ export class RulebookService {
       blocks: [{
         ul: [
           {
-            text: '20 Monsters, each with:',
+            text: `${this.monsterService.getMonsters().length} Monsters, each with:`,
             ul: [
               {
                 text: '1 <a href="monster_card">Monster Card</a>',
@@ -92,7 +95,7 @@ export class RulebookService {
       columns: 5,
       blocks: [
       {
-        text: `After determining your <a href="modes_of_play">mode of play</a>, selecting your supply of monsters, and retrieving their associated cards:`,
+        text: `After selecting your monsters, and retrieving their associated cards:`,
       },
       {
         ol: [
@@ -119,47 +122,11 @@ export class RulebookService {
     ]
     },
     {
-      title: 'Modes of Play',
-      id: 'modes_of_play',
-      blocks: [
-      {
-        text: 'There are a couple different modes of play in <b>Switchems!</b>:',
-      },
-      {
-        ul: [
-          {
-            text: '<b>Draft</b>',
-            ul: [
-              {
-                text: 'Randomly select and shuffle four * [the number of players] monster reference cards together, and deal them out to each player. Each player secretly selects one monster from those cards, then passes the remaining monster cards to the left. Repeat this process until all players have four monsters.',
-              },
-            ],
-          },
-          {
-            text: '<b>1v1 Casual</b>',
-            ul: [
-              {
-                text: 'Randomly select eight monster cards from the full pool of monsters and collect their respective reference cards. Shuffle the eight reference cards, and deal four to each player. Both players will then secretly and simultaneously select one monster from the four cards. Then the players will exchange the remaining three cards and select another. All monsters selected after the first are revealed to each player. Keep doing this until both players have selected four monsters.',
-              }
-            ]
-          },
-          {
-            text: '<b>1v1 Competitive</b>',
-            ul: [
-              {
-                text: 'Players select five monsters they would like to use from their personal supply of monsters.',
-              }
-            ]
-          }
-        ]
-      },
-    ]},
-    {
       title: 'Choosing your Team',
       id: 'choosing_your_team',
       blocks: [
         {
-          text: 'At the start of the game, you will secretly select three monsters from your supply of monsters to bring into the round that compose your team.'
+          text: 'At the start of the game, you will secretly select three monsters that compose your team.'
         },
         {
             text: 'Players will choose their teams secretly and simultaneously. Take the associated monster cards of the three you have chosen, and place them face down in a line, all face-down.'
@@ -167,9 +134,6 @@ export class RulebookService {
         {
             text: 'Once both players have done so, you simultaneously reveal your selections. The monster in the middle is your active monster. The other two are placed beside your active monster, one on each side.'
         },
-        {
-            text: 'The monster(s) not selected are put to the side and will not be used for the remainder of the game.'
-        }
       ]
     },
     {
@@ -268,10 +232,30 @@ export class RulebookService {
         {
           text: '<b>NOTE:</b> You can buff monster attacks with any buff card in your hand - they do NOT have to belong to your active monster.'
         },
+      ]
+    },
+    {
+      title: 'Team Auras [TA]',
+      id: 'team_aura',
+      blocks: [
         {
-          text: '<h1>Team Auras[TA]</h1>Some buffs are also Team Auras, as denoted by the [TA] symbol at the top right of the card, with a number beside it, called its duration. When a Team Aura buff is played. Team Auras grant your monsters additional passive effects for several turns. During the <a href="end_phase">end phase</a>, add one time counter to your active Team Aura. If the number of time counters on the card equals its duration, <a href="exhaust">exhaust</a> it.'
+          text: 'Team Auras grant your monsters additional passive effects for several turns. Team Aura cards can be put into play by various abilities. During the <a href="end_phase">end phase</a>, add one time counter to each your Team Auras. If the number of time counters on the card equals its duration, discard it. The duration is denoted by the number to the left of the [TA] symbol.',
+        },
+        {
+          text: 'Some team auras have the <b>ailment</b> [STATUS] symbol beside in their name. If a player controls a team aura with an <b>ailment</b>, the player is considered to have an <b>ailment</b>.',
+        },
+        {
+          text: `<b>NOTE:</b> Some abilities care if you or your opponent has an ailment.`,
         },
       ]
+    },
+    {
+      title: 'Start of game',
+      blocks: [
+        {
+          text: `Some monsters have abilities that trigger at the start of the game. These effects trigger for all monsters, not just each player's active monster. The order in which these resolve is irrelevant.`
+        }
+      ],
     },
     {
       title: 'Phases of a Turn',
@@ -306,7 +290,7 @@ export class RulebookService {
                       text: 'Monster Actions',
                     },
                     {
-                      text: 'Standard Actions',
+                      text: 'Basic Actions',
                     },
                   ]
                 }
@@ -330,7 +314,7 @@ export class RulebookService {
       rulebookImage: 'Action-Board',
       blocks: [
         {
-          text: 'During the Selection Phase, you will secretly place your action cube on one of the 8 spaces on your action board. These eight actions are split into three groups: Switch Actions, Monster Actions, and Standard Actions. This is also the order in which they resolve.',
+          text: 'During the Selection Phase, you will secretly place your action cube on one of the 8 spaces on your action board. These eight actions are split into three groups: Switch Actions, Monster Actions, and Basic Actions. This is also the order in which they resolve.',
         },
         {
           text: '<b>NOTE:</b> When you select any action, you must place the cards remaining in your hand (if any) face down on the hand section of your player board.'
@@ -347,7 +331,7 @@ export class RulebookService {
                   text: 'The monster that is switching out heals 2[HP].'
                 },
                 {
-                  text: 'The monster that is switching in gains +3[DEF] this turn against attacks of the selected type (melee [MELEE] or ranged [RANGED]).'
+                  text: 'The monster that is switching in gains +2[DEF] this turn against attacks of the selected type (melee [MELEE] or ranged [RANGED]).'
                 }
               ]
         },
@@ -361,13 +345,13 @@ export class RulebookService {
           text: '<h1>Stat Cubes [PQ]</h1>Stat cubes [PQ] are used to augment monster <b>attacks [ATK]</b> using [PQ] you have accumulated. To apply stat cubes, when you select a monster attack [ATK] action, you may choose to apply ALL accumulated stat cubes of a single type to your monster attack action. Afterwards, the applied [PQ] are discarded.',
         },
         {
-          text: '<h1>Standard Actions</h1>There are two different standard actions. The two standard actions are:',
+          text: '<h1>Basic Actions</h1>There are two different basic actions. The two basic actions are:',
           ul: [
             {
               text: '[+] [HP]',
               ul: [
                 {
-                  text: 'When you select this standard action, you draw one card and heal 1[HP] as your action for the turn.',
+                  text: 'When you select this basic action, you draw one card and heal 1[HP] as your action for the turn.',
                 }
               ]
             },
@@ -375,7 +359,7 @@ export class RulebookService {
               text: '[Q] [Q] [Q]',
               ul: [
                 {
-                  text: 'When you select this standard action, roll three [Q].'
+                  text: 'When you select this basic action, roll three [Q].'
                 }
               ]
             }
@@ -403,7 +387,7 @@ export class RulebookService {
               text: '<a href="monster_actions">Monster Actions</a>',
             },
             {
-              text: '<a href="selection_phase">Standard Actions</a>',
+              text: '<a href="selection_phase">Basic Actions</a>',
             },
           ]
         }
@@ -435,7 +419,7 @@ export class RulebookService {
           text: '<b>NOTE:</b> You cannot apply stat cubes to special actions.'
         },
         {
-          text: '<h1>Disabled Actions[DISABLE]</h1>A monster action becomes disabled when it is selected. When a monster action is disabled, place a disabled token on the [DISABLE] space on the action. Actions that are disabled cannot be selected. A disabled monster action becomes enabled after performing your next action (Switch Action, Monster Action, or Standard Action).',
+          text: '<h1>Disabled Actions[DISABLE]</h1>A monster action becomes disabled when it is selected. When a monster action is disabled, place a disabled token on the [DISABLE] space on the action. Actions that are disabled cannot be selected. A disabled monster action becomes enabled after performing your next action (Switch Action, Monster Action, or Basic Action).',
         },
       ]
     },
@@ -503,10 +487,6 @@ export class RulebookService {
           text: 'Players have a hand limit of five cards. If players would draw cards while having five cards in their hand, players do not draw additional cards.'
         }
       ]
-    },
-    {
-      title: 'Keyword Glossary',
-      blocks: this.getKeywordGlossary(),
     },
     {
       title: 'Playtesters',

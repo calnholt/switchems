@@ -40,7 +40,7 @@ export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
 export const TERM_KEYS = [`~WOUND~`, `~FLINCH~`, `~DRAIN~`, `~FATIGUE~`, `~CURSE~`,
-    `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~HEAVY~`, `~FASTER~`, `~SLOWER~`, 
+    `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~HEAVY~`, `~FASTER~`, `~SLOWER~`, '~SPECIAL~',
     `~GOOP~`, `~EXHAUST~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`, `~BELONGS~`, `~SPAM~`, `~AURA~`, `~STRENGTHEN~`, `~FRAIL~`, '~CAPTURE~', '~CRUSH~'] as const;
 export type TermCode = typeof TERM_KEYS[number];
 const termCodes = [
@@ -57,7 +57,8 @@ const termCodes = [
     new Term('Heavy', `~HEAVY~`, `<b>Heavy's</b> require and use two [B] slots.`),
     new Term('Switches In', `~SWITCH~`, `<b>Switch in</b> abilities also trigger at the start of the game and following a monster KO.`),
     new Term('Team Aura', '~AURA~', '<b>Team aura</b> [TA] – At the end of your turn, put a time counter on this. If the number of time counters equals its duration, discard this.'),
-    new Term('Crush', '~CRUSH~', '<b>Crush X</b> - Remove X [PQ] of the same type of your choice from your opponent.')
+    new Term('Crush', '~CRUSH~', '<b>Crush X</b> - Remove X [PQ] of the same type of your choice from your opponent.'),
+    new Term('Special', '~SPECIAL~', 'You cannot apply stat cubes [PQ] to <b>special</b> [SPECIAL] actions.'),
 ];
 export const TERM_CODES = termCodes.sort((a,b) => a.name.localeCompare(b.name));
 

@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Inferno",
-      "abilityText": "<div>[Q].</div> <br><br>If this attack is <b>faster</b>, this attack gains <b>pierce 4</b>.~FASTER~~PIERCE~",
+      "abilityText": "<div>[Q].</div> If this attack is <b>faster</b>, this attack gains <b>pierce 4</b>.~FASTER~~PIERCE~",
       "element": "Fire",
       "attackType": "Ranged",
       "statusFlg": false,

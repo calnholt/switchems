@@ -114,6 +114,9 @@ export const convertFromJSON = (all: Array<any>, keepGUI?: boolean): Array<Monst
             action.monsterName = monster.monsterName;
             action.element = getElemType(json.actions[i].element);
             action.number = (i + 1);
+            if (action.statusFlg) {
+                action.abilityText += '~SPECIAL~';
+            }
             monster.actions.push(action);
         }
         monster.buffs = new Array<Buff>();

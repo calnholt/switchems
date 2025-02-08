@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Gravelcrust Grip",
-      "abilityText": "<b>Single use, recoil 1</b>, and your opponent gains <div><b>Drain [TA]</b>.</div> </b><br><br>If you have no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 2}.</div>~SINGLE~~RECOIL~",
+      "abilityText": "<b>Single use, recoil 1</b>, and your opponent gains <div><b>Drain [TA]</b></div> if they don't already control one. </b><br><br>If you have no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 2}.</div>~SINGLE~",
       "element": "Leaf",
       "statusFlg": true,
       "speed": 2,
@@ -43,11 +43,11 @@
     },
     {
       "abilityName": "Skewer",
-      "abilityText": "[Q] [Q]. <br><br>If this attack is buffed, this attack gains <b>spammable</b>. ~SPAM~",
+      "abilityText": "[Q] [Q], <b>pierce 1</b>. <br><br>If this attack is buffed, this attack gains <b>spammable</b>. ~PIERCE~~SPAM~",
       "element": "Rock",
       "attackType": "Melee",
       "statusFlg": false,
-      "attack": 2,
+      "attack": 1,
       "speed": 4,
       "draw": 0,
       "discard": 0,

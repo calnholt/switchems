@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Flicker",
-      "abilityText": "If the opponent has an <b>ailment</b> [STATUS], <div>[Q].</div>",
+      "abilityText": "If this attack is <b>faster</b>, remove two time counters to an opponent controlled <b>ailment [STATUS]</b>.~FASTER~",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
@@ -65,8 +65,8 @@
       "auraDuration": null
     },
     {
-      "buffName": "Fuel Up",
-      "buffText": "{\"stat\": \"ATK\", \"num\": 1}",
+      "buffName": "Kerosinge",
+      "buffText": "If this attack is ranged [RANGED], {\"stat\": \"ATK\", \"num\": 2}.",
       "auraDuration": null
     }
   ],
@@ -77,7 +77,7 @@
   "teamAura": {
     "name": "Curse",
     "text": "At the end of the turn, [ROLL] [ARROW]</div> if 5 or greater, your active monster loses <div>1[HP].</div>~AURA~",
-    "duration": 5,
+    "duration": 3,
     "isAilment": true,
     "copies": 3
   },

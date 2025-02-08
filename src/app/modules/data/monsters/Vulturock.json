@@ -68,7 +68,7 @@
     },
     {
       "buffName": "Self Defense",
-      "buffText": "This monster heals 1[HP] and does not suffer <b>recoil</b> damage this turn. ~RECOIL~",
+      "buffText": "This monster does not suffer <b>recoil</b> damage this turn. ~RECOIL~",
       "lastUpdated": "Tue, 24 Jan 2023 15:15:45 GMT"
     },
     {

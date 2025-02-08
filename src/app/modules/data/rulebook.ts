@@ -286,7 +286,7 @@ export const rulebook: Array<RulebookSection> = [
                       text: 'Pre-Action Buffs',
                     },
                     {
-                      text: 'Standard Actions',
+                      text: 'Basic Actions',
                     },
                     {
                       text: 'Switch Actions',
@@ -327,7 +327,7 @@ export const rulebook: Array<RulebookSection> = [
       columns: 2,
       blocks: [
         {
-          text: 'During the Selection Phase, you will secretly place your action cube on one of the 8 spaces on your action board. These 8 actions are split into 3 groups: Monster Actions, Standard Actions, and Switch Actions.',
+          text: 'During the Selection Phase, you will secretly place your action cube on one of the 8 spaces on your action board. These 8 actions are split into 3 groups: Monster Actions, Basic Actions, and Switch Actions.',
         },
         {
             text: '<b>NOTE:</b> When you select any action, you must place your remaining hand face down behind your action screen on the Hand section.'

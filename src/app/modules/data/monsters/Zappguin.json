@@ -31,25 +31,28 @@
     },
     {
       "abilityName": "Vortex",
-      "abilityText": "This attack gains two [B] slots if the enemy monster has a [STATUS]. <br><br>{\"stat\": \"ATK\", \"num\": 1} for each [B] slot used.~STATUS~",
+      "abilityText": "{\"stat\": \"DEF\", \"num\": 1}.<br><br>If you don't control <b>Stun [TA]</b>, this attack gains +2[ATK].",
       "element": "Electric",
+      "attackType": "Melee",
       "statusFlg": false,
-      "attack": 2,
-      "speed": 6,
+      "attack": 1,
+      "speed": 4,
       "draw": 0,
-      "discard": 1,
+      "discard": 0,
       "buff": 1,
       "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
-      "abilityName": "Paralyze",
-      "abilityText": "<b>Stun [STATUS]</b>, <b>Crush 1[PQ]</b>. ~STUN~ ~CRUSH~",
+      "abilityName": "Recharge",
+      "abilityText": "If this attacks with 5 or more speed, [+].",
       "element": "Electric",
-      "statusFlg": true,
-      "speed": 7,
-      "draw": 1,
-      "discard": 0,
-      "buff": 0,
+      "attackType": "Ranged",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 3,
+      "draw": 0,
+      "discard": 1,
+      "buff": 2,
       "lastUpdated": "Tue, 24 Jan 2023 14:32:17 GMT"
     }
   ],
@@ -60,8 +63,8 @@
       "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
-      "buffName": "Resuscitate",
-      "buffText": "If the enemy monster is <div><b>weak</b> [WEAK]</div> to this attack's element, [Q] [Q] [Q]. If not, [Q] instead. ~EFFECTIVE~",
+      "buffName": "Zap",
+      "buffText": "If this attack is <div>melee [MELEE],</div> this attack gains <div>+2[ATK].</div>",
       "auraDuration": 0,
       "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
