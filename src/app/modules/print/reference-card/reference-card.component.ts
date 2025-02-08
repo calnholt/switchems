@@ -27,7 +27,7 @@ export class ReferenceCardComponent {
         'Buffs',
         'Switch actions',
         'Monster actions',
-        'Standard actions'
+        'Basic actions'
       ],
     },
     {

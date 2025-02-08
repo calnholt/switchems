@@ -40,25 +40,26 @@ export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
 export const TERM_KEYS = [`~WOUND~`, `~FLINCH~`, `~DRAIN~`, `~FATIGUE~`, `~CURSE~`,
-    `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~HEAVY~`, `~FASTER~`, `~SLOWER~`, '~SPECIAL~',
+    `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~HEAVY~`, `~FASTER~`, `~SLOWER~`, '~SPECIAL~', '~INSTANT~',
     `~GOOP~`, `~EXHAUST~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`, `~BELONGS~`, `~SPAM~`, `~AURA~`, `~STRENGTHEN~`, `~FRAIL~`, '~CAPTURE~', '~CRUSH~'] as const;
 export type TermCode = typeof TERM_KEYS[number];
 const termCodes = [
     new Term('Belongs', `~BELONGS~`, `A buff card <b>belongs</b> to a monster if the monster name on the bottom of the buff card matches.`),
     new Term('Weak', `~EFFECTIVE~`, `Monsters are <b>weak</b> to elements in the [WEAK] section of their monster card.`),
-    new Term('Faster', `~FASTER~`, `This action is <b>faster</b> if your opponent selects a standard action, or if both players select a monster action and yours resolves first.`),
+    new Term('Faster', `~FASTER~`, `This action is <b>faster</b> if your opponent selects a basic action, or if both players select a monster action and yours resolves first.`),
     new Term('Flinch', `~FLINCH~`, `Attacks with <b>flinch</b> prevent the enemy monster's attack action if this action is <b>faster.</b>`),
-    new Term('Pierce', '~PIERCE~', `Attacks with <b>pierce</b> ignore this amount of the enemy monster's <div>[DEF].</div> Multiple instances of pierce stack.`),
+    new Term('Pierce', '~PIERCE~', `Attacks with <b>pierce</b> remove this amount of the enemy monster's <div>[DEF].</div> Multiple instances of pierce stack.`),
     new Term('Recoil', `~RECOIL~`, `This monster suffers this amount of <b>recoil</b> damage to itself after the attack resolves. Multiple instances of recoil stack.`),
     new Term('Resistant', `~RESIST~`, `Monsters are <b>resistant</b> to elements in the [RESIST] section of their monster card.`),
     new Term('Single Use', `~SINGLE~`, `<b>Single use</b> actions remain disabled until switched out, as denoted by [SINGLE].`),
-    new Term('Slower', `~SLOWER~`, `This action is <b>slower</b> if your opponent selects a switch action, or if both players select a monster action and yours resolves second.`),
+    new Term('Slower', `~SLOWER~`, `This action is <b>slower</b> if your opponent selects a basic action, or if both players select a monster action and yours resolves second.`),
     new Term('Spammable', `~SPAM~`, `<b>Spammable</b> actions do not become disabled.`),
     new Term('Heavy', `~HEAVY~`, `<b>Heavy's</b> require and use two [B] slots.`),
     new Term('Switches In', `~SWITCH~`, `<b>Switch in</b> abilities also trigger at the start of the game and following a monster KO.`),
     new Term('Team Aura', '~AURA~', '<b>Team aura</b> [TA] – At the end of your turn, put a time counter on this. If the number of time counters equals its duration, discard this.'),
     new Term('Crush', '~CRUSH~', '<b>Crush X</b> - Remove X [PQ] of the same type of your choice from your opponent.'),
     new Term('Special', '~SPECIAL~', 'You cannot apply stat cubes [PQ] to <b>special</b> [SPECIAL] actions.'),
+    new Term('Instant', '~INSTANT~', '<b>Instant</b> buffs can be played during the apply buffs phase (after reveal). They still require buff slots.'),
 ];
 export const TERM_CODES = termCodes.sort((a,b) => a.name.localeCompare(b.name));
 

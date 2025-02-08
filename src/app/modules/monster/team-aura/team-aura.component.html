@@ -11,7 +11,7 @@
     <div class="text-container ability">
       <div class="team-aura-container">
         <div *ngIf="teamAura.duration !== 'INFINITE'">{{ teamAura.duration }} </div>
-        <img *ngIf="teamAura.duration === 'INFINITE'" src="{{imageService.getImg('infinity')}}">
+        <!-- <img *ngIf="teamAura.duration === 'INFINITE'" src="{{imageService.getImg('infinity')}}"> -->
         <img  src="{{imageService.getImg('aura')}}">
       </div>
       <div [innerHTML]="getAbilityText(teamAura.text)" class="ta-text"></div>

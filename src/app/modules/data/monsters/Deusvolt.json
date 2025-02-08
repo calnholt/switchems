@@ -6,70 +6,74 @@
   "actions": [
     {
       "abilityName": "Shock",
-      "abilityText": "",
+      "abilityText": "If all buff slots are used, <div>{\"stat\": \"SPD\", \"num\": 2}.</div>",
       "element": "Electric",
       "attackType": "Melee",
       "statusFlg": false,
-      "attack": 2,
-      "speed": 5,
-      "buff": 2
-    },
-    {
-      "abilityName": "Charge Up",
-      "abilityText": "{\"stat\": \"ATK\", \"num\": 2}",
-      "element": "Electric",
-      "statusFlg": true,
-      "speed": 8,
-      "draw": 1
-    },
-    {
-      "abilityName": "Leaf Burst",
-      "abilityText": "",
-      "element": "Leaf",
-      "attackType": "Ranged",
-      "statusFlg": false,
-      "attack": 5,
-      "speed": 3,
-      "discard": 2,
+      "attack": 1,
+      "speed": 7,
       "buff": 2
     },
     {
       "abilityName": "Gnaw",
-      "abilityText": "If this attack is <b>faster</b>, heal <div>2[HP].</div>~FASTER~",
+      "abilityText": "If all buff slots are used, heal <div>2[HP].</div>",
       "element": "Leaf",
       "attackType": "Melee",
       "statusFlg": false,
-      "attack": 3,
+      "attack": 2,
       "speed": 4,
       "discard": 1,
-      "buff": 1
+      "buff": 2
+    },
+    {
+      "abilityName": "Leaf Burst",
+      "abilityText": "If the opponent has any [DEF], this attack deals no damage.",
+      "element": "Leaf",
+      "attackType": "Ranged",
+      "statusFlg": false,
+      "attack": 5,
+      "speed": 7,
+      "discard": 2,
+      "buff": 0
+    },
+    {
+      "abilityName": "Charge Up",
+      "abilityText": "{\"stat\": \"ATK\", \"num\": 2}.<br><br>Gain <b>Carry your Cross [TA]</b> if you don't already control one.",
+      "element": "Electric",
+      "statusFlg": true,
+      "speed": 8,
+      "draw": 1
     }
   ],
   "buffs": [
     {
-      "buffName": "Minor Blessing",
-      "buffText": "This attack gains +1[ATK].",
+      "buffName": "Sword or Shield",
+      "buffText": "This attack gains +1[ATK].<br><br><b>Instant</b> [ARROW] This monster gains <div>+1[DEF]</div> this turn.~INSTANT~",
       "auraDuration": null
     },
     {
-      "buffName": "Major Blessing",
-      "buffText": "If this attack is <div>melee [MELEE],</div> this attack gains <div>+2[ATK].</div>",
+      "buffName": "Shield or Sword",
+      "buffText": "This monster gains +1[DEF] this turn.<br><br><b>Instant</b> [ARROW] This attack gains <div>+1[ATK].</div>~INSTANT~",
       "auraDuration": null
     },
     {
-      "buffName": "Minor Shield",
-      "buffText": "This monster gains +1[DEF].",
+      "buffName": "Burst of Speed",
+      "buffText": "<b>Heavy</b>.<br><br>{\"stat\": \"SPD\", \"num\": 2}.<br><br><b>Instant</b> [ARROW] This attack gains <div>+2[SPD].</div>~HEAVY~~INSTANT~",
       "auraDuration": null
     },
     {
-      "buffName": "Major Shield",
-      "buffText": "If this attack is <div>ranged [RANGED],</div> this attack gains <div>+2[DEF].</div>",
+      "buffName": "Crushing Defense",
+      "buffText": "<b>Heavy</b>.<br><br>{\"stat\": \"DEF\", \"num\": 2}.<br><br><b>Instant</b> [ARROW] This attack gains <b>pierce 2</b>.~HEAVY~~INSTANT~~PIERCE~",
       "auraDuration": null
     }
   ],
   "hp": 8,
   "monsterName": "Deusvolt",
   "initiative": 55,
-  "abilityText": "When this monster <b>switches in</b>, {\"stat\": \"SPD\", \"num\": 2}.~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, gain <div><b>Carry your Cross [TA]</b>.</div>~SWITCH~",
+  "teamAura": {
+    "name": "Carry your Cross",
+    "text": "When you apply a <b>heavy</b> buff, it only uses one buff slot and discard this."
+  },
   "imageFlg": true
 }
