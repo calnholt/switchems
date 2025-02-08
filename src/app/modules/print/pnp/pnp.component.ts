@@ -1,8 +1,9 @@
 import { Action } from 'src/app/modules/monster/model/monster';
-import { STANDARD_BUFFS, PLAYER_BOARD_TEXT } from './../../../types/dataTypes';
+import { PLAYER_BOARD_TEXT } from './../../../types/dataTypes';
 import { MonsterComplete, Buff, Monster } from './../../monster/model/monster';
-import { ToolbarService } from './../../common/components/toolbar/toolbar.service';
+import { ToolbarService } from 'card-builder-framework';
 import { Component, OnInit } from '@angular/core';
+import { convertFromJSON } from '../../import/json-to-obj';
 
 @Component({
   selector: 'app-pnp',
@@ -24,18 +25,20 @@ export class PnpComponent implements OnInit {
     this.count = 0;
     const cache = JSON.parse(localStorage.getItem('allMonsters'));
     this.extraFlg = (cache.name === 'PRINT_EXTRA');
-    const allMonsters = cache.token;
+    const allMonsters: Array<MonsterComplete> = convertFromJSON(cache.token, true);
     const allCards = [];
     allMonsters.forEach(m => {
+      let isReference = m.referenceFlg;
       if (m.isSelected) {
+        //let monster: Monster = Object.assign({}, m);
         m['isMonster'] = true;
         m.referenceFlg = false;
         allCards.push(m);
-          // if (m.referenceFlg) {
-          //   const ref: Monster = Object.assign({}, m);
-          //   ref.referenceFlg = false;
-          //   allCards.push(ref);
-          // }
+      }
+      if (isReference) {
+        const ref: Monster = Object.assign({}, m);
+        ref.referenceFlg = true;
+        allCards.push(ref);
       }
       m.actions.forEach(a => {
         if (a.isSelected) {
@@ -50,25 +53,48 @@ export class PnpComponent implements OnInit {
         }
       });
     });
-    // if (this.extraFlg) {
-    //   STANDARD_BUFFS.forEach(b => {
-    //     b['isBuff'] = true;
-    //     allCards.push(b);
-    //     allCards.push(b);
-    //   });
-    //   // adds player boards
-    //   for (let i = 0; i < 4; i++) {
-    //     PLAYER_BOARD_TEXT.forEach(txt => allCards.push({isPlayerBoard: true, text: txt}));
-    //   }
-    // }
+    allCards.push({ isActionBoard: true });
+    allCards.push({ isActionBoard: true });
+    // allCards.push({ isReferenceCard: true });
+    // allCards.push({ isReferenceCard: true });
+    // allCards.push({ isSwitchReferenceCard: true });
+    // allCards.push({ isSwitchReferenceCard: true });
+    // allCards.push({ isStatusReferenceCard: true });
+    // allCards.push({ isStatusReferenceCard: true });
+    allCards.push({ isStatCubeBoard: true });
+    allCards.push({ isStatCubeBoard: true });
+    if (this.extraFlg) {
+      // adds player boards
+      allCards.push({ isActionBoard: true });
+      allCards.push({ isActionBoard: true });
+      allCards.push({ isReferenceCard: true });
+      allCards.push({ isReferenceCard: true });
+      allCards.push({ isSwitchReferenceCard: true });
+      allCards.push({ isSwitchReferenceCard: true });
+      allCards.push({ isStatusReferenceCard: true });
+      allCards.push({ isStatusReferenceCard: true });
+      allCards.push({ isStatCubeBoard: true });
+      allCards.push({ isStatCubeBoard: true });
+
+      // GOOP
+      for (let i = 0; i < 4; i++) {
+        allCards.push({ isGoop: true });
+      }
+    }
+    const extraSlots = allCards.length % 4;
+    if (extraSlots) {
+      for (let i = 0; i < extraSlots; i++) {
+        allCards.push({ isExtraSlot: true });
+      }
+    }
     this.allCards = allCards;
     this.count = 0;
   }
 
   isPageBreak() {
     this.count++;
-    if ([5, 6, 7, 8].includes(this.count)) {
-      if (this.count === 8) {
+    if ([4, 5, 6, 7].includes(this.count)) {
+      if (this.count === 7) {
         this.count = 0;
       }
       return true;

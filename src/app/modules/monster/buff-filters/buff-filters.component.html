@@ -6,16 +6,6 @@
     </mat-form-field>
   </div>
   <div class="col-12 form-element">
-    <dropdown
-      style="width:inherit;"
-      [label]="'Timing'"
-      [model]="buff"
-      [property]="'timing'"
-      [options]="buffTimings"
-      (selectionChange)="setNoneText($event)">
-    </dropdown>
-  </div>
-  <div *ngIf="buff.timing !== 'None'" class="col-12 form-element">
     <mat-form-field class="textarea" appearance="fill">
       <mat-label>Buff Text</mat-label>
       <textarea matInput 
@@ -23,27 +13,19 @@
         #autosize="cdkTextareaAutosize"
         cdkAutosizeMinRows="1"
         cdkAutosizeMaxRows="10"
-        (change)="setBuffText()"
         [(ngModel)]="buff.buffText">
       </textarea>
     </mat-form-field>
   </div>
   <div class="col-12 form-element">
-    <mat-checkbox [(ngModel)]="buff.critFlg">Critical?</mat-checkbox>
-  </div>
-  <div class="col-12 form-element">
-    <mat-checkbox [(ngModel)]="buff.flipEventFlg">Flip Event?</mat-checkbox>
-  </div>
-  <div *ngIf="buff.flipEventFlg" class="col-12 form-element">
     <mat-form-field class="textarea" appearance="fill">
-      <mat-label>Flip Event Text</mat-label>
-      <textarea matInput 
-        cdkTextareaAutosize
-        #autosize="cdkTextareaAutosize"
-        cdkAutosizeMinRows="1"
-        cdkAutosizeMaxRows="10"
-        [(ngModel)]="buff.flipEventText">
-      </textarea>
+      <mat-label>Aura Duration</mat-label>
+      <input matInput
+        min="0"
+        max="10"
+        type="number"
+        #input
+        [(ngModel)]="buff.auraDuration">
     </mat-form-field>
   </div>
 </div>

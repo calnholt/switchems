@@ -1,2 +1,9 @@
-<toolbar></toolbar>
-<router-outlet></router-outlet>
+<div id="app">
+  <toolbar
+    [title]="'Switchems!'"
+    [searchOptions]="searchOptions"
+    [tabs]="tabs"
+    [searchRoute]="'monster'"
+    (selectionChange)="goToPage($event)">
+  </toolbar>
+</div>

@@ -1,0 +1,85 @@
+{
+  "elements": [
+    "Water"
+  ],
+  "actions": [
+    {
+      "abilityName": "Grand Slam",
+      "abilityText": "If this monster has less [HP] than the enemy monster, this attack gains <b>recoil 3</b>. ~RECOIL~",
+      "element": "Rock",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 4,
+      "speed": 1,
+      "discard": 1,
+      "buff": 2,
+      "lastUpdated": "Thu, 26 Jan 2023 12:41:12 GMT"
+    },
+    {
+      "abilityName": "Splish Splash",
+      "abilityText": "If this monster has <div>5[HP]</div> or less, this attack gains <div>+2[ATK].<div>",
+      "element": "Water",
+      "attackType": "Ranged",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 3,
+      "discard": null,
+      "buff": 2,
+      "lastUpdated": "Thu, 26 Jan 2023 12:41:12 GMT"
+    },
+    {
+      "abilityName": "Consume",
+      "abilityText": "This monster heals <div>5[HP].</div>",
+      "element": "Water",
+      "statusFlg": true,
+      "attack": null,
+      "speed": 3,
+      "discard": 2,
+      "lastUpdated": "Thu, 26 Jan 2023 11:51:32 GMT"
+    },
+    {
+      "abilityName": "Big Boned",
+      "abilityText": "<b>Single use</b>. <br><br>This attack gains <div>+X[ATK],</div> where X is equal to the amount of [HP] this monster lost this turn. ~SINGLE~",
+      "element": "Water",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 2,
+      "discard": 1,
+      "buff": 1,
+      "lastUpdated": "Thu, 26 Jan 2023 12:00:46 GMT"
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Take It Easy",
+      "buffText": "<b>Heavy [B] [B].</b> \n<br><br>\nThis monster heals 1[HP]. If this monster has three or less[HP], this monster heals 3[HP] instead. ~HEAVY~ ",
+      "auraDuration": null,
+      "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
+    },
+    {
+      "buffName": "Water Slide",
+      "buffText": "Your monster attacks gain +1[SPD]. ~AURA~",
+      "auraDuration": 6,
+      "lastUpdated": "Thu, 26 Jan 2023 12:25:18 GMT"
+    },
+    {
+      "buffName": "Roll Over",
+      "buffText": "The enemy monster loses 1[HP].",
+      "auraDuration": null,
+      "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
+    },
+    {
+      "buffName": "Built Different",
+      "buffText": "This monster cannot be <b>flinched</b> this turn.~FLINCH~",
+      "auraDuration": null,
+      "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
+    }
+  ],
+  "monsterName": "Whailstrom",
+  "abilityText": "When this monster <b>switches in</b>, the enemy monster loses 1[HP]. ~SWITCH~",
+  "hp": 9,
+  "initiative": 5,
+  "imageFlg": true,
+  "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
+}
