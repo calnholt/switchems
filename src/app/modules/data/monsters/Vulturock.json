@@ -58,7 +58,7 @@
   "buffs": [
     {
       "buffName": "Beak Drill",
-      "buffText": "<b>Pierce 2</b>.~PIERCE~",
+      "buffText": "<b>Heavy</b>, <b>pierce 3</b>.~HEAVY~~PIERCE~",
       "lastUpdated": "Sat, 04 Sep 2021 12:51:49 GMT"
     },
     {

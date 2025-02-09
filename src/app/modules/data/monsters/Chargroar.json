@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Lightning Fang",
-      "abilityText": "If this attack is <b>faster</b>, this attack gains +3[ATK].~FASTER~",
+      "abilityText": "If this attack is <b>faster</b>, this attack gains +4[ATK].~FASTER~",
       "element": "Electric",
       "attackType": "Melee",
       "statusFlg": false,

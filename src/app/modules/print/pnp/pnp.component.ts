@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
 import { convertFromJSON } from '../../import/json-to-obj';
 import { MonsterService } from '../../monster/monster.service';
 import { GOOP } from '../../monster/extra-board/extra-board.component';
+import { BADGES } from '../../monster/badges/badges.component';
 
 export interface PnpCard {
   card?: any;
-  type: 'MONSTER' | 'ACTION' | 'BUFF' | 'REFERENCE' | 'AURA' | 'GOOP' | 'ACTION_BOARD' | 'STAT_CUBE_BOARD' | 'SPACER'
+  type: 'MONSTER' | 'ACTION' | 'BUFF' | 'REFERENCE' | 'AURA' | 'GOOP' | 'ACTION_BOARD' | 'STAT_CUBE_BOARD' | 'SPACER' | 'BADGE'
 }
 
 @Component({
@@ -78,6 +79,10 @@ export class PnpComponent implements OnInit {
     // for (let i = 0; i < 4; i++) {
     //   allCards.push({ isGoop: true });
     // }
+    // badges
+    BADGES.forEach(b => {
+      allCards.push({ card: b, type: 'BADGE' });
+    })
     const extraSlots = allCards.length % 4;
     if (extraSlots) {
       for (let i = 0; i < extraSlots; i++) {

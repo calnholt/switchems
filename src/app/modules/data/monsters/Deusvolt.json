@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Shock",
-      "abilityText": "If all buff slots are used, <div>{\"stat\": \"SPD\", \"num\": 2}.</div>",
+      "abilityText": "If a <b>heavy</b> buff is applied to this attack, this attack gains <div>+1[ATK].</div>",
       "element": "Electric",
       "attackType": "Melee",
       "statusFlg": false,
@@ -16,7 +16,7 @@
     },
     {
       "abilityName": "Gnaw",
-      "abilityText": "If all buff slots are used, heal <div>2[HP].</div>",
+      "abilityText": "If a <b>heavy</b> buff is applied to this attack, heal <div>2[HP].</div>",
       "element": "Leaf",
       "attackType": "Melee",
       "statusFlg": false,
@@ -42,7 +42,7 @@
       "element": "Electric",
       "statusFlg": true,
       "speed": 8,
-      "draw": 1
+      "draw": 0
     }
   ],
   "buffs": [
