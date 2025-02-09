@@ -86,6 +86,7 @@ export class Buff extends Card {
     buffName?: string = null;
     buffText: string = null;
     auraDuration?: number = null;
+    hideBuffIcon?: boolean = false;
 }
 
 export class Action extends Card {

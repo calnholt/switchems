@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Flicker",
-      "abilityText": "If this attack is <b>faster</b>, remove two time counters to an opponent controlled <b>ailment [STATUS]</b>.~FASTER~",
+      "abilityText": "If this attack is <b>faster</b>, remove up to two time counters from an opponent controlled <b>ailment [STATUS]</b>.~FASTER~",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
@@ -38,7 +38,7 @@
     },
     {
       "abilityName": "Spreading Curse",
-      "abilityText": "<div>{\"stat\": \"DEF\", \"num\": 1}.</div><br><br>If all of this action's buff slots are used, your opponent gains <div><b>Curse</b> [TA].</div>",
+      "abilityText": "<div>{\"stat\": \"DEF\", \"num\": 1}.</div><br><br> If all of this action's buff slots are used, your opponent gains <div><b>Curse</b> [TA].</div>",
       "element": "Death",
       "attackType": "Ranged",
       "statusFlg": false,
@@ -77,7 +77,7 @@
   "teamAura": {
     "name": "Curse",
     "text": "At the end of the turn, [ROLL] [ARROW]</div> if 5 or greater, your active monster loses <div>1[HP].</div>~AURA~",
-    "duration": 3,
+    "duration": 4,
     "isAilment": true,
     "copies": 3
   },

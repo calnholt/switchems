@@ -9,8 +9,13 @@
       <div [innerHTML]="getAbilityText(buff.buffText, false)" class="buff-text"></div>
     </div>
     <div class="buff-icon-container">
-      <img src="{{imageService.getImg('buff')}}">
-    </div>
+      <ng-container *ngIf="buff.hideBuffIcon">
+        <div style="font-size: 30px; font-weight: 900; left: 5px; bottom: 0px;">*</div>
+      </ng-container>
+      <ng-container *ngIf="!buff.hideBuffIcon">
+        <img src="{{imageService.getImg('buff')}}">
+      </ng-container>
+      </div>
     <div class="bottom-container">
       <img src="{{getMonsterImagePath()}}">
     </div>

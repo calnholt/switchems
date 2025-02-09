@@ -32,7 +32,7 @@
     },
     {
       "abilityName": "Hypercharge",
-      "abilityText": "{\"stat\": \"ATK\", \"num\": 3}<br><br>This monster gains <div>+1 [DEF]</div> this turn.",
+      "abilityText": "{\"stat\": \"ATK\", \"num\": 3}. <br><br>This monster gains <div>+1 [DEF]</div> this turn.",
       "element": "Electric",
       "statusFlg": true,
       "speed": 6,

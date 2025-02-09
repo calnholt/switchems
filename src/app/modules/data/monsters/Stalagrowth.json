@@ -17,7 +17,7 @@
     },
     {
       "abilityName": "Vine Whips",
-      "abilityText": "This attack gains <div>+1[ATK]</div> for each <b>ailment</b> [STATUS] the opponent controls.<br><br>If the enemy monster <b>switched in</b> this turn, your opponent gains <div><b>Drain [TA]</b></div> if they don't already control one.",
+      "abilityText": "This attack gains <div>+1[ATK]</div> for each <b>ailment</b> [STATUS] the opponent controls.<br><br> If the enemy monster <b>switched in</b> this turn, your opponent gains <div><b>Drain [TA]</b></div> if they don't already control one.",
       "element": "Leaf",
       "attackType": "Ranged",
       "statusFlg": false,

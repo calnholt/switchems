@@ -38,7 +38,7 @@
     },
     {
       "abilityName": "Charge Up",
-      "abilityText": "{\"stat\": \"ATK\", \"num\": 2}.<br><br>Gain <b>Carry your Cross [TA]</b> if you don't already control one.",
+      "abilityText": "{\"stat\": \"ATK\", \"num\": 2}.<br><br> Gain <b>Carry your Cross [TA]</b> if you don't already control one.",
       "element": "Electric",
       "statusFlg": true,
       "speed": 8,

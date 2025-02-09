@@ -71,7 +71,7 @@
     },
     {
       "buffName": "Built Different",
-      "buffText": "This monster cannot be <b>flinched</b> this turn.~FLINCH~",
+      "buffText": "This monster gains +1[DEF] cannot be <b>flinched</b> this turn.~FLINCH~",
       "auraDuration": null,
       "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
     }

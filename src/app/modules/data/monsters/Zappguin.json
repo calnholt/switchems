@@ -31,7 +31,7 @@
     },
     {
       "abilityName": "Vortex",
-      "abilityText": "{\"stat\": \"DEF\", \"num\": 1}.<br><br>If you don't control <b>Stun [TA]</b>, this attack gains +2[ATK].",
+      "abilityText": "{\"stat\": \"DEF\", \"num\": 1}.<br><br> If you don't control <b>Stun [TA]</b>, this attack gains +2[ATK].",
       "element": "Electric",
       "attackType": "Melee",
       "statusFlg": false,
