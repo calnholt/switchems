@@ -188,8 +188,10 @@
             font-family: "Beastformer";
             font-size: 25px;
             margin: auto;
-            bottom: 61px;
-            right: 5px;
+            bottom: 21px;
+            right: -4px;
+            z-index: 10;
+            filter: invert(100%);
             img {
                 height: 29px;
             }

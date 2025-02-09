@@ -1,13 +1,25 @@
 <div id="monster-reference">
-  <div class="card-container">
-    <div class="top-container">
-      <div class="name">{{monster.monsterName}}</div>
-      <div>
-        <img src="{{imageService.getHpImg(monster.hp)}}">
+  <div class="card-container {{getBackgroundImageCss()}}">
+    <div style="background-color: #ffffff9e; border-radius: 7px 7px 7px 7px; margin: 3px 3px 0px 3px; padding-bottom: 2px;">
+      <div class="top-container">
+        <div>
+          <img src="{{imageService.getHpImg(monster.hp)}}">
+        </div>
+        <div class="name">{{monster.monsterName}}</div>
       </div>
-    </div>
-    <div class="ability-text-container">
-      <div [innerHTML]="getAbilityText(monster.abilityText)" class="ability-text"></div>
+      <div class="monster-image">
+        <img src="{{getMonsterImagePath()}}">
+      </div>
+      <div class="d-flex" style="flex-direction: column;">
+        <ng-container *ngIf="monster.startOfGame">
+          <div class="ability-text-container" style="margin-bottom: 5px;">
+            <div [innerHTML]="getAbilityText(monster.startOfGame)" class="ability-text"></div>
+          </div>
+        </ng-container>
+        <div class="ability-text-container">
+          <div [innerHTML]="getAbilityText(monster.abilityText, true)" class="ability-text"></div>
+        </div>
+      </div>
     </div>
     <div class="action-container" *ngFor="let action of monster.actions">
       <div class="action-name">{{action.abilityName}}</div>

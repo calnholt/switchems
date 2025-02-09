@@ -13,7 +13,7 @@
     <div class="badge-image">
       <img [src]="img">
     </div>
-    <ng-container>
+    <ng-container *ngIf="usesList.length || roundsList.length">
       <div class="uses-rounds">
         <ng-container *ngIf="usesList.length">
           <div class="use-text">USES</div>

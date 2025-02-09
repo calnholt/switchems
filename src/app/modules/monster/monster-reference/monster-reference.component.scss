@@ -15,7 +15,6 @@
         .top-container{
             display: flex;
             padding: var(--container-padding);
-            justify-content: space-between;
             .name{
                 font-family: 'Beastformer';
                 font-size: 13px;
@@ -35,9 +34,18 @@
                 padding-right: 3px;
             }
         }
+        .monster-image {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            img {
+                height: 30px;
+            }
+        }
         .ability-text-container{
             padding: var(--container-padding);
             padding-top: 0px;
+            width: 200px;
             .ability-text{
                 font-size: var(--font-size);
                 line-height: 1;
@@ -82,6 +90,7 @@
                 border-top: none;
                 border-radius: 0px 0px 6px 6px;
                 font-family: $header-font;
+                background: #f2f2f2;
                 .ref-icon{
                     max-height: var(--icon-max-height);
                 }

@@ -4,4 +4,5 @@ export interface TeamAura {
   duration?: number | 'INFINITE';
   monsterName?: string;
   isAilment?: boolean;
+  copies?: number;
 }

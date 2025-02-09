@@ -14,7 +14,7 @@ export class AppComponent {
     constructor(
       private cardDataService: CardDataService, 
       private monsterService: MonsterService,
-      private router: Router,
+      public router: Router,
       ) { }
   
     ngOnInit() {

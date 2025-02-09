@@ -2,6 +2,13 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Buff, MonsterComplete } from '../model/monster';
 import { TeamAura } from '../team-aura/team-aura.model';
 
+export const GOOP: Buff = {
+  buffName: 'Goop',
+  buffText: `[Q] and return this card to your opponent (it is removed from your deck).<br><br>If this card is applied as a discard, <div>[ROLL] [ARROW]</div> if 4 or greater, your active monster loses <div>1[HP].</div>`,
+  monsterName: 'Oozygoopz',
+  hideBuffIcon: true,
+}
+
 @Component({
   selector: 'extra-board',
   templateUrl: './extra-board.component.html',
@@ -10,11 +17,7 @@ import { TeamAura } from '../team-aura/team-aura.model';
 export class ExtraBoardComponent implements OnInit {
   @Input() monster: MonsterComplete;
 
-  goop: Buff = {
-    buffName: 'Goop',
-    buffText: `[Q] and return this card to your opponent (it is removed from your deck).<br><br>If this card is applied as a discard, <div>[ROLL] [ARROW]</div> if 4 or greater, your active monster loses <div>1[HP].</div>`,
-    monsterName: 'Oozygoopz',
-  }
+  goop: Buff = GOOP;
 
   constructor() { }
 

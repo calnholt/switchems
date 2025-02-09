@@ -39,18 +39,14 @@ export const MODIFIER_OPTIONS_NEG = [0, -1, -2, -3, -4, -5, `X`];
 export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
-export const TERM_KEYS = [`~WOUND~`, `~FLINCH~`, `~DRAIN~`, `~FATIGUE~`, `~CURSE~`,
-    `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~HEAVY~`, `~FASTER~`, `~SLOWER~`, '~SPECIAL~', '~INSTANT~',
-    `~GOOP~`, `~EXHAUST~`, '~PIERCE~', `~RESIST~`, `~EFFECTIVE~`, `~BELONGS~`, `~SPAM~`, `~AURA~`, `~STRENGTHEN~`, `~FRAIL~`, '~CAPTURE~', '~CRUSH~'] as const;
+export const TERM_KEYS = [`~FLINCH~`, `~SINGLE~`, `~RECOIL~`, `~SWITCH~`, `~HEAVY~`, `~FASTER~`, `~SLOWER~`, '~SPECIAL~', '~INSTANT~',
+    `~GOOP~`, '~PIERCE~', `~SPAM~`, `~AURA~`, '~CRUSH~'] as const;
 export type TermCode = typeof TERM_KEYS[number];
 const termCodes = [
-    new Term('Belongs', `~BELONGS~`, `A buff card <b>belongs</b> to a monster if the monster name on the bottom of the buff card matches.`),
-    new Term('Weak', `~EFFECTIVE~`, `Monsters are <b>weak</b> to elements in the [WEAK] section of their monster card.`),
     new Term('Faster', `~FASTER~`, `This action is <b>faster</b> if your opponent selects a basic action, or if both players select a monster action and yours resolves first.`),
     new Term('Flinch', `~FLINCH~`, `Attacks with <b>flinch</b> prevent the enemy monster's attack action if this action is <b>faster.</b>`),
-    new Term('Pierce', '~PIERCE~', `Attacks with <b>pierce</b> remove this amount of the enemy monster's <div>[DEF].</div> Multiple instances of pierce stack.`),
+    new Term('Pierce', '~PIERCE~', `Attacks with <b>pierce</b> remove this amount of [DEF] from the enemy monster. Multiple instances of pierce stack.`),
     new Term('Recoil', `~RECOIL~`, `This monster suffers this amount of <b>recoil</b> damage to itself after the attack resolves. Multiple instances of recoil stack.`),
-    new Term('Resistant', `~RESIST~`, `Monsters are <b>resistant</b> to elements in the [RESIST] section of their monster card.`),
     new Term('Single Use', `~SINGLE~`, `<b>Single use</b> actions remain disabled until switched out, as denoted by [SINGLE].`),
     new Term('Slower', `~SLOWER~`, `This action is <b>slower</b> if your opponent selects a basic action, or if both players select a monster action and yours resolves second.`),
     new Term('Spammable', `~SPAM~`, `<b>Spammable</b> actions do not become disabled.`),
