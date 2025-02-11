@@ -51,7 +51,7 @@
   "buffs": [
     {
       "buffName": "Purrsuation",
-      "buffText": "<b>Heavy</b>. Your opponent's selected monster action gains <b>single use [SINGLE]</b>.~HEAVY~~SINGLE~"
+      "buffText": "<b>Heavy</b>. Your opponent's selected monster action gains <b>single use</b>.~HEAVY~~SINGLE~"
     },
     {
       "buffName": "Time Flies",
@@ -73,8 +73,8 @@
   "imageFlg": true,
   "teamAura": {
     "name": "Infatuation",
-    "text": "You cannot perform switch actions.~AURA~",
-    "duration": 3,
+    "text": "You cannot select switch actions on your action board.~AURA~",
+    "duration": 4,
     "isAilment": true
   }
 }

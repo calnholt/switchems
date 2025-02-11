@@ -48,22 +48,22 @@
   "buffs": [
     {
       "buffName": "Sword or Shield",
-      "buffText": "This attack gains +1[ATK].<br><br><b>Instant</b> [ARROW] This monster gains <div>+1[DEF]</div> this turn.~INSTANT~",
+      "buffText": "This attack gains +1[ATK].<br><br><b>Instant</b> [ARROW] This monster gains <div>+1[DEF]</div> this turn instead.~INSTANT~",
       "auraDuration": null
     },
     {
       "buffName": "Shield or Sword",
-      "buffText": "This monster gains +1[DEF] this turn.<br><br><b>Instant</b> [ARROW] This attack gains <div>+1[ATK].</div>~INSTANT~",
+      "buffText": "This monster gains +1[DEF] this turn.<br><br><b>Instant</b> [ARROW] This attack gains <div>+1[ATK]</div> instead.~INSTANT~",
       "auraDuration": null
     },
     {
       "buffName": "Burst of Speed",
-      "buffText": "<b>Heavy</b>.<br><br>{\"stat\": \"SPD\", \"num\": 2}.<br><br><b>Instant</b> [ARROW] This attack gains <div>+2[SPD].</div>~HEAVY~~INSTANT~",
+      "buffText": "<b>Heavy</b>.<br><br>{\"stat\": \"SPD\", \"num\": 2}.<br><br><b>Instant</b> [ARROW] This attack gains <div>+2[SPD]</div> instead.~HEAVY~~INSTANT~",
       "auraDuration": null
     },
     {
       "buffName": "Crushing Defense",
-      "buffText": "<b>Heavy</b>.<br><br>{\"stat\": \"DEF\", \"num\": 2}.<br><br><b>Instant</b> [ARROW] This attack gains <b>pierce 2</b>.~HEAVY~~INSTANT~~PIERCE~",
+      "buffText": "<b>Heavy</b>.<br><br>{\"stat\": \"DEF\", \"num\": 2}.<br><br><b>Instant</b> [ARROW] This attack gains <b>pierce 2</b> instead.~HEAVY~~INSTANT~~PIERCE~",
       "auraDuration": null
     }
   ],

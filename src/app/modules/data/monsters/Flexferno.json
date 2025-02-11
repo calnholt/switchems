@@ -85,7 +85,7 @@
   "imageFlg": true,
   "teamAura": {
     "name": "Wound",
-    "duration": 3,
+    "duration": 4,
     "text": "Your opponent's melee [MELEE] attacks gain <b>pierce 2.</b>~PIERCE~~AURA~",
     "isAilment": true
   },

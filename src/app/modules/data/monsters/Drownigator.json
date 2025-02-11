@@ -10,7 +10,7 @@
       "element": "Death",
       "statusFlg": true,
       "speed": 8,
-      "draw": 1,
+      "draw": 0,
       "discard": 0,
       "buff": 0,
       "lastUpdated": "Tue, 24 Jan 2023 13:29:13 GMT"
@@ -63,7 +63,7 @@
     },
     {
       "buffName": "Famished",
-      "buffText": "Discard up to 2 of your [PQ] and heal this monster that much.",
+      "buffText": "Discard up to 2 of your [PQ] that are not being used and heal this monster that much.",
       "lastUpdated": "Tue, 24 Jan 2023 13:20:19 GMT"
     },
     {
@@ -85,8 +85,8 @@
   "imageFlg": true,
   "teamAura": {
     "name": "Fatigue",
-    "text": "When your active monster attacks, the attack gains <span><b>recoil X[ATK]</b></span>, where X is the number of buff slots used.~RECOIL~~AURA~",
-    "duration": 3,
+    "text": "Whenever you attack, the attack gains <span><b>recoil X[ATK]</b></span>, where X is the number of buff slots used.~RECOIL~~AURA~",
+    "duration": 4,
     "isAilment": true
   },
   "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"

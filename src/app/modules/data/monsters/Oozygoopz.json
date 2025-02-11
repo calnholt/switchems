@@ -77,7 +77,7 @@
   "extraBoard": "GOOP",
   "teamAura": {
     "name": "Gooped Up",
-    "text": "If you attacked with a <b>faster</b> <div>melee [MELEE]</div> attack, shuffle a <b>Goop</b> card into your opponent's deck.~FASTER~~AURA~",
+    "text": "Whenever you attack with a <b>faster</b> <div>melee [MELEE]</div> attack, shuffle a <b>Goop</b> card into your opponent's deck.~FASTER~~AURA~",
     "duration": 4,
     "isAilment": false
   }

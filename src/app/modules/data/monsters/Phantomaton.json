@@ -18,7 +18,7 @@
     },
     {
       "abilityName": "Static Void",
-      "abilityText": "This monster gains +3[DEF] this turn. If this monster takes no damage this turn, add or remove a time counter from any <div<<b>team aura [TA]</b>.</div>",
+      "abilityText": "This monster gains +3[DEF] this turn. At the end of the turn, if this monster took no damage this turn, add or remove a time counter from any <div<<b>team aura [TA]</b>.</div>",
       "element": "Electric",
       "statusFlg": true,
       "speed": 7,
@@ -37,7 +37,7 @@
       "speed": 4,
       "draw": 0,
       "discard": 2,
-      "buff": 2,
+      "buff": 3,
       "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     },
     {
@@ -50,7 +50,7 @@
       "speed": 5,
       "draw": 0,
       "discard": 1,
-      "buff": 2,
+      "buff": 3,
       "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     }
   ],

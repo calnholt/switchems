@@ -53,7 +53,7 @@ const termCodes = [
     new Term('Heavy', `~HEAVY~`, `<b>Heavy's</b> require and use two [B] slots.`),
     new Term('Switches In', `~SWITCH~`, `<b>Switch in</b> abilities also trigger at the start of the game and following a monster KO.`),
     new Term('Team Aura', '~AURA~', '<b>Team aura</b> [TA] – At the end of your turn, put a time counter on this. If the number of time counters equals its duration, discard this.'),
-    new Term('Crush', '~CRUSH~', '<b>Crush X</b> - Remove X [PQ] of the same type of your choice from your opponent.'),
+    new Term('Crush', '~CRUSH~', `<b>Crush X</b> - Remove X [PQ] of the same type from your opponent's stat board that they aren't using.`),
     new Term('Special', '~SPECIAL~', 'You cannot apply stat cubes [PQ] to <b>special</b> [SPECIAL] actions.'),
     new Term('Instant', '~INSTANT~', '<b>Instant</b> buffs can be played during the apply buffs phase (after reveal). They still require buff slots.'),
 ];

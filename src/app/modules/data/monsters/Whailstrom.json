@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Consume",
-      "abilityText": "This monster heals <div>5[HP].</div>",
+      "abilityText": "[Q]. This monster heals <div>4[HP].</div>",
       "element": "Water",
       "statusFlg": true,
       "attack": null,
@@ -53,13 +53,13 @@
   "buffs": [
     {
       "buffName": "Take It Easy",
-      "buffText": "<b>Heavy [B] [B].</b> \n<br><br>\nThis monster heals 1[HP]. If this monster has three or less[HP], this monster heals 3[HP] instead. ~HEAVY~ ",
+      "buffText": "<b>Heavy</b>. \n<br><br>\nThis monster heals 1[HP]. If this monster has three or less[HP], this monster heals 3[HP] instead. ~HEAVY~ ",
       "auraDuration": null,
       "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
     },
     {
       "buffName": "Water Slide",
-      "buffText": "Your monster attacks gain +1[SPD]. ~AURA~",
+      "buffText": "Your attacks gain +1[SPD]. ~AURA~",
       "auraDuration": 6,
       "lastUpdated": "Thu, 26 Jan 2023 12:25:18 GMT"
     },
