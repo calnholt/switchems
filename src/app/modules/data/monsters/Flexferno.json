@@ -18,7 +18,7 @@
     },
     {
       "abilityName": "Burn",
-      "abilityText": "Your opponent gains <div><b>Wound</b> [TA]</div> if they don't already control one.<br><br> This monster gains <div>+1[DEF]</div> this turn.",
+      "abilityText": "Your opponent gains <div><b>Wound</b> [TA].</div><br><br> This monster gains <div>+1[DEF]</div> this turn.",
       "element": "Fire",
       "statusFlg": true,
       "speed": 8,
@@ -57,12 +57,12 @@
   "buffs": [
     {
       "buffName": "Sauna",
-      "buffText": "Your opponent gains <div><b>Wound</b> [TA]</div> if they don't already control one.",
+      "buffText": "Your opponent gains <div><b>Wound</b> [TA].</div>",
       "lastUpdated": "Tue, 24 Jan 2023 13:23:17 GMT"
     },
     {
       "buffName": "Inner Strength",
-      "buffText": "[Q] [Q]",
+      "buffText": "[Q] [Q].",
       "lastUpdated": "Sat, 04 Sep 2021 12:22:21 GMT"
     },
     {

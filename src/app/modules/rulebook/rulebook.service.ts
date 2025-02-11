@@ -467,14 +467,11 @@ export class RulebookService {
       id: 'ko',
       blocks: [
         {
-          text: 'Monsters are KO’d when their health points are reduced to 0. Whenever a monster is KO’d, remove all [NQ] from that monster’s <a href="stat_cube_board">stat cube board</a>, and the player controlling that monster selects one of their other monsters to be their new active monster after resolving Post Actions buffs.',
+          text: 'Monsters are KO’d when their health points [HP] are reduced to 0. Whenever a monster is KO’d, the player controlling that monster selects one of their other monsters to be their new active monster.',
         },
         {
-          text: '<b>NOTE:</b> In the instance where both monsters select a monster action, and the faster monster is KO’d from suffer damage before the enemy monster resolves their action, the slower monster’s action targets the KO’d monster.'
+          text: '<b>NOTE:</b> In the instance where both monsters select a monster action, and the faster monster is KO’d from taking damage before the slower monster resolves their action, two things can happen: if the slower action it was an attack, the attack does nothing; if the slower action was a special action, it resolves.'
         },
-        {
-          text: '<b>NOTE:</b> KO’d monsters can never recover HP.'
-        }
       ]
     },
     {

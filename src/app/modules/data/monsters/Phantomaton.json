@@ -86,8 +86,7 @@
   "teamAura": {
     "name": "Downloading...",
     "text": "You cannot apply Phantomaton buff cards as buffs.~AURA~",
-    "duration": 6,
-    "isAilment": true
+    "duration": 6
   },
   "lastUpdated": "Thu, 26 Jan 2023 18:07:17 GMT"
 }

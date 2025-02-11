@@ -55,7 +55,7 @@
     },
     {
       "buffName": "Time Flies",
-      "buffText": "You may add two time counters to any <b>team aura</b> or remove two time counters from any <b>team aura</b>."
+      "buffText": "You may add or remove two time counters from any <b>team aura</b>."
     },
     {
       "buffName": "Butterflies",
@@ -63,7 +63,7 @@
     },
     {
       "buffName": "Love Spell",
-      "buffText": "The opponent gains <div><b>Infatuation</b> [TA]</div> if they don't already control one."
+      "buffText": "The opponent gains <div><b>Infatuation</b> [TA],</div>"
     }
   ],
   "monsterName": "Blazamor",

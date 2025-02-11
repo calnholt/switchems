@@ -10,7 +10,7 @@ import { BADGES } from '../../monster/badges/badges.component';
 
 export interface PnpCard {
   card?: any;
-  type: 'MONSTER' | 'ACTION' | 'BUFF' | 'REFERENCE' | 'AURA' | 'GOOP' | 'ACTION_BOARD' | 'STAT_CUBE_BOARD' | 'SPACER' | 'BADGE'
+  type: 'MONSTER' | 'ACTION' | 'BUFF' | 'REFERENCE' | 'AURA' | 'GOOP' | 'ACTION_BOARD' | 'STAT_CUBE_BOARD' | 'SPACER' | 'BADGE' | 'TURN' | 'BUFF_BOARD' | 'DISCARD_BOARD' | 'HAND_BOARD'
 }
 
 @Component({
@@ -66,8 +66,13 @@ export class PnpComponent implements OnInit {
         allCards.push({ card: GOOP, type: 'BUFF' });
       }
     });
-    allCards.push({ type: 'ACTION_BOARD' });
-    allCards.push({ type: 'ACTION_BOARD' });
+    for (let i = 0; i < 4; i++) {
+      allCards.push({ type: 'ACTION_BOARD' });
+      allCards.push({ type: 'BUFF_BOARD' });
+      allCards.push({ type: 'DISCARD_BOARD' });
+      allCards.push({ type: 'HAND_BOARD' });
+    }
+
     // allCards.push({ type: 'STAT_CUBE_BOARD' @media print
     // allCards.push({ isReferenceCard: true });
     // allCards.push({ isReferenceCard: true });
@@ -80,9 +85,14 @@ export class PnpComponent implements OnInit {
     //   allCards.push({ isGoop: true });
     // }
     // badges
-    BADGES.forEach(b => {
-      allCards.push({ card: b, type: 'BADGE' });
-    })
+    for (let i = 0; i < 1; i++) {
+      BADGES.forEach(b => {
+        allCards.push({ card: b, type: 'BADGE' });
+      });
+    }
+    for (let i = 0; i < 4; i++) {
+      allCards.push({ type: 'TURN' });
+    }
     const extraSlots = allCards.length % 4;
     if (extraSlots) {
       for (let i = 0; i < extraSlots; i++) {

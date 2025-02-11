@@ -24,31 +24,24 @@
           [buff]="card.card">
         </monster-buff>
       </span>
-      <!-- <span>
-        <player-board
-          [text]="card.text">
-        </player-board>
-      </span>
-      <span>
-        <player-board
-          [text]="card.text">
-        </player-board>
-      </span> -->
       <span *ngIf="card.type === 'ACTION_BOARD'">
         <action-board></action-board>
+      </span>
+      <span *ngIf="card.type === 'BUFF_BOARD'">
+        <player-board [text]="'Buffs'"></player-board>
+      </span>
+      <span *ngIf="card.type === 'DISCARD_BOARD'">
+        <player-board [text]="'Discards'"></player-board>
+      </span>
+      <span *ngIf="card.type === 'HAND_BOARD'">
+        <player-board [text]="'Hand'"></player-board>
       </span>
       <span *ngIf="card.type === 'BADGE'">
         <badge [badge]="card.card"></badge>
       </span>
-      <!-- <span *ngIf="card.isReferenceCard">
+      <span *ngIf="card.type === 'TURN'">
         <reference-card></reference-card>
       </span>
-      <span *ngIf="card.isSwitchReferenceCard">
-        <switch-reference></switch-reference>
-      </span>
-      <span *ngIf="card.isStatusReferenceCard">
-        <status-reference></status-reference>
-      </span> -->
       <span *ngIf="card.type === 'STAT_CUBE_BOARD'">
         <stat-cube-board></stat-cube-board>
       </span>

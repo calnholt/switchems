@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Fatigue",
-      "abilityText": "Your opponent gains <b>Fatigue</b> [TA] if they don't already control one.<br><br>{\"stat\": \"DEF\", \"num\": 1}.",
+      "abilityText": "Your opponent gains <b>Fatigue</b> [TA].<br><br>{\"stat\": \"DEF\", \"num\": 1}.",
       "element": "Death",
       "statusFlg": true,
       "speed": 8,

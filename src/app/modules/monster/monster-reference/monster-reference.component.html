@@ -2,8 +2,11 @@
   <div class="card-container {{getBackgroundImageCss()}}">
     <div style="background-color: #ffffff9e; border-radius: 7px 7px 7px 7px; margin: 3px 3px 0px 3px; padding-bottom: 2px;">
       <div class="top-container">
-        <div>
+        <div class="icons-container">
           <img src="{{imageService.getHpImg(monster.hp)}}">
+          <div class="initiative-container">
+            <div>{{ monster.initiative }}</div>
+          </div>
         </div>
         <div class="name">{{monster.monsterName}}</div>
       </div>

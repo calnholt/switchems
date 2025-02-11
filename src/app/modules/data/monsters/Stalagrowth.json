@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Gravelcrust Grip",
-      "abilityText": "<b>Single use, recoil 1</b>, and your opponent gains <div><b>Drain [TA]</b></div> if they don't already control one. </b><br><br>If you have no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 2}.</div>~SINGLE~",
+      "abilityText": "<b>Recoil 1</b>, and your opponent gains <div><b>Drain [TA]</b>.</div> </b><br><br>If you have no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 2}.</div>~RECOIL~",
       "element": "Leaf",
       "statusFlg": true,
       "speed": 2,
@@ -17,7 +17,7 @@
     },
     {
       "abilityName": "Vine Whips",
-      "abilityText": "This attack gains <div>+1[ATK]</div> for each <b>ailment</b> [STATUS] the opponent controls.<br><br> If the enemy monster <b>switched in</b> this turn, your opponent gains <div><b>Drain [TA]</b></div> if they don't already control one.",
+      "abilityText": "This attack gains <div>+1[ATK]</div> for each <b>ailment</b> [STATUS] the opponent controls.<br><br> If the enemy monster <b>switched in</b> this turn, your opponent gains <div><b>Drain [TA]</b>.</div>",
       "element": "Leaf",
       "attackType": "Ranged",
       "statusFlg": false,
@@ -34,9 +34,9 @@
       "element": "Rock",
       "attackType": "Melee",
       "statusFlg": false,
-      "attack": 3,
+      "attack": 2,
       "speed": 7,
-      "draw": 0,
+      "draw": 1,
       "discard": 3,
       "buff": 0,
       "lastUpdated": "Tue, 24 Jan 2023 13:13:19 GMT"
