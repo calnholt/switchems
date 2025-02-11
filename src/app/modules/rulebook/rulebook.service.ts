@@ -462,7 +462,7 @@ export class RulebookService {
               text: 'Move all played buff cards and discards from you player board to your discard pile, and retrieve your facedown hand.'
             },
             {
-              text: 'Remove one time counter from your active <a href="buff_card">Team Aura</a> [TA], if applicable.',
+              text: 'Add one time counter from your active <a href="buff_card">Team Aura</a> [TA], if applicable.',
             },
             {
               text: 'Remove all stat cubes from the USING side of your stat cube board'
