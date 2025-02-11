@@ -2,6 +2,9 @@ import { Term, Image } from './../data/data';
 import { ElemType, TERM_CODES, IMAGE_CODES, Css, ImageCode } from './../../types/dataTypes';
 
 const getImageClass  = (str: string): string => {
+  if (str.toLowerCase().includes('badge')) {
+    return '';
+  }
   return str.substring(1, str.length - 1).toLowerCase();
 };
 

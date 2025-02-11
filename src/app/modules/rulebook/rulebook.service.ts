@@ -81,6 +81,9 @@ export class RulebookService {
             text: '4 Action Boards',
           },
           {
+            text: '4 Badge Cards',
+          },
+          {
             text: '4 <a href="stat_cube_board">Stat Cube Boards</a>',
           },
           {
@@ -246,6 +249,18 @@ export class RulebookService {
         },
         {
           text: `<b>NOTE:</b> Some abilities care if you or your opponent has an ailment.`,
+        },
+      ]
+    },
+    {
+      title: 'Badges [BADGE]',
+      id: 'badge',
+      blocks: [
+        {
+          text: 'At the start of the game, each player starts with a Badge card in play that grants them a variety of different abilities.',
+        },
+        {
+          text: 'Use these to develop strong teams of monsters!',
         },
       ]
     },

@@ -28,6 +28,7 @@ export type CardTypes = `MONSTER` | `ACTION` | `BUFF` | 'EXTRA';
 
 export const ICON_PATH: Path = `./assets/images`;
 export const SYMBOLS_PATH: Path = ICON_PATH + `/symbols/`;
+export const BADGE_PATH: Path = ICON_PATH + `/badges/`;
 export const ELEMENT_PATH_COLOR: Path = ICON_PATH + `/elements/color/`;
 export const ELEMENT_PATH_GRAY: Path = ICON_PATH + `/elements/gray/`;
 export const HP_PATH: Path = SYMBOLS_PATH + `/hp/`;
@@ -63,7 +64,7 @@ export const TERM_CODES = termCodes.sort((a,b) => a.name.localeCompare(b.name));
 const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[DEF]`, `[TA]`,
     `[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]', '[NQ]', '[PQ]', '[ARROW]',
     '[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]', '[ACORN]', '[HONEY]', '[WISH]', '[TORMENT]', '[FLIP]', '[DISABLE]', '[SINGLE]', '[HOLLOW]',
-    '[SR]', '[SL]', '[RESIST]', '[WEAK]', '[STR]', '[FRAIL]', '[GOOP]', `[Q]`, `[RANGED]`, `[MELEE]`, `[ROLL]`,
+    '[SR]', '[SL]', '[RESIST]', '[WEAK]', '[STR]', '[FRAIL]', '[GOOP]', `[Q]`, `[RANGED]`, `[MELEE]`, `[ROLL]`, `[BADGE]`
 ] as const;
 export type ImageCode = typeof IMAGE_KEYS[number];
 export const IMAGE_CODES = [
@@ -101,6 +102,7 @@ export const IMAGE_CODES = [
     new Image(`[RANGED]`, SYMBOLS_PATH + `ranged.png`),
     new Image(`[MELEE]`, SYMBOLS_PATH + `melee.png`),
     new Image(`[ROLL]`, SYMBOLS_PATH + `die.png`),
+    new Image(`[BADGE]`, BADGE_PATH + `badge.png`),
 ];
 
 //TODO: this should return an object with two properties: advElems and DisElems that are arrays of elemtypes
