@@ -1,0 +1,94 @@
+{
+  "elements": [
+    "Leaf",
+    "Rock"
+  ],
+  "actions": [
+    {
+      "abilityName": "Gravelcrust Grip",
+      "abilityText": "<b>Recoil 1</b>, and your opponent gains <div><b>Drain [TA]</b>.</div> </b><br><br>If you have no [DEF][PQ], <div>{\"stat\": \"DEF\", \"num\": 2}.</div>~RECOIL~",
+      "element": "Leaf",
+      "statusFlg": true,
+      "speed": 2,
+      "draw": 0,
+      "discard": 1,
+      "buff": 0,
+      "lastUpdated": "Tue, 24 Jan 2023 13:31:02 GMT"
+    },
+    {
+      "abilityName": "Vine Whips",
+      "abilityText": "This attack gains <div>+1[ATK]</div> for each <b>ailment</b> [STATUS] the opponent controls.<br><br> If the enemy monster <b>switched in</b> this turn, your opponent gains <div><b>Drain [TA]</b>.</div>",
+      "element": "Leaf",
+      "attackType": "Ranged",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 3,
+      "draw": 1,
+      "discard": 0,
+      "buff": 2,
+      "lastUpdated": "Tue, 24 Jan 2023 13:13:19 GMT"
+    },
+    {
+      "abilityName": "Pulverize",
+      "abilityText": "<b>Flinch.</b>~FLINCH~",
+      "element": "Rock",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 7,
+      "draw": 1,
+      "discard": 3,
+      "buff": 0,
+      "lastUpdated": "Tue, 24 Jan 2023 13:13:19 GMT"
+    },
+    {
+      "abilityName": "Skewer",
+      "abilityText": "[Q] [Q], <b>pierce 1</b>. <br><br>If this attack is buffed, this attack gains <b>spammable</b>. ~PIERCE~~SPAM~",
+      "element": "Rock",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 4,
+      "draw": 0,
+      "discard": 0,
+      "buff": 2,
+      "lastUpdated": "Fri, 26 Feb 2021 08:34:36 GMT"
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Regrowth",
+      "buffText": "This monster heals <div>1[HP].</div> If your opponent has an <b>ailment</b> [STATUS], this monster heals <div>2[HP]</div> instead.",
+      "lastUpdated": "Sat, 04 Sep 2021 12:47:52 GMT"
+    },
+    {
+      "buffName": "Mossy Overgrowth",
+      "buffText": "<b>Heavy.</b><br><br>This monster gains <div>+2[DEF]</div> this turn. ~HEAVY~",
+      "lastUpdated": "Sat, 04 Sep 2021 12:47:52 GMT"
+    },
+    {
+      "buffName": "Rock Polish",
+      "buffText": "{\"stat\": \"DEF\", \"num\": 2}.",
+      "lastUpdated": "Tue, 24 Jan 2023 13:31:02 GMT"
+    },
+    {
+      "buffName": "Life Siphon",
+      "buffText": "<b>Crush 2</b>[PQ]. If two cubes were removed this way, this monster heals <div>1[HP].</div> ~CRUSH~",
+      "lastUpdated": "Tue, 24 Jan 2023 13:13:52 GMT"
+    }
+  ],
+  "monsterId": 1,
+  "monsterName": "Stalagrowth",
+  "abilityText": "When this monster <b>switches in</b>, {\"stat\": \"DEF\", \"num\": 1}.</div> ~SWITCH~",
+  "hp": 9,
+  "promiseDescription": "<b>Stallagrowth</b> plays for the long game – slowly drain the enemy's health and stand your ground with bolstered defense.",
+  "initiative": 10,
+  "imageFlg": true,
+  "teamAura": {
+    "name": "Drain",
+    "text": "At the end of the turn, <div>[ROLL] [ARROW]</div> if 4 or greater, the enemy monster heals <div>1[HP]</div> and your active monster loses <div>1[HP].</div>~FASTER~",
+    "duration": 4,
+    "isAilment": true
+  },
+  "lastUpdated": "Tue, 24 Jan 2023 13:31:02 GMT"
+}

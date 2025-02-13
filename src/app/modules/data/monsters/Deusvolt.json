@@ -1,0 +1,79 @@
+{
+  "elements": [
+    "Electric",
+    "Leaf"
+  ],
+  "actions": [
+    {
+      "abilityName": "Shock",
+      "abilityText": "If a <b>heavy</b> buff is applied to this attack, this attack gains <div>+1[ATK].</div>",
+      "element": "Electric",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 7,
+      "buff": 2
+    },
+    {
+      "abilityName": "Gnaw",
+      "abilityText": "If a <b>heavy</b> buff is applied to this attack, heal <div>2[HP].</div>",
+      "element": "Leaf",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 4,
+      "discard": 1,
+      "buff": 2
+    },
+    {
+      "abilityName": "Leaf Burst",
+      "abilityText": "If the opponent has any [DEF], this attack deals no damage.",
+      "element": "Leaf",
+      "attackType": "Ranged",
+      "statusFlg": false,
+      "attack": 5,
+      "speed": 7,
+      "discard": 2,
+      "buff": 0
+    },
+    {
+      "abilityName": "Charge Up",
+      "abilityText": "{\"stat\": \"ATK\", \"num\": 2}.<br><br> Gain <div><b>Carry your Cross [TA]</b>.</div>~GAIN_AURA~",
+      "element": "Electric",
+      "statusFlg": true,
+      "speed": 8,
+      "draw": 0
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Sword or Shield",
+      "buffText": "This attack gains +1[ATK].<br><br><b>Instant</b> [ARROW] This monster gains <div>+1[DEF]</div> this turn instead.~INSTANT~",
+      "auraDuration": null
+    },
+    {
+      "buffName": "Shield or Sword",
+      "buffText": "This monster gains +1[DEF] this turn.<br><br><b>Instant</b> [ARROW] This attack gains <div>+1[ATK]</div> instead.~INSTANT~",
+      "auraDuration": null
+    },
+    {
+      "buffName": "Burst of Speed",
+      "buffText": "<b>Heavy</b>.<br><br>{\"stat\": \"SPD\", \"num\": 2}.<br><br><b>Instant</b> [ARROW] This attack gains <div>+2[SPD]</div> instead.~HEAVY~~INSTANT~",
+      "auraDuration": null
+    },
+    {
+      "buffName": "Crushing Defense",
+      "buffText": "<b>Heavy</b>.<br><br>{\"stat\": \"DEF\", \"num\": 2}.<br><br><b>Instant</b> [ARROW] This attack gains <b>pierce 2</b> instead.~HEAVY~~INSTANT~~PIERCE~",
+      "auraDuration": null
+    }
+  ],
+  "hp": 8,
+  "monsterName": "Deusvolt",
+  "initiative": 55,
+  "abilityText": "When this monster <b>switches in</b>, gain <div><b>Carry your Cross [TA]</b>.</div>~SWITCH~",
+  "teamAura": {
+    "name": "Carry your Cross",
+    "text": "When you apply a <b>heavy</b> buff, it only uses one buff slot and discard this."
+  },
+  "imageFlg": true
+}

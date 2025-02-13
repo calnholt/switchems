@@ -1,4 +1,4 @@
-import { ELEMENTS, ROLES } from './../../../types/dataTypes';
+import { ELEMENTS } from './../../../types/dataTypes';
 import { MonsterComplete } from 'src/app/modules/monster/model/monster';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -10,7 +10,6 @@ import { Component, OnInit, Input } from '@angular/core';
 export class MonsterCardFiltersComponent implements OnInit {
   @Input() monster: MonsterComplete;
   elementList = ELEMENTS;
-  roleList = ROLES;
 
   constructor() { }
 

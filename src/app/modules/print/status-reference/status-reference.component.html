@@ -1,0 +1,10 @@
+<div id="switch-reference">
+  <div class="card-container">
+    <div class="title" [innerHTML]="getFormattedText('Status Reference [STATUS]')"></div>
+    <ul class="section-body">
+      <li *ngFor="let item of items">
+        <span [innerHTML]="getFormattedText(item)"></span>
+      </li>
+    </ul>
+  </div>
+</div>
