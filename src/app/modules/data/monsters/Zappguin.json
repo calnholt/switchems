@@ -70,7 +70,7 @@
     },
     {
       "buffName": "High Voltage",
-      "buffText": "<b>Heavy</b>. Gain <b>Stun</b> [TA] if you don't already control one.~HEAVY~",
+      "buffText": "<b>Heavy</b>. Gain <b>Stun</b> [TA].~HEAVY~~GAIN_AURA~",
       "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
@@ -81,7 +81,7 @@
   ],
   "monsterId": 7,
   "monsterName": "Zappguin",
-  "abilityText": "When this monster <b>switches in</b>, you gain <b>Stun</b> <div>[TA]</div> if you do not already control one.~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, gain <b>Stun</b> <div>[TA].</div>~SWITCH~",
   "hp": 8,
   "initiative": 40,
   "imageFlg": true,

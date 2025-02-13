@@ -57,7 +57,7 @@
   "buffs": [
     {
       "buffName": "Sauna",
-      "buffText": "Your opponent gains <div><b>Wound</b> [TA].</div>",
+      "buffText": "Your opponent gains <div><b>Wound</b> [TA].</div>~GAIN_AURA~",
       "lastUpdated": "Tue, 24 Jan 2023 13:23:17 GMT"
     },
     {

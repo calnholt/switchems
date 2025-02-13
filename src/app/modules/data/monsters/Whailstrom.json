@@ -17,7 +17,7 @@
     },
     {
       "abilityName": "Splish Splash",
-      "abilityText": "If this monster has <div>5[HP]</div> or less, this attack gains <div>+2[ATK].<div>",
+      "abilityText": "If this monster has <div>4[HP]</div> or less, this attack gains <div>+2[ATK].<div>",
       "element": "Water",
       "attackType": "Ranged",
       "statusFlg": false,

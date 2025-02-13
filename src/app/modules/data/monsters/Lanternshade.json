@@ -4,23 +4,12 @@
   ],
   "actions": [
     {
-      "abilityName": "Flicker",
-      "abilityText": "If this attack is <b>faster</b>, remove up to two time counters from an opponent controlled <b>ailment [STATUS]</b>.~FASTER~",
-      "element": "Death",
-      "attackType": "Melee",
-      "statusFlg": false,
-      "attack": 1,
-      "buff": 1,
-      "draw": 1,
-      "speed": 4
-    },
-    {
       "abilityName": "Ignite",
       "abilityText": "This attack gains <div>+1[ATK]</div> for each <div><b>ailment</b> [STATUS]</div> the opponent has.",
       "element": "Fire",
       "attackType": "Ranged",
       "statusFlg": false,
-      "attack": 2,
+      "attack": 1,
       "speed": 4,
       "discard": 1,
       "buff": 2
@@ -33,8 +22,19 @@
       "statusFlg": false,
       "buff": 1,
       "discard": 2,
-      "attack": 3,
+      "attack": 2,
       "speed": 7
+    },
+    {
+      "abilityName": "Flicker",
+      "abilityText": "If this attack is <b>faster</b>, remove up to two time counters from an opponent controlled <b>ailment [STATUS]</b>.~FASTER~",
+      "element": "Death",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 1,
+      "buff": 1,
+      "draw": 1,
+      "speed": 4
     },
     {
       "abilityName": "Spreading Curse",
@@ -51,7 +51,7 @@
   "buffs": [
     {
       "buffName": "Infusion",
-      "buffText": "If this is paired with another buff, your opponent gains <div><b>Curse</b> [TA]</div>.",
+      "buffText": "If this is paired with another buff, your opponent gains <div><b>Curse</b> [TA]</div>.~GAIN_AURA~",
       "auraDuration": null
     },
     {

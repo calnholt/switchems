@@ -41,7 +41,7 @@ export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
 export const TERM_KEYS = [`~FLINCH~`, `~SINGLE~`, `~RECOIL~`, `~SWITCH~`, `~HEAVY~`, `~FASTER~`, `~SLOWER~`, '~SPECIAL~', '~INSTANT~',
-    `~GOOP~`, '~PIERCE~', `~SPAM~`, `~AURA~`, '~CRUSH~'] as const;
+    `~GOOP~`, '~PIERCE~', `~SPAM~`, `~AURA~`, '~CRUSH~', '~GAIN_AURA~'] as const;
 export type TermCode = typeof TERM_KEYS[number];
 const termCodes = [
     new Term('Faster', `~FASTER~`, `This action is <b>faster</b> if your opponent selects a basic action, or if both players select a monster action and yours resolves first.`),
@@ -57,6 +57,7 @@ const termCodes = [
     new Term('Crush', '~CRUSH~', `<b>Crush X</b> - Remove X [PQ] of the same type from your opponent's stat board that they aren't using.`),
     new Term('Special', '~SPECIAL~', 'You cannot apply stat cubes [PQ] to <b>special</b> [SPECIAL] actions.'),
     new Term('Instant', '~INSTANT~', '<b>Instant</b> buffs can be played during the apply buffs phase (after reveal). They still require buff slots.'),
+    new Term('Gain Aura', '~GAIN_AURA~', `Players can gain a [TA] if they don't already control it, or if there are multiple copies.`),
 ];
 export const TERM_CODES = termCodes.sort((a,b) => a.name.localeCompare(b.name));
 
