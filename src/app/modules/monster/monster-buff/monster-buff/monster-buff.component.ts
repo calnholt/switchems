@@ -1,8 +1,10 @@
+import { ImageService } from './../../../data/image.service';
 import { getAbilityText } from './../../../common/cards';
-import { SYMBOLS } from './../../../../constants';
+import { IMAGES, SYMBOLS } from './../../../../constants';
 import { Css, Path } from './../../../../types/dataTypes';
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { Buff } from '../../model/monster';
+import { MonsterService } from '../../monster.service';
 
 @Component({
   selector: 'monster-buff',
@@ -17,29 +19,21 @@ export class MonsterBuffComponent implements OnInit {
   TERM_CSS: Css = 'term';
   ABILITY_IMG_CSS: Css = 'term-img';
 
-  constructor() { }
+  constructor(
+    public imageService: ImageService,
+    private monsterService: MonsterService
+  ) { }
 
   ngOnInit() {
     this.buffTextHtml = this.buff.buffText;
-  }
-
-  getTimingRomanNumeral(): string {
-    if (this.buff.timing === 'Pre-Actions') {return 'I'; }
-    if (this.buff.timing === 'With Attack') {return 'II'; }
-    if (this.buff.timing === 'Post Actions') {return 'III'; }
-    if (this.buff.timing === 'None') {return 'X'; }
   }
 
   getBuffImagePath(): Path {
     return `${SYMBOLS}buff_gray.png`;
   }
 
-  getSuccessImagePath(): Path {
-    return `${SYMBOLS}success.png`;
-  }
-
-  getFailImagePath(): Path {
-    return `${SYMBOLS}fail.png`;
+  getMonsterImagePath(): Path {
+    return `${IMAGES}/monsters/${this.buff.monsterName.toLowerCase()}.png`;
   }
 
   getAbilityText(text: string, isFlipText: boolean): string {
@@ -47,6 +41,13 @@ export class MonsterBuffComponent implements OnInit {
       return '';
     }
     return getAbilityText(text, this.TERM_CSS, this.ABILITY_IMG_CSS);
+  }
+
+  getBackgroundImageCss(): string {
+    const elems =  this.monsterService.getMonsters().find(m => m.monsterName === this.buff.monsterName).elements.sort((a,b) => a.localeCompare(b));
+    let out = '';
+    elems.forEach(e => out += e.toLowerCase());
+    return out;
   }
 
 }

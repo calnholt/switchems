@@ -1,7 +1,7 @@
 import { SummaryComponent } from './summary/summary.component';
 import { PrintModule } from './../print/print.module';
 import { RouterModule } from '@angular/router';
-import { CommonComponentsModule } from './../common/common-components.module';
+import { CommonComponentsModule } from 'card-builder-framework';
 import { MaterialModule } from './../../material-module';
 import { ViewAllRoutes } from './view-all.routing';
 import { ViewAllFiltersComponent } from './view-all-filters/view-all-filters.component';

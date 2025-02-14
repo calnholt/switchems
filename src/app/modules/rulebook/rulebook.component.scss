@@ -1,0 +1,99 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#rulebook {
+    &.container {
+        padding-bottom: 50px;
+        text-align: justify;
+        .section {
+            // title styles
+            &:nth-child(-n+4) {
+                text-align: center;
+            }
+            &:first-child {
+                margin-top: 20px;
+                font-size: 18px;
+                .title { 
+                    text-decoration: unset;
+                    font-size: 100px;
+                    line-height: 110px;
+                    letter-spacing: -3px;
+                    .term-img {
+                        max-height: 17px;
+                    }
+                }
+                div {
+                    &:nth-child(3) {
+                        font-size: 12px; // version text
+                    }
+                    &:nth-child(4) {
+                        font-size: 16px; // game info text
+                    }
+                }
+            }
+            &.columns-2 {
+                grid-column: span 2;
+            }
+            .image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 19px;
+                #stat-cube-board,#action-board {
+                    .title {
+                        text-decoration: unset;
+                        line-height: unset;
+                        img {
+                            padding-left: unset;
+                        }
+                    }
+                }
+            }
+            background: #f1f1f1;
+            padding: 15px;
+            border-radius: 9px;
+            margin: 10px;
+            .title {
+                text-decoration: underline;
+                font-family: $header-font;
+                font-size: 40px;
+                text-align: center;
+                line-height: 50px;
+                .term-img {
+                    max-height: 40px;
+                }
+                img {
+                    padding-left: 10px;
+                }
+            }
+            .text{
+                margin-bottom: 10px;
+                .term-img {
+                    max-height: 17px;
+                }
+                .cubes {
+                    display: contents;
+                }
+            }
+        }
+        ul,ol{
+            margin-bottom: 10px;
+            .term-img {
+                max-height: 17px;
+            }
+        }
+        h1 {
+            font-family: $header-font;
+            text-decoration: underline;
+            margin-bottom: unset;
+            text-align: center;
+            font-size: 30px;
+            margin-top: 7px;
+            margin-bottom: 7px;
+            img {
+                max-height: 30px !important;
+                padding-left: 8px;
+            }
+        }
+    }
+}

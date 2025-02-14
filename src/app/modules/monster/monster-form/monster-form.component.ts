@@ -1,10 +1,10 @@
-import { loadMonster } from './../../import/json-to-obj';
-import { TERM_CODES, IMAGE_CODES, CardTypes, ROLES, ELEMENTS, Css } from './../../../types/dataTypes';
+import { TERM_CODES, IMAGE_CODES, CardTypes, ELEMENTS, Css } from './../../../types/dataTypes';
 import { MonsterComplete, Action, Buff } from './../model/monster';
 import { CdkTextareaAutosize } from '@angular/cdk/text-field';
 import { Component, ViewChild, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { getAbilityText } from './../../common/cards';
+import { MonsterService } from '../monster.service';
 
 @Component({
   selector: 'monster-form',
@@ -18,15 +18,16 @@ export class MonsterFormComponent implements OnInit {
   monster: MonsterComplete;
   originalMonster: MonsterComplete;
   panelOpenState: false;
-  termCodes = TERM_CODES;
   imageCodes = IMAGE_CODES;
+  termCodes = TERM_CODES;
   selectedCard: CardTypes = 'MONSTER';
   index: number = 0;
   TERM_CSS: Css = 'term';
   ABILITY_IMG_CSS: Css = 'term-img';
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    public monsterSerivce: MonsterService,
   ) {}
 
   ngOnInit() {
@@ -34,32 +35,42 @@ export class MonsterFormComponent implements OnInit {
       this.selectedCard = 'MONSTER';
       const monsterName: string = this.route.snapshot.paramMap.get('monsterName');
       if (monsterName === 'builder') {
-        this.monster = new MonsterComplete();
-        this.monster.hp = this.getRandomNumber(20) + 1;
-        this.monster.complexity = this.getRandomNumber(3) + 1;
-        this.monster.role = ROLES[this.getRandomNumber(ROLES.length)];
-        this.monster.elements = [ELEMENTS[this.getRandomNumber(ELEMENTS.length)]];
-        this.monster.actions.push(new Action(), new Action(), new Action(), new Action());
-        this.monster.actions.forEach(a => a.element = ELEMENTS[this.getRandomNumber(ELEMENTS.length)]);
-        this.monster.buffs.push(new Buff(), new Buff(), new Buff(), new Buff());
+        this.createRandomMonster();
       } else {
-        this.monster = loadMonster(monsterName);
+        this.monster = this.monsterSerivce.getMonster(monsterName);
       }
       this.originalMonster = Object.assign({}, this.monster);
     });
+  }
+
+  createRandomMonster() {
+    this.monster = new MonsterComplete();
+    this.monster.hp = this.getRandomNumber(20) + 1;
+    this.monster.savedFlg = true;
+    this.monster.elements = [ELEMENTS[this.getRandomNumber(ELEMENTS.length)]];
+    this.monster.actions.push(new Action(), new Action(), new Action(), new Action());
+    this.monster.actions.forEach(a => a.element = ELEMENTS[this.getRandomNumber(ELEMENTS.length)]);
+    this.monster.buffs.push(new Buff(), new Buff(), new Buff(), new Buff());
   }
 
   getRandomNumber(max: number) {
     return Math.floor(Math.random() * max);
   }
 
-  save() {
+  getLastUpdateFormatted(): string {
+    const locale = new Date(this.monster.lastUpdated).toLocaleString();
+    return locale.substr(0, locale.indexOf(','));
+  }
+
+  copy() {
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';
     selBox.style.top = '0';
     selBox.style.opacity = '0';
-    const json = JSON.stringify(this.getCleanMonster(), null, 2);
+    let monster = this.getCleanMonster(this.monster);
+    monster = this.setLastUpdated(monster);
+    const json = JSON.stringify(monster, null, 2);
     selBox.value = json;
     document.body.appendChild(selBox);
     selBox.focus();
@@ -68,16 +79,25 @@ export class MonsterFormComponent implements OnInit {
     document.body.removeChild(selBox);
   }
 
+  save() {
+    this.monsterSerivce.saveMonster(this.monster);
+  }
+
+  delete() {
+    this.monsterSerivce.deleteMonsterLocalStorage(this.monster);
+  }
+
   // a little janky but for now it's fine
-  getCleanMonster(): MonsterComplete {
-    const copy = JSON.parse(JSON.stringify(this.monster));
+  getCleanMonster(monster: MonsterComplete): MonsterComplete {
+    const copy = JSON.parse(JSON.stringify(monster));
     const guiProps = [
         'isSelected',
         'isHighlighted',
         'isHovered',
         'isExtraBoardHovered',
         'referenceFlg',
-      ];
+        'savedFlg',
+    ];
     const actionProps = ['monsterName', 'number'];
     const buffProps = ['monsterName'];
     guiProps.forEach(prop => {
@@ -90,6 +110,57 @@ export class MonsterFormComponent implements OnInit {
     return copy;
   }
 
+  setLastUpdated(monsterToCopy: MonsterComplete): MonsterComplete {
+    const savedMonsterComplete = this.getCleanMonster(this.monsterSerivce.getMonster(monsterToCopy.monsterName, true));
+    const offset = -300; // Timezone offset for EST in minutes.
+    const estDate = new Date(new Date().getTime() + offset * 60 * 1000);
+    const today = estDate.toUTCString();
+    // make comparable copies
+    // saved copies
+    const savedMonster = Object.assign({}, savedMonsterComplete);
+    const savedMonsterActions = Object.assign([], savedMonsterComplete.actions);
+    delete savedMonster.actions;
+    const savedMonsterBuffs = Object.assign([], savedMonsterComplete.buffs);
+    delete savedMonster.buffs;
+    // current copies
+    const currentMonster = Object.assign({}, monsterToCopy);
+    const currentMonsterActions = Object.assign([], currentMonster.actions);
+    delete currentMonster.actions;
+    const currentMonsterBuffs = Object.assign([], currentMonster.buffs);
+    delete currentMonster.buffs;
+    // compare each, and if differences, set lastUpdated property
+    // monster
+    if (!this.compareStringifiedJSON(currentMonster, savedMonster) || !savedMonsterComplete.lastUpdated) {
+      monsterToCopy.lastUpdated = today;
+    }
+    // actions
+    currentMonsterActions.forEach((currentAction, i) => {
+      const savedAction = savedMonsterActions[i];
+      if (!this.compareStringifiedJSON(currentAction, savedAction) || !savedAction.lastUpdated) {
+        monsterToCopy.actions[i].lastUpdated = today;
+      }
+    });
+    // buffs
+    currentMonsterBuffs.forEach((currentBuff, i) => {
+      const savedBuff = savedMonsterBuffs[i];
+      if (!this.compareStringifiedJSON(currentBuff, savedBuff) || !savedBuff.lastUpdated) {
+        monsterToCopy.buffs[i].lastUpdated = today;
+      }
+    });
+    return monsterToCopy;
+  }
+
+  deletePropertyFromAllCards(property: string, monster: MonsterComplete): MonsterComplete {
+    delete monster[property];
+    monster.actions.forEach(a => delete a[property]);
+    monster.buffs.forEach(b => delete b[property]);
+    return monster;
+  }
+
+  compareStringifiedJSON(a: any, b: any): boolean {
+    return JSON.stringify(a) === JSON.stringify(b);
+  }
+
   selectCard(selection: CardTypes, index: number) {
     this.selectedCard = selection;
     this.index = index;
@@ -98,4 +169,65 @@ export class MonsterFormComponent implements OnInit {
   getPromiseText() {
     return getAbilityText(this.monster.promiseDescription, this.TERM_CSS, this.ABILITY_IMG_CSS);
   }
+
+  getTermText(term: string): string {
+    return getAbilityText(term, this.TERM_CSS, this.ABILITY_IMG_CSS);
+  }
+
+  discord() {
+    var request = new XMLHttpRequest();
+    request.open("POST", "https://discord.com/api/webhooks/1067532843514871861/G3iAcjQwcxQy23VoIsLpn2qb8e1bNDr3Hq__7vOWEzeLVW78jIoWehus6BmWfvtVRD5w");
+
+    request.setRequestHeader('Content-type', 'application/json');
+    let now = new Date();
+    var myEmbed = {
+      title: `Switchems! Card Changelog ${now.getMonth()+1}/${now.getDate()}/${now.getFullYear()}`,
+      description: this.getWeeklyUpdatedText(),
+      color: this.hexToDecimal("#ff0000")
+    }
+
+    var params = {
+      username: "Mr. Update Alert 3000",
+      embeds: [myEmbed]
+    }
+
+    request.send(JSON.stringify(params));
+  }
+
+  getWeeklyUpdatedText(): string {
+    let out = "";
+    var date = new Date();
+    date.setDate(date.getDate()-7);
+    let cards = this.monsterSerivce.getCardsLastUpdatedByDate(date);
+    let lastMonsterName = '';
+    cards.forEach(card => {
+      if (lastMonsterName != card.monsterName) {
+        lastMonsterName = card.monsterName;
+        out += `**${this.getLinkToMonster(card.monsterName)}**:\n`;
+      }
+      if (card instanceof MonsterComplete) {
+        out += `+ ${card.monsterName} - [Monster]`;
+      }
+      if (card instanceof Action) {
+        out += `+ ${card.abilityName} - [Action]`;
+      }
+      if (card instanceof Buff) {
+        out += `+ ${card.buffName} - [Buff]`;
+      }
+      out += '\n';
+    });
+    return out;
+  }
+
+  hexToDecimal(hex) {
+    return parseInt(hex.replace("#",""), 16)
+  }
+
+  getLinkToMonster(monsterName: string): string {
+    let link = 'http://calnholt.github.io/switchems/monster/' + monsterName;
+    return `[${monsterName}](${link})`;
+  }
+
+
+
 }

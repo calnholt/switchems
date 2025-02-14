@@ -1,0 +1,20 @@
+#rulebook-buff {
+    position: relative;
+    .num {
+        position: absolute;
+        z-index: 20;
+        transform: scale(0.4);
+        &.num-1 {
+            top: -24px;
+            left: -56px;
+        }
+        &.num-2 {
+            top: 15px;
+            left: -49px;
+        }
+        &.num-3 {
+            top: 294px;
+            left: 203px;
+        }
+    }
+}

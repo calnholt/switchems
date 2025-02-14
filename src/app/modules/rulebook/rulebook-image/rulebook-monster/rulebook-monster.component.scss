@@ -1,0 +1,20 @@
+#rulebook-monster {
+    position: relative;
+    .num {
+        position: absolute;
+        z-index: 20;
+        transform: scale(0.4);
+        &.num-1 {
+            top: -37px;
+            left: -53px;
+        }
+        &.num-2 {
+            top: 0px;
+            left: -53px;
+        }
+        &.num-3 {
+            top: 226px;
+            left: -54px;
+        }
+    }
+}

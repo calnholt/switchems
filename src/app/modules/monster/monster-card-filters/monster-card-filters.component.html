@@ -6,12 +6,6 @@
     </mat-form-field>
   </div>
   <div class="col-12 form-element">
-    <mat-form-field appearance="fill">
-      <mat-label>Ability Name</mat-label>
-      <input matInput [(ngModel)]="monster.abilityName">
-    </mat-form-field>
-  </div>
-  <div class="col-12 form-element">
     <dropdown
       style="width:inherit;"
       [label]="'Elements'"
@@ -19,15 +13,6 @@
       [property]="'elements'"
       [options]="elementList"
       [multi]="true">
-    </dropdown>
-  </div>
-  <div class="col-12 form-element">
-    <dropdown 
-      style="width:inherit;"
-      [label]="'Role'"
-      [model]="monster"
-      [property]="'role'"
-      [options]="roleList">
     </dropdown>
   </div>
   <div class="col-12 form-element">
@@ -50,17 +35,6 @@
         type="number"
         #input
         [(ngModel)]="monster.initiative">
-    </mat-form-field>
-  </div>
-  <div class="col-12 form-element">
-    <mat-form-field class="textarea" appearance="fill">
-      <mat-label>Complexity</mat-label>
-      <input matInput
-        min="1"
-        max="3"
-        type="number"
-        #input
-        [(ngModel)]="monster.complexity">
     </mat-form-field>
   </div>
   <div class="col-12 form-element">
