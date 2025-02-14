@@ -6,11 +6,11 @@
   "actions": [
     {
       "abilityName": "Lightning Fang",
-      "abilityText": "If this attack is <b>faster</b>, this attack gains +4[ATK].~FASTER~",
+      "abilityText": "If this attack is <b>faster</b>, this attack gains +3[ATK].~FASTER~",
       "element": "Electric",
       "attackType": "Melee",
       "statusFlg": false,
-      "attack": 4,
+      "attack": 5,
       "speed": 6,
       "draw": 0,
       "discard": 3,
@@ -25,7 +25,7 @@
       "statusFlg": false,
       "attack": 2,
       "speed": 7,
-      "draw": 1,
+      "draw": 0,
       "discard": 0,
       "buff": 1,
       "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
