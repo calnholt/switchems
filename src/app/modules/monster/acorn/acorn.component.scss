@@ -1,0 +1,57 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#acorn {
+    .card-container {
+        position: relative;
+        border: rgb(216, 216, 216) 2px solid;
+        border-radius: 11px;
+        height: $card-height;
+        width: $card-width;
+        background-color: #ffffff;
+        overflow: hidden;
+        font-size: 30px;
+        font-family: $header-font;
+        .acorn-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .circle {
+                height: 78px;
+                width: 78px;
+                background-color: #dbdbdb;
+                border-radius: 50%;
+                display: inline-block;
+                position: relative;
+                margin: 2px;
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    img {
+                        max-height: 30px;
+                    }
+                    .timing {
+                        font-size: 15px;
+                        width: 100%;
+                        text-align: center;
+                        display: unset;
+                        position: absolute;
+                    }
+                }
+                .acorn {
+                    img {
+                        max-height: 54px;
+                    }
+                }
+                .pierce {
+                    font-size: 17px;
+                    img {
+                        max-height: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

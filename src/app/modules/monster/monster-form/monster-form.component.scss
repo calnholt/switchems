@@ -32,6 +32,7 @@
     .save-button{
         margin-top: 25px;
         width: inherit;
+        background: white;
     }
 
     .hover-icons-container{
@@ -57,7 +58,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    font-family: $beastformer;
+                    font-family: $header-font;
                     font-size: 21px;
                     padding-top: 2px;
                 }

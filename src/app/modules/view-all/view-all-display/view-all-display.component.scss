@@ -2,28 +2,34 @@
 @import 'src/styles.scss';
 
 #display-all{
-    .hover-card-icon-container{
-        max-height: 34px;
-        padding: 5px;
+    .row {
+        justify-content: flex-start;
+    }
+    .hoverables {
+        margin: 10px 14px 0px 0px;
         .hover-card-icon{
-            height: 25px;
+            max-height: 31px;
+            padding: 0px 5px;
             width: 25px;
             background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            &.selected{
-                background-color: $purple;
+            height: 34px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px white solid;
+            background-color: #bbb;
+            &:first-child {
+                border-radius: 0px 5px 0px 0px;
             }
-            &.highlight{
+            &:last-child {
+                border-radius: 0px 0px 5px 0px;
+            }
+            &.highlight {
                 background-color: #b4e7ff;
             }
             .icon{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-family: $beastformer;
+                font-family: $header-font;
                 font-size: 21px;
-                padding-top: 2px;
             }
         }
         .hover-card-icon:hover{
