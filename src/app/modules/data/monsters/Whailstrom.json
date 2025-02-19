@@ -59,8 +59,8 @@
     },
     {
       "buffName": "Water Slide",
-      "buffText": "Your attacks gain +1[SPD]. ~AURA~",
-      "auraDuration": 6,
+      "buffText": "Your attacks gain +2[SPD]. ~AURA~",
+      "auraDuration": 2,
       "lastUpdated": "Thu, 26 Jan 2023 12:25:18 GMT"
     },
     {

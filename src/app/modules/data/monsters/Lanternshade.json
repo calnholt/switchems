@@ -9,19 +9,19 @@
       "element": "Fire",
       "attackType": "Ranged",
       "statusFlg": false,
-      "attack": 1,
+      "attack": 2,
       "speed": 4,
-      "discard": 1,
-      "buff": 2
+      "discard": 2,
+      "buff": 0
     },
     {
       "abilityName": "Expose Weakness",
-      "abilityText": "This attack gains <div>+1[ATK]</div> for each <div><b>ailment</b> [STATUS]</div> the opponent has.",
+      "abilityText": "<b>Pierce 1</b>.~PIERCE~",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
-      "buff": 1,
-      "discard": 2,
+      "buff": 2,
+      "discard": 1,
       "attack": 2,
       "speed": 7
     },

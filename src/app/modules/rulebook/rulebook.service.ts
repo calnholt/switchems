@@ -363,10 +363,10 @@ export class RulebookService {
           text: '<h1>Basic Actions</h1>There are two different basic actions. The two basic actions are:',
           ul: [
             {
-              text: '[+] [HP]',
+              text: '[+]',
               ul: [
                 {
-                  text: 'When you select this basic action, you draw one card and heal 1[HP] as your action for the turn.',
+                  text: 'When you select this basic action, you draw one card.',
                 }
               ]
             },
@@ -504,65 +504,7 @@ export class RulebookService {
       title: 'Playtesters',
       blocks: [
         {
-          ul: [
-            {
-              text: 'Conor Cain',
-            },
-            {
-              text: 'Chris Eyer',
-            },
-            {
-              text: 'Zachary Gogel'
-            },
-            {
-              text: 'Ethan Grosso',
-            },
-            {
-              text: 'John Holt',
-            },
-            {
-              text: 'Kevin Levesque',
-            },
-            {
-              text: 'Will Little'
-            },
-            {
-              text: 'Tim Oliva',
-            },
-            {
-              text: 'Jim Palmeri',
-            },
-            {
-              text: 'Dan Peterson',
-            },
-            {
-              text: 'Mike Sette'
-            },
-            {
-              text: 'Guy Tuori',
-            },
-            {
-              text: 'Eric Twardzik',
-            },
-            {
-              text: 'Mike Vessia',
-            },
-            {
-              text: 'Diego Vizhnay',
-            },
-            {
-              text: 'Jeff Kunkel',
-            },
-            {
-              text: 'Josepth Santianna',
-            },
-            {
-              text: 'Elijah Calub',
-            },
-            {
-              text: 'Noah Cagle',
-            },
-          ]
+          ul: this.getPlaytesters(),
         }
       ]
     }
@@ -596,6 +538,38 @@ export class RulebookService {
       }
     });
     return out;
+  }
+
+  getPlaytesters(): { text: string }[] {
+    return [
+      'Conor Cain',
+      'Chris Eyer',
+      'Zachary Gogel',
+      'Ethan Grosso',
+      'John Holt',
+      'Kevin Levesque',
+      'Will Little',
+      'Tim Oliva',
+      'Jim Palmeri',
+      'Dan Peterson',
+      'Mike Sette',
+      'Guy Tuori',
+      'Eric Twardzik',
+      'Mike Vessia',
+      'Diego Vizhnay',
+      'Jeff Kunkel',
+      'Josepth Santianna',
+      'Noah Cagle',
+      'James Herbert',
+      'James Huff',
+      'William Morgan',
+      'Sam Abbot',
+      'Emilio Rodriguez',
+      'Reilly Cassel',
+      'Ivan Korpics',
+      'Dominick Aurelio',
+    ].sort((a, b) => a.localeCompare(b))
+      .map(name => {return { text: name }});
   }
 
 }

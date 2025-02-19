@@ -74,7 +74,7 @@
   "teamAura": {
     "name": "Infatuation",
     "text": "You cannot select switch actions on your action board.~AURA~",
-    "duration": 4,
+    "duration": 3,
     "isAilment": true
   }
 }

@@ -53,15 +53,15 @@
   "buffs": [
     {
       "buffName": "Thick Goop",
-      "buffText": "If your opponent has four or more <b>Goop</b> cards, this monster gains <div>+2[DEF].</div> If not, shuffle one <b>Goop</b> card into your opponent's deck instead."
+      "buffText": "If your opponent has three or more <b>Goop</b> cards, this monster gains <div>+2[DEF].</div> If not, shuffle one <b>Goop</b> card into your opponent's deck instead."
     },
     {
       "buffName": "Hostile Goop",
-      "buffText": "If your opponent has four or more <b>Goop</b> cards, this attack gains <div>+2[ATK].</div> If not, shuffle one <b>Goop</b> card into your opponent's deck instead."
+      "buffText": "If your opponent has three or more <b>Goop</b> cards, this attack gains <div>+2[ATK].</div> If not, shuffle one <b>Goop</b> card into your opponent's deck instead."
     },
     {
       "buffName": "Slippery Goop",
-      "buffText": "If your opponent has four or more <b>Goop</b> cards, this attack gains <div>+3[SPD].</div> If not, shuffle one <b>Goop</b> card into your opponent's deck instead"
+      "buffText": "If your opponent has three or more <b>Goop</b> cards, this attack gains <div>+3[SPD].</div> If not, shuffle one <b>Goop</b> card into your opponent's deck instead"
     },
     {
       "buffName": "Super Goop",
@@ -78,7 +78,6 @@
   "teamAura": {
     "name": "Gooped Up",
     "text": "Whenever you attack with a <b>faster</b> <div>melee [MELEE]</div> attack, shuffle a <b>Goop</b> card into your opponent's deck.~FASTER~~AURA~",
-    "duration": 4,
     "isAilment": false
   }
 }

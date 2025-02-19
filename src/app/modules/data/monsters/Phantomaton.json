@@ -57,7 +57,7 @@
   "buffs": [
     {
       "buffName": "Power Up",
-      "buffText": "<b>Heavy</b>. [+] [+]. ~HEAVY~",
+      "buffText": "<b>Heavy</b>. [+] [+] [+]. ~HEAVY~",
       "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
