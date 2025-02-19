@@ -78,7 +78,7 @@
   ],
   "monsterId": 2,
   "monsterName": "Flexferno",
-  "abilityText": "When this monster <b>switches in</b>, <div>{\"num\": 1, \"stat\": \"ATK\"}</div><br><br>Whenever this monster gains an [ATK][PQ] from [Q], the attack gains <div>+1[ATK].</div> ~SWITCH~",
+  "abilityText": "When this monster <b>switches in</b>, <div>{\"num\": 1, \"stat\": \"ATK\"}</div><br><br><b>Active Passive - </b>Whenever this monster gains an [ATK][PQ] from [Q], the attack gains <div>+1[ATK].</div> ~SWITCH~",
   "hp": 8,
   "promiseDescription": "<b>Flexferno</b> loves himself some <b>Flexferno</b>! A few strong flips can devastate an enemy monster.",
   "initiative": 20,
