@@ -60,12 +60,12 @@
     },
     {
       "buffName": "Stumble",
-      "buffText": "[Q] [Q]"
+      "buffText": "<div>{\"stat\": \"?\", \"num\": 2}</div>"
     }
   ],
   "hp": 8,
   "monsterName": "Sorrospine",
   "initiative": 25,
   "imageFlg": true,
-  "abilityText": "At the start of the Apply Buffs phase, <div>[Q].</div>"
+  "abilityText": "At the start of the Apply Buffs phase, <div><div>{\"stat\": \"?\", \"num\": 1}</div>.</div>"
 }

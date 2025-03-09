@@ -70,10 +70,10 @@
   "hp": 8,
   "monsterName": "Deusvolt",
   "initiative": 55,
-  "abilityText": "When this monster <b>switches in</b>, gain <div><b>Carry your Cross [TA]</b>.</div>~SWITCH~",
+  "abilityText": "<b>Switch In - </b> Gain <div><b>Carry your Cross [TA]</b>.</div>~SWITCH~",
   "teamAura": {
     "name": "Carry your Cross",
-    "text": "When you apply a <b>heavy</b> buff, it only uses one buff slot and discard this."
+    "text": "When you apply a <b>heavy</b> buff, it only uses one buff slot and discard this. ~HEAVY~"
   },
   "imageFlg": true
 }

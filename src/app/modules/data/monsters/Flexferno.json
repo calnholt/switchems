@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Inferno",
-      "abilityText": "<div>[Q].</div> If this attack is <b>faster</b>, this attack gains <b>pierce 4</b>.~FASTER~~PIERCE~",
+      "abilityText": "<div><div>{\"stat\": \"?\", \"num\": 1}</div>.</div> If this attack is <b>faster</b>, this attack gains <b>pierce 4</b>.~FASTER~~PIERCE~",
       "element": "Fire",
       "attackType": "Ranged",
       "statusFlg": false,
@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "No Pain, No Gain",
-      "abilityText": "[Q] [Q]. <b>Recoil 1</b>.~RECOIL~",
+      "abilityText": "<div>{\"stat\": \"?\", \"num\": 2}</div>. <b>Recoil 1</b>.~RECOIL~",
       "element": "Rock",
       "attackType": "Melee",
       "statusFlg": false,
@@ -42,7 +42,7 @@
     },
     {
       "abilityName": "Scorch",
-      "abilityText": "[Q].<br><br> If the enemy monster has an <div><b>ailment</b> [STATUS],</div> this attack gains [Q].",
+      "abilityText": "<div>{\"stat\": \"?\", \"num\": 1}</div>.<br><br> If the enemy monster has an <div><b>ailment</b> [STATUS],</div> this attack gains <div>{\"stat\": \"?\", \"num\": 1}</div>.",
       "element": "Fire",
       "attackType": "Melee",
       "statusFlg": false,
@@ -62,7 +62,7 @@
     },
     {
       "buffName": "Inner Strength",
-      "buffText": "[Q] [Q].",
+      "buffText": "<div>{\"stat\": \"?\", \"num\": 2}</div>.",
       "lastUpdated": "Sat, 04 Sep 2021 12:22:21 GMT"
     },
     {
@@ -78,7 +78,7 @@
   ],
   "monsterId": 2,
   "monsterName": "Flexferno",
-  "abilityText": "When this monster <b>switches in</b>, <div>{\"num\": 1, \"stat\": \"ATK\"}</div><br><br><b>Active Passive - </b>Whenever this monster gains an [ATK][PQ] from [Q], the attack gains <div>+1[ATK].</div> ~SWITCH~",
+  "abilityText": "<b>Switch In - </b> <div>{\"num\": 1, \"stat\": \"ATK\"}</div><br><br><b>Active Passive - </b>Whenever this monster gains an attack pip from <div>{\"stat\": \"?\", \"num\": 1}</div>, the attack gains <div>+1[ATK].</div> ~SWITCH~",
   "hp": 8,
   "promiseDescription": "<b>Flexferno</b> loves himself some <b>Flexferno</b>! A few strong flips can devastate an enemy monster.",
   "initiative": 20,

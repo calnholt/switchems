@@ -51,11 +51,11 @@ const termCodes = [
     new Term('Single Use', `~SINGLE~`, `<b>Single use</b> actions remain disabled until switched out, as denoted by [SINGLE].`),
     new Term('Slower', `~SLOWER~`, `This action is <b>slower</b> if your opponent selects a switch action, or if both players select a monster action and yours resolves second.`),
     new Term('Spammable', `~SPAM~`, `<b>Spammable</b> actions do not become disabled.`),
-    new Term('Heavy', `~HEAVY~`, `<b>Heavy's</b> require and use two [B] slots.`),
+    new Term('Heavy', `~HEAVY~`, `<b>Heavy</b> buffs require and use two [B] slots.`),
     new Term('Switches In', `~SWITCH~`, `<b>Switch in</b> abilities also trigger at the start of the game and following a monster KO.`),
     new Term('Team Aura', '~AURA~', '<b>Team aura</b> [TA] – At the end of your turn, put a time counter on this. If the number of time counters equals its duration, discard this.'),
-    new Term('Crush', '~CRUSH~', `<b>Crush X</b> - Remove X [PQ] of the same type from your opponent's stat board that they aren't using.`),
-    new Term('Special', '~SPECIAL~', 'You cannot apply stat cubes [PQ] to <b>special</b> [SPECIAL] actions.'),
+    new Term('Crush', '~CRUSH~', `<b>Crush X</b> - Remove X pips of the same type from your opponent's stat board that they aren't using.`),
+    new Term('Special', '~SPECIAL~', 'You cannot apply pips to <b>special</b> [SPECIAL] actions.'),
     new Term('Instant', '~INSTANT~', '<b>Instant</b> buffs can be played during the apply buffs phase (after reveal). They still require buff slots.'),
     new Term('Gain Aura', '~GAIN_AURA~', `Players can gain a [TA] if they don't already control it, or if there are multiple copies.`),
 ];
@@ -65,7 +65,7 @@ export const TERM_CODES = termCodes.sort((a,b) => a.name.localeCompare(b.name));
 const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[DEF]`, `[TA]`,
     `[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]', '[NQ]', '[PQ]', '[ARROW]',
     '[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]', '[ACORN]', '[HONEY]', '[WISH]', '[TORMENT]', '[FLIP]', '[DISABLE]', '[SINGLE]', '[HOLLOW]',
-    '[SR]', '[SL]', '[RESIST]', '[WEAK]', '[STR]', '[FRAIL]', '[GOOP]', `[Q]`, `[RANGED]`, `[MELEE]`, `[ROLL]`, `[BADGE]`
+    '[SR]', '[SL]', '[RESIST]', '[WEAK]', '[STR]', '[FRAIL]', '[GOOP]', `<div>{\"stat\": \"?\", \"num\": 1}</div>`, `[RANGED]`, `[MELEE]`, `[ROLL]`, `[BADGE]`
 ] as const;
 export type ImageCode = typeof IMAGE_KEYS[number];
 export const IMAGE_CODES = [
@@ -90,7 +90,7 @@ export const IMAGE_CODES = [
     new Image(`[SPECIAL]`, SYMBOLS_PATH + `status.png`),
     new Image(`[STATUS]`, SYMBOLS_PATH + `wound.png`),
     new Image(`[FLIP]`, SYMBOLS_PATH + `flip.png`),
-    new Image(`[Q]`, SYMBOLS_PATH + `question.png`),
+    new Image(`<div>{\"stat\": \"?\", \"num\": 1}</div>`, SYMBOLS_PATH + `question.png`),
     new Image(`[DISABLE]`, SYMBOLS_PATH + `unlocked.png`),
     new Image(`[SINGLE]`, SYMBOLS_PATH + `single-use.png`),
     new Image(`[SR]`, SYMBOLS_PATH + `switch-right.png`),

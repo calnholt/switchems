@@ -17,7 +17,7 @@
     },
     {
       "abilityName": "Expunge",
-      "abilityText": "<b>Single use. </b><br><br>If your opponent has an <div><b>ailment</b> [STATUS],</div> this attack gains <div>[Q] [Q].</div>~SINGLE~",
+      "abilityText": "<b>Single use. </b><br><br>If your opponent has an <div><b>ailment</b> [STATUS],</div> this attack gains <div><div>{\"stat\": \"?\", \"num\": 2}</div>.</div>~SINGLE~",
       "element": "Death",
       "attackType": "Ranged",
       "statusFlg": false,
@@ -30,7 +30,7 @@
     },
     {
       "abilityName": "Swamped",
-      "abilityText": "[Q]. <br><br>{\"stat\": \"SPD\", \"num\": 2}.<br><br> If all buff slots are used, this attack gains <div>+2[ATK].</div>",
+      "abilityText": "<div>{\"stat\": \"?\", \"num\": 1}</div>. <br><br>{\"stat\": \"SPD\", \"num\": 2}.<br><br> If all buff slots are used, this attack gains <div>+2[ATK].</div>",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
@@ -58,17 +58,17 @@
   "buffs": [
     {
       "buffName": "Abrupt Weakness",
-      "buffText": "<b>Crush 1</b>, then gain one [PQ] of the type that was crushed. ~CRUSH~",
+      "buffText": "<b>Crush 1</b> pip, then gain one pip of the type that was crushed. ~CRUSH~",
       "lastUpdated": "Tue, 24 Jan 2023 13:20:19 GMT"
     },
     {
       "buffName": "Famished",
-      "buffText": "Discard up to 2 of your [PQ] that are not being used and heal this monster that much.",
+      "buffText": "Discard up to 2 of your pips that are not being used this turn and heal this monster that much.",
       "lastUpdated": "Tue, 24 Jan 2023 13:20:19 GMT"
     },
     {
       "buffName": "Cripple",
-      "buffText": "<b>Crush 4[PQ]</b> ~CRUSH~",
+      "buffText": "<b>Crush 4</b> pips. ~CRUSH~",
       "lastUpdated": "Tue, 24 Jan 2023 13:20:19 GMT"
     },
     {
@@ -79,7 +79,7 @@
   ],
   "monsterId": 5,
   "monsterName": "Drownigator",
-  "abilityText": "When this monster <b>switches in</b>, <div>[+].</div>~SWITCH~",
+  "abilityText": "<b>Switch In - </b> <div>[+].</div>~SWITCH~",
   "hp": 8,
   "initiative": 70,
   "imageFlg": true,

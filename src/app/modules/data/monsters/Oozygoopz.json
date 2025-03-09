@@ -69,8 +69,8 @@
     }
   ],
   "monsterName": "Oozygoopz",
-  "startOfGame": "At the start of the game, you gain <div><b>Gooped Up</b> [TA].</div>",
-  "abilityText": "When this monster <b>switches in</b>, shuffle a <b>Goop</b> card into your opponent's deck.~SWITCH~",
+  "startOfGame": "<b>Start of Game -</b> Gain <div><b>Gooped Up</b> [TA].</div>",
+  "abilityText": "<b>Switch In - </b> Shuffle a <b>Goop</b> card into your opponent's deck.~SWITCH~",
   "hp": 7,
   "initiative": 15,
   "imageFlg": true,

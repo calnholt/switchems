@@ -81,5 +81,5 @@
     "isAilment": true,
     "copies": 3
   },
-  "abilityText": "When this monster <b>switches in</b>, the opponent gains <b>Curse</b> [TA].~SWITCH~"
+  "abilityText": "<b>Switch In - </b> The opponent gains <b>Curse</b> [TA].~SWITCH~"
 }

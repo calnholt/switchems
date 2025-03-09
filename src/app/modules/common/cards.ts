@@ -43,8 +43,8 @@ export const getAbilityText = (text: string, termCss: Css, imageCss: Css): strin
   }
   IMAGE_CODES.sort((a ,b) => a.key.localeCompare(b.key)).forEach((image: Image) => {
     while (innerHtml.includes(image.key)) {
-        const html = `<img src="${image.path}" class="${imageCss} ${getImageClass(image.key)}">`;
-        innerHtml = innerHtml.replace(image.key, html);
+      const html = `<img src="${image.path}" class="${imageCss} ${getImageClass(image.key)}">`;
+      innerHtml = innerHtml.replace(image.key, html);
     }
   });
   return innerHtml;
@@ -60,12 +60,12 @@ function convertInnerTextJson(innerHtml) {
       let html;
       const isCubes = obj.hasOwnProperty('stat') || obj.hasOwnProperty('num') || obj.hasOwnProperty('isPositive');
       if (isCubes) {
-        html = '<div class="cubes">';
-          let cubeStr = '';
-          for (let i = 0; i < obj.num; i++) {
-            cubeStr += '[PQ]' + ' ';
-          }
-          html += `${cubeStr}[ARROW] [${['ATK', 'HOLLOW'].includes(obj.stat) ? 'ATK' : obj.stat}]</div>`;
+        html = '<div class="gain-stat-pip">';
+        let cubeStr = '';
+        for (let i = 0; i < obj.num; i++) {
+          cubeStr += '<div class="stat-pip"></div>';
+        }
+        html += `<div>+</div><div>${obj.stat === '?' ? '?' : `[${obj.stat}]`}</div>${cubeStr}</div>`;
       }
       innerHtml = innerHtml.replace(jsonInText, html);
     } catch (error) {

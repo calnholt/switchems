@@ -371,10 +371,10 @@ export class RulebookService {
               ]
             },
             {
-              text: '[Q] [Q] [Q]',
+              text: '<div>{\"stat\": \"?\", \"num\": 3}</div>',
               ul: [
                 {
-                  text: 'When you select this basic action, roll three [Q].'
+                  text: 'When you select this basic action, roll three <div>{\"stat\": \"?\", \"num\": 1}</div>.'
                 }
               ]
             }

@@ -21,6 +21,7 @@ export interface PnpCard {
 export class PnpComponent implements OnInit {
   CARDS_PER_PAGE: number = 8;
   allCards: PnpCard[];
+  teamAuras: PnpCard[];
   extraFlg: boolean = false;
   count: number;
 
@@ -34,23 +35,17 @@ export class PnpComponent implements OnInit {
   ngOnInit() {
     this.toolbarService.hide();
     this.count = 0;
-    // const cache = JSON.parse(localStorage.getItem('allMonsters'));
-    // this.extraFlg = (cache.name === 'PRINT_EXTRA');
-    const allMonsters: Array<MonsterComplete> = this.monsterService.getMonsters();
+    this.allCards = this.getAllStandardCards();
+    this.teamAuras = this.getAllTeamAuras();
+    this.count = 0;
+  }
+
+  private getAllStandardCards() {
     const allCards: PnpCard[]  = [];
+    const allMonsters: Array<MonsterComplete> = this.monsterService.getMonsters();
     allMonsters.forEach(m => {
       allCards.push({ card: m, type: 'MONSTER' });
       allCards.push({ card: m, type: 'REFERENCE' });
-      if (m.teamAura) {
-        if (m.teamAura.copies) {
-          for (let i = 0; i < m.teamAura.copies; i++) {
-            allCards.push({ card: m.teamAura, type: 'AURA' });
-          }
-        }
-        else {
-          allCards.push({ card: m.teamAura, type: 'AURA' });
-        }
-      }
       m.actions.forEach(a => {
         allCards.push({ card: a, type: 'ACTION' });
       });
@@ -66,15 +61,14 @@ export class PnpComponent implements OnInit {
         allCards.push({ card: GOOP, type: 'BUFF' });
       }
     });
-    for (let i = 0; i < 4; i++) {
-      allCards.push({ type: 'ACTION_BOARD' });
-      allCards.push({ type: 'BUFF_BOARD' });
-      allCards.push({ type: 'DISCARD_BOARD' });
-      allCards.push({ type: 'HAND_BOARD' });
-      allCards.push({ type: 'STAT_CUBE_BOARD' });
-      allCards.push({ type: 'TURN' });
-    }
-
+    // for (let i = 0; i < 4; i++) {
+    //   allCards.push({ type: 'ACTION_BOARD' });
+    //   allCards.push({ type: 'BUFF_BOARD' });
+    //   allCards.push({ type: 'DISCARD_BOARD' });
+    //   allCards.push({ type: 'HAND_BOARD' });
+    //   allCards.push({ type: 'STAT_CUBE_BOARD' });
+    //   allCards.push({ type: 'TURN' });
+    // }
     // allCards.push({ type: 'STAT_CUBE_BOARD' @media print
     // allCards.push({ isReferenceCard: true });
     // allCards.push({ isReferenceCard: true });
@@ -87,19 +81,30 @@ export class PnpComponent implements OnInit {
     //   allCards.push({ isGoop: true });
     // }
     // badges
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 2; i++) {
       BADGES.forEach(b => {
         allCards.push({ card: b, type: 'BADGE' });
       });
     }
-    const extraSlots = allCards.length % 4;
-    if (extraSlots) {
-      for (let i = 0; i < extraSlots; i++) {
-        allCards.push({ type: 'SPACER' });
+    return allCards;
+  }
+
+  private getAllTeamAuras() {
+    const allMonsters: Array<MonsterComplete> = this.monsterService.getMonsters();
+    const allAuras: PnpCard[] = [];
+    allMonsters.forEach(m => {
+      if (m.teamAura) {
+        if (m.teamAura.copies) {
+          for (let i = 0; i < m.teamAura.copies; i++) {
+            allAuras.push({ card: m.teamAura, type: 'AURA' });
+          }
+        }
+        else {
+          allAuras.push({ card: m.teamAura, type: 'AURA' });
+        }
       }
-    }
-    this.allCards = allCards;
-    this.count = 0;
+    });
+    return allAuras;
   }
 
   isPageBreak() {

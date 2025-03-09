@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Foreboding Winds",
-      "abilityText": "[Q]. <br><br>If this attack deals two or more damage to the enemy monster, <div>[+] [+] then [-] [-].</div>",
+      "abilityText": "<div>{\"stat\": \"?\", \"num\": 1}</div>. <br><br>If this attack deals two or more damage to the enemy monster, <div>[+] [+] then [-] [-].</div>",
       "element": "Leaf",
       "statusFlg": false,
       "attack": 3,

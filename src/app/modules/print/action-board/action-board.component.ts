@@ -1,3 +1,4 @@
+import { getAbilityText } from '../../common/cards';
 import { Path, SYMBOLS_PATH } from './../../../types/dataTypes';
 import { Component, OnInit } from '@angular/core';
 
@@ -21,9 +22,12 @@ export class ActionBoardComponent implements OnInit {
   defense: Path = SYMBOLS_PATH + 'defense.png';
   attack: Path = SYMBOLS_PATH + 'attack.png';
 
+  gainThreeRandomPips: string;
+
   constructor() { }
 
   ngOnInit() {
+    this.gainThreeRandomPips = getAbilityText('{"stat": "?", "num": 3}', 'gain-stat-pip', 'icon');
   }
 
   getIcon = (name: string) => {

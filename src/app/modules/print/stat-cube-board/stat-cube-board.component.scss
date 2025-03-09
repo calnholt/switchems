@@ -58,21 +58,21 @@
                     height: 88px;
                     td:nth-child(1){
                         background-color: #d6ffd6;
+                        width: 30%;
                     }
                     td{
                         border: unset;
                         text-align: center;
                         font-size: 20px;
                         font-family: $header-font;
-                        width: 50%;
+                        // width: 50%;
                         box-shadow: $recessed;
                         img{
                             max-height: 30px;
                             padding-left: 5px;
                         }
                         div{
-                            font-size: 15px;
-                            text-decoration: underline;
+                            font-size: 24px;
                         }
                     }
                 }
@@ -94,6 +94,23 @@
                             background-color: unset;
                         }
                     }
+                }
+            }
+        }
+    }
+    .pips-container {
+        display: flex;
+        justify-content: space-evenly;
+        .pips-column {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .stat-pip {
+                height: 24px;
+                width: 24px;
+                background-color: white;
+                &.using {
+                    background-color: black;
                 }
             }
         }

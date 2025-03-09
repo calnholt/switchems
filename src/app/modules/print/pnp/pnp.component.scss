@@ -10,8 +10,12 @@
         display: grid;
         grid-template-columns: repeat(4, $card-width);
     }
+    .all-auras{
+        display: grid;
+        grid-template-columns: repeat(3, $card-height);
+    }
     .break{
-        padding-bottom: 93px; // only works for chrome
+        padding-bottom: 73px; // only works for chrome
         // padding-bottom: 84px;
     }
     .extra-slot {

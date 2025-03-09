@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Kraterkazee",
-      "abilityText": "[Q], <b>Recoil 2</b>.~RECOIL~",
+      "abilityText": "<div>{\"stat\": \"?\", \"num\": 1}</div>, <b>Recoil 2</b>.~RECOIL~",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
@@ -79,7 +79,7 @@
   ],
   "monsterId": 9,
   "monsterName": "Vulturock",
-  "abilityText": "When this monster <b>switches in</b>, <div>{\"stat\": \"SPD\", \"num\": 2}.</div>~SWITCH~",
+  "abilityText": "<b>Switch In - </b> <div>{\"stat\": \"SPD\", \"num\": 2}.</div>~SWITCH~",
   "hp": 9,
   "promiseDescription": "<b>Vulturock</b> hits hard – including itself!",
   "initiative": 75,

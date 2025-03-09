@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Consume",
-      "abilityText": "[Q]. This monster heals <div>4[HP].</div>",
+      "abilityText": "<div>{\"stat\": \"?\", \"num\": 1}</div>. This monster heals <div>4[HP].</div>",
       "element": "Water",
       "statusFlg": true,
       "attack": null,
@@ -77,7 +77,7 @@
     }
   ],
   "monsterName": "Whailstrom",
-  "abilityText": "When this monster <b>switches in</b>, the enemy monster loses 1[HP]. ~SWITCH~",
+  "abilityText": "<b>Switch In - </b> The enemy monster loses 1[HP]. ~SWITCH~",
   "hp": 9,
   "initiative": 5,
   "imageFlg": true,

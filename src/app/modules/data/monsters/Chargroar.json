@@ -43,7 +43,7 @@
     },
     {
       "abilityName": "Blazing Roar",
-      "abilityText": "[Q]. <br><br><b>Pierce X</b>, where X is the number of buff slots used.~PIERCE~",
+      "abilityText": "<div>{\"stat\": \"?\", \"num\": 1}</div>. <br><br><b>Pierce X</b>, where X is the number of buff slots used.~PIERCE~",
       "element": "Fire",
       "attackType": "Melee",
       "statusFlg": false,
@@ -79,7 +79,7 @@
   ],
   "monsterId": 4,
   "monsterName": "Chargroar",
-  "abilityText": "When this monster <b>switches in</b>, disable a monster action on the enemy monster.~SWITCH~",
+  "abilityText": "<b>Switch In - </b> Disable a monster action of the enemy monster.~SWITCH~",
   "hp": 7,
   "promiseDescription": "<b>Chargroar</b> is the quintessential assassin – fast, lethal, and fragile. Knockout a monster quickly to improve your buffs!",
   "initiative": 80,

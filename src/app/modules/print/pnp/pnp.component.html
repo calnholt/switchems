@@ -54,4 +54,15 @@
       <div [ngClass]="{'break' : i % 8 > 4}"></div>
     </span>
   </div>
+  <div class="all-auras" *ngIf="allCards.length > 0">
+    <span *ngFor="let card of teamAuras; index as i">
+      <span *ngIf="card.type === 'AURA'">
+        <team-aura [teamAura]="card.card"></team-aura>
+      </span>
+      <span *ngIf="card.type === 'SPACER'">
+        <div class="extra-slot"></div>
+      </span>
+      <div [ngClass]="{'break' : i % 9 > 5}"></div>
+    </span>
+  </div>
 </div>

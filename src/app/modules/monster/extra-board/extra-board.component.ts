@@ -4,7 +4,7 @@ import { TeamAura } from '../team-aura/team-aura.model';
 
 export const GOOP: Buff = {
   buffName: 'Goop',
-  buffText: `[Q] and return this card to your opponent (it is removed from your deck).<br><br>If this card is applied as a discard, <div>[ROLL] [ARROW]</div> if 4 or greater, your active monster loses <div>1[HP].</div>`,
+  buffText: `<div>{\"stat\": \"?\", \"num\": 1}</div> and return this card to your opponent (it is removed from your deck).<br><br>If this card is applied as a discard, <div>[ROLL] [ARROW]</div> if 4 or greater, your active monster loses <div>1[HP].</div>`,
   monsterName: 'Oozygoopz',
   hideBuffIcon: true,
 }

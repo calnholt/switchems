@@ -27,7 +27,7 @@
     },
     {
       "abilityName": "Enrage",
-      "abilityText": "[Q] [Q] [Q]<br><br>This monster gains <div>+1[DEF]</div> this turn.",
+      "abilityText": "<div>{\"stat\": \"?\", \"num\": 3}</div><br><br>This monster gains <div>+1[DEF]</div> this turn.",
       "element": "Fire",
       "statusFlg": true,
       "speed": 6,
@@ -66,6 +66,6 @@
   "hp": 9,
   "monsterName": "Volcanoggin",
   "initiative": 30,
-  "abilityText": "When this monster <b>switches in</b>, {\"stat\": \"DEF\", \"num\": 1}.</div>~SWITCH~",
+  "abilityText": "<b>Switch In - </b> {\"stat\": \"DEF\", \"num\": 1}.</div>~SWITCH~",
   "imageFlg": true
 }

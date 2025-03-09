@@ -81,7 +81,7 @@
   ],
   "monsterId": 7,
   "monsterName": "Zappguin",
-  "abilityText": "When this monster <b>switches in</b>, gain <b>Stun</b> <div>[TA].</div>~SWITCH~",
+  "abilityText": "<b>Switch In - </b> Gain <div><b>Stun</b> [TA].</div>~SWITCH~",
   "hp": 8,
   "initiative": 40,
   "imageFlg": true,
