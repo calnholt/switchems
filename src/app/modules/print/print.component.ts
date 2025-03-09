@@ -1,7 +1,10 @@
+import { MonsterService } from './../monster/monster.service';
 import { MonsterComplete } from './../monster/model/monster';
 import { Component, OnInit } from '@angular/core';
 import { loadMonsters } from '../import/json-to-obj';
 import { Router } from '@angular/router';
+import { FormControl } from '@angular/forms';
+import { TERM_KEYS } from 'src/app/types/dataTypes';
 
 @Component({
   selector: 'print',
@@ -12,12 +15,21 @@ export class PrintComponent implements OnInit {
   allMonsters = Array<MonsterComplete>();
   extraCardFlg: boolean = false;
   isAllToggle: boolean = true;
-  constructor(private router: Router) { }
+  date = new FormControl(new Date());
+  selectedTerms = {terms: Array<string>()};
+  termOptions = Array<string>();
+  constructor(
+    private router: Router,
+    private monsterService: MonsterService,
+    ) { }
 
   ngOnInit() {
-    const allMonsters: MonsterComplete[] = loadMonsters();
+    const allMonsters: MonsterComplete[] = this.monsterService.getMonsters();
     this.toggleAll(allMonsters);
     this.allMonsters = allMonsters;
+    TERM_KEYS.forEach(term => {
+      this.termOptions.push(`${term.substring(1, 2).toUpperCase()}${term.substring(2, term.length - 1).toLowerCase()}`);
+    });
   }
 
   toggleAll(allMonsters: MonsterComplete[]) {
@@ -56,6 +68,50 @@ export class PrintComponent implements OnInit {
     }
     localStorage.setItem('allMonsters', JSON.stringify({ token: this.allMonsters, name: name }));
     this.router.navigate(['/pnp']);
+  }
+
+  printByDate() {
+    const printDate = new Date(this.date.value);
+    this.allMonsters.forEach(monster => {
+      if (monster.lastUpdated) {
+        const lastUpdated = new Date(monster.lastUpdated);
+        monster.isSelected = lastUpdated > printDate;
+        monster.referenceFlg = lastUpdated > printDate;
+      } else {
+        monster.isSelected = false;
+        monster.referenceFlg = false;
+      }
+      monster.actions.forEach(action => {
+        if (action.lastUpdated) {
+          const lastUpdated = new Date(action.lastUpdated);
+          action.isSelected = lastUpdated > printDate;
+          monster.referenceFlg = action.isSelected || monster.referenceFlg;
+        } else {
+          action.isSelected = false;
+        }
+      });
+      monster.buffs.forEach(buff => {
+        if (buff.lastUpdated) {
+          const lastUpdated = new Date(buff.lastUpdated);
+          buff.isSelected = lastUpdated > printDate;
+        } else {
+          buff.isSelected = false;
+        }
+      });
+    });
+  }
+
+  onTermSelect() {
+    this.allMonsters.forEach(monster => {
+      this.selectedTerms.terms.forEach(term => {
+        const formattedTerm = `~${term.toUpperCase()}~`;
+        monster.isSelected = monster.abilityText.includes(formattedTerm) || monster.isSelected;
+        monster.actions.forEach(a => a.isSelected = a.abilityText.includes(formattedTerm) || a.isSelected);
+        monster.buffs.forEach(b => {
+          return b.isSelected = b.buffText.includes(formattedTerm) || b.isSelected;
+        });
+      });
+    });
   }
 
 }
