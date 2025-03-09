@@ -81,11 +81,11 @@ export class PnpComponent implements OnInit {
     //   allCards.push({ isGoop: true });
     // }
     // badges
-    for (let i = 0; i < 2; i++) {
-      BADGES.forEach(b => {
-        allCards.push({ card: b, type: 'BADGE' });
-      });
-    }
+    // for (let i = 0; i < 2; i++) {
+    //   BADGES.forEach(b => {
+    //     allCards.push({ card: b, type: 'BADGE' });
+    //   });
+    // }
     return allCards;
   }
 

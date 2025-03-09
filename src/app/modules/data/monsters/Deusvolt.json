@@ -73,7 +73,7 @@
   "abilityText": "<b>Switch In - </b> Gain <div><b>Carry your Cross [TA]</b>.</div>~SWITCH~",
   "teamAura": {
     "name": "Carry your Cross",
-    "text": "When you apply a <b>heavy</b> buff, it only uses one buff slot and discard this. ~HEAVY~"
+    "text": "When you apply a <b>heavy</b> buff, it only uses one buff slot, then discard this.~HEAVY~"
   },
   "imageFlg": true
 }

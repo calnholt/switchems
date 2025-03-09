@@ -12,6 +12,7 @@
         height: $card-height;
         width: $card-width;
         background-color: white;
+        font-family: $text-font;
         .top-container{
             display: flex;
             padding: var(--container-padding);

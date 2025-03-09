@@ -61,7 +61,6 @@
                     font-family: $header-font;
                     color: white;
                     font-size: 22px;
-                    padding-bottom: 6px;
                     letter-spacing: 0.02em;
                     &.name-offset{
                         position: relative;
@@ -72,7 +71,7 @@
             .ability-text-container{
                 text-align: left !important;
                 position: relative;
-                top: -11px;
+                top: -8px;
                 display: flex;
                 border: 2px black solid;
                 margin: auto;
@@ -107,7 +106,7 @@
             background-color: #efefefdb;
             border: 2px black solid;
             z-index: 3 ;
-            top: -9px;
+            top: -6px;
             width: 94%;
             padding-top: 4px;
             margin-top: 5px;

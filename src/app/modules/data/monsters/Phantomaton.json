@@ -57,22 +57,22 @@
   "buffs": [
     {
       "buffName": "Power Up",
-      "buffText": "<b>Heavy</b>. [+] [+] [+]. ~HEAVY~",
+      "buffText": "<b>Reminder</b> - You cannot play this if you control <b>Downloading... [TA]</b><br><br><b>Heavy</b>. [+] [+] [+]. ~HEAVY~",
       "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
       "buffName": "Speed Hotfix",
-      "buffText": "<b>Heavy</b>. This attack gains <div>+5[SPD].</div> ~HEAVY~",
+      "buffText": "<b>Reminder</b> - You cannot play this if you control <b>Downloading... [TA]</b><br><br><b>Heavy</b>. This attack gains <div>+5[SPD].</div> ~HEAVY~",
       "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
       "buffName": "Attack Hotfix",
-      "buffText": "<b>Heavy</b>. This attack gains <div>+3[ATK].</div> ~HEAVY~",      
+      "buffText": "<b>Reminder</b> - You cannot play this if you control <b>Downloading... [TA]</b><br><br><b>Heavy</b>. This attack gains <div>+3[ATK].</div> ~HEAVY~",      
       "lastUpdated": "Thu, 15 Jul 2021 08:25:53 GMT"
     },
     {
       "buffName": "Defense Hotfix",
-      "buffText": "<b>Heavy</b>. This attack gains <div>+3[DEF].</div> ~HEAVY~",      
+      "buffText": "<b>Reminder</b> - You cannot play this if you control <b>Downloading... [TA]</b><br><br><b>Heavy</b>. This attack gains <div>+3[DEF].</div> ~HEAVY~",      
       "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     }
   ],

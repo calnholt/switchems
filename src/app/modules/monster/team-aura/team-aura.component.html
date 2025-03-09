@@ -1,11 +1,11 @@
 <div id="team-aura">
   <div class="card-container {{getBackgroundImageCss()}}">
     <div class="name d-flex justify-content-between">
-      <span>
+      <div [style.min-width.px]="40">
         <span *ngIf="teamAura.duration !== 'INFINITE'">{{ teamAura.duration }}</span>
         <img *ngIf="teamAura.duration === 'INFINITE'" src="{{imageService.getImg('infinity')}}">
         <img src="{{imageService.getImg('aura')}}">
-      </span>
+      </div>
       <span>
         {{teamAura.name}}
       </span>
