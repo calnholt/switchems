@@ -79,7 +79,7 @@
   ],
   "monsterId": 1,
   "monsterName": "Stalagrowth",
-  "abilityText": "<b>Switch In - </b> <div>{\"stat\": \"DEF\", \"num\": 1}.</div> ~SWITCH~",
+  "abilityText": "<b><u>Switch In</u>: </b> <div>{\"stat\": \"DEF\", \"num\": 1}.</div> ~SWITCH~",
   "hp": 9,
   "promiseDescription": "<b>Stallagrowth</b> plays for the long game – slowly drain the enemy's health and stand your ground with bolstered defense.",
   "initiative": 10,

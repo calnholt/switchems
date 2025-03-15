@@ -9,7 +9,7 @@
       "element": "Fire",
       "attackType": "Ranged",
       "statusFlg": false,
-      "attack": 2,
+      "attack": 3,
       "speed": 4,
       "discard": 2,
       "buff": 0
@@ -81,5 +81,5 @@
     "isAilment": true,
     "copies": 3
   },
-  "abilityText": "<b>Switch In - </b> The opponent gains <b>Curse</b> [TA].~SWITCH~"
+  "abilityText": "<b><u>Switch In</u>: </b> The opponent gains <div><b>Curse</b> [TA].</div>~SWITCH~"
 }

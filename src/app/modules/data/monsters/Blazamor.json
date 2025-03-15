@@ -67,7 +67,7 @@
     }
   ],
   "monsterName": "Blazamor",
-  "abilityText": "<b>Switch In - </b> The opponent gains <div><b>Infatuation</b> [TA].</div><br><br><b>Active Passive - </b>At the end of your turn, this monster heals <div>1[HP]</div> and the opponent loses <div>1[HP].</div>~SWITCH~",
+  "abilityText": "<b><u>Switch In</u>: </b> The opponent gains <div><b>Infatuation</b> [TA].</div><br><br><b><u>Active Passive</u>: </b>At the end of your turn, this monster heals <div>1[HP]</div> and the opponent loses <div>1[HP].</div>~SWITCH~",
   "hp": 5,
   "initiative": 60,
   "imageFlg": true,

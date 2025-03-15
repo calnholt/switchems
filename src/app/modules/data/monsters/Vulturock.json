@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Kraterkazee",
-      "abilityText": "<div>{\"stat\": \"?\", \"num\": 1}</div>, <b>Recoil 2</b>.~RECOIL~",
+      "abilityText": "<div>{\"stat\": \"?\", \"num\": 1}</div>, <b>recoil 2</b>.~RECOIL~",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
@@ -73,13 +73,13 @@
     },
     {
       "buffName": "Bigger Rocs",
-      "buffText": "This attack gains +2[ATK] and <div><b>recoil 1[ATK]</b></div>. ~RECOIL~",
+      "buffText": "This attack gains +2[ATK] and <div><b>recoil 1</b></div>. ~RECOIL~",
       "lastUpdated": "Tue, 24 Jan 2023 13:32:08 GMT"
     }
   ],
   "monsterId": 9,
   "monsterName": "Vulturock",
-  "abilityText": "<b>Switch In - </b> <div>{\"stat\": \"SPD\", \"num\": 2}.</div>~SWITCH~",
+  "abilityText": "<b><u>Switch In</u>: </b> <div>{\"stat\": \"SPD\", \"num\": 2}.</div>~SWITCH~",
   "hp": 9,
   "promiseDescription": "<b>Vulturock</b> hits hard – including itself!",
   "initiative": 75,

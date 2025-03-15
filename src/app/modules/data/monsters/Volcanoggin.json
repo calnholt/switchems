@@ -66,6 +66,6 @@
   "hp": 9,
   "monsterName": "Volcanoggin",
   "initiative": 30,
-  "abilityText": "<b>Switch In - </b> {\"stat\": \"DEF\", \"num\": 1}.</div>~SWITCH~",
+  "abilityText": "<b><u>Switch In</u>: </b> {\"stat\": \"DEF\", \"num\": 1}.</div>~SWITCH~",
   "imageFlg": true
 }

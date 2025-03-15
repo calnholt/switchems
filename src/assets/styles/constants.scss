@@ -19,6 +19,10 @@ $card-height: 8.8cm;
 
 $recessed: inset 6px 6px 10px 0 rgb(0 0 0 / 20%), inset -6px -6px 10px 0 rgb(255 255 255 / 50%);
 
+.ability-text {
+    position: relative;
+}
+
 .term {
     font-style: italic;
     font-size: 11px;
@@ -28,8 +32,9 @@ $recessed: inset 6px 6px 10px 0 rgb(0 0 0 / 20%), inset -6px -6px 10px 0 rgb(255
 }
 
 .term-img {
-    max-height: 15px;
-
+    max-height: 12px;
+    position: relative;
+    top: -2px;
     &.torment {
         max-height: 13px;
     }
@@ -78,15 +83,17 @@ $recessed: inset 6px 6px 10px 0 rgb(0 0 0 / 20%), inset -6px -6px 10px 0 rgb(255
 
 .gain-stat-pip {
     font-family: $text-font;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 900;
     display: inline-flex !important;
     background: #dcf7dcad;
     border-radius: 4px;
-    padding: 2px 2px;
+    padding: 1px 1px;
     align-items: center;
     color: black !important;
-    border: 2px solid #92d792;
+    outline: 2px solid #92d792;
+    margin-right: 2px;
+    margin-left: 2px;
 
     div:not(:last-child) {
         margin-right: 2px;
@@ -94,13 +101,16 @@ $recessed: inset 6px 6px 10px 0 rgb(0 0 0 / 20%), inset -6px -6px 10px 0 rgb(255
 
     img {
         filter: invert(0) !important;
-        margin-right: 2px;
+        position: relative;
+        top: -1px;
+        margin-right: 1px;
+        height: 12px;
     }
 }
 
 .stat-pip {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: #36d317;
     border: 3px solid black;

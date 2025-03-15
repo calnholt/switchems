@@ -79,7 +79,7 @@
   ],
   "monsterId": 5,
   "monsterName": "Drownigator",
-  "abilityText": "<b>Switch In - </b> <div>[+].</div>~SWITCH~",
+  "abilityText": "<b><u>Switch In</u>: </b> <div>[+].</div>~SWITCH~",
   "hp": 8,
   "initiative": 70,
   "imageFlg": true,

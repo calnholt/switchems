@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Shock",
-      "abilityText": "If a <b>heavy</b> buff is applied to this attack, this attack gains <div>+1[ATK].</div>",
+      "abilityText": "If a <b>heavy</b> buff is applied to this attack, this attack gains <div>+1[ATK].</div>~HEAVY~",
       "element": "Electric",
       "attackType": "Melee",
       "statusFlg": false,
@@ -16,7 +16,7 @@
     },
     {
       "abilityName": "Gnaw",
-      "abilityText": "If a <b>heavy</b> buff is applied to this attack, heal <div>2[HP].</div>",
+      "abilityText": "If a <b>heavy</b> buff is applied to this attack, heal <div>2[HP].</div>~HEAVY~",
       "element": "Leaf",
       "attackType": "Melee",
       "statusFlg": false,
@@ -70,10 +70,11 @@
   "hp": 8,
   "monsterName": "Deusvolt",
   "initiative": 55,
-  "abilityText": "<b>Switch In - </b> Gain <div><b>Carry your Cross [TA]</b>.</div>~SWITCH~",
+  "abilityText": "<b><u>Switch In</u>: </b> Gain <div><b>Carry your Cross [TA]</b>.</div>~SWITCH~",
   "teamAura": {
     "name": "Carry your Cross",
-    "text": "When you apply a <b>heavy</b> buff, it only uses one buff slot, then discard this.~HEAVY~"
+    "text": "The next <b>heavy</b> buff you apply uses one buff slot less. When a <b>heavy</b> buff is applied, discard this.~HEAVY~",
+    "copies": 2
   },
   "imageFlg": true
 }
