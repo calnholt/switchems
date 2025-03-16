@@ -115,10 +115,11 @@
         }
         .star-icon-container {
             position: absolute;
-            left: 5px;
-            bottom: 0px;
-            font-size: 30px;
+            left: 10px;
+            bottom: 5px;
+            font-size: 20px;
             font-weight: 900;
+            font-family: $text-font;
         }
         .bottom-container {
             position: absolute;

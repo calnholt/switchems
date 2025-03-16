@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Inferno",
-      "abilityText": "<div><div>{\"stat\": \"?\", \"num\": 1}</div>.</div> If this attack is <b>faster</b>, this attack gains <b>pierce 4</b>.~FASTER~~PIERCE~",
+      "abilityText": "<div><div>{\"stat\": \"?\", \"num\": 1}</div>.</div> If this attack is <b>faster</b>, this attack gains <div><b>pierce 4</b>.</div>~FASTER~~PIERCE~",
       "element": "Fire",
       "attackType": "Ranged",
       "statusFlg": false,
@@ -42,7 +42,7 @@
     },
     {
       "abilityName": "Scorch",
-      "abilityText": "<div>{\"stat\": \"?\", \"num\": 1}</div>.<br><br> If the enemy monster has an <div><b>ailment</b> [STATUS],</div> this attack gains <div>{\"stat\": \"?\", \"num\": 1}</div>.",
+      "abilityText": "<div>{\"stat\": \"?\", \"num\": 1}</div>.<br><br> If the enemy monster has an <div><b>ailment</b> [STATUS],</div> this attack gains <div>{\"stat\": \"?\", \"num\": 1}.</div>",
       "element": "Fire",
       "attackType": "Melee",
       "statusFlg": false,

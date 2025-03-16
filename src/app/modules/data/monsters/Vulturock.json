@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Kraterkazee",
-      "abilityText": "<div>{\"stat\": \"?\", \"num\": 1}</div>, <b>recoil 2</b>.~RECOIL~",
+      "abilityText": "<b>Recoil 2</b>, <div>{\"stat\": \"?\", \"num\": 1}</div>.~RECOIL~",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
@@ -31,7 +31,7 @@
       "lastUpdated": "Fri, 26 Feb 2021 08:36:31 GMT"
     },
     {
-      "abilityName": "Iron Defense",
+      "abilityName": "Perch Guard",
       "abilityText": "{\"stat\": \"DEF\", \"num\": 3}.<br><br> This monster gains <div>+1[DEF]</div> this turn.",
       "element": "Rock",
       "statusFlg": true,
@@ -43,7 +43,7 @@
     },
     {
       "abilityName": "Scavenge",
-      "abilityText": "If an enemy monster has been or becomes KO'd this turn, this monster heals <div>6[HP]</div>.",
+      "abilityText": "If an enemy monster has been or becomes KO'd this turn, this monster heals <div>3[HP]</div>.",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,

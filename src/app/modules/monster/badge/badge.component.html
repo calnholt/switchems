@@ -25,7 +25,7 @@
           <div class="use-text">ROUNDS</div>
           <div class="uses-container">
             <ng-container *ngFor="let round of roundsList; index as i">
-              <div class="space round">{{ i }}</div>
+              <div class="space round">{{ i < roundsList.length - 1 ? i + 1 : '!' }}</div>
               <div *ngIf="i < roundsList.length - 1" class="chevron"></div>
             </ng-container>
           </div>
