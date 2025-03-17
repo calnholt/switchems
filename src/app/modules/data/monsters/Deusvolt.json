@@ -38,7 +38,7 @@
     },
     {
       "abilityName": "Charge Up",
-      "abilityText": "{\"stat\": \"ATK\", \"num\": 2}.<br><br> Gain <div><b>Carry your Cross [TA]</b>.</div>~GAIN_AURA~",
+      "abilityText": "Gain <div><b>Carry your Cross [TA]</b>.</div> <br><br>{\"stat\": \"ATK\", \"num\": 2}.~GAIN_AURA~",
       "element": "Electric",
       "statusFlg": true,
       "speed": 8,
@@ -58,12 +58,12 @@
     },
     {
       "buffName": "Burst of Speed",
-      "buffText": "<b>Heavy</b>.<br><br>{\"stat\": \"SPD\", \"num\": 2}.<br><br><b>Instant</b> [ARROW] This attack gains <div>+2[SPD]</div> instead.~HEAVY~~INSTANT~",
+      "buffText": "<b>Heavy</b>.<br><br>{\"stat\": \"SPD\", \"num\": 3}.<br><br><b>Instant</b> [ARROW] This attack gains <div>+2[SPD]</div> instead.~HEAVY~~INSTANT~",
       "auraDuration": null
     },
     {
       "buffName": "Crushing Defense",
-      "buffText": "<b>Heavy</b>.<br><br>{\"stat\": \"DEF\", \"num\": 2}.<br><br><b>Instant</b> [ARROW] This attack gains <b>pierce 2</b> instead.~HEAVY~~INSTANT~~PIERCE~",
+      "buffText": "<b>Heavy</b>.<br><br>{\"stat\": \"DEF\", \"num\": 2}.<br><br><b>Instant</b> [ARROW] This attack gains <b>pierce 3</b> instead.~HEAVY~~INSTANT~~PIERCE~",
       "auraDuration": null
     }
   ],

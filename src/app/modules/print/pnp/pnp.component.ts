@@ -10,7 +10,7 @@ import { BADGES } from '../../monster/badges/badges.component';
 
 export interface PnpCard {
   card?: any;
-  type: 'MONSTER' | 'ACTION' | 'BUFF' | 'REFERENCE' | 'AURA' | 'GOOP' | 'ACTION_BOARD' | 'STAT_CUBE_BOARD' | 'SPACER' | 'BADGE' | 'TURN' | 'BUFF_BOARD' | 'DISCARD_BOARD' | 'HAND_BOARD'
+  type: 'MONSTER' | 'ACTION' | 'BUFF' | 'REFERENCE' | 'AURA' | 'GOOP' | 'ACTION_BOARD' | 'STAT_CUBE_BOARD' | 'SPACER' | 'BADGE' | 'TURN' | 'BUFF_BOARD' | 'DISCARD_BOARD' | 'HAND_BOARD' | 'SWITCH_REFERENCE'
 }
 
 @Component({
@@ -61,14 +61,15 @@ export class PnpComponent implements OnInit {
         allCards.push({ card: GOOP, type: 'BUFF' });
       }
     });
-    // for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 8; i++) {
     //   allCards.push({ type: 'ACTION_BOARD' });
     //   allCards.push({ type: 'BUFF_BOARD' });
     //   allCards.push({ type: 'DISCARD_BOARD' });
     //   allCards.push({ type: 'HAND_BOARD' });
-    //   allCards.push({ type: 'STAT_CUBE_BOARD' });
+      allCards.push({ type: 'STAT_CUBE_BOARD' });
+      allCards.push({ type: 'SWITCH_REFERENCE' });
     //   allCards.push({ type: 'TURN' });
-    // }
+    }
     // allCards.push({ type: 'STAT_CUBE_BOARD' @media print
     // allCards.push({ isReferenceCard: true });
     // allCards.push({ isReferenceCard: true });

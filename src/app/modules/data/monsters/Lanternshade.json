@@ -38,7 +38,7 @@
     },
     {
       "abilityName": "Spreading Curse",
-      "abilityText": "<div>{\"stat\": \"DEF\", \"num\": 1}.</div><br><br> If all of this action's buff slots are used, your opponent gains <div><b>Curse</b> [TA].</div>",
+      "abilityText": "If all of this action's buff slots are used, your opponent gains <div><b>Curse</b> [TA].</div><br><br> <div>{\"stat\": \"DEF\", \"num\": 1}.</div>",
       "element": "Death",
       "attackType": "Ranged",
       "statusFlg": false,

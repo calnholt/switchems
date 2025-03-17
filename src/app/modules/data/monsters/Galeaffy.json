@@ -1,86 +1,94 @@
-{
-  "elements": [
-    "Leaf"
-  ],
-  "actions": [
-    {
-      "abilityName": "Foreboding Winds",
-      "abilityText": "<div>{\"stat\": \"?\", \"num\": 1}</div>. <br><br>If this attack deals two or more damage to the enemy monster, <div>[+] [+] then [-] [-].</div>",
-      "element": "Leaf",
-      "statusFlg": false,
-      "attack": 3,
-      "speed": 6,
-      "draw": 0,
-      "discard": 1,
-      "buff": 1,
-      "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
+  {
+    "elements": [
+      "Leaf"
+    ],
+    "actions": [
+      {
+        "abilityName": "Gale Force",
+        "abilityText": "<b>Pierce 1</b>, <div>{\"stat\": \"SPD\", \"num\": 1}.</div>~PIERCE~",
+        "element": "Leaf",
+        "attackType": "Melee", 
+        "statusFlg": false,
+        "attack": 3,
+        "speed": 8,
+        "draw": 0,
+        "discard": 2,
+        "buff": 3,
+        "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
+      },
+      {
+        "abilityName": "Whirlwind",
+        "abilityText": "If this attack is <b>faster</b>, this attack gains +2[ATK].~FASTER~",
+        "element": "Leaf",
+        "attackType": "Ranged", 
+        "statusFlg": false,
+        "attack": 1,
+        "speed": 5,
+        "draw": 0,
+        "discard": 0,
+        "buff": 2,
+        "lastUpdated": "Sun, 26 Sep 2021 13:47:29 GMT"
+      },
+      {
+        "abilityName": "Cyclone",
+        "abilityText": "{\"stat\": \"SPD\", \"num\": 1}.",
+        "element": "Leaf",
+        "attackType": "Melee", 
+        "statusFlg": false,
+        "attack": 2,
+        "speed": 7,
+        "draw": 0,
+        "discard": 1,
+        "buff": 1,
+        "lastUpdated": "Thu, 26 Jan 2023 10:54:24 GMT"
+      },
+      {
+        "abilityName": "Vicious Hurricane",
+        "abilityText": "<b>Single use.</b> <br><br>This attack gains <div>+X[ATK]</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, this attack gains <div>+2[ATK]</div> instead. ~SINGLE~",
+        "element": "Death",
+        "attackType": "Ranged",        
+        "statusFlg": false,
+        "attack": 1,
+        "speed": 5,
+        "draw": 0,
+        "discard": 2,
+        "buff": 2,
+        "lastUpdated": "Fri, 24 Sep 2021 12:14:02 GMT"
+      }
+    ],
+    "buffs": [
+      {
+        "buffName": "Propulsive Winds",
+        "buffText": "This attack gains <div>+2[SPD]</div>.<br><br>If you control <div><b>Tailwind [TA]</b>,</div> this attack also gains <div>+1[ATK].</div>",
+        "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
+      },
+      {
+        "buffName": "Turbulence",
+        "buffText": "If you are <b>faster</b>, this attack gains <div>+2[ATK]. <br><br>If you control <div><b>Tailwind [TA]</b>,</div> this attack also gains <div>+2[SPD].</div></div>~FASTER~",
+        "lastUpdated": "Thu, 26 Jan 2023 12:34:05 GMT"
+      },
+      {
+        "buffName": "Leafy Kicks",
+        "buffText": "{\"stat\": \"SPD\", \"num\": 2}. <br><br>If you control <div><b>Tailwind [TA]</b>,</div> this attack also gains <div>+2[SPD].</div>",
+        "lastUpdated": "Fri, 24 Sep 2021 12:14:02 GMT"
+      },
+      {
+        "buffName": "Outta Here",
+        "buffText": "If you don't control <div><b>Tailwind [TA]</b>,</div> this is <b>heavy</b>. <br><br>Switch your active monster. ~HEAVY~",
+        "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
+      }
+    ],
+    "monsterId": 8,
+    "monsterName": "Galeaffy",
+    "abilityText": "<b><u>Switch In</u></b>: [+] then <div>[-].</div><br><br><b><u>Switch Out</u>:</b> Gain <div><b>Tailwind</b> [TA].</div>~SWITCH~",
+    "hp": 8,
+    "promiseDescription": "The master of speed has arrived!",
+    "initiative": 85,
+    "imageFlg": true,
+    "teamAura": {
+      "name": "Tailwind",
+      "text": "At the end of the turn, [+] then <div>[-].</div>~AURA~",
+      "duration": 5
     },
-    {
-      "abilityName": "Whirlwind",
-      "abilityText": "If this action is <b>faster</b>, this attack gains +3[ATK].~FASTER~",
-      "element": "Leaf",
-      "statusFlg": false,
-      "attack": 1,
-      "speed": 5,
-      "draw": 0,
-      "discard": 0,
-      "buff": 2,
-      "lastUpdated": "Sun, 26 Sep 2021 13:47:29 GMT"
-    },
-    {
-      "abilityName": "Cyclone",
-      "abilityText": "{\"stat\": \"SPD\", \"num\": 2}.",
-      "element": "Leaf",
-      "statusFlg": false,
-      "attack": 2,
-      "speed": 3,
-      "draw": 1,
-      "discard": 0,
-      "buff": 1,
-      "lastUpdated": "Thu, 26 Jan 2023 10:54:24 GMT"
-    },
-    {
-      "abilityName": "Vicious Hurricane",
-      "abilityText": "<b>Single use.</b> <br><br>This attack gains <div>+X[ATK]</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, this attack gains <div>+2[ATK]</div> instead. ~SINGLE~",
-      "element": "Death",
-      "statusFlg": false,
-      "attack": 1,
-      "speed": 5,
-      "draw": 0,
-      "discard": 2,
-      "buff": 2,
-      "lastUpdated": "Fri, 24 Sep 2021 12:14:02 GMT"
-    }
-  ],
-  "buffs": [
-    {
-      "buffName": "Propulsive Winds",
-      "buffText": "This attack gains <div>+2[SPD]</div>.",
-      "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
-    },
-    {
-      "buffName": "Turbulence",
-      "buffText": "At the start of the turn, [+] then [-]. ~AURA~",
-      "auraDuration": 5,
-      "lastUpdated": "Thu, 26 Jan 2023 12:34:05 GMT"
-    },
-    {
-      "buffName": "Leafy Kicks",
-      "buffText": "{\"stat\": \"SPD\", \"num\": 2}",
-      "lastUpdated": "Fri, 24 Sep 2021 12:14:02 GMT"
-    },
-    {
-      "buffName": "Outta Here",
-      "buffText": "<b>Heavy [B] [B].</b><br><br>Perform a switch action after the monster action phase. ~HEAVY~",
-      "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
-    }
-  ],
-  "monsterId": 8,
-  "monsterName": "Galeaffy",
-  "abilityText": "When this monster <b>switches in or out</b>, <div>[+] [+] then [-] [-].</div> ~SWITCH~",
-  "hp": 8,
-  "promiseDescription": "The master of speed has arrived!",
-  "initiative": 85,
-  "imageFlg": true,
-  "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
-}
+    "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
+  }

@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Inferno",
-      "abilityText": "<div><div>{\"stat\": \"?\", \"num\": 1}</div>.</div> If this attack is <b>faster</b>, this attack gains <div><b>pierce 4</b>.</div>~FASTER~~PIERCE~",
+      "abilityText": "If this attack is <b>faster</b>, this attack gains <div><b>pierce 4</b>.</div> <br><br>{\"stat\": \"?\", \"num\": 1}. ~FASTER~~PIERCE~",
       "element": "Fire",
       "attackType": "Ranged",
       "statusFlg": false,

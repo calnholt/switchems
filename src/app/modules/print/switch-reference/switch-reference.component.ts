@@ -13,8 +13,8 @@ export class SwitchReferenceComponent implements OnInit {
   TERM_CSS: Css = 'term';
   ABILITY_IMG_CSS: Css = 'term-img';
   items: Array<string> = [
-      'Heal 2[HP] OR remove all [STATUS] from the monster that is switching out',
-      'The monster switching in gains +X[DEF] this turn against attacks with elements it is <b>resistant</b> [RESIST] to'
+      'Heal 2[HP] from the monster that is switching out.',
+      'The monster switching in gains +2[DEF] this turn against attacks of your chosen attack type ([MELEE] or [RANGED]).'
     ];
 
   constructor() { }

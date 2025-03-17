@@ -18,7 +18,8 @@ export class MonsterService {
   loadMonsters() {
     this.monsters = loadMonsters();
     this.loadMonsterLocalStorage();
-    this.monsters.sort((a,b) => a.monsterName.localeCompare(b.monsterName));
+    // this.monsters.sort((a,b) => a.monsterName.localeCompare(b.monsterName));
+    this.monsters.sort((a,b) => a.initiative >= b.initiative ? 1 : -1);
   }
 
   getMonsters() {

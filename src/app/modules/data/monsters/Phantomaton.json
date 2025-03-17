@@ -18,7 +18,7 @@
     },
     {
       "abilityName": "Static Void",
-      "abilityText": "This monster gains +3[DEF] this turn. At the end of the turn, if this monster took no damage this turn, add or remove a time counter from any <div<<b>team aura [TA]</b>.</div>",
+      "abilityText": "<b>Single use.</b><br><br>This monster gains +4[DEF] this turn. At the end of the turn, if this monster took no damage this turn, add or remove a time counter from any <div<<b>team aura [TA]</b>.</div>~SINGLE~",
       "element": "Electric",
       "statusFlg": true,
       "speed": 7,
@@ -86,8 +86,7 @@
   "teamAura": {
     "name": "Downloading...",
     "text": "You cannot apply Phantomaton buff cards as buffs.~AURA~",
-    "duration": 5,
-    "isAilment": true
+    "duration": 5
   },
   "lastUpdated": "Thu, 26 Jan 2023 18:07:17 GMT"
 }

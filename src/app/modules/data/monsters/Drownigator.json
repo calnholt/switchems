@@ -30,7 +30,7 @@
     },
     {
       "abilityName": "Swamped",
-      "abilityText": "<div>{\"stat\": \"?\", \"num\": 1}</div>. <br><br>{\"stat\": \"SPD\", \"num\": 2}.<br><br> If all buff slots are used, this attack gains <div>+2[ATK].</div>",
+      "abilityText": "If all buff slots are used, this attack gains <div>+2[ATK].</div><br><br><div>{\"stat\": \"SPD\", \"num\": 2}, {\"stat\": \"?\", \"num\": 1}.</div>",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,

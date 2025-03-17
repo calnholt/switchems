@@ -43,7 +43,7 @@
     },
     {
       "abilityName": "Blazing Roar",
-      "abilityText": "<div>{\"stat\": \"?\", \"num\": 1}</div>. <br><br><b>Pierce X</b>, where X is the number of buff slots used.~PIERCE~",
+      "abilityText": "<b>Pierce X</b>, where X is the number of buff slots used.<br><br><div>{\"stat\": \"?\", \"num\": 1}</div>.~PIERCE~",
       "element": "Fire",
       "attackType": "Melee",
       "statusFlg": false,

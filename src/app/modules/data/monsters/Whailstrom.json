@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Consume",
-      "abilityText": "<div>{\"stat\": \"?\", \"num\": 1}</div>. This monster heals <div>4[HP].</div>",
+      "abilityText": "This monster heals <div>4[HP].</div> <div>{\"stat\": \"?\", \"num\": 1}</div>. ",
       "element": "Water",
       "statusFlg": true,
       "attack": null,
@@ -68,7 +68,7 @@
     },
     {
       "buffName": "Built Different",
-      "buffText": "This monster gains +1[DEF] cannot be <b>flinched</b> this turn.~FLINCH~",
+      "buffText": "This monster gains <div>+1[DEF]</div> cannot be <b>flinched</b> this turn.~FLINCH~",
       "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
     }
   ],

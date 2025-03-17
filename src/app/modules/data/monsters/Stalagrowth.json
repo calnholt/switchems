@@ -43,7 +43,7 @@
     },
     {
       "abilityName": "Skewer",
-      "abilityText": "<div>{\"stat\": \"?\", \"num\": 2}</div>, <b>pierce 1</b>. <br><br>If this attack is buffed, this attack gains <b>spammable</b>. ~PIERCE~~SPAM~",
+      "abilityText": "<b>Pierce 1</b>, <div>{\"stat\": \"?\", \"num\": 2}</div>. <br><br>If this attack is buffed, this attack gains <b>spammable</b>. ~PIERCE~~SPAM~",
       "element": "Rock",
       "attackType": "Melee",
       "statusFlg": false,

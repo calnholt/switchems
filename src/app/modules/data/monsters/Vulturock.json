@@ -32,7 +32,7 @@
     },
     {
       "abilityName": "Perch Guard",
-      "abilityText": "{\"stat\": \"DEF\", \"num\": 3}.<br><br> This monster gains <div>+1[DEF]</div> this turn.",
+      "abilityText": "This monster gains <div>+1[DEF]</div> this turn.<br><br> {\"stat\": \"DEF\", \"num\": 3}.",
       "element": "Rock",
       "statusFlg": true,
       "speed": 7,
