@@ -3,31 +3,58 @@
 
 #action-board{
     .card-container{
+        font-family: $header-font;
         position: relative;
-        border: rgb(216, 216, 216) 2px solid;
+        border: #d8d8d8 2px solid;
         border-radius: 11px;
         height: $card-height;
         width: $card-width;
         background-color: white;
+        position: relative;
         .no-draw{
-            position: absolute;
-            max-height: 23px;
-            right: 11px;
+            max-height: 14px;
         }
         .switch-heal{
-            position: absolute;
-            max-height: 15px;
-            left: 6px;
-            top: 112px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            img {
+                max-height: 15px;
+            }
+            :first-child {
+                position: relative;
+                div {
+                    position: absolute;
+                    top: 1px;
+                    left: 4px;
+                    color: white;
+                    font-size: 12px;
+                }
+            }
         }
         .actions-container{
-            padding: 0px 10px 0px 10px;
-            margin-top: 10px;
+            background-color: #f3f3f3;
+            border-radius: 6px;
+            margin: 4px 3px 3px 3px;
+            padding: 1px;
+            // margin-top: 10px;
+            .actions-container {
+                margin: unset;
+                padding: unset;
+                border-radius: unset;
+            }
             .title{
-                font-size: 23px;
+                font-size: 18px;
                 text-align: center;
-                font-family: $beastformer;
                 margin: 0px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 5px;
+                line-height: 15px !important;
+                .discards {
+                    padding-bottom: 1px;
+                }
             }
             .line-container{
                 padding-left: 5px;
@@ -45,31 +72,58 @@
                     display: inline-block;
                 }
             }
-            table, th, td {
-                border: 1px solid black;
-            }
             table{
                 width: 100%;
+                border-radius: 6px;
+                border: 2px solid black;
+                border-collapse: separate;
+                background-color: white;
                 tr{
                     td{
                         text-align: center;
                         font-size: 16px;
-                        font-family: $helvetica;
                         width: 50%;
                         padding: 6px;
-                        height: 38px;
+                        height: 45px;
+                        background-color: #ebebeb;
+                        box-shadow: $recessed;
                         img{
-                            max-height: 35px;
+                            max-height: 26px;
                         }
                         .switch{
-                            max-height: 30px;
+                            max-height: 23px;
+                            &.type {
+                                border: 1px solid black;
+                                padding: 2px;
+                                border-radius: 5px;
+                                margin: 0px 2px;
+                            }
                         }
-                        .draw{
+                        .icon{
                             padding-right: 4px;
                         }
                         .cube {
-                            max-height: 16px;
+                            max-height: 20px;
                         }
+                        .q{
+                            height: 20px;
+                        }
+                    }
+                }
+                tr:nth-child(odd) {
+                    td:nth-child(odd) {
+                        background-color: aliceblue;
+                    }
+                    td:nth-child(even) {
+                        background-color: #ffefd3;
+                    }
+                }
+                tr:nth-child(even) {
+                    td:nth-child(odd) {
+                        background-color: #ffefd3;
+                    }
+                    td:nth-child(even) {
+                        background-color: aliceblue;
                     }
                 }
                 &.monster-actions {
@@ -77,6 +131,99 @@
                         td {
                             font-size: 30px;
                         }
+                    }
+                    tr:nth-child(1) {
+                        td:first-child {
+                            border-radius: 4px 0px 0px 0px;
+                        }
+                        td:last-child {
+                            border-radius: 0px 4px 0px 0px;
+                        }
+                    }
+                    tr:nth-child(2) {
+                        td:first-child {
+                            border-radius: 0px 0px 0px 4px;
+                        }
+                        td:last-child {
+                            border-radius: 0px 0px 4px 0px;
+                        }
+                    }
+                }
+            }
+            &.maneuver-table{
+                background-color: unset;
+                display: flex;
+                .maneuver {
+                    position: absolute;
+                    right: 9px;
+                    top: 210px;
+                    img {
+                        max-height: 20px;
+                    }
+                    &.green {
+                        top: 226px;
+                    }
+                }
+                table{
+                    font-family: $header-font;
+                    position: relative;
+                    top: -2px;
+                    left: 8px;
+                    width: 84%;
+                    border-radius: 0px 0px 6px 6px;
+                    tr {
+                        td {
+                            font-size: 22px;
+                            width: 30%;
+                            img {
+                                max-height: 18px;
+                            }
+                        }
+                    }
+                    tr:nth-child(1) {
+                        td {
+                            background-color: #aaf5aa;
+                        }
+                        td:nth-child(1) {
+                            // width: 40%;
+                        }
+                    }
+                    tr:nth-child(2) {
+                        td {
+                            background-color: #aae3ff;
+                        }
+                        td:first-child{
+                            // width: 40%;
+                            border-radius: 0px 0px 0px 4px !important;
+                            font-size: 14px;
+                            img {
+                                max-height: 11px;
+                            }
+                        }
+                        td:nth-child(2) {
+                            div {
+                                display: flex;
+                                align-items: center;
+                            }
+                        }
+                        td:last-child {
+                            border-radius: 0px 0px 4px 0px !important;
+                        }
+                    }
+                }
+            }
+        }
+        .standard-table, .switch-table {
+            table {
+                tr{
+                    td{
+                        width: 50%;
+                    }
+                    td:nth-child(1){
+                        border-radius: 4px 0px 0px 4px;
+                    }
+                    td:nth-child(3){
+                        border-radius: 0px 4px 4px 0px;
                     }
                 }
             }
