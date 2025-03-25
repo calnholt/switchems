@@ -1,7 +1,7 @@
 <div id="display-all">
   <div class="container pb-5">
     <div class="row">
-      <div *ngFor="let monster of monsters" class="lg-col-4 sm-col-6 p-3">
+      <div *ngFor="let monster of monsters" class="lg-col-6 sm-col-6 p-3">
         <div class="row">
           <div class="lg-col-8 sm-col-10">
             <!-- <monster-card
@@ -34,7 +34,7 @@
               </div>
             </div>
             <div *ngIf="monster.teamAura">
-              <div [hidden]="!monster.isTeamAuraHovered">
+              <div [hidden]="!monster.isTeamAuraHovered" style="scale: 0.71; margin: 0px -47px;">
                 <team-aura
                   [teamAura]="monster.teamAura">
                 </team-aura>

@@ -80,7 +80,7 @@
   "monsterName": "Phantomaton",
   "startOfGame": "<b><u>Start of Game</u>: </b>Gain <b>Downloading...</b> <div>[TA].</div>",
   "abilityText": "<b><u>Switch In</u>: </b> <div>{\"stat\": \"ATK\", \"num\": 1}.</div> ~SWITCH~",
-  "hp": 9,
+  "hp": 8,
   "initiative": 50,
   "imageFlg": true,
   "teamAura": {

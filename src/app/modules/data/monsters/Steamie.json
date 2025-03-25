@@ -53,38 +53,29 @@
   "buffs": [
     {
       "buffName": "Wishful Strike",
-      "timing": "Pre-Actions",
       "buffText": "This attack gains <div>+1[ATK].</div>",
-      "flipEventText": "Put a [WISH] counter on one of your monsters",
       "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
     },
     {
       "buffName": "Rallying Strike",
-      "timing": "With Attack",
       "buffText": "This attack gains <div>+1[ATK].</div>",
-      "flipEventText": "If your active monster has two or more [WISH] counters, remove them and [+].",
       "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
     },
     {
       "buffName": "Wishful Embrace",
-      "timing": "Pre-Actions",
       "buffText": "This monster gains <div>+1[DEF]</div> this turn.",
-      "flipEventText": "Put a [WISH] counter on one of your monsters",
       "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
     },
     {
       "buffName": "Rallying Embrace",
-      "timing": "Pre-Actions",
       "buffText": "This monster gains <div>+1[DEF]</div> this turn.",
-      "flipEventText": "If your active monster has two or more [WISH] counters, remove them and [+].",
       "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
     }
   ],
-  "abilityName": "Three Wishes",
   "monsterName": "Steamie",
-  "abilityText": "Monsters with [WISH] counters can spend one [WISH] counter to play one additional buff card with any <b>attack</b>[ATK] action.<em>(If the number of buffs you played requires one additional [B], discard one [WISH] counter from your active monster after reveal. Limit one [WISH] per attack.)</em>",
-  "hp": 8,
-  "complexity": 2,
+  "abilityText": "<b><u>Active Passive</u>: </b>At the end of your turn, this monster loses <div>1[HP]</div> and a different non-KO'd monster on your team of your choice heals <div>1[HP].</div>",
+  "hp": 11,
   "initiative": 30,
+  "imageFlg": true,
   "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
 }
