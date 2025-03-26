@@ -1,67 +1,94 @@
 <div id="stat-cube-board">
   <div class="card-container">
+    <div class="title">
+      Pip Board
+    </div>
+    <div class="line-container">
+      <hr align="left" class="name-line left">
+      <span class="dot"></span>
+      <hr align="right" class="name-line right">
+    </div>
     <div class="table-container">
-      <div class="title">
-        [ <img src="{{positiveCube}}"> / <img src="{{negativeCube}}"> ] Board
-      </div>
-      <div class="line-container">
-        <hr align="left" class="name-line left">
-        <span class="dot"></span>
-        <hr align="right" class="name-line right">
-      </div>
       <table class="stat-cube-table">
         <tr>
           <td>
-            +<img src="{{attack}}">
-            <div>(4 max)</div>
+            <img src="{{attack}}">
           </td>
           <td>
-            -<img src="{{attack}}">
-            <div>(4 max)</div>
+            <div class="pips-container">
+              <div class="pips-column">
+                <div>1</div>
+                <div class="stat-pip"></div>
+                <div class="stat-pip using"></div>
+              </div>
+              <div class="pips-column">
+                <div>2</div>
+                <div class="stat-pip"></div>
+                <div class="stat-pip using"></div>
+              </div>
+              <div class="pips-column">
+                <div>3</div>
+                <div class="stat-pip"></div>
+                <div class="stat-pip using"></div>
+              </div>
+            </div>
           </td>
         </tr>
         <tr>
           <td>
-            +<img src="{{speed}}">
-            <div>(4 max)</div>
+            <img src="{{speed}}">
           </td>
           <td>
-            -<img src="{{speed}}">
-            <div>(4 max)</div>
+            <div class="pips-container">
+              <div class="pips-column">
+                <div>1</div>
+                <div class="stat-pip"></div>
+                <div class="stat-pip using"></div>
+              </div>
+              <div class="pips-column">
+                <div>2</div>
+                <div class="stat-pip"></div>
+                <div class="stat-pip using"></div>
+              </div>
+              <div class="pips-column">
+                <div>3</div>
+                <div class="stat-pip"></div>
+                <div class="stat-pip using"></div>
+              </div>
+              <div class="pips-column">
+                <div>4</div>
+                <div class="stat-pip"></div>
+                <div class="stat-pip using"></div>
+              </div>
+            </div>
           </td>
         </tr>
         <tr>
           <td>
-            +<img src="{{defense}}">
-            <div>(4 max)</div>
+            <img src="{{defense}}">
           </td>
           <td>
-            -<img src="{{defense}}">
-            <div>(4 max)</div>
+            <div class="pips-container">
+              <div class="pips-column">
+                <div>1</div>
+                <div class="stat-pip"></div>
+                <div class="stat-pip using"></div>
+              </div>
+              <div class="pips-column">
+                <div>2</div>
+                <div class="stat-pip"></div>
+                <div class="stat-pip using"></div>
+              </div>
+              <div class="pips-column">
+                <div>3</div>
+                <div class="stat-pip"></div>
+                <div class="stat-pip using"></div>
+              </div>
+            </div>
           </td>
         </tr>
       </table>
-      <div class="title">Used <img src="{{maneuverCube}}"> Board</div>
-      <div class="line-container">
-        <hr align="left" class="name-line left">
-        <span class="dot"></span>
-        <hr align="right" class="name-line right">
-      </div>
-      <div class="maneuver-container">
-        <table>
-          <tr>
-            <td>
-              1
-            </td>
-            <td>
-              2
-            </td>
-            <td>
-              3
-            </td>
-          </tr>
-        </table>
-      </div>
+      <div class="pl-1"></div>
     </div>
   </div>
 </div>

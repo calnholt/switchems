@@ -3,10 +3,12 @@ import { TermCode, ImageCode, Path, ElemType } from './../../types/dataTypes';
 export class Term {
     key: TermCode;
     value: string;
+    name: string;
 
-    constructor(key: TermCode, value: string) {
+    constructor(name: string, key: TermCode, value: string) {
         this.key = key;
         this.value = value;
+        this.name = name;
     }
 }
 

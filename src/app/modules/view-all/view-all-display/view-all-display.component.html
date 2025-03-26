@@ -1,13 +1,16 @@
 <div id="display-all">
-  <div class="container">
+  <div class="container pb-5">
     <div class="row">
-      <div *ngFor="let monster of monsters" class="lg-col-4 sm-col-6 p-3">
+      <div *ngFor="let monster of monsters" class="lg-col-6 sm-col-6 p-3">
         <div class="row">
           <div class="lg-col-8 sm-col-10">
-            <monster-card
+            <!-- <monster-card
               [hidden]="!isShowMonster(monster)"
               [monster]="monster"
-              [routerLink]="['/monster', monster.monsterName]">
+              [routerLink]="['/monster', monster.monsterName]"> -->
+            <monster-card
+              [hidden]="!isShowMonster(monster)"
+              [monster]="monster">
             </monster-card>
             <div *ngFor="let action of monster.actions">
               <div [hidden]="!action.isHovered">
@@ -30,37 +33,55 @@
                 </extra-board>
               </div>
             </div>
+            <div *ngIf="monster.teamAura">
+              <div [hidden]="!monster.isTeamAuraHovered" style="scale: 0.71; margin: 0px -47px;">
+                <team-aura
+                  [teamAura]="monster.teamAura">
+                </team-aura>
+              </div>
+            </div>
           </div>
-          <div class="lg-col-4 sm-col-2 p-0">
-            <div *ngFor="let action of monster.actions" class="hover-card-icon-container col-12">
+          <div class="lg-col-4 sm-col-2 p-0 hoverables">
+            <ng-container *ngFor="let action of monster.actions">
               <div 
                 (mouseover)="action.isHovered = true" 
                 (mouseout)="action.isHovered = false"
-                class="hover-card-icon"
+                class="col-12 hover-card-icon"
                 [ngClass]="{'highlight' : action.isHighlighted}">
                 <div class="icon">A</div>
               </div>
-            </div>
-            <div *ngFor="let buff of monster.buffs" class="hover-card-icon-container col-12">
+            </ng-container>
+            <ng-container *ngFor="let buff of monster.buffs">
               <div 
                 (mouseover)="buff.isHovered = true" 
                 (mouseout)="buff.isHovered = false" 
-                class="hover-card-icon"
+                class="col-12 hover-card-icon"
                 [ngClass]="{'highlight' : buff.isHighlighted}">
                 <span class="icon">B</span>
               </div>
-            </div>
-            <div *ngIf="monster.extraBoard" class="hover-card-icon-container col-12">
+            </ng-container>
+            <ng-container *ngIf="monster.extraBoard">
               <div 
-                class="hover-card-icon"
+              class="col-12 hover-card-icon"
                 (mouseover)="monster.isExtraBoardHovered = true" 
                 (mouseout)="monster.isExtraBoardHovered = false">
                 <span class="icon">X</span>
               </div>
-            </div>
+            </ng-container>
+            <ng-container *ngIf="monster.teamAura">
+              <div 
+              class="col-12 hover-card-icon"
+                (mouseover)="monster.isTeamAuraHovered = true" 
+                (mouseout)="monster.isTeamAuraHovered = false">
+                <span class="icon">T</span>
+              </div>
+            </ng-container>
           </div>
         </div>
       </div>
+    </div>
+    <div class="row">
+      <badges></badges> 
     </div>
   </div>
 </div>

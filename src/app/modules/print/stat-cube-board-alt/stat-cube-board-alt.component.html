@@ -1,0 +1,60 @@
+<div id="stat-cube-board-alt">
+  <div class="card-container">
+    <div class="table-container">
+      <div class="condition strengthen">
+        <div>
+          <img src="{{strengthen}}">
+        </div>
+      </div>
+      <div class="condition frail">
+        <div>
+          <img src="{{frail}}">
+        </div>
+      </div>
+      <div class="title">
+        [ <img src="{{positiveCube}}"> / <img src="{{negativeCube}}"> ] Board
+      </div>
+      <div class="line-container">
+        <hr align="left" class="name-line left">
+        <span class="dot"></span>
+        <hr align="right" class="name-line right">
+      </div>
+      <div class="numbers">
+        <div *ngFor="let atk of ATK">{{atk}}</div>
+      </div>
+      <table class="stat-cube-table">
+        <tr>
+          <ng-container *ngFor="let atk of ATK; index as i">
+            <td>
+              <img class="{{OPACITY[i]}}" src="{{attack}}">
+            </td>
+          </ng-container>
+        </tr>
+      </table>
+      <div class="numbers">
+        <div *ngFor="let spd of SPD">{{spd}}</div>
+      </div>
+      <table class="stat-cube-table">
+        <tr>
+          <ng-container *ngFor="let spd of SPD; index as i">
+            <td>
+              <img class="{{OPACITY[i]}}" src="{{speed}}">
+            </td>
+          </ng-container>
+        </tr>
+      </table>
+      <div class="numbers">
+        <div *ngFor="let def of DEF">{{def}}</div>
+      </div>
+      <table class="stat-cube-table">
+        <tr>
+          <ng-container *ngFor="let def of DEF; index as i">
+            <td>
+              <img class="{{OPACITY[i]}}" src="{{defense}}">
+            </td>
+          </ng-container>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
