@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Poison the Tip",
-      "abilityText": "If the enemy monster selected a melee [MELEE] attack, the enemy monster attack gains <b>recoil 4</b>. <br><br>{\"stat\": \"?\", \"num\": 1}.~RECOIL~",
+      "abilityText": "If the enemy monster selected a melee [MELEE] attack, the enemy monster attack gains <b>recoil 4</b>. <br><br><b>Spam</b>, {\"stat\": \"?\", \"num\": 1}.~RECOIL~~SPAM~",
       "element": "Leaf",
       "statusFlg": true,
       "speed": 7,
@@ -14,7 +14,7 @@
     },
     {
       "abilityName": "Noxious Fumes",
-      "abilityText": "If the enemy monster selected a ranged [RANGED] attack, the enemy monster attack gains <b>recoil 4</b>. <br><br>{\"stat\": \"?\", \"num\": 1}.~RECOIL~",      
+      "abilityText": "If the enemy monster selected a ranged [RANGED] attack, the enemy monster attack gains <b>recoil 4</b>. <br><br><b>Spam</b>, {\"stat\": \"?\", \"num\": 1}.~RECOIL~",      
       "element": "Death",
       "statusFlg": true,
       "speed": 7,

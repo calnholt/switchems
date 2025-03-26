@@ -43,7 +43,7 @@
     },
     {
       "abilityName": "Surge",
-      "abilityText": "<b>Spammable</b>. <br><br>If this attack is <b>faster</b>, <div>{\"stat\": \"ATK\", \"num\": 1}.</div>~SPAM~~FASTER~",
+      "abilityText": "<b>Spam</b>. <br><br>If this attack is <b>faster</b>, <div>{\"stat\": \"ATK\", \"num\": 1}.</div>~SPAM~~FASTER~",
       "element": "Water",
       "attackType": "Ranged",
       "statusFlg": false,

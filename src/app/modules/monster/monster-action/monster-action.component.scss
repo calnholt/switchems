@@ -48,10 +48,10 @@
                 align-items: center;
                 background-color: black;
                 margin: auto;
-                width: 90%;
+                width: 92%;
                 height: 11%;
                 border-radius: 10px 10px 0px 0px;
-                margin-top: 3px;
+                margin-top: 1px;
                 padding-top: 3px;
                 z-index: 1;
                 position: relative;
@@ -75,7 +75,7 @@
                 display: flex;
                 border: 2px black solid;
                 margin: auto;
-                width: 90%;
+                width: 92%;
                 height:auto;
                 border-radius: 0px 0px 10px 10px;
                 z-index:1;
@@ -83,7 +83,7 @@
                 .ability-text{
                     font-family: $text-font;
                     font-size: 12px;
-                    padding: 7px;
+                    padding: 5px;
                     line-height: 13px;
                     background-color: #efefefdb;
                     border-radius: 0px 0px 9px 9px;
@@ -107,7 +107,7 @@
             border: 2px black solid;
             z-index: 3 ;
             top: -6px;
-            width: 94%;
+            width: 97%;
             padding-top: 4px;
             margin-top: 5px;
             padding-bottom: 4px;
