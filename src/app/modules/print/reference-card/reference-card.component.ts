@@ -35,7 +35,7 @@ export class ReferenceCardComponent {
       items: [
         'Activate end of turn abilities.',
         'Move all played buff cards and discards from you player board to your discard pile, and retrieve your facedown hand.',
-        'Add one time counter to each of your team auras.',
+        'Increase each duration [TIME] team aura one space.',
         'Draw one card.',
       ]
     },

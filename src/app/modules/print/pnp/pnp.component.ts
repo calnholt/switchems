@@ -61,14 +61,14 @@ export class PnpComponent implements OnInit {
         allCards.push({ card: GOOP, type: 'BUFF' });
       }
     });
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 4; i++) {
     //   allCards.push({ type: 'ACTION_BOARD' });
     //   allCards.push({ type: 'BUFF_BOARD' });
     //   allCards.push({ type: 'DISCARD_BOARD' });
     //   allCards.push({ type: 'HAND_BOARD' });
       allCards.push({ type: 'STAT_CUBE_BOARD' });
       allCards.push({ type: 'SWITCH_REFERENCE' });
-    //   allCards.push({ type: 'TURN' });
+      allCards.push({ type: 'TURN' });
     }
     // allCards.push({ type: 'STAT_CUBE_BOARD' @media print
     // allCards.push({ isReferenceCard: true });
@@ -82,11 +82,11 @@ export class PnpComponent implements OnInit {
     //   allCards.push({ isGoop: true });
     // }
     // badges
-    // for (let i = 0; i < 2; i++) {
-    //   BADGES.forEach(b => {
-    //     allCards.push({ card: b, type: 'BADGE' });
-    //   });
-    // }
+    for (let i = 0; i < 2; i++) {
+      BADGES.forEach(b => {
+        allCards.push({ card: b, type: 'BADGE' });
+      });
+    }
     return allCards;
   }
 
@@ -104,6 +104,9 @@ export class PnpComponent implements OnInit {
           allAuras.push({ card: m.teamAura, type: 'AURA' });
         }
       }
+    });
+    BADGES.forEach(b => {
+      allAuras.push({ card: b, type: 'AURA' });
     });
     return allAuras;
   }

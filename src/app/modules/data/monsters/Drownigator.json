@@ -85,8 +85,9 @@
   "imageFlg": true,
   "teamAura": {
     "name": "Fatigue",
-    "text": "Whenever you attack, the attack gains <span><b>recoil X[ATK]</b></span>, where X is the number of buff slots used.~RECOIL~~AURA~",
+    "text": "Whenever you attack, the attack gains <span><b>recoil X[ATK]</b></span>, where X is the number of buff slots used.~RECOIL~~TA_DURATION~",
     "duration": 4,
+    "type": "TIME",
     "isAilment": true
   },
   "lastUpdated": "Tue, 06 Jul 2021 05:55:54 GMT"

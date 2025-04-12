@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Gravelcrust Grip",
-      "abilityText": "<b>Recoil 1</b>, and your opponent gains <div><b>Drain [TA]</b>.</div> </b><br><br>If you have no [DEF] pips, <div>{\"stat\": \"DEF\", \"num\": 2}.</div>~RECOIL~",
+      "abilityText": "<b>Recoil 1</b>, and the opponent gains <div><b>Drain [TA]</b>.</div> </b><br><br>If you have no [DEF] pips, <div>{\"stat\": \"DEF\", \"num\": 2}.</div>~RECOIL~",
       "element": "Leaf",
       "statusFlg": true,
       "speed": 2,
@@ -17,7 +17,7 @@
     },
     {
       "abilityName": "Vine Whips",
-      "abilityText": "This attack gains <div>+1[ATK]</div> if your opponent controls an <div><b>ailment</b> [STATUS].</div><br><br> If the enemy monster <b>switched in</b> this turn, your opponent gains <div><b>Drain [TA]</b>.</div> If your opponent already controls <div><b>Drain [TA]</b></div>, this monster <div>heals 1[HP].</div>",
+      "abilityText": "This attack gains <div>+1[ATK]</div> if the opponent controls an <div><b>ailment</b> [STATUS].</div><br><br> If the enemy monster <b>switched in</b> this turn, your opponent gains <div><b>Drain [TA]</b>.</div> If your opponent already controls <div><b>Drain [TA]</b></div>, this monster <div>heals 1[HP].</div>",
       "element": "Leaf",
       "attackType": "Ranged",
       "statusFlg": false,
@@ -86,7 +86,8 @@
   "imageFlg": true,
   "teamAura": {
     "name": "Drain",
-    "text": "At the end of the turn, <div>[ROLL] [ARROW]</div> if 4 or greater, the enemy monster heals <div>1[HP]</div> and your active monster loses <div>1[HP].</div>~FASTER~",
+    "text": "At the end of the turn, <div>[ROLL] [ARROW]</div> if 4 or greater, the enemy monster heals <div>1[HP]</div> and your active monster loses <div>1[HP].</div>~FASTER~~TA_DURATION~",
+    "type": "TIME",
     "duration": 4,
     "isAilment": true
   },

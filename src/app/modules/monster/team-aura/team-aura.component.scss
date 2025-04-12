@@ -1,8 +1,8 @@
 @import 'src/assets/styles/constants.scss';
 @import 'src/styles.scss';
 
-#team-aura{
-    .card-container{
+#team-aura {
+    .card-container {
         position: relative;
         border: rgb(216, 216, 216) 2px solid;
         border-radius: 11px;
@@ -11,85 +11,108 @@
         background-color: white;
         z-index: 1;
         background-size: cover;
+
         &.death {
             background-image: url("~/assets/images/backgrounds/death.png");
         }
+
         &.deathrock {
             background-image: url("~/assets/images/backgrounds/deathrock.png");
         }
+
         &.deathwater {
             background-image: url("~/assets/images/backgrounds/deathwater.png");
         }
+
         &.deathfire {
             background-image: url("~/assets/images/backgrounds/deathfire.png");
         }
+
         &.electric {
             background-image: url("~/assets/images/backgrounds/electric.png");
         }
+
         &.electricfire {
             background-image: url("~/assets/images/backgrounds/electricfire.png");
         }
+
         &.electricleaf {
             background-image: url("~/assets/images/backgrounds/electricleaf.png");
         }
+
         &.fire {
             background-image: url("~/assets/images/backgrounds/fire.png");
         }
+
         &.fireleaf {
             background-image: url("~/assets/images/backgrounds/fireleaf.png");
         }
+
         &.firerock {
             background-image: url("~/assets/images/backgrounds/firerock.png");
         }
+
         &.leaf {
             background-image: url("~/assets/images/backgrounds/leaf.png");
         }
+
         &.leafrock {
             background-image: url("~/assets/images/backgrounds/leafrock.png");
         }
+
         &.leafwater {
             background-image: url("~/assets/images/backgrounds/leafwater.png");
         }
+
         &.rock {
             background-image: url("~/assets/images/backgrounds/rock.png");
         }
+
         &.water {
             background-image: url("~/assets/images/backgrounds/water.png");
         }
+
         .team-aura-container {
             display: flex;
             align-items: center;
             justify-content: center;
             align-content: center;
+
             :nth-child(1) {
                 font-family: $header-font;
-                font-size: 38px;
+                font-size: 30px;
             }
+
             img {
-                max-height: 26px;
+                max-height: 20px;
             }
         }
-        .name{
+
+        .name {
             color: white;
             background: black;
-            padding: 5px;
+            padding: 3px;
             border-radius: 5px 5px 0px 0px;
             margin: 5px 5px 0px 5px;
             font-family: $header-font;
-            font-size: 27px;
+            font-size: 20px;
+            line-height: 20px;
             text-align: center;
             letter-spacing: 0.02em;
             min-height: 20px;
             display: flex;
             justify-content: center;
+
             img {
-                height: 24px;
+                height: 18px;
                 filter: invert(100%);
                 margin-left: 3px;
             }
         }
-        .text-container{
+
+        .text-container {
             padding: 0px 10px;
+
             &.ability {
                 border: 2px solid black;
                 margin: 0px 5px;
@@ -99,7 +122,8 @@
                 padding: 3px;
 
             }
-            .ta-text{
+
+            .ta-text {
                 font-family: $text-font;
                 font-size: 12px;
                 letter-spacing: 0.02em;
@@ -108,28 +132,127 @@
                 width: 100%;
                 margin: 2px;
                 line-height: 13px;
+
                 div {
                     display: inline-block;
                 }
             }
         }
+
         .star-icon-container {
+            background-color: rgba(255, 255, 255, 0.53);
+            display: flex;
+            border-radius: 3px;
+            padding: 2px;
             position: absolute;
             left: 10px;
             bottom: 5px;
             font-size: 20px;
             font-weight: 900;
             font-family: $text-font;
+
+            img {
+                height: 20px;
+                margin-right: 3px;
+            }
         }
+
         .bottom-container {
             position: absolute;
             bottom: 0px;
             right: 0px;
             z-index: -1000;
+
             img {
                 padding: 3px;
                 height: 75px;
             }
         }
+        &.sw-badge {
+            background-image: url("~/assets/images/backgrounds/badge.png");
+        }
+    }
+
+    .uses-rounds {
+        background-color: rgba(255, 255, 255, 0.53);
+    }
+
+    .use-text {
+        font-family: $header-font;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 11px 0px 3px 0px;
+        background-color: #f1f1f1;
+        height: 27px;
+    }
+
+    .uses-container {
+        margin-top: 3px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+        .space {
+            border: 3px solid black;
+            border-radius: 5px;
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+            background-color: rgba(255, 255, 255, 0.53);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $text-font;
+            font-weight: bold;
+
+            &.round {
+                margin-right: 3px;
+            }
+        }
+
+        .space:last-child {
+            margin-right: unset;
+        }
+    }
+
+    .chevron {
+        position: relative;
+        width: 13px;
+        /* Width of the chevron */
+        height: 11px;
+        /* Height of the chevron */
+        /* Optional: Adjust margin, display, etc., as needed */
+    }
+
+    .chevron::before,
+    .chevron::after {
+        content: '';
+        position: absolute;
+        width: 3px;
+        /* Thickness of the chevron lines */
+        background-color: black;
+        /* Color of the chevron */
+        top: 4px;
+        /* Vertical positioning */
+        left: 9px;
+        /* Horizontal positioning */
+        transform-origin: top left;
+    }
+
+    .chevron::before {
+        transform: rotate(135deg);
+        /* Rotate to create one side of the chevron */
+        height: 8px;
+        /* Length of the chevron lines */
+    }
+
+    .chevron::after {
+        transform: rotate(45deg);
+        /* Rotate to create the other side of the chevron */
+        height: 10px;
+        /* Length of the chevron lines */
     }
 }

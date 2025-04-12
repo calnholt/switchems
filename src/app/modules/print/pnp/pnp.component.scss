@@ -15,7 +15,11 @@
         grid-template-columns: repeat(3, $card-height);
     }
     .break{
-        padding-bottom: 73px; // only works for chrome
+        padding-bottom: 83px; // only works for chrome
+        // padding-bottom: 84px;
+    }
+    .break-aura{
+        padding-bottom: 633px; // only works for chrome
         // padding-bottom: 84px;
     }
     .extra-slot {

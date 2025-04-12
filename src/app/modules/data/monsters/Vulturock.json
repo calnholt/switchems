@@ -63,7 +63,7 @@
     },
     {
       "buffName": "Hard Headed",
-      "buffText": "If your opponent selected a <div>melee [MELEE]</div> attack this turn, the enemy monster attack gains <div><b>recoil 2</b>.</div>~RECOIL~",
+      "buffText": "If the opponent selected a <div>melee [MELEE]</div> attack this turn, the enemy attack gains <div><b>recoil 2</b>.</div>~RECOIL~",
       "lastUpdated": "Sat, 04 Sep 2021 12:51:49 GMT"
     },
     {

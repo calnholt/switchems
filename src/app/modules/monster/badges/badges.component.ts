@@ -1,24 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { Badge } from '../badge/badge.model';
+import { TeamAura } from '../team-aura/team-aura.model';
 
-export const BADGES: Badge[] = [
+export const BADGES: TeamAura[] = [
   {
     name: 'Speedster',
-    uses: 2,
-    text: 'When you perform a switch action, <div>[+].</div>',
+    duration: 2,
+    type: 'USES',
+    text: 'Whenever you perform a switch action, <div>[+].</div>~TA_USES~',
+    isBadge: true,
   },
   {
     name: 'Fortitude',
-    text: 'Your monsters have <div>+1[HP].</div>',
+    text: 'Your monsters have <div>+1[HP].</div>~TA_ONGOING~',
+    type: 'ONGOING',
+    isBadge: true,
   },
   {
     name: 'Protection',
-    text: 'You gain an additional +1[DEF] when switch defending.',
+    text: 'You gain an additional +1[DEF] when switch defending.~TA_ONGOING~',
+    type: 'ONGOING',
+    isBadge: true,
   },
   {
     name: 'Restoration',
-    rounds: 4,
-    text: 'At the end of the fourth round, your active monster heals <div>3[HP].</div>',
+    duration: 4,
+    text: 'When this is destroyed, your active monster heals <div>3[HP].</div> ~TA_DURATION~',
+    type: 'TIME',
+    isBadge: true,
   },
 ]
 
@@ -29,7 +38,7 @@ export const BADGES: Badge[] = [
 })
 export class BadgesComponent implements OnInit {
 
-  badges: Badge[] = BADGES;
+  teamAuras: Badge[] = BADGES;
 
   constructor() { }
 

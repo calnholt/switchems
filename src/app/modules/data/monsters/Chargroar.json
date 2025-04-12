@@ -68,12 +68,12 @@
     },
     {
       "buffName": "Revenge",
-      "buffText": "If the enemy monster selected a <div>melee [MELEE]</div> attack, this attack gains <div>+1[ATK]</div> and <div>+2[SPD].</div> If not, this attack gains <div><b>recoil 1</b></div>.~RECOIL~",
+      "buffText": "If the enemy monster selected a <div>melee [MELEE]</div> attack, this attack gains <div>+1[ATK]</div> and <div>+3[SPD].</div> If not, this attack gains <div><b>recoil 1</b></div>.~RECOIL~",
       "lastUpdated": "Fri, 27 Jan 2023 08:01:56 GMT"
     },
     {
       "buffName": "Prey Upon",
-      "buffText": "If the enemy monster selected a <div>ranged [RANGED]</div> attack, this attack gains <div>+1[ATK]</div> and <div>+2[SPD].</div> If not, this attack gains <div><b>recoil 1</b></div>.~RECOIL~",
+      "buffText": "If the enemy monster selected a <div>ranged [RANGED]</div> attack, this attack gains <div>+1[ATK]</div> and <div>+3[SPD].</div> If not, this attack gains <div><b>recoil 1</b></div>.~RECOIL~",
       "lastUpdated": "Fri, 27 Jan 2023 08:01:56 GMT"
     }
   ],

@@ -36,9 +36,6 @@
       <span *ngIf="card.type === 'HAND_BOARD'">
         <player-board [text]="'Hand'"></player-board>
       </span>
-      <span *ngIf="card.type === 'BADGE'">
-        <badge [badge]="card.card"></badge>
-      </span>
       <span *ngIf="card.type === 'TURN'">
         <reference-card></reference-card>
       </span>
@@ -65,7 +62,7 @@
       <span *ngIf="card.type === 'SPACER'">
         <div class="extra-slot"></div>
       </span>
-      <div [ngClass]="{'break' : i % 9 > 5}"></div>
+      <div [ngClass]="{'break-aura' : i % 9 > 5}"></div>
     </span>
   </div>
 </div>

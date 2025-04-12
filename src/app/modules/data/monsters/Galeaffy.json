@@ -74,20 +74,21 @@
       },
       {
         "buffName": "Outta Here",
-        "buffText": "If you don't control <div><b>Tailwind [TA]</b>,</div> this is <b>heavy</b>. <br><br>Switch your active monster. ~HEAVY~",
+        "buffText": "If you don't control <div><b>Tailwind [TA]</b>,</div> this is <b>heavy</b>. <br><br>Switch your active monster after your attack. ~HEAVY~",
         "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
       }
     ],
     "monsterId": 8,
     "monsterName": "Galeaffy",
-    "abilityText": "<b><u>Switch In</u></b>: [+] then <div>[-].</div><br><br><b><u>Switch Out</u>:</b> Gain <div><b>Tailwind</b> [TA].</div>~SWITCH~",
+    "abilityText": "<b><u>Switch In</u></b>: [+] then [-], {\"stat\": \"SPD\", \"num\": 1}.<br><br><b><u>Switch Out</u>:</b> Gain <div><b>Tailwind</b> [TA].</div>~SWITCH~",
     "hp": 8,
     "promiseDescription": "The master of speed has arrived!",
     "initiative": 85,
     "imageFlg": true,
     "teamAura": {
       "name": "Tailwind",
-      "text": "At the end of the turn, [+] then <div>[-].</div>~AURA~",
+      "text": "At the end of the turn, [+] then <div>[-].</div>~TA_DURATION~",
+      "type": "TIME",
       "duration": 5
     },
     "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"

@@ -55,7 +55,7 @@
     },
     {
       "buffName": "Time Flies",
-      "buffText": "You may add or remove two time counters from any <b>team aura</b>."
+      "buffText": "You may increase or decrease two spaces from any duration [TIME] team aura."
     },
     {
       "buffName": "Pounce",
@@ -73,7 +73,8 @@
   "imageFlg": true,
   "teamAura": {
     "name": "Infatuation",
-    "text": "You cannot select switch actions on your action board.~AURA~",
+    "text": "You cannot select switch actions on your action board.~TA_DURATION~",
+    "type": "TIME",
     "duration": 3,
     "isAilment": true
   }

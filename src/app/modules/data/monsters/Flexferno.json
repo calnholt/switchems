@@ -18,7 +18,7 @@
     },
     {
       "abilityName": "Burn",
-      "abilityText": "Your opponent gains <div><b>Wound</b> [TA].</div><br><br> This monster gains <div>+1[DEF]</div> this turn.",
+      "abilityText": "Your opponent gains <div><b>Bruised</b> [TA].</div><br><br> This monster gains <div>+1[DEF]</div> this turn.",
       "element": "Fire",
       "statusFlg": true,
       "speed": 8,
@@ -84,9 +84,10 @@
   "initiative": 20,
   "imageFlg": true,
   "teamAura": {
-    "name": "Wound",
+    "name": "Bruised",
     "duration": 4,
-    "text": "Your opponent's melee [MELEE] attacks gain <b>pierce 2.</b>~PIERCE~~AURA~",
+    "text": "Your opponent's melee [MELEE] attacks gain <b>pierce 2.</b>~PIERCE~~TA_DURATION~",
+    "type": "TIME",
     "isAilment": true
   },
   "lastUpdated": "Tue, 24 Jan 2023 13:23:17 GMT"

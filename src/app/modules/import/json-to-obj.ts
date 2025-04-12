@@ -50,7 +50,7 @@ export const loadMonsters = (selectedMonster?: any): Array<MonsterComplete> => {
             // Smolderskulk,
             // Sorrospine,
             Stalagrowth,
-            Steamie,
+            // Steamie,
             // Squirrberus,
             // Volcanoggin,
             Thornox,

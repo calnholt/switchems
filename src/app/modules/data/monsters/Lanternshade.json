@@ -27,7 +27,7 @@
     },
     {
       "abilityName": "Flicker",
-      "abilityText": "If this attack is <b>faster</b>, remove up to two time counters from an opponent controlled <b>ailment [STATUS]</b>.~FASTER~",
+      "abilityText": "If this attack is <b>faster</b>, decrease up to two spaces from an opponent controlled <b>ailment [STATUS]</b>.~FASTER~",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
@@ -56,17 +56,17 @@
     },
     {
       "buffName": "Shade",
-      "buffText": "This monster heals 1[HP].",
+      "buffText": "This monster heals <div>1[HP].</div>",
       "auraDuration": null
     },
     {
       "buffName": "Chase",
-      "buffText": "This attack gains +2[SPD].",
+      "buffText": "This attack gains <div>+2[SPD].</div>",
       "auraDuration": null
     },
     {
       "buffName": "Kerosinge",
-      "buffText": "If this attack is ranged [RANGED], {\"stat\": \"ATK\", \"num\": 2}.",
+      "buffText": "If this attack is ranged [RANGED], <div>{\"stat\": \"ATK\", \"num\": 2}.</div>",
       "auraDuration": null
     }
   ],
@@ -76,7 +76,8 @@
   "imageFlg": true,
   "teamAura": {
     "name": "Curse",
-    "text": "At the end of the turn, [ROLL] [ARROW]</div> if 5 or greater, your active monster loses <div>1[HP].</div>~AURA~",
+    "text": "At the end of the turn, [ROLL] [ARROW]</div> if 5 or greater, your active monster loses <div>1[HP].</div>~TA_DURATION~",
+    "type": "TIME",
     "duration": 4,
     "isAilment": true,
     "copies": 3

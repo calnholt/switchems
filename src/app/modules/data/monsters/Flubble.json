@@ -5,11 +5,11 @@
   "actions": [
     {
       "abilityName": "Scramble",
-      "abilityText": "If you control <div><b>Flubble's Bubble</b> [TA],</div> this monster gains <div>+4[DEF]</div> this turn. Otherwise, this attack gains <div>+1[ATK].</div> <br><br><div>{\"stat\": \"?\", \"num\": 1}.</div>",
+      "abilityText": "If you control <div><b>Flubble's Bubble</b> [TA],</div> this monster gains <div>+3[DEF]</div> this turn. Otherwise, this attack gains <div>+3[ATK].</div> <br><br><div>{\"stat\": \"?\", \"num\": 1}.</div>",
       "element": "Water",
       "attackType": "Melee",
       "statusFlg": false,
-      "attack": 2,
+      "attack": 1,
       "speed": 7,
       "draw": 0,
       "discard": 2,
@@ -18,13 +18,13 @@
     },
     {
       "abilityName": "Inflate",
-      "abilityText": "",
+      "abilityText": "If you don't control <b>Flubble's <div>Bubble</b> [TA],</div> gain <b>Flubble's <div>Bubble</b> [TA].</div>",
       "element": "Water",
       "attackType": "Melee",
       "statusFlg": false,
       "attack": 1,
-      "speed": 6,
-      "draw": 1,
+      "speed": 1,
+      "draw": 0,
       "discard": 0,
       "buff": 2,
       "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
@@ -36,7 +36,7 @@
       "attackType": "Ranged",
       "statusFlg": false,
       "attack": 2,
-      "speed": 4,
+      "speed": 6,
       "draw": 0,
       "discard": 1,
       "buff": 2,
@@ -77,12 +77,13 @@
   ],
   "monsterId": 10,
   "monsterName": "Flubble",
-  "abilityText": "<b><u>Switch In</u>: </b>Gain <b>Flubble's Bubble</b> <div>[TA].</div><br><br><b><u>Switch Out</u>: </b>Gain <b>Flubble's Bubble</b> <div>[TA].</div> ~SWITCH~",
+  "abilityText": "<b><u>Switch In</u></b>: Gain <div><b>Flubble's Bubble</b> [TA].</div><br><br><b><u>Switch Out</u></b>: Gain <div><b>Flubble's Bubble</b> [TA].</div> ~SWITCH~",
   "hp": 8,
   "initiative": 35,
   "imageFlg": true,
   "teamAura": {
     "name": "Flubble's Bubble",
-    "text": "At the start of your monster action phase, if you applied two or more buff cards, gain <div>+2[DEF]</div> and destroy this.<br><br> Whenever you would gain another <div><b>Flubble's Bubble [TA],</b></div> instead the enemy monster loses <div>2[HP]</div> and destroy this.<br><br> If the opponent attacks with a <b>faster</b> <div>melee [MELEE]</div> attack, destroy this.~FASTER~"
+    "text": "At the start of your monster action phase, if you applied two or more buff cards, gain <div>+2[DEF]</div> and destroy this.<br><br> Whenever you would gain another <div><b>Flubble's Bubble [TA],</b></div> instead the enemy monster loses <div>2[HP]</div> and destroy this.<br><br> If the opponent attacks with a <b>faster</b> <div>melee [MELEE]</div> attack, destroy this.~FASTER~",
+    "type": "INFINITE"
   }
 }

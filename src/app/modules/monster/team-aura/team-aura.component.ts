@@ -14,6 +14,8 @@ import { IMAGES } from 'src/app/constants';
 })
 export class TeamAuraComponent implements OnInit {
   @Input() teamAura: TeamAura;
+
+  squareList = [];
   
     constructor(
       public imageService: ImageService,
@@ -21,6 +23,9 @@ export class TeamAuraComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    if (['TIME', 'USES'].includes(this.teamAura.type)) {
+      this.squareList = [ ...Array(this.teamAura.duration + ( this.teamAura.type === 'USES' ? 1 : 0 )).keys() ];
+    }
   }
 
   getAbilityText(text: string): string {
@@ -34,8 +39,12 @@ export class TeamAuraComponent implements OnInit {
     return out;
   }
 
-    getMonsterImagePath(): Path {
-      return `${IMAGES}/monsters/${this.teamAura.monsterName.toLowerCase()}.png`;
-    }
+  getMonsterImagePath(): Path {
+    return `${IMAGES}/monsters/${this.teamAura.monsterName.toLowerCase()}.png`;
+  }
+
+  getBadgeImagePath(): Path {
+    return `${IMAGES}/badges/${this.teamAura.name.toLowerCase()}.png`;
+  }
 
 }

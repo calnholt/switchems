@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Poison the Tip",
-      "abilityText": "If the enemy monster selected a melee [MELEE] attack, the enemy monster attack gains <b>recoil 4</b>. <br><br><b>Spam</b>, {\"stat\": \"?\", \"num\": 1}.~RECOIL~~SPAM~",
+      "abilityText": "If the enemy monster selected a melee [MELEE] attack, the enemy attack gains <b>recoil 4</b>. <br><br><b>Spam</b>, {\"stat\": \"?\", \"num\": 1}.~RECOIL~~SPAM~",
       "element": "Leaf",
       "statusFlg": true,
       "speed": 7,
@@ -14,7 +14,7 @@
     },
     {
       "abilityName": "Noxious Fumes",
-      "abilityText": "If the enemy monster selected a ranged [RANGED] attack, the enemy monster attack gains <b>recoil 4</b>. <br><br><b>Spam</b>, {\"stat\": \"?\", \"num\": 1}.~RECOIL~",      
+      "abilityText": "If the enemy monster selected a ranged [RANGED] attack, the enemy attack gains <b>recoil 4</b>. <br><br><b>Spam</b>, {\"stat\": \"?\", \"num\": 1}.~RECOIL~~SPAM~",      
       "element": "Death",
       "statusFlg": true,
       "speed": 7,
@@ -43,11 +43,11 @@
   "buffs": [
     {
       "buffName": "Light Headed",
-      "buffText": "The opponent cannot gain pips and draw cards from effects this turn."
+      "buffText": "The opponent cannot gain pips and draw cards from effects this turn.<br><br>{\"stat\": \"?\", \"num\": 1}."
     },
     {
       "buffName": "Out of Gas",
-      "buffText": "Your opponent's applied pips this turn do nothing."
+      "buffText": "The opponent's applied pips this turn do nothing.<br><br>{\"stat\": \"?\", \"num\": 1}."
     },
     {
       "buffName": "Thorn in my Side",
@@ -67,6 +67,7 @@
   "imageFlg": true,
   "teamAura": {
     "name": "Cut Through",
-    "text": "Your ranged [RANGED] monster attacks gain <b>pierce X</b>, where X is the number of buff slots used.~PIERCE~"
+    "text": "Your ranged [RANGED] attacks gain <b>pierce X</b>, where X is the number of buff slots used.~PIERCE~~TA_ONGOING~",
+    "type": "ONGOING"
   }
 }

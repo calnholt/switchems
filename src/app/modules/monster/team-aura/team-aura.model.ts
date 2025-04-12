@@ -1,8 +1,10 @@
 export interface TeamAura {
   name: string;
   text: string;
-  duration?: number | 'INFINITE';
+  type: 'ONGOING' | 'TIME' | 'USES';
+  duration?: number;
   monsterName?: string;
   isAilment?: boolean;
   copies?: number;
+  isBadge?: boolean;
 }
