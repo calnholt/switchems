@@ -27,13 +27,13 @@
     },
     {
       "abilityName": "Nuzzle",
-      "abilityText": "<b>Single use</b>, <b>flinch</b>. ~SINGLE~~FLINCH~",
+      "abilityText": "<b>Flinch</b>. ~FLINCH~",
       "element": "Fire",
       "attackType": "Melee",
       "statusFlg": false,
       "attack": 1,
       "speed": 6,
-      "discard": 1,
+      "discard": 2,
       "draw": 0,
       "buff": 0
     },
@@ -51,7 +51,7 @@
   "buffs": [
     {
       "buffName": "Purrsuation",
-      "buffText": "<b>Heavy</b>. Your opponent's selected monster action gains <b>single use</b>.~HEAVY~~SINGLE~"
+      "buffText": "The enemy monster's attack loses all <b>pierce</b> and cannot gain <b>pierce</b>.~PIERCE~"
     },
     {
       "buffName": "Time Flies",
@@ -59,7 +59,7 @@
     },
     {
       "buffName": "Pounce",
-      "buffText": "<b>Heavy</b>, <b>recoil 2</b>, <b>flinch</b>.~HEAVY~~RECOIL~~FLINCH~"
+      "buffText": "<b>Recoil 2</b>, <b>flinch</b>.~RECOIL~~FLINCH~"
     },
     {
       "buffName": "Love Spell",
@@ -67,7 +67,7 @@
     }
   ],
   "monsterName": "Blazamor",
-  "abilityText": "<b><u>Switch In</u>: </b> The opponent gains <div><b>Infatuation</b> [TA].</div><br><br><b><u>Active Passive</u>: </b>At the end of your turn, this monster heals <div>1[HP]</div> and the enemy monster loses <div>1[HP].</div>~SWITCH~",
+  "abilityText": "<b><u>Switch In</u>: </b> The opponent gains <div><b>Infatuation</b> [TA].</div><br><br><b><u>Active Passive</u>: </b>At the end of your turn, the enemy monster loses <div>1[HP].</div>~SWITCH~",
   "hp": 5,
   "initiative": 60,
   "imageFlg": true,

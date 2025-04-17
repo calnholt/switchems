@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Gravelcrust Grip",
-      "abilityText": "<b>Recoil 1</b>, and the opponent gains <div><b>Drain [TA]</b>.</div> </b><br><br>If you have no [DEF] pips, <div>{\"stat\": \"DEF\", \"num\": 2}.</div>~RECOIL~",
+      "abilityText": "The opponent gains <div><b>Drain [TA]</b>.</div> <br><br>If the opponent already controls <div><b>Drain [TA]</b>, this monster heals <div>2[HP]</div> instead.",
       "element": "Leaf",
       "statusFlg": true,
       "speed": 2,
@@ -16,17 +16,14 @@
       "lastUpdated": "Tue, 24 Jan 2023 13:31:02 GMT"
     },
     {
-      "abilityName": "Vine Whips",
-      "abilityText": "This attack gains <div>+1[ATK]</div> if the opponent controls an <div><b>ailment</b> [STATUS].</div><br><br> If the enemy monster <b>switched in</b> this turn, your opponent gains <div><b>Drain [TA]</b>.</div> If your opponent already controls <div><b>Drain [TA]</b></div>, this monster <div>heals 1[HP].</div>",
+      "abilityName": "Brace for Impact",
+      "abilityText": "This monster gains <div>+2[DEF]</div> this turn. <br><br><div>{\"stat\": \"?\", \"num\": 1}.</div>",
       "element": "Leaf",
-      "attackType": "Ranged",
-      "statusFlg": false,
-      "attack": 1,
-      "speed": 3,
-      "draw": 1,
+      "statusFlg": true,
+      "speed": 7,
+      "draw": 0,
       "discard": 0,
-      "buff": 2,
-      "lastUpdated": "Tue, 24 Jan 2023 13:13:19 GMT"
+      "buff": 0
     },
     {
       "abilityName": "Pulverize",
@@ -43,7 +40,7 @@
     },
     {
       "abilityName": "Skewer",
-      "abilityText": "<b>Pierce 1</b>, <div>{\"stat\": \"?\", \"num\": 2}</div>. <br><br>If this attack is buffed, this attack gains <b>spam</b>. ~PIERCE~~SPAM~",
+      "abilityText": "<b>Pierce 2</b>.~PIERCE~",
       "element": "Rock",
       "attackType": "Melee",
       "statusFlg": false,
@@ -73,22 +70,21 @@
     },
     {
       "buffName": "Life Siphon",
-      "buffText": "<b>Crush 2</b> pips. If two pips were removed this way, this monster heals <div>1[HP].</div> ~CRUSH~",
+      "buffText": "<b>Crush 2</b>. If two pips were removed this way, this monster heals <div>1[HP].</div> ~CRUSH~",
       "lastUpdated": "Tue, 24 Jan 2023 13:13:52 GMT"
     }
   ],
   "monsterId": 1,
   "monsterName": "Stalagrowth",
   "abilityText": "<b><u>Switch In</u>: </b> <div>{\"stat\": \"DEF\", \"num\": 1}.</div> ~SWITCH~",
-  "hp": 9,
-  "promiseDescription": "<b>Stallagrowth</b> plays for the long game – slowly drain the enemy's health and stand your ground with bolstered defense.",
+  "hp": 8,
   "initiative": 10,
   "imageFlg": true,
   "teamAura": {
     "name": "Drain",
     "text": "At the end of the turn, <div>[ROLL] [ARROW]</div> if 4 or greater, the enemy monster heals <div>1[HP]</div> and your active monster loses <div>1[HP].</div>~FASTER~~TA_DURATION~",
     "type": "TIME",
-    "duration": 4,
+    "duration": 3,
     "isAilment": true
   },
   "lastUpdated": "Tue, 24 Jan 2023 13:31:02 GMT"

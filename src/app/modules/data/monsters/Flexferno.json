@@ -50,14 +50,14 @@
       "speed": 7,
       "draw": 0,
       "discard": 1,
-      "buff": 1,
+      "buff": 0,
       "lastUpdated": "Thu, 08 Jul 2021 07:57:53 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Sauna",
-      "buffText": "Your opponent gains <div><b>Wound</b> [TA].</div>~GAIN_AURA~",
+      "buffText": "Your opponent gains <div><b>Bruised</b> [TA].</div>~GAIN_AURA~",
       "lastUpdated": "Tue, 24 Jan 2023 13:23:17 GMT"
     },
     {
@@ -79,14 +79,14 @@
   "monsterId": 2,
   "monsterName": "Flexferno",
   "abilityText": "<b><u>Switch In</u>: </b> <div>{\"num\": 1, \"stat\": \"ATK\"}.</div><br><br><b><u>Active Passive</u>: </b>Whenever this monster gains an attack pip from <div>{\"stat\": \"?\", \"num\": 1}</div>, the attack gains <div>+1[ATK].</div> ~SWITCH~",
-  "hp": 8,
+  "hp": 7,
   "promiseDescription": "<b>Flexferno</b> loves himself some <b>Flexferno</b>! A few strong flips can devastate an enemy monster.",
   "initiative": 20,
   "imageFlg": true,
   "teamAura": {
     "name": "Bruised",
-    "duration": 4,
-    "text": "Your opponent's melee [MELEE] attacks gain <b>pierce 2.</b>~PIERCE~~TA_DURATION~",
+    "duration": 5,
+    "text": "Your melee [MELEE] attacks gain <b>recoil 1</b>.~RECOIL~~TA_DURATION~",
     "type": "TIME",
     "isAilment": true
   },

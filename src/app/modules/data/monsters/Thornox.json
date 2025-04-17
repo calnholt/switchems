@@ -6,32 +6,34 @@
   "actions": [
     {
       "abilityName": "Poison the Tip",
-      "abilityText": "If the enemy monster selected a melee [MELEE] attack, the enemy attack gains <b>recoil 4</b>. <br><br><b>Spam</b>, {\"stat\": \"?\", \"num\": 1}.~RECOIL~~SPAM~",
+      "abilityText": "If the enemy monster selected a melee [MELEE] attack, the enemy monster loses <div>3[HP].</div> <br><br><b>Spam</b>.~SPAM~",
+      "attackType": "Melee",
       "element": "Leaf",
-      "statusFlg": true,
+      "attack": 1,
       "speed": 7,
       "discard": 1
     },
     {
       "abilityName": "Noxious Fumes",
-      "abilityText": "If the enemy monster selected a ranged [RANGED] attack, the enemy attack gains <b>recoil 4</b>. <br><br><b>Spam</b>, {\"stat\": \"?\", \"num\": 1}.~RECOIL~~SPAM~",      
+      "abilityText": "If the enemy monster selected a ranged [RANGED] attack, the enemy monster loses <div>3[HP].</div> <br><br><b>Spam</b>.~SPAM~",
+      "attackType": "Ranged",      
       "element": "Death",
-      "statusFlg": true,
+      "attack": 1,
       "speed": 7,
       "discard": 1
     },
     {
       "abilityName": "Smog",
-      "abilityText": "If the enemy monster <b>switched in</b> this turn, <div>[+].</div>",
+      "abilityText": "",
       "element": "Death",
       "attackType": "Ranged",
       "attack": 2,
       "speed": 2,
-      "buff": 2
+      "buff": 1
     },
     {
       "abilityName": "Entangle",
-      "abilityText": "If this attack is <b>slower</b>, this monster heals <div>2[HP].</div>~SLOWER~",
+      "abilityText": "This monster gains <div>+1[DEF]</div> this turn.",
       "element": "Leaf",
       "attackType": "Melee",
       "attack": 2,
@@ -61,13 +63,13 @@
   "monsterId": 10,
   "monsterName": "Thornox",
   "startOfGame": "<b><u>Start of Game</u></b>: Gain <div><b>Cut Through [TA].</b></div>",
-  "abilityText": "<b><u>Active Passive</u></b>: Whenever the enemy monster attacks with a ranged [RANGED] attack, the enemy attack gains <b>recoil 1</b>.~RECOIL~",
+  "abilityText": "<b><u>Switch In</u></b>: {\"stat\": \"?\", \"num\": 2}.~SWITCH~",
   "hp": 7,
   "initiative": 90,
   "imageFlg": true,
   "teamAura": {
     "name": "Cut Through",
-    "text": "Your ranged [RANGED] attacks gain <b>pierce X</b>, where X is the number of buff slots used.~PIERCE~~TA_ONGOING~",
+    "text": "Attacks you buff gain <b>pierce 1.</b>~PIERCE~~TA_ONGOING~",
     "type": "ONGOING"
   }
 }

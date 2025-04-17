@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Fatigue",
-      "abilityText": "Your opponent gains <b>Fatigue</b> [TA].<br><br>{\"stat\": \"DEF\", \"num\": 1}.",
+      "abilityText": "Your opponent gains <div><b>Fatigue</b> [TA].</div>",
       "element": "Death",
       "statusFlg": true,
       "speed": 8,
@@ -17,11 +17,11 @@
     },
     {
       "abilityName": "Expunge",
-      "abilityText": "<b>Single use. </b><br><br>If your opponent has an <div><b>ailment</b> [STATUS],</div> this attack gains <div><div>{\"stat\": \"?\", \"num\": 2}</div>.</div>~SINGLE~",
+      "abilityText": "If your opponent has an <div><b>ailment</b> [STATUS],</div> this attack gains <b>crush 2</b>.~CRUSH~",
       "element": "Death",
       "attackType": "Ranged",
       "statusFlg": false,
-      "attack": 4,
+      "attack": 3,
       "speed": 8,
       "draw": 0,
       "discard": 2,
@@ -30,20 +30,20 @@
     },
     {
       "abilityName": "Swamped",
-      "abilityText": "If all buff slots are used, this attack gains <div>+2[ATK].</div><br><br><div>{\"stat\": \"SPD\", \"num\": 2}, {\"stat\": \"?\", \"num\": 1}.</div>",
+      "abilityText": "If all buff slots are used, this attack gains <div>+2[ATK].</div>",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
-      "attack": 1,
+      "attack": 2,
       "speed": 2,
       "draw": 0,
-      "discard": 0,
-      "buff": 2,
+      "discard": 1,
+      "buff": 3,
       "lastUpdated": "Tue, 24 Jan 2023 13:29:13 GMT"
     },
     {
       "abilityName": "Surge",
-      "abilityText": "<b>Spam</b>. <br><br>If this attack is <b>faster</b>, <div>{\"stat\": \"ATK\", \"num\": 1}.</div>~SPAM~~FASTER~",
+      "abilityText": "<b>Spam</b>.~SPAM~",
       "element": "Water",
       "attackType": "Ranged",
       "statusFlg": false,
@@ -51,14 +51,14 @@
       "speed": 5,
       "draw": 1,
       "discard": 0,
-      "buff": 2,
+      "buff": 1,
       "lastUpdated": "Tue, 24 Jan 2023 13:29:13 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Abrupt Weakness",
-      "buffText": "<b>Crush 1</b> pip, then gain one pip of the type that was crushed. ~CRUSH~",
+      "buffText": "<b>Crush 1</b>, then gain one pip of the type that was crushed. ~CRUSH~",
       "lastUpdated": "Tue, 24 Jan 2023 13:20:19 GMT"
     },
     {
@@ -68,7 +68,7 @@
     },
     {
       "buffName": "Cripple",
-      "buffText": "<b>Crush 4</b> pips. ~CRUSH~",
+      "buffText": "<b>Crush 4</b>. ~CRUSH~",
       "lastUpdated": "Tue, 24 Jan 2023 13:20:19 GMT"
     },
     {
@@ -80,7 +80,7 @@
   "monsterId": 5,
   "monsterName": "Drownigator",
   "abilityText": "<b><u>Switch In</u>: </b> <div>[+].</div>~SWITCH~",
-  "hp": 8,
+  "hp": 7,
   "initiative": 70,
   "imageFlg": true,
   "teamAura": {

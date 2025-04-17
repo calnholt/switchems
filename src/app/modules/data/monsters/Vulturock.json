@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Kraterkazee",
-      "abilityText": "<b>Recoil 2</b>, <div>{\"stat\": \"?\", \"num\": 1}</div>.~RECOIL~",
+      "abilityText": "<b>Recoil 2</b>.~RECOIL~",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
@@ -14,7 +14,7 @@
       "speed": 7,
       "draw": 0,
       "discard": 1,
-      "buff": 1,
+      "buff": 0,
       "lastUpdated": "Fri, 30 Dec 2022 09:50:42 GMT"
     },
     {
@@ -27,12 +27,12 @@
       "speed": 4,
       "draw": 0,
       "discard": 0,
-      "buff": 2,
+      "buff": 1,
       "lastUpdated": "Fri, 26 Feb 2021 08:36:31 GMT"
     },
     {
       "abilityName": "Perch Guard",
-      "abilityText": "This monster gains <div>+1[DEF]</div> this turn.<br><br> {\"stat\": \"DEF\", \"num\": 3}.",
+      "abilityText": "This monster gains <div>+1[DEF]</div> this turn.<br><br> {\"stat\": \"DEF\", \"num\": 2}.",
       "element": "Rock",
       "statusFlg": true,
       "speed": 7,
@@ -43,7 +43,7 @@
     },
     {
       "abilityName": "Scavenge",
-      "abilityText": "If an enemy monster has been or becomes KO'd this turn, this monster heals <div>3[HP]</div>.",
+      "abilityText": "If this attack KO'd the enemy monster, this monster heals <div>3[HP]</div>.",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
@@ -51,7 +51,7 @@
       "speed": 5,
       "draw": 0,
       "discard": 1,
-      "buff": 3,
+      "buff": 2,
       "lastUpdated": "Sun, 26 Sep 2021 13:23:52 GMT"
     }
   ],
@@ -80,7 +80,7 @@
   "monsterId": 9,
   "monsterName": "Vulturock",
   "abilityText": "<b><u>Switch In</u>: </b> <div>{\"stat\": \"SPD\", \"num\": 2}.</div>~SWITCH~",
-  "hp": 9,
+  "hp": 8,
   "promiseDescription": "<b>Vulturock</b> hits hard – including itself!",
   "initiative": 75,
   "imageFlg": true,

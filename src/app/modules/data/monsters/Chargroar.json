@@ -6,7 +6,7 @@
   "actions": [
     {
       "abilityName": "Lightning Fang",
-      "abilityText": "If this attack is <b>faster</b>, this attack gains +3[ATK].~FASTER~",
+      "abilityText": "If this attack is <b>faster</b>, this attack gains <div>+3[ATK].</div>~FASTER~",
       "element": "Electric",
       "attackType": "Melee",
       "statusFlg": false,
@@ -14,12 +14,11 @@
       "speed": 6,
       "draw": 0,
       "discard": 3,
-      "buff": 1,
-      "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
+      "buff": 0
     },
     {
       "abilityName": "Lights Out",
-      "abilityText": "If this attack KO's the enemy monster, <div>{\"stat\": \"SPD\", \"num\": 2}.</div>",
+      "abilityText": "",
       "element": "Electric",
       "attackType": "Ranged",
       "statusFlg": false,
@@ -27,23 +26,21 @@
       "speed": 7,
       "draw": 0,
       "discard": 0,
-      "buff": 1,
-      "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
+      "buff": 1
     },
     {
       "abilityName": "Hypercharge",
-      "abilityText": "{\"stat\": \"ATK\", \"num\": 3}. <br><br>This monster gains <div>+1[DEF]</div> this turn.",
+      "abilityText": "{\"stat\": \"ATK\", \"num\": 3}.",
       "element": "Electric",
       "statusFlg": true,
-      "speed": 6,
+      "speed": 1,
       "draw": 0,
       "discard": 0,
-      "buff": 0,
-      "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
+      "buff": 0
     },
     {
       "abilityName": "Blazing Roar",
-      "abilityText": "<b>Pierce X</b>, where X is the number of buff slots used.<br><br><div>{\"stat\": \"?\", \"num\": 1}</div>.~PIERCE~",
+      "abilityText": "<b>Pierce X</b>, where X is the number of buff slots used.~PIERCE~",
       "element": "Fire",
       "attackType": "Melee",
       "statusFlg": false,
@@ -51,37 +48,31 @@
       "speed": 4,
       "draw": 0,
       "discard": 1,
-      "buff": 2,
-      "lastUpdated": "Sun, 26 Sep 2021 13:03:34 GMT"
+      "buff": 2
     }
   ],
   "buffs": [
     {
       "buffName": "Charge",
-      "buffText": "This attack gains <div>+1[SPD].</div> If your opponent has a KO'd monster, this attack gains +3[SPD] instead.",
-      "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
+      "buffText": "If your opponent has a KO'd monster, this attack gains <div>+3[SPD].</div>"
     },
     {
       "buffName": "Roar",
-      "buffText": "This attack gains <div>+1[ATK].</div> If your opponent has a KO'd monster, this attack gains +2[ATK] instead.",
-      "lastUpdated": "Tue, 24 Jan 2023 13:28:13 GMT"
+      "buffText": "If your opponent has a KO'd monster, this attack gains <div>+2[ATK].</div>"
     },
     {
       "buffName": "Revenge",
-      "buffText": "If the enemy monster selected a <div>melee [MELEE]</div> attack, this attack gains <div>+1[ATK]</div> and <div>+3[SPD].</div> If not, this attack gains <div><b>recoil 1</b></div>.~RECOIL~",
-      "lastUpdated": "Fri, 27 Jan 2023 08:01:56 GMT"
+      "buffText": "If the enemy monster selected a <div>melee [MELEE]</div> attack, this attack gains <div>+1[ATK]</div> and <div>+3[SPD].</div> If not, this attack gains <div><b>recoil 1</b></div>.~RECOIL~"
     },
     {
       "buffName": "Prey Upon",
-      "buffText": "If the enemy monster selected a <div>ranged [RANGED]</div> attack, this attack gains <div>+1[ATK]</div> and <div>+3[SPD].</div> If not, this attack gains <div><b>recoil 1</b></div>.~RECOIL~",
-      "lastUpdated": "Fri, 27 Jan 2023 08:01:56 GMT"
+      "buffText": "If the enemy monster selected a <div>ranged [RANGED]</div> attack, this attack gains <div>+1[ATK]</div> and <div>+3[SPD].</div> If not, this attack gains <div><b>recoil 1</b></div>.~RECOIL~"
     }
   ],
   "monsterId": 4,
   "monsterName": "Chargroar",
   "abilityText": "<b><u>Switch In</u>: </b> Disable a monster action of the enemy monster.~SWITCH~",
-  "hp": 7,
-  "promiseDescription": "<b>Chargroar</b> is the quintessential assassin – fast, lethal, and fragile. Knockout a monster quickly to improve your buffs!",
+  "hp": 6,
   "initiative": 80,
   "imageFlg": true,
   "lastUpdated": "Sat, 04 Sep 2021 11:56:07 GMT"

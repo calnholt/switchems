@@ -13,7 +13,7 @@
       "attack": 4,
       "speed": 6,
       "discard": 2,
-      "buff": 1
+      "buff": 0
     },
     {
       "abilityName": "Reclaim",
@@ -39,7 +39,7 @@
     },
     {
       "abilityName": "Lickety Split",
-      "abilityText": "If all buff slots are used, this attack gains <div>+1[ATK].</div>",
+      "abilityText": "",
       "element": "Water",
       "attackType": "Melee",
       "statusFlg": false,
@@ -47,7 +47,7 @@
       "speed": 5,
       "draw": 0,
       "discard": 1,
-      "buff": 2
+      "buff": 1
     }
   ],
   "buffs": [
@@ -71,14 +71,14 @@
   "monsterName": "Oozygoopz",
   "startOfGame": "<b><u>Start of Game</u>:</b> Gain <div><b>Gooped Up</b> [TA].</div>",
   "abilityText": "<b><u>Switch In</u>: </b> Shuffle a <b>Goop</b> card into your opponent's deck.~SWITCH~",
-  "hp": 7,
+  "hp": 6,
   "initiative": 15,
   "imageFlg": true,
   "extraBoard": "GOOP",
   "teamAura": {
     "name": "Gooped Up",
-    "text": "Whenever you attack with a <b>faster</b> <div>melee [MELEE]</div> attack, shuffle a <b>Goop</b> card into your opponent's deck.~FASTER~~TA_ONGOING~",
-    "type": "ONGOING",
-    "isAilment": false
+    "text": "Whenever you attack with a <b>faster</b> <div>melee [MELEE]</div> attack, shuffle a <b>Goop</b> card into your opponent's deck.~FASTER~~TA_USES~",
+    "type": "USES",
+    "duration": 4
   }
 }

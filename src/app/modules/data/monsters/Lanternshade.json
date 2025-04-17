@@ -16,11 +16,11 @@
     },
     {
       "abilityName": "Expose Weakness",
-      "abilityText": "<b>Pierce 1</b>.~PIERCE~",
+      "abilityText": "",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
-      "buff": 2,
+      "buff": 1,
       "discard": 1,
       "attack": 2,
       "speed": 7
@@ -32,13 +32,13 @@
       "attackType": "Melee",
       "statusFlg": false,
       "attack": 1,
-      "buff": 1,
-      "draw": 1,
+      "buff": 0,
+      "draw": 0,
       "speed": 4
     },
     {
       "abilityName": "Spreading Curse",
-      "abilityText": "If all of this action's buff slots are used, your opponent gains <div><b>Curse</b> [TA].</div><br><br> <div>{\"stat\": \"DEF\", \"num\": 1}.</div>",
+      "abilityText": "If all of this action's buff slots are used, your opponent gains <div><b>Curse</b> [TA].</div>",
       "element": "Death",
       "attackType": "Ranged",
       "statusFlg": false,
@@ -51,7 +51,7 @@
   "buffs": [
     {
       "buffName": "Infusion",
-      "buffText": "If this is paired with another buff, your opponent gains <div><b>Curse</b> [TA]</div>.~GAIN_AURA~",
+      "buffText": "If this is paired with a non-Lanternshade buff, your opponent gains <div><b>Curse</b> [TA]</div>.~GAIN_AURA~",
       "auraDuration": null
     },
     {
@@ -70,7 +70,7 @@
       "auraDuration": null
     }
   ],
-  "hp": 8,
+  "hp": 7,
   "monsterName": "Lanternshade",
   "initiative": 65,
   "imageFlg": true,

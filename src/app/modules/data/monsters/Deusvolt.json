@@ -6,24 +6,25 @@
   "actions": [
     {
       "abilityName": "Shock",
-      "abilityText": "If a <b>heavy</b> buff is applied to this attack, this attack gains <div>+1[ATK].</div>~HEAVY~",
+      "abilityText": "",
       "element": "Electric",
       "attackType": "Melee",
       "statusFlg": false,
       "attack": 1,
-      "speed": 7,
-      "buff": 2
+      "speed": 5,
+      "buff": 2,
+      "draw": 1
     },
     {
       "abilityName": "Gnaw",
-      "abilityText": "If a <b>heavy</b> buff is applied to this attack, heal <div>2[HP].</div>~HEAVY~",
+      "abilityText": "This attack gains <div>+X[ATK],</div> where X is the number of buff slots used.",
       "element": "Leaf",
       "attackType": "Melee",
       "statusFlg": false,
       "attack": 2,
       "speed": 4,
       "discard": 1,
-      "buff": 2
+      "buff": 1
     },
     {
       "abilityName": "Leaf Burst",
@@ -67,13 +68,13 @@
       "auraDuration": null
     }
   ],
-  "hp": 8,
+  "hp": 7,
   "monsterName": "Deusvolt",
   "initiative": 55,
   "abilityText": "<b><u>Switch In</u>: </b> Gain <div><b>Carry your Cross [TA]</b>.</div>~SWITCH~",
   "teamAura": {
     "name": "Carry your Cross",
-    "text": "The next time you apply a <b>heavy</b> buff, you can choose to have it use one buff slot less. If you do, destroy this.~HEAVY~~TA_ONGOING~",
+    "text": "Your monster attack actions have an additional buff slot. When you use this additional buff slot, destroy this.~TA_ONGOING~",
     "type": "ONGOING",
     "copies": 2
   },

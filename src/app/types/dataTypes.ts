@@ -56,9 +56,9 @@ const termCodes = [
     new Term('Team Aura - Duration', '~TA_DURATION~', '<b>Duration [TIME]</b> - When this enters play, put a cube on the S space. At the end of your turn, move the cube to the next space. When the cube reaches X, destroy this.'),
     new Term('Team Aura - Ongoing', '~TA_ONGOING~', '<b>Ongoing [ONGOING]</b> - Ongoing <b>team auras</b> stay in play for the entire game unless destroyed by an effect.'),
     new Term('Team Aura - Uses', '~TA_USES~', '<b>Uses [USES]</b> - When this enters play, put a cube on the S space. Whenever this <b>team aura</b> triggers, move the cube to the next space. When the cube reaches X, destroy this.'),
-    new Term('Crush', '~CRUSH~', `<b>Crush X</b> - Remove X pips of the same type from your opponent's stat board that they aren't using.`),
+    new Term('Crush', '~CRUSH~', `<b>Crush X</b> - Remove X pips from your opponent's pip board that they aren't using.`),
     new Term('Special', '~SPECIAL~', 'You cannot apply buffs or pips to <div><b>special</b> [SPECIAL]</div> actions.'),
-    new Term('Instant', '~INSTANT~', '<b>Instant</b> buffs can be played during the apply buffs phase (after reveal). They still require buff slots.'),
+    new Term('Instant', '~INSTANT~', '<b>Instant</b> buffs can be played during your apply buffs phase (after reveal). They still require buff slots.'),
     new Term('Gain Aura', '~GAIN_AURA~', `Players can gain a [TA] if they don't already control it, or if there are multiple copies.`),
 ];
 export const TERM_CODES = termCodes.sort((a,b) => a.name.localeCompare(b.name));

@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Cobolt",
-      "abilityText": "Heal X[HP], where X is the number of buff slots used.",
+      "abilityText": "{\"stat\": \"DEF\", \"num\": 1} for each buff slot used.",
       "element": "Death",
       "attackType": "Ranged",
       "statusFlg": false,
@@ -18,12 +18,12 @@
     },
     {
       "abilityName": "Static Void",
-      "abilityText": "<b>Single use.</b><br><br>This monster gains +4[DEF] this turn. At the end of the turn, if this monster took no damage this turn, increase or decrease one space from any <div>duration [TIME]</div> <div><b>team aura [TA]</b>.</div>~SINGLE~",
+      "abilityText": "This monster gains +2[DEF] this turn. <br><br>If this action is <b>slower</b>, increase or decrease one space from any <div>duration [TIME]</div> <div><b>team aura [TA]</b>.</div>~SLOWER~",
       "element": "Electric",
       "statusFlg": true,
       "speed": 7,
       "draw": 0,
-      "discard": 0,
+      "discard": 1,
       "buff": 0,
       "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
@@ -37,12 +37,12 @@
       "speed": 4,
       "draw": 0,
       "discard": 2,
-      "buff": 3,
+      "buff": 2,
       "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     },
     {
       "abilityName": "Exception Caught",
-      "abilityText": "<b>Pierce 5.</b>~PIERCE~",
+      "abilityText": "",
       "element": "Death",
       "attackType": "Melee",
       "statusFlg": false,
@@ -50,7 +50,7 @@
       "speed": 5,
       "draw": 0,
       "discard": 1,
-      "buff": 3,
+      "buff": 0,
       "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     }
   ],
@@ -79,15 +79,15 @@
   "monsterId": 10,
   "monsterName": "Phantomaton",
   "startOfGame": "<b><u>Start of Game</u>: </b>Gain <b>Downloading...</b> <div>[TA].</div>",
-  "abilityText": "<b><u>Switch In</u>: </b> <div>{\"stat\": \"ATK\", \"num\": 1}.</div> ~SWITCH~",
-  "hp": 8,
+  "abilityText": "<b><u>Switch In</u>: </b> <div>{\"stat\": \"?\", \"num\": 1}.</div> ~SWITCH~",
+  "hp": 7,
   "initiative": 50,
   "imageFlg": true,
   "teamAura": {
     "name": "Downloading...",
     "text": "You cannot apply Phantomaton buff cards as buffs.~TA_DURATION~",
     "type": "TIME",
-    "duration": 5
+    "duration": 7
   },
   "lastUpdated": "Thu, 26 Jan 2023 18:07:17 GMT"
 }

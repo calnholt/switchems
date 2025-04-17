@@ -13,7 +13,7 @@
         "speed": 8,
         "draw": 0,
         "discard": 2,
-        "buff": 3,
+        "buff": 2,
         "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
       },
       {
@@ -26,7 +26,7 @@
         "speed": 5,
         "draw": 0,
         "discard": 0,
-        "buff": 2,
+        "buff": 0,
         "lastUpdated": "Sun, 26 Sep 2021 13:47:29 GMT"
       },
       {
@@ -39,12 +39,12 @@
         "speed": 7,
         "draw": 0,
         "discard": 1,
-        "buff": 1,
+        "buff": 0,
         "lastUpdated": "Thu, 26 Jan 2023 10:54:24 GMT"
       },
       {
         "abilityName": "Vicious Hurricane",
-        "abilityText": "<b>Single use.</b> <br><br>This attack gains <div>+X[ATK]</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, this attack gains <div>+2[ATK]</div> instead. ~SINGLE~",
+        "abilityText": "This attack gains <div>+X[ATK]</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, this attack gains <div>+2[ATK]</div> instead.",
         "element": "Death",
         "attackType": "Ranged",        
         "statusFlg": false,
@@ -52,7 +52,7 @@
         "speed": 5,
         "draw": 0,
         "discard": 2,
-        "buff": 2,
+        "buff": 1,
         "lastUpdated": "Fri, 24 Sep 2021 12:14:02 GMT"
       }
     ],
@@ -81,7 +81,7 @@
     "monsterId": 8,
     "monsterName": "Galeaffy",
     "abilityText": "<b><u>Switch In</u></b>: [+] then [-], {\"stat\": \"SPD\", \"num\": 1}.<br><br><b><u>Switch Out</u>:</b> Gain <div><b>Tailwind</b> [TA].</div>~SWITCH~",
-    "hp": 8,
+    "hp": 7,
     "promiseDescription": "The master of speed has arrived!",
     "initiative": 85,
     "imageFlg": true,

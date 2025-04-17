@@ -12,7 +12,7 @@
       "attack": 4,
       "speed": 1,
       "discard": 1,
-      "buff": 2,
+      "buff": 1,
       "lastUpdated": "Thu, 26 Jan 2023 12:41:12 GMT"
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "abilityName": "Consume",
-      "abilityText": "This monster heals <div>4[HP].</div> <div>{\"stat\": \"?\", \"num\": 1}</div>. ",
+      "abilityText": "This monster heals <div>4[HP].</div> ",
       "element": "Water",
       "statusFlg": true,
       "attack": null,
@@ -39,21 +39,21 @@
     },
     {
       "abilityName": "Big Boned",
-      "abilityText": "<b>Single use</b>. <br><br>This attack gains <div>+X[ATK],</div> where X is equal to the amount of [HP] this monster lost this turn. ~SINGLE~",
+      "abilityText": "This attack gains <div>+X[ATK],</div> where X is equal to the amount of [HP] this monster lost this turn.",
       "element": "Water",
       "attackType": "Melee",
       "statusFlg": false,
       "attack": 1,
       "speed": 2,
       "discard": 1,
-      "buff": 1,
+      "buff": 0,
       "lastUpdated": "Thu, 26 Jan 2023 12:00:46 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Take It Easy",
-      "buffText": "<b>Heavy</b>. \n<br><br>\nThis monster heals 1[HP]. If this monster has three or less[HP], this monster heals 3[HP] instead. ~HEAVY~ ",
+      "buffText": "<b>Heavy</b>. <br><br>If this monster has two or less <div>[HP],</div> this monster heals <div<3[HP].</div> ~HEAVY~ ",
       "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
     },
     {
@@ -68,13 +68,13 @@
     },
     {
       "buffName": "Built Different",
-      "buffText": "This monster gains <div>+1[DEF]</div> cannot be <b>flinched</b> this turn.~FLINCH~",
+      "buffText": "This monster gains <div>+1[DEF]</div> and cannot be <b>flinched</b> this turn.~FLINCH~",
       "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"
     }
   ],
   "monsterName": "Whailstrom",
   "abilityText": "<b><u>Switch In</u>: </b> The enemy monster loses <div>1[HP].</div>~SWITCH~",
-  "hp": 9,
+  "hp": 8,
   "initiative": 5,
   "imageFlg": true,
   "lastUpdated": "Thu, 26 Jan 2023 11:44:19 GMT"

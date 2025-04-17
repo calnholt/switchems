@@ -5,7 +5,7 @@
   "actions": [
     {
       "abilityName": "Scramble",
-      "abilityText": "If you control <div><b>Flubble's Bubble</b> [TA],</div> this monster gains <div>+3[DEF]</div> this turn. Otherwise, this attack gains <div>+3[ATK].</div> <br><br><div>{\"stat\": \"?\", \"num\": 1}.</div>",
+      "abilityText": "If you control one or fewer <div><b>Flubble's Bubble</b> [TA],</div> this monster gains <div>+3[DEF]</div> this turn. Otherwise, this attack gains <div>+3[ATK].</div>",
       "element": "Water",
       "attackType": "Melee",
       "statusFlg": false,
@@ -13,25 +13,23 @@
       "speed": 7,
       "draw": 0,
       "discard": 2,
-      "buff": 1,
-      "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
+      "buff": 1
     },
     {
       "abilityName": "Inflate",
-      "abilityText": "If you don't control <b>Flubble's <div>Bubble</b> [TA],</div> gain <b>Flubble's <div>Bubble</b> [TA].</div>",
+      "abilityText": "Gain <b>Flubble's <div>Bubble</b> [TA].</div>",
       "element": "Water",
       "attackType": "Melee",
       "statusFlg": false,
       "attack": 1,
-      "speed": 1,
+      "speed": 9,
       "draw": 0,
       "discard": 0,
-      "buff": 2,
-      "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
+      "buff": 0
     },
     {
       "abilityName": "Bubble Bomb",
-      "abilityText": "If <div><b>Flubble's Bubble</b> [TA]</div> was destroyed this turn during your monster action phase, <div>{\"stat\": \"?\", \"num\": 2}.</div>",
+      "abilityText": "",
       "element": "Water",
       "attackType": "Ranged",
       "statusFlg": false,
@@ -39,8 +37,7 @@
       "speed": 6,
       "draw": 0,
       "discard": 1,
-      "buff": 2,
-      "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
+      "buff": 0
     },
     {
       "abilityName": "Expand",
@@ -51,39 +48,37 @@
       "speed": 1,
       "draw": 0,
       "discard": 1,
-      "buff": 2,
-      "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
+      "buff": 2
     }
   ],
   "buffs": [
     {
       "buffName": "Bubble Up",
-      "buffText": "Gain <div><b>Flubble's Bubble</b> [TA]</div> and <b>pierce 1</b>.~PIERCE~"
+      "buffText": "Gain <div><b>Flubble's Bubble</b> [TA]</div> and <b>pierce 2</b>.~PIERCE~"
     },
     {
       "buffName": "More Bubbly",
-      "buffText": "Gain <div><b>Flubble's Bubble</b> [TA]</div> and <div>{\"stat\": \"?\", \"num\": 1}.</div>"
+      "buffText": "Gain <div><b>Flubble's Bubble</b> [TA]</div> and <div>{\"stat\": \"SPD\", \"num\": 2}.</div>"
     },
     {
       "buffName": "Fierce Foam",
-      "buffText": "If you control <b>Flubble's Bubble</b> <div>[TA],</div> this attack gains <div>+2[ATK].</div>",      
-      "lastUpdated": "Thu, 15 Jul 2021 08:25:53 GMT"
+      "buffText": "This attack gains <div>+X[ATK],</div> where X is the number of <div><b>Flubble's Bubble</b> [TA]</div> you control and then destroy them."      
     },
     {
-      "buffName": "Sudsy Slide",
-      "buffText": "If you control <b>Flubble's Bubble</b> <div>[TA],</div> this attack gains <div>+3[SPD].</div>",      
-      "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
+      "buffName": "Bubble Shield",
+      "buffText": "This attack gains <div>+X[DEF],</div> where X is the number of <div><b>Flubble's Bubble</b> [TA]</div> you control and then destroy them."      
     }
   ],
   "monsterId": 10,
   "monsterName": "Flubble",
-  "abilityText": "<b><u>Switch In</u></b>: Gain <div><b>Flubble's Bubble</b> [TA].</div><br><br><b><u>Switch Out</u></b>: Gain <div><b>Flubble's Bubble</b> [TA].</div> ~SWITCH~",
-  "hp": 8,
+  "abilityText": "<b><u>Switch In</u></b>: Gain <div><b>Flubble's Bubble</b> [TA].</div>~SWITCH~",
+  "hp": 7,
   "initiative": 35,
   "imageFlg": true,
   "teamAura": {
     "name": "Flubble's Bubble",
-    "text": "At the start of your monster action phase, if you applied two or more buff cards, gain <div>+2[DEF]</div> and destroy this.<br><br> Whenever you would gain another <div><b>Flubble's Bubble [TA],</b></div> instead the enemy monster loses <div>2[HP]</div> and destroy this.<br><br> If the opponent attacks with a <b>faster</b> <div>melee [MELEE]</div> attack, destroy this.~FASTER~",
-    "type": "INFINITE"
+    "text": "When you perform a basic action, if you control three <div><b>Flubble's Bubble</b> [TA],</div> heal <div>3[HP]</div> and destroy this.~TA_ONGOING~",
+    "type": "ONGOING",
+    "copies": 3
   }
 }
