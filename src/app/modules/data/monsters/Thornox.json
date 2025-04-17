@@ -9,6 +9,7 @@
       "abilityText": "If the enemy monster selected a melee [MELEE] attack, the enemy monster loses <div>3[HP].</div> <br><br><b>Spam</b>.~SPAM~",
       "attackType": "Melee",
       "element": "Leaf",
+      "statusFlg": false,
       "attack": 1,
       "speed": 7,
       "discard": 1
@@ -18,6 +19,7 @@
       "abilityText": "If the enemy monster selected a ranged [RANGED] attack, the enemy monster loses <div>3[HP].</div> <br><br><b>Spam</b>.~SPAM~",
       "attackType": "Ranged",      
       "element": "Death",
+      "statusFlg": false,
       "attack": 1,
       "speed": 7,
       "discard": 1
@@ -27,6 +29,7 @@
       "abilityText": "",
       "element": "Death",
       "attackType": "Ranged",
+      "statusFlg": false,
       "attack": 2,
       "speed": 2,
       "buff": 1
@@ -36,6 +39,7 @@
       "abilityText": "This monster gains <div>+1[DEF]</div> this turn.",
       "element": "Leaf",
       "attackType": "Melee",
+      "statusFlg": false,
       "attack": 2,
       "speed": 5,
       "discard": 1,

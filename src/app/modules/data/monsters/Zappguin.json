@@ -13,7 +13,7 @@
       "speed": 3,
       "draw": 0,
       "discard": 2,
-      "buff": 1,
+      "buff": 0,
       "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
@@ -26,12 +26,12 @@
       "speed": 5,
       "draw": 0,
       "discard": 1,
-      "buff": 2,
+      "buff": 0,
       "lastUpdated": "Wed, 07 Jul 2021 07:02:19 GMT"
     },
     {
       "abilityName": "Vortex",
-      "abilityText": "If you don't control <b>Stun [TA]</b>, this attack gains <div>+2[ATK].</div><br><br> {\"stat\": \"DEF\", \"num\": 1}.",
+      "abilityText": "<div>{\"stat\": \"SPD\", \"num\": 2}</div>",
       "element": "Electric",
       "attackType": "Melee",
       "statusFlg": false,
@@ -39,7 +39,7 @@
       "speed": 4,
       "draw": 0,
       "discard": 0,
-      "buff": 1,
+      "buff": 2,
       "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
@@ -52,7 +52,7 @@
       "speed": 3,
       "draw": 0,
       "discard": 1,
-      "buff": 2,
+      "buff": 1,
       "lastUpdated": "Tue, 24 Jan 2023 14:32:17 GMT"
     }
   ],
