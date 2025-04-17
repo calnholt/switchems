@@ -4,124 +4,92 @@
   ],
   "actions": [
     {
-      "abilityName": "Thunderstorm",
-      "abilityText": "This monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.",
+      "abilityName": "Thunder Slam",
+      "abilityText": "<div>{\"stat\": \"SPD\", \"num\": 3}</div>",
       "element": "Electric",
-      "modifiers": [
-        3,
-        0,
-        0,
-        0,
-        3,
-        0
-      ],
-      "auraDuration": 0,
+      "attackType": "Melee",
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 4,
-      "speed": 5,
+      "speed": 3,
       "draw": 0,
       "discard": 2,
-      "buff": 0
+      "buff": 0,
+      "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
       "abilityName": "Ice Blast",
-      "abilityText": "If this action is <b>faster</b>, perform:<br><br>[1]: <b>Flinch</b>. ~FASTER~~FLINCH~",
+      "abilityText": "If this attack is <b>slower</b>, this attack gains <div><b>recoil 1</b>.</div>~SLOWER~~RECOIL~ ",
       "element": "Water",
-      "modifiers": [
-        1,
-        0,
-        0,
-        0,
-        0,
-        2
-      ],
-      "auraDuration": 0,
+      "attackType": "Ranged",
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 2,
-      "speed": 4,
+      "attack": 3,
+      "speed": 5,
       "draw": 0,
-      "discard": 0,
-      "buff": 1
+      "discard": 1,
+      "buff": 0,
+      "lastUpdated": "Wed, 07 Jul 2021 07:02:19 GMT"
     },
     {
       "abilityName": "Vortex",
-      "abilityText": "This attack gains two [B] slots if the enemy monster has a [STATUS]. ~STATUS~",
+      "abilityText": "<div>{\"stat\": \"SPD\", \"num\": 2}</div>",
       "element": "Electric",
-      "modifiers": [
-        2,
-        0,
-        0,
-        0,
-        2,
-        0
-      ],
-      "auraDuration": 0,
+      "attackType": "Melee",
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 2,
-      "speed": 7,
+      "attack": 1,
+      "speed": 4,
       "draw": 0,
       "discard": 0,
-      "buff": 1
+      "buff": 2,
+      "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
-      "abilityName": "Paralyze",
-      "abilityText": "<b>Paralyze [STATUS]</b> and the enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}. ~PARALYZE~",
+      "abilityName": "Recharge",
+      "abilityText": "If this attacks with 5 or more speed, [+].",
       "element": "Electric",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "auraDuration": 0,
-      "statusFlg": true,
-      "reactionFlg": false,
-      "speed": 2,
-      "draw": 1,
-      "discard": 0,
-      "buff": 0
+      "attackType": "Ranged",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 3,
+      "draw": 0,
+      "discard": 1,
+      "buff": 1,
+      "lastUpdated": "Tue, 24 Jan 2023 14:32:17 GMT"
     }
   ],
   "buffs": [
     {
-      "buffName": "Prepared Zap",
-      "timing": "Pre-Actions",
-      "buffText": "<b>Super, Ethereal, Paralyze [STATUS]</b>~SUPER~~ETHEREAL~~PARALYZE~",
-      "critFlg": true
+      "buffName": "Charge Up",
+      "buffText": "{\"stat\": \"SPD\", \"num\": 2}",
+      "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
-      "buffName": "Impulsive Zap",
-      "timing": "With Attack",
-      "buffText": "[1]: <b>Paralyze [STATUS]</b>. ~PARALYZE~",
-      "flipEventText": "The enemy monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": false}.",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffName": "Zap",
+      "buffText": "If this attack is <div>melee [MELEE],</div> this attack gains <div>+2[ATK].</div>",
+      "auraDuration": 0,
+      "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
       "buffName": "High Voltage",
-      "timing": "Pre-Actions",
-      "buffText": "[+] and this attack gains <b><div>recoil 1[ATK]</div></b>. If the enemy monster is <b>paralzyed</b>, that monster flips only [1] for its <b>paralzyed</b> condition this turn, ignoring any other modifiers. ~RECOIL~.",
-      "critFlg": false
+      "buffText": "<b>Heavy</b>. Gain <b>Stun</b> [TA].~HEAVY~~GAIN_AURA~",
+      "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     },
     {
-      "buffName": "Retaliate",
-      "timing": "With Attack",
-      "buffText": "If this attack is <b>slower</b>, this attack gains +{\"positive\": 3, \"neutral\": 3, \"negative\": 1}[ATK].~SLOWER~",
-      "critFlg": true
+      "buffName": "Quicken",
+      "buffText": "This attack gains +2[SPD].",
+      "lastUpdated": "Tue, 24 Jan 2023 14:16:01 GMT"
     }
   ],
   "monsterId": 7,
-  "abilityName": "Static Shock",
   "monsterName": "Zappguin",
-  "abilityText": "This monster's attacks gain <div>+1[ATK]</div> for each different [STATUS] the enemy monster has.~STATUS~",
-  "hp": 9,
-  "complexity": 1,
-  "promiseDescription": "Zappguin wants nothing more than to paralyze every monster it meets. This requires a little bit of work because Zappguin is on the slower side. But a carefully timed Zap from a teammate can setup Zappguin wonderfully.",
+  "abilityText": "<b><u>Switch In</u>: </b> Gain <div><b>Stun</b> [TA].</div>~SWITCH~",
+  "hp": 7,
   "initiative": 40,
-  "role": "Tricky"
+  "imageFlg": true,
+  "teamAura": {
+    "name": "Stun",
+    "text": "If you attack with a <b>faster</b> ranged [RANGED] attack, your attack gains <b>flinch</b> and destroy this.~FASTER~~FLINCH~~TA_DURATION~",
+    "type": "TIME",
+    "duration": 4
+  },
+  "lastUpdated": "Wed, 25 Jan 2023 12:07:15 GMT"
 }

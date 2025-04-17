@@ -5,122 +5,89 @@
   "actions": [
     {
       "abilityName": "Cobolt",
-      "abilityText": "",
+      "abilityText": "{\"stat\": \"DEF\", \"num\": 1} for each buff slot used.",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        3,
-        3,
-        0,
-        0
-      ],
-      "auraDuration": 0,
+      "attackType": "Ranged",
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 1,
-      "speed": 2,
+      "speed": 1,
       "draw": 0,
       "discard": 0,
-      "buff": 2
+      "buff": 2,
+      "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
-      "abilityName": "Download",
-      "abilityText": "When the enemy monster performs a switch action, that monster heals 1[HP] and discard this aura. <br><br>When all time counters are removed from this, next turn your opponent must reveal their selected action before you select yours.",
-      "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "auraDuration": 4,
-      "statusFlg": false,
-      "reactionFlg": false,
-      "speed": 1,
-      "draw": 1,
-      "discard": 0,
-      "buff": 0
-    },
-    {
-      "abilityName": "Transfusion",
-      "abilityText": "[1]: <b>Leech [STATUS]</b> ~LEECH~",
-      "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        2,
-        2,
-        0,
-        0
-      ],
-      "auraDuration": 0,
-      "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 2,
-      "speed": 1,
+      "abilityName": "Static Void",
+      "abilityText": "This monster gains +2[DEF] this turn. <br><br>If this action is <b>slower</b>, increase or decrease one space from any <div>duration [TIME]</div> <div><b>team aura [TA]</b>.</div>~SLOWER~",
+      "element": "Electric",
+      "statusFlg": true,
+      "speed": 7,
       "draw": 0,
       "discard": 1,
-      "buff": 2
+      "buff": 0,
+      "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
-      "abilityName": "Cornered",
-      "abilityText": "This attack gains <div>+2[ATK]</div> when this monster has a <b>lockdown</b> counter on it.",
-      "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        1,
-        1,
-        0,
-        0
-      ],
-      "auraDuration": 0,
+      "abilityName": "Arraydicate",
+      "abilityText": "<b>Flinch</b>.~FLINCH~",
+      "element": "Electric",
+      "attackType": "Ranged",
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 5,
+      "attack": 4,
       "speed": 4,
       "draw": 0,
-      "discard": 3,
-      "buff": 0
+      "discard": 2,
+      "buff": 2,
+      "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
+    },
+    {
+      "abilityName": "Exception Caught",
+      "abilityText": "",
+      "element": "Death",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 5,
+      "draw": 0,
+      "discard": 1,
+      "buff": 0,
+      "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     }
   ],
   "buffs": [
     {
-      "buffName": "Target Acquired",
-      "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} if the opponent selected a switch action this turn.",
-      "critFlg": true
+      "buffName": "Power Up",
+      "buffText": "<b>Reminder!</b> - You cannot play this if you control <b>Downloading... [TA]</b><br><br><b>Heavy</b>. [+] [+] [+]. ~HEAVY~",
+      "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
-      "buffName": "Target Acquired",
-      "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true} if the opponent selected a switch action this turn.",
-      "critFlg": true
+      "buffName": "Speed Hotfix",
+      "buffText": "<b>Reminder!</b> - You cannot play this if you control <b>Downloading... [TA]</b><br><br><b>Heavy</b>. This attack gains <div>+5[SPD].</div> ~HEAVY~",
+      "lastUpdated": "Thu, 26 Jan 2023 17:57:55 GMT"
     },
     {
-      "buffName": "Refactor",
-      "timing": "Pre-Actions",
-      "buffText": "<b>Super</b><br>Attack speeds are reversed this turn and you win all speed ties.~SUPER~",
-      "critFlg": false
+      "buffName": "Attack Hotfix",
+      "buffText": "<b>Reminder!</b> - You cannot play this if you control <b>Downloading... [TA]</b><br><br><b>Heavy</b>. This attack gains <div>+3[ATK].</div> ~HEAVY~",      
+      "lastUpdated": "Thu, 15 Jul 2021 08:25:53 GMT"
     },
     {
-      "buffName": "Malware",
-      "timing": "None",
-      "buffText": "This card has no buff effect.",
-      "flipEventText": "The enemy monster suffers <div>1[ATK]</div>",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffName": "Defense Hotfix",
+      "buffText": "<b>Reminder!</b> - You cannot play this if you control <b>Downloading... [TA]</b><br><br><b>Heavy</b>. This attack gains <div>+3[DEF].</div> ~HEAVY~",      
+      "lastUpdated": "Thu, 26 Jan 2023 18:06:11 GMT"
     }
   ],
   "monsterId": 10,
-  "abilityName": "Lockdown",
   "monsterName": "Phantomaton",
-  "abilityText": "At the start of the turn, put a <b>lockdown</b> counter on this monster if it doesn't already have one. If it does, remove the <b>lockdown</b> counter instead. While this monster has a <b>lockdown</b> counter on it, the enemy monster cannot perform switch actions.",
-  "hp": 12,
-  "complexity": 2,
-  "initiative": 55,
-  "role": "Tank"
+  "startOfGame": "<b><u>Start of Game</u>: </b>Gain <b>Downloading...</b> <div>[TA].</div>",
+  "abilityText": "<b><u>Switch In</u>: </b> <div>{\"stat\": \"?\", \"num\": 1}.</div> ~SWITCH~",
+  "hp": 7,
+  "initiative": 50,
+  "imageFlg": true,
+  "teamAura": {
+    "name": "Downloading...",
+    "text": "You cannot apply Phantomaton buff cards as buffs.~TA_DURATION~",
+    "type": "TIME",
+    "duration": 7
+  },
+  "lastUpdated": "Thu, 26 Jan 2023 18:07:17 GMT"
 }

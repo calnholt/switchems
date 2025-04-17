@@ -17,43 +17,6 @@
     </table>
   </div>
   <div class="table-container">
-    <h2>Number of monsters with roles</h2>
-    <table>
-      <thead>
-        <tr>
-          <th *ngFor="let role of ROLES">
-            <img src="{{getRoleIcon(role)}}">
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td *ngFor="let role of ROLES">{{getNumberOfMonstersPerRole(role)}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="table-container">
-    <h2>Number of monsters with complexity</h2>
-    <table>
-      <thead>
-        <tr>
-          <th *ngFor="let complexity of COMPLEXITY">
-            <span *ngFor="let x of ' '.repeat(3).split(''), let i = index">
-              <mat-icon *ngIf="complexity >= i+1">star</mat-icon>
-              <mat-icon *ngIf="complexity < i+1">star_border</mat-icon>
-            </span>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td *ngFor="let complexity of COMPLEXITY">{{getNumberOfMonsterComplexity(complexity)}}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="table-container">
     <h2>Number of attacks with elements</h2>
     <table>
       <thead>
@@ -72,7 +35,7 @@
     </table>
   </div>
   <div class="table-container">
-    <h2>Total modifiers per elements</h2>
+    <h2>Number of monsters with weaknesses</h2>
     <table>
       <thead>
         <tr>
@@ -83,7 +46,24 @@
       </thead>
       <tbody>
         <tr>
-          <td *ngFor="let element of ELEMENTS">{{getTotalModifiersPerElement(element)}}</td>
+          <td *ngFor="let element of ELEMENTS">{{getNumberOfWeaknessesPerMonster(element)}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="table-container">
+    <h2>Number of monsters with resistances</h2>
+    <table>
+      <thead>
+        <tr>
+          <th *ngFor="let element of ELEMENTS">
+            <img src="{{getElementColorImg(element)}}">
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngFor="let element of ELEMENTS">{{getNumberOfResistancesPerMonster(element)}}</td>
         </tr>
       </tbody>
     </table>

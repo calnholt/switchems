@@ -1,0 +1,16 @@
+<ng-container *ngIf="item && item.ol">
+  <ol>
+    <ng-container *ngFor="let ol of item.ol">
+      <li [innerHTML]="displayFnc(ol.text)"></li>
+      <rulebook-list [item]="ol" [displayFnc]="displayFnc"></rulebook-list>
+    </ng-container>
+  </ol>
+</ng-container>
+<ng-container *ngIf="item && item.ul">
+  <ul>
+    <ng-container *ngFor="let ul of item.ul">
+      <li [innerHTML]="displayFnc(ul.text)"></li>
+      <rulebook-list [item]="ul" [displayFnc]="displayFnc"></rulebook-list>
+    </ng-container>
+  </ul>
+</ng-container>

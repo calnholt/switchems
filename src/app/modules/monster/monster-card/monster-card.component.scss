@@ -9,6 +9,7 @@
         height: $card-height;
         width: $card-width;
         background-color: #ffffff;
+        overflow: hidden;
         .elements-container{
             display: grid;
             grid-template-columns: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
@@ -18,7 +19,7 @@
                 padding-bottom: 5px;
             }
             .effectiveness{
-                font-family: $beastformer;
+                font-family: $header-font;
                 .effective{
                     max-height: 19px;
                     top: 2px;
@@ -39,22 +40,95 @@
                     top: -29px;
                 }
             }
+        }
+        .name-container{
+            display: flex;
+            justify-content: space-between;
+            height: 28px;
+            div {
+                padding: 1px 6px;
+            }
+            .name{
+                font-family: $header-font;
+                font-size: 26px;
+                justify-content: center;
+                letter-spacing: 0.02em;
+                color: white;
+                display: flex;
+                align-items: center;
+                background-color: black;
+                width: 100%;
+            }
             .elements{
-                display: grid;
-                grid-template-rows: auto;
-                justify-items: center;
-                .element-icon{
-                    max-height: 30px;
+                background: #f0f0f0bd;
+                border-radius: 0px 4px 4px 0px;
+                display: flex;
+                align-items: center;
+                border: 2px solid black;
+                border-left: unset;
+                img {
+                    max-height: 18px;
+                }
+                img:nth-child(n+2) {
+                    padding-left: 3px;
                 }
             }
         }
-        .name{
-            font-family: $beastformer;
-            font-size: 28px;
-            text-align: center;
-            margin-top: 5px;
-            letter-spacing: 0.02em;
-            min-height: 20px;
+        .stat-container {
+            font-family: $header-font;
+            background-color: #f0f0f0bd;
+            padding: 0px 3px;
+            width: fit-content;
+            font-size: 16px;
+            border-radius: 0px 5px 6px 0px;
+            border: #d8d8d8 2px solid;
+            border-left: unset;
+            position: relative;
+            margin-top: 20px;
+            .stats {
+                .hp-container {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                }
+                .initiative-container {
+
+                }
+            }
+            img {
+                max-height: 12px;
+            }
+        }
+        .monster-image {
+            display: flex;
+            position: relative;
+            align-content: center;
+            justify-content: center;
+            img {
+                position: absolute;
+                max-height: 220px;
+                max-width: 220px;
+                margin-top: 10px;
+            }
+            // .oozygoopz {
+            //     max-height: 120px;
+            //     margin-top: 25px;
+            // }
+            // .drownigator {
+            //     max-height: 236px;
+            //     top: -12px;
+            // }
+            // .vulturock {
+            //     max-height: 236px;
+            //     top: -12px;
+            // }
+            // .flexferno {
+            //     max-height: 236px;
+            // }
+            // .whailstrom {
+            //     max-height: 134px;
+            //     top: 27px;
+            // }
         }
         .ability-container{
             .ability-name-container{
@@ -66,11 +140,10 @@
                 width: 89.7%;
                 height: 11%;
                 border-radius: 10px 10px 0px 0px;
-                margin-top: 0.08cm;
                 padding: 2px 0px 2px;
                 .ability-name{
                     margin: auto;
-                    font-family: $beastformer;
+                    font-family: $header-font;
                     color: white;
                     font-size: 22px;
                     padding-bottom: 6px;
@@ -80,20 +153,18 @@
                 }
             }
             .ability-text-container{
-                position: relative;
-                top: -8px;
+                border-top: 2px #d8d8d8 solid;
+                text-align: left !important;
+                bottom: 0px;
+                position: absolute;
                 display: flex;
-                background-color: hsl(0, 0%, 94%);
-                border: 2px black solid;
-                margin: auto;
-                width: 90%;
-                height:auto;
-                border-radius: 10px;
-                box-shadow: 0px 0px 18px -4px black;
+                flex-direction: column;
+                background-color: #f0f0f0cc;
+                width: 100%;
                 .ability-text{
-                    font-family: $helvetica;
-                    font-size: 12px;
-                    padding: 10px;
+                    font-family: $text-font;
+                    font-size: 13px;
+                    padding: 5px;
                     line-height: 13px;
                     div {
                         display: inline-block;
@@ -103,29 +174,16 @@
         }
         .bottom-container{
             position: absolute;
-            bottom: 5px;
+            bottom: 42px;
             right: 5px;
-            .role-container{
-                position: relative;
-                top: 13px;
-                .img{
-                    width: 15%;
-                    margin-left: 6px;
-                    float: left;
-                }
-                .name{
-                    position: relative;
-                    font-family: $beastformer;
-                    font-size: 18px;
-                    letter-spacing: 0.02em;
-                    bottom: -11px;
-                }
+            &.bottom{
+                bottom: 5px;
             }
             .star-container{
                 position: relative;
                 display: flex;
                 top: 23px;
-                right: 34px;
+                right: -7px;
                 height: 0px;
                 span{
                     .mat-icon{
@@ -157,6 +215,62 @@
                     float: right;
                     width: 15%;
                     margin-left: 6px;
+                }
+            }
+        }
+        .element-info-container {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            bottom: 5px;
+            left: 5px;
+            background: #f0f0f0bd;
+            padding: 2px;
+            border-radius: 6px;
+            border: 2px solid black;
+            img {
+                max-height: 20px;
+            }
+            .info-container {
+                position: relative;
+                display: flex;
+                align-items: center;
+                .type {
+                    background: black;
+                    padding: 2px;
+                    border-radius: 4px;
+                    display: flex;
+                    align-items: center;
+                    .defense-value {
+                        font-size: 25px;
+                        color: white;
+                        font-family: $header-font;
+                        padding-left: 2px;
+                    }
+                }
+                .elements{
+                    position: relative;
+                    display: flex;
+                    img:first-child {
+                        padding-left: 4px;
+                        padding-right: 2px;
+                    }
+                    img {
+                        padding: 0px 2px;
+                    }
+                }
+            }
+            &.right {
+                right: 5px;
+                left: unset;
+                .elements {
+                    img:first-child {
+                        padding: 0px 2px;
+                    }
+                    img:last-child {
+                        padding-left: 2px;
+                        padding-right: 4px;
+                    }
                 }
             }
         }

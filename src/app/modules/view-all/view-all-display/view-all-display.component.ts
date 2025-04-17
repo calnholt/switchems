@@ -21,7 +21,8 @@ export class ViewAllDisplayComponent implements OnInit {
     const isActionHovered = monster.actions.some(a => a.isHovered);
     const isBuffHovered = monster.buffs.some(b => b.isHovered);
     const isExtraBoardHovered = monster.extraBoard && monster.isExtraBoardHovered;
-    return !isActionHovered && !isBuffHovered && !isExtraBoardHovered;
+    const isTeamAuraHovered = monster.teamAura && monster.isTeamAuraHovered;
+    return !isActionHovered && !isBuffHovered && !isExtraBoardHovered && !isTeamAuraHovered;
   }
 
 }

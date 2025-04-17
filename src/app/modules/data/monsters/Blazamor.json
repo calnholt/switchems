@@ -1,0 +1,81 @@
+{
+  "elements": [
+    "Fire"
+  ],
+  "actions": [
+    {
+      "abilityName": "Paw Swipe",
+      "abilityText": "This monster gains +1[DEF] this turn.",
+      "element": "Fire",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 5,
+      "discard": 1,
+      "buff": 2
+    },
+    {
+      "abilityName": "Tail Whip",
+      "abilityText": "This monster gains +2[DEF] this turn.",
+      "element": "Fire",
+      "attackType": "Ranged",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 7,
+      "discard": 2,
+      "buff": 1
+    },
+    {
+      "abilityName": "Nuzzle",
+      "abilityText": "<b>Flinch</b>. ~FLINCH~",
+      "element": "Fire",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 6,
+      "discard": 2,
+      "draw": 0,
+      "buff": 0
+    },
+    {
+      "abilityName": "Cuddle",
+      "abilityText": "Heal 1[HP], {\"stat\": \"DEF\", \"num\": 1}.",
+      "element": "Fire",
+      "statusFlg": true,
+      "speed": 2,
+      "draw": 0,
+      "discard": 0,
+      "buff": 0
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Purrsuation",
+      "buffText": "The enemy monster's attack loses all <b>pierce</b> and cannot gain <b>pierce</b>.~PIERCE~"
+    },
+    {
+      "buffName": "Time Flies",
+      "buffText": "You may increase or decrease two spaces from any duration [TIME] team aura."
+    },
+    {
+      "buffName": "Pounce",
+      "buffText": "<b>Recoil 2</b>, <b>flinch</b>.~RECOIL~~FLINCH~"
+    },
+    {
+      "buffName": "Love Spell",
+      "buffText": "The opponent gains <div><b>Infatuation</b> [TA].</div>~GAIN_AURA~"
+    }
+  ],
+  "monsterName": "Blazamor",
+  "abilityText": "<b><u>Switch In</u>: </b> The opponent gains <div><b>Infatuation</b> [TA].</div><br><br><b><u>Active Passive</u>: </b>At the end of your turn, the enemy monster loses <div>1[HP].</div>~SWITCH~",
+  "hp": 5,
+  "initiative": 60,
+  "imageFlg": true,
+  "teamAura": {
+    "name": "Infatuation",
+    "text": "You cannot select switch actions on your action board.~TA_DURATION~",
+    "type": "TIME",
+    "duration": 3,
+    "isAilment": true
+  }
+}

@@ -42,6 +42,15 @@
   <div class="col-12 form-element">
     <dropdown
       style="width:inherit;"
+      [label]="'Attack Type'"
+      [model]="action"
+      [property]="'attackType'"
+      [options]="attackTypeList">
+    </dropdown>
+  </div>
+  <div class="col-12 form-element">
+    <dropdown
+      style="width:inherit;"
       [label]="'Element'"
       [model]="action"
       [property]="'element'"
@@ -82,33 +91,7 @@
         [(ngModel)]="action.draw">
     </mat-form-field>
   </div>
-  <div *ngFor="let elemType of MODIFIER_ELEMENTS; index as i">
-    <div *ngIf="isStrongAgainst(elemType) && action.attack" class="col-12 form-element">
-      <dropdown
-        style="width:inherit;"
-        [label]="getModifierLabelElement(i)"
-        [model]="action"
-        [property]="'modifiers'"
-        [index]="i"
-        [options]="getModifierOptions(elemType)">
-      </dropdown>
-    </div>
-  </div>
   <div class="col-12 form-element">
-    <mat-checkbox [(ngModel)]="action.statusFlg">Status?</mat-checkbox>
-  </div>
-  <div class="col-12 form-element">
-    <mat-checkbox [(ngModel)]="action.reactionFlg">Reaction?</mat-checkbox>
-  </div>
-  <div class="col-12 form-element">
-    <mat-form-field class="textarea" appearance="fill">
-      <mat-label>Aura Duration</mat-label>
-      <input matInput
-        min="0"
-        max="10"
-        type="number"
-        #input
-        [(ngModel)]="action.auraDuration">
-    </mat-form-field>
+    <mat-checkbox [(ngModel)]="action.statusFlg">Special?</mat-checkbox>
   </div>
 </div>

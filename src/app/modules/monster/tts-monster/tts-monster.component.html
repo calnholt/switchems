@@ -1,24 +1,31 @@
-<div id="tts">
-  <div class="tts-container">
-    <span>
-      <monster-reference
-        [monster]="monster">
-      </monster-reference>
-    </span>
-    <span *ngFor="let buff of monster.buffs; index as i">
-      <monster-buff
-        [buff]="buff">
-      </monster-buff>
-    </span>
-    <span *ngFor="let action of monster.actions; index as i">
-      <monster-action
-        [action]="action">
-      </monster-action>
-    </span>
-    <span>
-      <monster-card
-          [monster]="monster">
-      </monster-card>
-    </span>
-  </div>
+<div>
+  <tts
+    [template]="template"
+    [cards]="cards"
+    [fileName]="monsterName"
+    [fileExtension]="'jpg'">
+  </tts>
 </div>
+
+<ng-template #tts let-card>
+    <ng-container *ngIf="card.referenceFlg">
+      <monster-reference
+        [monster]="card">
+      </monster-reference>
+    </ng-container>
+    <ng-container *ngIf="isBuff(card)">
+      <monster-buff
+        [buff]="card">
+      </monster-buff>
+    </ng-container>
+    <ng-container *ngIf="isAction(card)">
+      <monster-action
+        [action]="card">
+      </monster-action>
+    </ng-container>
+    <ng-container *ngIf="!card.referenceFlg && card.elements">
+      <monster-card
+        [monster]="card">
+      </monster-card>
+    </ng-container>
+</ng-template>

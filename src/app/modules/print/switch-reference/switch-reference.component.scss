@@ -1,0 +1,46 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#switch-reference {
+    .card-container {
+        position: relative;
+        border-radius: 11px;
+        height: $card-height;
+        width: $card-width;
+        background-color: white;
+        border: rgb(216, 216, 216) 2px solid;
+        border-radius: 11px;
+        padding: 5px;
+        .title {
+            font-family: $header-font;
+            text-align: center;
+            font-size: 23px;
+            padding-bottom: 2px;
+            text-decoration: underline;
+            padding-bottom: 10px;
+            img {
+                max-height: 19px;
+            }
+        }
+        .section-body{
+            line-height: 15px;
+            padding-left: 13px;
+            font-size: 12px;
+            ul {
+                line-height: 12px;
+            }
+            ul, ol {
+                padding-left: 17px;
+                font-weight: normal;
+            }
+            li {
+                padding-bottom: 10px;
+                span {
+                    div {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+}

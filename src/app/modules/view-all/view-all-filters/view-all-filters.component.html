@@ -16,14 +16,6 @@
     </div>
     <div class="filters-wrapper">
       <dropdown
-        [label]="'Roles'"
-        [model]="form"
-        [multi]="true"
-        [property]="'roles'"
-        [options]="roleList"
-        (selectionChange)="applyFilters()">
-      </dropdown>
-      <dropdown
         [label]="'Elements'"
         [model]="form"
         [property]="'elements'"
@@ -39,14 +31,15 @@
         [max]="20"
         (selectionChange)="applyFilters()">
       </min-max>
-      <min-max
-        [label]="'Complexity'"
+      <dropdown
+        style="width:inherit;"
+        [label]="'Terms'"
         [model]="form"
-        [property]="'complexity'"
-        [min]="1"
-        [max]="3"
+        [property]="'terms'"
+        [options]="termOptions"
+        [multi]="true"
         (selectionChange)="applyFilters()">
-      </min-max>
+      </dropdown>
     </div>
     <div class="title">Action Filters ({{numOfActions}})</div>
     <div class="filters-wrapper">
@@ -90,14 +83,6 @@
         [max]="5"
         (selectionChange)="applyFilters()">
       </min-max>
-      <min-max
-        [label]="'Aura Duration'"
-        [model]="form"
-        [property]="'aura'"
-        [min]="1"
-        [max]="10"
-        (selectionChange)="applyFilters()">
-      </min-max>
       <dropdown
         [label]="'Elements'"
         [model]="form"
@@ -108,34 +93,19 @@
       </dropdown>
       <mat-checkbox 
         [(ngModel)]="form.statusFlg"
-        (change)="applyFilters()">Status?
-      </mat-checkbox>
-      <mat-checkbox 
-        [(ngModel)]="form.reactionFlg"
-        (change)="applyFilters()">
-        Reaction?
+        (change)="applyFilters()">Special?
       </mat-checkbox>
     </div>
     <div class="title">Buff Filters ({{numOfBuffs}})</div>
     <div class="filters-wrapper">
-      <dropdown
-        [label]="'Timing'"
+      <min-max
+        [label]="'Aura Duration'"
         [model]="form"
-        [property]="'timings'"
-        [options]="timingList"
-        [multi]="true"
+        [property]="'aura'"
+        [min]="1"
+        [max]="10"
         (selectionChange)="applyFilters()">
-      </dropdown>
-      <mat-checkbox 
-        [(ngModel)]="form.critFlg"
-        (change)="applyFilters()">
-        Critical?
-      </mat-checkbox>
-      <mat-checkbox 
-        [(ngModel)]="form.flipEventFlg"
-        (change)="applyFilters()">
-        Flip Event?
-      </mat-checkbox>
+      </min-max>
     </div>
     <button class="clear-button" mat-stroked-button (click)="clearFilters()">Reset Filters</button>
   </div>

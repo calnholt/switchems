@@ -1,0 +1,81 @@
+{
+  "elements": [
+    "Fire",
+    "Water"
+  ],
+  "actions": [
+    {
+      "abilityName": "Benevolent Mists",
+      "abilityText": "Whenever you use buff an attack, [FLIP].",
+      "element": "Water",
+      "statusFlg": false,
+      "speed": 8,
+      "draw": 1,
+      "discard": 0,
+      "buff": 0,
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
+    },
+    {
+      "abilityName": "Friends Forever",
+      "abilityText": "If you have at least one other non-KO'd monster on your team and each of your non-KO'd monsters have one or more [WISH] counters, <b>drain</b> [STATUS]. <b>Single use</b>.~DRAIN~",
+      "element": "Water",
+      "statusFlg": false,
+      "attack": 3,
+      "speed": 6,
+      "draw": 0,
+      "discard": 2,
+      "buff": 1,
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
+    },
+    {
+      "abilityName": "Torrential Blessing",
+      "abilityText": "[FLIP] <br><br>Put a [WISH] counter on one of your monsters.",
+      "element": "Water",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 3,
+      "discard": 0,
+      "buff": 1,
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
+    },
+    {
+      "abilityName": "Fierce Blessing",
+      "abilityText": "Put a [WISH] counter on one of your monsters.",
+      "element": "Fire",
+      "statusFlg": false,
+      "attack": 3,
+      "speed": 5,
+      "discard": 1,
+      "buff": 3,
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Wishful Strike",
+      "buffText": "This attack gains <div>+1[ATK].</div>",
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
+    },
+    {
+      "buffName": "Rallying Strike",
+      "buffText": "This attack gains <div>+1[ATK].</div>",
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
+    },
+    {
+      "buffName": "Wishful Embrace",
+      "buffText": "This monster gains <div>+1[DEF]</div> this turn.",
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
+    },
+    {
+      "buffName": "Rallying Embrace",
+      "buffText": "This monster gains <div>+1[DEF]</div> this turn.",
+      "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
+    }
+  ],
+  "monsterName": "Steamie",
+  "abilityText": "<b><u>Active Passive</u>: </b>At the end of your turn, this monster loses <div>1[HP]</div> and a different non-KO'd monster on your team of your choice heals <div>1[HP].</div>",
+  "hp": 11,
+  "initiative": 30,
+  "imageFlg": true,
+  "lastUpdated": "Sat, 21 Nov 2020 20:56:15 GMT"
+}

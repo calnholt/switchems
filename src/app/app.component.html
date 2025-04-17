@@ -1,2 +1,10 @@
-<toolbar></toolbar>
-<router-outlet></router-outlet>
+<div id="app">
+  <toolbar
+    *ngIf="router.url !== 'pnp'"
+    [title]="'Switchems!'"
+    [searchOptions]="searchOptions"
+    [tabs]="tabs"
+    [searchRoute]="'monster'"
+    (selectionChange)="goToPage($event)">
+  </toolbar>
+</div>

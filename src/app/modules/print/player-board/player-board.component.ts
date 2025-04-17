@@ -21,9 +21,10 @@ export class PlayerBoardComponent implements OnInit {
       return SYMBOLS + 'buff.png';
     } else if (this.text === 'Discards') {
       return SYMBOLS + 'discard.png';
-    } else {
+    } else if (this.text.includes('Hand')) {
       return SYMBOLS + 'hand-of-cards.png';
     }
+    return null;
    }
 
   ngOnInit() { }

@@ -1,0 +1,8 @@
+<div id="rulebook-image">
+  <rulebook-monster *ngIf="type === 'Monster'" [monster]="monster"></rulebook-monster>
+  <rulebook-action *ngIf="type === 'Action'" [action]="action"></rulebook-action>
+  <rulebook-buff *ngIf="type === 'Buff'" [buff]="buff"></rulebook-buff>
+  <stat-cube-board *ngIf="type === 'Stat-Cube'"></stat-cube-board>
+  <action-board *ngIf="type === 'Action-Board'"></action-board>
+  <rulebook-setup-display *ngIf="type === 'Setup'" [playerActiveMonster]="monster"></rulebook-setup-display>
+</div>

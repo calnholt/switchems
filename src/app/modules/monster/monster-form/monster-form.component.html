@@ -36,19 +36,28 @@
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <div *ngFor="let item of termCodes">
-                <strong>{{item.key}}</strong> - {{item.value}}
+                <strong>{{item.key}}</strong> - <span [innerHTML]="getTermText(item.value)"></span>
                 <br><br>
               </div>
             </mat-expansion-panel>
           </mat-accordion>
         </div>
         <div *ngIf="monster.promiseDescription" class="promise-container">
-          <div class="promise-title">
-            Promise Descripition
-          </div>
+          <div class="promise-title">Descripition</div>
           <span [innerHTML]="getPromiseText()" class="pt-1 promise-text"></span>
         </div>
-        <button class="save-button" mat-stroked-button (click)="save()">Copy Monster to Clipboard</button>
+        <div class="promise-container">
+          <div class="promise-title">
+            Average Speed: <span>{{monster.getAverageSpeed()}}</span>
+          </div>
+          <div class="promise-title">
+            Last Update: <span>{{getLastUpdateFormatted()}}</span>
+          </div>
+        </div>
+        <button class="save-button" mat-stroked-button (click)="copy()">Copy Monster to Clipboard</button>
+        <button class="save-button" mat-stroked-button (click)="save()">Save</button>
+        <button class="save-button" mat-stroked-button (click)="discord()">Discord</button>
+        <button *ngIf="monster.savedFlg" class="save-button" mat-stroked-button (click)="delete()" [routerLink]="['']">Delete</button>
         <div class="tts">
           <img 
             [routerLink]="['/tts', monster.monsterName]" 

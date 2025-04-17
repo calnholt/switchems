@@ -1,0 +1,100 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+
+#rulebook-setup-display {
+    position: relative;
+    --scale: 0.3;
+    .card-display {
+        transform: scale(var(--scale));
+        height: calc(var(--scale) * #{$card-height});
+        width: calc(var(--scale) * #{$card-width});
+        transform-origin: top left;
+        margin: 3px;
+        &.stat-cube {
+            height: calc(0.2 * #{$card-height});
+            width: calc(0.2 * #{$card-width});
+            transform: scale(0.2);
+        }
+    }
+    .player-area-container {
+        &:first-child {
+            transform: rotate(180deg);
+            padding-top: 20px;
+        }
+        .monsters-container {
+            display: flex;
+            justify-content: center;
+            .switch-monster {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+            }
+            .active-monster-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        .board-container {
+            padding-top: 20px;
+            display: flex;
+            .board {
+                display: flex;
+                border: 3px solid black;
+                border-bottom: unset;
+                border-radius: 10px;
+            }
+            .deck-discard { 
+                display: flex;
+            }
+        }
+    }
+    .num {
+        position: absolute;
+        display: inline-flex;
+        z-index: 20;
+        transform: scale(0.4);
+        --topOffset: 340px;
+        &.num-1 {
+            --top1: 540px;
+            left: -49px;
+            top: var(--top1);
+            &.oppo {
+                top: calc(var(--top1) - var(--topOffset));
+            }
+        }
+        &.num-2 {
+            --top2: 501px;
+            top: var(--top2);
+            left: 68px;
+            &.oppo {
+                top: calc(var(--top2) - var(--topOffset));
+            }
+        }
+        &.num-3 {
+            --top3: 541px;
+            top: var(--top3);
+            left: 349px;
+            &.oppo {
+                top: calc(var(--top3) - var(--topOffset));
+            }
+        }
+        &.num-4 {
+            --top4: 423px;
+            top: var(--top4);
+            left: 230px;
+            &.oppo {
+                top: calc(var(--top4) - var(--topOffset));
+            }
+        }
+        &.num-5 {
+            --top5: 356px;
+            top: var(--top5);
+            left: 28px;
+            &.oppo {
+                top: calc(var(--top5) - var(--topOffset));
+            }
+        }
+    }
+}

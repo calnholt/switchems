@@ -1,0 +1,18 @@
+<div id="rulebook" class="container">
+  <ng-container *ngFor="let section of rulebook">
+    <div id="{{section.id ? section.id : ''}}" class="row section">
+      <div class="{{getSectionColumns(section)}}">
+        <div *ngIf="section.title" class="title" [innerHTML]="display(section.title)"></div>
+        <div *ngFor="let block of section.blocks">
+          <div *ngIf="block.text" id="{{block.id ? block.id : ''}}" class="text" [innerHTML]="display(block.text)"></div>
+          <ng-container *ngIf="block.ul || block.ol">
+            <rulebook-list [item]="block" [displayFnc]="display"></rulebook-list>
+          </ng-container>
+        </div>
+      </div>
+      <div *ngIf="section.rulebookImage" class="image {{section.rulebookImage.toLowerCase()}} {{getRulebookImageColumns(section)}}">
+        <rulebook-image [type]="section.rulebookImage" [monster]="monsterExample"></rulebook-image>
+      </div>
+    </div>
+  </ng-container>
+</div>

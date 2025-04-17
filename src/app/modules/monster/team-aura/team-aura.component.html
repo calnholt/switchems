@@ -1,0 +1,42 @@
+<div id="team-aura">
+  <div class="card-container {{teamAura.isBadge ? 'sw-badge' : getBackgroundImageCss()}}">
+    <div class="name d-flex justify-content-between">
+      <div [style.min-width.px]="40">
+        <img *ngIf="teamAura.type === 'ONGOING'" src="{{imageService.getImg('ongoing')}}">
+        <img *ngIf="teamAura.type === 'TIME'" src="{{imageService.getImg('time')}}">
+        <img *ngIf="teamAura.type === 'USES'" src="{{imageService.getImg('uses')}}">
+      </div>
+      <span>
+        {{teamAura.name}}
+      </span>
+      <span [style.min-width.px]="40">
+        <img *ngIf="teamAura.isAilment" src="{{imageService.getImg('wound')}}">
+        <img *ngIf="teamAura.isBadge" src="{{imageService.getImg('badge')}}">
+      </span>
+    </div>
+    <div class="text-container ability">
+      <div class="team-aura-container">
+      </div>
+      <div [innerHTML]="getAbilityText(teamAura.text)" class="ta-text"></div>
+    </div>
+    <ng-container *ngIf="teamAura.type === 'TIME' || teamAura.type === 'USES'">
+      <div class="uses-container">
+        <ng-container *ngFor="let round of squareList; index as i">
+          <div *ngIf="i === 0" class="space round">S</div>
+          <div *ngIf="i < squareList.length - 1 && i !== 0" class="space round"></div>
+          <div *ngIf="i === squareList.length - 1" class="space round">X</div>
+          <div *ngIf="i < squareList.length - 1" class="chevron"></div>
+        </ng-container>
+      </div>
+    </ng-container>
+    <div class="star-icon-container">
+      <img src="{{imageService.getImg('aura')}}">
+      <div *ngIf="!teamAura.isBadge">
+        {{!teamAura.copies ? 1 : teamAura.copies}}*
+      </div>
+    </div>
+    <div class="bottom-container">
+      <img src="{{teamAura.isBadge ? getBadgeImagePath() : getMonsterImagePath()}}">
+    </div>
+  </div>
+</div>

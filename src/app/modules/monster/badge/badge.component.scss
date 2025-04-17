@@ -1,0 +1,135 @@
+@import 'src/assets/styles/constants.scss';
+@import 'src/styles.scss';
+
+#badge-card {
+  .card-container {
+    position: relative;
+    border: rgb(216, 216, 216) 2px solid;
+    border-radius: 11px;
+    height: $card-height;
+    width: $card-width;
+    background-color: #ffffff;
+    overflow: hidden;
+    background-image: url("~/assets/images/backgrounds/badge.png");
+    background-size: cover;
+    background-position-x: -6px;
+    background-position-y: -3px;
+    .name-container{
+      display: flex;
+      justify-content: space-between;
+      height: 28px;
+      div {
+        padding: 1px 6px;
+      }
+      .name{
+        font-family: $header-font;
+        font-size: 26px;
+        justify-content: center;
+        letter-spacing: 0.02em;
+        color: white;
+        display: flex;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+      }
+      img {
+        height: 22px;
+        filter: invert(100%);
+        margin-left: 10px;
+      }
+    }
+    .badge-image {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      img {
+          max-height: 150px;
+          margin-top: 10px;
+      }
+    }
+    .uses-rounds {
+      background-color: #f1f1f1;
+    }
+    .use-text {
+      font-family: $header-font;
+      font-size: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 11px 0px 3px 0px;
+      background-color: #f1f1f1;
+      height: 27px;
+    }
+    .uses-container {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      align-items: center;
+      .space {
+        border: 3px solid black;
+        border-radius: 5px;
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $text-font;
+        font-weight: bold;
+        &.round {
+          margin-right: 3px;
+        }
+      }
+      .space:last-child {
+        margin-right: unset;
+      }
+    }
+    .ability-text-container{
+      border-top: 2px #d8d8d8 solid;
+      text-align: left !important;
+      bottom: 0px;
+      position: absolute;
+      display: flex;
+      background-color: #f0f0f0bd;
+      width: 100%;
+      padding: 5px 0px;
+      .ability-text{
+          font-family: $text-font;
+          font-size: 12px;
+          padding: 5px;
+          line-height: 13px;
+          div {
+              display: inline-block;
+          }
+      }
+    }
+    .chevron {
+      position: relative;
+      width: 13px; /* Width of the chevron */
+      height: 11px; /* Height of the chevron */
+      /* Optional: Adjust margin, display, etc., as needed */
+    }
+    
+    .chevron::before,
+    .chevron::after {
+      content: '';
+      position: absolute;
+      width: 3px; /* Thickness of the chevron lines */
+      background-color: black; /* Color of the chevron */
+      top: 4px; /* Vertical positioning */
+      left: 9px; /* Horizontal positioning */
+      transform-origin: top left;
+    }
+    
+    .chevron::before {
+      transform: rotate(135deg); /* Rotate to create one side of the chevron */
+      height: 8px; /* Length of the chevron lines */
+    }
+    
+    .chevron::after {
+      transform: rotate(45deg); /* Rotate to create the other side of the chevron */
+      height: 10px; /* Length of the chevron lines */
+    }
+  }
+}

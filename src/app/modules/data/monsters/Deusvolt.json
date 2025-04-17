@@ -1,0 +1,82 @@
+{
+  "elements": [
+    "Electric",
+    "Leaf"
+  ],
+  "actions": [
+    {
+      "abilityName": "Shock",
+      "abilityText": "",
+      "element": "Electric",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 5,
+      "buff": 2,
+      "draw": 1
+    },
+    {
+      "abilityName": "Gnaw",
+      "abilityText": "This attack gains <div>+X[ATK],</div> where X is the number of buff slots used.",
+      "element": "Leaf",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 4,
+      "discard": 1,
+      "buff": 1
+    },
+    {
+      "abilityName": "Leaf Burst",
+      "abilityText": "If the opponent has any [DEF], this attack deals no damage.",
+      "element": "Leaf",
+      "attackType": "Ranged",
+      "statusFlg": false,
+      "attack": 5,
+      "speed": 7,
+      "discard": 2,
+      "buff": 0
+    },
+    {
+      "abilityName": "Charge Up",
+      "abilityText": "Gain <div><b>Carry your Cross [TA]</b>.</div> <br><br>{\"stat\": \"ATK\", \"num\": 2}.~GAIN_AURA~",
+      "element": "Electric",
+      "statusFlg": true,
+      "speed": 8,
+      "draw": 0
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Sword or Shield",
+      "buffText": "This attack gains +1[ATK].<br><br><b>Instant</b> [ARROW] This monster gains <div>+1[DEF]</div> this turn instead.~INSTANT~",
+      "auraDuration": null
+    },
+    {
+      "buffName": "Shield or Sword",
+      "buffText": "This monster gains +1[DEF] this turn.<br><br><b>Instant</b> [ARROW] This attack gains <div>+1[ATK]</div> instead.~INSTANT~",
+      "auraDuration": null
+    },
+    {
+      "buffName": "Burst of Speed",
+      "buffText": "<b>Heavy</b>.<br><br>{\"stat\": \"SPD\", \"num\": 3}.<br><br><b>Instant</b> [ARROW] This attack gains <div>+2[SPD]</div> instead.~HEAVY~~INSTANT~",
+      "auraDuration": null
+    },
+    {
+      "buffName": "Crushing Defense",
+      "buffText": "<b>Heavy</b>.<br><br>{\"stat\": \"DEF\", \"num\": 2}.<br><br><b>Instant</b> [ARROW] This attack gains <b>pierce 3</b> instead.~HEAVY~~INSTANT~~PIERCE~",
+      "auraDuration": null
+    }
+  ],
+  "hp": 7,
+  "monsterName": "Deusvolt",
+  "initiative": 55,
+  "abilityText": "<b><u>Switch In</u>: </b> Gain <div><b>Carry your Cross [TA]</b>.</div>~SWITCH~",
+  "teamAura": {
+    "name": "Carry your Cross",
+    "text": "Your monster attack actions have an additional buff slot. When you use this additional buff slot, destroy this.~TA_ONGOING~",
+    "type": "ONGOING",
+    "copies": 2
+  },
+  "imageFlg": true
+}

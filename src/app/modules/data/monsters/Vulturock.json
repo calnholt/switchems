@@ -1,127 +1,88 @@
 {
   "elements": [
-    "Rock",
-    "Death"
+    "Death",
+    "Rock"
   ],
   "actions": [
     {
       "abilityName": "Kraterkazee",
-      "abilityText": "<B>Recoil 2[ATK]</b>~RECOIL~",
+      "abilityText": "<b>Recoil 2</b>.~RECOIL~",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        2,
-        3,
-        0,
-        0
-      ],
-      "auraDuration": 0,
+      "attackType": "Melee",
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 6,
+      "attack": 4,
       "speed": 7,
       "draw": 0,
-      "discard": 2,
-      "buff": 1
+      "discard": 1,
+      "buff": 0,
+      "lastUpdated": "Fri, 30 Dec 2022 09:50:42 GMT"
     },
     {
       "abilityName": "Roc Rock",
-      "abilityText": "<B>Recoil 1[ATK]</b> ~RECOIL~",
+      "abilityText": "<b>Recoil 1</b>.~RECOIL~",
       "element": "Rock",
-      "modifiers": [
-        0,
-        2,
-        0,
-        0,
-        0,
-        2
-      ],
-      "auraDuration": 0,
+      "attackType": "Ranged",
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 4,
-      "speed": 5,
+      "attack": 3,
+      "speed": 4,
       "draw": 0,
-      "discard": 1,
-      "buff": 2
+      "discard": 0,
+      "buff": 1,
+      "lastUpdated": "Fri, 26 Feb 2021 08:36:31 GMT"
     },
     {
-      "abilityName": "Iron Defense",
-      "abilityText": "This monster gains {\"stat\": \"DEF\", \"num\": 2, \"isPositive\": true}.",
+      "abilityName": "Perch Guard",
+      "abilityText": "This monster gains <div>+1[DEF]</div> this turn.<br><br> {\"stat\": \"DEF\", \"num\": 2}.",
       "element": "Rock",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "auraDuration": 0,
       "statusFlg": true,
-      "reactionFlg": false,
-      "speed": 1,
-      "draw": 1,
+      "speed": 7,
+      "draw": 0,
       "discard": 0,
-      "buff": 0
+      "buff": 0,
+      "lastUpdated": "Tue, 24 Jan 2023 13:32:08 GMT"
     },
     {
       "abilityName": "Scavenge",
-      "abilityText": "This monster heals <div>X[HP],</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, heal <div>5[HP]</div> instead. <b>Single use.</b> ~SINGLE~",
+      "abilityText": "If this attack KO'd the enemy monster, this monster heals <div>3[HP]</div>.",
       "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "auraDuration": 0,
-      "statusFlg": true,
-      "reactionFlg": false,
-      "speed": 9,
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 5,
       "draw": 0,
       "discard": 1,
-      "buff": 0
+      "buff": 2,
+      "lastUpdated": "Sun, 26 Sep 2021 13:23:52 GMT"
     }
   ],
   "buffs": [
     {
       "buffName": "Beak Drill",
-      "timing": "Pre-Actions",
-      "buffText": "If the enemy monster used a [MQ] this turn, your opponent loses an additional [MQ].",
-      "critFlg": true
+      "buffText": "<b>Heavy</b>, <b>pierce 3</b>.~HEAVY~~PIERCE~",
+      "lastUpdated": "Sat, 04 Sep 2021 12:51:49 GMT"
     },
     {
-      "buffName": "Recoil",
-      "timing": "Post Actions",
-      "buffText": "<b>Super</b><br>The enemy monster suffers <div>1[ATK]</div> for each card your opponent discarded and for each buff slot used this turn.~SUPER~",
-      "flipEventText": "Your active monster suffers <div>1[ATK]</div>",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffName": "Hard Headed",
+      "buffText": "If the opponent selected a <div>melee [MELEE]</div> attack this turn, the enemy attack gains <div><b>recoil 2</b>.</div>~RECOIL~",
+      "lastUpdated": "Sat, 04 Sep 2021 12:51:49 GMT"
     },
     {
-      "buffName": "Bigger Rocs",
-      "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
-      "critFlg": false
+      "buffName": "Self Defense",
+      "buffText": "This monster does not suffer <b>recoil</b> damage this turn. ~RECOIL~",
+      "lastUpdated": "Tue, 24 Jan 2023 15:15:45 GMT"
     },
     {
       "buffName": "Bigger Rocs",
-      "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
-      "critFlg": false
+      "buffText": "This attack gains +2[ATK] and <div><b>recoil 1</b></div>. ~RECOIL~",
+      "lastUpdated": "Tue, 24 Jan 2023 13:32:08 GMT"
     }
   ],
   "monsterId": 9,
-  "abilityName": "Wing Clip",
   "monsterName": "Vulturock",
-  "abilityText": "When this monster <b>switches in</b>, the enemy monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": false}~SWITCH~",
-  "hp": 9,
-  "complexity": 1,
-  "promiseDescription": "Vulturock is reckless assassin that requires finesse. Knowing how to position Vulturock to maximize Scavenge and Iron Defense is key to its survival.",
+  "abilityText": "<b><u>Switch In</u>: </b> <div>{\"stat\": \"SPD\", \"num\": 2}.</div>~SWITCH~",
+  "hp": 8,
+  "promiseDescription": "<b>Vulturock</b> hits hard – including itself!",
   "initiative": 75,
-  "role": "Assassin"
+  "imageFlg": true,
+  "lastUpdated": "Fri, 27 Jan 2023 08:00:52 GMT"
 }

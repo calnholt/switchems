@@ -1,8 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-
 @font-face { 
     font-family: 'Beastformer'; 
     src: url('/assets/fonts/Beastformer.ttf') format("ttf")
+} 
+@font-face { 
+    font-family: 'Rowdies'; 
+    src: url('/assets/fonts/Rowdies.ttf') format("ttf")
 } 
 @font-face { 
     font-family: 'Helvetica'; 
@@ -15,7 +18,7 @@
 
 html, body { height: 100%; }
 body { 
-    margin: 0; 
+    margin: 0%; 
     font-family: Roboto, "Helvetica Neue", sans-serif; 
     -webkit-print-color-adjust:exact;
 }
@@ -43,4 +46,80 @@ em{
         border-radius: 50%;
         display: inline-block;
     }
+}
+.op-0 {
+    opacity: 0;
+}
+.op-25 {
+    opacity: 0.25;
+}
+.op-50 {
+    opacity: 0.50;
+}
+.op-75 {
+    opacity: 0.75;
+}
+
+.death {
+    background-image: url("~/assets/images/backgrounds/death.png");
+}
+.deathrock {
+    background-image: url("~/assets/images/backgrounds/deathrock.png");
+}
+.deathwater {
+    background-image: url("~/assets/images/backgrounds/deathwater.png");
+}
+.deathfire {
+    background-image: url("~/assets/images/backgrounds/deathfire.png");
+}
+.deathleaf {
+    background-image: url("~/assets/images/backgrounds/deathleaf.png");
+}
+.deathelectric {
+    background-image: url("~/assets/images/backgrounds/deathelectric.png");
+}
+.electric {
+    background-image: url("~/assets/images/backgrounds/electric.png");
+}
+.electricfire {
+    background-image: url("~/assets/images/backgrounds/electricfire.png");
+}
+.electricleaf {
+    background-image: url("~/assets/images/backgrounds/electricleaf.png");
+}
+.electricrock {
+    background-image: url("~/assets/images/backgrounds/electricrock.png");
+}
+.electricwater {
+    background-image: url("~/assets/images/backgrounds/electricwater.png");
+}
+.fire {
+    background-image: url("~/assets/images/backgrounds/fire.png");
+}
+.fireleaf {
+    background-image: url("~/assets/images/backgrounds/fireleaf.png");
+}
+.firerock {
+    background-image: url("~/assets/images/backgrounds/firerock.png");
+}
+.firewater {
+    background-image: url("~/assets/images/backgrounds/firewater.png");
+}
+.leaf {
+    background-image: url("~/assets/images/backgrounds/leaf.png");
+}
+.leafrock {
+    background-image: url("~/assets/images/backgrounds/leafrock.png");
+}
+.leafwater {
+    background-image: url("~/assets/images/backgrounds/leafwater.png");
+}
+.rock {
+    background-image: url("~/assets/images/backgrounds/rock.png");
+}
+.rockwater {
+    background-image: url("~/assets/images/backgrounds/rockwater.png");
+}
+.water {
+    background-image: url("~/assets/images/backgrounds/water.png");
 }

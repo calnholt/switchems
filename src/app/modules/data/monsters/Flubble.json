@@ -1,0 +1,84 @@
+{
+  "elements": [
+    "Water"
+  ],
+  "actions": [
+    {
+      "abilityName": "Scramble",
+      "abilityText": "If you control one or fewer <div><b>Flubble's Bubble</b> [TA],</div> this monster gains <div>+3[DEF]</div> this turn. Otherwise, this attack gains <div>+3[ATK].</div>",
+      "element": "Water",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 7,
+      "draw": 0,
+      "discard": 2,
+      "buff": 1
+    },
+    {
+      "abilityName": "Inflate",
+      "abilityText": "Gain <b>Flubble's <div>Bubble</b> [TA].</div>",
+      "element": "Water",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 9,
+      "draw": 0,
+      "discard": 0,
+      "buff": 0
+    },
+    {
+      "abilityName": "Bubble Bomb",
+      "abilityText": "",
+      "element": "Water",
+      "attackType": "Ranged",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 6,
+      "draw": 0,
+      "discard": 1,
+      "buff": 0
+    },
+    {
+      "abilityName": "Expand",
+      "abilityText": "",
+      "element": "Water",
+      "attackType": "Ranged",
+      "attack": 3,
+      "speed": 1,
+      "draw": 0,
+      "discard": 1,
+      "buff": 2
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Bubble Up",
+      "buffText": "Gain <div><b>Flubble's Bubble</b> [TA]</div> and <b>pierce 2</b>.~PIERCE~"
+    },
+    {
+      "buffName": "More Bubbly",
+      "buffText": "Gain <div><b>Flubble's Bubble</b> [TA]</div> and <div>{\"stat\": \"SPD\", \"num\": 2}.</div>"
+    },
+    {
+      "buffName": "Fierce Foam",
+      "buffText": "This attack gains <div>+X[ATK],</div> where X is the number of <div><b>Flubble's Bubble</b> [TA]</div> you control and then destroy them."      
+    },
+    {
+      "buffName": "Bubble Shield",
+      "buffText": "This attack gains <div>+X[DEF],</div> where X is the number of <div><b>Flubble's Bubble</b> [TA]</div> you control and then destroy them."      
+    }
+  ],
+  "monsterId": 10,
+  "monsterName": "Flubble",
+  "abilityText": "<b><u>Switch In</u></b>: Gain <div><b>Flubble's Bubble</b> [TA].</div>~SWITCH~",
+  "hp": 7,
+  "initiative": 35,
+  "imageFlg": true,
+  "teamAura": {
+    "name": "Flubble's Bubble",
+    "text": "When you perform a basic action, if you control three <div><b>Flubble's Bubble</b> [TA],</div> heal <div>3[HP]</div> and destroy this.~TA_ONGOING~",
+    "type": "ONGOING",
+    "copies": 3
+  }
+}

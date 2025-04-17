@@ -1,68 +1,68 @@
 <div id="pnp">
-  <div class="all-cards">
+  <div class="all-cards" *ngIf="allCards.length > 0">
     <span *ngFor="let card of allCards; index as i">
-      <span *ngIf="card.isMonster && !card.referenceFlg">
+      <span *ngIf="card.type === 'MONSTER'">
         <monster-card
-          [monster]="card">
+          [monster]="card.card">
         </monster-card>
       </span>
-      <!-- <span *ngIf="card.isMonster && card.referenceFlg">
+      <span *ngIf="card.type === 'REFERENCE'">
         <monster-reference
-          [monster]="card">
+          [monster]="card.card">
         </monster-reference>
-      </span> -->
-      <span *ngIf="card.isAction">
+      </span>
+      <span *ngIf="card.type === 'AURA'">
+        <team-aura [teamAura]="card.card"></team-aura>
+      </span>
+      <span *ngIf="card.type === 'ACTION'">
         <monster-action
-          [action]="card">
+          [action]="card.card">
         </monster-action>
       </span>
-      <span *ngIf="card.isBuff">
+      <span *ngIf="card.type === 'BUFF'">
         <monster-buff
-          [buff]="card">
+          [buff]="card.card">
         </monster-buff>
       </span>
-      <!-- <span *ngIf="card.isPlayerBoard">
-        <player-board
-          [text]="card.text">
-        </player-board>
+      <span *ngIf="card.type === 'ACTION_BOARD'">
+        <action-board></action-board>
+      </span>
+      <span *ngIf="card.type === 'BUFF_BOARD'">
+        <player-board [text]="'Buffs'"></player-board>
+      </span>
+      <span *ngIf="card.type === 'DISCARD_BOARD'">
+        <player-board [text]="'Discards'"></player-board>
+      </span>
+      <span *ngIf="card.type === 'HAND_BOARD'">
+        <player-board [text]="'Hand'"></player-board>
+      </span>
+      <span *ngIf="card.type === 'TURN'">
+        <reference-card></reference-card>
+      </span>
+      <span *ngIf="card.type === 'STAT_CUBE_BOARD'">
+        <stat-cube-board></stat-cube-board>
+      </span>
+      <span *ngIf="card.type === 'SWITCH_REFERENCE'">
+        <switch-reference></switch-reference>
+      </span>
+      <!-- <span *ngIf="card.isGoop">
+        <goop></goop>
       </span> -->
-      <div [ngClass]="{'break' : isPageBreak()}"></div>
+      <span *ngIf="card.type === 'SPACER'">
+        <div class="extra-slot"></div>
+      </span>
+      <div [ngClass]="{'break' : i % 8 > 4}"></div>
     </span>
-    <span *ngIf="allCards.length && extraFlg">
-      <action-board></action-board>
-      <div [ngClass]="{'break' : isPageBreak()}"></div>
+  </div>
+  <div class="all-auras" *ngIf="allCards.length > 0">
+    <span *ngFor="let card of teamAuras; index as i">
+      <span *ngIf="card.type === 'AURA'">
+        <team-aura [teamAura]="card.card"></team-aura>
+      </span>
+      <span *ngIf="card.type === 'SPACER'">
+        <div class="extra-slot"></div>
+      </span>
+      <div [ngClass]="{'break-aura' : i % 9 > 5}"></div>
     </span>
-    <span *ngIf="allCards.length && extraFlg">
-      <action-board></action-board>
-      <div [ngClass]="{'break' : isPageBreak()}"></div>
-    </span>
-    <span *ngIf="allCards.length && extraFlg">
-      <stat-cube-board></stat-cube-board>
-      <div [ngClass]="{'break' : isPageBreak()}"></div>
-    </span>
-    <span *ngIf="allCards.length && extraFlg">
-      <stat-cube-board></stat-cube-board>
-      <div [ngClass]="{'break' : isPageBreak()}"></div>
-    </span>
-    <span *ngIf="allCards.length && extraFlg">
-      <reference-card></reference-card>
-      <div [ngClass]="{'break' : isPageBreak()}"></div>
-    </span>
-    <span *ngIf="allCards.length && extraFlg">
-      <reference-card></reference-card>
-      <div [ngClass]="{'break' : isPageBreak()}"></div>
-    </span>
-    <span *ngIf="allCards.length && extraFlg">
-      <reference-card></reference-card>
-      <div [ngClass]="{'break' : isPageBreak()}"></div>
-    </span>
-    <span *ngIf="allCards.length && extraFlg">
-      <reference-card></reference-card>
-      <div [ngClass]="{'break' : isPageBreak()}"></div>
-    </span>
-    <!-- <span *ngIf="allCards.length && extraFlg">
-      <acorn-board></acorn-board>
-      <div [ngClass]="{'break' : isPageBreak()}"></div>
-    </span> -->
   </div>
 </div>

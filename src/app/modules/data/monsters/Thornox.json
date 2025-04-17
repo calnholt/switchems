@@ -1,0 +1,79 @@
+{
+  "elements": [
+    "Leaf",
+    "Death"
+  ],
+  "actions": [
+    {
+      "abilityName": "Poison the Tip",
+      "abilityText": "If the enemy monster selected a melee [MELEE] attack, the enemy monster loses <div>3[HP].</div> <br><br><b>Spam</b>.~SPAM~",
+      "attackType": "Melee",
+      "element": "Leaf",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 7,
+      "discard": 1
+    },
+    {
+      "abilityName": "Noxious Fumes",
+      "abilityText": "If the enemy monster selected a ranged [RANGED] attack, the enemy monster loses <div>3[HP].</div> <br><br><b>Spam</b>.~SPAM~",
+      "attackType": "Ranged",      
+      "element": "Death",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 7,
+      "discard": 1
+    },
+    {
+      "abilityName": "Smog",
+      "abilityText": "",
+      "element": "Death",
+      "attackType": "Ranged",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 2,
+      "buff": 1
+    },
+    {
+      "abilityName": "Entangle",
+      "abilityText": "This monster gains <div>+1[DEF]</div> this turn.",
+      "element": "Leaf",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 2,
+      "speed": 5,
+      "discard": 1,
+      "buff": 2
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Light Headed",
+      "buffText": "The opponent cannot gain pips and draw cards from effects this turn.<br><br>{\"stat\": \"?\", \"num\": 1}."
+    },
+    {
+      "buffName": "Out of Gas",
+      "buffText": "The opponent's applied pips this turn do nothing.<br><br>{\"stat\": \"?\", \"num\": 1}."
+    },
+    {
+      "buffName": "Thorn in my Side",
+      "buffText": "The enemy monster's attack gains <b>recoil X</b>, where X is the number of buffs your opponent applied.~RECOIL~"
+    },
+    {
+      "buffName": "Freshen Up",
+      "buffText": "<b>Heavy</b>.<br><br>Heal 2[HP] and <div>{\"stat\": \"?\", \"num\": 1}.</div>~HEAVY~"  
+    }
+  ],
+  "monsterId": 10,
+  "monsterName": "Thornox",
+  "startOfGame": "<b><u>Start of Game</u></b>: Gain <div><b>Cut Through [TA].</b></div>",
+  "abilityText": "<b><u>Switch In</u></b>: {\"stat\": \"?\", \"num\": 2}.~SWITCH~",
+  "hp": 7,
+  "initiative": 90,
+  "imageFlg": true,
+  "teamAura": {
+    "name": "Cut Through",
+    "text": "Attacks you buff gain <b>pierce 1.</b>~PIERCE~~TA_ONGOING~",
+    "type": "ONGOING"
+  }
+}

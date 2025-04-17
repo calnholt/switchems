@@ -8,13 +8,24 @@
         border-radius: 11px;
         height: $card-height;
         width: $card-width;
+        background-color: white;
+        .title{
+            line-height: unset;
+            padding-top: 4px;
+            font-size: 20px;
+            text-align: center;
+            margin: 0px;
+            text-decoration: unset;
+            font-family: $header-font;
+        }
         .table-container{
-            padding: 0px 10px 0px 10px;
+            padding: 0px 10px 10px 10px;
+            display: flex;
             .title{
                 padding-top: 4px;
                 font-size: 20px;
                 text-align: center;
-                font-family: $beastformer;
+                font-family: $header-font;
                 margin: 0px;
                 img{
                     max-height: 20px;
@@ -37,45 +48,69 @@
                 }
             }
             table, th, td {
-                border: 1px solid black;
+                border: 2px solid black;
             }
             .stat-cube-table{
+                border-collapse: separate;
+                border-radius: 6px;
                 width: 100%;
                 tr{
-                    height: 64px;
+                    height: 88px;
                     td:nth-child(1){
                         background-color: #d6ffd6;
-                    }
-                    td:nth-child(2){
-                        background-color: #ffcdcd;
+                        width: 30%;
                     }
                     td{
+                        border: unset;
                         text-align: center;
-                        font-size: 33px;
-                        font-family: $helvetica;
-                        width: 50%;
+                        font-size: 20px;
+                        font-family: $header-font;
+                        // width: 50%;
+                        box-shadow: $recessed;
                         img{
                             max-height: 30px;
+                            padding-left: 5px;
                         }
                         div{
-                            font-size: 10px;
+                            font-size: 24px;
+                        }
+                    }
+                }
+                tr:first-child {
+                    td {
+                        border-radius: 4px 4px 0px 0px;
+                    }
+                }
+                tr:last-child {
+                    td {
+                        border-radius: 0px 0px 4px 4px;
+                    }
+                }
+                &.totals{
+                    width: 50%;
+                    tr{
+                        height: 66px;
+                        td{
+                            background-color: unset;
                         }
                     }
                 }
             }
-            .maneuver-container{
-                table{
-                    margin: auto;
-                    width: 66%;
-                    font-size: 20px;
-                    tr{
-                        height: 40px;
-                        td{
-                            text-align: center;
-                            width: 33%;
-                            padding: 6px;
-                        }
-                    }
+        }
+    }
+    .pips-container {
+        display: flex;
+        justify-content: space-evenly;
+        .pips-column {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .stat-pip {
+                height: 24px;
+                width: 24px;
+                background-color: white;
+                &.using {
+                    background-color: black;
                 }
             }
         }

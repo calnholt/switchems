@@ -1,4 +1,5 @@
-import { ELEMENTS, ROLES, ElemType, Role, BuffTiming, BUFF_TIMINGS } from './../../../types/dataTypes';
+import { Term } from './../../data/data';
+import { ELEMENTS, ElemType, BuffTiming, BUFF_TIMINGS, TERM_CODES } from './../../../types/dataTypes';
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { SelectionChange } from '@angular/cdk/collections';
 import { faMinus } from '@fortawesome/free-solid-svg-icons';
@@ -10,7 +11,6 @@ export class MonsterForm {
   hpMax?: number = 20;
   complexityMin?: number = 1;
   complexityMax?: number = 3;
-  roles?: Array<Role> = new Array<Role>();
   attackMin?: number = 0;
   attackMax?: number = 10;
   speedMin?: number = 0;
@@ -25,10 +25,8 @@ export class MonsterForm {
   auraMin?: number = 0;
   auraMax?: number = 10;
   statusFlg?: boolean = false;
-  reactionFlg: boolean = false;
   timings?: Array<BuffTiming> = new Array();
-  critFlg?: boolean = false;
-  flipEventFlg: boolean = false;
+  terms?: Array<string> = new Array<string>();
 }
 
 @Component({
@@ -48,17 +46,21 @@ export class ViewAllFiltersComponent implements SelectionChange<any>, OnInit {
   @Output() filtersChanged: EventEmitter<any> = new EventEmitter<any>();
 
   elementList = ELEMENTS;
-  roleList = ROLES;
   timingList = BUFF_TIMINGS;
   form: MonsterForm = new MonsterForm();
   isCollapsed: boolean = true;
   faMinus = faMinus;
+  termOptions = Array<string>();
 
   constructor() {
   }
 
   ngOnInit() {
     this.filtersChanged.emit(this.form);
+    TERM_CODES.forEach((term: Term) => {
+      this.termOptions.push(term.name);
+    });
+    this.termOptions = this.termOptions.sort((a,b) => a.localeCompare(b));
   }
 
   applyFilters() {

@@ -1,127 +1,95 @@
-{
-  "elements": [
-    "Leaf"
-  ],
-  "actions": [
-    {
-      "abilityName": "Switcheroo",
-      "abilityText": "[1]: This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.<br><br>Perform a switch action and you may keep up to four [PQ] instead of one. <em>(You still perform <div>[1]: Heal 2 [HP])</div>.</em>",
-      "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        1,
-        1,
-        0
-      ],
-      "auraDuration": 0,
-      "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 2,
-      "speed": 6,
-      "draw": 0,
-      "discard": 2,
-      "buff": 0
+  {
+    "elements": [
+      "Leaf"
+    ],
+    "actions": [
+      {
+        "abilityName": "Gale Force",
+        "abilityText": "<b>Pierce 1</b>, <div>{\"stat\": \"SPD\", \"num\": 1}.</div>~PIERCE~",
+        "element": "Leaf",
+        "attackType": "Melee", 
+        "statusFlg": false,
+        "attack": 3,
+        "speed": 8,
+        "draw": 0,
+        "discard": 2,
+        "buff": 2,
+        "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
+      },
+      {
+        "abilityName": "Whirlwind",
+        "abilityText": "If this attack is <b>faster</b>, this attack gains +2[ATK].~FASTER~",
+        "element": "Leaf",
+        "attackType": "Ranged", 
+        "statusFlg": false,
+        "attack": 1,
+        "speed": 5,
+        "draw": 0,
+        "discard": 0,
+        "buff": 0,
+        "lastUpdated": "Sun, 26 Sep 2021 13:47:29 GMT"
+      },
+      {
+        "abilityName": "Cyclone",
+        "abilityText": "{\"stat\": \"SPD\", \"num\": 1}.",
+        "element": "Leaf",
+        "attackType": "Melee", 
+        "statusFlg": false,
+        "attack": 2,
+        "speed": 7,
+        "draw": 0,
+        "discard": 1,
+        "buff": 0,
+        "lastUpdated": "Thu, 26 Jan 2023 10:54:24 GMT"
+      },
+      {
+        "abilityName": "Vicious Hurricane",
+        "abilityText": "This attack gains <div>+X[ATK]</div> where X is equal to your speed minus the enemy monster's speed. If the opponent selected a non-monster action this turn, this attack gains <div>+2[ATK]</div> instead.",
+        "element": "Death",
+        "attackType": "Ranged",        
+        "statusFlg": false,
+        "attack": 1,
+        "speed": 5,
+        "draw": 0,
+        "discard": 2,
+        "buff": 1,
+        "lastUpdated": "Fri, 24 Sep 2021 12:14:02 GMT"
+      }
+    ],
+    "buffs": [
+      {
+        "buffName": "Propulsive Winds",
+        "buffText": "This attack gains <div>+2[SPD]</div>.<br><br>If you control <div><b>Tailwind [TA]</b>,</div> this attack also gains <div>+1[ATK].</div>",
+        "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
+      },
+      {
+        "buffName": "Turbulence",
+        "buffText": "If you are <b>faster</b>, this attack gains <div>+2[ATK]. <br><br>If you control <div><b>Tailwind [TA]</b>,</div> this attack also gains <div>+2[SPD].</div></div>~FASTER~",
+        "lastUpdated": "Thu, 26 Jan 2023 12:34:05 GMT"
+      },
+      {
+        "buffName": "Leafy Kicks",
+        "buffText": "{\"stat\": \"SPD\", \"num\": 2}. <br><br>If you control <div><b>Tailwind [TA]</b>,</div> this attack also gains <div>+2[SPD].</div>",
+        "lastUpdated": "Fri, 24 Sep 2021 12:14:02 GMT"
+      },
+      {
+        "buffName": "Outta Here",
+        "buffText": "If you don't control <div><b>Tailwind [TA]</b>,</div> this is <b>heavy</b>. <br><br>Switch your active monster after your attack. ~HEAVY~",
+        "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
+      }
+    ],
+    "monsterId": 8,
+    "monsterName": "Galeaffy",
+    "abilityText": "<b><u>Switch In</u></b>: [+] then [-], {\"stat\": \"SPD\", \"num\": 1}.<br><br><b><u>Switch Out</u>:</b> Gain <div><b>Tailwind</b> [TA].</div>~SWITCH~",
+    "hp": 7,
+    "promiseDescription": "The master of speed has arrived!",
+    "initiative": 85,
+    "imageFlg": true,
+    "teamAura": {
+      "name": "Tailwind",
+      "text": "At the end of the turn, [+] then <div>[-].</div>~TA_DURATION~",
+      "type": "TIME",
+      "duration": 5
     },
-    {
-      "abilityName": "Whirlwind",
-      "abilityText": "If this action is <b>slower</b>, this action is <b>unsuccessful</b>.~SLOWER~~SUCCESS~",
-      "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        2,
-        3,
-        0
-      ],
-      "auraDuration": 0,
-      "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 4,
-      "speed": 3,
-      "draw": 0,
-      "discard": 1,
-      "buff": 1
-    },
-    {
-      "abilityName": "Cyclone",
-      "abilityText": "[2]: This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.",
-      "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        1,
-        2,
-        0
-      ],
-      "auraDuration": 0,
-      "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 2,
-      "speed": 3,
-      "draw": 0,
-      "discard": 0,
-      "buff": 2
-    },
-    {
-      "abilityName": "Vicious Hurricane",
-      "abilityText": "You may choose to remove any number of <div>[SPD] [PQ].</div> For each removed, this attack gains <div>+{\"positive\": 2, \"neutral\": 1, \"negative\": 1}[ATK].</div> <b>Single use.</b> ~SINGLE~",
-      "element": "Death",
-      "modifiers": [
-        0,
-        0,
-        1,
-        2,
-        0,
-        0
-      ],
-      "auraDuration": 0,
-      "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 3,
-      "speed": 5,
-      "draw": 0,
-      "discard": 2,
-      "buff": 0
-    }
-  ],
-  "buffs": [
-    {
-      "buffName": "Sharp Leaves",
-      "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.",
-      "critFlg": true
-    },
-    {
-      "buffName": "Propulsive Winds",
-      "timing": "Pre-Actions",
-      "buffText": "<b>Super</b><br>This attack gains <div>+4[SPD]</div>.~SUPER~",
-      "flipEventText": "Your active monster gains {\"stat\": \"SPD\", \"num\": 2, \"isPositive\": true}.",
-      "critFlg": false,
-      "flipEventFlg": true
-    },
-    {
-      "buffName": "Leaf Shield",
-      "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}.",
-      "critFlg": true
-    },
-    {
-      "buffName": "Leaf Shield",
-      "timing": "Pre-Actions",
-      "buffText": "This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.",
-      "critFlg": false
-    }
-  ],
-  "monsterId": 8,
-  "abilityName": "Gusting Winds",
-  "monsterName": "Galeaffy",
-  "abilityText": "When this monster <b>switches in</b>, this monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}.<br><br>Whenever any monster on your team performs a switch action, you may keep two [PQ] instead of one. ~SWITCH~",
-  "hp": 9,
-  "complexity": 2,
-  "initiative": 80,
-  "role": "Support"
-}
+    "lastUpdated": "Thu, 26 Jan 2023 10:50:10 GMT"
+  }

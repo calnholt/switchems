@@ -1,4 +1,6 @@
+import { getAbilityText } from './../../common/cards';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Css } from 'src/app/types/dataTypes';
 
 @Component({
   selector: 'reference-card',
@@ -7,42 +9,43 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   // needed to render [innerHTML] class styling
   encapsulation: ViewEncapsulation.None,
 })
-export class ReferenceCardComponent implements OnInit {
+export class ReferenceCardComponent {
+  TERM_CSS: Css = 'term';
+  ABILITY_IMG_CSS: Css = 'term-img';
 
   referenceCardText: any = [
     {
-      title: 'Start Phase',
-      items: ['All abilities that trigger at the start of turn occur now.']
-    },
-    {
       title: 'Selection Phase',
-      items: ['Both players secretly place their action cube on one of the actions on '
-      + 'their action boards, placing all relevant cards on the buffs, discards, and hand sections.']
+      items: ['Secretly place your action cube on one of the actions on '
+      + 'your action board, placing all relevant cards on the buffs, discards, and hand sections.']
     },
     {
       title: 'Action Phase',
-      items: ['Both players reveal their selected actions and then resolve them in this order:'],
+      items: ['Reveal your selected actions and then resolve them in this order:'],
       subOrderedItems: [
-        'Pre-Action buffs',
-        'Standard actions',
+        'Apply used [PQ]',
+        'Buffs',
         'Switch actions',
         'Monster actions',
-        'Post-Action buffs',
+        'Basic actions'
       ],
     },
     {
       title: 'End Phase',
       items: [
         'Activate end of turn abilities.',
-        'Remove one time counter from each Team Aura.',
-        'Draw a card.',
+        'Move all played buff cards and discards from you player board to your discard pile, and retrieve your facedown hand.',
+        'Increase each duration [TIME] team aura one space.',
+        'Draw one card.',
       ]
     },
   ];
 
   constructor() { }
 
-  ngOnInit() {
+  getFormattedText(text: string): string {
+    return getAbilityText(text, this.TERM_CSS, this.ABILITY_IMG_CSS);
   }
+
 
 }

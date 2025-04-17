@@ -1,0 +1,71 @@
+{
+  "elements": [
+    "Leaf"
+  ],
+  "actions": [
+    {
+      "abilityName": "Wallow",
+      "abilityText": "This monster gains <div>+2[DEF]</div> this turn.",
+      "element": "Water",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 1,
+      "speed": 7,
+      "buff": 1,
+      "discard": 1
+    },
+    {
+      "abilityName": "Nap",
+      "abilityText": "Heal 2[HP]",
+      "element": "Leaf",
+      "statusFlg": true,
+      "speed": 3,
+      "draw": 1
+    },
+    {
+      "abilityName": "Poke",
+      "abilityText": "",
+      "element": "Leaf",
+      "attackType": "Melee",
+      "statusFlg": false,
+      "attack": 3,
+      "speed": 3,
+      "discard": 1,
+      "buff": 1
+    },
+    {
+      "abilityName": "Needles!",
+      "abilityText": "If this attack is <b>faster</b>, heal <div>2[HP].</div>~FASTER~",
+      "element": "Leaf",
+      "attackType": "Ranged",
+      "statusFlg": false,
+      "buff": 2,
+      "discard": 2,
+      "speed": 5,
+      "attack": 4
+    }
+  ],
+  "buffs": [
+    {
+      "buffName": "Big Yawn",
+      "buffText": "<b>Heavy</b>.<br><br>This monster heals <div>2[HP].</div> ~HEAVY~"
+    },
+    {
+      "buffName": "Surprise",
+      "buffText": "This attack gains <div>+1[SPD].</div> If you have four or more unused <div>[PQ],</div> this attack gains <div>+2[SPD]</div> instead."
+    },
+    {
+      "buffName": "Pout",
+      "buffText": "This attack gains <div>+1[DEF].</div> If you have four or more unused <div>[PQ],</div> this attack gains <div>+2[DEF]</div> instead."
+    },
+    {
+      "buffName": "Stumble",
+      "buffText": "<div>{\"stat\": \"?\", \"num\": 2}</div>"
+    }
+  ],
+  "hp": 8,
+  "monsterName": "Sorrospine",
+  "initiative": 25,
+  "imageFlg": true,
+  "abilityText": "At the start of the Apply Buffs phase, <div><div>{\"stat\": \"?\", \"num\": 1}</div>.</div>"
+}

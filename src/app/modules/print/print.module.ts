@@ -1,3 +1,6 @@
+import { StatusReferenceComponent } from './status-reference/status-reference.component';
+import { StatCubeBoardAltComponent } from './stat-cube-board-alt/stat-cube-board-alt.component';
+import { SwitchReferenceComponent } from './switch-reference/switch-reference.component';
 import { ReferenceCardComponent } from './reference-card/reference-card.component';
 import { PlayerBoardComponent } from './player-board/player-board.component';
 import { DownloadComponent } from './download/download.component';
@@ -9,7 +12,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from './../../material-module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MonsterModule } from './../monster/monster.module';
-import { CommonComponentsModule } from './../common/common-components.module';
+import { CommonComponentsModule } from 'card-builder-framework';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PrintComponent } from './print.component';
@@ -35,12 +38,18 @@ import { ActionBoardComponent } from './action-board/action-board.component';
     DownloadComponent,
     PlayerBoardComponent,
     ReferenceCardComponent,
+    SwitchReferenceComponent,
+    StatCubeBoardAltComponent,
+    StatusReferenceComponent
   ],
   exports: [
     ActionBoardComponent,
     StatCubeBoardComponent,
     PlayerBoardComponent,
     ReferenceCardComponent,
+    SwitchReferenceComponent,
+    StatCubeBoardAltComponent,
+    StatusReferenceComponent
   ]
 })
 export class PrintModule { }

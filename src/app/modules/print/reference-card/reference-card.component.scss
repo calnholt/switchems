@@ -12,10 +12,10 @@
         border-radius: 11px;
         padding: 5px;
         .title {
-            font-family: $beastformer;
+            font-family: $header-font;
             text-align: center;
             font-size: 23px;
-            padding-bottom: 2px;
+            padding-bottom: 3px;
             text-decoration: underline;
         }
         .section-body{
@@ -25,13 +25,23 @@
             .ref-title {
                 font-weight: bold;
                 text-decoration: underline;
-                font-size: 14px;
-                padding: 3px 0px;
+                font-size: 13px;
+                padding: 2px 0px;
+            }
+            ul {
+                line-height: 12px;
             }
             ul, ol {
                 padding-left: 17px;
                 font-weight: normal;
             }
         }
+        .text {
+            display: block;
+            line-height: 12px;
+        }
+    }
+    img {
+        max-height: 12px;
     }
 }

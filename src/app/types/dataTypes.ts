@@ -1,32 +1,17 @@
-import { TypeChart } from './../modules/data/data';
-import { Term, Image } from '../modules/data/data';
-import { Buff } from '../modules/monster/model/monster';
+import { Term, TypeChart, Image } from './../modules/data/data';
 
 export const ELEMENTS = [`Fire`, `Water`, `Rock`, `Leaf`, `Electric`, `Death`] as const;
 export type ElemType = typeof ELEMENTS[number];
 
-export const ROLES = [`Warrior`, `Assassin`, `Technical`, `Tank`, `Support`, `Tricky`] as const;
-export type Role = typeof ROLES[number];
+export const ATTACK_TYPES = [`Melee`, `Ranged`] as const;
+export type AttackType = typeof ATTACK_TYPES[number];
 
-export const BUFF_TIMINGS = [`Pre-Actions`, `With Attack`, `Post Actions`, `None`];
+export const BUFF_TIMINGS = [`Pre-Actions`, `With Attack`, `Post Actions`];
 export type BuffTiming = typeof BUFF_TIMINGS[number];
 
 const typeChart = new Array;
 ELEMENTS.forEach(e => typeChart.push(new TypeChart(e)));
 export const TYPE_CHART = typeChart;
-
-const standardBuffArray: Buff[] = [];
-for (let i = 0; i < 2; i++) {
-    const b = new Buff();
-    b.monsterName = `Standard`;
-    b.buffName = `Cant Escape!`;
-    b.timing = `Pre-Actions`;
-    b.buffText = `Prevent the enemy monster from switching this turn if your opponent selected a switch action.`;
-    b.critFlg = true;
-    standardBuffArray.push(b);
-}
-standardBuffArray[0].critFlg = false;
-export const STANDARD_BUFFS: Buff[] = standardBuffArray;
 
 export const PLAYER_BOARD_TEXT: string[] = [
     'Buffs', 
@@ -43,6 +28,7 @@ export type CardTypes = `MONSTER` | `ACTION` | `BUFF` | 'EXTRA';
 
 export const ICON_PATH: Path = `./assets/images`;
 export const SYMBOLS_PATH: Path = ICON_PATH + `/symbols/`;
+export const BADGE_PATH: Path = ICON_PATH + `/badges/`;
 export const ELEMENT_PATH_COLOR: Path = ICON_PATH + `/elements/color/`;
 export const ELEMENT_PATH_GRAY: Path = ICON_PATH + `/elements/gray/`;
 export const HP_PATH: Path = SYMBOLS_PATH + `/hp/`;
@@ -54,53 +40,43 @@ export const MODIFIER_OPTIONS_NEG = [0, -1, -2, -3, -4, -5, `X`];
 export type TermCodeValue = string;
 
 // best method I could think of with the least redundancy while maintaining strong typing
-const TERM_KEYS = [`~BURN~`, `~SUCCESS~`, `~FLINCH~`, `~PARALYZE~`, `~LEECH~`, `~FATIGUE~`,
-    `~STATUS~`, `~SINGLE~`, `~STUN~`, `~RECOIL~`, `~SWITCH~`, `~SUPER~`, `~FASTER~`, `~SLOWER~`, 
-    `~GOOP~`, `~ETHEREAL~`, '~PIERCE~'] as const;
+export const TERM_KEYS = [`~FLINCH~`, `~SINGLE~`, `~RECOIL~`, `~SWITCH~`, `~HEAVY~`, `~FASTER~`, `~SLOWER~`, '~SPECIAL~', '~INSTANT~',
+    `~GOOP~`, '~PIERCE~', `~SPAM~`, `~TA_DURATION~`, '~CRUSH~', '~GAIN_AURA~', '~TA_ONGOING~', '~TA_USES~'] as const;
 export type TermCode = typeof TERM_KEYS[number];
-export const TERM_CODES = [
-    new Term(`~BURN~`, `Burned monsters ignore their attack's elemental modifiers. `
-     + `If the monster is <div>[L] [R] [S],</div> that monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": false}.`),
-     new Term(`~ETHEREAL~`, `Ethereals are removed from the game after played as buffs.`),
-     new Term(`~FASTER~`, `This action is faster if both players select a monster action and yours has a higher speed.`),
-     new Term(`~FATIGUE~`, `Fatigued monsters cannot buff their attacks. ` +
-     `If the monster is <div>[W] [E] [F],</div> that monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": false}.`),
-     new Term(`~FLINCH~`, `Actions with flinch prevent the enemy monster's monster action if this action is faster.`),
-     new Term(`~GOOP~`, `Goop buffs have no buff effect if you do not have <b>Oozygoopz</b> on your team.`),
-     new Term(`~LEECH~`, `Leeched monsters suffer <div>1[ATK]</div> at the end of each turn, and your active monster heals `
-     + `<div>1[HP].</div> Stacks up to three.`),
-     new Term(`~PARALYZE~`, `If a monster is paralyzed, all of that monster's actions have:<br>`
-     + `<div>[2]: </div>This action is successful. Perform these flips first and ignore all  [!] `),
-     new Term('~PIERCE~', `Attacks with pierce ignore the enemy monster's postitve [DEF] increases.`),
-     new Term(`~RECOIL~`, `This monster suffers this amount of recoil damage to itself. `
-     + `This damage cannot be prevented and still occurs if this action is prevented.`),
-     new Term(`~SINGLE~`, `Single use actions recharge on switch and are considered used if this action is prevented.`),
-     new Term(`~SLOWER~`, `This action is slower if both players select a monster action and yours has a lower speed.`),
-     new Term(`~STATUS~`, `Status conditions [STATUS] – burn, fatigue, leech, paralyze.`),
-     new Term(`~STUN~`, `Stunned monsters cannot perform any actions next turn. Remove at the end of next turn.`),
-     new Term(`~SUCCESS~`, `Unsuccessful actions do nothing.`),
-     new Term(`~SUPER~`, `Supers require and use two [B] slots.`),
-     new Term(`~SWITCH~`, `Switch in abilities also trigger at the start of the game.`),
-] as const;
+const termCodes = [
+    new Term('Faster', `~FASTER~`, `An action is <b>faster</b> if both players select a monster action and it resolves first, or if the opponent selects a basic action.`),
+    new Term('Flinch', `~FLINCH~`, `Attacks with <b>flinch</b> prevent the enemy monster's attack action if this action is <b>faster.</b>`),
+    new Term('Pierce', '~PIERCE~', `Attacks with <b>pierce</b> remove this amount of [DEF] from the enemy monster. Multiple instances stack.`),
+    new Term('Recoil', `~RECOIL~`, `Monsters lose <div>1 [HP]</div> for each point of <b>recoil</b> they have after their monster action resolves. Multiple instances stack.`),
+    new Term('Single Use', `~SINGLE~`, `<b>Single use</b> actions remain disabled until switched out, as denoted by [SINGLE].`),
+    new Term('Slower', `~SLOWER~`, `An action is <b>slower</b> if both players select a monster action and it resolves second, or if the opponent selects a switch action.`),
+    new Term('Spammable', `~SPAM~`, `<b>Spam</b> actions do not become disabled.`),
+    new Term('Heavy', `~HEAVY~`, `<b>Heavy</b> buffs require and use two [B] slots.`),
+    new Term('Switches In', `~SWITCH~`, `<b>Switch in</b> abilities trigger when your lead monster enters play at the start of the game, or when a monster switches in from a switch action or following a monster KO.`),
+    new Term('Team Aura - Duration', '~TA_DURATION~', '<b>Duration [TIME]</b> - When this enters play, put a cube on the S space. At the end of your turn, move the cube to the next space. When the cube reaches X, destroy this.'),
+    new Term('Team Aura - Ongoing', '~TA_ONGOING~', '<b>Ongoing [ONGOING]</b> - Ongoing <b>team auras</b> stay in play for the entire game unless destroyed by an effect.'),
+    new Term('Team Aura - Uses', '~TA_USES~', '<b>Uses [USES]</b> - When this enters play, put a cube on the S space. Whenever this <b>team aura</b> triggers, move the cube to the next space. When the cube reaches X, destroy this.'),
+    new Term('Crush', '~CRUSH~', `<b>Crush X</b> - Remove X pips from your opponent's pip board that they aren't using.`),
+    new Term('Special', '~SPECIAL~', 'You cannot apply buffs or pips to <div><b>special</b> [SPECIAL]</div> actions.'),
+    new Term('Instant', '~INSTANT~', '<b>Instant</b> buffs can be played during your apply buffs phase (after reveal). They still require buff slots.'),
+    new Term('Gain Aura', '~GAIN_AURA~', `Players can gain a [TA] if they don't already control it, or if there are multiple copies.`),
+];
+export const TERM_CODES = termCodes.sort((a,b) => a.name.localeCompare(b.name));
 
-const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[1]`, `[2]`, `[3]`, `[4]`, `[DEF]`, `[TA]`, `[X]`, `[SUCC]`, `[FAIL]`,
-`[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]', '[NQ]', '[PQ]', '[ARROW]', '[!]',
-'[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]', '[ACORN]', '[HONEY]', '[WISH]', '[TORMENT]'] as const;
+
+const IMAGE_KEYS = [`[ATK]`, `[+]`, `[B]`, `[-]`, `[DEF]`, `[TA]`, '[ONGOING]',
+    `[SPD]`, `[F]`, `[W]`, `[L]`, `[R]`, `[E]`, `[S]`, `[ST]`, `[REAC]`, `[HP]`, '[CUBE]', '[NQ]', '[PQ]', '[ARROW]', '[TIME]', '[USES]', `[INFINITE]`,
+    '[SPECIAL]', '[STATUS]', '[COUNTER]', '[MQ]', '[ACORN]', '[HONEY]', '[WISH]', '[TORMENT]', '[FLIP]', '[DISABLE]', '[SINGLE]', '[HOLLOW]',
+    '[SR]', '[SL]', '[RESIST]', '[WEAK]', '[STR]', '[FRAIL]', '[GOOP]', `<div>{\"stat\": \"?\", \"num\": 1}</div>`, `[RANGED]`, `[MELEE]`, `[ROLL]`, `[BADGE]`
+] as const;
 export type ImageCode = typeof IMAGE_KEYS[number];
 export const IMAGE_CODES = [
     new Image(`[ATK]`, SYMBOLS_PATH + `attack.png`),
     new Image(`[+]`, SYMBOLS_PATH + `draw.png`),
     new Image(`[B]`, SYMBOLS_PATH + `buff.png`),
     new Image(`[-]`, SYMBOLS_PATH + `discard.png`),
-    new Image(`[1]`, SYMBOLS_PATH + `1.png`),
-    new Image(`[2]`, SYMBOLS_PATH + `2.png`),
-    new Image(`[3]`, SYMBOLS_PATH + `3.png`),
-    new Image(`[4]`, SYMBOLS_PATH + `4.png`),
     new Image(`[DEF]`, SYMBOLS_PATH + `defense.png`),
     new Image(`[TA]`, SYMBOLS_PATH + `aura.png`),
-    new Image(`[X]`, SYMBOLS_PATH + `x.png`),
-    new Image(`[SUCC]`, SYMBOLS_PATH + `success.png`),
-    new Image(`[FAIL]`, SYMBOLS_PATH + `fail.png`),
     new Image(`[SPD]`, SYMBOLS_PATH + `speed.png`),
     new Image(`[F]`, ELEMENT_PATH_COLOR + `fire.png`),
     new Image(`[W]`, ELEMENT_PATH_COLOR + `water.png`),
@@ -109,20 +85,61 @@ export const IMAGE_CODES = [
     new Image(`[E]`, ELEMENT_PATH_COLOR + `electric.png`),
     new Image(`[S]`, ELEMENT_PATH_COLOR + `death.png`),
     new Image(`[ST]`, SYMBOLS_PATH + `status.png`),
-    new Image(`[REAC]`, SYMBOLS_PATH + `reaction.png`),
     new Image(`[HP]`, SYMBOLS_PATH + `heart.png`),
     new Image(`[CUBE]`, SYMBOLS_PATH + `cube.png`),
-    new Image(`[NQ]`, SYMBOLS_PATH + `red-cube.png`),
     new Image(`[PQ]`, SYMBOLS_PATH + `green-cube.png`),
     new Image(`[MQ]`, SYMBOLS_PATH + `blue-cube.png`),
-    new Image(`[ARROW]`, SYMBOLS_PATH + `sideswipe.png`),
-    new Image(`[!]`, SYMBOLS_PATH + `flip-event.png`),
     new Image(`[SPECIAL]`, SYMBOLS_PATH + `status.png`),
     new Image(`[STATUS]`, SYMBOLS_PATH + `wound.png`),
-    new Image(`[COUNTER]`, SYMBOLS_PATH + `counter.png`),
-    new Image(`[ACORN]`, SYMBOLS_PATH + `acorn.png`),
-    new Image(`[HONEY]`, SYMBOLS_PATH + `dripping-honey.png`),
-    new Image(`[WISH]`, SYMBOLS_PATH + `round-star.png`),
-    new Image(`[TORMENT]`, SYMBOLS_PATH + `torment.png`),
-] as const;
+    new Image(`[FLIP]`, SYMBOLS_PATH + `flip.png`),
+    new Image(`<div>{\"stat\": \"?\", \"num\": 1}</div>`, SYMBOLS_PATH + `question.png`),
+    new Image(`[DISABLE]`, SYMBOLS_PATH + `unlocked.png`),
+    new Image(`[SINGLE]`, SYMBOLS_PATH + `single-use.png`),
+    new Image(`[SR]`, SYMBOLS_PATH + `switch-right.png`),
+    new Image(`[SL]`, SYMBOLS_PATH + `switch-left.png`),
+    new Image(`[RESIST]`, SYMBOLS_PATH + `switch-defense-right.png`),
+    new Image(`[WEAK]`, SYMBOLS_PATH + `effective.png`),
+    new Image(`[GOOP]`, SYMBOLS_PATH + `goop.png`),
+    new Image(`[HOLLOW]`, SYMBOLS_PATH + `hollow.png`),
+    new Image(`[ARROW]`, SYMBOLS_PATH + `sideswipe.png`),
+    new Image(`[RANGED]`, SYMBOLS_PATH + `ranged.png`),
+    new Image(`[MELEE]`, SYMBOLS_PATH + `melee.png`),
+    new Image(`[ROLL]`, SYMBOLS_PATH + `die.png`),
+    new Image(`[BADGE]`, BADGE_PATH + `badge.png`),
+    new Image(`[TIME]`, SYMBOLS_PATH + `time.png`),
+    new Image(`[USES]`, SYMBOLS_PATH + `uses.png`),
+    new Image(`[INFINITE]`, SYMBOLS_PATH + `infinity.png`),
+    new Image(`[ONGOING]`, SYMBOLS_PATH + `ongoing.png`),
+];
 
+//TODO: this should return an object with two properties: advElems and DisElems that are arrays of elemtypes
+export const getAdvantages = (elem: ElemType): number[] => {
+    // fire, water, rock, leaf, elec, death
+    // -1 means the monster takes MORE damage
+    // 1 means resistance
+      if (elem === 'Death') {return [0, -1, 1, 1, -1, 0]; }
+      if (elem === 'Electric') { return [-1, 1, -1, 0, 0, 1]; }
+      if (elem === 'Fire') { return [0, -1, -1, 1, 1, 0]; }
+      if (elem === 'Water') { return [1, 0, 0, -1, -1, 1]; }
+      if (elem === 'Leaf') { return [-1, 1, 1, 0, 0, -1]; }
+      if (elem === 'Rock') { return [1, 0, 0, -1, 1, -1]; }
+  };
+
+  export const getElementIndex = (elem: ElemType): number => {
+    if (elem === 'Death') {
+        return 5;
+    }
+    if (elem === 'Electric') {
+        return 4;
+    }
+    if (elem === 'Leaf') {
+        return 3;
+    }
+    if (elem === 'Rock') {
+        return 2;
+    }
+    if (elem === 'Water') {
+        return 1;
+    }
+    return 0;
+};

@@ -1,128 +1,84 @@
 {
   "elements": [
-    "Water",
-    "Leaf"
+    "Leaf",
+    "Water"
   ],
   "actions": [
     {
-      "abilityName": "Charming Toxins",
-      "abilityText": "At the start of the turn, your opponent performs:<br><br>[2]: The enemy monster heals 1[HP]",
-      "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "auraDuration": 5,
+      "abilityName": "Sticky Strike",
+      "abilityText": "If this attack is <b>faster</b>, shuffle one <b>Goop</b> card into your opponent's deck.~FASTER~",
+      "element": "Water",
+      "attackType": "Ranged",
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": null,
-      "speed": 1,
-      "draw": 1
+      "attack": 4,
+      "speed": 6,
+      "discard": 2,
+      "buff": 0
     },
     {
       "abilityName": "Reclaim",
-      "abilityText": "Choose one:<br><br>• Return a card from your discard to your hand, excluding any cards played with this attack.<br><br>• Look at the top 2 cards of your deck. You may change their order or put either/both in your discard.",
+      "abilityText": "Put the top three cards of your opponent's deck into their discard pile. If any of these cards are <b>Goop</b> cards, this monster heals <div>2[HP].</div>",
       "element": "Leaf",
-      "modifiers": [
-        0,
-        0,
-        0,
-        2,
-        1,
-        0
-      ],
-      "auraDuration": 0,
+      "attackType": "Melee",
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 2,
-      "speed": 4,
+      "speed": 1,
       "discard": 1,
-      "buff": 2
+      "buff": 0
     },
     {
       "abilityName": "Viscous Split",
-      "abilityText": "<b>Recoil X</b>[ATK], where X is the number of buff slots used with this attack.<br><br>For each used buff slot, the enemy monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": false}.~RECOIL~",
-      "element": "Water",
-      "modifiers": [
-        2,
-        0,
-        0,
-        0,
-        0,
-        1
-      ],
-      "auraDuration": 0,
+      "abilityText": "",
+      "element": "Leaf",
+      "attackType": "Ranged",
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 1,
-      "speed": 1,
-      "buff": 3
+      "speed": 8,
+      "draw": 0,
+      "buff": 2
     },
     {
-      "abilityName": "Oozy Liberation",
-      "abilityText": "Your opponent reveals their hand. This attack gains +X[ATK], where X is the number of <b>Goop</b> cards in their hand. Then your opponent discards all <b>Goop</b> cards. <b>Single use.</b>~SINGLE~",
+      "abilityName": "Lickety Split",
+      "abilityText": "",
       "element": "Water",
-      "modifiers": [
-        2,
-        0,
-        0,
-        0,
-        0,
-        4
-      ],
-      "auraDuration": 0,
+      "attackType": "Melee",
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 3,
-      "speed": 4,
-      "discard": 2,
-      "buff": 0
+      "attack": 2,
+      "speed": 5,
+      "draw": 0,
+      "discard": 1,
+      "buff": 1
     }
   ],
   "buffs": [
     {
       "buffName": "Thick Goop",
-      "timing": "Post Actions",
-      "buffText": "<b>Goop</b><br>This monster gains {\"stat\": \"DEF\", \"num\": 1, \"isPositive\": true}. Shuffle this card into your opponent's deck.~GOOP~",
-      "flipEventText": "Your active monster suffers <div>X[ATK],</div> where X is the number of <b>Goop</b> cards in your discard.",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffText": "If your opponent has three or more <b>Goop</b> cards, this monster gains <div>+2[DEF].</div> If not, shuffle one <b>Goop</b> card into your opponent's deck instead."
     },
     {
-      "buffName": "Wispy Goop",
-      "timing": "Post Actions",
-      "buffText": "<b>Goop</b><br>This monster gains {\"stat\": \"SPD\", \"num\": 1, \"isPositive\": true}. Shuffle this card into your opponent's deck.~GOOP~",
-      "flipEventText": "Your active monster suffers <div>X[ATK],</div> where X is the number of <b>Goop</b> cards in your discard.",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffName": "Hostile Goop",
+      "buffText": "If your opponent has three or more <b>Goop</b> cards, this attack gains <div>+2[ATK].</div> If not, shuffle one <b>Goop</b> card into your opponent's deck instead."
     },
     {
-      "buffName": "Prickly Goop",
-      "timing": "Post Actions",
-      "buffText": "<b>Goop</b><br>This monster gains {\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}. Shuffle this card into your opponent's deck.~GOOP~",
-      "flipEventText": "Your active monster suffers <div>X[ATK],</div> where X is the number of <b>Goop</b> cards in your discard.",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffName": "Slippery Goop",
+      "buffText": "If your opponent has three or more <b>Goop</b> cards, this attack gains <div>+3[SPD].</div> If not, shuffle one <b>Goop</b> card into your opponent's deck instead."
     },
     {
       "buffName": "Super Goop",
-      "timing": "Post Actions",
-      "buffText": "<b>Super, Goop</b>~SUPER~~GOOP~",
-      "flipEventText": "If you do not have <b>Oozygoopz</b> on your team, your active monster suffers <div>X+3[ATK],</div> where X is the number of <b>Goop</b> cards in your discard.",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffText": "<b>Heavy</b>. Shuffle two <b>Goop</b> cards into your opponent's deck.~HEAVY~"
     }
   ],
-  "abilityName": "Goopophyll",
   "monsterName": "Oozygoopz",
-  "abilityText": "At the start of the turn, if this monster is not at full HP, perform:<br><br>[1]: Heal <div>1[HP]</div>",
-  "hp": 12,
-  "complexity": 3,
-  "promiseDescription": "Drive your opponent crazy by loading their deck up with a bunch of painfully useless goop!",
+  "startOfGame": "<b><u>Start of Game</u>:</b> Gain <div><b>Gooped Up</b> [TA].</div>",
+  "abilityText": "<b><u>Switch In</u>: </b> Shuffle a <b>Goop</b> card into your opponent's deck.~SWITCH~",
+  "hp": 6,
   "initiative": 15,
-  "role": "Support"
+  "imageFlg": true,
+  "extraBoard": "GOOP",
+  "teamAura": {
+    "name": "Gooped Up",
+    "text": "Whenever you attack with a <b>faster</b> <div>melee [MELEE]</div> attack, shuffle a <b>Goop</b> card into your opponent's deck.~FASTER~~TA_USES~",
+    "type": "USES",
+    "duration": 4
+  }
 }

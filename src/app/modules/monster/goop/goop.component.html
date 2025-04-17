@@ -1,0 +1,15 @@
+<div id="buff-card">
+  <div class="card-container">
+    <img class="buff-background goop-buff" src="{{getBuffImagePath()}}">
+    <div class="name">Goop</div>
+    <div class="text-container ability">
+      <div [innerHTML]="getAbilityText(goopText)" class="buff-text"></div>
+    </div>
+    <div class="text-container flip">
+      <div class="exclamation-mark">
+        <img src="{{imageService.getImg('flip-white')}}">
+      </div>
+      <div [innerHTML]="getAbilityText(goopFlipText)" class="flip-text"></div>
+    </div>
+  </div>
+</div>

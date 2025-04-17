@@ -5,124 +5,75 @@
   ],
   "actions": [
     {
-      "abilityName": "Lightning",
-      "abilityText": "",
+      "abilityName": "Lightning Fang",
+      "abilityText": "If this attack is <b>faster</b>, this attack gains <div>+3[ATK].</div>~FASTER~",
       "element": "Electric",
-      "modifiers": [
-        5,
-        0,
-        0,
-        0,
-        5,
-        0
-      ],
-      "auraDuration": 0,
+      "attackType": "Melee",
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 6,
-      "speed": 9,
+      "attack": 5,
+      "speed": 6,
       "draw": 0,
       "discard": 3,
       "buff": 0
     },
     {
       "abilityName": "Lights Out",
-      "abilityText": "If this attack KO's the enemy monster, this monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}",
+      "abilityText": "",
       "element": "Electric",
-      "modifiers": [
-        1,
-        0,
-        0,
-        0,
-        2,
-        0
-      ],
-      "auraDuration": 0,
+      "attackType": "Ranged",
       "statusFlg": false,
-      "reactionFlg": false,
       "attack": 2,
-      "speed": 6,
+      "speed": 7,
       "draw": 0,
       "discard": 0,
-      "buff": 2
+      "buff": 1
     },
     {
       "abilityName": "Hypercharge",
-      "abilityText": "This monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": true}.",
+      "abilityText": "{\"stat\": \"ATK\", \"num\": 3}.",
       "element": "Electric",
-      "modifiers": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      "auraDuration": 0,
       "statusFlg": true,
-      "reactionFlg": false,
-      "speed": 4,
-      "draw": 1,
+      "speed": 1,
+      "draw": 0,
       "discard": 0,
       "buff": 0
     },
     {
-      "abilityName": "Flamethrower",
-      "abilityText": "[1]: <b>Pierce</b>~PIERCE~",
+      "abilityName": "Blazing Roar",
+      "abilityText": "<b>Pierce X</b>, where X is the number of buff slots used.~PIERCE~",
       "element": "Fire",
-      "modifiers": [
-        0,
-        2,
-        3,
-        0,
-        0,
-        0
-      ],
-      "auraDuration": 0,
+      "attackType": "Melee",
       "statusFlg": false,
-      "reactionFlg": false,
-      "attack": 5,
-      "speed": 5,
+      "attack": 3,
+      "speed": 4,
       "draw": 0,
-      "discard": 2,
-      "buff": 1
+      "discard": 1,
+      "buff": 2
     }
   ],
   "buffs": [
     {
+      "buffName": "Charge",
+      "buffText": "If your opponent has a KO'd monster, this attack gains <div>+3[SPD].</div>"
+    },
+    {
+      "buffName": "Roar",
+      "buffText": "If your opponent has a KO'd monster, this attack gains <div>+2[ATK].</div>"
+    },
+    {
       "buffName": "Revenge",
-      "timing": "With Attack",
-      "buffText": "<b>Super</b><br>This attack gains +{\"positive\": 1, \"neutral\": 1, \"negative\": 5}[ATK].~SUPER~",
-      "flipEventText": "Your active monster gains <div>{\"stat\": \"ATK\", \"num\": 1, \"isPositive\": true}.</div>",
-      "critFlg": false,
-      "flipEventFlg": true
+      "buffText": "If the enemy monster selected a <div>melee [MELEE]</div> attack, this attack gains <div>+1[ATK]</div> and <div>+3[SPD].</div> If not, this attack gains <div><b>recoil 1</b></div>.~RECOIL~"
     },
     {
-      "buffName": "Energize",
-      "timing": "With Attack",
-      "buffText": "This attack gains +2[ATK]",
-      "critFlg": true
-    },
-    {
-      "buffName": "Charge",
-      "timing": "Pre-Actions",
-      "buffText": "This attack gains +2[SPD]",
-      "critFlg": false
-    },
-    {
-      "buffName": "Charge",
-      "timing": "Pre-Actions",
-      "buffText": "This attack gains +2[SPD]",
-      "critFlg": true
+      "buffName": "Prey Upon",
+      "buffText": "If the enemy monster selected a <div>ranged [RANGED]</div> attack, this attack gains <div>+1[ATK]</div> and <div>+3[SPD].</div> If not, this attack gains <div><b>recoil 1</b></div>.~RECOIL~"
     }
   ],
   "monsterId": 4,
-  "abilityName": "Intimidate",
   "monsterName": "Chargroar",
-  "abilityText": "When this monster <b>switches in</b>, the enemy monster gains {\"stat\": \"ATK\", \"num\": 2, \"isPositive\": false}.~SWITCH~",
-  "hp": 7,
-  "complexity": 1,
-  "promiseDescription": "Chargroar is a straightforward assassin. Fast, strong attacks, with ways to increase its attack strength with <div>[PQ].</div> Chargroar's buffs are unconditional and incredibly efficient. Since Chargroar is easy to KO, there is little room error.",
-  "initiative": 85,
-  "role": "Assassin"
+  "abilityText": "<b><u>Switch In</u>: </b> Disable a monster action of the enemy monster.~SWITCH~",
+  "hp": 6,
+  "initiative": 80,
+  "imageFlg": true,
+  "lastUpdated": "Sat, 04 Sep 2021 11:56:07 GMT"
 }

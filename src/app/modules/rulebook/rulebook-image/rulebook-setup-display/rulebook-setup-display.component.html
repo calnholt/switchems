@@ -1,0 +1,59 @@
+<div id="rulebook-setup-display">
+  <div class="player-area-container" *ngFor="let monster of monsters.monsters; let i = index">
+    <div class="monsters-container">
+      <div class="switch-monster">
+        <div class="card-display">
+          <monster-card [monster]="monster.leftMonster"></monster-card>
+        </div>
+      </div>
+      <div class="active-monster-container">
+        <div class="card-display">
+          <monster-card [monster]="monster.activeMonster"></monster-card>
+        </div>
+        <div class="card-display">
+          <monster-action [action]="monster.activeMonster.actions[0]"></monster-action>
+        </div>
+        <div class="card-display">
+          <monster-action [action]="monster.activeMonster.actions[1]"></monster-action>
+        </div>
+        <div class="card-display">
+          <stat-cube-board></stat-cube-board>
+        </div>
+        <div class="card-display">
+          <monster-action [action]="monster.activeMonster.actions[2]"></monster-action>
+        </div>
+        <div class="card-display">
+          <monster-action [action]="monster.activeMonster.actions[3]"></monster-action>
+        </div>
+      </div>
+      <div class="switch-monster">
+        <div class="card-display">
+          <monster-card [monster]="monster.rightMonster"></monster-card>
+        </div>
+      </div>
+    </div>
+    <div class="board-container">
+      <div class="board">
+        <div class="card-display">
+          <action-board></action-board>
+        </div>
+        <div class="card-display" *ngFor="let text of boardText">
+          <player-board [text]="text"></player-board>
+        </div>
+      </div>
+      <div class="deck-discard">
+        <div class="card-display">
+          <player-board [text]="'Deck'"></player-board>
+        </div>
+        <div class="card-display">
+          <player-board [text]="'Discard Pile'"></player-board>
+        </div>
+      </div>
+    </div>
+    <ng-container *ngFor="let x of numbers">
+      <div class="num num-{{x}}" [ngClass]="{'oppo' : i === 0}">
+        <rulebook-number [number]="x"></rulebook-number>
+      </div>
+    </ng-container>
+  </div>
+</div>

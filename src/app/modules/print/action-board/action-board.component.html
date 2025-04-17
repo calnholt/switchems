@@ -1,64 +1,79 @@
 <div id="action-board">
   <div class="card-container">
-    <div class="actions-container">
-      <div class="title">Standard Actions
-        <img src="{{discard}}" class="no-draw">
-      </div>
-      <div class="line-container">
-        <hr align="left" class="name-line left">
-        <span class="dot"></span>
-        <hr align="right" class="name-line right">
-      </div>
-      <table>
-        <tr>
-          <td>
-            <img src="{{draw}}" class="draw">
-            <img src="{{draw}}" class="draw">
-            <img src="{{draw}}">
-          </td>
-          <td>
-            <img src="{{counter}}">
-          </td>
-        </tr>
-      </table>
-    </div>
-    <div class="actions-container">
+    <div class="actions-container switch-table">
       <div class="title">
-        <img src="{{switchHeal}}" class="switch-heal">
         Switch Actions
-        <img src="{{discard}}" class="no-draw">
-      </div>
-      <div class="line-container">
-        <hr align="left" class="name-line left">
-        <span class="dot"></span>
-        <hr align="right" class="name-line right">
+        <div class="discards">
+          <img src="{{getIcon('discard')}}" class="no-draw pr-1">
+          <img src="{{getIcon('discard')}}" class="no-draw">
+        </div>
       </div>
       <table>
         <tr>
           <td>
-            <img src="{{switchLeft}}" class="switch">
-            & (<img src="{{cube}}" class="cube">)
+            <div class="d-flex">
+              <img src="{{getIcon('melee')}}" class="switch type">
+              <img src="{{getIcon('switch-left')}}" class="switch">
+              <img src="{{getIcon('ranged')}}" class="switch type">
+            </div>
           </td>
           <td>
-            <img src="{{switchRight}}" class="switch">
-            & (<img src="{{cube}}" class="cube">)
+            <div class="d-flex">
+              <img src="{{getIcon('melee')}}" class="switch type">
+              <img src="{{getIcon('switch-right')}}" class="switch">
+              <img src="{{getIcon('ranged')}}" class="switch type">
+            </div>
           </td>
         </tr>
       </table>
     </div>
     <div class="actions-container">
-      <div class="title">Monster Actions</div>
-      <div class="line-container">
-        <hr align="left" class="name-line left">
-        <span class="dot"></span>
-        <hr align="right" class="name-line right">
+      <div class="actions-container">
+        <div class="title">Monster Actions</div>
+        <table class="monster-actions">
+          <tr>
+            <td>1</td><td>2</td>
+          </tr>
+          <tr>
+            <td>3</td><td>4</td>
+          </tr>
+        </table>
       </div>
-      <table class="monster-actions">
+      <div class="actions-container maneuver-table">
+        <table class="monster-actions">
+          <tr>
+            <td>
+              <span>
+                +X<img src="{{getIcon('attack')}}">
+              </span>
+            </td>
+            <td>
+              <span>
+                +X<img src="{{getIcon('speed')}}">
+              </span>
+            </td>
+            <td>
+              <span>
+                +X<img src="{{getIcon('defense')}}">
+              </span>
+            </td>
+          </tr>
+        </table>
+        <div class="maneuver">
+          <img src="{{getIcon('green-cube')}}" class="icon">
+        </div>
+      </div>
+    </div>
+    <div class="actions-container standard-table">
+      <div class="title">Basic Actions</div>
+      <table>
         <tr>
-          <td>1</td><td>2</td>
-        </tr>
-        <tr>
-          <td>3</td><td>4</td>
+          <td>
+            <img src="{{getIcon('draw')}}" class="icon">
+          </td>
+          <td>
+            <div [innerHTML]="gainThreeRandomPips"></div>
+          </td>
         </tr>
       </table>
     </div>
